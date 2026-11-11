@@ -1,288 +1,52 @@
 {
-  "asOf": "2026-11-11T12:25:00+09:00",
-  "releaseAt": "2026-11-11T12:25:00+09:00",
+  "schemaVersion": 2,
+  "asOf": "2026-11-11T06:25:34.633Z",
+  "releaseAt": "2026-11-11T15:30:00+09:00",
+  "tradingDayVerified": true,
+  "calendarSourceUrl": "https://marketcalendars.com/markets/krx",
+  "editionNote": "현재 회차에 출처를 다시 확인한 사실만 포함. 재검증되지 않은 기존 항목과 최신 관측시각을 확인하지 못한 장중 등락률은 제외.",
   "items": [
     {
-      "id": "20261111-us-cpi-fed-hike",
-      "title": "미 CPI 상회·12월 금리인상 우려 확대",
-      "summary": "미국 10월 CPI가 전월 대비 0.4% 올라 예상치 0.3%를 웃돌았고, 시장은 12월 25bp 이상 인상을 사실상 전부 반영했다. 미 2년물 금리는 약 18.9bp 급등했다.",
-      "publishedAt": "2026-11-10T10:26:00Z",
-      "sourceUrl": "https://www.reuters.com/business/sp-500-dow-futures-climb-oil-slide-lifts-sentiment-2026-11-10/",
-      "sourceName": "Reuters",
+      "id": "20261111-coreweave-guidance-reviewed",
+      "title": "코어위브, 매출 전망 상향·대규모 투자 계획",
+      "summary": "3분기 매출 36.61억달러를 공시하고 연간 매출 전망을 130억~133억달러로 높였다. 연간 설비투자 370억~390억달러와 4분기 이자비용 10.5억~11.5억달러 전망도 제시했다.",
+      "publishedAt": "2026-11-10T16:05:53-05:00",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm",
+      "sourceName": "코어위브·SEC 공시",
       "relatedStocks": [
-        "삼성전자",
         "SK하이닉스",
-        "NAVER",
-        "카카오"
+        "삼성전자"
       ],
       "impactRank": 1,
-      "category": "미국증시",
-      "region": "foreign"
+      "category": "반도체·AI",
+      "region": "foreign",
+      "kind": "news",
+      "reviewedAt": "2026-11-11T06:25:34.633Z",
+      "reviewSourceUrl": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+      "reviewNote": "현재 회차에 SEC 원문과 공식 IR 자료를 다시 열어 매출·투자·이자비용 전망을 교차 확인했다. AI 인프라 수요와 자금 부담에 관련된 확정 공시 사실을 유지하며, 실시간으로 재확인하지 않은 주가 반응은 쓰지 않았다.",
+      "validUntil": "2026-11-11T20:00:00+09:00"
     },
     {
-      "id": "20261111-nvidia-probe-selloff",
-      "title": "엔비디아 5.4% 하락·내부 조사 부담",
-      "summary": "엔비디아가 중국 관련 스파이 의혹에 대한 내부 조사와 젠슨 황 CEO 관련 불확실성으로 5.4% 하락했다. 이틀 누적 낙폭은 9.6%, 필라델피아 반도체지수는 0.4% 하락했다.",
-      "publishedAt": "2026-11-10T10:26:00Z",
-      "sourceUrl": "https://www.reuters.com/business/sp-500-dow-futures-climb-oil-slide-lifts-sentiment-2026-11-10/",
-      "sourceName": "Reuters",
+      "id": "20261111-bond-dealer-collusion-fine",
+      "title": "국고채 담합 15개 금융사에 1.63조원 과징금",
+      "summary": "공정위가 국고채 입찰 담합에 가담한 은행·증권사 15곳에 총 1조6265억7500만원의 과징금과 시정명령을 내리고, 7개사를 고발하기로 했다. KB·NH·미래에셋·키움증권 등이 제재 대상에 포함됐다.",
+      "publishedAt": "2026-11-11T12:00:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111082500002",
+      "sourceName": "연합뉴스·서울신문",
       "relatedStocks": [
-        "SK하이닉스",
-        "삼성전자",
-        "한미반도체"
+        "미래에셋증권",
+        "NH투자증권",
+        "키움증권",
+        "기업은행"
       ],
       "impactRank": 2,
-      "category": "반도체·AI",
-      "region": "foreign"
-    },
-    {
-      "id": "20261111-ai-debt-lending-tightens",
-      "title": "AI 인프라 대출 심사 강화·신용스프레드 확대",
-      "summary": "은행과 크레딧 투자자들이 AI·데이터센터 대출 노출 확대를 경계하기 시작했다. 10년물 하이퍼스케일러 회사채 스프레드는 연초 대비 약 50bp 확대됐고, 골드만삭스는 2027년 관련 채권 발행을 4,200억달러로 전망했다.",
-      "publishedAt": "2026-11-09T11:02:00Z",
-      "sourceUrl": "https://www.reuters.com/legal/transactional/banks-investors-grow-wary-ai-debt-spooked-by-market-selloff-2026-11-09/",
-      "sourceName": "Reuters",
-      "relatedStocks": [
-        "SK하이닉스",
-        "삼성전자",
-        "LS ELECTRIC",
-        "HD현대일렉트릭"
-      ],
-      "impactRank": 3,
-      "category": "반도체·AI",
-      "region": "foreign"
-    },
-    {
-      "id": "20261111-coreweave-results-debt",
-      "title": "코어위브 실적 호조에도 부채 469억달러",
-      "summary": "코어위브 3분기 매출은 36.6억달러로 전년 대비 약 170% 증가했고 수주잔고는 1,325억달러로 확대됐다. 다만 총부채 469억달러, 분기 CAPEX 145억달러로 재무부담은 계속된다.",
-      "publishedAt": "2026-11-10T21:09:00Z",
-      "sourceUrl": "https://www.reuters.com/business/coreweave-beats-quarterly-revenue-estimates-ai-demand-defies-growing-doubts-2026-11-10/",
-      "sourceName": "Reuters",
-      "relatedStocks": [
-        "SK하이닉스",
-        "삼성전자"
-      ],
-      "impactRank": 4,
-      "category": "반도체·AI",
-      "region": "foreign"
-    },
-    {
-      "id": "20261111-softbank-loss-ai-datacenter",
-      "title": "소프트뱅크 70억달러 분기 순손실",
-      "summary": "소프트뱅크가 미국 데이터센터 구축비용과 금융비용 증가 영향으로 2분기 70억달러 순손실을 기록했다. 금융비용은 분기 중 두 배 이상 늘었다.",
-      "publishedAt": "2026-11-10T06:37:00Z",
-      "sourceUrl": "https://www.reuters.com/world/asia-pacific/softbank-swings-7-billion-net-loss-second-quarter-2026-11-10/",
-      "sourceName": "Reuters",
-      "relatedStocks": [
-        "SK하이닉스",
-        "삼성전자",
-        "두산에너빌리티"
-      ],
-      "impactRank": 5,
-      "category": "반도체·AI",
-      "region": "foreign"
-    },
-    {
-      "id": "20261111-anthropic-ipo",
-      "title": "앤트로픽 최대 1.4조달러 IPO 추진",
-      "summary": "앤트로픽이 최대 644억달러를 조달하는 IPO를 추진하며 완전희석 기준 최대 1.4조달러 기업가치를 제시했다. AI 투자 수익성 논쟁 속 대형 기술주 자금배분의 시험대가 될 전망이다.",
-      "publishedAt": "2026-11-10T10:45:00Z",
-      "sourceUrl": "https://www.reuters.com/business/anthropic-ipo-raise-much-644-billion-latest-draft-prospectus-shows-2026-11-10/",
-      "sourceName": "Reuters",
-      "relatedStocks": [
-        "SK하이닉스",
-        "삼성전자"
-      ],
-      "impactRank": 6,
-      "category": "반도체·AI",
-      "region": "foreign"
-    },
-    {
-      "id": "20261111-tsmc-ai-investment",
-      "title": "TSMC, 앤트로픽·OpenAI에 최대 10억달러 투자",
-      "summary": "TSMC 이사회가 앤트로픽과 OpenAI에 각각 최대 5억달러씩 투자하기로 승인했다. TSMC는 AI 칩 수요가 생산능력을 계속 초과하고 있다고 밝혔다.",
-      "publishedAt": "2026-11-10T14:15:00Z",
-      "sourceUrl": "https://www.reuters.com/world/china/tsmc-invest-up-1-billion-anthropic-openai-2026-11-10/",
-      "sourceName": "Reuters",
-      "relatedStocks": [
-        "SK하이닉스",
-        "삼성전자",
-        "한미반도체"
-      ],
-      "impactRank": 7,
-      "category": "반도체·AI",
-      "region": "foreign"
-    },
-    {
-      "id": "20261111-alibaba-thead-ipo",
-      "title": "알리바바 AI칩 자회사 T-Head 홍콩 IPO 추진",
-      "summary": "알리바바의 AI 칩 자회사 T-Head가 홍콩거래소에 비공개 상장 신청을 제출했다. 중국의 엔비디아 의존도 축소와 자체 AI 반도체 투자 확대 흐름이 재확인됐다.",
-      "publishedAt": "2026-11-10T12:47:00Z",
-      "sourceUrl": "https://www.reuters.com/business/retail-consumer/alibaba-chip-unit-t-head-files-confidential-hong-kong-ipo-application-2026-11-10/",
-      "sourceName": "Reuters",
-      "relatedStocks": [
-        "삼성전자",
-        "SK하이닉스"
-      ],
-      "impactRank": 8,
-      "category": "반도체·AI",
-      "region": "foreign"
-    },
-    {
-      "id": "20261111-russia-refinery-capacity",
-      "title": "러시아 정유능력 약 30% 차질",
-      "summary": "우크라이나의 최근 드론 공격으로 러시아 정유능력 약 30%가 영향을 받은 것으로 전해졌다. 에너지 가격과 글로벌 인플레이션 재상승 위험을 높이는 요인이다.",
-      "publishedAt": "2026-11-10T12:17:00Z",
-      "sourceUrl": "https://www.reuters.com/business/energy/recent-ukrainian-attacks-have-reduced-russias-oil-processing-capacity-by-30-2026-11-10/",
-      "sourceName": "Reuters",
-      "relatedStocks": [
-        "S-Oil",
-        "SK이노베이션",
-        "대한항공"
-      ],
-      "impactRank": 9,
-      "category": "기타",
-      "region": "foreign"
-    },
-    {
-      "id": "20261111-russia-ukraine-talks",
-      "title": "미 중재 러시아·우크라이나 평화협상 재개",
-      "summary": "러시아와 우크라이나가 미국 중재 아래 약 9개월 만에 직접 평화협상을 재개했다. 협상 진전 여부에 따라 에너지·방산·위험자산 변동성이 커질 수 있다.",
-      "publishedAt": "2026-11-10T00:03:00Z",
-      "sourceUrl": "https://www.reuters.com/world/europe/russia-ukraine-meet-us-backed-talks-after-trump-says-broad-deal-possible-2026-11-10/",
-      "sourceName": "Reuters",
-      "relatedStocks": [
-        "한화에어로스페이스",
-        "LIG넥스원",
-        "현대로템"
-      ],
-      "impactRank": 10,
       "category": "정책·발언",
-      "region": "foreign"
-    },
-    {
-      "id": "20261111-samsungfire-canopius",
-      "title": "삼성화재, 英 캐노피우스 경영권 인수",
-      "summary": "삼성화재가 약 2.2조원을 투입해 영국 로이즈 특수보험사 캐노피우스 경영권을 인수하고 지분 80.6%를 확보할 예정이다.",
-      "publishedAt": "2026-11-10T08:06:00+09:00",
-      "sourceUrl": "https://www.investchosun.com/m/article.html?contid=2026111080008",
-      "sourceName": "인베스트조선",
-      "relatedStocks": [
-        "삼성화재"
-      ],
-      "impactRank": 11,
-      "category": "국내공시",
-      "region": "domestic"
-    },
-    {
-      "id": "20261111-ecoprobm-investment",
-      "title": "에코프로비엠, 종속회사에 6,271억원 추가 투자",
-      "summary": "에코프로비엠이 PT BNSI 제련소 지분 취득과 주주대여금 확보를 위해 투자 종속회사 주식 6,271억원어치를 추가 취득한다. 자기자본 대비 약 24.8% 규모다.",
-      "publishedAt": "2026-11-10T18:22:00+09:00",
-      "sourceUrl": "https://www.asiae.co.kr/article/2026111018222916513",
-      "sourceName": "아시아경제",
-      "relatedStocks": [
-        "에코프로비엠",
-        "에코프로"
-      ],
-      "impactRank": 12,
-      "category": "국내공시",
-      "region": "domestic"
-    },
-    {
-      "id": "20261111-hdconstruction-psi-order",
-      "title": "HD건설기계, 美 PSI와 1,655억원 공급계약",
-      "summary": "HD건설기계가 미국 PSI에 2027~2028년 가스 발전용 엔진을 공급하는 1,655억원 계약을 체결했다. 최근 한 달 북미 수주액은 약 5,600억원으로 확대됐다.",
-      "publishedAt": "2026-11-10T13:57:27+09:00",
-      "sourceUrl": "https://mobile.newsis.com/view_amp.html?ar_id=NISX20261110_0003861885",
-      "sourceName": "뉴시스",
-      "relatedStocks": [
-        "HD건설기계"
-      ],
-      "impactRank": 13,
-      "category": "국내공시",
-      "region": "domestic"
-    },
-    {
-      "id": "20261111-shinsegae-record-profit",
-      "title": "신세계, 3분기 영업이익 역대 최대",
-      "summary": "신세계 3분기 연결 영업이익은 1,643억원으로 전년 대비 64.6% 증가해 분기 기준 역대 최대를 기록했다. 백화점과 면세점 수익성 개선이 실적을 견인했다.",
-      "publishedAt": "2026-11-10T14:22:00+09:00",
-      "sourceUrl": "https://www.newspim.com/news/view/20261110000975",
-      "sourceName": "뉴스핌",
-      "relatedStocks": [
-        "신세계"
-      ],
-      "impactRank": 14,
-      "category": "국내공시",
-      "region": "domestic"
-    },
-    {
-      "id": "20261111-paradise-earnings",
-      "title": "파라다이스, 3분기 영업이익 62.3% 증가",
-      "summary": "파라다이스 3분기 영업이익은 641억원으로 전년 대비 62.3% 증가했고 시장 전망치 546억원을 17.5% 웃돌았다.",
-      "publishedAt": "2026-11-10T16:49:00+09:00",
-      "sourceUrl": "https://www.yna.co.kr/view/AKR20261110150900527",
-      "sourceName": "연합뉴스",
-      "relatedStocks": [
-        "파라다이스"
-      ],
-      "impactRank": 15,
-      "category": "국내공시",
-      "region": "domestic"
-    },
-    {
-      "id": "20261111-krafton-profit-drop",
-      "title": "크래프톤, 3분기 영업이익 35% 감소",
-      "summary": "크래프톤의 3분기 영업이익이 전년 동기 대비 약 35% 감소한 것으로 발표되며 장 초반 주가가 약세를 보였다.",
-      "publishedAt": "2026-11-11T09:26:00+09:00",
-      "sourceUrl": "https://www.newspim.com/news/view/20261111000277",
-      "sourceName": "뉴스핌",
-      "relatedStocks": [
-        "크래프톤"
-      ],
-      "impactRank": 16,
-      "category": "국내공시",
-      "region": "domestic"
-    },
-    {
-      "id": "20261111-hanjin-treasury-cancel",
-      "title": "한진, 자사주 47만8천주 전량 소각",
-      "summary": "한진이 보유 자기주식 47만8,401주 전량을 소각한다. 발행주식의 3.07%, 장부가액 약 200억원 규모로 자본금 감소 없이 주식 수만 줄인다.",
-      "publishedAt": "2026-11-10T17:24:00+09:00",
-      "sourceUrl": "https://www.newspim.com/news/view/20261110001438",
-      "sourceName": "뉴스핌",
-      "relatedStocks": [
-        "한진"
-      ],
-      "impactRank": 17,
-      "category": "국내공시",
-      "region": "domestic"
-    },
-    {
-      "id": "20261111-daehanshipbuilding-shareholder-return",
-      "title": "대한조선, 3년간 순이익 30% 이상 주주환원",
-      "summary": "대한조선은 2027~2029년 매년 연결 당기순이익의 30% 이상을 배당·자사주 매입 및 소각에 활용하고, 100억원 규모 자사주 추가 매입 후 전량 소각할 계획이다.",
-      "publishedAt": "2026-11-10T17:46:00+09:00",
-      "sourceUrl": "https://www.snmnews.com/news/articleView.html?idxno=577217",
-      "sourceName": "철강금속신문",
-      "relatedStocks": [
-        "대한조선"
-      ],
-      "impactRank": 18,
-      "category": "국내공시",
-      "region": "domestic"
-    }
-  ],
-  "corrections": [
-    {
-      "correctedAt": "2026-11-11T06:05:13.945Z",
-      "removedIds": [
-        "20261111-samsung-hynix-weak-open",
-        "20261111-kospi-kosdaq-intraday"
-      ],
-      "reason": "과거 장중 시세를 현재 상황처럼 표시하지 않도록 철회. 최신 등락률은 다음 회차에 재검증 후 반영."
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-11T06:25:34.633Z",
+      "reviewSourceUrl": "https://m.go.seoul.co.kr/news/economy/2026/11/11/20261111500147",
+      "reviewNote": "오늘 공정위 제재 발표를 연합뉴스 12:00 송고 원문과 서울신문 12:02 보도에서 현재 회차에 교차 확인했다. 기존 피드에 없던 신규 규제 재료를 반영하며 금융사 현재 주가 반응은 추정하지 않았다.",
+      "validUntil": "2026-11-11T20:00:00+09:00"
     }
   ]
 }
