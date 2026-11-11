@@ -162,38 +162,6 @@
       "region": "foreign"
     },
     {
-      "id": "20261111-kospi-kosdaq-intraday",
-      "title": "코스피 상승 전환·코스닥 4%대 강세",
-      "summary": "미국 물가·금리 인상 우려에도 코스피가 장중 하락에서 상승으로 전환했고, 코스닥은 오전 11시경 4%대 강세를 보였다. 낙폭과대 성장주로 단기 순환매가 유입되는 흐름이다.",
-      "publishedAt": "2026-11-11T11:09:00+09:00",
-      "sourceUrl": "https://www.newspim.com/news/view/20261111000598",
-      "sourceName": "뉴스핌",
-      "relatedStocks": [
-        "삼성전자",
-        "SK하이닉스",
-        "에코프로비엠"
-      ],
-      "impactRank": 11,
-      "category": "기타",
-      "region": "domestic"
-    },
-    {
-      "id": "20261111-samsung-hynix-weak-open",
-      "title": "삼성전자·SK하이닉스, 미 기술주 약세 영향",
-      "summary": "장 초반 삼성전자는 0.65%, SK하이닉스는 1.16% 하락했다. 미국 증시의 물가 충격과 엔비디아 약세가 국내 반도체 대형주의 변동성을 키우고 있다.",
-      "publishedAt": "2026-11-11T09:32:00+09:00",
-      "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20261111046100008",
-      "sourceName": "연합뉴스",
-      "relatedStocks": [
-        "삼성전자",
-        "SK하이닉스",
-        "한미반도체"
-      ],
-      "impactRank": 12,
-      "category": "반도체·AI",
-      "region": "domestic"
-    },
-    {
       "id": "20261111-samsungfire-canopius",
       "title": "삼성화재, 英 캐노피우스 경영권 인수",
       "summary": "삼성화재가 약 2.2조원을 투입해 영국 로이즈 특수보험사 캐노피우스 경영권을 인수하고 지분 80.6%를 확보할 예정이다.",
@@ -203,7 +171,7 @@
       "relatedStocks": [
         "삼성화재"
       ],
-      "impactRank": 13,
+      "impactRank": 11,
       "category": "국내공시",
       "region": "domestic"
     },
@@ -218,7 +186,7 @@
         "에코프로비엠",
         "에코프로"
       ],
-      "impactRank": 14,
+      "impactRank": 12,
       "category": "국내공시",
       "region": "domestic"
     },
@@ -232,7 +200,7 @@
       "relatedStocks": [
         "HD건설기계"
       ],
-      "impactRank": 15,
+      "impactRank": 13,
       "category": "국내공시",
       "region": "domestic"
     },
@@ -246,7 +214,7 @@
       "relatedStocks": [
         "신세계"
       ],
-      "impactRank": 16,
+      "impactRank": 14,
       "category": "국내공시",
       "region": "domestic"
     },
@@ -260,7 +228,7 @@
       "relatedStocks": [
         "파라다이스"
       ],
-      "impactRank": 17,
+      "impactRank": 15,
       "category": "국내공시",
       "region": "domestic"
     },
@@ -274,7 +242,7 @@
       "relatedStocks": [
         "크래프톤"
       ],
-      "impactRank": 18,
+      "impactRank": 16,
       "category": "국내공시",
       "region": "domestic"
     },
@@ -288,7 +256,7 @@
       "relatedStocks": [
         "한진"
       ],
-      "impactRank": 19,
+      "impactRank": 17,
       "category": "국내공시",
       "region": "domestic"
     },
@@ -302,9 +270,19 @@
       "relatedStocks": [
         "대한조선"
       ],
-      "impactRank": 20,
+      "impactRank": 18,
       "category": "국내공시",
       "region": "domestic"
+    }
+  ],
+  "corrections": [
+    {
+      "correctedAt": "2026-11-11T06:05:13.945Z",
+      "removedIds": [
+        "20261111-samsung-hynix-weak-open",
+        "20261111-kospi-kosdaq-intraday"
+      ],
+      "reason": "과거 장중 시세를 현재 상황처럼 표시하지 않도록 철회. 최신 등락률은 다음 회차에 재검증 후 반영."
     }
   ]
 }
