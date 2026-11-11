@@ -16,6 +16,12 @@ class EditorialFreshnessTests(unittest.TestCase):
     def test_all_four_slots(self):
         for hour, minute in [(7,30),(11,30),(15,30),(20,0)]:
             validate(self.payload(hour,minute))
+    def test_early_scheduler_start_can_prepare_the_intended_slot(self):
+        p=self.payload(15,30)
+        p['asOf']='2026-11-11T15:15:00+09:00'
+        p['items'][0]['reviewedAt']=p['asOf']
+        p['items'][0]['publishedAt']='2026-11-10T12:00:00+09:00'
+        validate(p)
     def test_old_opening_quote_is_rejected(self):
         p=self.payload();i=p['items'][0];i.update(kind='market_snapshot',summary='장 초반 약세',observedAt='2026-11-11T09:32:00+09:00')
         with self.assertRaisesRegex(ValueError,'observation is stale'):
