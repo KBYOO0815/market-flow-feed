@@ -1,7 +1,7 @@
 # Market Flow editorial refresh and publication policy
 
 Publication slots: 07:30, 11:30, 15:30, 20:00 Asia/Seoul, only on verified KOSPI trading days.
-Research preparation starts at 07:20, 11:20, 15:20 and 19:50 respectively. Publication is handled by the public data repository workflow and may be delayed if execution or research is late.
+Research preparation starts at 07:20, 11:20, 15:20 and 19:50 respectively. A scheduler may start a run a few minutes early: begin that edition's actual research immediately within its allowed 20-minute preparation window. Never end the run assuming another preparation run will happen later. Publication is handled by the public data repository workflow and may be delayed if execution or research is late.
 
 ## Rebuild the briefing from current evidence
 - Read the previous public briefing, but never copy its summaries forward without a new review.
