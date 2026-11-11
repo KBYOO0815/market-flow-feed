@@ -58,7 +58,7 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(entries['briefings/2026-11-11.json']['editions']['15:30'],self.late)
         self.assertIn('11:30', entries['briefings/2026-11-11.json']['editions'])
 
-    def test_rolling_five_calendar_days_retention(self):
+    def test_rolling_three_calendar_days_retention(self):
         tree = {'tree': [{'path': 'briefings/2026-11-06.json'},
                          {'path': 'briefings/2026-11-07.json'},
                          {'path': 'briefings/2026-11-08.json'},
@@ -66,9 +66,9 @@ class PublicationTests(unittest.TestCase):
                          {'path': 'briefings/recovered/2026-11-06-1225.json'},
                          {'path': 'other/2026-11-06.json'}]}
         self.assertEqual(p.expired_archive_paths(tree, '2026-11-11T20:00:00+09:00'),
-                         ['briefings/2026-11-06.json'])
+                         ['briefings/2026-11-06.json', 'briefings/2026-11-07.json', 'briefings/2026-11-08.json'])
         self.assertEqual(p.expired_archive_paths(tree, '2026-11-12T07:30:00+09:00'),
-                         ['briefings/2026-11-06.json', 'briefings/2026-11-07.json'])
+                         ['briefings/2026-11-06.json', 'briefings/2026-11-07.json', 'briefings/2026-11-08.json'])
 
     def test_newer_published_root_cannot_be_rolled_back(self):
         with patch.object(p,'api',side_effect=[{'object':{'sha':'h'}},{'tree':{'sha':'t'}}]), patch.object(p,'read_remote',return_value=(self.late,'s')):
