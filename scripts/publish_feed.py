@@ -14,7 +14,7 @@ REPO = 'KBYOO0815/market-flow-feed'
 
 def api(method, path, body=None):
     url = 'https://api.github.com/repos/' + REPO + '/contents/' + path
-    headers = {'Authorization': 'Bearer ' + os.environ['PUBLISH_TOKEN'], 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28'}
+    headers = {'Authorization': 'Bearer ' + os.environ['PUBLISH_TOKEN'], 'Content-Type': 'application/json', 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28'}
     data = json.dumps(body).encode() if body is not None else None
     request = urllib.request.Request(url, data=data, headers=headers, method=method)
     with urllib.request.urlopen(request, timeout=30) as response:
@@ -41,6 +41,8 @@ def main():
     draft = validate(json.loads(draft_path.read_text()))
     release = timestamp(draft['releaseAt'])
     now = dt.datetime.now(KST)
+    if timestamp(draft['asOf']) > now + dt.timedelta(minutes=1):
+        raise ValueError('Research timestamp is in the future; do not manufacture a current review.')
     wait = (release - now).total_seconds()
     if wait > 1200 or now > release + dt.timedelta(minutes=30):
         output('published=false')

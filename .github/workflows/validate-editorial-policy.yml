@@ -1,0 +1,14 @@
+name: Validate editorial freshness policy
+on:
+  push:
+    paths: ['scripts/**', '.github/workflows/validate-editorial-policy.yml']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - run: python3 -m py_compile scripts/publish_feed.py
