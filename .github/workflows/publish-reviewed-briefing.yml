@@ -1,0 +1,30 @@
+name: Publish reviewed briefing
+on:
+  push:
+    branches: [main]
+    paths: ['drafts/morning-briefing.json']
+  schedule:
+    - cron: '30 22 * * 0-4'
+    - cron: '30 2,6 * * 1-5'
+    - cron: '0 11 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: reviewed-briefing-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Test editorial freshness guards
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Publish only a fresh reviewed draft at its release time
+        id: publication
+        env:
+          PUBLISH_TOKEN: ${{ github.token }}
+        run: python3 scripts/publish_feed.py
