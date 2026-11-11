@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-12",
+  "editions": {
+    "07:30": {
+      "schemaVersion": 2,
+      "asOf": "2026-11-12T07:23:50+09:00",
+      "releaseAt": "2026-11-12T07:30:00+09:00",
+      "tradingDayVerified": true,
+      "calendarSourceUrl": "https://todaystk.kr/market-holidays",
+      "items": [
+        {
+          "id": "20261112-0730-us-nvidia-china-export-controls",
+          "title": "미국 엔비디아 AI칩 대중국 우회 수출 단속, 상무장관 제동 보도",
+          "summary": "로이터가 Axios를 인용해 트럼프 대통령이 엔비디아 AI칩의 중국 우회 반출 의심 기업에 대한 단속을 승인했으나, 러트닉 상무장관이 시행에 제동을 걸었다고 보도했다. 익명 관계자 보도이며 정책 시행 여부는 별도 확인이 필요하다.",
+          "publishedAt": "2026-11-11T21:21:00Z",
+          "sourceUrl": "https://www.reuters.com/world/china/lutnick-stalled-trump-crackdown-diversion-nvidia-chips-china-axios-reports-2026-11-11/",
+          "sourceName": "Reuters(Axios 인용)",
+          "relatedStocks": [
+            "삼성전자",
+            "SK하이닉스"
+          ],
+          "category": "정책·발언",
+          "region": "foreign",
+          "kind": "news",
+          "reviewNote": "Reuters 원문에 2026-11-11 21:21 UTC 송고시각과 Axios 인용이라는 근거 수준을 확인. 전날 20:00 회차의 Fed·국내 증시 마감·국고채 제재와 별개의 반도체 수출규제 집행 뉴스이며 공식 확정 정책으로 표현하지 않음.",
+          "impactRank": 1,
+          "reviewedAt": "2026-11-12T07:23:50+09:00",
+          "reviewSourceUrl": "https://www.reuters.com/world/china/lutnick-stalled-trump-crackdown-diversion-nvidia-chips-china-axios-reports-2026-11-11/",
+          "validUntil": "2026-11-12T11:30:00+09:00"
+        },
+        {
+          "id": "20261112-0730-pfizer-blackstone-obesity-financing",
+          "title": "화이자, 블랙스톤서 비만치료제 개발자금 최대 15억달러 조달",
+          "summary": "화이자가 월 1회 투여 실험용 비만치료제 개발을 위해 블랙스톤으로부터 2028년까지 최대 15억달러의 자금을 지원받는다고 로이터가 보도했다. 국내 바이오 업종에 참고할 해외 자금조달 사례다.",
+          "publishedAt": "2026-11-11T21:40:00Z",
+          "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/pfizer-secures-up-15-billion-blackstone-obesity-drug-development-2026-11-11/",
+          "sourceName": "Reuters",
+          "relatedStocks": [],
+          "category": "기타",
+          "region": "foreign",
+          "kind": "news",
+          "reviewNote": "Reuters 원문에 2026-11-11 21:40 UTC 송고시각 및 최대 15억달러 개발자금 내용을 확인. 이전 회차에 없는 별도 제약 연구개발 자금조달 사건.",
+          "impactRank": 2,
+          "reviewedAt": "2026-11-12T07:23:50+09:00",
+          "reviewSourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/pfizer-secures-up-15-billion-blackstone-obesity-drug-development-2026-11-11/",
+          "validUntil": "2026-11-12T11:30:00+09:00"
+        }
+      ]
+    }
+  }
+}
