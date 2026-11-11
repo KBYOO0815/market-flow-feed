@@ -49,6 +49,33 @@ def validate(payload):
     items = payload.get("items")
     if not isinstance(items, list) or len(items) > 20:
         raise ValueError("items must be an array with at most 20 entries")
+    # Starting with the next release, require a verifiable research coverage audit.
+    # Counts alone do not prove research; source URLs and topic coverage are required.
+    if local >= dt.datetime(2026, 11, 12, 11, 30, tzinfo=KST):
+        audit = payload.get("researchAudit")
+        if not isinstance(audit, dict):
+            raise ValueError("researchAudit required: do not publish without source coverage")
+        required = ("foreign_market", "foreign_policy", "foreign_technology",
+                    "domestic_disclosures", "domestic_policy", "domestic_market")
+        coverage = audit.get("coverage")
+        if not isinstance(coverage, dict):
+            raise ValueError("researchAudit.coverage required")
+        for topic in required:
+            record = coverage.get(topic)
+            if not isinstance(record, dict) or not isinstance(record.get("checkedAt"), str):
+                raise ValueError("missing research coverage: " + topic)
+            checked = timestamp(record["checkedAt"])
+            if not as_of - dt.timedelta(minutes=30) <= checked <= as_of:
+                raise ValueError("stale research coverage: " + topic)
+            urls = record.get("sourceUrls")
+            if not isinstance(urls, list) or not urls or not all(https(url) for url in urls):
+                raise ValueError("actual source URLs required: " + topic)
+        for field in ("foreignCandidates", "domesticCandidates", "verifiedCandidates", "duplicateExcluded"):
+            value = audit.get(field)
+            if type(value) is not int or value < 0:
+                raise ValueError("nonnegative measured researchAudit count required: " + field)
+        if audit["verifiedCandidates"] < len(items):
+            raise ValueError("verified candidate count below published item count")
     ids, counts, domestic_started = set(), {"foreign": 0, "domestic": 0}, False
     for position, item in enumerate(items, 1):
         if not isinstance(item, dict):
