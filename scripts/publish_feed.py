@@ -43,9 +43,9 @@ def archive_update(payload, previous):
 
 
 def expired_archive_paths(tree, release):
-    # Keep the release date and the preceding four calendar dates (KST).
+    # Keep the release date and the preceding two calendar dates (KST).
     today = timestamp(release).astimezone(KST).date()
-    cutoff = today - dt.timedelta(days=4)
+    cutoff = today - dt.timedelta(days=2)
     paths = []
     for node in tree.get('tree', []):
         path = node.get('path', '')
