@@ -4,9 +4,9 @@ on:
     branches: [main]
     paths: ['drafts/morning-briefing.json']
   schedule:
-    - cron: '30 22 * * 0-4'
-    - cron: '30 2,6 * * 1-5'
-    - cron: '0 11 * * 1-5'
+    - cron: '40 21,22 * * 0-4'
+    - cron: '50 2,5,6,9 * * 1-5'
+    - cron: '20 11 * * 1-5'
   workflow_dispatch:
 permissions:
   contents: write
