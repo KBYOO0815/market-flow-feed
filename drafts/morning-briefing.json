@@ -1,52 +1,69 @@
 {
   "schemaVersion": 2,
-  "asOf": "2026-11-11T06:25:34.633Z",
-  "releaseAt": "2026-11-11T15:30:00+09:00",
+  "asOf": "2026-11-11T10:52:22Z",
+  "releaseAt": "2026-11-11T20:00:00+09:00",
   "tradingDayVerified": true,
   "calendarSourceUrl": "https://marketcalendars.com/markets/krx",
-  "editionNote": "현재 회차에 출처를 다시 확인한 사실만 포함. 재검증되지 않은 기존 항목과 최신 관측시각을 확인하지 못한 장중 등락률은 제외.",
   "items": [
     {
-      "id": "20261111-coreweave-guidance-reviewed",
-      "title": "코어위브, 매출 전망 상향·대규모 투자 계획",
-      "summary": "3분기 매출 36.61억달러를 공시하고 연간 매출 전망을 130억~133억달러로 높였다. 연간 설비투자 370억~390억달러와 4분기 이자비용 10.5억~11.5억달러 전망도 제시했다.",
-      "publishedAt": "2026-11-10T16:05:53-05:00",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm",
-      "sourceName": "코어위브·SEC 공시",
-      "relatedStocks": [
-        "SK하이닉스",
-        "삼성전자"
-      ],
-      "impactRank": 1,
-      "category": "반도체·AI",
-      "region": "foreign",
+      "reviewedAt": "2026-11-11T10:52:22Z",
+      "validUntil": "2026-11-12T07:30:00+09:00",
       "kind": "news",
-      "reviewedAt": "2026-11-11T06:25:34.633Z",
-      "reviewSourceUrl": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
-      "reviewNote": "현재 회차에 SEC 원문과 공식 IR 자료를 다시 열어 매출·투자·이자비용 전망을 교차 확인했다. AI 인프라 수요와 자금 부담에 관련된 확정 공시 사실을 유지하며, 실시간으로 재확인하지 않은 주가 반응은 쓰지 않았다.",
-      "validUntil": "2026-11-11T20:00:00+09:00"
+      "id": "20261111-2000-fed-inflation",
+      "title": "미국 물가·Fed 발언, 금리 인상 우려 지속",
+      "summary": "로이터는 10월 물가의 예상 상회와 Fed 인사들의 긴축 발언을 보도했다. 금리 경로 불확실성이 이어져 환율과 성장주 평가에 영향을 줄 수 있다. 실시간 환율·선물 수치는 제외했다.",
+      "publishedAt": "2026-11-11T00:54:50.925Z",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/dollar-gains-traction-fed-speakers-warn-risks-inflation-2026-11-11/",
+      "sourceName": "Reuters",
+      "relatedStocks": [],
+      "category": "정책·발언",
+      "region": "foreign",
+      "reviewNote": "원문과 09:01 UTC 수정시각을 확인했다. 이전 기준 이후 갱신된 보도의 물가·정책 배경만 반영하며 관측시각이 불명확한 호가는 제외했다.",
+      "reviewSourceUrl": "https://www.reuters.com/world/asia-pacific/dollar-gains-traction-fed-speakers-warn-risks-inflation-2026-11-11/",
+      "impactRank": 1
     },
     {
-      "id": "20261111-bond-dealer-collusion-fine",
-      "title": "국고채 담합 15개 금융사에 1.63조원 과징금",
-      "summary": "공정위가 국고채 입찰 담합에 가담한 은행·증권사 15곳에 총 1조6265억7500만원의 과징금과 시정명령을 내리고, 7개사를 고발하기로 했다. KB·NH·미래에셋·키움증권 등이 제재 대상에 포함됐다.",
-      "publishedAt": "2026-11-11T12:00:00+09:00",
-      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111082500002",
-      "sourceName": "연합뉴스·서울신문",
-      "relatedStocks": [
-        "미래에셋증권",
-        "NH투자증권",
-        "키움증권",
-        "기업은행"
-      ],
-      "impactRank": 2,
-      "category": "정책·발언",
-      "region": "domestic",
+      "reviewedAt": "2026-11-11T10:52:22Z",
+      "validUntil": "2026-11-12T07:30:00+09:00",
       "kind": "news",
-      "reviewedAt": "2026-11-11T06:25:34.633Z",
-      "reviewSourceUrl": "https://m.go.seoul.co.kr/news/economy/2026/11/11/20261111500147",
-      "reviewNote": "오늘 공정위 제재 발표를 연합뉴스 12:00 송고 원문과 서울신문 12:02 보도에서 현재 회차에 교차 확인했다. 기존 피드에 없던 신규 규제 재료를 반영하며 금융사 현재 주가 반응은 추정하지 않았다.",
-      "validUntil": "2026-11-11T20:00:00+09:00"
+      "id": "20261111-2000-kr-close",
+      "title": "코스피 2.60%·코스닥 5.62% 상승 마감",
+      "summary": "11월 11일 정규장 종가는 코스피 5,375.36, 코스닥 705.10이다. 삼성전자 206,000원(+3.57%), SK하이닉스 1,277,000원(+5.36%)으로 마감했다. 이는 정규장 종가이며 야간 현재가는 아니다.",
+      "publishedAt": "2026-11-11T16:21:55+09:00",
+      "sourceUrl": "https://en.fnnews.com/news/202611111610379869",
+      "sourceName": "파이낸셜뉴스",
+      "relatedStocks": [
+        "삼성전자",
+        "SK하이닉스"
+      ],
+      "category": "기타",
+      "region": "domestic",
+      "reviewNote": "16:21:55 마감 기사 원문에서 거래 종료 수치를 재확인했다. 아침 약세가 이어졌다는 해석을 배제하고 마감 결과만 반영했다. 수급 집계 범위가 다른 보도 수치는 제외했다.",
+      "reviewSourceUrl": "https://en.fnnews.com/news/202611111610379869",
+      "impactRank": 2
+    },
+    {
+      "reviewedAt": "2026-11-11T10:52:22Z",
+      "validUntil": "2026-11-12T07:30:00+09:00",
+      "kind": "news",
+      "id": "20261111-2000-bond-fine-followup",
+      "title": "국고채 담합 제재, 증권사 비용 반영 후속 점검",
+      "summary": "한국신용평가는 과징금이 금융사 자기자본의 0.0~4.2%로 자본 건전성 직접 영향은 제한적이나 올해 수익성 부담이 클 수 있다고 평가했다. KB증권은 3,322억원을 충당부채로 반영했으며 다른 회사의 비용 인식 시점은 확인이 필요하다.",
+      "publishedAt": "2026-11-11T18:39:43+09:00",
+      "sourceUrl": "https://en.fnnews.com/news/202611111835457735",
+      "sourceName": "파이낸셜뉴스",
+      "relatedStocks": [
+        "KB금융",
+        "NH투자증권",
+        "미래에셋증권",
+        "대신증권",
+        "삼성증권"
+      ],
+      "category": "국내공시",
+      "region": "domestic",
+      "reviewNote": "18:39:43 후속 보도 원문을 읽고 신평사 평가와 이미 반영된 충당부채를 구분했다. 정오 제재 발표 요약을 새 비용·신용 영향 보도로 교체했다.",
+      "reviewSourceUrl": "https://en.fnnews.com/news/202611111835457735",
+      "impactRank": 3
     }
   ]
 }
