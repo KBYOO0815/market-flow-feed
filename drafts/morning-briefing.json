@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 2,
+  "asOf": "2026-11-11T06:25:34.633Z",
+  "releaseAt": "2026-11-11T15:30:00+09:00",
+  "tradingDayVerified": true,
+  "calendarSourceUrl": "https://marketcalendars.com/markets/krx",
+  "editionNote": "현재 회차에 출처를 다시 확인한 사실만 포함. 재검증되지 않은 기존 항목과 최신 관측시각을 확인하지 못한 장중 등락률은 제외.",
+  "items": [
+    {
+      "id": "20261111-coreweave-guidance-reviewed",
+      "title": "코어위브, 매출 전망 상향·대규모 투자 계획",
+      "summary": "3분기 매출 36.61억달러를 공시하고 연간 매출 전망을 130억~133억달러로 높였다. 연간 설비투자 370억~390억달러와 4분기 이자비용 10.5억~11.5억달러 전망도 제시했다.",
+      "publishedAt": "2026-11-10T16:05:53-05:00",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm",
+      "sourceName": "코어위브·SEC 공시",
+      "relatedStocks": [
+        "SK하이닉스",
+        "삼성전자"
+      ],
+      "impactRank": 1,
+      "category": "반도체·AI",
+      "region": "foreign",
+      "kind": "news",
+      "reviewedAt": "2026-11-11T06:25:34.633Z",
+      "reviewSourceUrl": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+      "reviewNote": "현재 회차에 SEC 원문과 공식 IR 자료를 다시 열어 매출·투자·이자비용 전망을 교차 확인했다. AI 인프라 수요와 자금 부담에 관련된 확정 공시 사실을 유지하며, 실시간으로 재확인하지 않은 주가 반응은 쓰지 않았다.",
+      "validUntil": "2026-11-11T20:00:00+09:00"
+    },
+    {
+      "id": "20261111-bond-dealer-collusion-fine",
+      "title": "국고채 담합 15개 금융사에 1.63조원 과징금",
+      "summary": "공정위가 국고채 입찰 담합에 가담한 은행·증권사 15곳에 총 1조6265억7500만원의 과징금과 시정명령을 내리고, 7개사를 고발하기로 했다. KB·NH·미래에셋·키움증권 등이 제재 대상에 포함됐다.",
+      "publishedAt": "2026-11-11T12:00:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111082500002",
+      "sourceName": "연합뉴스·서울신문",
+      "relatedStocks": [
+        "미래에셋증권",
+        "NH투자증권",
+        "키움증권",
+        "기업은행"
+      ],
+      "impactRank": 2,
+      "category": "정책·발언",
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-11T06:25:34.633Z",
+      "reviewSourceUrl": "https://m.go.seoul.co.kr/news/economy/2026/11/11/20261111500147",
+      "reviewNote": "오늘 공정위 제재 발표를 연합뉴스 12:00 송고 원문과 서울신문 12:02 보도에서 현재 회차에 교차 확인했다. 기존 피드에 없던 신규 규제 재료를 반영하며 금융사 현재 주가 반응은 추정하지 않았다.",
+      "validUntil": "2026-11-11T20:00:00+09:00"
+    }
+  ]
+}
