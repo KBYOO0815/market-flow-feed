@@ -29,3 +29,6 @@ asOf must be within 20 minutes before to 30 minutes after the intended release. 
 5. A staged draft is not a successful publication. Verify the workflow result and public file releaseAt/asOf before reporting published. If the run ends before release, report staged/waiting honestly.
 6. After a verified public publication, mirror that exact JSON to the private data/morning-briefing.json. At the next run, reconcile the latest public file first if a previous run ended while waiting.
 7. On a KRX holiday, unverifiable market calendar, tool failure or missing evidence, do not fabricate a briefing or mark publication successful. Report the exact issue.
+
+## 회차별 저장
+공개 시 최신 morning-briefing.json과 briefings/YYYY-MM-DD.json의 해당 회차를 한 커밋으로 함께 저장한다. 날짜 파일의 editions 키는 07:30, 11:30, 15:30, 20:00이다. 이전 회차의 저장본은 유지하며, 동일 회차의 검증된 정정은 해당 키만 갱신한다. 발행 전 초안은 이 저장본에 넣지 않는다. 앱은 최초 공개 회차를 선택한 뒤 사용자의 선택을 새로고침 시에도 유지한다. 과거 회차는 당시 공개본이며 현재 시세로 해석하지 않는다. 기존 기록이 없는 회차를 다른 시각의 뉴스로 채우지 않는다.
