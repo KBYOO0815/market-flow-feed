@@ -4,6 +4,7 @@ import datetime as dt
 import json
 import os
 import pathlib
+import re
 import time
 import urllib.error
 import urllib.request
@@ -41,6 +42,19 @@ def archive_update(payload, previous):
     return 'briefings/' + date + '.json', day
 
 
+def expired_archive_paths(tree, release):
+    # Keep the release date and the preceding four calendar dates (KST).
+    today = timestamp(release).astimezone(KST).date()
+    cutoff = today - dt.timedelta(days=4)
+    paths = []
+    for node in tree.get('tree', []):
+        path = node.get('path', '')
+        if re.fullmatch(r'briefings/\d{4}-\d{2}-\d{2}\.json', path):
+            if dt.date.fromisoformat(path[10:20]) < cutoff:
+                paths.append(path)
+    return paths
+
+
 def publish(payload):
     for attempt in range(3):
         # Pin every read to the same head. A non-fast-forward ref update fails
@@ -50,13 +64,16 @@ def publish(payload):
         current, _ = read_remote('morning-briefing.json', head)
         if timestamp(current['releaseAt']) > timestamp(payload['releaseAt']) or timestamp(current['asOf']) > timestamp(payload['asOf']):
             return None
+        existing_tree = api('GET', 'git/trees/' + commit['tree']['sha'] + '?recursive=1')
+        expired = expired_archive_paths(existing_tree, payload['releaseAt'])
         path, _ = archive_update(payload, None)
         previous, _ = read_remote(path, head, missing=True)
         path, day = archive_update(payload, previous)
-        if current == payload and previous == day:
+        if current == payload and previous == day and not expired:
             return head
         entries = [{'path': name, 'mode': '100644', 'type': 'blob', 'content': json.dumps(body, ensure_ascii=False, indent=2) + '\n'}
                    for name, body in [('morning-briefing.json', payload), (path, day)]]
+        entries.extend({'path': old, 'mode': '100644', 'type': 'blob', 'sha': None} for old in expired)
         tree = api('POST', 'git/trees', {'base_tree': commit['tree']['sha'], 'tree': entries})
         new = api('POST', 'git/commits', {'message': 'Publish and archive reviewed briefing ' + payload['releaseAt'], 'tree': tree['sha'], 'parents': [head]})
         try:
