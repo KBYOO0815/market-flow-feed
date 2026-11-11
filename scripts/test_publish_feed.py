@@ -28,6 +28,7 @@ class PublicationTests(unittest.TestCase):
             calls.append((method, path, copy.deepcopy(body)))
             if path == 'git/ref/heads/main': return {'object': {'sha': 'head'+str(generation[0])}}
             if path.startswith('git/commits/head'): return {'tree': {'sha': 'tree'+str(generation[0])}}
+            if path.startswith('git/trees/') and method == 'GET': return {'tree': []}
             if method == 'GET' and path.startswith('contents/'):
                 content = self.early if path.startswith('contents/morning') else self.archive
                 if generation[0] and path.startswith('contents/briefings'):
@@ -56,6 +57,18 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(entries['morning-briefing.json'],self.late)
         self.assertEqual(entries['briefings/2026-11-11.json']['editions']['15:30'],self.late)
         self.assertIn('11:30', entries['briefings/2026-11-11.json']['editions'])
+
+    def test_rolling_five_calendar_days_retention(self):
+        tree = {'tree': [{'path': 'briefings/2026-11-06.json'},
+                         {'path': 'briefings/2026-11-07.json'},
+                         {'path': 'briefings/2026-11-08.json'},
+                         {'path': 'briefings/2026-11-11.json'},
+                         {'path': 'briefings/recovered/2026-11-06-1225.json'},
+                         {'path': 'other/2026-11-06.json'}]}
+        self.assertEqual(p.expired_archive_paths(tree, '2026-11-11T20:00:00+09:00'),
+                         ['briefings/2026-11-06.json'])
+        self.assertEqual(p.expired_archive_paths(tree, '2026-11-12T07:30:00+09:00'),
+                         ['briefings/2026-11-06.json', 'briefings/2026-11-07.json'])
 
     def test_newer_published_root_cannot_be_rolled_back(self):
         with patch.object(p,'api',side_effect=[{'object':{'sha':'h'}},{'tree':{'sha':'t'}}]), patch.object(p,'read_remote',return_value=(self.late,'s')):
