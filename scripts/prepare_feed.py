@@ -1,4 +1,4 @@
-"""Validate a freshly reviewed briefing; publication must use one of four KST slots."""
+"""Validate a freshly reviewed briefing; publication must use one of seven KST slots."""
 import datetime as dt
 import json
 import pathlib
@@ -7,7 +7,7 @@ import sys
 from urllib.parse import urlparse
 
 KST = dt.timezone(dt.timedelta(hours=9))
-SLOTS = (dt.time(7, 30), dt.time(11, 30), dt.time(15, 30), dt.time(20, 0))
+SLOTS = (dt.time(6, 40), dt.time(7, 40), dt.time(11, 50), dt.time(14, 50), dt.time(15, 50), dt.time(18, 50), dt.time(20, 20))
 CATEGORIES = {"미국증시", "반도체·AI", "정책·발언", "국내공시", "기타"}
 
 def timestamp(value):
@@ -41,7 +41,7 @@ def validate(payload):
     release = timestamp(payload["releaseAt"])
     local = release.astimezone(KST)
     if local.time().replace(tzinfo=None) not in SLOTS or local.weekday() >= 5:
-        raise ValueError("releaseAt must be a weekday 07:30, 11:30, 15:30 or 20:00 KST slot")
+        raise ValueError("releaseAt must be a weekday 06:40, 07:40, 11:50, 14:50, 15:50, 18:50 or 20:20 KST slot")
     if payload.get("tradingDayVerified") is not True or not https(payload.get("calendarSourceUrl")):
         raise ValueError("verified KOSPI trading day evidence is required")
     if not release - dt.timedelta(minutes=20) <= as_of <= release + dt.timedelta(minutes=30):
