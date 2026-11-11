@@ -54,3 +54,10 @@ asOf must be within 20 minutes before to 30 minutes after the intended release. 
 - 공개 briefings/YYYY-MM-DD.json에는 각 날짜의 07:30/11:30/15:30/20:00 회차를 독립 보존한다. 새 회차 발행 시 KST 발행일 D부터 D-4까지 **5개 달력 날짜**의 날짜별 파일만 유지하고 D-5 이전 날짜별 파일은 같은 발행 커밋에서 제거한다. 휴장일도 달력상 날짜 계산에 포함하며 보관 날짜에 거래가 없으면 파일을 생성하지 않는다.
 - 최신 morning-briefing.json은 최신 회차 조회용이며 날짜별 FIFO의 추가 날짜로 세지 않는다. briefings/recovered/는 복구 증빙 자료이므로 일반 날짜별 FIFO 대상과 구분한다.
 - 과거 날짜 삭제는 실제 새 회차가 검증되어 발행되는 시점에만 실행한다. 초안 작성 중에는 보관본을 삭제하지 않는다. 사용자 앱은 최근 5일 중 존재하는 날짜·회차를 조회하고 선택할 수 있어야 한다. 앱의 날짜별 탐색 UI/조회 로직이 별도로 지원되는지도 확인해야 한다.
+
+## 발행 차단형 검색 감사 (2026-11-12 11:30 회차부터 필수)
+- 신규 브리핑 JSON에 researchAudit를 반드시 추가한다. 누락되면 발행 검증이 실패한다.
+- researchAudit.coverage에는 foreign_market(미국 증시/금리/환율), foreign_policy(Fed/정책/지정학), foreign_technology(엔비디아/반도체/AI/빅테크), domestic_disclosures(DART/KIND 공시/실적/수주), domestic_policy(정부/금융규제), domestic_market(KRX 시장/수급/옵션만기) 6개 키를 모두 채운다. 각 값은 checkedAt(실제 조사시각, asOf 전 30분 이내)과 sourceUrls(실제로 조사한 HTTPS 원문/공식 목록 URL 배열)이다.
+- researchAudit.foreignCandidates, domesticCandidates, verifiedCandidates, duplicateExcluded는 실제로 확인한 0 이상의 정수로 작성한다. '검색했다'는 말만으로 기록을 대신하거나 확인하지 않은 URL·시각·건수를 꾸며서는 안 된다. 6개 분야를 확인하지 못했다면 그 회차 발행을 중단하고 미완료 이유를 보고한다.
+- 시장 충격 사건의 최종 점검을 별도 실시한다. 한국 장전 07:30에는 미국 정규장 종가와 미국 장마감 후 신규 속보, 국내 06:00~07:30 공시·개장 전 주요 뉴스를 반드시 재검색한다. 특히 엔비디아/삼성전자/SK하이닉스/금리/정책·규제/시장 급변과 주요 국내 공시를 확인하고 중요도를 다시 평가한다.
+- 원문 발행시각이 발행 목표 이후인 재료는 그 회차에 절대 넣지 않는다. 기존 07:30 회차의 누락을 나중에 발견하면 당시 시각을 소급 조작하지 말고 다음 회차의 새 사실 여부를 판정하거나 누락 사유를 별도로 보고한다.
