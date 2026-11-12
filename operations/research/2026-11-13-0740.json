@@ -1,0 +1,193 @@
+{
+  "releaseAt": "2026-11-13T07:40:00+09:00",
+  "checkedAt": "2026-11-12T22:49:40Z",
+  "sourceCutoff": "2026-11-13T07:40:00+09:00",
+  "candidates": [
+    {
+      "title": "엔비디아, 젠슨 황 사임·콜레트 크레스 임시 CEO 선임",
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "publishedAt": "2026-11-13T07:28:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "원문과 시각 확인, 이전 발행본에 없는 독립 사실."
+    },
+    {
+      "title": "미국 3대 지수 하락 마감…나스닥 0.39%↓",
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "publishedAt": "2026-11-13T07:28:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "원문과 시각 확인, 이전 발행본에 없는 독립 사실."
+    },
+    {
+      "title": "국제유가 상승…브렌트유 3.30%·WTI 2.55%↑",
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "publishedAt": "2026-11-13T07:28:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "원문과 시각 확인, 이전 발행본에 없는 독립 사실."
+    },
+    {
+      "title": "연준, 2027년 FOMC 일정 변경…10월 회의는 전략 논의",
+      "region": "foreign",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
+      "publishedAt": "2026-11-13T02:45:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "원문과 시각 확인, 이전 발행본에 없는 독립 사실."
+    },
+    {
+      "title": "삼성전자, AI 안경 30종 공개…12월 10일 한국·미국 출시",
+      "region": "domestic",
+      "sourceUrl": "https://www.chosun.com/economy/int_economy/2026/11/13/KO2KEISQA5A45EJO5UKCB32KFE/",
+      "publishedAt": "2026-11-13T00:31:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "원문과 시각 확인, 이전 발행본에 없는 독립 사실."
+    },
+    {
+      "title": "한국전력 3분기 영업이익 1조6,441억원…전년 대비 70.9% 감소",
+      "region": "domestic",
+      "sourceUrl": "https://www.mt.co.kr/economy/2026/11/12/2026111216050978049",
+      "publishedAt": "2026-11-12T16:24:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "이전 회차 미반영 실적. 실제 발표일을 본문에 명시."
+    },
+    {
+      "title": "도레이첨단소재, MLCC 필름 생산능력 연 9억㎡로 확대",
+      "region": "domestic",
+      "sourceUrl": "https://m.ekn.kr/view.php?key=20261112022509067",
+      "publishedAt": "2026-11-12T23:51:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "원문과 시각 확인, 이전 발행본에 없는 독립 사실."
+    },
+    {
+      "region": "foreign",
+      "title": "네비우스 실적·전망",
+      "sourceUrl": "https://www.reuters.com/technology/nebius-beats-quarterly-revenue-estimates-strong-ai-demand-2026-11-12/",
+      "decision": "원문 확인 불가",
+      "reason": "직접 원문 추출 실패. 종합기사의 주가 수치만으로 실적·전망 세부 항목을 작성하지 않음.",
+      "verified": false
+    },
+    {
+      "region": "foreign",
+      "title": "AP 세계 증시 종합",
+      "sourceUrl": "https://apnews.com/article/8bf08407eafe1655ed73112f7494029a",
+      "decision": "시간범위 밖",
+      "reason": "검색 결과는 마감 기사였으나 추출 원문은 11월12일 09:27 UTC 장전 기사. 최신 종가 근거로 제외.",
+      "verified": false
+    },
+    {
+      "region": "foreign",
+      "title": "MarketScreener 로이터 전재",
+      "sourceUrl": "https://www.marketscreener.com/news/nasdaq-futures-fall-as-nvidia-turmoil-rattles-ai-stocks-ce785ed8da88fe27",
+      "decision": "시간범위 밖",
+      "reason": "실제 추출본은 11월12일 04:40 EST 갱신 선물 기사. 검색에 표시된 마감 내용과 불일치.",
+      "verified": false
+    },
+    {
+      "region": "foreign",
+      "title": "데일리 금리 인상 발언",
+      "sourceUrl": "https://www.reuters.com/business/daly-says-fed-rate-hike-likely-despite-painful-tech-stock-dive-2026-11-06/",
+      "decision": "시간범위 밖",
+      "reason": "원문 날짜가 11월6일. 오늘 새 발언으로 취급하지 않음.",
+      "verified": false
+    },
+    {
+      "region": "foreign",
+      "title": "Reuters Trading Day 논평",
+      "sourceUrl": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-11-12/",
+      "decision": "의견·전망",
+      "reason": "논평 기사. 별도로 검증된 확정 사실만 다른 원문으로 작성.",
+      "verified": false
+    },
+    {
+      "region": "domestic",
+      "title": "금융회사 지배구조 개선안",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88125",
+      "decision": "중복",
+      "reason": "11월12일 11:50 공개본에 이미 같은 정책이 발행됨.",
+      "verified": true
+    },
+    {
+      "region": "domestic",
+      "title": "온디바이스 AI반도체 10종 로드맵",
+      "sourceUrl": "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c/172399/view",
+      "decision": "원문 확인 불가",
+      "reason": "공식 본문은 확인했으나 시간 단위 실제 공개시각을 확증하지 못해 이번 회차 항목에서 제외.",
+      "verified": false
+    },
+    {
+      "region": "domestic",
+      "title": "펄어비스 3분기 실적",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112900686",
+      "decision": "원문 확인 불가",
+      "reason": "검색된 재전송 사이트 사이 전년비 수치가 상충. 원 공시 세부 수치 재확인 전 제외.",
+      "verified": false
+    },
+    {
+      "region": "domestic",
+      "title": "셀루메드 주주총회소집공고",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000002",
+      "decision": "원문 확인 불가",
+      "reason": "오늘 07:35 접수 및 문서 목차는 확인했으나 결의안 세부를 추출하지 못함.",
+      "verified": false
+    },
+    {
+      "region": "domestic",
+      "title": "셀루메드 감자결정",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000003",
+      "decision": "시간범위 밖",
+      "reason": "DART 오늘 전체 목록의 07:44 접수. 07:40 발행 목표 이후이므로 이 회차에 포함 금지.",
+      "verified": false
+    },
+    {
+      "region": "domestic",
+      "title": "셀트릭스 합병 증권신고서 효력발생 안내",
+      "sourceUrl": "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
+      "decision": "기타",
+      "reason": "비상장 기타법인 효력발생 안내 목록. 개별 주식시장 주요 신규 실적·계약으로 판단하지 않음.",
+      "verified": false
+    },
+    {
+      "region": "domestic",
+      "title": "디와이장위유동화전문유한회사 분기보고서",
+      "sourceUrl": "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
+      "decision": "기타",
+      "reason": "기타법인 유동화전문회사 정기보고 목록. 주요 상장회사 신규 기업 사실 후보에서 제외.",
+      "verified": false
+    },
+    {
+      "region": "domestic",
+      "title": "세교제일차유동화전문유한회사 분기보고서",
+      "sourceUrl": "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
+      "decision": "기타",
+      "reason": "기타법인 유동화전문회사 정기보고 목록. 주요 상장회사 신규 기업 사실 후보에서 제외.",
+      "verified": false
+    }
+  ],
+  "counts": {
+    "foreignCandidates": 9,
+    "domesticCandidates": 11,
+    "verifiedCandidates": 8,
+    "duplicateExcluded": 1
+  },
+  "calendarVerification": {
+    "calendarSourceUrl": "https://atsview.com/calendar/2026",
+    "evidenceUrls": [
+      "https://traderda.com/market/market-holidays",
+      "https://kind.krx.co.kr/"
+    ],
+    "reason": "2026 연간 휴장일 표 두 곳 모두 11월 휴장일 없음. KIND 11월13일 기업 일정 교차 확인. TraderDa의 오늘 표시는 추출본이 9월2일로 오래되어 사용하지 않고 연간 표만 교차 대조. KRX 공식 휴장일 페이지 추출은 당해 연도 상세 달력 미제공."
+  },
+  "recovery": {
+    "missedSlot": "2026-11-13T06:40:00+09:00",
+    "reason": "06:40·07:40 조사 작업이 공식 날짜별 달력 및 당일 공시 확인 미완료로 중단. 소급 발행 없이 현재 허용 창의 07:40 회차를 실제 재조사해 복구.",
+    "researchBeganAt": "2026-11-12T22:40:38Z"
+  }
+}
