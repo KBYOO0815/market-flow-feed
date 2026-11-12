@@ -6,6 +6,8 @@ import pathlib
 import re
 from featured_stocks import KST, collect, get, get_nxt_eligibility, list_url, stamp
 from publish_feed import api
+from source_http import CollectionFetch
+from featured_stocks import BASE
 
 
 def save(entries):
@@ -35,7 +37,18 @@ def run(request):
             ranks={m:get(list_url(m)) for m in ('KRX','NXT')};official=get_nxt_eligibility()
             if not all(isinstance(v,list) and v for v in ranks.values()):raise ValueError('ranking shape changed')
             if not isinstance(official.get('brdinfoTimeList'),list):raise ValueError('official list shape changed')
-            status.update(state='probe_passed',rankingRows={m:len(v) for m,v in ranks.items()},officialRows=len(official['brdinfoTimeList']),officialObservedAt=official.get('setTime'))
+            # Network load probe only, not an integrated ranking or a publishable edition.
+            krx_top=sorted((r for r in ranks['KRX'] if r.get('type')=='ST'),key=lambda r:-int(r['tradeAmount']))[:50]
+            eligible={r['isuSrdCd'].removeprefix('A') for r in official['brdinfoTimeList']}
+            urls=[BASE+'detail/'+r['itemcode']+'/detail?codeType='+m for r in krx_top
+                  for m in (('KRX','NXT') if r['itemcode'] in eligible else ('KRX',))]
+            cache=CollectionFetch(get);cache.prime(urls)
+            for url in urls:
+                quote=cache(url)
+                if not quote.get('tradeTime'):raise ValueError('detail observation missing')
+            status['probeDetailRequests']=len(set(urls))
+            status['probeDetailSucceeded']=len(cache.values)
+            status.update(state='probe_passed',scope='network_connectivity_and_load_only',freshnessValidated=False,rankingRows={m:len(v) for m,v in ranks.items()},officialRows=len(official['brdinfoTimeList']),officialObservedAt=official.get('setTime'))
         else:
             snapshot=collect(request['releaseAt'],request['evidence'])
             dest='collections/featured-stocks/'+ident+'.json';entries[dest]=snapshot

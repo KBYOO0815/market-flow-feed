@@ -42,10 +42,12 @@ class CollectionFetch:
                     raise
                 return url, None, error, dt.datetime.now(dt.timezone.utc)
         with ThreadPoolExecutor(max_workers=6) as pool:
-            for url, value, error, retrieved in pool.map(one, urls):
-                self.times[url] = retrieved
-                if error is None: self.values[url] = value
-                else: self.errors[url] = error
+            # Submit only six at a time: a fatal denial must not leave a large queue running.
+            for start in range(0, len(urls), 6):
+                for url, value, error, retrieved in pool.map(one, urls[start:start+6]):
+                    self.times[url] = retrieved
+                    if error is None: self.values[url] = value
+                    else: self.errors[url] = error
 
     def __call__(self, url):
         if url in self.errors: raise self.errors[url]
