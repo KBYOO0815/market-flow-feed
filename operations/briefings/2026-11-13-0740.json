@@ -1,7 +1,7 @@
 {
   "releaseAt": "2026-11-13T07:40:00+09:00",
-  "checkedAt": "2026-11-12T22:49:40Z",
-  "state": "staged",
+  "checkedAt": "2026-11-12T22:51:47Z",
+  "state": "published",
   "failedSources": [
     {
       "source": "Reuters direct extraction / syndicated cache",
@@ -9,11 +9,15 @@
     }
   ],
   "missingCoverage": [],
-  "reason": "6개 분야 독립 조사 및 7개 항목 검증 완료. 공개 root와 날짜별 회차를 재조회하기 전까지 발행 완료로 표시하지 않음.",
+  "reason": "GitHub Actions 43323635539 success. 공개 root와 2026-11-13 날짜별 07:40 회차의 releaseAt/asOf/7개 항목이 검증 초안과 일치함.",
   "counts": {
     "foreignCandidates": 9,
     "domesticCandidates": 11,
     "verifiedCandidates": 8,
     "duplicateExcluded": 1
-  }
+  },
+  "workflowRunUrl": "https://github.com/KBYOO0815/market-flow-feed/actions/runs/43323635539",
+  "publicVerifiedAt": "2026-11-12T22:51:47Z",
+  "foreignPublished": 4,
+  "domesticPublished": 3
 }
