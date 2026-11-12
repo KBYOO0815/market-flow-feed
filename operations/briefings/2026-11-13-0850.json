@@ -1,0 +1,10 @@
+{
+  "releaseAt": "2026-11-13T08:50:00+09:00",
+  "checkedAt": "2026-11-12T23:39:17.480Z",
+  "state": "researching",
+  "sourceChecksPath": "operations/source-checks/2026-11-13-0850.json",
+  "evidencePath": "operations/source-checks/2026-11-13-0850/43330150461-1.json",
+  "failedSources": [],
+  "missingCoverage": [],
+  "reason": "08:50 신규 회차 독립 원문·발표시각·거래일 조사 진행 중. 서버 후보는 미검증."
+}
