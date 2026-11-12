@@ -54,6 +54,127 @@
   },
   "items": [
     {
+      "id": "20261112-1150-g7-taiwan",
+      "title": "G7 외교장관, 대만 동부 해역 중국 활동 관련 공동성명 발표",
+      "summary": "G7 외교장관들은 대만 동부 해역의 중국 활동이 지역 안정과 항행 자유, 국제해운 안전을 위협한다는 입장을 공동성명에 담았다. 무력·강압에 의한 현상 변경에도 반대한다고 명시했다.",
+      "publishedAt": "2026-11-12T11:17:00+09:00",
+      "sourceUrl": "https://www.reuters.com/world/china/g7-foreign-ministers-say-chinas-actions-east-taiwan-threaten-stability-2026-11-12/",
+      "sourceName": "Reuters",
+      "relatedStocks": [],
+      "category": "정책·발언",
+      "region": "foreign",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://g7.utoronto.ca/foreign/261111-declaration.html",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 1
+    },
+    {
+      "id": "20261112-1150-dollar",
+      "title": "달러지수 102.85, 10월 14일 이후 최고 수준 기록",
+      "summary": "로이터는 11월 12일 아시아 오전 거래에서 달러지수가 0.63% 오른 102.85를 기록했다고 보도했다. 같은 기사에서 달러·엔 환율은 159.58엔으로 집계됐다. 기사 작성 당시 관측값이다.",
+      "publishedAt": "2026-11-12T09:05:00+09:00",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/dollar-near-one-month-high-yen-edges-toward-160-2026-11-12/",
+      "sourceName": "Reuters",
+      "relatedStocks": [],
+      "category": "기타",
+      "region": "foreign",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.investing.com/news/economy-news/dollar-near-onemonth-high-as-yen-edges-toward-160-5020092",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 2
+    },
+    {
+      "id": "20261112-1150-oil",
+      "title": "브렌트유 91.62달러·WTI 85.49달러, 장중 각각 1.2% 하락",
+      "summary": "로이터는 11월 12일 아시아 오전 브렌트유 선물 배럴당 91.62달러, 미국 WTI 85.49달러로 각각 1.2% 하락했다고 보도했다. 브렌트유 가격 관측 시점은 01:41 UTC다.",
+      "publishedAt": "2026-11-12T10:47:00+09:00",
+      "sourceUrl": "https://www.reuters.com/business/energy/oil-prices-drop-more-than-1-hopes-iran-ukraine-peace-talks-pressure-markets-2026-11-12/",
+      "sourceName": "Reuters",
+      "relatedStocks": [],
+      "category": "기타",
+      "region": "foreign",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.globalbankingandfinance.com/oil-prices-drop-1-hopes-iran-ukraine-peace-talks-pressure/",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 3
+    },
+    {
+      "id": "20261112-1150-russia-ukraine",
+      "title": "러시아·우크라이나 수도 향한 공격 발생, 미국 특사 모스크바 방문 예정",
+      "summary": "11월 12일 새벽 키이우에서 폭발음이 들렸다고 로이터 현지 기자가 전했다. 모스크바 시장은 모스크바로 향하던 드론 5대를 격추했다고 발표했다. 미국 특사단은 이날 푸틴 대통령과 협의할 예정이라고 보도됐다.",
+      "publishedAt": "2026-11-12T11:14:00+09:00",
+      "sourceUrl": "https://www.reuters.com/world/europe/russia-ukraine-exchange-attacks-capitals-us-envoys-head-moscow-2026-11-12/",
+      "sourceName": "Reuters",
+      "relatedStocks": [],
+      "category": "정책·발언",
+      "region": "foreign",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://malaysia.news.yahoo.com/russia-ukraine-exchange-attacks-capitals-021419916.html",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 4
+    },
+    {
+      "id": "20261112-1150-us-dprk-apec",
+      "title": "한국 대통령실, 중국 APEC 전후 북미 접촉 가능성 관련 입장 발표",
+      "summary": "한국 대통령실은 중국 APEC 정상회의를 전후해 미국과 북한이 접촉할 가능성이 작다는 입장을 밝혔다고 로이터가 12일 보도했다. 실제 회담 성사·취소가 확정된 발표는 아니다.",
+      "publishedAt": "2026-11-12T11:00:00+09:00",
+      "sourceUrl": "https://www.reuters.com/world/china/south-korea-sees-little-prospect-us-north-korea-contact-around-apec-2026-11-12/",
+      "sourceName": "Reuters",
+      "relatedStocks": [],
+      "category": "정책·발언",
+      "region": "foreign",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.reuters.com/world/china/south-korea-sees-little-prospect-us-north-korea-contact-around-apec-2026-11-12/",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 5
+    },
+    {
+      "id": "20261112-1150-musk-jensen",
+      "title": "머스크, 젠슨 황 영입 요청 글에 '영광일 것' 답글",
+      "summary": "연합뉴스는 일론 머스크가 11일(현지시간) X에서 젠슨 황을 고용해 달라는 이용자의 요청에 '영광일 것'이라는 취지로 답했다고 12일 11:19 보도했다. 실제 채용 결정이나 직책 변경 발표는 없었다.",
+      "publishedAt": "2026-11-12T11:19:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112080600091",
+      "sourceName": "연합뉴스",
+      "relatedStocks": [
+        "엔비디아"
+      ],
+      "category": "반도체·AI",
+      "region": "foreign",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261112080600091",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 6
+    },
+    {
+      "id": "20261112-1150-bank-governance",
+      "title": "당정, 은행지주 CEO 연임 요건 강화·임추위 독립이사 구성안 발표",
+      "summary": "정부와 더불어민주당은 금융회사 지배구조 개선안을 발표했다. 은행지주 CEO 첫 연임에는 주총 출석 의결권 3분의 2 이상, 2회 이상 연임에는 4분의 3 이상 찬성을 요구하고, CEO 추천 임추위를 독립이사로만 구성하는 내용이다. 향후 법 개정 대상이며 시행 완료가 아니다.",
+      "publishedAt": "2026-11-12T08:30:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111175600002",
+      "sourceName": "연합뉴스",
+      "relatedStocks": [],
+      "category": "정책·발언",
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261111175600002",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 7
+    },
+    {
       "id": "20261112-1150-naver-q3-earnings",
       "title": "NAVER 3분기 매출 3조4,724억원·영업이익 4,513억원",
       "summary": "NAVER는 2026년 3분기 연결 매출액이 전년 동기 대비 10.7% 증가한 3조4,724억원, 영업이익이 20.9% 감소한 4,513억원이라고 공시했다. 부문별 매출은 네이버 플랫폼 1조9,484억원, 파이낸셜 플랫폼 4,877억원, 글로벌 도전 1조364억원이다.",
@@ -63,7 +184,7 @@
       "relatedStocks": [
         "NAVER"
       ],
-      "impactRank": 1,
+      "impactRank": 8,
       "category": "국내공시",
       "region": "domestic",
       "kind": "news",
@@ -71,6 +192,183 @@
       "reviewSourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034879",
       "reviewNote": "직전 공개 07:30 회차의 두 사건과 다른 신규 실적 공시다. 직전 asOf 07:23:50 이후 08:05:35에 접수된 DART 공시와 NAVER 공식 보도자료·IR 자료에서 매출액, 영업이익, 전년 동기 증감률 및 부문별 매출을 대조했다. 같은 실적을 전한 복수 공시·보도는 하나의 사건으로 통합했다.",
       "validUntil": "2026-11-12T14:50:00+09:00"
+    },
+    {
+      "id": "20261112-1150-mirae-q3",
+      "title": "미래에셋증권 3분기 영업손실 5,023억원·순손실 4,056억원",
+      "summary": "미래에셋증권은 2026년 3분기 연결 영업손실 5,023억원을 공시했다. 전년 동기 영업이익 1조6,223억원에서 적자 전환했다. 매출은 7조5,005억원으로 7.1% 감소했고 순손실은 4,056억원이다.",
+      "publishedAt": "2026-11-12T09:41:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112050600527",
+      "sourceName": "연합뉴스(DART 공시 인용)",
+      "relatedStocks": [
+        "미래에셋증권"
+      ],
+      "category": "국내공시",
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261112050600527",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 9
+    },
+    {
+      "id": "20261112-1150-db-hitek-q3",
+      "title": "DB하이텍 3분기 영업이익 900억원, 전년 동기 대비 6.6% 증가",
+      "summary": "DB하이텍은 2026년 3분기 연결 영업이익 900억원, 매출 4,034억원을 공시했다. 전년 동기 대비 영업이익은 6.6%, 매출은 14% 증가했고 순이익은 225억원으로 75.2% 감소했다.",
+      "publishedAt": "2026-11-12T08:32:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112029300527",
+      "sourceName": "연합뉴스(DART 공시 인용)",
+      "relatedStocks": [
+        "DB하이텍"
+      ],
+      "category": "국내공시",
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261112029300527",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 10
+    },
+    {
+      "id": "20261112-1150-samsung-fire-q3",
+      "title": "삼성화재 3분기 순이익 4,937억원, 전년 동기 대비 8.3% 감소",
+      "summary": "삼성화재가 발표한 2026년 3분기 연결 순이익은 4,937억원으로 전년 동기 대비 8.3% 감소했다. 영업이익은 5,774억원으로 13.0% 감소했고 매출은 6조5,096억원으로 13.6% 증가했다.",
+      "publishedAt": "2026-11-12T10:41:00+09:00",
+      "sourceUrl": "https://web3.newspim.com/news/view/20261112000459",
+      "sourceName": "뉴스핌",
+      "relatedStocks": [
+        "삼성화재"
+      ],
+      "category": "국내공시",
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://web3.newspim.com/news/view/20261112000459",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 11
+    },
+    {
+      "id": "20261112-1150-hanwha-ins-q3",
+      "title": "한화손해보험 3분기 순이익 961억원, 전년 동기 대비 34.1% 증가",
+      "summary": "한화손해보험은 3분기 순이익 961억원으로 전년 동기 대비 34.1% 증가했다고 밝혔다. 3분기 보험손익은 1,321억원으로 196.7% 증가했고, 3분기 누적 순이익은 3,114억원으로 5.8% 늘었다.",
+      "publishedAt": "2026-11-12T09:17:00+09:00",
+      "sourceUrl": "https://www.g-enews.com/article/Finance/2026/11/202611120908055903cd0bfacc1c_1",
+      "sourceName": "글로벌이코노믹",
+      "relatedStocks": [
+        "한화손해보험"
+      ],
+      "category": "국내공시",
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.g-enews.com/article/Finance/2026/11/202611120908055903cd0bfacc1c_1",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 12
+    },
+    {
+      "id": "20261112-1150-daehan-ship-contract",
+      "title": "대한조선, 2,498억원 규모 선박 공급계약 공시",
+      "summary": "대한조선은 오세아니아 지역 선주와 2,498억원 규모의 선박 공급계약을 체결했다고 공시했다. 최근 매출액 1조2,281억원 대비 20.34%이며 계약기간은 2026년 11월 11일부터 2030년 6월 28일까지다.",
+      "publishedAt": "2026-11-12T10:16:00+09:00",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112800130",
+      "sourceName": "DART(CEO경제신문 교차확인)",
+      "relatedStocks": [
+        "대한조선"
+      ],
+      "category": "국내공시",
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.ceoeconomy.com/news/articleView.html?idxno=23541",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 13
+    },
+    {
+      "id": "20261112-1150-dalba-q3",
+      "title": "달바글로벌 3분기 영업이익 334억원, 전년 동기 대비 100.7% 증가",
+      "summary": "달바글로벌은 2026년 3분기 연결 영업이익 334억원, 매출 1,556억원을 공시했다. 전년 동기 대비 영업이익은 100.7%, 매출은 36.3% 증가했다. 순이익은 148억원으로 5.5% 늘었다.",
+      "publishedAt": "2026-11-12T10:22:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112066800527",
+      "sourceName": "연합뉴스(DART 공시 인용)",
+      "relatedStocks": [
+        "달바글로벌"
+      ],
+      "category": "국내공시",
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261112066800527",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 14
+    },
+    {
+      "id": "20261112-1150-ap-satellite-contract",
+      "title": "AP위성, UAE 대상 위성통신 단말 147억원 공급계약 공시",
+      "summary": "AP위성은 UAE의 STAR SATELLITE COMMUNICATIONS COMPANY-PJSC와 차세대 위성통신 스마트폰 2종의 개발·공급 계약을 맺었다. 계약금액은 147억2,912만원이며 공시상 최근 매출액 대비 30%다. 계약기간은 2026년 11월 11일부터 2033년 4월 8일까지다.",
+      "publishedAt": "2026-11-12T09:12:39+09:00",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112900140",
+      "sourceName": "DART(디지털투데이 교차확인)",
+      "relatedStocks": [
+        "AP위성"
+      ],
+      "category": "국내공시",
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.digitaltoday.co.kr/disclosure/articleView.html?idxno=714816",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 15
+    },
+    {
+      "id": "20261112-1150-spg-q3",
+      "title": "에스피지 3분기 영업이익 34억원, 전년 동기 대비 30.5% 감소",
+      "summary": "에스피지는 2026년 3분기 연결 영업이익 34억원을 공시했다. 전년 동기 대비 30.5% 감소했고 매출은 825억원으로 1.9% 감소했다. 순손실은 2억6,000만원으로 적자 전환했다.",
+      "publishedAt": "2026-11-12T10:36:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112072300527",
+      "sourceName": "연합뉴스(DART 공시 인용)",
+      "relatedStocks": [
+        "에스피지"
+      ],
+      "category": "국내공시",
+      "region": "domestic",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T03:16:15.393Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261112072300527",
+      "reviewNote": "11:50 회차 누락 건 사후 정정. 최초 11:44:50 기준 이전에 공개된 사실·원문·시각을 사후 검증했다. 이 항목의 reviewedAt은 최초 발행 당시가 아닌 실제 사후 검증 시각이다. 전회차의 기존 사건과 중복되지 않는다.",
+      "validUntil": "2026-11-12T14:50:00+09:00",
+      "impactRank": 16
     }
-  ]
+  ],
+  "correction": {
+    "kind": "post_publication_omission",
+    "correctedAt": "2026-11-12T03:16:15.393Z",
+    "reason": "11:50 공개 당시 누락됐던 11:44:50 이전 발표 사실을 사후 원문 검증하여 정정. 최초 asOf와 researchAudit는 당시 기록대로 보존; 추가 기사 reviewedAt은 사후 검증 실제 시각.",
+    "originalItems": 1,
+    "originalAsOf": "2026-11-12T11:44:50+09:00",
+    "newlyVerifiedCandidates": 15,
+    "addedItemIds": [
+      "20261112-1150-g7-taiwan",
+      "20261112-1150-dollar",
+      "20261112-1150-oil",
+      "20261112-1150-russia-ukraine",
+      "20261112-1150-us-dprk-apec",
+      "20261112-1150-musk-jensen",
+      "20261112-1150-bank-governance",
+      "20261112-1150-mirae-q3",
+      "20261112-1150-db-hitek-q3",
+      "20261112-1150-samsung-fire-q3",
+      "20261112-1150-hanwha-ins-q3",
+      "20261112-1150-daehan-ship-contract",
+      "20261112-1150-dalba-q3",
+      "20261112-1150-ap-satellite-contract",
+      "20261112-1150-spg-q3"
+    ]
+  }
 }
