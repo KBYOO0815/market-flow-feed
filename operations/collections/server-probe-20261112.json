@@ -2,7 +2,15 @@
   "requestId": "server-probe-20261112",
   "releaseAt": null,
   "published": false,
-  "state": "collecting",
+  "state": "probe_passed",
   "startedAt": "2026-11-12T21:14:46.853081+09:00",
-  "deadlineAt": "2026-11-12T21:19:46.853081+09:00"
+  "deadlineAt": "2026-11-12T21:19:46.853081+09:00",
+  "rankingRows": {
+    "KRX": 2879,
+    "NXT": 100
+  },
+  "officialRows": 603,
+  "officialObservedAt": "2026-11-12 20:05",
+  "completedAt": "2026-11-12T21:14:55.234673+09:00",
+  "elapsedSeconds": 8.381592
 }
