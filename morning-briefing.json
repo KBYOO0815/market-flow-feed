@@ -1,133 +1,185 @@
 {
   "schemaVersion": 2,
-  "asOf": "2026-11-12T18:40:20.011+09:00",
-  "releaseAt": "2026-11-12T18:50:00+09:00",
+  "asOf": "2026-11-12T22:49:40Z",
+  "releaseAt": "2026-11-13T07:40:00+09:00",
   "tradingDayVerified": true,
-  "calendarSourceUrl": "https://atsview.com/en/calendar/2026",
+  "calendarSourceUrl": "https://atsview.com/calendar/2026",
   "researchAudit": {
     "coverage": {
       "foreign_market": {
-        "checkedAt": "2026-11-12T18:40:20.011+09:00",
+        "checkedAt": "2026-11-12T22:49:40Z",
         "sourceUrls": [
-          "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-11-12/"
+          "https://www.yna.co.kr/view/AKR20261113012051072",
+          "https://www.newspim.com/news/view/20261113000019"
         ]
       },
       "foreign_policy": {
-        "checkedAt": "2026-11-12T18:40:20.011+09:00",
+        "checkedAt": "2026-11-12T22:49:40Z",
         "sourceUrls": [
-          "https://www.reuters.com/world/china/g7-foreign-ministers-say-chinas-actions-east-taiwan-threaten-stability-2026-11-12/"
+          "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
+          "https://www.newspim.com/news/view/20261113000016"
         ]
       },
       "foreign_technology": {
-        "checkedAt": "2026-11-12T18:40:20.011+09:00",
+        "checkedAt": "2026-11-12T22:49:40Z",
         "sourceUrls": [
-          "https://www.reuters.com/business/retail-consumer/taiwans-foxconn-reports-34-rise-q3-profit-beats-forecasts-2026-11-12/",
-          "https://www.reuters.com/world/china/nvidia-customer-megaspeed-says-it-cooperated-with-us-inspections-takes-export-2026-11-12/",
-          "https://www.reuters.com/business/most-large-firms-plan-higher-open-weight-ai-use-cap-bills-study-shows-2026-11-12/",
-          "https://www.reuters.com/world/asia-pacific/siemens-ceo-says-cooperation-with-nvidia-will-no-be-affected-by-leadership-2026-11-12/"
+          "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
         ]
       },
       "domestic_disclosures": {
-        "checkedAt": "2026-11-12T18:40:20.011+09:00",
+        "checkedAt": "2026-11-12T22:49:40Z",
         "sourceUrls": [
-          "https://dart.fss.or.kr/dsac001/mainK.do",
-          "https://kind.krx.co.kr/"
+          "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
+          "https://kind.krx.co.kr/",
+          "https://www.mt.co.kr/economy/2026/11/12/2026111216050978049"
         ]
       },
       "domestic_policy": {
-        "checkedAt": "2026-11-12T18:40:20.011+09:00",
+        "checkedAt": "2026-11-12T22:49:40Z",
         "sourceUrls": [
-          "https://www.fsc.go.kr/no010101",
-          "https://www.motie.go.kr/"
+          "https://www.fsc.go.kr/no010101/88125",
+          "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c/172399/view"
         ]
       },
       "domestic_market": {
-        "checkedAt": "2026-11-12T18:40:20.011+09:00",
+        "checkedAt": "2026-11-12T22:49:40Z",
         "sourceUrls": [
-          "https://data.krx.co.kr/",
-          "https://open.krx.co.kr/"
+          "https://kind.krx.co.kr/",
+          "https://kind.krx.co.kr/common/stockschedule.do?method=StockScheduleMain",
+          "https://atsview.com/calendar/2026"
         ]
       }
     },
-    "foreignCandidates": 5,
-    "domesticCandidates": 0,
-    "verifiedCandidates": 4,
-    "duplicateExcluded": 0
+    "foreignCandidates": 9,
+    "domesticCandidates": 11,
+    "verifiedCandidates": 8,
+    "duplicateExcluded": 1
   },
   "items": [
     {
-      "id": "20261112-1850-fox",
-      "title": "폭스콘 3분기 순이익 775억 대만달러, 전년 대비 34% 증가",
-      "summary": "폭스콘은 3분기 순이익 775억 대만달러(약 23억5천만 달러)를 발표했다. 전년 동기 대비 34% 증가했으며 시장 집계 예상치 696억 대만달러를 웃돌았다. 엔비디아 AI 서버를 생산하는 업체다.",
-      "publishedAt": "2026-11-12T15:28:00+09:00",
-      "sourceUrl": "https://www.reuters.com/business/retail-consumer/taiwans-foxconn-reports-34-rise-q3-profit-beats-forecasts-2026-11-12/",
-      "sourceName": "Reuters",
+      "id": "20261113-0740-nv-transition",
+      "title": "엔비디아, 젠슨 황 사임·콜레트 크레스 임시 CEO 선임",
+      "summary": "엔비디아는 젠슨 황이 CEO와 이사회에서 즉시 물러나고 CFO 콜레트 크레스가 임시 CEO를 맡는다고 발표했다. 12일 미국 정규장 엔비디아 주가는 4.34% 하락 마감했다.",
+      "publishedAt": "2026-11-13T07:28:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "sourceName": "연합뉴스·엔비디아",
+      "reviewSourceUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+      "region": "foreign",
+      "category": "반도체·AI",
       "relatedStocks": [
-        "NVIDIA"
+        "NVDA"
       ],
       "impactRank": 1,
-      "category": "반도체·AI",
-      "region": "foreign",
       "kind": "news",
-      "reviewedAt": "2026-11-12T18:40:20.011+09:00",
-      "reviewSourceUrl": "https://www.reuters.com/business/retail-consumer/taiwans-foxconn-reports-34-rise-q3-profit-beats-forecasts-2026-11-12/",
-      "reviewNote": "원문 Reuters의 2026-11-12 UTC 송고시각을 KST로 변환하여 확인. 14:50 회차 이후 새로 공개된 독립 사실이며 앞선 회차의 같은 사건을 반복하지 않음. 실제 원문 검토시각 2026-11-12T18:40:20.011+09:00",
-      "validUntil": "2026-11-12T20:20:00+09:00"
+      "reviewedAt": "2026-11-12T22:49:40Z",
+      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
+      "validUntil": "2026-11-13T08:50:00+09:00"
     },
     {
-      "id": "20261112-1850-meg",
-      "title": "메가스피드, 미국 수출통제 조사 협조 및 GPU 전수조사 발표",
-      "summary": "싱가포르 클라우드 업체 메가스피드는 미국 상무부 산업안보국(BIS)의 조사에 협조했으며, 미국 로펌을 선임해 GPU 보유 현황 전수조사와 수출통제 준수 여부를 독립 검증한다고 밝혔다.",
-      "publishedAt": "2026-11-12T18:15:00+09:00",
-      "sourceUrl": "https://www.reuters.com/world/china/nvidia-customer-megaspeed-says-it-cooperated-with-us-inspections-takes-export-2026-11-12/",
-      "sourceName": "Reuters",
-      "relatedStocks": [
-        "NVIDIA"
-      ],
+      "id": "20261113-0740-us-close",
+      "title": "미국 3대 지수 하락 마감…나스닥 0.39%↓",
+      "summary": "12일 미국 정규장 다우는 52,297.09(-0.36%), S&P500은 7,592.40(-0.35%), 나스닥은 25,366.09(-0.39%)로 마감했다.",
+      "publishedAt": "2026-11-13T07:28:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "sourceName": "연합뉴스",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "region": "foreign",
+      "category": "미국증시",
+      "relatedStocks": [],
       "impactRank": 2,
-      "category": "반도체·AI",
-      "region": "foreign",
       "kind": "news",
-      "reviewedAt": "2026-11-12T18:40:20.011+09:00",
-      "reviewSourceUrl": "https://www.reuters.com/world/china/nvidia-customer-megaspeed-says-it-cooperated-with-us-inspections-takes-export-2026-11-12/",
-      "reviewNote": "원문 Reuters의 2026-11-12 UTC 송고시각을 KST로 변환하여 확인. 14:50 회차 이후 새로 공개된 독립 사실이며 앞선 회차의 같은 사건을 반복하지 않음. 실제 원문 검토시각 2026-11-12T18:40:20.011+09:00",
-      "validUntil": "2026-11-12T20:20:00+09:00"
+      "reviewedAt": "2026-11-12T22:49:40Z",
+      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
+      "validUntil": "2026-11-13T08:50:00+09:00"
     },
     {
-      "id": "20261112-1850-models",
-      "title": "캡제미니 조사: 대기업 임원 59%, AI 지출이 예산·예상 초과했다고 응답",
-      "summary": "캡제미니가 연매출 10억 달러 이상 기업의 임원 500명을 대상으로 조사한 결과, 응답자의 59%는 지난 1년 AI 지출이 예상 또는 예산을 평균 24% 초과했다고 답했다. 오픈웨이트 모델 토큰의 평균 비용은 폐쇄형보다 87% 낮았다고 분석했다.",
-      "publishedAt": "2026-11-12T18:01:00+09:00",
-      "sourceUrl": "https://www.reuters.com/business/most-large-firms-plan-higher-open-weight-ai-use-cap-bills-study-shows-2026-11-12/",
-      "sourceName": "Reuters",
+      "id": "20261113-0740-oil-close",
+      "title": "국제유가 상승…브렌트유 3.30%·WTI 2.55%↑",
+      "summary": "12일 브렌트유 1월물과 WTI 12월물 선물은 각각 3.30%, 2.55% 상승했다. 트럼프 미국 대통령은 이란과 합의할 필요가 없다는 입장을 밝혔다.",
+      "publishedAt": "2026-11-13T07:28:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "sourceName": "연합뉴스",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "region": "foreign",
+      "category": "정책·발언",
       "relatedStocks": [],
       "impactRank": 3,
-      "category": "반도체·AI",
-      "region": "foreign",
       "kind": "news",
-      "reviewedAt": "2026-11-12T18:40:20.011+09:00",
-      "reviewSourceUrl": "https://www.reuters.com/business/most-large-firms-plan-higher-open-weight-ai-use-cap-bills-study-shows-2026-11-12/",
-      "reviewNote": "원문 Reuters의 2026-11-12 UTC 송고시각을 KST로 변환하여 확인. 14:50 회차 이후 새로 공개된 독립 사실이며 앞선 회차의 같은 사건을 반복하지 않음. 실제 원문 검토시각 2026-11-12T18:40:20.011+09:00",
-      "validUntil": "2026-11-12T20:20:00+09:00"
+      "reviewedAt": "2026-11-12T22:49:40Z",
+      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
+      "validUntil": "2026-11-13T08:50:00+09:00"
     },
     {
-      "id": "20261112-1850-siemens",
-      "title": "지멘스 CEO, 엔비디아 경영진 변경 여부와 무관하게 공동사업 지속 발표",
-      "summary": "지멘스 CEO 롤란트 부시는 엔비디아 CEO 젠슨 황의 거취에 관계없이 양사 공동 프로젝트와 협력은 계속된다고 기자들에게 밝혔다. 이는 기존 CEO 거취 보도 이후 지멘스가 새로 발표한 파트너십 관련 입장이다.",
-      "publishedAt": "2026-11-12T18:14:00+09:00",
-      "sourceUrl": "https://www.reuters.com/world/asia-pacific/siemens-ceo-says-cooperation-with-nvidia-will-no-be-affected-by-leadership-2026-11-12/",
-      "sourceName": "Reuters",
-      "relatedStocks": [
-        "NVIDIA"
-      ],
-      "impactRank": 4,
-      "category": "반도체·AI",
+      "id": "20261113-0740-fomc-2027",
+      "title": "연준, 2027년 FOMC 일정 변경…10월 회의는 전략 논의",
+      "summary": "연준은 2027년 FOMC 잠정 일정을 변경했다. 10월 26~27일 회의에서는 통화정책 전략을 논의하고 정책 결정을 발표하지 않는다. 11월 16~17일 회의도 일정에 포함했다.",
+      "publishedAt": "2026-11-13T02:45:00+09:00",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
+      "sourceName": "미국 연방준비제도",
+      "reviewSourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
       "region": "foreign",
+      "category": "정책·발언",
+      "relatedStocks": [],
+      "impactRank": 4,
       "kind": "news",
-      "reviewedAt": "2026-11-12T18:40:20.011+09:00",
-      "reviewSourceUrl": "https://www.reuters.com/world/asia-pacific/siemens-ceo-says-cooperation-with-nvidia-will-no-be-affected-by-leadership-2026-11-12/",
-      "reviewNote": "원문 Reuters의 2026-11-12 UTC 송고시각을 KST로 변환하여 확인. 14:50 회차 이후 새로 공개된 독립 사실이며 앞선 회차의 같은 사건을 반복하지 않음. 실제 원문 검토시각 2026-11-12T18:40:20.011+09:00",
-      "validUntil": "2026-11-12T20:20:00+09:00"
+      "reviewedAt": "2026-11-12T22:49:40Z",
+      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
+      "validUntil": "2026-11-13T08:50:00+09:00"
+    },
+    {
+      "id": "20261113-0740-samsung-eyewear",
+      "title": "삼성전자, AI 안경 30종 공개…12월 10일 한국·미국 출시",
+      "summary": "삼성전자는 구글·젠틀몬스터·워비파커와 개발한 AI 안경 전체 라인업 30종을 공개했다. 국내에는 젠틀몬스터 제품을 출시하며 가격은 65만~70만원이다.",
+      "publishedAt": "2026-11-13T00:31:00+09:00",
+      "sourceUrl": "https://www.chosun.com/economy/int_economy/2026/11/13/KO2KEISQA5A45EJO5UKCB32KFE/",
+      "sourceName": "조선일보·삼성전자 뉴스룸",
+      "reviewSourceUrl": "https://news.samsung.com/kr/삼성전자-구글·젠틀몬스터·워비파커와-협업한-인",
+      "region": "domestic",
+      "category": "반도체·AI",
+      "relatedStocks": [
+        "005930"
+      ],
+      "impactRank": 5,
+      "kind": "news",
+      "reviewedAt": "2026-11-12T22:49:40Z",
+      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
+      "validUntil": "2026-11-13T08:50:00+09:00"
+    },
+    {
+      "id": "20261113-0740-kepco-q3",
+      "title": "한국전력 3분기 영업이익 1조6,441억원…전년 대비 70.9% 감소",
+      "summary": "이전 회차에서 반영하지 못한 12일 발표 실적이다. 한국전력의 3분기 연결 매출은 26조8,518억원으로 2.6%, 영업이익은 1조6,441억원으로 70.9% 감소했다.",
+      "publishedAt": "2026-11-12T16:24:00+09:00",
+      "sourceUrl": "https://www.mt.co.kr/economy/2026/11/12/2026111216050978049",
+      "sourceName": "머니투데이",
+      "reviewSourceUrl": "https://www.mt.co.kr/economy/2026/11/12/2026111216050978049",
+      "region": "domestic",
+      "category": "국내공시",
+      "relatedStocks": [
+        "015760"
+      ],
+      "impactRank": 6,
+      "kind": "news",
+      "reviewedAt": "2026-11-12T22:49:40Z",
+      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
+      "validUntil": "2026-11-13T08:50:00+09:00"
+    },
+    {
+      "id": "20261113-0740-toray-mlcc",
+      "title": "도레이첨단소재, MLCC 필름 생산능력 연 9억㎡로 확대",
+      "summary": "도레이첨단소재는 구미 5공장 MLCC 필름 13·14호기 준공으로 연간 생산능력 3억㎡를 추가했다. 기존 설비를 포함한 총 생산능력은 연 9억㎡다.",
+      "publishedAt": "2026-11-12T23:51:00+09:00",
+      "sourceUrl": "https://m.ekn.kr/view.php?key=20261112022509067",
+      "sourceName": "에너지경제신문",
+      "reviewSourceUrl": "https://m.ekn.kr/view.php?key=20261112022509067",
+      "region": "domestic",
+      "category": "기타",
+      "relatedStocks": [],
+      "impactRank": 7,
+      "kind": "news",
+      "reviewedAt": "2026-11-12T22:49:40Z",
+      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
+      "validUntil": "2026-11-13T08:50:00+09:00"
     }
   ]
 }
