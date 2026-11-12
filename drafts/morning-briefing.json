@@ -1,186 +1,144 @@
 {
   "schemaVersion": 2,
-  "asOf": "2026-11-12T22:49:40Z",
-  "releaseAt": "2026-11-13T07:40:00+09:00",
+  "asOf": "2026-11-12T23:40:36.914Z",
+  "releaseAt": "2026-11-13T08:50:00+09:00",
   "tradingDayVerified": true,
   "calendarSourceUrl": "https://atsview.com/calendar/2026",
   "researchAudit": {
     "coverage": {
       "foreign_market": {
-        "checkedAt": "2026-11-12T22:49:40Z",
+        "checkedAt": "2026-11-13T08:35:40.370188+09:00",
         "sourceUrls": [
-          "https://www.yna.co.kr/view/AKR20261113012051072",
-          "https://www.newspim.com/news/view/20261113000019"
+          "https://www.yna.co.kr/market-plus/global-market"
         ]
       },
       "foreign_policy": {
-        "checkedAt": "2026-11-12T22:49:40Z",
+        "checkedAt": "2026-11-13T08:35:40.371845+09:00",
         "sourceUrls": [
-          "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
-          "https://www.newspim.com/news/view/20261113000016"
+          "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+          "https://www.yna.co.kr/international/all"
         ]
       },
       "foreign_technology": {
-        "checkedAt": "2026-11-12T22:49:40Z",
+        "checkedAt": "2026-11-13T08:35:40.372094+09:00",
         "sourceUrls": [
-          "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+          "https://nvidianews.nvidia.com/news",
+          "https://news.samsung.com/global/"
         ]
       },
       "domestic_disclosures": {
-        "checkedAt": "2026-11-12T22:49:40Z",
+        "checkedAt": "2026-11-13T08:35:40.372394+09:00",
         "sourceUrls": [
           "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
-          "https://kind.krx.co.kr/",
-          "https://www.mt.co.kr/economy/2026/11/12/2026111216050978049"
+          "https://kind.krx.co.kr/"
         ]
       },
       "domestic_policy": {
-        "checkedAt": "2026-11-12T22:49:40Z",
+        "checkedAt": "2026-11-13T08:35:40.372653+09:00",
         "sourceUrls": [
-          "https://www.fsc.go.kr/no010101/88125",
-          "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c/172399/view"
+          "https://www.fsc.go.kr/no010101",
+          "https://www.motie.go.kr/"
         ]
       },
       "domestic_market": {
-        "checkedAt": "2026-11-12T22:49:40Z",
+        "checkedAt": "2026-11-13T08:35:40.372919+09:00",
         "sourceUrls": [
-          "https://kind.krx.co.kr/",
           "https://kind.krx.co.kr/common/stockschedule.do?method=StockScheduleMain",
+          "https://open.krx.co.kr/contents/MKD/01/0110/01100305/MKD01100305.jsp",
           "https://atsview.com/calendar/2026"
         ]
       }
     },
     "foreignCandidates": 9,
-    "domesticCandidates": 11,
+    "domesticCandidates": 5,
     "verifiedCandidates": 8,
-    "duplicateExcluded": 1
+    "duplicateExcluded": 3
   },
   "items": [
     {
-      "id": "20261113-0740-nv-transition",
-      "title": "엔비디아, 젠슨 황 사임·콜레트 크레스 임시 CEO 선임",
-      "summary": "엔비디아는 젠슨 황이 CEO와 이사회에서 즉시 물러나고 CFO 콜레트 크레스가 임시 CEO를 맡는다고 발표했다. 12일 미국 정규장 엔비디아 주가는 4.34% 하락 마감했다.",
-      "publishedAt": "2026-11-13T07:28:00+09:00",
-      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
-      "sourceName": "연합뉴스·엔비디아",
-      "reviewSourceUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+      "id": "20261113-0850-us-congress-nvidia",
+      "title": "美 민주당 의원들, 엔비디아 H200 대중국 수출 승인 조사 착수",
+      "summary": "미국 상원 재정위원회·하원 세입위원회의 민주당 간사들이 러트닉 상무장관에게 공동서한을 보내 엔비디아 H200 반도체의 대중국 수출 승인 과정에 대한 조사 착수를 알렸다. 의원들의 주장과 사실 확정은 구분된다.",
+      "publishedAt": "2026-11-13T05:30:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113008300071",
+      "sourceName": "연합뉴스",
+      "relatedStocks": [],
+      "category": "정책·발언",
       "region": "foreign",
-      "category": "반도체·AI",
-      "relatedStocks": [
-        "NVDA"
-      ],
-      "impactRank": 1,
       "kind": "news",
-      "reviewedAt": "2026-11-12T22:49:40Z",
-      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
-      "validUntil": "2026-11-13T08:50:00+09:00"
+      "reviewedAt": "2026-11-12T23:40:36.914Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113008300071",
+      "reviewNote": "05:30 보도됐으나 07:40 회차에 미반영된 사실. 08:50 조사에서 실제 원문·송고시각·공동서한 발표 사실 확인. 전회차의 엔비디아 CEO 사임과 다른 미 의회 조사 착수 사건.",
+      "validUntil": "2026-11-13T11:50:00+09:00",
+      "impactRank": 1
     },
     {
-      "id": "20261113-0740-us-close",
-      "title": "미국 3대 지수 하락 마감…나스닥 0.39%↓",
-      "summary": "12일 미국 정규장 다우는 52,297.09(-0.36%), S&P500은 7,592.40(-0.35%), 나스닥은 25,366.09(-0.39%)로 마감했다.",
-      "publishedAt": "2026-11-13T07:28:00+09:00",
-      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "id": "20261113-0850-germany-drone",
+      "title": "독일군, 사이버 공격 노출 업체의 드론 운용 일시 중단",
+      "summary": "독일 방산업체 퀀텀시스템스는 지상통제 시스템 업데이트 서버를 통한 악성 파일 유포 사실을 고객에게 알렸다. 독일군은 예방 차원에서 이 업체 드론 운용을 일시 중단했다고 파이낸셜타임스가 보도했다.",
+      "publishedAt": "2026-11-13T07:48:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113021600009",
       "sourceName": "연합뉴스",
-      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "relatedStocks": [],
+      "category": "정책·발언",
       "region": "foreign",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T23:40:36.914Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113021600009",
+      "reviewNote": "07:40 회차 이후 07:48 송고. 업체의 확인 성명과 독일군 운용 중단에 관한 FT 취재 보도라는 근거 수준을 구분.",
+      "validUntil": "2026-11-13T11:50:00+09:00",
+      "impactRank": 2
+    },
+    {
+      "id": "20261113-0850-trump-cuba",
+      "title": "트럼프, 쿠바 관련 군사력 사용 검토 발언",
+      "summary": "트럼프 미국 대통령은 12일(현지시간) 공개된 휴 휴잇 인터뷰에서 임기 중 쿠바 문제를 해결하고 싶으며 군사력 사용도 검토할 것이라고 말했다. 군사작전 실행이나 정책 확정 발표는 아니다.",
+      "publishedAt": "2026-11-13T07:57:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113021800071",
+      "sourceName": "연합뉴스",
+      "relatedStocks": [],
+      "category": "정책·발언",
+      "region": "foreign",
+      "kind": "news",
+      "reviewedAt": "2026-11-12T23:40:36.914Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113021800071",
+      "reviewNote": "07:40 이후 07:57 보도. 실제 발언 사실만 채택, 군사행동 확정으로 해석하지 않음.",
+      "validUntil": "2026-11-13T11:50:00+09:00",
+      "impactRank": 3
+    },
+    {
+      "id": "20261113-0850-nebius-close",
+      "title": "네비우스 16.8%·슈퍼마이크로 11.3% 하락 마감",
+      "summary": "12일(미국 현지시간) 네비우스 주가는 전 거래일보다 16.8% 하락한 128.64달러에 마감했고, 슈퍼마이크로컴퓨터도 11.3% 하락했다. 13일 07:41 송고된 미국 정규장 확정 마감 수치다.",
+      "publishedAt": "2026-11-13T07:41:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113018300009",
+      "sourceName": "연합뉴스",
+      "relatedStocks": [],
       "category": "미국증시",
-      "relatedStocks": [],
-      "impactRank": 2,
+      "region": "foreign",
       "kind": "news",
-      "reviewedAt": "2026-11-12T22:49:40Z",
-      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
-      "validUntil": "2026-11-13T08:50:00+09:00"
+      "reviewedAt": "2026-11-12T23:40:36.914Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113018300009",
+      "reviewNote": "07:40 회차 이후 07:41 송고. 이전 회차 미국 3대지수 마감과 달리 AI 인프라 개별기업 종가 수치 추가 확인.",
+      "validUntil": "2026-11-13T11:50:00+09:00",
+      "impactRank": 4
     },
     {
-      "id": "20261113-0740-oil-close",
-      "title": "국제유가 상승…브렌트유 3.30%·WTI 2.55%↑",
-      "summary": "12일 브렌트유 1월물과 WTI 12월물 선물은 각각 3.30%, 2.55% 상승했다. 트럼프 미국 대통령은 이란과 합의할 필요가 없다는 입장을 밝혔다.",
-      "publishedAt": "2026-11-13T07:28:00+09:00",
-      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
+      "id": "20261113-0850-smallbiz-creditunion",
+      "title": "소진공·신협중앙회, 소상공인 금융지원 협력 협약 체결",
+      "summary": "소상공인시장진흥공단과 신협중앙회는 대환대출 등 소상공인 금융지원, 신협 지역조직을 통한 정책 홍보, 지역 상권 활성화 등에 협력하는 업무협약을 체결했다고 13일 밝혔다.",
+      "publishedAt": "2026-11-13T08:11:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113025600030",
       "sourceName": "연합뉴스",
-      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072",
-      "region": "foreign",
+      "relatedStocks": [],
       "category": "정책·발언",
-      "relatedStocks": [],
-      "impactRank": 3,
-      "kind": "news",
-      "reviewedAt": "2026-11-12T22:49:40Z",
-      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
-      "validUntil": "2026-11-13T08:50:00+09:00"
-    },
-    {
-      "id": "20261113-0740-fomc-2027",
-      "title": "연준, 2027년 FOMC 일정 변경…10월 회의는 전략 논의",
-      "summary": "연준은 2027년 FOMC 잠정 일정을 변경했다. 10월 26~27일 회의에서는 통화정책 전략을 논의하고 정책 결정을 발표하지 않는다. 11월 16~17일 회의도 일정에 포함했다.",
-      "publishedAt": "2026-11-13T02:45:00+09:00",
-      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
-      "sourceName": "미국 연방준비제도",
-      "reviewSourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
-      "region": "foreign",
-      "category": "정책·발언",
-      "relatedStocks": [],
-      "impactRank": 4,
-      "kind": "news",
-      "reviewedAt": "2026-11-12T22:49:40Z",
-      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
-      "validUntil": "2026-11-13T08:50:00+09:00"
-    },
-    {
-      "id": "20261113-0740-samsung-eyewear",
-      "title": "삼성전자, AI 안경 30종 공개…12월 10일 한국·미국 출시",
-      "summary": "삼성전자는 구글·젠틀몬스터·워비파커와 개발한 AI 안경 전체 라인업 30종을 공개했다. 국내에는 젠틀몬스터 제품을 출시하며 가격은 65만~70만원이다.",
-      "publishedAt": "2026-11-13T00:31:00+09:00",
-      "sourceUrl": "https://www.chosun.com/economy/int_economy/2026/11/13/KO2KEISQA5A45EJO5UKCB32KFE/",
-      "sourceName": "조선일보·삼성전자 뉴스룸",
-      "reviewSourceUrl": "https://news.samsung.com/kr/삼성전자-구글·젠틀몬스터·워비파커와-협업한-인",
       "region": "domestic",
-      "category": "반도체·AI",
-      "relatedStocks": [
-        "005930"
-      ],
-      "impactRank": 5,
       "kind": "news",
-      "reviewedAt": "2026-11-12T22:49:40Z",
-      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
-      "validUntil": "2026-11-13T08:50:00+09:00"
-    },
-    {
-      "id": "20261113-0740-kepco-q3",
-      "title": "한국전력 3분기 영업이익 1조6,441억원…전년 대비 70.9% 감소",
-      "summary": "이전 회차에서 반영하지 못한 12일 발표 실적이다. 한국전력의 3분기 연결 매출은 26조8,518억원으로 2.6%, 영업이익은 1조6,441억원으로 70.9% 감소했다.",
-      "publishedAt": "2026-11-12T16:24:00+09:00",
-      "sourceUrl": "https://www.mt.co.kr/economy/2026/11/12/2026111216050978049",
-      "sourceName": "머니투데이",
-      "reviewSourceUrl": "https://www.mt.co.kr/economy/2026/11/12/2026111216050978049",
-      "region": "domestic",
-      "category": "국내공시",
-      "relatedStocks": [
-        "015760"
-      ],
-      "impactRank": 6,
-      "kind": "news",
-      "reviewedAt": "2026-11-12T22:49:40Z",
-      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
-      "validUntil": "2026-11-13T08:50:00+09:00"
-    },
-    {
-      "id": "20261113-0740-toray-mlcc",
-      "title": "도레이첨단소재, MLCC 필름 생산능력 연 9억㎡로 확대",
-      "summary": "도레이첨단소재는 구미 5공장 MLCC 필름 13·14호기 준공으로 연간 생산능력 3억㎡를 추가했다. 기존 설비를 포함한 총 생산능력은 연 9억㎡다.",
-      "publishedAt": "2026-11-12T23:51:00+09:00",
-      "sourceUrl": "https://m.ekn.kr/view.php?key=20261112022509067",
-      "sourceName": "에너지경제신문",
-      "reviewSourceUrl": "https://m.ekn.kr/view.php?key=20261112022509067",
-      "region": "domestic",
-      "category": "기타",
-      "relatedStocks": [],
-      "impactRank": 7,
-      "kind": "news",
-      "reviewedAt": "2026-11-12T22:49:40Z",
-      "reviewNote": "실제 원문·송고시각·수치를 확인하고 전날 공개 회차와 중복 대조. 관측값은 12일 미국 정규장 마감 수치이며 실시간 시세가 아님. 검토 기록: operations/research/2026-11-13-0740.json",
-      "validUntil": "2026-11-13T08:50:00+09:00"
+      "reviewedAt": "2026-11-12T23:40:36.914Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113025600030",
+      "reviewNote": "08:11 원문 송고 확인. 두 기관의 업무협약 체결 사실만 기록하며 실제 대출 실행이나 지원 규모를 추정하지 않음.",
+      "validUntil": "2026-11-13T11:50:00+09:00",
+      "impactRank": 5
     }
   ]
 }
-
