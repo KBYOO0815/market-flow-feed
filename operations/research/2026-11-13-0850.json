@@ -1,0 +1,157 @@
+{
+  "releaseAt": "2026-11-13T08:50:00+09:00",
+  "checkedAt": "2026-11-12T23:40:36.914Z",
+  "sourceCutoff": "2026-11-13T08:50:00+09:00",
+  "sourceChecksPath": "operations/source-checks/2026-11-13-0850.json",
+  "candidates": [
+    {
+      "title": "美 민주당 의원들, 엔비디아 H200 대중국 수출 승인 조사 착수",
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113008300071",
+      "publishedAt": "2026-11-13T05:30:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "05:30 보도됐으나 07:40 회차에 미반영된 사실. 08:50 조사에서 실제 원문·송고시각·공동서한 발표 사실 확인. 전회차의 엔비디아 CEO 사임과 다른 미 의회 조사 착수 사건."
+    },
+    {
+      "title": "독일군, 사이버 공격 노출 업체의 드론 운용 일시 중단",
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113021600009",
+      "publishedAt": "2026-11-13T07:48:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "07:40 회차 이후 07:48 송고. 업체의 확인 성명과 독일군 운용 중단에 관한 FT 취재 보도라는 근거 수준을 구분."
+    },
+    {
+      "title": "트럼프, 쿠바 관련 군사력 사용 검토 발언",
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113021800071",
+      "publishedAt": "2026-11-13T07:57:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "07:40 이후 07:57 보도. 실제 발언 사실만 채택, 군사행동 확정으로 해석하지 않음."
+    },
+    {
+      "title": "네비우스 16.8%·슈퍼마이크로 11.3% 하락 마감",
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113018300009",
+      "publishedAt": "2026-11-13T07:41:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "07:40 회차 이후 07:41 송고. 이전 회차 미국 3대지수 마감과 달리 AI 인프라 개별기업 종가 수치 추가 확인."
+    },
+    {
+      "title": "소진공·신협중앙회, 소상공인 금융지원 협력 협약 체결",
+      "region": "domestic",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113025600030",
+      "publishedAt": "2026-11-13T08:11:00+09:00",
+      "decision": "선정",
+      "verified": true,
+      "reason": "08:11 원문 송고 확인. 두 기관의 업무협약 체결 사실만 기록하며 실제 대출 실행이나 지원 규모를 추정하지 않음."
+    },
+    {
+      "region": "foreign",
+      "title": "트럼프 이란 협상 관련 07:51 종합보도",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113007751071",
+      "decision": "중복",
+      "reason": "07:40 공개본의 유가·트럼프 이란 관련 발표 사실과 중복, 실질 신규 결정 확인 안 됨.",
+      "verified": true
+    },
+    {
+      "region": "foreign",
+      "title": "미국 3대 지수 마감 08:07 마켓뷰",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113023200008",
+      "decision": "중복",
+      "reason": "07:40 회차의 12일 미국 정규장 종가와 동일.",
+      "verified": true
+    },
+    {
+      "region": "foreign",
+      "title": "스페이스X·테슬라 합병 임박 보도",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113023700075",
+      "decision": "원문 확인 불가",
+      "reason": "기사 송고시각·합병 확정 여부 원문 검증 미완료, 보도 추측 제목만으로 채택하지 않음.",
+      "verified": false
+    },
+    {
+      "region": "foreign",
+      "title": "오픈AI 중국 AI칩 제한 법안 지지 보도",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113027100009",
+      "decision": "원문 확인 불가",
+      "reason": "원문 공개시각과 법안 지지의 공식 발표 여부를 검증하지 못함.",
+      "verified": false
+    },
+    {
+      "region": "foreign",
+      "title": "앤트로픽 IPO 공모물량 6배 수요 보도",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113025400072",
+      "decision": "원문 확인 불가",
+      "reason": "원문 시각 및 공모 수요 수치 근거 미검증.",
+      "verified": false
+    },
+    {
+      "region": "domestic",
+      "title": "셀루메드 주요사항보고서 감자결정",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000003",
+      "decision": "원문 확인 불가",
+      "reason": "서버 DART 선택일 목록에서 후보 확인. 세부 감자 조건·접수시각을 공시 원문으로 재확인하지 못해 제외.",
+      "verified": false
+    },
+    {
+      "region": "domestic",
+      "title": "금융위 코스닥 추가대책 허위정보 유의",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88132",
+      "decision": "시간범위 밖",
+      "reason": "금융위 원문 날짜 11월12일. 11월13일 08:50 신규 발표로 재표기하지 않음.",
+      "verified": false
+    },
+    {
+      "region": "domestic",
+      "title": "금융위 금융지주 지배구조 개선",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88125",
+      "decision": "중복",
+      "reason": "11월12일 11:50 공개 회차에 이미 발표 사실 반영.",
+      "verified": true
+    },
+    {
+      "region": "domestic",
+      "title": "소진공 외 국내 공시 분기보고서 2건",
+      "sourceUrl": "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
+      "decision": "기타",
+      "reason": "서버 수집 목록에 분기보고서 제목만 확인. 회사·핵심 신규 수치 검증 미완료로 채택하지 않음.",
+      "verified": false
+    }
+  ],
+  "counts": {
+    "foreignCandidates": 9,
+    "domesticCandidates": 5,
+    "verifiedCandidates": 8,
+    "duplicateExcluded": 3
+  },
+  "calendarVerification": {
+    "calendarSourceUrl": "https://atsview.com/calendar/2026",
+    "evidenceUrls": [
+      "https://traderda.com/market/market-holidays",
+      "https://kind.krx.co.kr/",
+      "https://open.krx.co.kr/contents/MKD/01/0110/01100305/MKD01100305.jsp"
+    ],
+    "reason": "2026년 KRX 기준 연간 휴장일표 2곳 모두 11월13일 비휴장, TraderDa는 당일 정상거래일 명시. KIND·KRX 공식 페이지 및 DART 당일 접수 목록 확인. KRX 공식 개별 날짜 페이지는 추출되지 않아 임시 특별휴장 여부의 잔여 불확실성 기록."
+  },
+  "failedSources": [
+    {
+      "url": "https://www.reuters.com/markets/us/",
+      "error": "server HTTP 401; editorial web access blocked",
+      "attempts": 1
+    },
+    {
+      "url": "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
+      "error": "web 원문 추출 실패; 서버 200 및 11월13일 접수번호 후보는 확보",
+      "attempts": 1
+    },
+    {
+      "url": "Firecrawl",
+      "error": "connected app credit exhausted",
+      "attempts": 1
+    }
+  ]
+}
