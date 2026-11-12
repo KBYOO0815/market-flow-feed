@@ -20,6 +20,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   check:
+    if: github.repository == 'KBYOO0815/market-flow-feed'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

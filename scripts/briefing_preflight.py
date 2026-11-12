@@ -1,6 +1,7 @@
 """Collect bounded source evidence. Availability NEVER certifies editorial coverage."""
 import datetime as dt
 import hashlib
+import html as html_tools
 from html.parser import HTMLParser
 import json
 import os
@@ -55,7 +56,7 @@ def fetch_source(url, date, opener=urllib.request.urlopen, pause=time.sleep, clo
                 html = body.decode(charset, errors='replace')
             record['contentSha256'] = hashlib.sha256(body).hexdigest()
             if 'dart.fss.or.kr/dsac001/' in url:
-                text = re.sub(r'<[^>]+>', ' ', html)
+                text = html_tools.unescape(re.sub(r'<[^>]+>', ' ', html))
                 selected = re.search(r'전체\s*([\d,]+)\s*건\s*\(\s*(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일', text)
                 if not selected:
                     raise ValueError('DART selected date/count unavailable; cannot infer empty filings')

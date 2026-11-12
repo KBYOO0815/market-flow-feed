@@ -32,6 +32,12 @@ class SourceChecks(unittest.TestCase):
         self.assertEqual(len(result['attempts']), 2)
         self.assertIn('stale selected date', result['attempts'][0]['error'])
 
+    def test_dart_live_markup_nonbreaking_space_and_split_elements(self):
+        body = '<h4>전체</h4><em>&nbsp; 8 건</em><span>(2026년 11월 13일)</span>'
+        record = preflight.fetch_source(preflight.sources(dt.date(2026, 11, 13))['domestic_disclosures'][0], dt.date(2026, 11, 13), opener=Mock(return_value=Response(body.encode())), pause=Mock())
+        self.assertTrue(record['available'])
+        self.assertEqual(record['filingCount'], 8)
+
     def test_access_denial_recorded_without_retry_or_bypass(self):
         opener = Mock(side_effect=urllib.error.HTTPError('', 403, 'Forbidden', {}, None))
         result = preflight.fetch_source('https://example.com', dt.date(2026, 11, 13), opener=opener, pause=Mock())
