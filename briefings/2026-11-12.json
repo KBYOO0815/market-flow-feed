@@ -420,6 +420,180 @@
           "20261112-1150-spg-q3"
         ]
       }
+    },
+    "14:50": {
+      "schemaVersion": 2,
+      "asOf": "2026-11-12T14:39:11+09:00",
+      "releaseAt": "2026-11-12T14:50:00+09:00",
+      "tradingDayVerified": true,
+      "calendarSourceUrl": "https://global.krx.co.kr/contents/GLB/05/0501/0501110000/GLB0501110000.jsp",
+      "researchAudit": {
+        "coverage": {
+          "foreign_market": {
+            "checkedAt": "2026-11-12T14:39:11+09:00",
+            "sourceUrls": [
+              "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-11-12/",
+              "https://www.reuters.com/world/asia-pacific/dollar-near-one-month-high-yen-edges-toward-160-2026-11-12/"
+            ]
+          },
+          "foreign_policy": {
+            "checkedAt": "2026-11-12T14:39:11+09:00",
+            "sourceUrls": [
+              "https://www.reuters.com/world/china/chinas-xi-says-taiwan-reunification-must-happen-history-cannot-be-stopped-2026-11-12/",
+              "https://www.reuters.com/world/china/taiwan-is-taking-part-apec-china-summit-an-equal-basis-president-says-2026-11-12/",
+              "https://www.federalreserve.gov/newsevents/calendar.htm"
+            ]
+          },
+          "foreign_technology": {
+            "checkedAt": "2026-11-12T14:39:11+09:00",
+            "sourceUrls": [
+              "https://www.reuters.com/world/china/senior-us-democratic-senators-urge-administration-preserve-nvidia-export-records-2026-11-12/",
+              "https://www.reuters.com/business/media-telecom/stock-tips-with-beat-samsung-securities-ai-k-pop-group-racks-up-views-2026-11-12/"
+            ]
+          },
+          "domestic_disclosures": {
+            "checkedAt": "2026-11-12T14:39:11+09:00",
+            "sourceUrls": [
+              "https://dart.fss.or.kr/dsac001/mainK.do?mdayCnt=2&selectDate=&series=&sort=",
+              "https://kind.krx.co.kr/",
+              "https://www.datatooza.com/article/20261112134057532352ef39c137_80",
+              "https://www.datatooza.com/article/20261112142127479552ef3dd3da_80",
+              "https://www.datatooza.com/article/20261112141113672452ef3c55cd_80"
+            ]
+          },
+          "domestic_policy": {
+            "checkedAt": "2026-11-12T14:39:11+09:00",
+            "sourceUrls": [
+              "https://fsc.go.kr/no010101?bbsid=BBS0030&curPage=1",
+              "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c/"
+            ]
+          },
+          "domestic_market": {
+            "checkedAt": "2026-11-12T14:39:11+09:00",
+            "sourceUrls": [
+              "https://data.krx.co.kr/?scrnId=02081001",
+              "https://open.krx.co.kr/contents/MKD/01/0101/01010000/MKD01010000.jsp"
+            ]
+          }
+        },
+        "foreignCandidates": 20,
+        "domesticCandidates": 24,
+        "verifiedCandidates": 6,
+        "duplicateExcluded": 7
+      },
+      "items": [
+        {
+          "id": "20261112-1450-xi-taiwan",
+          "title": "시진핑, 대만과의 '평화통일·일국양제' 방침 재확인",
+          "summary": "시진핑 중국 국가주석은 쑨원 탄생 160주년 행사 연설에서 대만과의 완전한 통일을 역사적 과제로 규정하고, 평화통일과 일국양제 방침을 고수한다고 밝혔다.",
+          "publishedAt": "2026-11-12T13:18:29+09:00",
+          "sourceUrl": "https://www.reuters.com/world/china/chinas-xi-says-taiwan-reunification-must-happen-history-cannot-be-stopped-2026-11-12/",
+          "sourceName": "Reuters",
+          "relatedStocks": [],
+          "impactRank": 1,
+          "category": "정책·발언",
+          "region": "foreign",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T14:39:11+09:00",
+          "reviewSourceUrl": "https://www.reuters.com/world/china/chinas-xi-says-taiwan-reunification-must-happen-history-cannot-be-stopped-2026-11-12/",
+          "reviewNote": "11:50 회차 이후 13:18 KST에 송고된 시진핑의 신규 연설 내용이며, 이전 공개 회차에 없는 발언을 원문 시각과 함께 재확인했다.",
+          "validUntil": "2026-11-12T15:50:00+09:00"
+        },
+        {
+          "id": "20261112-1450-nvidia-senate",
+          "title": "미 상원의원 2명, 엔비디아 대중국 수출 관련 기록 보존 요청",
+          "summary": "엘리자베스 워런·크리스 쿤스 미 상원의원은 상무·국무장관과 백악관 비서실장에게 엔비디아의 중국향 칩 수출 관련 기록 보존과 의회 브리핑을 요청하는 서한을 보냈다.",
+          "publishedAt": "2026-11-12T12:44:00+09:00",
+          "sourceUrl": "https://www.reuters.com/world/china/senior-us-democratic-senators-urge-administration-preserve-nvidia-export-records-2026-11-12/",
+          "sourceName": "Reuters",
+          "relatedStocks": [
+            "NVIDIA"
+          ],
+          "impactRank": 2,
+          "category": "반도체·AI",
+          "region": "foreign",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T14:39:11+09:00",
+          "reviewSourceUrl": "https://www.reuters.com/world/china/senior-us-democratic-senators-urge-administration-preserve-nvidia-export-records-2026-11-12/",
+          "reviewNote": "11:50 회차 이후 12:44 KST에 공개된 상원의원 서한과 브리핑 요청이 새 사실이다. 기존 엔비디아 경영진 관련 보도와 동일 사실로 재게시하지 않았다.",
+          "validUntil": "2026-11-12T15:50:00+09:00"
+        },
+        {
+          "id": "20261112-1450-taiwan-apec",
+          "title": "라이칭더, 중국 APEC에 '동등한 지위'로 참가한다고 발표",
+          "summary": "라이칭더 대만 총통은 중국 선전에서 열리는 APEC 정상회의에 다른 회원과 동등한 지위로 참가한다고 밝혔고, 에이서 창업자 스탠 시를 특사로 임명했다.",
+          "publishedAt": "2026-11-12T12:22:40+09:00",
+          "sourceUrl": "https://www.reuters.com/world/china/taiwan-is-taking-part-apec-china-summit-an-equal-basis-president-says-2026-11-12/",
+          "sourceName": "Reuters",
+          "relatedStocks": [],
+          "impactRank": 3,
+          "category": "정책·발언",
+          "region": "foreign",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T14:39:11+09:00",
+          "reviewSourceUrl": "https://www.reuters.com/world/china/taiwan-is-taking-part-apec-china-summit-an-equal-basis-president-says-2026-11-12/",
+          "reviewNote": "11:50 회차 이후 12:22 KST에 송고된 대만의 참가 원칙과 특사 임명이 신규 사실이며, 이전 회차의 북미 접촉·G7 대만 성명과 다른 사건이다.",
+          "validUntil": "2026-11-12T15:50:00+09:00"
+        },
+        {
+          "id": "20261112-1450-tes-contract",
+          "title": "테스, SK하이닉스와 480억8천만원 반도체 장비 공급계약",
+          "summary": "테스는 SK하이닉스와 480억8천만원 규모의 반도체 제조장비 공급계약을 체결했다고 공시했다. 계약기간은 2026년 11월 11일부터 2027년 10월 4일까지다.",
+          "publishedAt": "2026-11-12T13:40:00+09:00",
+          "sourceUrl": "https://www.datatooza.com/article/20261112134057532352ef39c137_80",
+          "sourceName": "데이터투자",
+          "relatedStocks": [
+            "테스",
+            "SK하이닉스"
+          ],
+          "impactRank": 4,
+          "category": "국내공시",
+          "region": "domestic",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T14:39:11+09:00",
+          "reviewSourceUrl": "https://www.datatooza.com/article/20261112134057532352ef39c137_80",
+          "reviewNote": "11:50 회차 이후 13:40 KST에 공개된 신규 공급계약이다. 이전 회차의 대한조선·AP위성 공급계약과 별개 공시다.",
+          "validUntil": "2026-11-12T15:50:00+09:00"
+        },
+        {
+          "id": "20261112-1450-nano-treasury-cancel",
+          "title": "나노신소재, 자기주식 15만주 소각 결정",
+          "summary": "나노신소재는 보유 자기주식 15만주를 11월 26일 소각하기로 결정했다고 공시했다. 소각 주식은 소각 전 발행주식총수의 약 1.22%다.",
+          "publishedAt": "2026-11-12T14:21:00+09:00",
+          "sourceUrl": "https://www.datatooza.com/article/20261112142127479552ef3dd3da_80",
+          "sourceName": "데이터투자",
+          "relatedStocks": [
+            "나노신소재"
+          ],
+          "impactRank": 5,
+          "category": "국내공시",
+          "region": "domestic",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T14:39:11+09:00",
+          "reviewSourceUrl": "https://www.datatooza.com/article/20261112142127479552ef3dd3da_80",
+          "reviewNote": "11:50 회차 이후 14:21 KST에 확인된 신규 자기주식 소각 공시로, 이전 공개 회차에 동일 사건이 없다.",
+          "validUntil": "2026-11-12T15:50:00+09:00"
+        },
+        {
+          "id": "20261112-1450-kii-buyback",
+          "title": "케이아이이, 20억원 규모 자기주식 취득 결정",
+          "summary": "케이아이이는 보통주 21만8,579주를 약 20억원에 장내 취득하기로 결정했다고 공시했다. 취득 예정기간은 2026년 11월 13일부터 2027년 2월 12일까지다.",
+          "publishedAt": "2026-11-12T14:11:00+09:00",
+          "sourceUrl": "https://www.datatooza.com/article/20261112141113672452ef3c55cd_80",
+          "sourceName": "데이터투자",
+          "relatedStocks": [
+            "케이아이이"
+          ],
+          "impactRank": 6,
+          "category": "국내공시",
+          "region": "domestic",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T14:39:11+09:00",
+          "reviewSourceUrl": "https://www.datatooza.com/article/20261112141113672452ef3c55cd_80",
+          "reviewNote": "11:50 회차 이후 14:11 KST에 확인된 신규 자기주식 취득 공시이며, 이전 공개 회차에 동일 사건이 없다.",
+          "validUntil": "2026-11-12T15:50:00+09:00"
+        }
+      ]
     }
   }
 }
