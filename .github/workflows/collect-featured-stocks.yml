@@ -1,0 +1,23 @@
+name: Collect featured stocks on server
+on:
+  push:
+    branches: [main]
+    paths: ['requests/featured-collection.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: featured-collection
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test collection safeguards
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Collect and record status without publishing
+        env:
+          PUBLISH_TOKEN: ${{ github.token }}
+        run: python3 scripts/collection_worker.py

@@ -39,3 +39,11 @@
 - 공식 목록의 전체 건수·페이지 완결성·고유 종목코드·당일 aggDd/nowDd·실제 관측시각(조회시각 전 30분 이내)을 모두 검증한다. 네이버에서 실제 NXT 거래가 확인된 종목이 공식 목록에 없으면 상충으로 차단한다.
 - 이 검증을 통과한 전체 공식 거래대상 목록에 미포함된 종목만 NXT 비거래로 확인하여 0을 인정한다. zeroNxtEvidence에 종목코드, 공식 페이지, 실제 POST 조회 경로·파라미터, checkedAt, 목록 관측시각·전체 건수·판정 사유를 남긴다. 다음 회차에는 다시 조회한다.
 - 공식 목록이 오래됐거나 불완전하거나 해당 종목이 거래대상인데 상세 시세가 누락됐으면 발행을 계속 차단한다.
+
+## 서버 수집 실행 경로 (2026-11-12 개선)
+- 시세는 ChatGPT 실행 환경에서 직접 대량 조회하지 않고 공개 저장소의 `Collect featured stocks on server` GitHub Actions에서 수집한다. 연구 작업은 거래일 근거를 확인한 후 `requests/featured-collection.json`을 갱신한다.
+- 요청 형식: `{requestId:고유한 영문숫자/하이픈 ID, mode:"collect", releaseAt:원래 회차 ISO시각, evidence:{date:KST날짜,tradingDayVerified:true,calendarSourceUrl:실제 근거 URL}}`.
+- 결과 상태는 `operations/collections/<requestId>.json`, 검증 전 수집본은 상태의 snapshotPath에 저장한다. collecting/collected/collection_failed를 구분하고 실제 시작·종료·오류·기한을 기록한다. deadlineAt이 지났는데 collecting이면 정지/지연 상태로 판단한다.
+- collected는 발행 성공이 아니다. 연구 작업은 수집본으로 테마·원문 검증을 수행하고 기존 stage 검증을 통과한 초안만 게시한다. 미분류나 reason=null을 근거 없이 채우지 않는다. 공개 root를 직접 쓰지 않는다.
+- 원천 조회는 최대 6개 동시 처리, 회차 내 중복 제거, 10초 연결 제한을 사용한다. 일시적 429/500/502/503/504 및 네트워크 오류는 최대 3회 시도한다. 403/404를 재시도·우회하지 않는다. 5분 전체 수집 시차와 NXT 미확인 차단은 그대로 유지한다.
+- mode=probe는 원천 연결 점검 전용이다. 과거 회차·현재 회차를 발행하지 않으며 published=false 상태를 유지한다.

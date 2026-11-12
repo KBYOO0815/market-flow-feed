@@ -95,3 +95,10 @@ asOf must be within 20 minutes before to 30 minutes after the intended release. 
 
 ## 특징주 별도 피드
 - 특징주 데이터의 최신 시간표·수집·테마 가중평균·보관·앱 표시 범위는 [FEATURED_STOCKS_POLICY.md](FEATURED_STOCKS_POLICY.md)를 따른다. 브리핑과 독립 운영한다.
+
+
+## 검색 원천 장애 대응·운영 상태 (2026-11-12 개선)
+- 6개 필수 분야를 각각 독립 처리한다. DART/KIND 한 원천의 장애로 다른 분야 조사까지 중단하지 않는다. 각 실패 원천은 최대 2회 재확인하고 HTTP 상태·실제 시각·대체 원천·후보 판정을 기록한다. 접근 거부는 우회하지 않는다.
+- 공시 원문 장애 시 기업 공식 IR/공식 보도자료, 정부·거래소 공식 자료를 우선 확인하고 기존 정책대로 신뢰할 만한 기사 원문으로 교차 검증한다. 다른 원천으로도 동일 사실·발표시각을 검증하지 못하면 제외한다. 대체 출처를 조사한 것으로 필수 분야를 허위 완료 처리하지 않는다.
+- 운영 상태는 `operations/briefings/YYYY-MM-DD-HHMM.json`에 releaseAt, checkedAt, state(researching/research_failed/staged/published), failedSources, missingCoverage, reason을 실제 근거로 기록한다. 실패 상태 파일은 뉴스 feed 또는 공개 성공의 대체물이 아니다.
+- 필수 분야 검증 미완료는 research_failed, 검증 완료 후 신규 사실 0건은 별개의 정상 빈 회차다. 둘을 혼동하지 않는다. 실패 상태를 남기고 직전 공개본을 유지한다. 과거 시각을 조작해 소급 발행하지 않는다.

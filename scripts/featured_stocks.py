@@ -12,6 +12,7 @@ import re
 import urllib.error
 import urllib.request
 from urllib.parse import urlparse
+from source_http import CollectionFetch, json_response
 
 KST = dt.timezone(dt.timedelta(hours=9))
 SLOTS = ('09:40', '11:40', '13:40', '15:40', '20:10')
@@ -42,8 +43,7 @@ def number(value):
 
 def get(url):
     request = urllib.request.Request(url, headers={'User-Agent': 'MarketFlow/1.0', 'Accept': 'application/json'})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return json.load(response)
+    return json_response(request)
 
 
 def get_nxt_eligibility():
@@ -51,8 +51,7 @@ def get_nxt_eligibility():
     request = urllib.request.Request(NXT_ELIGIBILITY_URL, data=b'pageIndex=1&pageUnit=5000',
         headers={'User-Agent': 'MarketFlow/1.0',
                  'Referer': NXT_ELIGIBILITY_PAGE})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return json.load(response)
+    return json_response(request)
 
 
 def official_zero_nxt(candidates, known_nxt, body, checked):
@@ -113,6 +112,9 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
         raise ValueError('verified KRX trading-day evidence required')
     if evidence.get('date') != target.date().isoformat():
         raise ValueError('calendar evidence must be for this KST date')
+    cached = CollectionFetch(fetch)
+    fetch = cached
+    cached.prime([list_url(m) for m in ('KRX', 'NXT')])
     records = []
     lists = {}
     for market in ('KRX', 'NXT'):
@@ -122,7 +124,7 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
             raise ValueError('empty or changed Naver response: ' + market)
         lists[market] = {x['itemcode']: x for x in rows if x.get('type') == 'ST'}
         records.append({'market': market, 'sourceUrl': url,
-                        'retrievedAt': (now or dt.datetime.now(KST)).isoformat()})
+                        'retrievedAt': (now or cached.times[url].astimezone(KST)).isoformat()})
     krx, nxt = lists['KRX'], lists['NXT']
     if len(krx) < 1000 or len(nxt) < 100:
         raise ValueError('insufficient ranking universe; refusing partial top 50')
@@ -142,6 +144,8 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
     known = {c: int(x['tradeAmount']) + int(nxt.get(c, {}).get('tradeAmount', 0)) for c, x in krx.items()}
     cutoff = sorted(known.values(), reverse=True)[49]
     unresolved = []
+    challengers = [c for c, row in krx.items() if c not in nxt and c not in zero and int(row['tradeAmount']) + upper >= cutoff]
+    cached.prime([BASE + 'detail/' + c + '/detail?codeType=NXT' for c in challengers])
     for code, row in krx.items():
         if code in nxt or code in zero or int(row['tradeAmount']) + upper < cutoff:
             continue
@@ -153,7 +157,7 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
             nxt[code] = detail
             known[code] = int(row['tradeAmount']) + int(detail['tradeAmount'])
             records.append({'market': 'NXT', 'code': code, 'sourceUrl': url,
-                            'retrievedAt': (now or dt.datetime.now(KST)).isoformat()})
+                            'retrievedAt': (now or cached.times[url].astimezone(KST)).isoformat()})
         except urllib.error.HTTPError as error:
             if error.code != 404:
                 raise
@@ -177,6 +181,8 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
             raise ValueError('NXT turnover unverified (404 is not zero); official eligibility unavailable: ' + str(error)) from error
     if uncertain:
         raise ValueError('NXT turnover unverified (404 is not zero): ' + ','.join(uncertain))
+    cached.prime([BASE + 'detail/' + c + '/detail?codeType=' + m for c in ordered
+                  for m in (('KRX', 'NXT') if c in nxt else ('KRX',))])
     stocks = []
     for rank, code in enumerate(ordered, 1):
         k = krx[code]
