@@ -1,0 +1,25 @@
+{
+  "releaseAt": "2026-11-13T07:40:00+09:00",
+  "checkedAt": "2026-11-12T22:32:41.851Z",
+  "state": "research_failed",
+  "failedSources": [
+    {
+      "source": "KRX date-specific holiday calendar",
+      "reason": "2026-11-13 특별휴장 여부를 KRX 공식 날짜별 자료로 확증하지 못함"
+    },
+    {
+      "source": "DART/KIND 06:00–07:30 KST filings",
+      "reason": "발표시각과 원문을 독립 검증하지 못함"
+    }
+  ],
+  "missingCoverage": [
+    "foreign_market",
+    "foreign_policy",
+    "foreign_technology",
+    "domestic_disclosures",
+    "domestic_policy",
+    "domestic_market"
+  ],
+  "reason": "Six mandatory independent coverage searches and candidate-level source-time audit not completed; tradingDayVerified cannot be asserted. No draft staged; public root preserved. Previous 06:40 failure is not reused.",
+  "observedPublicReleaseAt": "2026-11-12T18:50:00+09:00"
+}
