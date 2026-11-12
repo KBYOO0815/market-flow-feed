@@ -1,0 +1,27 @@
+{
+  "releaseAt": "2026-11-13T06:40:00+09:00",
+  "checkedAt": "2026-11-12T21:34:44.451Z",
+  "state": "research_failed",
+  "failedSources": [
+    {
+      "source": "DART/KIND",
+      "reason": "2026-11-13 06:00~06:34 KST 개별 공시 원문 및 발표시각 검증 가능한 신규 목록 확보 실패; 과거 검색 결과만 확인"
+    },
+    {
+      "source": "KRX 2026-11-13 date-specific trading calendar",
+      "reason": "KRX 일반 휴장 규칙 확인했으나 당일 특별휴장 여부를 확인할 날짜별 공식 거래 달력 확보 실패"
+    }
+  ],
+  "missingCoverage": [
+    "domestic_disclosures",
+    "domestic_market"
+  ],
+  "reason": "필수 6개 분야의 독립 조사 및 개별 후보 원문 시각 검증 미완료. 06:40 초안은 생성하지 않음. 11월12일 미국 증시 확정 종가 및 엔비디아 CEO 사임 보도는 확인했으나 미완료 영역을 조사 완료로 허위 표기하지 않음.",
+  "evidenceUrls": [
+    "https://global.krx.co.kr/contents/GLB/06/0602/0602010201/GLB0602010201T1.jsp",
+    "https://www.reuters.com/business/nasdaq-futures-fall-nvidia-turmoil-rattles-ai-stocks-2026-11-12/",
+    "https://www.fsc.go.kr/po02050101"
+  ],
+  "previousPublicReleaseAt": "2026-11-12T18:50:00+09:00",
+  "privateMirrorMatched": true
+}
