@@ -1,46 +1,76 @@
 {
   "schemaVersion": 2,
-  "asOf": "2026-11-12T07:23:50+09:00",
-  "releaseAt": "2026-11-12T07:30:00+09:00",
+  "asOf": "2026-11-12T11:44:50+09:00",
+  "releaseAt": "2026-11-12T11:50:00+09:00",
   "tradingDayVerified": true,
-  "calendarSourceUrl": "https://todaystk.kr/market-holidays",
+  "calendarSourceUrl": "https://open.krx.co.kr/contents/MKD/01/0110/01100305/MKD01100305.jsp",
+  "researchAudit": {
+    "coverage": {
+      "foreign_market": {
+        "checkedAt": "2026-11-12T11:40:09+09:00",
+        "sourceUrls": [
+          "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-11-12/"
+        ]
+      },
+      "foreign_policy": {
+        "checkedAt": "2026-11-12T11:43:58+09:00",
+        "sourceUrls": [
+          "https://www.federalreserve.gov/newsevents/calendar.htm",
+          "https://www.federalreserve.gov/newsevents.htm"
+        ]
+      },
+      "foreign_technology": {
+        "checkedAt": "2026-11-12T11:40:09+09:00",
+        "sourceUrls": [
+          "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-11-12/"
+        ]
+      },
+      "domestic_disclosures": {
+        "checkedAt": "2026-11-12T11:43:58+09:00",
+        "sourceUrls": [
+          "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112800027",
+          "https://www.navercorp.com/investment/disclosure"
+        ]
+      },
+      "domestic_policy": {
+        "checkedAt": "2026-11-12T11:44:50+09:00",
+        "sourceUrls": [
+          "https://www.fsc.go.kr/no010101",
+          "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c/"
+        ]
+      },
+      "domestic_market": {
+        "checkedAt": "2026-11-12T11:44:50+09:00",
+        "sourceUrls": [
+          "https://data.krx.co.kr/?scrnId=02081001",
+          "https://open.krx.co.kr/contents/MKD/01/0101/01010000/MKD01010000.jsp"
+        ]
+      }
+    },
+    "foreignCandidates": 14,
+    "domesticCandidates": 16,
+    "verifiedCandidates": 1,
+    "duplicateExcluded": 7
+  },
   "items": [
     {
-      "id": "20261112-0730-us-nvidia-china-export-controls",
-      "title": "미국 엔비디아 AI칩 대중국 우회 수출 단속, 상무장관 제동 보도",
-      "summary": "로이터가 Axios를 인용해 트럼프 대통령이 엔비디아 AI칩의 중국 우회 반출 의심 기업에 대한 단속을 승인했으나, 러트닉 상무장관이 시행에 제동을 걸었다고 보도했다. 익명 관계자 보도이며 정책 시행 여부는 별도 확인이 필요하다.",
-      "publishedAt": "2026-11-11T21:21:00Z",
-      "sourceUrl": "https://www.reuters.com/world/china/lutnick-stalled-trump-crackdown-diversion-nvidia-chips-china-axios-reports-2026-11-11/",
-      "sourceName": "Reuters(Axios 인용)",
+      "id": "20261112-1150-naver-q3-earnings",
+      "title": "NAVER 3분기 매출 3조4,724억원·영업이익 4,513억원",
+      "summary": "NAVER는 2026년 3분기 연결 매출액이 전년 동기 대비 10.7% 증가한 3조4,724억원, 영업이익이 20.9% 감소한 4,513억원이라고 공시했다. 부문별 매출은 네이버 플랫폼 1조9,484억원, 파이낸셜 플랫폼 4,877억원, 글로벌 도전 1조364억원이다.",
+      "publishedAt": "2026-11-12T08:05:35+09:00",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112800027",
+      "sourceName": "DART",
       "relatedStocks": [
-        "삼성전자",
-        "SK하이닉스"
+        "NAVER"
       ],
-      "category": "정책·발언",
-      "region": "foreign",
-      "kind": "news",
-      "reviewNote": "Reuters 원문에 2026-11-11 21:21 UTC 송고시각과 Axios 인용이라는 근거 수준을 확인. 전날 20:00 회차의 Fed·국내 증시 마감·국고채 제재와 별개의 반도체 수출규제 집행 뉴스이며 공식 확정 정책으로 표현하지 않음.",
       "impactRank": 1,
-      "reviewedAt": "2026-11-12T07:23:50+09:00",
-      "reviewSourceUrl": "https://www.reuters.com/world/china/lutnick-stalled-trump-crackdown-diversion-nvidia-chips-china-axios-reports-2026-11-11/",
-      "validUntil": "2026-11-12T11:30:00+09:00"
-    },
-    {
-      "id": "20261112-0730-pfizer-blackstone-obesity-financing",
-      "title": "화이자, 블랙스톤서 비만치료제 개발자금 최대 15억달러 조달",
-      "summary": "화이자가 월 1회 투여 실험용 비만치료제 개발을 위해 블랙스톤으로부터 2028년까지 최대 15억달러의 자금을 지원받는다고 로이터가 보도했다. 국내 바이오 업종에 참고할 해외 자금조달 사례다.",
-      "publishedAt": "2026-11-11T21:40:00Z",
-      "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/pfizer-secures-up-15-billion-blackstone-obesity-drug-development-2026-11-11/",
-      "sourceName": "Reuters",
-      "relatedStocks": [],
-      "category": "기타",
-      "region": "foreign",
+      "category": "실적",
+      "region": "domestic",
       "kind": "news",
-      "reviewNote": "Reuters 원문에 2026-11-11 21:40 UTC 송고시각 및 최대 15억달러 개발자금 내용을 확인. 이전 회차에 없는 별도 제약 연구개발 자금조달 사건.",
-      "impactRank": 2,
-      "reviewedAt": "2026-11-12T07:23:50+09:00",
-      "reviewSourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/pfizer-secures-up-15-billion-blackstone-obesity-drug-development-2026-11-11/",
-      "validUntil": "2026-11-12T11:30:00+09:00"
+      "reviewedAt": "2026-11-12T11:44:50+09:00",
+      "reviewSourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034879",
+      "reviewNote": "직전 공개 07:30 회차의 두 사건과 다른 신규 실적 공시다. 직전 asOf 07:23:50 이후 08:05:35에 접수된 DART 공시와 NAVER 공식 보도자료·IR 자료에서 매출액, 영업이익, 전년 동기 증감률 및 부문별 매출을 대조했다. 같은 실적을 전한 복수 공시·보도는 하나의 사건으로 통합했다.",
+      "validUntil": "2026-11-12T14:50:00+09:00"
     }
   ]
 }
