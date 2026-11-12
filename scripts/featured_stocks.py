@@ -1,0 +1,325 @@
+"""Market Flow featured stocks: snapshot, reviewed themes, validation and archive.
+
+No quote or causal explanation is invented when a source is unavailable.
+All amounts are KRW, rates are percentage points (5.0 means +5%).
+"""
+import argparse
+import datetime as dt
+import decimal
+import json
+import pathlib
+import re
+import urllib.error
+import urllib.request
+from urllib.parse import urlparse
+
+KST = dt.timezone(dt.timedelta(hours=9))
+SLOTS = ('09:40', '11:40', '13:40', '15:40', '20:10')
+BASE = 'https://stock.naver.com/api/domestic/'
+D = decimal.Decimal
+
+
+def stamp(value):
+    parsed = dt.datetime.fromisoformat(value.replace('Z', '+00:00'))
+    if parsed.tzinfo is None:
+        raise ValueError('timezone required')
+    return parsed.astimezone(KST)
+
+
+def https(value):
+    u = urlparse(value if isinstance(value, str) else '')
+    return u.scheme == 'https' and bool(u.hostname) and not u.username and not u.password
+
+
+def number(value):
+    n = D(str(value))
+    if not n.is_finite():
+        raise ValueError('finite number required')
+    return n
+
+
+def get(url):
+    request = urllib.request.Request(url, headers={'User-Agent': 'MarketFlow/1.0', 'Accept': 'application/json'})
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.load(response)
+
+
+def weighted(stocks):
+    total = sum(s['integratedTradeAmount'] for s in stocks)
+    if total <= 0:
+        raise ValueError('positive theme turnover required')
+    return float((sum(number(s['changeRate']) * s['integratedTradeAmount'] for s in stocks) / total)
+                 .quantize(D('0.000001'), rounding=decimal.ROUND_HALF_UP))
+
+
+def list_url(market):
+    return BASE + 'market/stock/default?marketType=ALL&orderType=priceTop&startIdx=0&pageSize=5000&tradeType=' + market
+
+
+def collect(release, evidence, fetch=get, now=None):
+    """Use complete KRX universe + NXT top-100 and fill any possible challenger.
+
+    A missing NXT detail is NOT evidence for zero. Only independently verified
+    zero-NXT records supplied by the researcher can establish that value.
+    """
+    started = now or dt.datetime.now(KST)
+    target = stamp(release)
+    if target.strftime('%H:%M') not in SLOTS or target.weekday() >= 5:
+        raise ValueError('invalid featured-stocks release slot')
+    if not target - dt.timedelta(minutes=20) <= started <= target + dt.timedelta(minutes=20):
+        raise ValueError('collection outside original edition window')
+    if evidence.get('tradingDayVerified') is not True or not https(evidence.get('calendarSourceUrl')):
+        raise ValueError('verified KRX trading-day evidence required')
+    if evidence.get('date') != target.date().isoformat():
+        raise ValueError('calendar evidence must be for this KST date')
+    records = []
+    lists = {}
+    for market in ('KRX', 'NXT'):
+        url = list_url(market)
+        rows = fetch(url)
+        if not isinstance(rows, list) or not rows or (market == 'KRX' and len(rows) >= 5000):
+            raise ValueError('empty or changed Naver response: ' + market)
+        lists[market] = {x['itemcode']: x for x in rows if x.get('type') == 'ST'}
+        records.append({'market': market, 'sourceUrl': url,
+                        'retrievedAt': (now or dt.datetime.now(KST)).isoformat()})
+    krx, nxt = lists['KRX'], lists['NXT']
+    if len(krx) < 1000 or len(nxt) < 100:
+        raise ValueError('insufficient ranking universe; refusing partial top 50')
+    if any(c not in krx for c in nxt):
+        raise ValueError('NXT stock absent from KRX universe')
+    # The endpoint truncates NXT ranking to 100. The smallest returned amount
+    # bounds every omitted stock; list ordering and nonnegative amounts checked.
+    nxt_values = [int(x['tradeAmount']) for x in nxt.values()]
+    if nxt_values != sorted(nxt_values, reverse=True) or min(nxt_values) < 0:
+        raise ValueError('NXT ranking order changed')
+    upper = min(nxt_values)
+    zero = {}
+    for z in evidence.get('zeroNxt', []):
+        if not https(z.get('sourceUrl')) or stamp(z['checkedAt']).date() != target.date() or not z.get('reason'):
+            raise ValueError('zero NXT requires dated explicit non-trading evidence')
+        zero[z['code']] = z
+    known = {c: int(x['tradeAmount']) + int(nxt.get(c, {}).get('tradeAmount', 0)) for c, x in krx.items()}
+    cutoff = sorted(known.values(), reverse=True)[49]
+    unresolved = []
+    for code, row in krx.items():
+        if code in nxt or code in zero or int(row['tradeAmount']) + upper < cutoff:
+            continue
+        url = BASE + 'detail/' + code + '/detail?codeType=NXT'
+        try:
+            detail = fetch(url)
+            if detail.get('itemcode') != code or detail.get('tradeAmount') is None:
+                raise ValueError('NXT detail shape changed')
+            nxt[code] = detail
+            known[code] = int(row['tradeAmount']) + int(detail['tradeAmount'])
+            records.append({'market': 'NXT', 'code': code, 'sourceUrl': url,
+                            'retrievedAt': (now or dt.datetime.now(KST)).isoformat()})
+        except urllib.error.HTTPError as error:
+            if error.code != 404:
+                raise
+            unresolved.append(code)
+    ordered = sorted(known, key=lambda c: (-known[c], c))[:50]
+    cutoff = known[ordered[-1]]
+    uncertain = [c for c in unresolved if int(krx[c]['tradeAmount']) + upper >= cutoff]
+    if uncertain:
+        raise ValueError('NXT turnover unverified (404 is not zero): ' + ','.join(uncertain))
+    stocks = []
+    for rank, code in enumerate(ordered, 1):
+        k = krx[code]
+        n = nxt.get(code)
+        if n is None and code not in zero:
+            raise ValueError('selected stock lacks exact NXT amount: ' + code)
+        # Independently fetch timestamped market details for the selected names.
+        quotes = {}
+        for market in ('KRX', 'NXT') if n is not None else ('KRX',):
+            url = BASE + 'detail/' + code + '/detail?codeType=' + market
+            q = fetch(url)
+            observed = dt.datetime.strptime(q['tradeTime'], '%Y%m%d%H%M%S').replace(tzinfo=KST)
+            checked = now or dt.datetime.now(KST)
+            if observed.date() != target.date() or observed > checked + dt.timedelta(seconds=30):
+                raise ValueError('quote date/future timestamp mismatch: ' + code)
+            # After the regular close, KRX closing observations remain historical.
+            close = dt.datetime.combine(target.date(), dt.time(15, 30), KST)
+            allowed_close = market == 'KRX' and checked >= close and observed >= close
+            if not allowed_close and checked - observed > dt.timedelta(minutes=15):
+                raise ValueError('stale observation: ' + code + '/' + market)
+            quotes[market] = {'observedAt': observed.isoformat(), 'sourceUrl': url}
+        stocks.append({'code': code, 'name': k['itemname'], 'turnoverRank': rank,
+                       'krxTradeAmount': int(k['tradeAmount']),
+                       'nxtTradeAmount': int(n['tradeAmount']) if n else 0,
+                       'integratedTradeAmount': known[code], 'changeRate': float(number(k['prevChangeRate'])),
+                       'rateMarket': 'KRX', 'quotes': quotes,
+                       'zeroNxtEvidence': zero.get(code)})
+    ended = now or dt.datetime.now(KST)
+    if ended - started > dt.timedelta(minutes=5):
+        raise ValueError('collection skew exceeds five minutes; collect again')
+    # Quotes validate contemporaneity; amounts/rates above remain the actual
+    # list observations, with their own retrieval times, not relabelled details.
+    return {'schemaVersion': 1, 'asOf': ended.isoformat(), 'collectionStartedAt': started.isoformat(),
+            'releaseAt': target.isoformat(), 'tradingDayVerified': True,
+            'calendarSourceUrl': evidence['calendarSourceUrl'], 'sourceName': '네이버 증권',
+            'amountUnit': 'KRW', 'rateBasis': 'KRX_PREVIOUS_CLOSE',
+            'serverRetentionCalendarDays': 3, 'appVisibleCalendarDays': 2,
+            'sourceRecords': records, 'stocks': stocks,
+            'byTurnover': ordered,
+            'byChangeRate': [s['code'] for s in sorted(stocks, key=lambda s: (-s['changeRate'], -s['integratedTradeAmount'], s['code']))],
+            'themes': [], 'unclassified': list(ordered)}
+
+
+def enrich(snapshot, review):
+    result = dict(snapshot)
+    by_code = {s['code']: s for s in snapshot['stocks']}
+    used, themes = set(), []
+    for entry in review['themes']:
+        codes = entry['stockCodes']
+        if not codes or len(codes) != len(set(codes)) or any(c not in by_code or c in used for c in codes):
+            raise ValueError('theme membership missing/unknown/duplicated')
+        used.update(codes)
+        theme = dict(entry)
+        members = [by_code[c] for c in codes]
+        theme['stockCodes'] = [s['code'] for s in sorted(members, key=lambda s: (-s['changeRate'], -s['integratedTradeAmount'], s['code']))]
+        theme['weightedChangeRate'] = weighted(members)
+        theme['integratedTradeAmount'] = sum(s['integratedTradeAmount'] for s in members)
+        themes.append(theme)
+    result['themes'] = sorted(themes, key=lambda t: (-t['weightedChangeRate'], -t['integratedTradeAmount'], t['id']))
+    result['unclassified'] = [c for c in result['byChangeRate'] if c not in used]
+    result['reviewedAt'] = review['reviewedAt']
+    return validate(result)
+
+
+def validate(p):
+    release, as_of = stamp(p['releaseAt']), stamp(p['asOf'])
+    if p.get('schemaVersion') != 1 or release.strftime('%H:%M') not in SLOTS or release.weekday() >= 5:
+        raise ValueError('invalid featured-stocks edition')
+    if p.get('tradingDayVerified') is not True or not https(p.get('calendarSourceUrl')):
+        raise ValueError('trading day evidence required')
+    if not release - dt.timedelta(minutes=20) <= as_of <= release + dt.timedelta(minutes=20):
+        raise ValueError('snapshot outside edition window')
+    if p.get('amountUnit') != 'KRW' or p.get('rateBasis') != 'KRX_PREVIOUS_CLOSE':
+        raise ValueError('unknown amount or rate basis')
+    started = stamp(p['collectionStartedAt'])
+    if not dt.timedelta(0) <= as_of - started <= dt.timedelta(minutes=5):
+        raise ValueError('invalid collection window')
+    sources = p.get('sourceRecords', [])
+    if not {'KRX', 'NXT'}.issubset({s['market'] for s in sources}):
+        raise ValueError('both market source records required')
+    if any(not https(s.get('sourceUrl')) or not started <= stamp(s['retrievedAt']) <= as_of for s in sources):
+        raise ValueError('invalid source retrieval time')
+    stocks = p['stocks']
+    if len(stocks) != 50 or len({s['code'] for s in stocks}) != 50:
+        raise ValueError('exactly 50 unique stocks required')
+    expected = sorted(stocks, key=lambda s: (-s['integratedTradeAmount'], s['code']))
+    if p['byTurnover'] != [s['code'] for s in expected]:
+        raise ValueError('incorrect turnover order')
+    if p['byChangeRate'] != [s['code'] for s in sorted(stocks, key=lambda s: (-s['changeRate'], -s['integratedTradeAmount'], s['code']))]:
+        raise ValueError('incorrect rate order')
+    for rank, s in enumerate(expected, 1):
+        if s['turnoverRank'] != rank or not re.fullmatch(r'[0-9A-Z]{6}', s['code']) or not s['name']:
+            raise ValueError('invalid stock identity/rank')
+        for key in ('krxTradeAmount', 'nxtTradeAmount', 'integratedTradeAmount'):
+            if type(s[key]) is not int or s[key] < 0:
+                raise ValueError('invalid turnover')
+        if s['integratedTradeAmount'] != s['krxTradeAmount'] + s['nxtTradeAmount']:
+            raise ValueError('turnover sum mismatch')
+        number(s['changeRate'])
+        if s.get('rateMarket') != 'KRX':
+            raise ValueError('mixed rate basis')
+        for market in ('KRX', 'NXT'):
+            q = s['quotes'].get(market)
+            if q is None:
+                z = s.get('zeroNxtEvidence')
+                if (market != 'NXT' or s['nxtTradeAmount'] != 0 or not z or not https(z.get('sourceUrl'))
+                        or z.get('code') != s['code'] or not z.get('reason')
+                        or stamp(z['checkedAt']).date() != release.date() or stamp(z['checkedAt']) > as_of):
+                    raise ValueError('missing market quote/evidence')
+                continue
+            observed = stamp(q['observedAt'])
+            if not https(q['sourceUrl']) or observed.date() != release.date() or observed > as_of:
+                raise ValueError('invalid quote source/time')
+            close = dt.datetime.combine(release.date(), dt.time(15, 30), KST)
+            if as_of - observed > dt.timedelta(minutes=20) and not (market == 'KRX' and as_of >= close and observed >= close):
+                raise ValueError('stale quote')
+    reviewed = stamp(p['reviewedAt'])
+    if not as_of <= reviewed <= release + dt.timedelta(minutes=20):
+        raise ValueError('invalid actual theme review time')
+    by_code, used = {s['code']: s for s in stocks}, set()
+    ids = set()
+    for t in p['themes']:
+        if not t['id'] or t['id'] in ids or not t['name']:
+            raise ValueError('theme identity duplicated/missing')
+        ids.add(t['id'])
+        codes = t['stockCodes']
+        if not codes or len(codes) != len(set(codes)) or any(c not in by_code or c in used for c in codes):
+            raise ValueError('invalid theme membership')
+        used.update(codes)
+        members = [by_code[c] for c in codes]
+        if codes != [s['code'] for s in sorted(members, key=lambda s: (-s['changeRate'], -s['integratedTradeAmount'], s['code']))]:
+            raise ValueError('incorrect theme member order')
+        if abs(number(t['weightedChangeRate']) - number(weighted(members))) > D('0.000001'):
+            raise ValueError('weighted rate mismatch')
+        if t['integratedTradeAmount'] != sum(s['integratedTradeAmount'] for s in members):
+            raise ValueError('theme turnover mismatch')
+        evidence = t.get('membershipEvidence', [])
+        if {e['code'] for e in evidence} != set(codes) or any(not https(e.get('sourceUrl')) or not e.get('fact') for e in evidence):
+            raise ValueError('verified business/theme relation required for every member')
+        reason = t.get('reason')
+        if reason is not None:
+            if not reason.get('summary') or not https(reason.get('sourceUrl')):
+                raise ValueError('reason requires actual source')
+            published, checked = stamp(reason['publishedAt']), stamp(reason['checkedAt'])
+            if published > reviewed or published.date() != release.date() or not as_of <= checked <= reviewed:
+                raise ValueError('reason publication/review time mismatch')
+            if reason.get('causality') not in ('source_attributed', 'related_fact_only'):
+                raise ValueError('separate reported cause from merely related facts')
+    if p['themes'] != sorted(p['themes'], key=lambda t: (-t['weightedChangeRate'], -t['integratedTradeAmount'], t['id'])):
+        raise ValueError('theme order mismatch')
+    if len(p['unclassified']) != len(set(p['unclassified'])) or set(p['unclassified']) != set(by_code) - used:
+        raise ValueError('all 50 stocks must be accounted for')
+    return p
+
+
+def archive(payload, previous=None):
+    release = stamp(payload['releaseAt'])
+    date, slot = release.strftime('%Y-%m-%d'), release.strftime('%H:%M')
+    if previous and previous['date'] != date:
+        raise ValueError('archive date mismatch')
+    editions = dict((previous or {}).get('editions', {}))
+    editions[slot] = payload
+    return {'date': date, 'editions': dict(sorted(editions.items()))}
+
+
+def retained_dates(dates, today, days):
+    return sorted(d for d in dates if today - dt.timedelta(days=days - 1) <= dt.date.fromisoformat(d) <= today)
+
+
+def write(path, payload):
+    dest = pathlib.Path(path)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    sub = parser.add_subparsers(dest='command', required=True)
+    c = sub.add_parser('collect')
+    c.add_argument('--release-at', required=True)
+    c.add_argument('--evidence', required=True)
+    c.add_argument('--output', required=True)
+    s = sub.add_parser('stage')
+    s.add_argument('snapshot')
+    s.add_argument('review')
+    s.add_argument('output')
+    v = sub.add_parser('validate')
+    v.add_argument('draft')
+    args = parser.parse_args()
+    read = lambda p: json.loads(pathlib.Path(p).read_text(encoding='utf-8'))
+    if args.command == 'collect':
+        write(args.output, collect(args.release_at, read(args.evidence)))
+    elif args.command == 'stage':
+        write(args.output, enrich(read(args.snapshot), read(args.review)))
+    else:
+        validate(read(args.draft))
+    print('Featured-stocks ' + args.command + ' passed')
+
+
+if __name__ == '__main__':
+    main()

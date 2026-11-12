@@ -92,3 +92,6 @@ asOf must be within 20 minutes before to 30 minutes after the intended release. 
 - 발행 전 국외 최대 10건·국내 최대 10건의 **각 영역별 후보 목록**을 독립 검토한다. 10건을 맞추기 위해 임의 사실을 만들지 않되, 국내외 주요 신규 공시·발표를 1건만 남기고 누락하는 일이 없도록 한다.
 - 단순히 researchAudit.coverage의 6개 URL 칸을 채운 것만으로 검색 품질을 통과했다고 보고하지 않는다. 실제 검색 결과와 후보별 판단이 있어야 한다.
 - 지난 회차의 누락을 발견하면 원문·시각을 확인하여 다음 발행에서 `이전 회차 이후 확인된 미반영 사실`로 다루되, 과거 asOf·reviewedAt을 조작하거나 과거 시각에 실시간 발행한 것으로 표시하지 않는다.
+
+## 특징주 별도 피드
+- 특징주 데이터의 최신 시간표·수집·테마 가중평균·보관·앱 표시 범위는 [FEATURED_STOCKS_POLICY.md](FEATURED_STOCKS_POLICY.md)를 따른다. 브리핑과 독립 운영한다.
