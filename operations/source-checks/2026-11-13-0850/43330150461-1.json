@@ -1,6 +1,1060 @@
 {
-  "state": "checking_sources",
+  "state": "source_checks_collected",
   "releaseAt": "2026-11-13T08:50:00+09:00",
-  "startedAt": "2026-11-13T08:35:38.762416+09:00",
-  "editorialCoverageVerified": false
+  "checkedAt": "2026-11-13T08:35:47.258382+09:00",
+  "editorialCoverageVerified": false,
+  "tradingDayVerified": false,
+  "requiresEditorialReview": true,
+  "unavailableTopics": [],
+  "sources": {
+    "foreign_market": [
+      {
+        "sourceUrl": "https://www.yna.co.kr/market-plus/global-market",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:40.370188+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:41 GMT",
+            "cacheAge": "209"
+          }
+        ],
+        "candidates": [
+          {
+            "title": "\"오픈AI, 中 AI칩·장비 접근 차단 의회 법안 지지\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113027100009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "'엔비디아 사단' 주가 급락…네비우스 17%↓",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113018300009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "젠슨 황 퇴진에 엔비디아 시총 장중 801조원 증발",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113014000009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "트럼프 \"이란과 합의 불필요\"에 국제유가 급등…브렌트유 3.3%↑",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113010900072?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "대만 \"국부펀드 특별법 초안 연말 마련…초기 1조2천억원 규모\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112123800009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "\"미, 중국 AI 칩 '동남아 우회로' 차단 추진\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112121900009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "\"코어위브, 투자적격등급 대출로 5.4조원 조달 추진\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112119600009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "반도체 호황 누른 유가…KDI \"소비에 부정적 영향 먼저 반영\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112084800002?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "예년만 못한 '중국판 블프' 열기…내수 부진에 할인 피로감까지",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112074700089?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "엔비디아 주가 시간외 8.6%↓…시총 MS에 밀려 3위(종합)",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112021351009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "아모데이 \"AI가 10년 내 암·알츠하이머 치료할 것\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112058100009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "\"구글, 홍콩·싱가포르서 4조원 채권 발행 추진\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112035800009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "달러 가치 19개월 만에 최고",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112033600009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "MS \"데이터센터 전력비용, 주민 전가 없다\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112022700009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "엔비디아 주가, 시간외 8% 급락…'해임 준비' 보도에",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112021300009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "아마존, 앤트로픽 투자 13배 '대박'…구글도 3배 차익",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112020300009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "AI반도체주 일제히 급등…마이크론 시총 하루새 130조원↑",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112011400009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "이형일, 재경관회의…美 중간선거·佛 재정위기 등 현안 논의",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261111136000002?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "\"미 CFTC, 예측시장 플랫폼 칼시 기소 경고\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261111122000009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "코어위브 주가, 시간외 거래서 16%↑…\"규제 영향 없다\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261111120600009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "\"차기 엔비디아 수장 후보로 리사 수 AMD CEO도 거론\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261111110900009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "소프트뱅크 주가 출렁…장초반 11% 급락후 회복",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261111119500009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "TSMC, 앤트로픽·오픈AI에 각각 최대 5억달러 투자",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261111087300009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "AI 기업 부도위험에 베팅하는 ETF 출시 임박",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261111075600009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "블룸버그 \"엔비디아 주가, 젠슨 황 자리 지킬지에 달려\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261111064500009?section=market-plus/global-market",
+            "verified": false
+          },
+          {
+            "title": "젠슨황 퇴진에 엔비디아 직원들 눈물…본사엔 슬픔의 꽃다발",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012300075?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "'취권'서 성룡과 대결한 원로 액션배우 황정리 별세",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113024400005?section=culture/all",
+            "verified": false
+          },
+          {
+            "title": "트럼프-젠슨황 거래적 긴밀 관계…거액 기부에 엔비디아 혜택",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113001900071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "국립묘지서 떠든 美국방, 자기 꾸짖은 병사에 훈장 수여",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113010000071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "\"기분 나쁘게 쳐다봐\"…버스서 10대 폭행한 소방관 벌금형",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112135500051?section=society/all",
+            "verified": false
+          }
+        ],
+        "available": true,
+        "contentSha256": "15d65f91af955140c20c33a312062cd1a7402f51bfe39522dad3b4e71e6dcde1"
+      },
+      {
+        "sourceUrl": "https://www.reuters.com/markets/us/",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:42.252318+09:00",
+            "errorType": "HTTPError",
+            "error": "HTTP Error 401: HTTP Forbidden",
+            "httpStatus": 401
+          }
+        ],
+        "candidates": [],
+        "available": false
+      }
+    ],
+    "foreign_policy": [
+      {
+        "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:40.371845+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:40 GMT",
+            "cacheAge": "4"
+          }
+        ],
+        "candidates": [
+          {
+            "title": "2026 FOMC",
+            "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm",
+            "verified": false
+          },
+          {
+            "title": "2025 FOMC",
+            "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2025-press-fomc.htm",
+            "verified": false
+          },
+          {
+            "title": "2024 FOMC",
+            "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2024-press-fomc.htm",
+            "verified": false
+          },
+          {
+            "title": "2023 FOMC",
+            "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2023-press-fomc.htm",
+            "verified": false
+          },
+          {
+            "title": "2022 FOMC",
+            "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2022-press-fomc.htm",
+            "verified": false
+          },
+          {
+            "title": "2021 FOMC",
+            "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2021-press-fomc.htm",
+            "verified": false
+          },
+          {
+            "title": "2020 FOMC",
+            "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2020-press-fomc.htm",
+            "verified": false
+          }
+        ],
+        "available": true,
+        "contentSha256": "5f90842c80d743e623327a1dd247a009c2d5218dce0a8f15b8e2af93f0fd5c26"
+      },
+      {
+        "sourceUrl": "https://www.yna.co.kr/international/all",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:40.440404+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:41 GMT",
+            "cacheAge": "2"
+          }
+        ],
+        "candidates": [
+          {
+            "title": "MLB 애틀랜타, 다저스 마무리 출신 필립스와 468억원에 3년 계약",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113028900007?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "美민주, 트럼프 '엔비디아 中수출승인' 조사…러트닉 먼저 조준(종합)",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113008351071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "\"오픈AI, 中 AI칩·장비 접근 차단 의회 법안 지지\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113027100009?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "\"앤트로픽 IPO에 공모물량 6배 수요\"…역대 최대 상장 전망",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113025400072?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "젠슨황 자녀·사위 입지 좁아질 듯…'가족승계' 물거품 전망",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113021900091?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "스페이스X·테슬라, 사상최대 합병 임박…\"이르면 내달 발표\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113023700075?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "코이카 글로벌 서포터스 '위코 8기' 활동 마무리…\"ODA 쉬워요\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112165900371?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "엔비디아 폭락에 美개미들 '줍줍'…30분간 1천억원대 매수",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113020900072?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "트럼프 \"임기 중 쿠바 해결하고 싶다…군사력 사용도 검토\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113021800071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "트럼프 \"이란과 합의 필요없다\"…밴스 주도 협상론서 급격 선회(종합)",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113007751071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "美민주, 트럼프 부패 조사에 '어둠의 공주' 모금책 정조준",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113019300071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "독일군, '적대세력 사이버공격'에 군사용 드론 운용 일시중단",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113021600009?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "'엔비디아 사단' 주가 급락…네비우스 17%↓",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113018300009?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "美워싱턴 아파트·피트니스센터 총기난사…용의자 포함 2명 사망(종합)",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113008551071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "젠슨 황 퇴진·유가 급등에 뉴욕증시 하락…엔비디아 4.3%↓(종합)",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "메가스피드 설립부터 젠슨황 퇴진까지…3년간 어떤 일이 있었나",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113014600071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "젠슨황 충격에 美기술주 휘청…AMD·브로드컴은 5%대 급등(종합)",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113001451072?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "\"파파 레오\" 300만 인파 환호…'제2의 고향' 페루 찾은 교황",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113013700087?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "\"'젠슨황 연인' 앨리스황, 中화웨이측 데이터센터 간접 보유\"",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012800071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "젠슨 황 퇴진에 엔비디아 시총 장중 801조원 증발",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113014000009?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "미중정상 APEC 담판에 '젠슨황 스캔들' 그림자…복잡해진 셈법",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113011800071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "젠슨황 퇴진에 엔비디아 직원들 눈물…본사엔 슬픔의 꽃다발",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012300075?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "젠슨 황 퇴진·유가 급등에 뉴욕증시 하락…나스닥 0.4%↓",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012000072?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "트럼프 장남, 민주당 조사 예고 속 예측시장 칼시 고문직 사임",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113011500072?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "젠슨황 180조원 지분, 부인과 공동신탁…재산분할시 매도 어려워",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113011000091?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "'취권'서 성룡과 대결한 원로 액션배우 황정리 별세",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113024400005?section=culture/all",
+            "verified": false
+          },
+          {
+            "title": "트럼프-젠슨황 거래적 긴밀 관계…거액 기부에 엔비디아 혜택",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113001900071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "국립묘지서 떠든 美국방, 자기 꾸짖은 병사에 훈장 수여",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113010000071?section=international/all",
+            "verified": false
+          },
+          {
+            "title": "\"기분 나쁘게 쳐다봐\"…버스서 10대 폭행한 소방관 벌금형",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112135500051?section=society/all",
+            "verified": false
+          },
+          {
+            "title": "배우 김승우, 절도 혐의로 고소당해…강남경찰서가 수사",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261112177200004?section=society/all",
+            "verified": false
+          }
+        ],
+        "available": true,
+        "contentSha256": "8e321cd312ce55269511b4259dec32671b3e7ea30ec58c218a41d5c36d749f14"
+      }
+    ],
+    "foreign_technology": [
+      {
+        "sourceUrl": "https://nvidianews.nvidia.com/news",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:40.372094+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:40 GMT",
+            "cacheAge": null
+          }
+        ],
+        "candidates": [
+          {
+            "title": "NVIDIA Announces CEO Transition",
+            "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+            "verified": false
+          },
+          {
+            "title": "Statement From the Independent Members of the NVIDIA Board",
+            "sourceUrl": "https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board",
+            "verified": false
+          }
+        ],
+        "available": true,
+        "contentSha256": "96b29f57df7008fdaeb8721a5e96f249d2f3694890f7bbc4f6c2892b2522a3bc"
+      },
+      {
+        "sourceUrl": "https://news.samsung.com/global/",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:40.519715+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:40 GMT",
+            "cacheAge": null
+          }
+        ],
+        "candidates": [],
+        "available": true,
+        "contentSha256": "7c17347a675e3fbda03ea834067996890864db4fdd88b75e1c4c9f3fe216bcc5"
+      }
+    ],
+    "domestic_disclosures": [
+      {
+        "sourceUrl": "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:40.372394+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:41 GMT",
+            "cacheAge": null
+          }
+        ],
+        "candidates": [
+          {
+            "title": "분기보고서 (2026.09)",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000008",
+            "verified": false
+          },
+          {
+            "title": "분기보고서 (2026.09)",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000006",
+            "verified": false
+          },
+          {
+            "title": "[첨부정정] 주주총회소집결의 (임시주주총회)",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900019",
+            "verified": false
+          },
+          {
+            "title": "주요사항보고서(감자결정)",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000003",
+            "verified": false
+          },
+          {
+            "title": "주주총회소집공고",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000002",
+            "verified": false
+          },
+          {
+            "title": "효력발생안내 ( 2026.11.3. 제출 증권신고서(합병) )",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103100003",
+            "verified": false
+          },
+          {
+            "title": "분기보고서(유동화전문회사) (2026.09)",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000746",
+            "verified": false
+          },
+          {
+            "title": "분기보고서(유동화전문회사) (2026.09)",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000745",
+            "verified": false
+          }
+        ],
+        "available": true,
+        "contentSha256": "bca36b6b9f4af6a19cf8a7c758587513ae1c861307da34907a1155fc1a1e8927",
+        "selectedDate": "2026-11-13",
+        "filingCount": 8
+      },
+      {
+        "sourceUrl": "https://kind.krx.co.kr/",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:41.574025+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:41 GMT",
+            "cacheAge": null
+          }
+        ],
+        "candidates": [],
+        "available": true,
+        "contentSha256": "641366462c2c2fcd018737713ad1dc693530e180151693cbe4df059c1c864f0a"
+      }
+    ],
+    "domestic_policy": [
+      {
+        "sourceUrl": "https://www.fsc.go.kr/no010101",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:40.372653+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:41 GMT",
+            "cacheAge": null
+          }
+        ],
+        "candidates": [
+          {
+            "title": "가상자산사업자에 대한 최고 수준의 보안 강화 조치를 통해 이용자의 자산과 정보를 철저히 지켜나가겠습니다.",
+            "sourceUrl": "https://www.fsc.go.kr/no010101/88133?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+            "verified": false
+          },
+          {
+            "title": "인터넷/SNS상 코스닥 추가대책에 대한 허위정보 관련 투자자 유의사항",
+            "sourceUrl": "https://www.fsc.go.kr/no010101/88132?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+            "verified": false
+          },
+          {
+            "title": "사업보고서 등에 대한 조사·감리결과 조치",
+            "sourceUrl": "https://www.fsc.go.kr/no010101/88127?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+            "verified": false
+          },
+          {
+            "title": "금융회사 지배구조의 공정성과 투명성을 제고합니다.",
+            "sourceUrl": "https://www.fsc.go.kr/no010101/88125?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+            "verified": false
+          },
+          {
+            "title": "2026년 10월 가계대출 동향(잠정)",
+            "sourceUrl": "https://www.fsc.go.kr/no010101/88124?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+            "verified": false
+          },
+          {
+            "title": "미공개 무상증자정보를 이용한 내부자등에 대한 중대범죄수사청 고발·통보 조치 의결",
+            "sourceUrl": "https://www.fsc.go.kr/no010101/88123?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+            "verified": false
+          },
+          {
+            "title": "건설노동자, 플랫폼노동자와 프리랜서에 대한 포용금융으로 금융이용 문턱 낮아진다",
+            "sourceUrl": "https://www.fsc.go.kr/no010101/88118?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+            "verified": false
+          },
+          {
+            "title": "다음 금융은 이미 시작됐다 「코리아 핀테크 위크 2026」, 11월 25일 개막",
+            "sourceUrl": "https://www.fsc.go.kr/no010101/88104?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+            "verified": false
+          },
+          {
+            "title": "국내외 주식시장 변동성 확대로 단계별 대응조치 가동",
+            "sourceUrl": "https://www.fsc.go.kr/no010101/88100?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+            "verified": false
+          },
+          {
+            "title": "현재 유포되고 있는 부동산 대책 관련 게시글의 보도에 유의하여 주시기 바랍니다.",
+            "sourceUrl": "https://www.fsc.go.kr/no010101/88099?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+            "verified": false
+          }
+        ],
+        "available": true,
+        "contentSha256": "3772d65e182127d69956ce1e1bdaee4f4d70db325229478bfb8afca983ff9e8b"
+      },
+      {
+        "sourceUrl": "https://www.motie.go.kr/",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:43.334782+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:44 GMT",
+            "cacheAge": null
+          }
+        ],
+        "candidates": [],
+        "available": true,
+        "contentSha256": "b282dc6ef04602a110b22cd02c63b5b9e6285c75a638ad972cac0b055e25aefc"
+      }
+    ],
+    "domestic_market": [
+      {
+        "sourceUrl": "https://kind.krx.co.kr/common/stockschedule.do?method=StockScheduleMain",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:40.372919+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:40 GMT",
+            "cacheAge": null
+          }
+        ],
+        "candidates": [],
+        "available": true,
+        "contentSha256": "3368f7f552c4e845562eba3f1ffb88e58556b36a5b39b9a89903d55ef7f26028"
+      },
+      {
+        "sourceUrl": "https://open.krx.co.kr/contents/MKD/01/0110/01100305/MKD01100305.jsp",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:40.832555+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:41 GMT",
+            "cacheAge": null
+          }
+        ],
+        "candidates": [],
+        "available": true,
+        "contentSha256": "1d4290ed21b7a710a6028cc2e0cbe994b73837af50bb7b5cb302f543aea58dcd"
+      },
+      {
+        "sourceUrl": "https://atsview.com/calendar/2026",
+        "attempts": [
+          {
+            "checkedAt": "2026-11-13T08:35:41.553256+09:00",
+            "httpStatus": 200,
+            "responseDate": "Thu, 12 Nov 2026 23:35:42 GMT",
+            "cacheAge": null
+          }
+        ],
+        "candidates": [],
+        "available": true,
+        "contentSha256": "cc8d74b969ab81a815c6364c5d23d34283f1ffb0cf0476b5e46000fe4080975b"
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "title": "\"오픈AI, 中 AI칩·장비 접근 차단 의회 법안 지지\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113027100009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "'엔비디아 사단' 주가 급락…네비우스 17%↓",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113018300009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "젠슨 황 퇴진에 엔비디아 시총 장중 801조원 증발",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113014000009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "트럼프 \"이란과 합의 불필요\"에 국제유가 급등…브렌트유 3.3%↑",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113010900072?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "대만 \"국부펀드 특별법 초안 연말 마련…초기 1조2천억원 규모\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112123800009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "\"미, 중국 AI 칩 '동남아 우회로' 차단 추진\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112121900009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "\"코어위브, 투자적격등급 대출로 5.4조원 조달 추진\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112119600009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "반도체 호황 누른 유가…KDI \"소비에 부정적 영향 먼저 반영\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112084800002?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "예년만 못한 '중국판 블프' 열기…내수 부진에 할인 피로감까지",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112074700089?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "엔비디아 주가 시간외 8.6%↓…시총 MS에 밀려 3위(종합)",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112021351009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "아모데이 \"AI가 10년 내 암·알츠하이머 치료할 것\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112058100009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "\"구글, 홍콩·싱가포르서 4조원 채권 발행 추진\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112035800009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "달러 가치 19개월 만에 최고",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112033600009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "MS \"데이터센터 전력비용, 주민 전가 없다\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112022700009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "엔비디아 주가, 시간외 8% 급락…'해임 준비' 보도에",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112021300009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "아마존, 앤트로픽 투자 13배 '대박'…구글도 3배 차익",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112020300009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "AI반도체주 일제히 급등…마이크론 시총 하루새 130조원↑",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112011400009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "이형일, 재경관회의…美 중간선거·佛 재정위기 등 현안 논의",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111136000002?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "\"미 CFTC, 예측시장 플랫폼 칼시 기소 경고\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111122000009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "코어위브 주가, 시간외 거래서 16%↑…\"규제 영향 없다\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111120600009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "\"차기 엔비디아 수장 후보로 리사 수 AMD CEO도 거론\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111110900009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "소프트뱅크 주가 출렁…장초반 11% 급락후 회복",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111119500009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "TSMC, 앤트로픽·오픈AI에 각각 최대 5억달러 투자",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111087300009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "AI 기업 부도위험에 베팅하는 ETF 출시 임박",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111075600009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "블룸버그 \"엔비디아 주가, 젠슨 황 자리 지킬지에 달려\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261111064500009?section=market-plus/global-market",
+      "verified": false
+    },
+    {
+      "title": "젠슨황 퇴진에 엔비디아 직원들 눈물…본사엔 슬픔의 꽃다발",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012300075?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "'취권'서 성룡과 대결한 원로 액션배우 황정리 별세",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113024400005?section=culture/all",
+      "verified": false
+    },
+    {
+      "title": "트럼프-젠슨황 거래적 긴밀 관계…거액 기부에 엔비디아 혜택",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113001900071?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "국립묘지서 떠든 美국방, 자기 꾸짖은 병사에 훈장 수여",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113010000071?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "\"기분 나쁘게 쳐다봐\"…버스서 10대 폭행한 소방관 벌금형",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112135500051?section=society/all",
+      "verified": false
+    },
+    {
+      "title": "2026 FOMC",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm",
+      "verified": false
+    },
+    {
+      "title": "2025 FOMC",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2025-press-fomc.htm",
+      "verified": false
+    },
+    {
+      "title": "2024 FOMC",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2024-press-fomc.htm",
+      "verified": false
+    },
+    {
+      "title": "2023 FOMC",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2023-press-fomc.htm",
+      "verified": false
+    },
+    {
+      "title": "2022 FOMC",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2022-press-fomc.htm",
+      "verified": false
+    },
+    {
+      "title": "2021 FOMC",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2021-press-fomc.htm",
+      "verified": false
+    },
+    {
+      "title": "2020 FOMC",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/2020-press-fomc.htm",
+      "verified": false
+    },
+    {
+      "title": "MLB 애틀랜타, 다저스 마무리 출신 필립스와 468억원에 3년 계약",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113028900007?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "美민주, 트럼프 '엔비디아 中수출승인' 조사…러트닉 먼저 조준(종합)",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113008351071?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "\"오픈AI, 中 AI칩·장비 접근 차단 의회 법안 지지\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113027100009?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "\"앤트로픽 IPO에 공모물량 6배 수요\"…역대 최대 상장 전망",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113025400072?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "젠슨황 자녀·사위 입지 좁아질 듯…'가족승계' 물거품 전망",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113021900091?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "스페이스X·테슬라, 사상최대 합병 임박…\"이르면 내달 발표\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113023700075?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "코이카 글로벌 서포터스 '위코 8기' 활동 마무리…\"ODA 쉬워요\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112165900371?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "엔비디아 폭락에 美개미들 '줍줍'…30분간 1천억원대 매수",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113020900072?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "트럼프 \"임기 중 쿠바 해결하고 싶다…군사력 사용도 검토\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113021800071?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "트럼프 \"이란과 합의 필요없다\"…밴스 주도 협상론서 급격 선회(종합)",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113007751071?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "美민주, 트럼프 부패 조사에 '어둠의 공주' 모금책 정조준",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113019300071?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "독일군, '적대세력 사이버공격'에 군사용 드론 운용 일시중단",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113021600009?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "'엔비디아 사단' 주가 급락…네비우스 17%↓",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113018300009?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "美워싱턴 아파트·피트니스센터 총기난사…용의자 포함 2명 사망(종합)",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113008551071?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "젠슨 황 퇴진·유가 급등에 뉴욕증시 하락…엔비디아 4.3%↓(종합)",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012051072?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "메가스피드 설립부터 젠슨황 퇴진까지…3년간 어떤 일이 있었나",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113014600071?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "젠슨황 충격에 美기술주 휘청…AMD·브로드컴은 5%대 급등(종합)",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113001451072?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "\"파파 레오\" 300만 인파 환호…'제2의 고향' 페루 찾은 교황",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113013700087?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "\"'젠슨황 연인' 앨리스황, 中화웨이측 데이터센터 간접 보유\"",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012800071?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "젠슨 황 퇴진에 엔비디아 시총 장중 801조원 증발",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113014000009?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "미중정상 APEC 담판에 '젠슨황 스캔들' 그림자…복잡해진 셈법",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113011800071?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "젠슨 황 퇴진·유가 급등에 뉴욕증시 하락…나스닥 0.4%↓",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113012000072?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "트럼프 장남, 민주당 조사 예고 속 예측시장 칼시 고문직 사임",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113011500072?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "젠슨황 180조원 지분, 부인과 공동신탁…재산분할시 매도 어려워",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113011000091?section=international/all",
+      "verified": false
+    },
+    {
+      "title": "배우 김승우, 절도 혐의로 고소당해…강남경찰서가 수사",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261112177200004?section=society/all",
+      "verified": false
+    },
+    {
+      "title": "NVIDIA Announces CEO Transition",
+      "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+      "verified": false
+    },
+    {
+      "title": "Statement From the Independent Members of the NVIDIA Board",
+      "sourceUrl": "https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board",
+      "verified": false
+    },
+    {
+      "title": "분기보고서 (2026.09)",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000008",
+      "verified": false
+    },
+    {
+      "title": "분기보고서 (2026.09)",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000006",
+      "verified": false
+    },
+    {
+      "title": "[첨부정정] 주주총회소집결의 (임시주주총회)",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900019",
+      "verified": false
+    },
+    {
+      "title": "주요사항보고서(감자결정)",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000003",
+      "verified": false
+    },
+    {
+      "title": "주주총회소집공고",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000002",
+      "verified": false
+    },
+    {
+      "title": "효력발생안내 ( 2026.11.3. 제출 증권신고서(합병) )",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103100003",
+      "verified": false
+    },
+    {
+      "title": "분기보고서(유동화전문회사) (2026.09)",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000746",
+      "verified": false
+    },
+    {
+      "title": "분기보고서(유동화전문회사) (2026.09)",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000745",
+      "verified": false
+    },
+    {
+      "title": "가상자산사업자에 대한 최고 수준의 보안 강화 조치를 통해 이용자의 자산과 정보를 철저히 지켜나가겠습니다.",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88133?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "verified": false
+    },
+    {
+      "title": "인터넷/SNS상 코스닥 추가대책에 대한 허위정보 관련 투자자 유의사항",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88132?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "verified": false
+    },
+    {
+      "title": "사업보고서 등에 대한 조사·감리결과 조치",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88127?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "verified": false
+    },
+    {
+      "title": "금융회사 지배구조의 공정성과 투명성을 제고합니다.",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88125?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "verified": false
+    },
+    {
+      "title": "2026년 10월 가계대출 동향(잠정)",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88124?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "verified": false
+    },
+    {
+      "title": "미공개 무상증자정보를 이용한 내부자등에 대한 중대범죄수사청 고발·통보 조치 의결",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88123?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "verified": false
+    },
+    {
+      "title": "건설노동자, 플랫폼노동자와 프리랜서에 대한 포용금융으로 금융이용 문턱 낮아진다",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88118?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "verified": false
+    },
+    {
+      "title": "다음 금융은 이미 시작됐다 「코리아 핀테크 위크 2026」, 11월 25일 개막",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88104?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "verified": false
+    },
+    {
+      "title": "국내외 주식시장 변동성 확대로 단계별 대응조치 가동",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88100?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "verified": false
+    },
+    {
+      "title": "현재 유포되고 있는 부동산 대책 관련 게시글의 보도에 유의하여 주시기 바랍니다.",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88099?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "verified": false
+    }
+  ],
+  "note": "HTTP success and link collection are not fact verification or trading-day confirmation."
 }
