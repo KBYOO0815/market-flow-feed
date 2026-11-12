@@ -8,7 +8,7 @@ import re
 import time
 import urllib.error
 import urllib.request
-from prepare_feed import KST, prepare, timestamp, validate
+from prepare_feed import KST, SLOTS, prepare, timestamp, validate
 
 REPO = 'KBYOO0815/market-flow-feed'
 
@@ -97,6 +97,19 @@ def output(value):
             stream.write(value + '\n')
 
 
+def already_published_due_slot(draft, now):
+    """A delayed cron is a no-op only when the latest due edition is public."""
+    local = now.astimezone(KST)
+    due = [dt.datetime.combine(local.date(), slot, KST) for slot in SLOTS
+           if dt.datetime.combine(local.date(), slot, KST) <= local]
+    if not due or timestamp(draft['releaseAt']) != max(due):
+        return False
+    current, _ = read_remote('morning-briefing.json')
+    day, _ = read_remote('briefings/' + local.strftime('%Y-%m-%d') + '.json', missing=True)
+    slot = max(due).strftime('%H:%M')
+    return current == draft and day is not None and day.get('editions', {}).get(slot) == draft
+
+
 def main():
     if os.environ.get('GITHUB_REPOSITORY') != REPO:
         raise SystemExit('This publisher is scoped to the public data repository only.')
@@ -127,6 +140,10 @@ def main():
         output('published=false')
         print('Draft is outside this publication window; no stale publication.')
         if os.environ.get('GITHUB_EVENT_NAME') == 'schedule':
+            if already_published_due_slot(draft, now):
+                output('already_published=true')
+                print('Latest due edition is already public and archived; delayed schedule has nothing to publish.')
+                return
             raise RuntimeError(
                 'Scheduled briefing MISSED: no fresh reviewed draft for this release slot. '
                 'Draft releaseAt=' + draft['releaseAt'] + '; runtime=' + now.isoformat()
@@ -147,3 +164,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
