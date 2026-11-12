@@ -74,8 +74,29 @@ def validate(payload):
             value = audit.get(field)
             if type(value) is not int or value < 0:
                 raise ValueError("nonnegative measured researchAudit count required: " + field)
-        if audit["verifiedCandidates"] < len(items):
+        if audit["verifiedCandidates"] < len(items) and payload.get("correction") is None:
             raise ValueError("verified candidate count below published item count")
+    # Amendments retain the original cutoff and original audit. Post-publication
+    # verification is recorded against the actual correction time, never backdated.
+    correction = payload.get("correction")
+    correction_added = set()
+    corrected_at = None
+    if correction is not None:
+        if not isinstance(correction, dict) or correction.get("kind") != "post_publication_omission":
+            raise ValueError("unknown correction type")
+        corrected_at = timestamp(correction.get("correctedAt"))
+        if corrected_at <= release or corrected_at <= as_of:
+            raise ValueError("correction must occur after original publication")
+        added = correction.get("addedItemIds")
+        if not isinstance(added, list) or not added or not all(isinstance(x, str) for x in added) or len(set(added)) != len(added):
+            raise ValueError("correction requires unique added item IDs")
+        correction_added = set(added)
+        if correction.get("newlyVerifiedCandidates") != len(added):
+            raise ValueError("correction verified count must match added item count")
+        if type(correction.get("originalItems")) is not int or correction["originalItems"] + len(added) != len(items):
+            raise ValueError("correction original and added item counts differ")
+        if audit["verifiedCandidates"] < correction["originalItems"]:
+            raise ValueError("original research audit undercounts original items")
     ids, counts, domestic_started = set(), {"foreign": 0, "domestic": 0}, False
     for position, item in enumerate(items, 1):
         if not isinstance(item, dict):
@@ -89,8 +110,11 @@ def validate(payload):
         if not https(item.get("sourceUrl")) or not https(item.get("reviewSourceUrl")):
             raise ValueError("source and current-review HTTPS evidence are required")
         published, reviewed, expires = (timestamp(item[k]) for k in ("publishedAt", "reviewedAt", "validUntil"))
-        if published > as_of or not as_of - dt.timedelta(minutes=15) <= reviewed <= as_of:
-            raise ValueError("every item must be rechecked against current evidence in this run")
+        original_review = as_of - dt.timedelta(minutes=15) <= reviewed <= as_of
+        correction_review = (item["id"] in correction_added and
+                             corrected_at - dt.timedelta(minutes=15) <= reviewed <= corrected_at)
+        if published > as_of or not (original_review or correction_review):
+            raise ValueError("item publication/review time does not match original cutoff or correction")
         if not release < expires <= next_slot(release):
             raise ValueError("validUntil must expire no later than the next publication slot")
         region = item.get("region")
@@ -117,6 +141,8 @@ def validate(payload):
                 raise ValueError("intraday observation is stale")
             if expires > observed + dt.timedelta(minutes=15):
                 raise ValueError("intraday quotes expire within 15 minutes of observation")
+    if correction_added and not correction_added.issubset(ids):
+        raise ValueError("correction references missing item IDs")
     return payload
 
 def check_release(payload, now):
