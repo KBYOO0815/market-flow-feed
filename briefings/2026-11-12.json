@@ -594,6 +594,139 @@
           "validUntil": "2026-11-12T15:50:00+09:00"
         }
       ]
+    },
+    "18:50": {
+      "schemaVersion": 2,
+      "asOf": "2026-11-12T18:40:20.011+09:00",
+      "releaseAt": "2026-11-12T18:50:00+09:00",
+      "tradingDayVerified": true,
+      "calendarSourceUrl": "https://atsview.com/en/calendar/2026",
+      "researchAudit": {
+        "coverage": {
+          "foreign_market": {
+            "checkedAt": "2026-11-12T18:40:20.011+09:00",
+            "sourceUrls": [
+              "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-11-12/"
+            ]
+          },
+          "foreign_policy": {
+            "checkedAt": "2026-11-12T18:40:20.011+09:00",
+            "sourceUrls": [
+              "https://www.reuters.com/world/china/g7-foreign-ministers-say-chinas-actions-east-taiwan-threaten-stability-2026-11-12/"
+            ]
+          },
+          "foreign_technology": {
+            "checkedAt": "2026-11-12T18:40:20.011+09:00",
+            "sourceUrls": [
+              "https://www.reuters.com/business/retail-consumer/taiwans-foxconn-reports-34-rise-q3-profit-beats-forecasts-2026-11-12/",
+              "https://www.reuters.com/world/china/nvidia-customer-megaspeed-says-it-cooperated-with-us-inspections-takes-export-2026-11-12/",
+              "https://www.reuters.com/business/most-large-firms-plan-higher-open-weight-ai-use-cap-bills-study-shows-2026-11-12/",
+              "https://www.reuters.com/world/asia-pacific/siemens-ceo-says-cooperation-with-nvidia-will-no-be-affected-by-leadership-2026-11-12/"
+            ]
+          },
+          "domestic_disclosures": {
+            "checkedAt": "2026-11-12T18:40:20.011+09:00",
+            "sourceUrls": [
+              "https://dart.fss.or.kr/dsac001/mainK.do",
+              "https://kind.krx.co.kr/"
+            ]
+          },
+          "domestic_policy": {
+            "checkedAt": "2026-11-12T18:40:20.011+09:00",
+            "sourceUrls": [
+              "https://www.fsc.go.kr/no010101",
+              "https://www.motie.go.kr/"
+            ]
+          },
+          "domestic_market": {
+            "checkedAt": "2026-11-12T18:40:20.011+09:00",
+            "sourceUrls": [
+              "https://data.krx.co.kr/",
+              "https://open.krx.co.kr/"
+            ]
+          }
+        },
+        "foreignCandidates": 5,
+        "domesticCandidates": 0,
+        "verifiedCandidates": 4,
+        "duplicateExcluded": 0
+      },
+      "items": [
+        {
+          "id": "20261112-1850-fox",
+          "title": "폭스콘 3분기 순이익 775억 대만달러, 전년 대비 34% 증가",
+          "summary": "폭스콘은 3분기 순이익 775억 대만달러(약 23억5천만 달러)를 발표했다. 전년 동기 대비 34% 증가했으며 시장 집계 예상치 696억 대만달러를 웃돌았다. 엔비디아 AI 서버를 생산하는 업체다.",
+          "publishedAt": "2026-11-12T15:28:00+09:00",
+          "sourceUrl": "https://www.reuters.com/business/retail-consumer/taiwans-foxconn-reports-34-rise-q3-profit-beats-forecasts-2026-11-12/",
+          "sourceName": "Reuters",
+          "relatedStocks": [
+            "NVIDIA"
+          ],
+          "impactRank": 1,
+          "category": "반도체·AI",
+          "region": "foreign",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T18:40:20.011+09:00",
+          "reviewSourceUrl": "https://www.reuters.com/business/retail-consumer/taiwans-foxconn-reports-34-rise-q3-profit-beats-forecasts-2026-11-12/",
+          "reviewNote": "원문 Reuters의 2026-11-12 UTC 송고시각을 KST로 변환하여 확인. 14:50 회차 이후 새로 공개된 독립 사실이며 앞선 회차의 같은 사건을 반복하지 않음. 실제 원문 검토시각 2026-11-12T18:40:20.011+09:00",
+          "validUntil": "2026-11-12T20:20:00+09:00"
+        },
+        {
+          "id": "20261112-1850-meg",
+          "title": "메가스피드, 미국 수출통제 조사 협조 및 GPU 전수조사 발표",
+          "summary": "싱가포르 클라우드 업체 메가스피드는 미국 상무부 산업안보국(BIS)의 조사에 협조했으며, 미국 로펌을 선임해 GPU 보유 현황 전수조사와 수출통제 준수 여부를 독립 검증한다고 밝혔다.",
+          "publishedAt": "2026-11-12T18:15:00+09:00",
+          "sourceUrl": "https://www.reuters.com/world/china/nvidia-customer-megaspeed-says-it-cooperated-with-us-inspections-takes-export-2026-11-12/",
+          "sourceName": "Reuters",
+          "relatedStocks": [
+            "NVIDIA"
+          ],
+          "impactRank": 2,
+          "category": "반도체·AI",
+          "region": "foreign",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T18:40:20.011+09:00",
+          "reviewSourceUrl": "https://www.reuters.com/world/china/nvidia-customer-megaspeed-says-it-cooperated-with-us-inspections-takes-export-2026-11-12/",
+          "reviewNote": "원문 Reuters의 2026-11-12 UTC 송고시각을 KST로 변환하여 확인. 14:50 회차 이후 새로 공개된 독립 사실이며 앞선 회차의 같은 사건을 반복하지 않음. 실제 원문 검토시각 2026-11-12T18:40:20.011+09:00",
+          "validUntil": "2026-11-12T20:20:00+09:00"
+        },
+        {
+          "id": "20261112-1850-models",
+          "title": "캡제미니 조사: 대기업 임원 59%, AI 지출이 예산·예상 초과했다고 응답",
+          "summary": "캡제미니가 연매출 10억 달러 이상 기업의 임원 500명을 대상으로 조사한 결과, 응답자의 59%는 지난 1년 AI 지출이 예상 또는 예산을 평균 24% 초과했다고 답했다. 오픈웨이트 모델 토큰의 평균 비용은 폐쇄형보다 87% 낮았다고 분석했다.",
+          "publishedAt": "2026-11-12T18:01:00+09:00",
+          "sourceUrl": "https://www.reuters.com/business/most-large-firms-plan-higher-open-weight-ai-use-cap-bills-study-shows-2026-11-12/",
+          "sourceName": "Reuters",
+          "relatedStocks": [],
+          "impactRank": 3,
+          "category": "반도체·AI",
+          "region": "foreign",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T18:40:20.011+09:00",
+          "reviewSourceUrl": "https://www.reuters.com/business/most-large-firms-plan-higher-open-weight-ai-use-cap-bills-study-shows-2026-11-12/",
+          "reviewNote": "원문 Reuters의 2026-11-12 UTC 송고시각을 KST로 변환하여 확인. 14:50 회차 이후 새로 공개된 독립 사실이며 앞선 회차의 같은 사건을 반복하지 않음. 실제 원문 검토시각 2026-11-12T18:40:20.011+09:00",
+          "validUntil": "2026-11-12T20:20:00+09:00"
+        },
+        {
+          "id": "20261112-1850-siemens",
+          "title": "지멘스 CEO, 엔비디아 경영진 변경 여부와 무관하게 공동사업 지속 발표",
+          "summary": "지멘스 CEO 롤란트 부시는 엔비디아 CEO 젠슨 황의 거취에 관계없이 양사 공동 프로젝트와 협력은 계속된다고 기자들에게 밝혔다. 이는 기존 CEO 거취 보도 이후 지멘스가 새로 발표한 파트너십 관련 입장이다.",
+          "publishedAt": "2026-11-12T18:14:00+09:00",
+          "sourceUrl": "https://www.reuters.com/world/asia-pacific/siemens-ceo-says-cooperation-with-nvidia-will-no-be-affected-by-leadership-2026-11-12/",
+          "sourceName": "Reuters",
+          "relatedStocks": [
+            "NVIDIA"
+          ],
+          "impactRank": 4,
+          "category": "반도체·AI",
+          "region": "foreign",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T18:40:20.011+09:00",
+          "reviewSourceUrl": "https://www.reuters.com/world/asia-pacific/siemens-ceo-says-cooperation-with-nvidia-will-no-be-affected-by-leadership-2026-11-12/",
+          "reviewNote": "원문 Reuters의 2026-11-12 UTC 송고시각을 KST로 변환하여 확인. 14:50 회차 이후 새로 공개된 독립 사실이며 앞선 회차의 같은 사건을 반복하지 않음. 실제 원문 검토시각 2026-11-12T18:40:20.011+09:00",
+          "validUntil": "2026-11-12T20:20:00+09:00"
+        }
+      ]
     }
   }
 }
