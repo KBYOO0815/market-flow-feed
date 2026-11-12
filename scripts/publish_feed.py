@@ -106,6 +106,19 @@ def main():
         print('No reviewed draft staged; existing public data is not relabelled.')
         return
     draft = validate(json.loads(path.read_text()))
+    if draft.get('correction'):
+        # Historical correction was already applied and verified separately.
+        # A scheduled job must NEVER replay or roll back a corrected edition.
+        current, _ = read_remote('morning-briefing.json')
+        correction_release = timestamp(draft['releaseAt']).astimezone(KST)
+        correction_path = 'briefings/' + correction_release.strftime('%Y-%m-%d') + '.json'
+        existing, _ = read_remote(correction_path)
+        slot = correction_release.strftime('%H:%M')
+        if current == draft and existing.get('editions', {}).get(slot) == draft:
+            output('published=false')
+            print('Historical correction already published and archived; no scheduled replay.')
+            return
+        raise ValueError('Historical correction requires separately reviewed publication; refusing scheduled replay.')
     release, now = timestamp(draft['releaseAt']), dt.datetime.now(KST)
     if timestamp(draft['asOf']) > now + dt.timedelta(minutes=1):
         raise ValueError('Research timestamp is in the future; do not manufacture a current review.')
