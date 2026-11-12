@@ -113,6 +113,8 @@ def validate(payload):
         original_review = as_of - dt.timedelta(minutes=15) <= reviewed <= as_of
         correction_review = (item["id"] in correction_added and
                              corrected_at - dt.timedelta(minutes=15) <= reviewed <= corrected_at)
+        if published > release:
+            raise ValueError("item was published after target releaseAt; use a later edition")
         if published > as_of or not (original_review or correction_review):
             raise ValueError("item publication/review time does not match original cutoff or correction")
         if not release < expires <= next_slot(release):
@@ -177,3 +179,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

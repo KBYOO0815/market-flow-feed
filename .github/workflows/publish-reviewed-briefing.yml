@@ -17,7 +17,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,4 +28,13 @@ jobs:
         id: publication
         env:
           PUBLISH_TOKEN: ${{ github.token }}
-        run: python3 scripts/publish_feed.py
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: python3 scripts/briefing_watch.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: briefing-publication-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: operation-artifacts/
+          if-no-files-found: warn
+          retention-days: 7
+

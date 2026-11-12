@@ -1,0 +1,42 @@
+name: Check briefing sources
+on:
+  push:
+    branches: [main]
+    paths: ['requests/briefing-preflight.json']
+  schedule:
+    - cron: '25 21,22 * * 0-4'
+    - cron: '35 23 * * 0-4'
+    - cron: '35 2,5,6,9 * * 1-5'
+    - cron: '5 11 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      release_at:
+        description: 'Explicit KST publication timestamp (source check only)'
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: briefing-source-checks
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Check six independent source areas and preserve evidence
+        env:
+          PUBLISH_TOKEN: ${{ github.token }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+          RELEASE_AT: ${{ inputs.release_at }}
+        run: python3 scripts/briefing_preflight.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: briefing-source-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: operation-artifacts/
+          if-no-files-found: warn
+          retention-days: 7
