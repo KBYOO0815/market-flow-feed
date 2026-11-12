@@ -58,17 +58,24 @@ def publish(payload):
     raise RuntimeError('concurrent featured-stocks publication failed')
 
 
+def missed(reason):
+    output('published=false')
+    print(reason)
+    if os.environ.get('GITHUB_EVENT_NAME') == 'schedule':
+        raise RuntimeError('Scheduled featured stocks MISSED: ' + reason)
+
+
 def main():
     if os.environ.get('GITHUB_REPOSITORY') != REPO:
         raise SystemExit('publisher is limited to the public feed repository')
     payload, _ = read_remote('drafts/featured-stocks.json', missing=True)
     if payload is None:
-        output('published=false')
+        missed('No reviewed featured-stocks draft is available.')
         return
     validate(payload)
     release, now = stamp(payload['releaseAt']), dt.datetime.now(KST)
     if now > release + dt.timedelta(minutes=30) or release - now > dt.timedelta(minutes=20):
-        output('published=false')
+        missed('Draft is outside this publication window; releaseAt=' + payload['releaseAt'])
         return
     if now < release:
         time.sleep((release - now).total_seconds())
@@ -87,3 +94,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

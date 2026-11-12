@@ -1,6 +1,8 @@
 import copy
 import datetime as dt
 import unittest
+from unittest.mock import patch
+import publish_featured_stocks as publisher
 from featured_stocks import KST, SLOTS, archive, collect, enrich, retained_dates, validate, weighted
 from publish_featured_stocks import publication_entries
 
@@ -33,6 +35,21 @@ def reviewed():
 
 
 class FeaturedStocksTests(unittest.TestCase):
+    def test_scheduled_missing_draft_is_failure_not_false_success(self):
+        with patch.dict(publisher.os.environ, {'GITHUB_REPOSITORY': publisher.REPO, 'GITHUB_EVENT_NAME': 'schedule'}), patch.object(publisher, 'read_remote', return_value=(None,None)):
+            with self.assertRaisesRegex(RuntimeError, 'MISSED'):
+                publisher.main()
+
+    def test_push_without_draft_remains_safe_no_op(self):
+        with patch.dict(publisher.os.environ, {'GITHUB_REPOSITORY': publisher.REPO, 'GITHUB_EVENT_NAME': 'push'}), patch.object(publisher, 'read_remote', return_value=(None,None)), patch.object(publisher, 'publish') as publish:
+            publisher.main()
+            publish.assert_not_called()
+
+    def test_scheduled_stale_draft_reports_missed(self):
+        with patch.dict(publisher.os.environ, {'GITHUB_EVENT_NAME': 'schedule'}):
+            with self.assertRaisesRegex(RuntimeError, 'MISSED'):
+                publisher.missed('stale draft')
+
     def test_weighted_not_simple_mean_and_decliners_count(self):
         self.assertEqual(weighted([{'changeRate': 10, 'integratedTradeAmount': 100},
                                    {'changeRate': -10, 'integratedTradeAmount': 900}]), -8.0)
@@ -113,3 +130,4 @@ class FeaturedStocksTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
