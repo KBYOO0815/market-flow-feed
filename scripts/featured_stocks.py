@@ -16,6 +16,8 @@ from urllib.parse import urlparse
 KST = dt.timezone(dt.timedelta(hours=9))
 SLOTS = ('09:40', '11:40', '13:40', '15:40', '20:10')
 BASE = 'https://stock.naver.com/api/domestic/'
+NXT_ELIGIBILITY_URL = 'https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do'
+NXT_ELIGIBILITY_PAGE = 'https://nextrade.co.kr/menu/marketData/menuList.do'
 D = decimal.Decimal
 
 
@@ -44,6 +46,45 @@ def get(url):
         return json.load(response)
 
 
+def get_nxt_eligibility():
+    # The official site's grid uses POST and labels this the full tradable list.
+    request = urllib.request.Request(NXT_ELIGIBILITY_URL, data=b'pageIndex=1&pageUnit=5000',
+        headers={'User-Agent': 'MarketFlow/1.0',
+                 'Referer': NXT_ELIGIBILITY_PAGE})
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.load(response)
+
+
+def official_zero_nxt(candidates, known_nxt, body, checked):
+    """Prove non-eligibility from a complete, dated official list, never a 404."""
+    rows = body.get('brdinfoTimeList', [])
+    total = body.get('totalCnt')
+    if type(total) is not int or total < 100 or len(rows) != total or body.get('records') != total or body.get('total') != 1:
+        raise ValueError('NXT official eligibility list is incomplete')
+    observed = dt.datetime.strptime(body['setTime'], '%Y-%m-%d %H:%M').replace(tzinfo=KST)
+    if observed.date() != checked.date() or not dt.timedelta(0) <= checked - observed <= dt.timedelta(minutes=30):
+        raise ValueError('NXT official eligibility list is stale or future')
+    codes = set()
+    for row in rows:
+        code = row.get('isuSrdCd', '')
+        if len(code) == 7 and code.startswith('A'):
+            code = code[1:]
+        if (not re.fullmatch(r'[0-9A-Z]{6}', code) or code in codes
+                or row.get('aggDd') != checked.strftime('%Y%m%d')
+                or row.get('nowDd') != checked.strftime('%Y%m%d')):
+            raise ValueError('NXT official eligibility identity/date mismatch')
+        codes.add(code)
+    if not set(known_nxt).issubset(codes):
+        raise ValueError('NXT official eligibility contradicts observed trading')
+    return {code: {'code': code, 'sourceUrl': NXT_ELIGIBILITY_PAGE, 'requestUrl': NXT_ELIGIBILITY_URL,
+        'requestMethod': 'POST', 'requestBody': 'pageIndex=1&pageUnit=5000',
+        'checkedAt': checked.isoformat(), 'eligibilityObservedAt': observed.isoformat(),
+        'officialEligibleCount': total,
+        'reason': checked.date().isoformat() + ' NXT 공식 거래대상 전체 ' + str(total)
+                  + '종목 목록에 ' + code + ' 미포함; NXT 비거래를 별도 확인.'}
+        for code in candidates if code not in codes}
+
+
 def weighted(stocks):
     total = sum(s['integratedTradeAmount'] for s in stocks)
     if total <= 0:
@@ -56,7 +97,7 @@ def list_url(market):
     return BASE + 'market/stock/default?marketType=ALL&orderType=priceTop&startIdx=0&pageSize=5000&tradeType=' + market
 
 
-def collect(release, evidence, fetch=get, now=None):
+def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_eligibility):
     """Use complete KRX universe + NXT top-100 and fill any possible challenger.
 
     A missing NXT detail is NOT evidence for zero. Only independently verified
@@ -120,6 +161,20 @@ def collect(release, evidence, fetch=get, now=None):
     ordered = sorted(known, key=lambda c: (-known[c], c))[:50]
     cutoff = known[ordered[-1]]
     uncertain = [c for c in unresolved if int(krx[c]['tradeAmount']) + upper >= cutoff]
+    if uncertain:
+        try:
+            checked = now or dt.datetime.now(KST)
+            official = eligibility_fetch()
+            confirmed_zero = official_zero_nxt(uncertain, nxt, official, checked)
+            zero.update(confirmed_zero)
+            records.append({'market': 'NXT', 'sourceUrl': NXT_ELIGIBILITY_PAGE, 'requestUrl': NXT_ELIGIBILITY_URL,
+                'requestMethod': 'POST', 'requestBody': 'pageIndex=1&pageUnit=5000',
+                'retrievedAt': checked.isoformat(), 'kind': 'official_eligibility',
+                'eligibilityObservedAt': official['setTime'],
+                'officialEligibleCount': official['totalCnt']})
+            uncertain = [c for c in uncertain if c not in confirmed_zero]
+        except (ValueError, KeyError, TypeError, urllib.error.URLError) as error:
+            raise ValueError('NXT turnover unverified (404 is not zero); official eligibility unavailable: ' + str(error)) from error
     if uncertain:
         raise ValueError('NXT turnover unverified (404 is not zero): ' + ','.join(uncertain))
     stocks = []
@@ -323,3 +378,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

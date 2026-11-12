@@ -3,7 +3,7 @@ import datetime as dt
 import unittest
 from unittest.mock import patch
 import publish_featured_stocks as publisher
-from featured_stocks import KST, SLOTS, archive, collect, enrich, retained_dates, validate, weighted
+from featured_stocks import KST, SLOTS, archive, collect, enrich, retained_dates, validate, weighted, official_zero_nxt
 from publish_featured_stocks import publication_entries
 
 
@@ -115,7 +115,42 @@ class FeaturedStocksTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, '404 is not zero'):
             collect('2026-11-12T09:40:00+09:00', {'date':'2026-11-12','tradingDayVerified':True,
                     'calendarSourceUrl':'https://global.krx.co.kr/calendar'}, fetch=fetch,
-                    now=dt.datetime(2026,11,12,9,30,tzinfo=KST))
+                    now=dt.datetime(2026,11,12,9,30,tzinfo=KST), eligibility_fetch=lambda: {})
+
+    def test_official_eligibility_proves_zero_only_for_absent_codes(self):
+        body = {'totalCnt': 100, 'total': 1, 'records': 100, 'setTime': '2026-11-12 09:10',
+                'brdinfoTimeList': [{'isuSrdCd': 'A'+f'{i:06}', 'aggDd': '20261112', 'nowDd': '20261112'} for i in range(100)]}
+        checked = dt.datetime(2026,11,12,9,30,tzinfo=KST)
+        zeros = official_zero_nxt(['000001','999999'], ['000002'], body, checked)
+        self.assertEqual(set(zeros), {'999999'})
+        self.assertEqual(zeros['999999']['officialEligibleCount'], 100)
+        self.assertIn('999999',zeros['999999']['reason'])
+        for field,value in [('records',99), ('total',2), ('setTime','2026-11-11 09:10'), ('setTime','2026-11-12 09:31')]:
+            bad=copy.deepcopy(body); bad[field]=value
+            with self.assertRaises(ValueError): official_zero_nxt(['999999'], [], bad, checked)
+        with self.assertRaisesRegex(ValueError, 'contradicts'):
+            official_zero_nxt(['999999'], ['888888'], body, checked)
+        bad=copy.deepcopy(body); bad['brdinfoTimeList'][0]['aggDd']='20261111'
+        with self.assertRaises(ValueError): official_zero_nxt(['999999'], [], bad, checked)
+
+    def test_collection_uses_fresh_official_proof_for_non_nxt_top_fifty(self):
+        import urllib.error
+        krx=[{'itemcode':f'{i:06}', 'itemname':'fixture', 'type':'ST', 'prevChangeRate':'-1',
+              'tradeAmount':str(1000000-i*100 if i<50 else 5000-i)} for i in range(1100)]
+        nxt=[{'itemcode':f'{i:06}', 'type':'ST', 'tradeAmount':str(1200-i)} for i in range(100,200)]
+        body={'totalCnt':100,'records':100,'total':1,'setTime':'2026-11-12 09:10',
+              'brdinfoTimeList':[{'isuSrdCd':'A'+f'{i:06}','aggDd':'20261112','nowDd':'20261112'} for i in range(100,200)]}
+        def fetch(url):
+            if 'tradeType=KRX' in url: return krx
+            if 'tradeType=NXT' in url: return nxt
+            if 'codeType=NXT' in url: raise urllib.error.HTTPError(url,404,'Not Found',{},None)
+            return {'tradeTime':'20261112093000'}
+        snapshot=collect('2026-11-12T09:40:00+09:00',{'date':'2026-11-12','tradingDayVerified':True,
+                    'calendarSourceUrl':'https://global.krx.co.kr/calendar'},fetch=fetch,
+                    now=dt.datetime(2026,11,12,9,30,tzinfo=KST),eligibility_fetch=lambda:body)
+        result=enrich(snapshot,{'reviewedAt':'2026-11-12T09:35:00+09:00','themes':[]})
+        self.assertEqual(result['byTurnover'],[f'{i:06}' for i in range(50)])
+        self.assertTrue(all(s['nxtTradeAmount']==0 and s['zeroNxtEvidence']['officialEligibleCount']==100 for s in result['stocks']))
 
     def test_stale_and_incomplete_fail(self):
         p = enrich(fixture(), reviewed())
