@@ -126,6 +126,11 @@ def main():
     if wait > 1200 or now > release + dt.timedelta(minutes=30):
         output('published=false')
         print('Draft is outside this publication window; no stale publication.')
+        if os.environ.get('GITHUB_EVENT_NAME') == 'schedule':
+            raise RuntimeError(
+                'Scheduled briefing MISSED: no fresh reviewed draft for this release slot. '
+                'Draft releaseAt=' + draft['releaseAt'] + '; runtime=' + now.isoformat()
+            )
         return
     if wait > 0:
         print('Waiting for approved releaseAt:', draft['releaseAt'], flush=True)
