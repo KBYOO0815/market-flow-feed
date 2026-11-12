@@ -1,10 +1,30 @@
 {
   "releaseAt": "2026-11-13T08:50:00+09:00",
-  "checkedAt": "2026-11-12T23:39:17.480Z",
-  "state": "researching",
+  "checkedAt": "2026-11-12T23:40:45.308Z",
+  "state": "staged",
   "sourceChecksPath": "operations/source-checks/2026-11-13-0850.json",
   "evidencePath": "operations/source-checks/2026-11-13-0850/43330150461-1.json",
-  "failedSources": [],
+  "failedSources": [
+    {
+      "url": "https://www.reuters.com/markets/us/",
+      "error": "server HTTP 401; editorial web access blocked",
+      "attempts": 1
+    },
+    {
+      "url": "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
+      "error": "web 원문 추출 실패; 서버 200 및 11월13일 접수번호 후보는 확보",
+      "attempts": 1
+    },
+    {
+      "url": "Firecrawl",
+      "error": "connected app credit exhausted",
+      "attempts": 1
+    }
+  ],
   "missingCoverage": [],
-  "reason": "08:50 신규 회차 독립 원문·발표시각·거래일 조사 진행 중. 서버 후보는 미검증."
+  "reason": "Six independent source areas checked; 5 facts selected. Actual source text and calendar cross-check recorded. Drafts match. Local Python --stage execution unavailable in tool runtime; publisher validator must verify before publication.",
+  "researchPath": "operations/research/2026-11-13-0850.json",
+  "draftItems": 5,
+  "foreign": 4,
+  "domestic": 1
 }
