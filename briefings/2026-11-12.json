@@ -46,6 +46,82 @@
           "validUntil": "2026-11-12T11:30:00+09:00"
         }
       ]
+    },
+    "11:50": {
+      "schemaVersion": 2,
+      "asOf": "2026-11-12T11:44:50+09:00",
+      "releaseAt": "2026-11-12T11:50:00+09:00",
+      "tradingDayVerified": true,
+      "calendarSourceUrl": "https://open.krx.co.kr/contents/MKD/01/0110/01100305/MKD01100305.jsp",
+      "researchAudit": {
+        "coverage": {
+          "foreign_market": {
+            "checkedAt": "2026-11-12T11:40:09+09:00",
+            "sourceUrls": [
+              "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-11-12/"
+            ]
+          },
+          "foreign_policy": {
+            "checkedAt": "2026-11-12T11:43:58+09:00",
+            "sourceUrls": [
+              "https://www.federalreserve.gov/newsevents/calendar.htm",
+              "https://www.federalreserve.gov/newsevents.htm"
+            ]
+          },
+          "foreign_technology": {
+            "checkedAt": "2026-11-12T11:40:09+09:00",
+            "sourceUrls": [
+              "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-11-12/"
+            ]
+          },
+          "domestic_disclosures": {
+            "checkedAt": "2026-11-12T11:43:58+09:00",
+            "sourceUrls": [
+              "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112800027",
+              "https://www.navercorp.com/investment/disclosure"
+            ]
+          },
+          "domestic_policy": {
+            "checkedAt": "2026-11-12T11:44:50+09:00",
+            "sourceUrls": [
+              "https://www.fsc.go.kr/no010101",
+              "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c/"
+            ]
+          },
+          "domestic_market": {
+            "checkedAt": "2026-11-12T11:44:50+09:00",
+            "sourceUrls": [
+              "https://data.krx.co.kr/?scrnId=02081001",
+              "https://open.krx.co.kr/contents/MKD/01/0101/01010000/MKD01010000.jsp"
+            ]
+          }
+        },
+        "foreignCandidates": 14,
+        "domesticCandidates": 16,
+        "verifiedCandidates": 1,
+        "duplicateExcluded": 7
+      },
+      "items": [
+        {
+          "id": "20261112-1150-naver-q3-earnings",
+          "title": "NAVER 3분기 매출 3조4,724억원·영업이익 4,513억원",
+          "summary": "NAVER는 2026년 3분기 연결 매출액이 전년 동기 대비 10.7% 증가한 3조4,724억원, 영업이익이 20.9% 감소한 4,513억원이라고 공시했다. 부문별 매출은 네이버 플랫폼 1조9,484억원, 파이낸셜 플랫폼 4,877억원, 글로벌 도전 1조364억원이다.",
+          "publishedAt": "2026-11-12T08:05:35+09:00",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112800027",
+          "sourceName": "DART",
+          "relatedStocks": [
+            "NAVER"
+          ],
+          "impactRank": 1,
+          "category": "국내공시",
+          "region": "domestic",
+          "kind": "news",
+          "reviewedAt": "2026-11-12T11:44:50+09:00",
+          "reviewSourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034879",
+          "reviewNote": "직전 공개 07:30 회차의 두 사건과 다른 신규 실적 공시다. 직전 asOf 07:23:50 이후 08:05:35에 접수된 DART 공시와 NAVER 공식 보도자료·IR 자료에서 매출액, 영업이익, 전년 동기 증감률 및 부문별 매출을 대조했다. 같은 실적을 전한 복수 공시·보도는 하나의 사건으로 통합했다.",
+          "validUntil": "2026-11-12T14:50:00+09:00"
+        }
+      ]
     }
   }
 }
