@@ -1,0 +1,8 @@
+{
+  "requestId": "server-load-probe-20261112",
+  "releaseAt": null,
+  "published": false,
+  "state": "collecting",
+  "startedAt": "2026-11-12T21:17:01.312931+09:00",
+  "deadlineAt": "2026-11-12T21:22:01.312931+09:00"
+}
