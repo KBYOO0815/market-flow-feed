@@ -1,0 +1,56 @@
+{
+  "releaseAt": "2026-11-13T14:50:00+09:00",
+  "checkedAt": "2026-11-13T05:42:15.025Z",
+  "previousReleaseAt": "2026-11-13T08:50:00+09:00",
+  "previousAsOf": "2026-11-12T23:40:36.914Z",
+  "mode": "since_previous",
+  "startAt": "2026-11-12T23:40:36.914Z",
+  "endAt": "2026-11-13T05:42:15.025Z",
+  "status": "incomplete",
+  "candidates": [
+    {
+      "url": "https://www.yna.co.kr/amp/view/AKR20261113087100003",
+      "title": "정부 구글 고정밀지도 보안처리 이행 발표",
+      "publishedAt": "2026-11-13T12:14:00+09:00",
+      "decision": "excluded",
+      "reason": "정부 발표의 실제 최초 시각과 공식 원문 및 지도 반출 최종 결정 여부 미검증; 기사만 확인",
+      "region": "domestic"
+    },
+    {
+      "url": "https://www.yna.co.kr/view/AKR20261113096800004",
+      "title": "구본현 캄보디아 송환",
+      "publishedAt": "2026-11-13T14:00:00+09:00",
+      "decision": "excluded",
+      "reason": "기업 실적·상장사 공시와의 직접 관련성 확인되지 않음",
+      "region": "domestic"
+    },
+    {
+      "url": "https://www.yna.co.kr/view/AKR20261113030100008",
+      "title": "HMM 3분기 실적 관련 증권사 분석",
+      "publishedAt": "2026-11-13T08:39:00+09:00",
+      "decision": "excluded",
+      "reason": "직전 공개본 08:50 이전 발표된 기존 실적에 대한 재해석이며 새 공시 확인 없음",
+      "region": "domestic"
+    },
+    {
+      "url": "https://www.reuters.com/business/media-telecom/nvidias-asian-supply-chain-prepares-life-after-huang-2026-11-12/",
+      "title": "엔비디아 경영진 교체 관련 공급망 분석",
+      "publishedAt": "2026-11-12T17:25:00+09:00",
+      "decision": "excluded",
+      "reason": "직전 회차에 이미 CEO 교체 사건 반영; 새 확정 사실 확인되지 않음",
+      "region": "foreign"
+    }
+  ],
+  "verifiedCandidates": 0,
+  "duplicateExcluded": 1,
+  "selected": 0,
+  "missingCoverage": [
+    "foreign_market",
+    "foreign_policy",
+    "foreign_technology",
+    "domestic_disclosures",
+    "domestic_policy",
+    "domestic_market"
+  ],
+  "notes": "부분 웹 검색만 수행. 해외 14영역·국내 전 영역, 공식 DART selectDate=2026.11.13 본문 날짜·건수, KIND, KRX 거래일 연간 달력+특별공지의 실질 교차검증 미완료. 검색결과 노출만으로 검증 완료라 하지 않음. 후보는 최종 뉴스가 아님."
+}
