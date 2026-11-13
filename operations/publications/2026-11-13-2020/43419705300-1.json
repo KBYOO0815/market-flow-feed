@@ -2,8 +2,10 @@
   "releaseAt": "2026-11-13T20:20:00+09:00",
   "startedAt": "2026-11-13T20:46:25.768213+09:00",
   "deadlineAt": "2026-11-13T20:50:00+09:00",
-  "state": "publishing",
+  "state": "published",
   "polls": 1,
+  "commit": "19c42c28f36463effdf355446a4f1857439ffdec",
   "asOf": "2026-11-13T11:45:57.405Z",
-  "checkedAt": "2026-11-13T20:46:28.588596+09:00"
+  "itemCount": 1,
+  "checkedAt": "2026-11-13T20:46:37.379949+09:00"
 }
