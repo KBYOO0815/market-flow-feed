@@ -1,0 +1,125 @@
+{
+  "releaseAt": "2026-11-13T20:20:00+09:00",
+  "requestId": "prepare-20261113-2020-1794568164794",
+  "state": "research_retrying",
+  "checkedAt": "2026-11-13T11:10:19.475Z",
+  "selectionAudit": {
+    "mode": "since_previous",
+    "startAt": "2026-11-13T10:14:58.840Z",
+    "previousReleaseAt": "2026-11-13T18:50:00+09:00",
+    "previousAsOf": "2026-11-13T10:14:58.840Z",
+    "endAt": "2026-11-13T11:10:19.475Z"
+  },
+  "sourceCheckEvidencePath": "operations/source-checks/2026-11-13-2020/43414775088-1.json",
+  "tradingDayEvidence": {
+    "verified": false,
+    "reason": "KIND actual 2026-11-13 Samsung Electronics volume 1796979 and trade amount KRW 370177674000 present; independent NAVER KRX same-date positive turnover corroboration missing"
+  },
+  "coverage": {
+    "foreign_market": {
+      "sourceChecked": true,
+      "editorialVerified": false,
+      "reason": "Server source-check list not independently article-verified"
+    },
+    "foreign_policy": {
+      "sourceChecked": true,
+      "editorialVerified": false,
+      "reason": "Server source-check list not independently article-verified"
+    },
+    "foreign_technology": {
+      "sourceChecked": true,
+      "editorialVerified": false,
+      "reason": "Server source-check list not independently article-verified"
+    },
+    "domestic_disclosures": {
+      "sourceChecked": true,
+      "editorialVerified": false,
+      "reason": "Server source-check list not independently article-verified"
+    },
+    "domestic_policy": {
+      "sourceChecked": true,
+      "editorialVerified": false,
+      "reason": "Server source-check list not independently article-verified"
+    },
+    "domestic_market": {
+      "sourceChecked": true,
+      "editorialVerified": false,
+      "reason": "Server source-check list not independently article-verified"
+    }
+  },
+  "candidates": [
+    {
+      "id": "20261113-evening-tsmc-personal-data",
+      "title": "온라인에 TSMC 직원 개인정보 판매글",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113146400009",
+      "area": "foreign_technology",
+      "publishedAt": null,
+      "decision": "원문 확인 불가",
+      "reason": "원문 최초 공개시각 및 실제 침해 사실 확인 미완료",
+      "verified": false
+    },
+    {
+      "id": "20261113-evening-korea-fx-close",
+      "title": "원/달러 환율 1,336.7원 마감 보도",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113137600002",
+      "area": "domestic_market",
+      "publishedAt": null,
+      "decision": "원문 확인 불가",
+      "reason": "원문 시각 확인 전이며 직전 18:50 회차의 환율 종가와 중복 가능",
+      "verified": false
+    },
+    {
+      "id": "20261113-evening-oil-price-cap",
+      "title": "석유 최고가격제 유지 보도",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113102100003",
+      "area": "domestic_policy",
+      "publishedAt": null,
+      "decision": "원문 확인 불가",
+      "reason": "원문 결정시각·이전 회차 중복 확인 미완료",
+      "verified": false
+    },
+    {
+      "id": "20261113-evening-china-jd",
+      "title": "징둥 독일 가전 유통사 인수 보도",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113139900083",
+      "area": "foreign_market",
+      "publishedAt": null,
+      "decision": "원문 확인 불가",
+      "reason": "원문 발표시각 및 한국 직접 관련성 미확인",
+      "verified": false
+    },
+    {
+      "id": "20261113-evening-fsc-points",
+      "title": "금융위 지역화폐 포인트 전환 보도자료",
+      "sourceUrl": "https://www.fsc.go.kr/no010101",
+      "area": "domestic_policy",
+      "publishedAt": null,
+      "decision": "원문 확인 불가",
+      "reason": "목록 게시 날짜만 확인, 세부 원문·발표시각 미확인",
+      "verified": false
+    },
+    {
+      "id": "20261113-evening-nvidia-huang",
+      "title": "젠슨 황 관련 추가 보도",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113121700009",
+      "area": "foreign_technology",
+      "publishedAt": null,
+      "decision": "원문 확인 불가",
+      "reason": "기존 사임 사건의 재보도 가능, 새 공식 사실 확인 불가",
+      "verified": false
+    }
+  ],
+  "candidateCount": 6,
+  "verifiedCandidates": 0,
+  "selectedCandidates": 0,
+  "duplicateExcluded": 0,
+  "missingCoverage": [
+    "foreign_market",
+    "foreign_policy",
+    "foreign_technology",
+    "domestic_disclosures",
+    "domestic_policy",
+    "domestic_market"
+  ],
+  "nextAction": "Recheck dated original articles, DART selected date and KIND/independent NAVER KRX actual trading evidence before staging. Never treat source links as confirmed."
+}
