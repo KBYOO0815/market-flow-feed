@@ -1,0 +1,76 @@
+{
+  "releaseAt": "2026-11-13T18:50:00+09:00",
+  "checkedAt": "2026-11-13T09:37:53.304Z",
+  "state": "research_retrying",
+  "published": false,
+  "requestId": "briefing-20261113-1850-prepare-1794562646784",
+  "previousReleaseAt": "2026-11-13T08:50:00+09:00",
+  "previousAsOf": "2026-11-12T23:40:36.914Z",
+  "researchWindow": {
+    "mode": "since_previous",
+    "startAt": "2026-11-12T23:40:36.914Z",
+    "endAt": null
+  },
+  "failedSources": [
+    "DART selected-date filing list: exact date and count not verified",
+    "KIND actual trade and independent Naver KRX corroboration not verified"
+  ],
+  "missingCoverage": [
+    "domestic_disclosures",
+    "domestic_market",
+    "domestic_policy",
+    "foreign_market",
+    "foreign_policy",
+    "foreign_technology"
+  ],
+  "reason": "Explicit prepare intent accepted and news searches initiated, but original publication times, trading-day dual evidence, and six-area editorial checks are not yet complete. Do not stage unverifiable news. Retry source checks and alternative originals within original 19:20 deadline.",
+  "candidates": [
+    {
+      "sourceUrl": "https://www.reuters.com/business/energy/world-oil-market-is-returning-surplus-gulf-exports-recover-iea-says-2026-11-13/",
+      "decision": "pending",
+      "reason": "IEA report details available but original publication time and post-08:40 newness unverified"
+    },
+    {
+      "sourceUrl": "https://www.reuters.com/world/china/china-stages-unannounced-pacific-drills-silent-intimidation-taiwan-officials-say-2026-11-13/",
+      "decision": "pending",
+      "reason": "exercise occurred earlier; new official confirmation time must be verified"
+    },
+    {
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/malaysia-says-it-is-investigating-if-any-chips-linked-speedmatrix-were-re-2026-11-13/",
+      "decision": "pending",
+      "reason": "ministry statement time and overlap with previous reporting unverified"
+    },
+    {
+      "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20261113034900002",
+      "decision": "excluded",
+      "reason": "09:30 event announcement predates afternoon window; no verified new outcome"
+    }
+  ],
+  "coverageAttempts": {
+    "foreign_market": {
+      "checked": true,
+      "verified": false
+    },
+    "foreign_policy": {
+      "checked": true,
+      "verified": false
+    },
+    "foreign_technology": {
+      "checked": true,
+      "verified": false
+    },
+    "domestic_disclosures": {
+      "checked": true,
+      "verified": false
+    },
+    "domestic_policy": {
+      "checked": true,
+      "verified": false
+    },
+    "domestic_market": {
+      "checked": true,
+      "verified": false
+    }
+  },
+  "nextAction": "Check explicit source-check evidencePath and verify actual primary-source timestamps; continue independent six-area investigation and stage only validated draft."
+}
