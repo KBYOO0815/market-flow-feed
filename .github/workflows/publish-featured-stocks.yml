@@ -17,6 +17,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: read
 concurrency:
   group: reviewed-featured-stocks-publication
   cancel-in-progress: false
