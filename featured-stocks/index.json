@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-13T11:28:46.127340+09:00",
+  "releaseAt": "2026-11-13T11:40:00+09:00",
+  "appVisibleCalendarDays": 2,
+  "visibleUntil": "2026-11-15T00:00:00+09:00",
+  "dates": [
+    {
+      "date": "2026-11-13",
+      "path": "featured-stocks/2026-11-13.json"
+    }
+  ]
+}
