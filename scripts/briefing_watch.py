@@ -6,7 +6,7 @@ import urllib.error
 from briefing_schedule import resolve, key
 from operation_store import save
 from prepare_feed import KST, prepare, timestamp
-from publish_feed import read_remote, publish
+from publish_feed import read_remote, publish, api
 
 
 def watch(release, record, read=read_remote, write=publish,
@@ -80,8 +80,11 @@ def main():
     if os.environ.get('GITHUB_REPOSITORY') != 'KBYOO0815/market-flow-feed':
         raise SystemExit('public data repo only')
     cron = os.environ.get('EVENT_SCHEDULE')
-    if cron:
-        release = resolve(dt.datetime.now(KST), cron)
+    if os.environ.get('RELEASE_AT'):
+        release = resolve(dt.datetime.now(KST), release_at=os.environ['RELEASE_AT'])
+    elif cron:
+        created = api('GET', 'actions/runs/'+os.environ['GITHUB_RUN_ID'])['created_at']
+        release = resolve(timestamp(created), cron)
     else:
         draft, _ = read_remote('drafts/morning-briefing.json', missing=True)
         if not draft:

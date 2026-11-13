@@ -1,0 +1,44 @@
+{
+  "incident": "2026-11-13-briefing-1550",
+  "releaseAt": "2026-11-13T15:50:00+09:00",
+  "deadlineAt": "2026-11-13T16:20:00+09:00",
+  "investigatedAt": "2026-11-13T08:01:23.459Z",
+  "state": "publication_missed",
+  "published": false,
+  "research": {
+    "startedAt": "2026-11-13T06:44:19.447436Z",
+    "completedAt": "2026-11-13T06:44:57.909774Z",
+    "elapsedSeconds": 38.462338,
+    "candidates": 5,
+    "verified": 0,
+    "allSixCoverageIncomplete": true,
+    "draftUpdated": false
+  },
+  "public": {
+    "rootReleaseAt": "2026-11-13T08:50:00+09:00",
+    "draftReleaseAt": "2026-11-13T08:50:00+09:00",
+    "archivedSlots": [
+      "07:40",
+      "08:50"
+    ],
+    "missingEdition": "15:50",
+    "publicationOperationFound": false
+  },
+  "causes": [
+    "Research ended before recovery deadline with no verified candidate or staged draft.",
+    "No 15:50 server publication operation or scheduled action was found in the inspected records.",
+    "Source availability, verified trading-day evidence and editorial completion were treated as a single blocking dependency by the researcher."
+  ],
+  "evidencePaths": [
+    "operations/research/2026-11-13-1550.json",
+    "operations/briefings/2026-11-13-1550.json",
+    "briefings/2026-11-13.json"
+  ],
+  "changes": [
+    "Explicit push request starts source checks and watcher without waiting for cron/draft.",
+    "Cron fallback pins original slot to workflow creation time.",
+    "Official actual-trade plus independent KRX quote evidence verifies the same trading date after open.",
+    "An independent +10 minute intraday recovery researcher retries missing editions.",
+    "Expired editions and diagnostic requests cannot publish."
+  ]
+}

@@ -1,0 +1,67 @@
+name: Start briefing edition from explicit request
+on:
+  push:
+    branches: [main]
+    paths: ['requests/briefing-run.json']
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: briefing-intent-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  intent:
+    if: github.repository == 'KBYOO0815/market-flow-feed'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      release_at: ${{ steps.intent.outputs.release_at }}
+      mode: ${{ steps.intent.outputs.mode }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - id: intent
+        env:
+          PUBLISH_TOKEN: ${{ github.token }}
+        run: python3 scripts/briefing_intent.py
+  sources:
+    needs: intent
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check original edition sources
+        if: needs.intent.outputs.mode == 'prepare'
+        env:
+          PUBLISH_TOKEN: ${{ github.token }}
+          RELEASE_AT: ${{ needs.intent.outputs.release_at }}
+        run: python3 scripts/briefing_preflight.py
+      - name: Diagnose sources without creating a publishable draft
+        if: needs.intent.outputs.mode == 'diagnostic'
+        env:
+          PUBLISH_TOKEN: ${{ github.token }}
+        run: python3 scripts/briefing_intent.py diagnose
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: intent-source-evidence-${{ github.run_id }}
+          path: operation-artifacts/
+          if-no-files-found: ignore
+  publish:
+    needs: intent
+    if: needs.intent.outputs.mode == 'prepare'
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - name: Watch the explicitly requested edition until its original deadline
+        env:
+          PUBLISH_TOKEN: ${{ github.token }}
+          RELEASE_AT: ${{ needs.intent.outputs.release_at }}
+        run: python3 scripts/briefing_watch.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: intent-publication-evidence-${{ github.run_id }}
+          path: operation-artifacts/
+          if-no-files-found: ignore

@@ -15,6 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 from briefing_schedule import resolve, key
 from operation_store import save
 from prepare_feed import KST
+from trading_day_evidence import KIND_QUOTE, NAVER_QUOTE, evidence as trade_evidence, corroborated
 
 
 class Links(HTMLParser):
@@ -64,6 +65,9 @@ def fetch_source(url, date, opener=urllib.request.urlopen, pause=time.sleep, clo
                 record.update(selectedDate=selected_date.isoformat(), filingCount=int(selected[1].replace(',', '')))
                 if selected_date != date:
                     raise ValueError('DART stale selected date: ' + selected_date.isoformat())
+            proof = trade_evidence(url, html, date, clock())
+            if proof is not None:
+                record['marketTradeEvidence'] = proof
             parser = Links(url)
             parser.feed(html)
             record.update(available=True, candidates=list(parser.links.values())[:30])
@@ -91,7 +95,7 @@ def sources(date):
         'domestic_policy': ['https://www.fsc.go.kr/no010101', 'https://www.motie.go.kr/'],
         'domestic_market': ['https://kind.krx.co.kr/common/stockschedule.do?method=StockScheduleMain',
             'https://open.krx.co.kr/contents/MKD/01/0110/01100305/MKD01100305.jsp',
-            'https://atsview.com/calendar/' + str(date.year)]
+            'https://atsview.com/calendar/' + str(date.year), KIND_QUOTE, NAVER_QUOTE]
     }
 
 
@@ -104,10 +108,11 @@ def collect(release, fetch=fetch_source):
         results = dict(pool.map(topic, sources(release.date()).items()))
     unavailable = [name for name, rows in results.items() if not any(r['available'] for r in rows)]
     candidates = {c['sourceUrl']: c for rows in results.values() for row in rows for c in row['candidates']}
+    day_proof = corroborated(results)
     return {'state': 'source_checks_partial' if unavailable else 'source_checks_collected',
         'releaseAt': release.isoformat(), 'checkedAt': dt.datetime.now(KST).isoformat(),
-        'editorialCoverageVerified': False, 'tradingDayVerified': False,
-        'requiresEditorialReview': True, 'unavailableTopics': unavailable,
+        'editorialCoverageVerified': False, 'tradingDayVerified': day_proof['verified'],
+        'tradingDayEvidence': day_proof, 'requiresEditorialReview': True, 'unavailableTopics': unavailable,
         'sources': results, 'candidates': list(candidates.values()),
         'note': 'HTTP success and link collection are not fact verification or trading-day confirmation.'}
 
@@ -116,7 +121,12 @@ def main():
     if os.environ.get('GITHUB_REPOSITORY') != 'KBYOO0815/market-flow-feed':
         raise SystemExit('public data repo only')
     request = json.loads(pathlib.Path('requests/briefing-preflight.json').read_text()) if os.environ.get('GITHUB_EVENT_NAME') == 'push' else {}
-    release = resolve(dt.datetime.now(KST), os.environ.get('EVENT_SCHEDULE'), os.environ.get('RELEASE_AT') or request.get('releaseAt'), preflight=True)
+    anchor = dt.datetime.now(KST)
+    if os.environ.get('EVENT_SCHEDULE'):
+        from publish_feed import api
+        from prepare_feed import timestamp
+        anchor = timestamp(api('GET','actions/runs/'+os.environ['GITHUB_RUN_ID'])['created_at'])
+    release = resolve(anchor, os.environ.get('EVENT_SCHEDULE'), os.environ.get('RELEASE_AT') or request.get('releaseAt'), preflight=True)
     now = dt.datetime.now(KST)
     if not release - dt.timedelta(minutes=30) <= now <= release + dt.timedelta(minutes=30):
         raise ValueError('source check outside original edition window; refusing relabel')
