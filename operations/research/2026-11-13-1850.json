@@ -1,0 +1,1722 @@
+{
+  "releaseAt": "2026-11-13T18:50:00+09:00",
+  "checkedAt": "2026-11-13T10:14:38.918Z",
+  "state": "research_retrying",
+  "requestId": "recovery-20261113-1850-1794564056272",
+  "deadlineAt": "2026-11-13T19:20:00+09:00",
+  "previousReleaseAt": "2026-11-13T08:50:00+09:00",
+  "previousAsOf": "2026-11-12T23:40:36.914Z",
+  "coverage": {
+    "foreign_market": {
+      "checkedAt": "2026-11-13T10:14:38.918Z",
+      "sourceUrls": [
+        "https://www.yna.co.kr/market-plus/global-market",
+        "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-13",
+        "https://www.cloudadminhub.com/microsoft-365-service-health/mo1550821"
+      ]
+    },
+    "foreign_policy": {
+      "checkedAt": "2026-11-13T10:14:38.918Z",
+      "sourceUrls": [
+        "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+        "https://www.federalreserve.gov/newsevents/2026-november.htm",
+        "https://www.yna.co.kr/view/AKR20261113153500109",
+        "https://www.miti.gov.my/miti/resources/Speech/MEDIA_STATEMENT_13112026.pdf"
+      ]
+    },
+    "foreign_technology": {
+      "checkedAt": "2026-11-13T10:14:38.918Z",
+      "sourceUrls": [
+        "https://nvidianews.nvidia.com/news",
+        "https://news.samsung.com/global/",
+        "https://www.miti.gov.my/miti/resources/Speech/MEDIA_STATEMENT_13112026.pdf"
+      ]
+    },
+    "domestic_disclosures": {
+      "checkedAt": "2026-11-13T10:14:38.918Z",
+      "sourceUrls": [
+        "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
+        "https://samara.kr/today",
+        "https://samara.kr/disclosure/20261113000076",
+        "https://samara.kr/disclosure/20261113900562",
+        "https://samara.kr/disclosure/20261113000302",
+        "https://samara.kr/disclosure/20261113000784",
+        "https://samara.kr/disclosure/20261113901075",
+        "https://samara.kr/disclosure/20261113900978",
+        "https://samara.kr/disclosure/20261113001675",
+        "https://samara.kr/disclosure/20261113001541",
+        "https://samara.kr/disclosure/20261113900774"
+      ]
+    },
+    "domestic_policy": {
+      "checkedAt": "2026-11-13T10:14:38.918Z",
+      "sourceUrls": [
+        "https://www.fsc.go.kr/no010101/88139",
+        "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c",
+        "https://www.mofe.go.kr",
+        "https://www.yna.co.kr/view/AKR20261113102100003"
+      ]
+    },
+    "domestic_market": {
+      "checkedAt": "2026-11-13T10:14:38.918Z",
+      "sourceUrls": [
+        "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain",
+        "https://stock.naver.com/api/domestic/detail/005930/detail?codeType=KRX",
+        "https://samara.kr/disclosure/20261113902051"
+      ]
+    }
+  },
+  "searches": [
+    {
+      "query": "site:reuters.com \"2026-11-13\" stocks futures dollar yields",
+      "checkedAt": "2026-11-13T10:02:30.508Z",
+      "resultUrls": [
+        "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-07-29",
+        "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-09",
+        "https://www.reuters.com/business/us-stock-futures-muted-bond-yields-resume-uptrend-ahead-walmarts-earnings-2026-08-20",
+        "https://www.reuters.com/business/sp-500-dow-futures-attempt-recovery-ahead-inflation-report-2026-09-10",
+        "https://www.reuters.com/world/africa/dollar-near-19-month-high-fed-hike-bets-yen-tests-160-2026-11-13",
+        "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-13",
+        "https://www.reuters.com/business/wall-st-futures-kick-off-september-under-pressure-yields-oil-prices-rise-2026-09-01",
+        "https://www.reuters.com/business/energy/oil-prices-set-second-weekly-decline-trump-stay-with-iran-blockade-2026-11-13",
+        "https://www.reuters.com/business/retail-consumer/sp-500-dow-futures-steady-mideast-deal-focus-chips-stumble-2026-08-06",
+        "https://www.reuters.com/business/nasdaq-futures-take-lead-after-nvidia-forecast-refuels-ai-trade-2026-08-27"
+      ]
+    },
+    {
+      "query": "site:reuters.com \"2026-11-13\" oil gas gold copper",
+      "checkedAt": "2026-11-13T10:02:30.840Z",
+      "resultUrls": [
+        "https://www.reuters.com/business/goldman-sees-gold-4900-by-december-2026-projects-oil-price-decline-copper-2025-12-18",
+        "https://www.reuters.com/markets/commodities/commodities-supercycle-is-here-how-might-investors-participate-2026-04-13",
+        "https://www.reuters.com/business/world-bank-sees-commodity-prices-up-23-2026-due-middle-east-war-other-shocks-2026-10-28",
+        "https://www.reuters.com/markets/commodities/trump-china-metals-rally-extends-beyond-gold-silver-2026-01-29",
+        "https://www.reuters.com/markets/commodities/copper-is-pricing-scarcity-time-plenty-2026-02-13",
+        "https://www.reuters.com/markets/commodities/bofa-raises-gold-price-forecasts-2025-2026-2025-03-26",
+        "https://www.reuters.com/world/asia-pacific/what-are-afghanistans-untapped-minerals-resources-2021-08-19",
+        "https://www.reuters.com/markets/commodities/commodities-under-pressure-likely-trump-win-us-presidential-race-2024-11-06",
+        "https://www.reuters.com/world/americas/sp-dow-jones-indices-loosens-canadian-index-inclusion-criteria-2026-09-13",
+        "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-13"
+      ]
+    },
+    {
+      "query": "site:reuters.com \"2026-11-13\" Trump Fed tariffs",
+      "checkedAt": "2026-11-13T10:02:30.891Z",
+      "resultUrls": [
+        "https://www.reuters.com/business/supreme-court-tariff-ruling-clouds-feds-rate-path-after-year-upheaval-2026-02-20",
+        "https://www.reuters.com/business/sp-500-dow-futures-attempt-recovery-ahead-inflation-report-2026-09-10",
+        "https://www.reuters.com/business/poll-fed-raise-rates-once-more-december-inflation-risks-stay-high-2026-11-10",
+        "https://www.reuters.com/world/us/ny-fed-report-says-americans-pay-almost-all-trumps-tariffs-2026-02-12",
+        "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-07-22",
+        "https://www.reuters.com/world/china/trump-orders-temporary-10-global-tariff-replace-duties-struck-down-by-us-supreme-2026-02-20",
+        "https://www.reuters.com/legal/transactional/boston-fed-paper-says-strong-productivity-blunted-tariff-inflation-impact-2026-08-19",
+        "https://www.reuters.com/business/canada-announces-20-bln-retaliatory-tariffs-us-goods-unveils-support-measures-2026-08-25",
+        "https://www.reuters.com/business/autos-transportation/ford-ceo-says-trade-deal-with-mexico-canada-is-critical-industry-2026-01-14",
+        "https://www.reuters.com/world/us/jobless-claims-dip-latest-week-goods-trade-deficit-widens-july-2026-08-27"
+      ]
+    },
+    {
+      "query": "site:reuters.com \"2026-11-13\" China Taiwan",
+      "checkedAt": "2026-11-13T10:02:30.840Z",
+      "resultUrls": [
+        "https://www.reuters.com/world/china/facing-chinese-pressure-taiwan-says-it-must-be-master-its-own-maritime-2026-11-02",
+        "https://www.reuters.com/world/china/chinas-foreign-minister-says-call-with-rubio-was-positive-constructive-2026-11-11",
+        "https://www.reuters.com/world/china/apec-host-shenzhen-chinas-next-gen-startups-still-bank-foreign-buyers-2026-11-12",
+        "https://www.reuters.com/world/china/us-sees-chinese-invasion-taiwan-unlikely-next-year-despite-2027-timeline-sources-2026-10-01",
+        "https://uk.mobile.reuters.com/world/china/taiwan-is-taking-part-apec-china-summit-an-equal-basis-president-says-2026-11-12",
+        "https://www.reuters.com/world/china/ties-with-paraguay-unaffected-taiwan-says-after-president-resigns-2026-11-06",
+        "https://www.reuters.com/world/china/china-stages-unannounced-pacific-drills-silent-intimidation-taiwan-officials-say-2026-11-13",
+        "https://www.reuters.com/business/media-telecom/taiwan-security-agency-flags-rise-chinese-disinformation-ahead-local-elections-2026-10-21",
+        "https://www.reuters.com/world/china/speaker-johnson-says-congress-developing-consensus-limiting-chip-exports-china-2026-11-12",
+        "https://www.reuters.com/world/asia-pacific/us-federal-employees-work-taiwan-government-offices-under-scheme-to-strengthen-2026-11-11"
+      ]
+    },
+    {
+      "query": "site:reuters.com \"2026-11-13\" Ukraine Iran",
+      "checkedAt": "2026-11-13T10:02:30.808Z",
+      "resultUrls": [
+        "https://www.reuters.com/world/middle-east/two-missiles-strike-irans-qeshm-island-tasnim-news-agency-says-2026-11-06",
+        "https://www.reuters.com/live/live-ukraine-iran-wars-focus-un-general-assembly-ai-leaders-brief-security-2026-09-23",
+        "https://www.reuters.com/world/europe/iran-says-ukrainian-attack-vessel-caspian-sea-killed-sailor-2026-07-25",
+        "https://www.reuters.com/business/aerospace-defense/ukraines-drone-masters-eye-iran-war-kickstart-export-ambitions-2026-03-30",
+        "https://www.reuters.com/video/watch/idRW573504112026RP1",
+        "https://www.reuters.com/world/europe/russia-ukraine-meet-us-backed-talks-after-trump-says-broad-deal-possible-2026-11-10",
+        "https://www.reuters.com/world/china/russias-lavrov-chinas-wang-discuss-cooperation-ukraine-iran-asia-security-2026-10-14",
+        "https://www.reuters.com/business/energy/oil-prices-drop-more-than-1-hopes-iran-ukraine-peace-talks-pressure-markets-2026-11-12",
+        "https://www.reuters.com/business/energy/russian-fuel-exports-oil-output-rebounded-october-after-deal-with-trump-iea-says-2026-11-13",
+        "https://www.reuters.com/world/middle-east/iranians-have-left-doha-talks-draft-proposal-us-deal-being-circulated-official-2026-11-02"
+      ]
+    },
+    {
+      "query": "site:reuters.com \"2026-11-13\" Nvidia Microsoft Google Meta Amazon Apple Tesla",
+      "checkedAt": "2026-11-13T10:02:31.161Z",
+      "resultUrls": [
+        "https://www.reuters.com/technology/nvidia-cusp-overtaking-apple-second-most-valuable-company-2024-03-08",
+        "https://www.reuters.com/business/us-megacap-results-test-markets-tech-trade-profit-optimism-2026-01-28",
+        "https://www.reuters.com/technology/magnificent-seven",
+        "https://www.reuters.com/business/bridgewater-adds-tesla-stake-reduces-rest-magnificent-7-2025-02-14",
+        "https://www.reuters.com/video/watch/idRW286730072024RP1",
+        "https://www.reuters.com/technology/nvidia-dethrones-tesla-wall-streets-most-traded-stock-2024-02-20",
+        "https://www.reuters.com/technology/us-regulators-open-antitrust-inquiries-microsoft-openai-nvidia-nyt-reports-2024-06-06",
+        "https://www.reuters.com/markets/us/bridgewater-piled-into-mag-seven-stocks-q1-spurned-tesla-filings-2024-05-15",
+        "https://www.reuters.com/markets/europe/futures-climb-lower-oil-prices-private-jobs-report-focus-2022-06-02",
+        "https://www.reuters.com/technology/gqg-partners-adds-nvidia-amazon-apple-q2-2023-08-11"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" AI CAPEX debt CoreWeave CDS",
+      "checkedAt": "2026-11-13T10:02:30.771Z",
+      "resultUrls": [
+        "https://www.metirai.com/blog/coreweave-ai-debt-cds-credit-warning-2026",
+        "https://www.youtube.com/watch?v=WQdAFXGm9T8",
+        "https://open.spotify.com/episode/1f8BIgb64qrYSESUIZAwip",
+        "https://marketwise.com/investing/coreweave-stock-the-2-6-billion-debt-signal-the-ai-bubble-is-ignoring",
+        "https://www.linkedin.com/posts/priyabatchu_an-interesting-time-for-ai-infrastructure-activity-7519065485276192768-zJcc",
+        "https://finance.yahoo.com/markets/stocks/articles/coreweave-stock-faces-debt-funding-051856331.html",
+        "https://open.spotify.com/episode/5WSsozwUr1gOegJI0tHwlE",
+        "https://finance.yahoo.com/markets/stocks/articles/ai-debt-burden-spooking-wall-174847435.html",
+        "https://finance.yahoo.com/news/coreweave-slides-30-billion-capex-113959671.html",
+        "https://www.cnbc.com/2026/11/10/coreweave-earnings-preview-debt-capex.html"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"공급계약\"",
+      "checkedAt": "2026-11-13T10:02:30.873Z",
+      "resultUrls": [
+        "https://www.newspim.com/news/view/20261113001266",
+        "https://www.instagram.com/reel/DfqguInShK8",
+        "https://www.vegannews.co.kr/news/article.html?no=404253",
+        "https://pj5.lynn.co.kr/fileview/1875/%EB%B6%88%EB%B2%95%ED%96%89%EC%9C%84%EC%9E%AC%EA%B3%B5%EA%B8%89%20%EB%AA%A8%EC%A7%91%EA%B3%B5%EA%B3%A0.pdf",
+        "https://www.specialtimes.co.kr/news/articleView.html?idxno=485230",
+        "https://contents.premium.naver.com/bilanxlyc/curiousir/contents/261113141347257yi",
+        "https://pj5.lynn.co.kr/fileview/1874/%EB%AC%B4%EC%88%9C%EC%9C%84(%EC%82%AC%ED%9B%84)%20%EC%9E%85%EC%A3%BC%EC%9E%90%EB%AA%A8%EC%A7%91%EA%B3%B5%EA%B3%A0.pdf",
+        "https://www.2news.co.kr/news/articleView.html?idxno=32470",
+        "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021077&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+        "https://www.bluedawn.kr/contract?bmode=view&idx=15351944"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"영업이익\"",
+      "checkedAt": "2026-11-13T10:02:32.297Z",
+      "resultUrls": [
+        "https://biz.chosun.com/industry/company/2026/11/13/EV34WCS6KBCWVEL4KZDC264I5Q",
+        "https://www.hankookilbo.com/news/article/A2026111314440000523",
+        "https://www.instagram.com/p/Dfq-tkHE0fA",
+        "https://www.youtube.com/watch?v=kjX7Rre8jVk",
+        "https://www.youtube.com/watch?v=ZKDFiF9rEEY",
+        "https://www.newscj.com/news/articleView.html?idxno=3448533",
+        "https://www.s-journal.co.kr/news/articleView.html?idxno=45320",
+        "https://www.newsquest.co.kr/news/articleView.html?idxno=304996",
+        "http://www.kmdianews.com/news/articleView.html?idxno=71395",
+        "https://www.koreancenter.or.kr/news/articleView.html?idxno=1439133"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"의무공개매수\"",
+      "checkedAt": "2026-11-13T10:02:32.406Z",
+      "resultUrls": [
+        "https://news.einfomax.co.kr/news/articleViewAmp.html?idxno=4444643",
+        "https://www.youtube.com/watch?v=jsPcAPx2hZY&PLimlJIbduWCGba26Whri7AsGw26D6zG6r=",
+        "https://www.shinkim.com/kor/media/newsletter/3404",
+        "https://weekly.hankooki.com/news/articleViewAmp.html?idxno=7193844",
+        "http://www.koreasisailbo.com/2466226",
+        "https://marketin.edaily.co.kr/News/ReadE?newsId=03585046645645392",
+        "https://news.kbs.co.kr/news/view.do?ncd=8712256",
+        "https://www.yonhapnewstv.co.kr/news/AKR20261113132402Ywa",
+        "https://www.fsc.go.kr/comm/getFile?srvcId=BBSTY1&upperNo=88139&fileTy=ATTACH&fileNo=3",
+        "https://www.holidays-and-observances.com/november-13.html"
+      ]
+    },
+    {
+      "query": "\"November 13, 2026\" \"Federal Reserve\"",
+      "checkedAt": "2026-11-13T10:03:54.909Z",
+      "resultUrls": [
+        "https://www.bostonfed.org/news-and-events/events/2026/bank-funding-conference.aspx",
+        "https://www.dallasfed.org/events/2026/26bankfunding",
+        "https://www.newyorkfed.org/newsevents/events",
+        "https://www.facebook.com/laredochamber/posts/-two-weeks-leftthe-federal-reserves-2026-small-business-credit-survey-closes-nov/1621460466678664",
+        "https://www.chicagofed.org/research/data/data-release-calendar",
+        "https://www.federalreserve.gov/newsevents/2026-november.htm",
+        "https://www.federalreserve.gov/releases/h10/hist/dat00_eu.htm",
+        "https://blog.kraken.com/news/industry-news/succession-at-the-us-federal-reserve-a-policy-inflection-point",
+        "https://www.frbservices.org",
+        "https://www.federalreserve.gov/releases/h15"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"yen\" \"yuan\"",
+      "checkedAt": "2026-11-13T10:03:54.421Z",
+      "resultUrls": [
+        "https://www.xe.com/en-us/currencyconverter/convert?Amount=1&From=JPY&To=CNY",
+        "https://pluang.com/en/tools/currency-converter/jpy-cny",
+        "https://tradingeconomics.com/china/currency",
+        "https://www.exchangerates.org.uk/JPY-CNY-spot-exchange-rates-history-2026.html",
+        "https://www.ofx.com/en-us/exchange-rates/jpy-to-cny",
+        "https://wise.com/us/currency-converter/jpy-to-cny-rate/history",
+        "https://www.ofx.com/en-au/exchange-rates/jpy-to-cny",
+        "https://www.ofx.com/en-hk/exchange-rates/jpy-to-cny",
+        "https://robinhood.com/us/en/prediction-markets/fx/events/us-dollar-to-japanese-yen-exchange-rate-november-13-2026-nov-13-2026",
+        "https://www.rba.gov.au/statistics/frequency/exchange-rates.html"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"natural gas\" \"gold\"",
+      "checkedAt": "2026-11-13T10:03:54.271Z",
+      "resultUrls": [
+        "https://www.youtube.com/watch?v=kyvVRKZkMpw",
+        "https://www.youtube.com/watch?v=0DLno3Y_09g",
+        "https://www.wsj.com/market-data/quotes/futures/NATURAL%20GAS",
+        "https://economics.td.com/gbl-commodity-price-report",
+        "https://www.youtube.com/watch?v=lfquhjjJQS0",
+        "https://www.goldmansachs.com/pdfs/insights/goldman-sachs-research/2026-outlooks/CommoditiesOutlook2026.pdf",
+        "https://www.youtube.com/watch?v=H2wRsRFzsz8",
+        "https://tradingeconomics.com/commodity/natural-gas",
+        "https://www.marketwatch.com/investing/future/ng00",
+        "https://public.com/prediction-markets/natural-gas-price-on-nov-13-2026-at-5-00-pm-est-zvuguad"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"copper\"",
+      "checkedAt": "2026-11-13T10:03:54.613Z",
+      "resultUrls": [
+        "https://public.com/prediction-markets/copper-price-on-nov-13-2026-at-5-00-pm-est-yn7jr52?sourceScreen=prediction_markets_event_page",
+        "https://robinhood.com/us/en/prediction-markets/metals/events/copper-price-november-13-2026-nov-13-2026",
+        "https://www.facebook.com/events/beatka-music-club/copper-festival-white-edition-2026/1844467853375085",
+        "https://www.ctltrust.net/press-releases/detail/194/copper-property-ctl-pass-through-trust-schedules-live-call",
+        "https://www.youtube.com/watch?v=0DLno3Y_09g",
+        "https://lisasliquorbarn.com/events/copper-29-vodka-tasting",
+        "https://tradingeconomics.com/commodity/copper",
+        "https://www.devere-group.com/copper-price",
+        "https://www.goldmansachs.com/insights/articles/copper-prices-forecast-to-decline-from-record-highs-in-2026",
+        "https://cb.fusdaz.org/event_view?event_id=6m4d7k7g49le2anph9d8n1hcbt&calIDref=fusdaz.com_adr9j1032nlhvm1947a39itv70%40group.calendar.google.com&eventDate=2026-11-13&feed_type=google"
+      ]
+    },
+    {
+      "query": "\"November 13, 2026\" \"Trump\" \"tariffs\"",
+      "checkedAt": "2026-11-13T10:03:57.201Z",
+      "resultUrls": [
+        "https://en.wikipedia.org/wiki/Donald_Trump",
+        "https://www.cnn.com/2026/11/13/economy/trumps-tariffs-new-threat",
+        "https://www.wiley.law/trump-administration-tariff-tracker",
+        "https://www.chosun.com/english/world-en/2026/11/13/IPGAFWBYVZCNXKPZXDGVRC2TJQ",
+        "https://www.cnbc.com/2019/11/08/trump-wont-impose-tariffs-on-european-cars-eu-juncker-says.html",
+        "https://www.tradecomplianceresourcehub.com/2026/11/03/trump-2-0-tariff-tracker",
+        "https://finance.yahoo.com/news/trump-lifts-40-tariffs-brazilian-162203237.html",
+        "https://www.progressivepolicy.org/after-midterm-rebuke-congress-should-take-back-tariff-power-and-repeal-trumps-decrees",
+        "https://www.congress.gov/crs-product/R49481",
+        "https://www.lemonde.fr/en/international/article/2026/11/13/trump-threatens-mexico-with-increased-tariffs-over-migrant-caravans_6779368_4.html"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"Microsoft\" \"outage\"",
+      "checkedAt": "2026-11-13T10:03:54.451Z",
+      "resultUrls": [
+        "https://www.facebook.com/100092637204675/posts/widespread-global-outage-microsoft-confirmed-as-of-friday-13-november-2026-micro/1076207305477166",
+        "https://learn.microsoft.com/en-us/answers/questions/6069789/microsoft-outage-november-2026",
+        "https://www.capetown.gov.za/general/global-microsoft-outage-friday-13-november-2026",
+        "https://thersac.icts.thers.ac.jp/hc/en-us/articles/64262985209881-November-13-2026-Microsoft-365-Outage-MO1550821",
+        "https://www.dw.com/en/microsoft-works-to-restore-outlook-and-teams-after-global-outage/a-79935611",
+        "https://www.facebook.com/WBRCnews/videos/a-microsoft-outage-affected-users-around-the-world-thursday-afternoon-and-busine/1795890041616785",
+        "https://www.facebook.com/liveinkirklees/posts/13112026-global-microsoft-outage-some-of-our-systems-and-services-could-be-affec/1571392835030240",
+        "https://www.cnn.com/2026/11/12/business/live-news/microsoft-global-outage-intl-hnk",
+        "https://www.usatoday.com/story/tech/2026/11/12/microsoft-down-outlook-365-outage-reports/92744582007",
+        "https://abc13.com/live-updates/microsoft-outage-live-updates-what-know-outlook-365-other-apps-remain-down/20036817"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"HBM\" \"data center\"",
+      "checkedAt": "2026-11-13T10:03:55.497Z",
+      "resultUrls": [
+        "https://shattered.io/hbm-sold-out-us-data-center-permitting-rules-half-of-expansions-2028-2026",
+        "https://www.utmel.com/blog/news/semiconductor/ai-compute-is-running-into-the-memory-wall-why-hbm-became-a-2026-semiconductor-hotspot",
+        "https://www.youtube.com/watch?v=PhkX1JRJUBE",
+        "https://www.linkedin.com/top-content/artificial-intelligence/ai-in-professional-roles/hbm-role-in-ai-data-centers",
+        "https://news.skhynix.com/en/2026-market-outlook-focus-on-the-hbm-led-memory-supercycle",
+        "https://aventine.org/ai-data-centers-memory-dram-hbm-costs-varda-space-industries",
+        "https://www.facebook.com/TechRadar/posts/it-really-is-the-craziest-time-ever-data-centers-are-gobbling-up-70-of-all-high-/1306665131497847",
+        "https://tradingkey.com/analysis/stocks/us-stocks/261834990-samsung-sk-hynix-micron-hbm-cxl-pangea-v2-ai-data-center-tradingkey",
+        "https://medium.com/@theserverguru42/hbm-what-it-is-and-why-it-matters-in-the-modern-world-of-ai-2bc31effc81a",
+        "https://www.micron.com/about/blog/applications/data-center/hbm2e-fastest-memory-modern-data-center"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"China\" \"property\"",
+      "checkedAt": "2026-11-13T10:03:55.256Z",
+      "resultUrls": [
+        "https://www.globalpropertyguide.com/asia/china/price-history",
+        "https://baike.baidu.com/en/item/2026%20China%20Real%20Estate%20Market%20Outlook/5796216",
+        "https://www.gam.com/en/our-thinking/investment-opinions/china-housing-market-downturn-and-its-impact",
+        "https://www.cbre.com.cn/insights/reports/2026-china-real-estate-market-outlook",
+        "https://www.cnbc.com/2026/10/08/chinas-real-estate-market-may-be-set-for-a-turnaround-sp-says.html",
+        "https://www.mingtiandi.com/real-estate/research-policy/china-new-home-sales-to-fall-11-to-13-in-2026-fitch",
+        "https://www.youtube.com/watch?v=l2xqf-9zgtM",
+        "https://www.atlanticcouncil.org/blogs/econographics/chinas-property-slump-deepens-and-threatens-more-than-the-housing-sector",
+        "https://www.forbes.com/sites/williampesek/2025/11/28/china-property-crisis-will-stalk-its-economy-into-2026",
+        "https://www.reddit.com/r/China/comments/1qu6d4x/bleak_start_to_2026_for_chinas_property_sector_as"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"기획재정부\"",
+      "checkedAt": "2026-11-13T10:03:55.774Z",
+      "resultUrls": [
+        "https://www.newskorea.ne.kr/news/articleView.html?idxno=21967",
+        "https://www.youtube.com/watch?v=Rvx78vPzm6k",
+        "https://www.chosun.com/economy/stock-finance/2026/11/13/HWQC7KNUCJAAPME3MWOSO2TZYQ",
+        "https://www.mpb.go.kr",
+        "https://www.instagram.com/p/DS67cn8k42Q",
+        "https://www.mofe.go.kr",
+        "https://x.com/moefkorea",
+        "https://www.youtube.com/watch?v=wn0B7G4FFzs",
+        "https://www.korea.kr",
+        "https://www.chosun.com/politics/politics_general/2026/11/13/WGNJTSR26BHTBDVNQ5R33KI25Q"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"한국은행\"",
+      "checkedAt": "2026-11-13T10:03:55.100Z",
+      "resultUrls": [
+        "https://eiec.kdi.re.kr/policy/materialList.do",
+        "https://news.einfomax.co.kr/news/articleView.html?idxno=4424486",
+        "https://www.bok.or.kr/portal/submain/submain/sts.do?viewType=SUBMAIN&menuNo=200094",
+        "https://www.bok.or.kr/portal/bbs/P0001773/view.do?nttId=11066484&menuNo=200037&programType=newsData&relate=Y&depth=200037",
+        "https://www.youtube.com/watch?v=9I46DwrzR2w",
+        "https://kr.investing.com/news/economy-news/article-93CH-1729646",
+        "https://kr.investing.com/news/stock-market-news/article-1611268",
+        "https://kr.investing.com/news/economy-news/article-93CH-1735131",
+        "https://www.bok.or.kr/portal/main/main.do",
+        "https://www.youtube.com/watch?v=Zv8AvOh2v4E"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"유상증자\" \"자사주\"",
+      "checkedAt": "2026-11-13T10:03:56.452Z",
+      "resultUrls": [
+        "https://www.chosun.com/economy/economy_general/2026/11/05/TV6AXDKPJBEIZMAGIY4VW55TZE",
+        "https://www.tupl.kr/insight/kr-disclosure-2026-11-13",
+        "https://kr.investing.com/news/global-filings/article-93CH-2163501",
+        "https://www.moneystorm.kr/news/articleView.html?idxno=8415",
+        "https://www.safetimes.co.kr/news/articleView.html?idxno=247220",
+        "https://marketin.edaily.co.kr/News/ReadE?newsId=04359126645353472",
+        "https://blog.naver.com/kimwh253967/224086936404?viewType=pc",
+        "https://www.cbci.co.kr/news/articleView.html?idxno=624158",
+        "https://www.junggi.co.kr/news/articleView.html?idxno=36292",
+        "https://stock.mk.co.kr/news/view/621917"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"임상\" \"허가\"",
+      "checkedAt": "2026-11-13T10:03:54.439Z",
+      "resultUrls": [
+        "https://kivda.or.kr/bbs/board.php?bo_table=notice2&wr_id=8",
+        "https://www.mt.co.kr/amp/thebio/2026/11/13/2026111313525092423",
+        "https://huelresearch.com/insight/clinical.php?boardid=clinical&mode=view&idx=9&sk=&sw=&offset=&category=",
+        "https://www.youtube.com/watch?v=ynGazkuDpTA",
+        "https://blog.naver.com/PostView.naver?blogId=dh3176&logNo=224417702859",
+        "https://www.kha.or.kr/kha_home/notice_list.do?mode=view&articleNo=46124&title=2026%EB%85%84%EB%8F%84+%EC%9D%98%EC%95%BD%ED%92%88+%EC%9E%84%EC%83%81%EC%8B%9C%ED%97%98+%EC%8B%A4%EC%8B%9C%EC%83%81%ED%99%A9+%EB%B3%B4%EA%B3%A0+%EA%B4%80%EB%A0%A8+%EC%95%88%EB%82%B4",
+        "https://bioethics.go.kr?menuno=39&ztag=rO0ABXQASDxjYWxsIHR5cGU9ImJvYXJkIiBubz0iMzciIHNraW49Im5vdGljZSIgYmJzbm89IjMwNDgiIHNpdGVubz0iMSI-PC9jYWxsPg%3D%3D&act=view",
+        "https://www.kobia.kr/notice/notice_2.php?mNum=5&sNum=1&boardid=notice_2&mode=view&idx=1593",
+        "https://www.medigatenews.com/news/2593508272",
+        "https://www.bioin.or.kr/board/policy/334387"
+      ]
+    },
+    {
+      "query": "원익QnC 2026 11 13 영업 잠정 실적 444 공시 20261113",
+      "checkedAt": "2026-11-13T10:05:41.536Z",
+      "resultUrls": [
+        "https://www.digitaltoday.co.kr/news/articleView.html?idxno=692479",
+        "https://m.thinkpool.com/stockDiscuss/074600/cont/11877954",
+        "http://www.dailyinvest.kr/news/articleViewAmp.html?idxno=61759",
+        "https://www.moneytoring.ai/mv/1949793",
+        "https://blog.naver.com/goldmap7/224082209528?viewType=pc",
+        "https://www.datatooza.com/article/20251111172022339852ef33e8a1_80",
+        "https://kr.investing.com/news/global-filings/article-93CH-1947469",
+        "https://www.youtube.com/watch?v=P-J7-6YWWjE",
+        "https://kr.investing.com/equities/wonik-qnc-corp-earnings",
+        "https://dart.fss.or.kr/navi/searchNavi.do?naviCrpCik=00468374&naviCrpNm=%EC%9B%90%EC%9D%B5QnC&naviCode=A002"
+      ]
+    },
+    {
+      "query": "GS건설 2026 11 13 1125 대위변제 공시",
+      "checkedAt": "2026-11-13T10:05:43.090Z",
+      "resultUrls": [
+        "https://www.sedaily.com/article/20113927",
+        "https://www.globale.co.kr/news/articleViewAmp.html?idxno=41624",
+        "http://www.joongang.tv/news/view/325203/GS%EA%B1%B4%EC%84%A4-%EC%9E%90%ED%9A%8C%EC%82%AC-%EC%97%90%EB%84%88%EC%A7%80%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88-%EC%82%B0%EC%9D%80-%EC%B1%84%EB%AC%B4-%EC%9D%B4%EC%9E%90-%EB%8C%80%EC%9C%84%EB%B3%80%EC%A0%9C-2026",
+        "https://www.newspim.com/news/view/20261113001314",
+        "https://www.edaily.co.kr/News/Read?newsId=03683446645645392&mediaCodeNo=257",
+        "https://mbnmoney.mbn.co.kr/news/view?news_no=MM1005961656",
+        "https://www.bloter.net/news/articleView.html?idxno=678508",
+        "https://www.bloter.net/news/articleViewAmp.html?idxno=678508",
+        "https://www.newstomato.com/ReadNews.aspx?no=1320377",
+        "https://www.koreareport.co.kr/news/articleView.html?idxno=54698"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"석유 최고가격\"",
+      "checkedAt": "2026-11-13T10:05:41.427Z",
+      "resultUrls": [
+        "https://www.newslaw.co.kr/ko-kr/articles/3278",
+        "https://www.newsis.com/view/NISI20261113_0021531811",
+        "https://news.einfomax.co.kr/news/articleViewAmp.html?idxno=4444721",
+        "https://www.korea.kr/news/policyNewsView.do?newsId=148960757",
+        "https://m.tf.co.kr/amp/economy/2388579.htm",
+        "https://www.yonhapnewstv.co.kr/news/AKR20261113150330wOS",
+        "https://www.mt.co.kr/index.php/amp/economy/2026/11/13/2026111314410187904",
+        "https://www.hankookilbo.com/news/article/A2026111314000003219",
+        "https://www.etnews.com/20261113000214",
+        "https://www.newspim.com/news/view/20261113001357"
+      ]
+    },
+    {
+      "query": "\"November 13, 2026\" \"Speedmatrix\" ministry",
+      "checkedAt": "2026-11-13T10:05:41.339Z",
+      "resultUrls": [
+        "https://srnnews.com/malaysia-says-it-is-investigating-if-any-chips-linked-to-speedmatrix-were-re-exported",
+        "https://www.morningstar.com/news/dow-jones/20261113101/malaysia-probes-possible-illegal-re-exports-of-us-ai-chips-by-speedmatrix",
+        "https://themalaysianreserve.com/2026/11/13/miti-says-it-never-cleared-megaspeed-speedmatrix-over-ai-chip-exports",
+        "https://malaysia.news.yahoo.com/miti-says-never-cleared-megaspeed-032355434.html",
+        "https://www.facebook.com/MITIMalaysia/posts/13-november-2026-media-statement-miti-statement-on-megaspeed-international-pte-l/1571538434998571",
+        "https://x.com/MITIMalaysia/status/2121081141000360073",
+        "https://www.newsquawk.com/headlines/malaysia-trade-ministry-says-malaysia-has-never-authorised-megaspeed-international-and-its-malaysian-affiliate-speedmatrix-",
+        "https://www.instagram.com/reel/DfrBg19DXed",
+        "https://www.nst.com.my/business/corporate/2026/11/1576692/ministry-never-cleared-megaspeed-speedmatrix-any-wrongdoings",
+        "https://www.marketwatch.com/story/malaysia-probes-possible-illegal-re-exports-of-u-s-ai-chips-by-speedmatrix-ba610481?mod=mw_quote_news"
+      ]
+    },
+    {
+      "query": "\"November 13, 2026\" \"unannounced\" \"drills\"",
+      "checkedAt": "2026-11-13T10:05:41.367Z",
+      "resultUrls": [
+        "https://mezha.net/eng/news/mezha-20f7828269fcf2a88b57e794_taiwan_official_says",
+        "https://www.reuters.com/world/china/china-stages-unannounced-pacific-drills-silent-intimidation-taiwan-officials-say-2026-11-13",
+        "https://www.ruvna.com/blog/readiness-without-fear-what-the-new-2026-school-safety-guidance-means-for-independent-school-drills-this-fall",
+        "https://www.cdc.gov/mmwr/volumes/75/wr/mm7538a1.htm",
+        "https://www.taipeitimes.com/News/taiwan/archives/2026/11/13/2003867684",
+        "https://www.sciencedaily.com/releases/2026/10/261016070639.htm",
+        "https://www.facebook.com/nsmayport/videos/fire-prevention-week-october-510-2026naval-station-mayport-fire-emergency-servic/1899291191039580",
+        "https://www.facebook.com/Qcpdpio/posts/nationwide-simultaneous-earthquake-drillnovember-5-2026/1572125851608519",
+        "https://www.youtube.com/watch?v=vV7dRkjTPo4",
+        "https://www.youtube.com/watch?v=VxIh5r881BI"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"MO1550821\"",
+      "checkedAt": "2026-11-13T10:05:41.088Z",
+      "resultUrls": [
+        "https://thersac.icts.thers.ac.jp/hc/en-us/articles/64262985209881-November-13-2026-Microsoft-365-Outage-MO1550821",
+        "https://windowsforum.com/news/microsoft-365-outage-mo1550821-outlook-teams-and-defender-xdr-connectivity-guidance-megathread.452060",
+        "https://www.cloudadminhub.com/microsoft-365-service-health/mo1550821",
+        "https://www.tradingview.com/news/cnbctv:db3a5abd4094b:0",
+        "https://www.enowsoftware.com/office-365-monitoring-outages/microsoft-service-health-updates-for-microsoft-outages-mo1550821-and-ex1550543?hs_amp=true",
+        "https://www.enowsoftware.com/office-365-monitoring-outages/microsoft-service-health-updates-for-microsoft-outages-mo1550821-and-ex1550543",
+        "https://learn.microsoft.com/en-au/answers/questions/6069969/email-issue",
+        "https://mailservices.isc.upenn.edu/computing/email/penno365/alerts/ms-incidents.html",
+        "https://x.com/MSFT365Status/status/2121123916496146821",
+        "https://x.com/MSFT365Status/status/2121099952633840043"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"Apple\" \"Tesla\" \"Amazon\"",
+      "checkedAt": "2026-11-13T10:05:42.513Z",
+      "resultUrls": [
+        "https://www.markets.com/research/top-growth-stocks-to-buy-in-2026-tsla-nvda-amzn-stock-apple-aapl-stock",
+        "https://www.youtube.com/watch?v=875B04RIp2Q",
+        "https://www.wsj.com/finance/stocks/amazon-surges-and-apple-falls-on-latest-earnings-9f3f3c8b",
+        "https://www.facebook.com/CryptoCrunchApp/posts/breaking-worlds-largest-tech-stocks-including-apple-microsoft-and-amazon-close-l/1574477748032272",
+        "https://www.businessinsider.com/rivian-amazon-apple-hire-tesla-workers-elon-musk-layoffs-2022-7",
+        "https://www.youtube.com/watch?v=tstrb8YQ_GI",
+        "https://www.cnbc.com/2020/10/28/apple-alphabet-amazon-facebook-microsoft-tesla-shed-270-billion.html",
+        "https://finance.yahoo.com/video/amazon-tesla-apple-stocks-moving-143349579.html",
+        "https://cryptorank.io/news/feed/c5ae8-pancakeswap-launches-tokenized-stock-futures-for-apple-tesla-amazon-with-25x-leverage",
+        "https://www.amazon.com/Apple-2026-MacBook-13-inch-Laptop/dp/B0GR6935ZS"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"전환사채\"",
+      "checkedAt": "2026-11-13T10:05:43.026Z",
+      "resultUrls": [
+        "https://heyholder.com/disclosure/20261106000274",
+        "https://kr.investing.com/news/global-filings/article-93CH-2163498",
+        "https://www.sayulaw.com/columns?bmode=view&idx=166690002",
+        "http://dailyan.com/news/article.html?no=784183",
+        "https://zuzu.network/resource/guide/convert-convertible-bond",
+        "https://m.blog.naver.com/how2invest/222060487589",
+        "https://ko.wikipedia.org/wiki/%EC%A0%84%ED%99%98%EC%82%AC%EC%B1%84",
+        "https://www.fsc.go.kr/po010101/63300?srchCtgry=&curPage=1162&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+        "https://star-law.kr/registration-guide/250910_private_loan_differences",
+        "https://namu.wiki/w/%EC%A0%84%ED%99%98%EC%82%AC%EC%B1%84"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"합병\" \"상장\"",
+      "checkedAt": "2026-11-13T10:05:41.262Z",
+      "resultUrls": [
+        "https://www.thebell.co.kr/front/newsview.asp?key=202610291233224040104227",
+        "https://www.theguru.co.kr/news/article.html?no=109676",
+        "https://www.newswell.co.kr/news/articleView.html?idxno=15624",
+        "https://biz.chosun.com/stock/market_trend/2025/11/13/VCXQ6ECA5VH7DA4G6LYUM5YOV4",
+        "https://kr.investing.com/news/cryptocurrency-news/article-1122968",
+        "https://kr.investing.com/news/markets/article-1509421",
+        "https://marketin.edaily.co.kr/News/ReadE?newsId=04870806645480408",
+        "https://www.choicestock.co.kr/stock/news_view/178713",
+        "https://dart.fss.or.kr",
+        "https://kr.investing.com/news/sec-filings/article-93CH-1552966"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"Meta\" \"Google\" announcement",
+      "checkedAt": "2026-11-13T10:06:26.308Z",
+      "resultUrls": [
+        "https://cmemedia.com/digital-marketing-changes-november-2026",
+        "https://www.digitalapplied.com/blog/meta-overtakes-google-ad-revenue-2026-budget-readout",
+        "https://www.instagram.com/popular/anthropic-or-openai-or-google-or-meta-ai-announcement-2026",
+        "https://shattered.io/gemini-4-launch-earlier-claim-meta-muse-argon-carbon-zero-new-dates-2026",
+        "https://mashable.com/tech/google-io-2026-keynote-everything-announced",
+        "https://www.marketbeat.com/articles/meta-platforms-is-set-to-steal-googles-advertsing-crownwhat-it-means-for-investors",
+        "https://www.facebook.com/gettheinformation/videos/meta-is-turning-to-googles-ai-chips-in-a-major-new-deal-heres-why-its-significan/783037644850761",
+        "https://www.reuters.com/business/google-signs-multibillion-dollar-ai-chip-deal-with-meta-information-reports-2026-02-26",
+        "https://www.reuters.com/business/meta-talks-spend-billions-googles-chips-information-reports-2025-11-25",
+        "https://blog.google/innovation-and-ai/sundar-pichai-io-2026"
+      ]
+    },
+    {
+      "query": "\"2026-11-13\" \"capital expenditure\" \"data centre\"",
+      "checkedAt": "2026-11-13T10:06:26.842Z",
+      "resultUrls": [
+        "https://www.linkedin.com/posts/gregorypatton_data-center-capital-expenditure-capex-is-activity-7434707693669584896-190a",
+        "https://www.linkedin.com/posts/contruent_global-data-center-capital-expenditure-is-activity-7506438815201443840-FYyi",
+        "https://datacenterrichness.substack.com/p/hyperscalers-plan-630-billion-in",
+        "https://www.datacenterdynamics.com/en/news/meta-estimates-2026-capex-to-be-between-115-135bn",
+        "https://www.mmcginvest.com/post/u-s-data-center-industry-report-2026-two-industries-under-one-name",
+        "https://finance.yahoo.com/technology/ai/articles/data-center-capex-grew-92-120000745.html",
+        "https://www.pwc.com/gx/en/news-room/press-releases/2026/global-investment-in-ai-infrastructure.html",
+        "https://futurumgroup.com/insights/ai-capex-2026-the-690b-infrastructure-sprint",
+        "https://archdesk.com/blog/global-ai-data-center-construction-2026",
+        "https://avidsolutionsinc.com/13-data-center-growth-projections-that-will-shape-2026-2030"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"거래정지\" \"투자경고\"",
+      "checkedAt": "2026-11-13T10:06:26.150Z",
+      "resultUrls": [
+        "https://www.topstarnews.net/news/articleView.html?idxno=16275123",
+        "https://www.mk.co.kr/news/economy/12205527",
+        "https://www.myasset.com/myasset/investinfo/corpAnl/IN_0503000_P1.cmd",
+        "https://www.samsungfund.com/etf/lounge/notice-view.do?no=80193",
+        "https://www.steeldaily.co.kr/news/articleViewAmp.html?idxno=204339",
+        "http://www.specialtimes.co.kr/news/articleView.html?idxno=485302",
+        "https://www.topstarnews.net/news/articleView.html?idxno=16273943",
+        "http://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=1701&ccfNo=3&cciNo=1&cnpClsNo=1",
+        "http://www.hansbiz.co.kr/news/articleView.html?idxno=882993",
+        "https://www.kokstock.com/stock/statusC.asp"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"자기주식\" \"소각\"",
+      "checkedAt": "2026-11-13T10:06:28.778Z",
+      "resultUrls": [
+        "http://www.hansbiz.co.kr/news/articleView.html?idxno=883155",
+        "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003380875",
+        "https://www.moj.go.kr/bbs/moj/182/491790/download.do",
+        "https://www.shinkim.com/kor/media/newsletter/3236",
+        "https://www.youtube.com/watch?v=-6iF9eSYpyo",
+        "https://www.kimchang.com/ko/insights/detail.kc?sch_section=4&idx=34299",
+        "https://www.mt.co.kr/amp/stock/2026/11/13/2026111315419655425",
+        "https://www.yulchon.com/ko/resources/publications/newsletter-view/43072/page.do",
+        "https://korpa.co.kr/resources?bmode=view&idx=170713633",
+        "https://www.holidays-and-observances.com/november-13.html"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"최대주주변경\"",
+      "checkedAt": "2026-11-13T10:06:28.170Z",
+      "resultUrls": [
+        "https://heyholder.com/disclosure/20261113901991",
+        "https://dart.fss.or.kr/dsac003/mainAll.do",
+        "https://www.topstarnews.net/news/articleView.html?idxno=16275302",
+        "https://www.hanwhavision.com/ko/company/ir/electronic-public-announcement/155",
+        "https://weekly.khan.co.kr/article/202611011334001",
+        "http://www.inews24.com/view/2018824",
+        "https://www.instagram.com/reel/DZ3Mec3zApe",
+        "http://www.hansbiz.co.kr/news/articleView.html?idxno=882993",
+        "https://kiamfund.com/forum/view/367554",
+        "https://www.instagram.com/p/DfCRCqnB7Fh"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"신규시설투자\"",
+      "checkedAt": "2026-11-13T10:06:30.464Z",
+      "resultUrls": [
+        "https://m.datatooza.com/article/2026111315344735152ef3be5bf_80",
+        "https://enjoyeconomicfreedom.tistory.com/156",
+        "https://contents.premium.naver.com/bilanxlyc/curiousir/contents/261113151241899kc",
+        "https://www.youtube.com/watch?v=M8_UU4O20qY",
+        "https://www.digitalasset.works/news/articleView.html?idxno=44283",
+        "https://www.newsm.com/news/articleView.html?idxno=26776",
+        "https://www.aitimes.com/news/articleView.html?idxno=217371",
+        "http://www.yakup.com/news?mode=view&cat=16&cat2=&cat3=0&nid=335210",
+        "https://www.news33.net/news/articleView.html?idxno=119327",
+        "https://tracxn.com/d/companies/seoul-national-university/__LXk9qtIk5aEIv1QThSeWN3MHU7QxB_tPmN-vyJym5nE"
+      ]
+    },
+    {
+      "query": "\"2026.11.13\" \"신주인수권부사채\"",
+      "checkedAt": "2026-11-13T10:06:26.381Z",
+      "resultUrls": [
+        "https://namu.wiki/w/%EC%8B%A0%EC%A3%BC%EC%9D%B8%EC%88%98%EA%B6%8C%EB%B6%80%EC%82%AC%EC%B1%84",
+        "http://www.law.go.kr/lsLawLinkInfo.do?lsJoLnkSeq=900415566&chrClsCd=010202",
+        "https://m.thebell.co.kr/m/newsview.asp?svccode=04&newskey=202610200844471340104040",
+        "https://www.astk.co.kr/bbs/board.php?bo_table=official&wr_id=34&page=1",
+        "https://contents.premium.naver.com/finup/moneysurferplus/contents/231215152541911xr",
+        "https://www.datatooza.com/article/20261113171703111352ef3a209d_80",
+        "https://www.lawtimes.co.kr/news/articleView.html?idxno=105137",
+        "https://www.snu.ac.kr",
+        "https://www.youtube.com/watch?v=L7HtFq_v2zU",
+        "https://english.seoul.go.kr/wp-content/uploads/2025/12/Major-Tasks-and-Event-Schedule-for-2026.pdf"
+      ]
+    },
+    {
+      "query": "site:mofe.go.kr \"2026.11.13\"",
+      "checkedAt": "2026-11-13T10:06:28.374Z",
+      "resultUrls": [
+        "https://www.mofe.go.kr",
+        "https://mofe.go.kr/com/cmm/fms/FileDown.do;jsessionid=kq-inqyxekAYqc7L6fOR_jX9_a2s-lhTOgS-kas3.node40?atchFileId=ATCH_000000000032858&fileSn=1",
+        "https://www.mofe.go.kr/nw/mosfnw/photoDetail.do?searchNttId1=MOSF_000000000079959&menuNo=4010400",
+        "https://mofe.go.kr/com/synap/synapViewDetail.do;jsessionid=_RT5tlvQHClQdBTWgqhZ9-8PuHlFy8ojCxvY4XXv.node40?atchFileId=ATCH_000000000032858&fileSn=1",
+        "https://ifi.mofe.go.kr/main/totalSearch.do",
+        "https://ktb.mofe.go.kr/eng/news.do",
+        "https://ifi.mofe.go.kr/brd/getListBoard.do?bbsId=BR0109",
+        "https://english.mofe.go.kr/di/selectTbDailyIndDtl.do",
+        "https://ifi.mofe.go.kr/brd/getListBoard.do?bbsId=BR0101",
+        "https://www.mofe.go.kr/sns/2024/foreignExchange.do?category=nesEng"
+      ]
+    },
+    {
+      "query": "site:motie.go.kr \"2026-11-13\" \"최고가격\"",
+      "checkedAt": "2026-11-13T10:06:28.920Z",
+      "resultUrls": [
+        "https://www.motie.go.kr",
+        "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c/172053/view",
+        "http://www.motie.go.kr/kor/article/ATCLe0854704d?pageIndex=1",
+        "https://www.motie.go.kr/kor/article/ATCLe0854704d?pageIndex=1",
+        "https://www.motie.go.kr/kor/article/ATCLe0854704d",
+        "http://www.motie.go.kr/search/search.do?site=main&kwd=4%EC%B0%A8&category=c1&reSrchFlag=&currentPage=1&detailSearch=&srchFd=&sort=d&date=&start-date=&end-date=&preCondi=&rowPerPage=10&fdTot=%24param.fdTot&fdTitle=%24param.fdTitle&fdContent=%24param.fdContent&fdFile=%24param.fdFile&fdNotice=%24param.fdNotice&ppkFlag=weekly&searchRange=fdTot&searchOptionAnd=&searchOptionOr=",
+        "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c/172224/view",
+        "https://www.motie.go.kr/kor/article/ATCL03465409b?pageIndex=4",
+        "http://motie.go.kr/kor/article/ATCL3f49a5a8c/171763/view",
+        "https://www.motie.go.kr/kor/article/ATCL03465409b?pageIndex=24"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "malaysia-speedmatrix-export-investigation",
+      "region": "foreign",
+      "sourceUrl": "https://www.morningstar.com/news/dow-jones/20261113101/malaysia-probes-possible-illegal-re-exports-of-us-ai-chips-by-speedmatrix",
+      "reviewSourceUrl": "https://www.miti.gov.my/miti/resources/Speech/MEDIA_STATEMENT_13112026.pdf",
+      "sourcePublishedAt": "2026-11-13T14:13:00+09:00",
+      "eventAt": "2026-11-13T14:13:00+09:00",
+      "newFact": "말레이시아 투자통상산업부는 스피드매트릭스가 반입한 AI 반도체의 재수출 여부와 법규 준수 여부를 관세청과 조사하고 있다고 밝혔다. 메가스피드와 스피드매트릭스에 면죄부를 준 적이 없다고 명시했다.",
+      "koreaRelevance": 4,
+      "scopeRank": 2,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "MITI 11월13일 성명 원문과 Dow Jones 05:13 GMT 원문 교차 확인. eventAt은 검증된 원문 최초 보도시각 14:13 KST이며 성명 문서 자체에는 시·분이 없음. 전회차 CEO 사임·H200 조사와 다른 말레이시아의 실제 조사 확인만 기재. 불법 유출 확정으로 서술하지 않음.",
+      "selection": {
+        "eventKey": "malaysia-speedmatrix-export-investigation",
+        "eventAt": "2026-11-13T14:13:00+09:00",
+        "newness": "followup",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "ft_wsj",
+        "facts": [
+          {
+            "key": "malaysia-speedmatrix-export-investigation-announcement-20261113",
+            "occurredAt": "2026-11-13T14:13:00+09:00",
+            "sourceUrl": "https://www.morningstar.com/news/dow-jones/20261113101/malaysia-probes-possible-illegal-re-exports-of-us-ai-chips-by-speedmatrix",
+            "statement": "말레이시아 투자통상산업부는 스피드매트릭스가 반입한 AI 반도체의 재수출 여부와 법규 준수 여부를 관세청과 조사하고 있다고 밝혔다. 메가스피드와 스피드매트릭스에 면죄부를 준 적이 없다고 명시했다."
+          }
+        ],
+        "scopeRank": 2,
+        "scores": {
+          "impact": 4,
+          "certainty": 5,
+          "novelty": 4,
+          "koreaRelevance": 4
+        },
+        "relatedEvidence": []
+      }
+    },
+    {
+      "eventKey": "korea-petroleum-price-cap-round12",
+      "region": "domestic",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113102100003",
+      "reviewSourceUrl": "https://www.newspim.com/news/view/20261113001269",
+      "sourcePublishedAt": "2026-11-13T18:00:00+09:00",
+      "eventAt": "2026-11-13T18:00:00+09:00",
+      "newFact": "산업통상부는 11월 14일 0시부터 12월 11일까지 적용할 석유 최고가격을 리터당 휘발유 1,784원·경유 1,773원·등유 1,380원으로 동결했다.",
+      "koreaRelevance": 5,
+      "scopeRank": 1,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "두 독립 원문의 18:00 발표·시행기간·리터당 가격 일치. 뉴스핌 18:45 수정시각을 신규 발표시각으로 사용하지 않음. 정부 발표 사실만 채택.",
+      "selection": {
+        "eventKey": "korea-petroleum-price-cap-round12",
+        "eventAt": "2026-11-13T18:00:00+09:00",
+        "newness": "new",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "major_media",
+        "facts": [
+          {
+            "key": "korea-petroleum-price-cap-round12-announcement-20261113",
+            "occurredAt": "2026-11-13T18:00:00+09:00",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113102100003",
+            "statement": "산업통상부는 11월 14일 0시부터 12월 11일까지 적용할 석유 최고가격을 리터당 휘발유 1,784원·경유 1,773원·등유 1,380원으로 동결했다."
+          }
+        ],
+        "scopeRank": 1,
+        "scores": {
+          "impact": 4,
+          "certainty": 5,
+          "novelty": 5,
+          "koreaRelevance": 5
+        },
+        "relatedEvidence": []
+      }
+    },
+    {
+      "eventKey": "gsenc-energy-materials-subrogation-20261113",
+      "region": "domestic",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000076",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113059700003",
+      "sourcePublishedAt": "2026-11-13T09:32:00+09:00",
+      "eventAt": "2026-11-13T09:32:00+09:00",
+      "newFact": "GS건설은 에너지머티리얼즈의 산업은행 잔여 채무·이자 1,125억5,100만원을 대위변제하는 거래를 공시했다. 이에 따른 구상권과 기존 근저당권을 취득한다고 밝혔다.",
+      "koreaRelevance": 5,
+      "scopeRank": 4,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "DART 등록시각 09:32 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
+      "selection": {
+        "eventKey": "gsenc-energy-materials-subrogation-20261113",
+        "eventAt": "2026-11-13T09:32:00+09:00",
+        "newness": "new",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "filing",
+        "facts": [
+          {
+            "key": "dart-20261113000076-announcement",
+            "occurredAt": "2026-11-13T09:32:00+09:00",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000076",
+            "statement": "GS건설은 에너지머티리얼즈의 산업은행 잔여 채무·이자 1,125억5,100만원을 대위변제하는 거래를 공시했다. 이에 따른 구상권과 기존 근저당권을 취득한다고 밝혔다."
+          }
+        ],
+        "scopeRank": 4,
+        "scores": {
+          "impact": 4,
+          "certainty": 5,
+          "novelty": 5,
+          "koreaRelevance": 5
+        },
+        "relatedEvidence": [
+          {
+            "stock": "GS건설",
+            "sourceUrl": "https://samara.kr/disclosure/20261113000076"
+          }
+        ]
+      }
+    },
+    {
+      "eventKey": "wonikqnc-2026q3-results",
+      "region": "domestic",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900562",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113090700527",
+      "sourcePublishedAt": "2026-11-13T12:42:00+09:00",
+      "eventAt": "2026-11-13T12:42:00+09:00",
+      "newFact": "원익QnC는 3분기 연결 잠정 매출 2,836억8,800만원·영업이익 444억2,600만원을 공시했다. 전년 동기 대비 각각 23.2%·455.3% 증가했다.",
+      "koreaRelevance": 5,
+      "scopeRank": 4,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "DART 등록시각 12:42 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
+      "selection": {
+        "eventKey": "wonikqnc-2026q3-results",
+        "eventAt": "2026-11-13T12:42:00+09:00",
+        "newness": "new",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "filing",
+        "facts": [
+          {
+            "key": "dart-20261113900562-announcement",
+            "occurredAt": "2026-11-13T12:42:00+09:00",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900562",
+            "statement": "원익QnC는 3분기 연결 잠정 매출 2,836억8,800만원·영업이익 444억2,600만원을 공시했다. 전년 동기 대비 각각 23.2%·455.3% 증가했다."
+          }
+        ],
+        "scopeRank": 4,
+        "scores": {
+          "impact": 3,
+          "certainty": 5,
+          "novelty": 5,
+          "koreaRelevance": 5
+        },
+        "relatedEvidence": [
+          {
+            "stock": "원익QnC",
+            "sourceUrl": "https://samara.kr/disclosure/20261113900562"
+          }
+        ]
+      }
+    },
+    {
+      "eventKey": "nongshim-2026q3-results",
+      "region": "domestic",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000302",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113100500030",
+      "sourcePublishedAt": "2026-11-13T11:16:00+09:00",
+      "eventAt": "2026-11-13T11:16:00+09:00",
+      "newFact": "농심의 3분기 연결 매출은 9,296억원으로 전년 동기 대비 6.7% 증가했고, 영업이익은 497억원으로 8.6% 감소했다.",
+      "koreaRelevance": 5,
+      "scopeRank": 4,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "DART 등록시각 11:16 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
+      "selection": {
+        "eventKey": "nongshim-2026q3-results",
+        "eventAt": "2026-11-13T11:16:00+09:00",
+        "newness": "new",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "filing",
+        "facts": [
+          {
+            "key": "dart-20261113000302-announcement",
+            "occurredAt": "2026-11-13T11:16:00+09:00",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000302",
+            "statement": "농심의 3분기 연결 매출은 9,296억원으로 전년 동기 대비 6.7% 증가했고, 영업이익은 497억원으로 8.6% 감소했다."
+          }
+        ],
+        "scopeRank": 4,
+        "scores": {
+          "impact": 3,
+          "certainty": 5,
+          "novelty": 5,
+          "koreaRelevance": 5
+        },
+        "relatedEvidence": [
+          {
+            "stock": "농심",
+            "sourceUrl": "https://samara.kr/disclosure/20261113000302"
+          }
+        ]
+      }
+    },
+    {
+      "eventKey": "hitejinro-2026q3-results",
+      "region": "domestic",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000784",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113123500030",
+      "sourcePublishedAt": "2026-11-13T15:15:00+09:00",
+      "eventAt": "2026-11-13T15:15:00+09:00",
+      "newFact": "하이트진로의 3분기 연결 영업이익은 577억원으로 전년 동기 대비 6.2% 증가했다. 매출은 6,324억원으로 5.5% 감소했다.",
+      "koreaRelevance": 5,
+      "scopeRank": 4,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "DART 등록시각 15:15 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
+      "selection": {
+        "eventKey": "hitejinro-2026q3-results",
+        "eventAt": "2026-11-13T15:15:00+09:00",
+        "newness": "new",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "filing",
+        "facts": [
+          {
+            "key": "dart-20261113000784-announcement",
+            "occurredAt": "2026-11-13T15:15:00+09:00",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000784",
+            "statement": "하이트진로의 3분기 연결 영업이익은 577억원으로 전년 동기 대비 6.2% 증가했다. 매출은 6,324억원으로 5.5% 감소했다."
+          }
+        ],
+        "scopeRank": 4,
+        "scores": {
+          "impact": 3,
+          "certainty": 5,
+          "novelty": 5,
+          "koreaRelevance": 5
+        },
+        "relatedEvidence": [
+          {
+            "stock": "하이트진로",
+            "sourceUrl": "https://samara.kr/disclosure/20261113000784"
+          }
+        ]
+      }
+    },
+    {
+      "eventKey": "satrec-facility-investment-20261113",
+      "region": "domestic",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113901075",
+      "reviewSourceUrl": "https://m.datatooza.com/article/2026111315344735152ef3be5bf_80",
+      "sourcePublishedAt": "2026-11-13T15:33:00+09:00",
+      "eventAt": "2026-11-13T15:33:00+09:00",
+      "newFact": "쎄트렉아이는 위성 반복생산 역량 강화를 위해 자기자본의 17.00%인 403억원의 신규 시설투자를 결정했다. 공시된 투자기간은 2026년 11월 13일부터 2028년 12월 31일까지다.",
+      "koreaRelevance": 5,
+      "scopeRank": 4,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "DART 등록시각 15:33 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
+      "selection": {
+        "eventKey": "satrec-facility-investment-20261113",
+        "eventAt": "2026-11-13T15:33:00+09:00",
+        "newness": "new",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "filing",
+        "facts": [
+          {
+            "key": "dart-20261113901075-announcement",
+            "occurredAt": "2026-11-13T15:33:00+09:00",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113901075",
+            "statement": "쎄트렉아이는 위성 반복생산 역량 강화를 위해 자기자본의 17.00%인 403억원의 신규 시설투자를 결정했다. 공시된 투자기간은 2026년 11월 13일부터 2028년 12월 31일까지다."
+          }
+        ],
+        "scopeRank": 4,
+        "scores": {
+          "impact": 3,
+          "certainty": 5,
+          "novelty": 5,
+          "koreaRelevance": 5
+        },
+        "relatedEvidence": [
+          {
+            "stock": "쎄트렉아이",
+            "sourceUrl": "https://samara.kr/disclosure/20261113901075"
+          }
+        ]
+      }
+    },
+    {
+      "eventKey": "humasis-treasury-retirement-20261113",
+      "region": "domestic",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900978",
+      "reviewSourceUrl": "https://samara.kr/disclosure/20261113900978",
+      "sourcePublishedAt": "2026-11-13T15:34:00+09:00",
+      "eventAt": "2026-11-13T15:34:00+09:00",
+      "newFact": "휴마시스는 발행주식총수의 약 8.33%인 자기주식 205만6,081주를 소각하기로 결정했다. 소각 예정일은 11월 23일이다.",
+      "koreaRelevance": 5,
+      "scopeRank": 4,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "DART 등록시각 15:34 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 머니투데이 본문의 11월16일 출고 표기는 모순으로 배제하고 11월13일 15:34 공시 원문 서식을 사용.직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
+      "selection": {
+        "eventKey": "humasis-treasury-retirement-20261113",
+        "eventAt": "2026-11-13T15:34:00+09:00",
+        "newness": "new",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "filing",
+        "facts": [
+          {
+            "key": "dart-20261113900978-announcement",
+            "occurredAt": "2026-11-13T15:34:00+09:00",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900978",
+            "statement": "휴마시스는 발행주식총수의 약 8.33%인 자기주식 205만6,081주를 소각하기로 결정했다. 소각 예정일은 11월 23일이다."
+          }
+        ],
+        "scopeRank": 4,
+        "scores": {
+          "impact": 3,
+          "certainty": 5,
+          "novelty": 5,
+          "koreaRelevance": 5
+        },
+        "relatedEvidence": [
+          {
+            "stock": "휴마시스",
+            "sourceUrl": "https://samara.kr/disclosure/20261113900978"
+          }
+        ]
+      }
+    },
+    {
+      "eventKey": "apton-capital-reduction-20261113",
+      "region": "domestic",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001675",
+      "reviewSourceUrl": "https://www.datatooza.com/article/20261113175903802552ef3d286d_80",
+      "sourcePublishedAt": "2026-11-13T17:55:00+09:00",
+      "eventAt": "2026-11-13T17:55:00+09:00",
+      "newFact": "앱튼은 결손금 보전을 위해 보통주 10주를 1주로 병합하는 90% 무상감자를 결정했다. 거래소는 자본감소를 사유로 11월 13일 17:54부터 장 종료까지 매매거래를 정지한다고 공시했다.",
+      "koreaRelevance": 5,
+      "scopeRank": 4,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "DART 등록시각 17:55 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
+      "selection": {
+        "eventKey": "apton-capital-reduction-20261113",
+        "eventAt": "2026-11-13T17:55:00+09:00",
+        "newness": "new",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "filing",
+        "facts": [
+          {
+            "key": "dart-20261113001675-announcement",
+            "occurredAt": "2026-11-13T17:55:00+09:00",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001675",
+            "statement": "앱튼이 보통주 10주를 1주로 병합하는 90% 무상감자 결정을 공시했다."
+          },
+          {
+            "key": "dart-20261113902051-trading-halt",
+            "occurredAt": "2026-11-13T17:55:00+09:00",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113902051",
+            "statement": "자본감소 사유로 11월13일 17:54부터 장 종료까지 매매거래를 정지한다는 거래소 공시."
+          }
+        ],
+        "scopeRank": 4,
+        "scores": {
+          "impact": 3,
+          "certainty": 5,
+          "novelty": 5,
+          "koreaRelevance": 5
+        },
+        "relatedEvidence": [
+          {
+            "stock": "앱튼",
+            "sourceUrl": "https://samara.kr/disclosure/20261113001675"
+          }
+        ]
+      }
+    },
+    {
+      "eventKey": "dasco-bw-repurchase-20261113",
+      "region": "domestic",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001541",
+      "reviewSourceUrl": "https://www.datatooza.com/article/20261113171703111352ef3a209d_80",
+      "sourcePublishedAt": "2026-11-13T17:15:00+09:00",
+      "eventAt": "2026-11-13T17:15:00+09:00",
+      "newFact": "다스코는 사채권자의 조기상환청구에 따라 제6회 신주인수권부사채 50억1,581만2,000원을 자기자금으로 취득하기로 결정했다. 지급예정일은 12월 7일이며 취득 후 소각할 예정이다.",
+      "koreaRelevance": 5,
+      "scopeRank": 4,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "DART 등록시각 17:15 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
+      "selection": {
+        "eventKey": "dasco-bw-repurchase-20261113",
+        "eventAt": "2026-11-13T17:15:00+09:00",
+        "newness": "new",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "filing",
+        "facts": [
+          {
+            "key": "dart-20261113001541-announcement",
+            "occurredAt": "2026-11-13T17:15:00+09:00",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001541",
+            "statement": "다스코는 사채권자의 조기상환청구에 따라 제6회 신주인수권부사채 50억1,581만2,000원을 자기자금으로 취득하기로 결정했다. 지급예정일은 12월 7일이며 취득 후 소각할 예정이다."
+          }
+        ],
+        "scopeRank": 4,
+        "scores": {
+          "impact": 2,
+          "certainty": 5,
+          "novelty": 5,
+          "koreaRelevance": 5
+        },
+        "relatedEvidence": [
+          {
+            "stock": "다스코",
+            "sourceUrl": "https://samara.kr/disclosure/20261113001541"
+          }
+        ]
+      }
+    },
+    {
+      "eventKey": "kp-aero-uav-fixture-contract-20261113",
+      "region": "domestic",
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900774",
+      "reviewSourceUrl": "https://www.specialtimes.co.kr/news/articleView.html?idxno=485230",
+      "sourcePublishedAt": "2026-11-13T14:22:00+09:00",
+      "eventAt": "2026-11-13T14:22:00+09:00",
+      "newFact": "케이피항공산업은 스페이스프로와 28억9,460만원 규모의 신규 무인기 사업 조립 치구 제작 계약을 체결했다. 최근 연매출의 5.37%이며 계약기간은 11월 13일부터 12월 31일까지다.",
+      "koreaRelevance": 5,
+      "scopeRank": 4,
+      "certainty": 5,
+      "duplicate": false,
+      "decision": "선정",
+      "reason": "DART 등록시각 14:22 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
+      "selection": {
+        "eventKey": "kp-aero-uav-fixture-contract-20261113",
+        "eventAt": "2026-11-13T14:22:00+09:00",
+        "newness": "new",
+        "verificationStatus": "confirmed",
+        "materialType": "event",
+        "sourceClass": "filing",
+        "facts": [
+          {
+            "key": "dart-20261113900774-announcement",
+            "occurredAt": "2026-11-13T14:22:00+09:00",
+            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900774",
+            "statement": "케이피항공산업은 스페이스프로와 28억9,460만원 규모의 신규 무인기 사업 조립 치구 제작 계약을 체결했다. 최근 연매출의 5.37%이며 계약기간은 11월 13일부터 12월 31일까지다."
+          }
+        ],
+        "scopeRank": 4,
+        "scores": {
+          "impact": 2,
+          "certainty": 5,
+          "novelty": 5,
+          "koreaRelevance": 5
+        },
+        "relatedEvidence": [
+          {
+            "stock": "케이피항공산업",
+            "sourceUrl": "https://samara.kr/disclosure/20261113900774"
+          }
+        ]
+      }
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113136700009",
+      "title": "러트닉 의회 증언 동의",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "시간범위 밖",
+      "reason": "원문이 전날 NBC에 동의했다고 서술. 정확한 최초 발표시각이 직전 실제 asOf 이후인지 입증되지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113139900083",
+      "title": "징둥 세코노미 인수",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "시간범위 밖",
+      "reason": "13일 재보도지만 전날 공시 사실. 새 사실 시각 검증 불가.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113059400009",
+      "title": "세레브라스 가이던스",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "시간범위 밖",
+      "reason": "원문 추출 미확인; 검색 날짜만으로 신규 가이던스 발표시각을 정하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113146400009",
+      "title": "TSMC 개인정보 판매 주장",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "해커 주장일 뿐 실제 침해 공식 확인을 확보하지 못함.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.reuters.com/business/energy/world-oil-market-is-returning-surplus-gulf-exports-recover-iea-says-2026-11-13/",
+      "title": "IEA 원유 보고서",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "Reuters 원문 읽기 실패; 수치·최초 발표시각 미검증.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.reuters.com/world/china/china-stages-unannounced-pacific-drills-silent-intimidation-taiwan-officials-say-2026-11-13/",
+      "title": "중국 군사훈련",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "원문 읽기 실패. 훈련 자체는 11월 초이며 신규 공식 확인 시각 미검증.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113134000079",
+      "title": "이란 가스운반선 폭발 주장",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "IRGC 주장과 독립 확인을 구분할 수 있는 원문 근거 미확보.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113153500109",
+      "title": "젤렌스키 유럽 협상 참여 발언",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "시간범위 밖",
+      "reason": "기사 본문이 전날 회동·발언에 관한 보도이며 실제 새 발언 시각 미확인.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.cloudadminhub.com/microsoft-365-service-health/mo1550821",
+      "title": "MS 365 장애 후속",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "기타",
+      "reason": "본문의 00:45 GMT 갱신은 확인했으나 공식 상태 페이지 읽기 실패, X 표시 시간대도 확정되지 않아 새로운 조치의 정확한 발표시각을 보수적으로 제외.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.cnbc.com/2026/11/10/coreweave-earnings-preview-debt-capex.html",
+      "title": "코어위브 CDS·CAPEX",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "시간범위 밖",
+      "reason": "11월10일 또는 과거 신용시장 자료. 당일 신규 확정 수치로 재표기하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-13",
+      "title": "글로벌 지수·국채·환율·원자재",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "기타",
+      "reason": "원문 읽기 실패 및 검색 관측 수치가 10분 신선도 미충족. 관측시각 추정 금지.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "foreign",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/malaysia-says-it-is-investigating-if-any-chips-linked-speedmatrix-were-re-2026-11-13/",
+      "title": "말레이시아 조사 Reuters",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "reviewed for Korean equity relevance; not selected",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": true,
+      "decision": "중복",
+      "reason": "MITI PDF와 Dow Jones 확인본 한 사건으로 합침. 읽기 실패한 Reuters를 검증 출처로 계산하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113137600002",
+      "title": "원달러 마감",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "기타",
+      "reason": "장 마감 관측을 19시의 신선한 시장 동향으로 재표기하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113088500001",
+      "title": "대통령 M&A 발언",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "기타",
+      "reason": "발언 사실은 본문 확인했으나 최초 발언의 시·분 미확인. 정책 확정이나 법 개정으로 기술하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113155451017",
+      "title": "정부 GPU 공급 재확인",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "기타",
+      "reason": "정부의 당일 오전 회의·페이스북 발표에 대한 17:50 종합기사. 최초 공식 확인 시각 미검증으로 제외.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113031800051",
+      "title": "HJ중공업 실적",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "기타",
+      "reason": "08:47 원문 수치는 확인했으나 더 이른 최초 공시가 직전 asOf 이후인지 확정하지 못함.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://biz.chosun.com/industry/company/2026/11/13/EV34WCS6KBCWVEL4KZDC264I5Q/",
+      "title": "HJ중공업 실적 재보도",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": true,
+      "decision": "중복",
+      "reason": "08:47 연합뉴스와 같은 실적 사건. 10:02 기사로 신규성 부여 금지.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://www.newspim.com/news/view/20261113001266",
+      "title": "타임엑스AI 공급계약",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "기타",
+      "reason": "15:59 원문 본문 계약 사실은 확인했으나 최초 기업 발표의 시·분을 확인하지 못함. FDA 승인으로 해석하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://www.mt.co.kr/amp/stock/2026/11/13/2026111315419655425",
+      "title": "휴마시스 자사주 기사",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": true,
+      "decision": "중복",
+      "reason": "15:44 기사와 11월16일 출고 표기 상충. 15:34 공시 원문 서식으로 채택하며 해당 기사만으로 날짜를 정하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88139",
+      "title": "자본시장 간담회 사전 안내",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "의견·전망",
+      "reason": "전문가 제언·예정 간담회 자료. 확정된 새 법규로 발행하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88143",
+      "title": "지역 정책금융기관 협력",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "기타",
+      "reason": "원문 내용·최초 발표시각 검증 완료 못함. 목록 제목만으로 채택하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0001773/view.do?nttId=11066484&menuNo=200037&programType=newsData&relate=Y&depth=200037",
+      "title": "통안증권 입찰 공고",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "기타",
+      "reason": "원문 추출에서 메뉴 비중 높고 실제 공고 상세·시각 최종 검증 미완료.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://samara.kr/disclosure/20261113901991",
+      "title": "에피소드컴퍼니 최대주주변경",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "전체 공시목록에서 17:39 제출 확인, 변경 세부 원문 미검증.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://samara.kr/disclosure/20261113001593",
+      "title": "우성머티리얼스 증자 정정",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "전체 목록에서 17:37 제출 확인, 변경액·신규 사실 세부 검증 미완료.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://samara.kr/disclosure/20261113801927",
+      "title": "디아이동일 소각",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "전체 목록에서 17:32 제출 확인. 소각 주수·기간 원문 미검증.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://samara.kr/disclosure/20261113901904",
+      "title": "엔젯 공급계약 정정",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "17:18 제출 목록만 확인. 실제 계약 변경분 미검증.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://samara.kr/disclosure/20261113901784",
+      "title": "이지케어텍 소각",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "17:04 제출 목록만 확인. 소각 상세 미검증.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://samara.kr/disclosure/20261113801469",
+      "title": "콜마홀딩스 실적",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "16:32 제출 목록만 확인. 실제 분기·연결 수치 미검증.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://samara.kr/disclosure/20261113801408",
+      "title": "TKG휴켐스 실적",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "16:27 제출 목록만 확인. 수치 원문 미검증.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://samara.kr/disclosure/20261113001053",
+      "title": "파이온엑스 증자 정정",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "원문 확인 불가",
+      "reason": "16:08 제출 목록 확인. AI 요약만으로 발행가 변경을 확정하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    },
+    {
+      "region": "domestic",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113034900002",
+      "title": "오전 간담회 안내",
+      "eventAt": null,
+      "newFact": null,
+      "verificationStatus": "not_selected",
+      "koreaRelevance": "direct domestic event; exact fact validation incomplete",
+      "scopeRank": null,
+      "certainty": null,
+      "duplicate": false,
+      "decision": "기타",
+      "reason": "사전 일정 재보도. 실제 새 정책 확정으로 채택하지 않음.",
+      "checkedAt": "2026-11-13T10:14:38.918Z"
+    }
+  ],
+  "counts": {
+    "foreignCandidates": 13,
+    "domesticCandidates": 29,
+    "verifiedCandidates": 11,
+    "duplicateExcluded": 3
+  },
+  "preflight": {
+    "tradingDayEvidence": {
+      "verified": true,
+      "method": "official_kind_trade_plus_independent_krx_quote",
+      "calendarSourceUrl": "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain",
+      "sources": [
+        {
+          "sourceUrl": "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain",
+          "market": "KRX",
+          "code": "005930",
+          "date": "2026-11-13",
+          "observedAt": "2026-11-13T15:30:10+09:00",
+          "checkedAt": "2026-11-13T19:01:19.162977+09:00",
+          "tradeVolume": 1796979,
+          "tradeAmount": 370177674000,
+          "kind": "actual_krx_trade"
+        },
+        {
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/005930/detail?codeType=KRX",
+          "market": "KRX",
+          "code": "005930",
+          "date": "2026-11-13",
+          "observedAt": "2026-11-13T17:05:21+09:00",
+          "checkedAt": "2026-11-13T17:05:29.873385+09:00",
+          "tradeVolume": 12365610,
+          "tradeAmount": 2592200000000,
+          "kind": "actual_krx_trade"
+        }
+      ],
+      "reviewedAt": "2026-11-13T10:09:55.396Z",
+      "provenance": [
+        "operations/source-checks/2026-11-13-1850/43405826713-1.json",
+        "operations/briefing-diagnostics/briefing-1550-diagnostic-retry-1794557100898.json"
+      ],
+      "note": "Independent researcher corroboration of actual immutable same-date trades. Original observedAt/checkedAt retained; fresh Naver re-query returned an after-18:00 observation and was not used as KRX-session proof. Server preflight's incomplete result is preserved unchanged. Diagnostic record is used only as dated trade evidence, never as a draft or a publication trigger."
+    },
+    "serverSourceCheckPath": "operations/source-checks/2026-11-13-1850/43405826713-1.json",
+    "serverResultUnchanged": true
+  },
+  "failures": [
+    {
+      "source": "Reuters",
+      "reason": "Source check 401; no bypass. Individual extraction failed. Alternatives MITI/Dow Jones/Yonhap investigated."
+    },
+    {
+      "source": "DART",
+      "reason": "Server exact-date count 1579; reader extract returned stale morning five filings. Detail viewer bodies unavailable; original-format OpenDART mirrors plus independent articles used."
+    },
+    {
+      "source": "Naver fresh quote",
+      "reason": "Current observation after18:00 not used; preserved17:05:21 actual trade corroborates fresh official KIND15:30:10."
+    },
+    {
+      "source": "Firecrawl",
+      "reason": "Credit exhaustion; request not executed. Continued using independent Tavily and web search."
+    }
+  ],
+  "note": "Counts include only explicit candidate decisions here, not all search URLs or all 1579 filings. Missing detailed validation is recorded as exclusion, never verified. No market snapshots; no US themes."
+}
