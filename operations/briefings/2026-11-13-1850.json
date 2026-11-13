@@ -1,8 +1,8 @@
 {
   "releaseAt": "2026-11-13T18:50:00+09:00",
-  "checkedAt": "2026-11-13T10:15:44.370Z",
-  "state": "staged",
-  "published": false,
+  "checkedAt": "2026-11-13T10:17:04.858Z",
+  "state": "published",
+  "published": true,
   "requestId": "recovery-20261113-1850-1794564056272",
   "previousReleaseAt": "2026-11-13T08:50:00+09:00",
   "previousAsOf": "2026-11-12T23:40:36.914Z",
@@ -30,7 +30,7 @@
     }
   ],
   "missingCoverage": [],
-  "reason": "Validated editorial sort, full stage schema and D~D-2 fact history. Identical private/public drafts re-read matched. Await actual server publication root/archive verification.",
+  "reason": "Original 18:50 edition recovered before 19:20. Both publisher workflows succeeded; root and dated edition matched at publication commit. Identical two drafts and exact private mirror re-read confirmed. Initial operation-record HTTP422 was retried successfully.",
   "candidates": [
     {
       "sourceUrl": "https://www.reuters.com/business/energy/world-oil-market-is-returning-surplus-gulf-exports-recover-iea-says-2026-11-13/",
@@ -133,5 +133,28 @@
     "duplicateExcluded": 3
   },
   "researchPath": "operations/research/2026-11-13-1850.json",
-  "asOf": "2026-11-13T10:14:58.840Z"
+  "asOf": "2026-11-13T10:14:58.840Z",
+  "verification": {
+    "checkedAt": "2026-11-13T10:17:04.858Z",
+    "publicRootMatches": true,
+    "datedEditionMatches": true,
+    "privateDraftMatches": true,
+    "publicDraftMatches": true,
+    "privateMirrorMatches": true,
+    "itemCount": 11,
+    "foreignCount": 1,
+    "domesticCount": 10,
+    "publicationCommit": "68508264e0585ed7ad3fd49884357e6dc7634006",
+    "asOf": "2026-11-13T10:14:58.840Z",
+    "workflow": {
+      "id": 43405826713,
+      "attempt": 2,
+      "conclusion": "success"
+    },
+    "initialFailure": {
+      "phase": "publication operation record write after successful atomic publication",
+      "httpStatus": 422,
+      "recoveredBy": "rerun_failed_jobs_already_published_readback"
+    }
+  }
 }
