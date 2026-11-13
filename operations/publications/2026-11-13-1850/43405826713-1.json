@@ -2,9 +2,11 @@
   "releaseAt": "2026-11-13T18:50:00+09:00",
   "startedAt": "2026-11-13T19:01:15.351398+09:00",
   "deadlineAt": "2026-11-13T19:20:00+09:00",
-  "state": "publishing",
+  "state": "publication_failed",
   "polls": 57,
-  "lastIssue": "missing_draft_for_original_slot",
+  "lastIssue": "HTTPError: HTTP Error 422: Unprocessable Entity",
+  "commit": "d5b71a11579549728df2a950502a21f72be667c5",
   "asOf": "2026-11-13T10:14:58.840Z",
-  "checkedAt": "2026-11-13T19:15:51.916584+09:00"
+  "itemCount": 11,
+  "checkedAt": "2026-11-13T19:16:01.638537+09:00"
 }
