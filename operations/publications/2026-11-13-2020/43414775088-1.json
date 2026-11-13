@@ -2,9 +2,8 @@
   "releaseAt": "2026-11-13T20:20:00+09:00",
   "startedAt": "2026-11-13T20:09:44.184093+09:00",
   "deadlineAt": "2026-11-13T20:50:00+09:00",
-  "state": "publishing",
+  "state": "publication_failed",
   "polls": 143,
-  "lastIssue": "missing_draft_for_original_slot",
-  "asOf": "2026-11-13T11:45:57.405Z",
-  "checkedAt": "2026-11-13T20:46:26.219899+09:00"
+  "lastIssue": "HTTPError: HTTP Error 422: Unprocessable Entity",
+  "checkedAt": "2026-11-13T20:46:36.447061+09:00"
 }
