@@ -1,0 +1,17 @@
+{
+  "releaseAt": "2026-11-13T20:20:00+09:00",
+  "requestId": "prepare-20261113-2020-1794568164794",
+  "checkedAt": "2026-11-13T11:09:51.613Z",
+  "state": "researching",
+  "published": false,
+  "failedSources": [],
+  "missingCoverage": [
+    "foreign_market",
+    "foreign_policy",
+    "foreign_technology",
+    "domestic_disclosures",
+    "domestic_policy",
+    "domestic_market"
+  ],
+  "reason": "Actual original-slot research initiated; server preflight source evidence and editorial candidate verification pending. Previous public edition 18:50, asOf 2026-11-13T10:14:58.840Z. No news selected without source-time verification."
+}
