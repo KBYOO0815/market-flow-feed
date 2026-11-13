@@ -2,6 +2,7 @@
 import json
 import os
 import re
+import time
 import urllib.error
 from publish_feed import api
 
@@ -14,7 +15,7 @@ def save(path, value):
     os.makedirs('operation-artifacts', exist_ok=True)
     with open('operation-artifacts/' + path.replace('/', '_'), 'w') as stream:
         stream.write(content)
-    for attempt in range(3):
+    for attempt in range(6):
         head = api('GET', 'git/ref/heads/main')['object']['sha']
         commit = api('GET', 'git/commits/' + head)
         tree = api('POST', 'git/trees', {'base_tree': commit['tree']['sha'], 'tree': [
@@ -25,5 +26,6 @@ def save(path, value):
             api('PATCH', 'git/refs/heads/main', {'sha': new['sha'], 'force': False})
             return
         except urllib.error.HTTPError as error:
-            if error.code not in (409, 422) or attempt == 2:
+            if error.code not in (409, 422) or attempt == 5:
                 raise
+            time.sleep(min(0.2 * (2 ** attempt), 3.2))
