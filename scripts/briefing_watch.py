@@ -38,6 +38,9 @@ def watch(release, record, read=read_remote, write=publish,
             else:
                 try:
                     payload = prepare(draft, clock())
+                    from editorial_rules import active, history_for, validate_history
+                    if active(payload):
+                        validate_history(payload, history_for(payload, root, day, read))
                 except (ValueError, KeyError, TypeError) as error:
                     state['lastIssue'] = 'draft_validation_failed: ' + str(error)[:400]
                 else:

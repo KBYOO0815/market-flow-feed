@@ -50,6 +50,7 @@ def payload():
                 for key in ('foreign_market','foreign_policy','foreign_technology','domestic_disclosures','domestic_policy','domestic_market')}
     return {'schemaVersion': 2, 'releaseAt': RELEASE.isoformat(), 'asOf': CHECKED.isoformat(),
             'tradingDayVerified': True, 'calendarSourceUrl': 'https://example.com/calendar', 'items': [],
+            'selectionAudit': {'mode': 'explicit', 'startAt': (CHECKED-dt.timedelta(hours=1)).isoformat(), 'endAt': CHECKED.isoformat()},
             'researchAudit': {'coverage': coverage, 'foreignCandidates': 0, 'domesticCandidates': 0,
                               'verifiedCandidates': 0, 'duplicateExcluded': 0}}
 

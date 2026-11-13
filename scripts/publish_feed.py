@@ -68,6 +68,11 @@ def publish(payload):
         expired = expired_archive_paths(existing_tree, payload['releaseAt'])
         path, _ = archive_update(payload, None)
         previous, _ = read_remote(path, head, missing=True)
+        from editorial_rules import active, history_for, validate_history
+        if active(payload):
+            history = history_for(payload, current, previous,
+                                  lambda name, **kwargs: read_remote(name, head, **kwargs))
+            validate_history(payload, history)
         path, day = archive_update(payload, previous)
         if current == payload and previous == day and not expired:
             return head

@@ -148,6 +148,8 @@ def validate(payload):
                 raise ValueError("intraday quotes expire within 15 minutes of observation")
     if correction_added and not correction_added.issubset(ids):
         raise ValueError("correction references missing item IDs")
+    from editorial_rules import validate_selection
+    validate_selection(payload)
     return payload
 
 def check_release(payload, now):
