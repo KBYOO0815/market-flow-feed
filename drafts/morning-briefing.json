@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "asOf": "2026-11-13T10:14:58.840Z",
-  "releaseAt": "2026-11-13T18:50:00+09:00",
+  "asOf": "2026-11-13T11:45:57.405Z",
+  "releaseAt": "2026-11-13T20:20:00+09:00",
   "tradingDayVerified": true,
   "calendarSourceUrl": "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain",
   "tradingDayEvidence": {
@@ -37,600 +37,230 @@
       "operations/source-checks/2026-11-13-1850/43405826713-1.json",
       "operations/briefing-diagnostics/briefing-1550-diagnostic-retry-1794557100898.json"
     ],
-    "note": "Independent researcher corroboration of actual immutable same-date trades. Original observedAt/checkedAt retained; fresh Naver re-query returned an after-18:00 observation and was not used as KRX-session proof. Server preflight's incomplete result is preserved unchanged. Diagnostic record is used only as dated trade evidence, never as a draft or a publication trigger."
+    "note": "동일 날짜의 공식KIND+독립네이버KRX 실제 양수거래 증거 재검증. 최초 관측·조회시각 그대로 보존. 현재 시세 아님.",
+    "revalidatedAt": "2026-11-13T11:45:57.405Z",
+    "evidenceUse": "same_day_trading_calendar_only"
   },
   "selectionAudit": {
     "mode": "since_previous",
-    "startAt": "2026-11-12T23:40:36.914Z",
-    "endAt": "2026-11-13T10:14:58.840Z",
-    "previousReleaseAt": "2026-11-13T08:50:00+09:00",
-    "previousAsOf": "2026-11-12T23:40:36.914Z"
+    "startAt": "2026-11-13T10:14:58.840Z",
+    "endAt": "2026-11-13T11:45:57.405Z",
+    "previousReleaseAt": "2026-11-13T18:50:00+09:00",
+    "previousAsOf": "2026-11-13T10:14:58.840Z"
   },
   "researchAudit": {
     "coverage": {
       "foreign_market": {
-        "checkedAt": "2026-11-13T10:14:38.918Z",
+        "checkedAt": "2026-11-13T11:45:57.405Z",
         "sourceUrls": [
-          "https://www.yna.co.kr/market-plus/global-market",
-          "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-13",
-          "https://www.cloudadminhub.com/microsoft-365-service-health/mo1550821"
-        ]
+          "https://kr.investing.com/news/commodities-news/article-1744153",
+          "https://kr.investing.com/rates-bonds/u.s.-10-year-bond-yield-opinion/29",
+          "https://m.finance.daum.net/global/commodities",
+          "https://kr.investing.com/news/commodities-news",
+          "https://kr.investing.com/commodities/real-time-futures",
+          "https://kr.investing.com/news/commodities-news/article-1576191",
+          "https://www.canadianminingreport.com/blog/gold-prices-bounce-after-steep-decline-as-fed-rate-hike-fears-persist-is-it-a-recovery",
+          "https://tradingeconomics.com/commodity/gold",
+          "https://www.tradingkey.com/news/commodities/261677877-us-treasury-yields-extend-gains-weighing-on-gold-tradingkey",
+          "https://robinhood.com/us/en/prediction-markets/metals/events/gold-price-november-13-2026-nov-13-2026",
+          "https://www.bloomberg.com/news/articles/2026-11-12/stock-market-today-dow-s-p-live-updates"
+        ],
+        "note": "실제 검색·원문 대체 조회 수행. 원문 시각/신규성 미확인 결과는 채택하지 않음; 검색 결과 부재를 정상 0건으로 단정하지 않음."
       },
       "foreign_policy": {
-        "checkedAt": "2026-11-13T10:14:38.918Z",
+        "checkedAt": "2026-11-13T11:45:57.405Z",
         "sourceUrls": [
-          "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+          "https://www.briefs.co/news/trump-officials-stand-by-tariffs-one-week-after-midterms",
+          "https://www.youtube.com/watch?v=b6Ywff5Dexo",
+          "https://abc17news.com/money/cnn-business-consumer/2026/11/13/trumps-tariffs-face-a-new-threat-republicans",
+          "https://www.japantimes.co.jp/business/2026/11/07/economy/trump-congress-tariffs-clash",
+          "https://www.cnn.com/2026/11/13/economy/trumps-tariffs-new-threat",
+          "https://www.congress.gov/crs-product/R49481",
+          "https://www.sisajournal.com/news/articleView.html?idxno=247829",
+          "https://economychosun.com/site/data/html_dir/2022/09/26/2022092600030.html",
+          "https://www.chosun.com/international/china/2026/10/20/D4QXUVMYK5BCXKRKT6A2AUJZGQ",
+          "https://www.youtube.com/watch?v=DFL7_BU9OmE",
+          "https://www.youtube.com/watch?v=Jdk_aXqPVks",
+          "https://www.yna.co.kr/view/MYH20220408014600534",
+          "https://finance.yahoo.com/news/federal-keeps-rate-unchanged-1st-191006241.html",
+          "https://www.federalreserve.gov/releases/h15",
+          "https://www.cnbc.com/2026/10/28/fed-meeting-today-live-updates.html",
+          "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
           "https://www.federalreserve.gov/newsevents/2026-november.htm",
-          "https://www.yna.co.kr/view/AKR20261113153500109",
-          "https://www.miti.gov.my/miti/resources/Speech/MEDIA_STATEMENT_13112026.pdf"
-        ]
+          "https://insidetrade.com/daily-news/report-calls-next-congress-unwind-tariffs-use-trade-lower-costs",
+          "https://www.progressivepolicy.org/after-midterm-rebuke-congress-should-take-back-tariff-power-and-repeal-trumps-decrees",
+          "https://www.supplychaindive.com/news/bipartisan-push-possible-to-curb-trump-tariffs/874347",
+          "https://www.cnbc.com/2025/04/04/trump-tariffs-congress-constitution-law-trade.html?msockid=1b2c76e7e8a86d7e01e7602ae9716cbc",
+          "https://www.globalpropertyguide.com/asia/taiwan/price-history",
+          "https://finance.yahoo.com/news/taiwans-ai-powered-economy-soars-045959877.html",
+          "https://finance.yahoo.com/news/taiwans-ai-powered-economy-soars-045959877.html?fr=sycsrp_catchall",
+          "https://www.youtube.com/watch?v=IalKPCVFUpY",
+          "https://ca.finance.yahoo.com/news/taiwans-ai-powered-economy-soars-050508573.html",
+          "https://www.10things.news/p/10-things-global-news-13th-november-797",
+          "https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Sink-as-Iran-and-Ukraine-Peace-Optimism-Builds.html",
+          "https://www.politico.com/news/2026/11/13/russia-and-ukraine-trade-strikes-as-eu-summit-begins",
+          "https://www.arabnews.com/energy/oil-falls-on-hopes-russia-ukraine-energy-ceasefire-will-boost-supplies-3005873",
+          "https://www.cnbcafrica.com/2026/oil-falls-after-trump-declares-energy-ceasefire-between-russia-and-ukraine",
+          "https://www.federalreserve.gov/newsevents/2026-november.htm"
+        ],
+        "note": "실제 검색·원문 대체 조회 수행. 원문 시각/신규성 미확인 결과는 채택하지 않음; 검색 결과 부재를 정상 0건으로 단정하지 않음."
       },
       "foreign_technology": {
-        "checkedAt": "2026-11-13T10:14:38.918Z",
+        "checkedAt": "2026-11-13T11:45:57.405Z",
         "sourceUrls": [
+          "https://blog.naver.com/PostView.naver?blogId=perfect_freedom&logNo=224263066733&redirect=Dlog",
+          "https://finance.yahoo.com/sectors/technology/articles/north-american-ai-data-center-120000137.html",
+          "https://eternalhumble.tistory.com/entry/%EA%B8%80%EB%A1%9C%EB%B2%8C-AI-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0-%ED%88%AC%EC%9E%90-%EC%9C%A0%EB%9F%BD%EC%A4%91%EA%B5%AD%EC%9D%84-%ED%95%A9%EC%B3%90%EB%8F%84-%EB%AF%B8%EA%B5%AD%EC%9D%98-8%EB%B6%84%EC%9D%98-1-%E2%80%94-%EC%8F%A0%EB%A6%BC%EC%9D%98-%EC%8B%A4%EC%B2%B4-feat-%EC%8A%A4%ED%83%A0%ED%8D%BC%EB%93%9C-2026-AI-Index",
+          "https://finance.yahoo.com/markets/stocks/articles/micron-capitalize-rising-hbm-demand-132400616.html",
+          "https://x.com/babybluecream/status/2064320872413049313",
+          "https://www.tradingkey.com/analysis/stocks/us-stocks/262033406-semiconductor-equipment-stocks-ai-capex-hbm-tradingkey",
+          "https://www.simianx.ai/stories/magnificent-7-earnings-dates-results-tracker",
+          "https://www.cnbc.com/2026/01/27/big-tech-earnings-2026-ai-spend.html",
+          "https://note.com/noted_jacana411/n/nef8eee48c4ee?hl=en",
+          "https://www.cnbc.com/2026/02/25/nvidia-nvda-earnings-report-q4-2026.html",
+          "https://finance.yahoo.com/news/why-microsoft-meta-amazon-google-141715693.html",
+          "https://dealroom.co/news/164286-investors-rush-to-insure-against-an-ai-blow-up-cds-trading-on-big-tech-d",
+          "https://finance.yahoo.com/markets/options/articles/why-investors-buying-credit-default-115400301.html",
+          "https://www.securitasglobal.com/risk-perspectives/oracle-cds-record-288-basis-points-ai-debt",
+          "https://energynow.com/2026/02/the-3-trillion-ai-data-center-build-out-becomes-all-consuming-for-debt-markets",
+          "https://www.ai-cio.com/news/how-ai-debt-issuance-is-reshaping-the-corporate-bond-market",
           "https://nvidianews.nvidia.com/news",
-          "https://news.samsung.com/global/",
-          "https://www.miti.gov.my/miti/resources/Speech/MEDIA_STATEMENT_13112026.pdf"
-        ]
+          "https://news.samsung.com/global/"
+        ],
+        "note": "실제 검색·원문 대체 조회 수행. 원문 시각/신규성 미확인 결과는 채택하지 않음; 검색 결과 부재를 정상 0건으로 단정하지 않음."
       },
       "domestic_disclosures": {
-        "checkedAt": "2026-11-13T10:14:38.918Z",
+        "checkedAt": "2026-11-13T11:45:57.405Z",
         "sourceUrls": [
+          "https://www.biospectator.com/news/view/28010",
+          "https://lecos.tistory.com/70",
+          "https://news.bizwatch.co.kr/article/healthcare/2026/09/07/0001",
+          "https://m.blog.naver.com/bian/222272900609",
+          "https://www.tupl.kr/insight/kr-disclosure-2026-11-11",
+          "https://www.datatooza.com/list.php?ct=g1203",
+          "https://www.medipharmhealth.co.kr/news/article.html?no=120674",
+          "https://www.mk.co.kr/news/stock/12112986",
+          "https://www.datatooza.com/list.php?ct=g1205",
+          "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=&sort=&series=&mdayCnt=1",
           "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.13",
-          "https://samara.kr/today",
-          "https://samara.kr/disclosure/20261113000076",
-          "https://samara.kr/disclosure/20261113900562",
-          "https://samara.kr/disclosure/20261113000302",
-          "https://samara.kr/disclosure/20261113000784",
-          "https://samara.kr/disclosure/20261113901075",
-          "https://samara.kr/disclosure/20261113900978",
-          "https://samara.kr/disclosure/20261113001675",
-          "https://samara.kr/disclosure/20261113001541",
-          "https://samara.kr/disclosure/20261113900774"
-        ]
+          "https://samara.kr/today"
+        ],
+        "note": "실제 검색·원문 대체 조회 수행. 원문 시각/신규성 미확인 결과는 채택하지 않음; 검색 결과 부재를 정상 0건으로 단정하지 않음."
       },
       "domestic_policy": {
-        "checkedAt": "2026-11-13T10:14:38.918Z",
+        "checkedAt": "2026-11-13T11:45:57.405Z",
         "sourceUrls": [
-          "https://www.fsc.go.kr/no010101/88139",
-          "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c",
+          "https://www.fsc.go.kr/no010101/85936?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+          "https://www.fsc.go.kr/po02010101",
+          "https://www.youtube.com/watch?v=zONzGlx60pw",
+          "https://www.fsc.go.kr/no010101/85892?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+          "https://blog.naver.com/blogfsc/224120930528",
+          "https://news.einfomax.co.kr/news/articleView.html?idxno=4433634",
+          "https://www.youtube.com/watch?v=ICX7Ef6-OY0",
+          "https://www.yonhapnewstv.co.kr/news/MYH20260819220930RuY",
+          "https://ko.wikipedia.org/wiki/%EC%99%95%EC%9D%B4_(%EC%A0%95%EC%B9%98%EC%9D%B8)",
+          "https://www.instagram.com/reel/DIOXx18x8Tq",
+          "https://www.vietnam.vn/ko/ngay-13-11-2026-tung-duoc-du-bao-la-tan-the-cac-nha-khoa-hoc-tinh-the-nao",
+          "https://namu.wiki/w/%EC%99%95%EC%9D%B4(%EC%99%B8%EA%B5%90%EA%B4%80)",
+          "https://insight.mofa.go.kr",
+          "https://www.instagram.com/mofakr_eng?hl=en",
+          "https://x.com/MOFAkr_eng",
+          "https://energy.mofa.go.kr/index.jsp",
+          "https://www.facebook.com/mofakr.eng",
+          "https://globalexchanges.com/latest-news/korean-republic-fsc-announces-capital-market-rules-change/146233",
+          "https://en.wikipedia.org/wiki/Financial_Services_Commission_(South_Korea)",
+          "https://x.com/FSC_Korea",
+          "https://regtechanalyst.com/koreas-fsc-targets-sweeping-financial-reform-for-2026",
+          "https://globaledge.msu.edu/global-resources/resource/10726",
+          "https://www.bok.or.kr/eng/stats/statsPublictSchdul/listCldr.do?menuNo=400359",
+          "https://www.bok.or.kr/eng/main/contents.do?menuNo=400185",
+          "https://www.bok.or.kr/eng/bbs/E0000634/view.do?nttId=10097645&menuNo=400069",
+          "https://www.bok.or.kr/portal/main/main.do",
+          "https://bokconference.or.kr",
+          "https://www.definitions.net/definition/motie",
+          "https://www.devex.com/organizations/ministry-of-trade-industry-and-energy-motie-south-korea-169506",
+          "https://www.motir.go.kr/kftz/en/index.do",
+          "https://english.motie.go.kr/eng/article/EATCLdfa319ada/2172/view?pageIndex=1&bbsCdN=2",
+          "https://www.korea.kr/news/policyNewsView.do?newsId=148956316",
+          "https://eiec.kdi.re.kr/policy/materialView.do?num=274688",
           "https://www.mofe.go.kr",
-          "https://www.yna.co.kr/view/AKR20261113102100003"
-        ]
+          "https://www.youtube.com/watch?v=Rvx78vPzm6k",
+          "https://www.businesspost.co.kr/BP?command=article_view&num=410969",
+          "https://www.yna.co.kr/view/AKR20261113173100083",
+          "https://www.yna.co.kr/view/AKR20261113172900083",
+          "https://www.fsc.go.kr/no010101",
+          "https://www.mofe.go.kr"
+        ],
+        "note": "실제 검색·원문 대체 조회 수행. 원문 시각/신규성 미확인 결과는 채택하지 않음; 검색 결과 부재를 정상 0건으로 단정하지 않음."
       },
       "domestic_market": {
-        "checkedAt": "2026-11-13T10:14:38.918Z",
+        "checkedAt": "2026-11-13T11:45:57.405Z",
         "sourceUrls": [
-          "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain",
-          "https://stock.naver.com/api/domestic/detail/005930/detail?codeType=KRX",
-          "https://samara.kr/disclosure/20261113902051"
-        ]
+          "https://zel0rd.tistory.com/246",
+          "https://m.blog.naver.com/lawyerkoo/220639224639",
+          "https://www.topstarnews.net/news/articleView.html?idxno=16273943",
+          "https://kbthink.com/stock/market-warning.html",
+          "https://www.iprovest.com/weblogic/RSNewsServlet?scr_id=8&mode=detail&listnum=239&dgubun=6&ymd=20260902&seqno=20093622",
+          "https://www.youtube.com/watch?v=cCjknGt4t0s",
+          "https://www.instagram.com/p/DfrNm0mD1T8",
+          "https://www.kpx.or.kr",
+          "https://www.fsc.go.kr/no010101/88071?srchCtgry=&curPage=&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+          "https://www.shinkim.com/kor/media/newsletter/3434"
+        ],
+        "note": "실제 검색·원문 대체 조회 수행. 원문 시각/신규성 미확인 결과는 채택하지 않음; 검색 결과 부재를 정상 0건으로 단정하지 않음."
       }
     },
-    "foreignCandidates": 13,
-    "domesticCandidates": 29,
-    "verifiedCandidates": 11,
-    "duplicateExcluded": 3
+    "foreignCandidates": 58,
+    "domesticCandidates": 62,
+    "verifiedCandidates": 1,
+    "duplicateExcluded": 1
   },
   "items": [
     {
-      "id": "20261113-1850-malaysia-speedmatrix-export-investigation",
-      "title": "말레이시아, 스피드매트릭스 AI 반도체 재수출 조사",
-      "summary": "말레이시아 투자통상산업부는 스피드매트릭스가 반입한 AI 반도체의 재수출 여부와 법규 준수 여부를 관세청과 조사하고 있다고 밝혔다. 메가스피드와 스피드매트릭스에 면죄부를 준 적이 없다고 명시했다.",
-      "publishedAt": "2026-11-13T14:13:00+09:00",
-      "sourceUrl": "https://www.morningstar.com/news/dow-jones/20261113101/malaysia-probes-possible-illegal-re-exports-of-us-ai-chips-by-speedmatrix",
-      "sourceName": "Dow Jones·말레이시아 MITI",
-      "relatedStocks": [],
-      "category": "반도체·AI",
-      "region": "foreign",
-      "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://www.miti.gov.my/miti/resources/Speech/MEDIA_STATEMENT_13112026.pdf",
-      "reviewNote": "MITI 11월13일 성명 원문과 Dow Jones 05:13 GMT 원문 교차 확인. eventAt은 검증된 원문 최초 보도시각 14:13 KST이며 성명 문서 자체에는 시·분이 없음. 전회차 CEO 사임·H200 조사와 다른 말레이시아의 실제 조사 확인만 기재. 불법 유출 확정으로 서술하지 않음.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 1,
-      "selection": {
-        "eventKey": "malaysia-speedmatrix-export-investigation",
-        "eventAt": "2026-11-13T14:13:00+09:00",
-        "newness": "followup",
-        "verificationStatus": "confirmed",
-        "materialType": "event",
-        "sourceClass": "ft_wsj",
-        "facts": [
-          {
-            "key": "malaysia-speedmatrix-export-investigation-announcement-20261113",
-            "occurredAt": "2026-11-13T14:13:00+09:00",
-            "sourceUrl": "https://www.morningstar.com/news/dow-jones/20261113101/malaysia-probes-possible-illegal-re-exports-of-us-ai-chips-by-speedmatrix",
-            "statement": "말레이시아 투자통상산업부는 스피드매트릭스가 반입한 AI 반도체의 재수출 여부와 법규 준수 여부를 관세청과 조사하고 있다고 밝혔다. 메가스피드와 스피드매트릭스에 면죄부를 준 적이 없다고 명시했다."
-          }
-        ],
-        "scopeRank": 2,
-        "scores": {
-          "impact": 4,
-          "certainty": 5,
-          "novelty": 4,
-          "koreaRelevance": 4
-        },
-        "relatedEvidence": []
-      }
-    },
-    {
-      "id": "20261113-1850-korea-petroleum-price-cap-round12",
-      "title": "정부, 12차 석유 최고가격 4주간 동결",
-      "summary": "산업통상부는 11월 14일 0시부터 12월 11일까지 적용할 석유 최고가격을 리터당 휘발유 1,784원·경유 1,773원·등유 1,380원으로 동결했다.",
-      "publishedAt": "2026-11-13T18:00:00+09:00",
-      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113102100003",
-      "sourceName": "연합뉴스·뉴스핌",
+      "id": "20261113-2020-korea-china-ministers-statements",
+      "title": "한중 외교장관, 관계 개선·전략적 소통 발언",
+      "summary": "조현 외교부 장관은 한반도의 평화와 안정이 한중 공동의 이익이라며 전략적 소통 강화를 언급했다. 왕이 중국 외교부장은 양국 관계가 개선과 발전의 궤도로 돌아왔다고 말했다.",
+      "publishedAt": "2026-11-13T19:31:00+09:00",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113173100083",
+      "sourceName": "연합뉴스",
       "relatedStocks": [],
       "category": "정책·발언",
       "region": "domestic",
       "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://www.newspim.com/news/view/20261113001269",
-      "reviewNote": "두 독립 원문의 18:00 발표·시행기간·리터당 가격 일치. 뉴스핌 18:45 수정시각을 신규 발표시각으로 사용하지 않음. 정부 발표 사실만 채택.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 2,
+      "reviewedAt": "2026-11-13T11:45:57.405Z",
+      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113172900083",
+      "reviewNote": "19:30·19:31 속보 원문을 재조회해 실제 발언과 송고시각 확인. 인적교류 기대 수치·실제 경제 합의·시장 전망은 포함하지 않음. 한 사건의 두 발언을 병합. 특정 종목 직접 사업관계 근거가 없어 연결하지 않음.",
+      "validUntil": "2026-11-16T06:40:00+09:00",
+      "impactRank": 1,
       "selection": {
-        "eventKey": "korea-petroleum-price-cap-round12",
-        "eventAt": "2026-11-13T18:00:00+09:00",
+        "eventKey": "korea-china-foreign-ministers-beijing-20261113",
+        "eventAt": "2026-11-13T19:31:00+09:00",
         "newness": "new",
         "verificationStatus": "confirmed",
         "materialType": "event",
         "sourceClass": "major_media",
         "facts": [
           {
-            "key": "korea-petroleum-price-cap-round12-announcement-20261113",
-            "occurredAt": "2026-11-13T18:00:00+09:00",
-            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113102100003",
-            "statement": "산업통상부는 11월 14일 0시부터 12월 11일까지 적용할 석유 최고가격을 리터당 휘발유 1,784원·경유 1,773원·등유 1,380원으로 동결했다."
-          }
-        ],
-        "scopeRank": 1,
-        "scores": {
-          "impact": 4,
-          "certainty": 5,
-          "novelty": 5,
-          "koreaRelevance": 5
-        },
-        "relatedEvidence": []
-      }
-    },
-    {
-      "id": "20261113-1850-gsenc-energy-materials-subrogation-20261113",
-      "title": "GS건설, 자회사 채무·이자 1,125억5,100만원 대위변제 공시",
-      "summary": "GS건설은 에너지머티리얼즈의 산업은행 잔여 채무·이자 1,125억5,100만원을 대위변제하는 거래를 공시했다. 이에 따른 구상권과 기존 근저당권을 취득한다고 밝혔다.",
-      "publishedAt": "2026-11-13T09:32:00+09:00",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000076",
-      "sourceName": "DART·원문 대체 확인",
-      "relatedStocks": [
-        "GS건설"
-      ],
-      "category": "국내공시",
-      "region": "domestic",
-      "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113059700003",
-      "reviewNote": "DART 등록시각 09:32 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 3,
-      "selection": {
-        "eventKey": "gsenc-energy-materials-subrogation-20261113",
-        "eventAt": "2026-11-13T09:32:00+09:00",
-        "newness": "new",
-        "verificationStatus": "confirmed",
-        "materialType": "event",
-        "sourceClass": "filing",
-        "facts": [
-          {
-            "key": "dart-20261113000076-announcement",
-            "occurredAt": "2026-11-13T09:32:00+09:00",
-            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000076",
-            "statement": "GS건설은 에너지머티리얼즈의 산업은행 잔여 채무·이자 1,125억5,100만원을 대위변제하는 거래를 공시했다. 이에 따른 구상권과 기존 근저당권을 취득한다고 밝혔다."
-          }
-        ],
-        "scopeRank": 4,
-        "scores": {
-          "impact": 4,
-          "certainty": 5,
-          "novelty": 5,
-          "koreaRelevance": 5
-        },
-        "relatedEvidence": [
-          {
-            "stock": "GS건설",
-            "sourceUrl": "https://samara.kr/disclosure/20261113000076"
-          }
-        ]
-      }
-    },
-    {
-      "id": "20261113-1850-apton-capital-reduction-20261113",
-      "title": "앱튼, 90% 무상감자 결정·자본감소 관련 거래정지",
-      "summary": "앱튼은 결손금 보전을 위해 보통주 10주를 1주로 병합하는 90% 무상감자를 결정했다. 거래소는 자본감소를 사유로 11월 13일 17:54부터 장 종료까지 매매거래를 정지한다고 공시했다.",
-      "publishedAt": "2026-11-13T17:55:00+09:00",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001675",
-      "sourceName": "DART·원문 대체 확인",
-      "relatedStocks": [
-        "앱튼"
-      ],
-      "category": "국내공시",
-      "region": "domestic",
-      "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://www.datatooza.com/article/20261113175903802552ef3d286d_80",
-      "reviewNote": "DART 등록시각 17:55 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 4,
-      "selection": {
-        "eventKey": "apton-capital-reduction-20261113",
-        "eventAt": "2026-11-13T17:55:00+09:00",
-        "newness": "new",
-        "verificationStatus": "confirmed",
-        "materialType": "event",
-        "sourceClass": "filing",
-        "facts": [
-          {
-            "key": "dart-20261113001675-announcement",
-            "occurredAt": "2026-11-13T17:55:00+09:00",
-            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001675",
-            "statement": "앱튼이 보통주 10주를 1주로 병합하는 90% 무상감자 결정을 공시했다."
+            "key": "korea-china-foreign-ministers-cho-strategic-communication-20261113",
+            "occurredAt": "2026-11-13T19:31:00+09:00",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113173100083",
+            "statement": "조현 장관은 한반도 평화·안정이 한중 공동 이익이라며 전략적 소통 강화를 언급했다."
           },
           {
-            "key": "dart-20261113902051-trading-halt",
-            "occurredAt": "2026-11-13T17:55:00+09:00",
-            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113902051",
-            "statement": "자본감소 사유로 11월13일 17:54부터 장 종료까지 매매거래를 정지한다는 거래소 공시."
+            "key": "korea-china-foreign-ministers-wang-relations-recovery-20261113",
+            "occurredAt": "2026-11-13T19:30:00+09:00",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261113172900083",
+            "statement": "왕이 부장은 한중 관계가 개선·발전 궤도로 복귀했다고 말했다."
           }
         ],
-        "scopeRank": 4,
-        "scores": {
-          "impact": 3,
-          "certainty": 5,
-          "novelty": 5,
-          "koreaRelevance": 5
-        },
-        "relatedEvidence": [
-          {
-            "stock": "앱튼",
-            "sourceUrl": "https://samara.kr/disclosure/20261113001675"
-          }
-        ]
-      }
-    },
-    {
-      "id": "20261113-1850-humasis-treasury-retirement-20261113",
-      "title": "휴마시스, 자기주식 205만6,081주 소각 결정",
-      "summary": "휴마시스는 발행주식총수의 약 8.33%인 자기주식 205만6,081주를 소각하기로 결정했다. 소각 예정일은 11월 23일이다.",
-      "publishedAt": "2026-11-13T15:34:00+09:00",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900978",
-      "sourceName": "DART·원문 대체 확인",
-      "relatedStocks": [
-        "휴마시스"
-      ],
-      "category": "국내공시",
-      "region": "domestic",
-      "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://samara.kr/disclosure/20261113900978",
-      "reviewNote": "DART 등록시각 15:34 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 머니투데이 본문의 11월16일 출고 표기는 모순으로 배제하고 11월13일 15:34 공시 원문 서식을 사용.직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 5,
-      "selection": {
-        "eventKey": "humasis-treasury-retirement-20261113",
-        "eventAt": "2026-11-13T15:34:00+09:00",
-        "newness": "new",
-        "verificationStatus": "confirmed",
-        "materialType": "event",
-        "sourceClass": "filing",
-        "facts": [
-          {
-            "key": "dart-20261113900978-announcement",
-            "occurredAt": "2026-11-13T15:34:00+09:00",
-            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900978",
-            "statement": "휴마시스는 발행주식총수의 약 8.33%인 자기주식 205만6,081주를 소각하기로 결정했다. 소각 예정일은 11월 23일이다."
-          }
-        ],
-        "scopeRank": 4,
-        "scores": {
-          "impact": 3,
-          "certainty": 5,
-          "novelty": 5,
-          "koreaRelevance": 5
-        },
-        "relatedEvidence": [
-          {
-            "stock": "휴마시스",
-            "sourceUrl": "https://samara.kr/disclosure/20261113900978"
-          }
-        ]
-      }
-    },
-    {
-      "id": "20261113-1850-satrec-facility-investment-20261113",
-      "title": "쎄트렉아이, 위성 생산시설에 403억원 투자 결정",
-      "summary": "쎄트렉아이는 위성 반복생산 역량 강화를 위해 자기자본의 17.00%인 403억원의 신규 시설투자를 결정했다. 공시된 투자기간은 2026년 11월 13일부터 2028년 12월 31일까지다.",
-      "publishedAt": "2026-11-13T15:33:00+09:00",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113901075",
-      "sourceName": "DART·원문 대체 확인",
-      "relatedStocks": [
-        "쎄트렉아이"
-      ],
-      "category": "국내공시",
-      "region": "domestic",
-      "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://m.datatooza.com/article/2026111315344735152ef3be5bf_80",
-      "reviewNote": "DART 등록시각 15:33 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 6,
-      "selection": {
-        "eventKey": "satrec-facility-investment-20261113",
-        "eventAt": "2026-11-13T15:33:00+09:00",
-        "newness": "new",
-        "verificationStatus": "confirmed",
-        "materialType": "event",
-        "sourceClass": "filing",
-        "facts": [
-          {
-            "key": "dart-20261113901075-announcement",
-            "occurredAt": "2026-11-13T15:33:00+09:00",
-            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113901075",
-            "statement": "쎄트렉아이는 위성 반복생산 역량 강화를 위해 자기자본의 17.00%인 403억원의 신규 시설투자를 결정했다. 공시된 투자기간은 2026년 11월 13일부터 2028년 12월 31일까지다."
-          }
-        ],
-        "scopeRank": 4,
-        "scores": {
-          "impact": 3,
-          "certainty": 5,
-          "novelty": 5,
-          "koreaRelevance": 5
-        },
-        "relatedEvidence": [
-          {
-            "stock": "쎄트렉아이",
-            "sourceUrl": "https://samara.kr/disclosure/20261113901075"
-          }
-        ]
-      }
-    },
-    {
-      "id": "20261113-1850-hitejinro-2026q3-results",
-      "title": "하이트진로, 3분기 영업이익 577억원·전년 대비 6.2% 증가",
-      "summary": "하이트진로의 3분기 연결 영업이익은 577억원으로 전년 동기 대비 6.2% 증가했다. 매출은 6,324억원으로 5.5% 감소했다.",
-      "publishedAt": "2026-11-13T15:15:00+09:00",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000784",
-      "sourceName": "DART·원문 대체 확인",
-      "relatedStocks": [
-        "하이트진로"
-      ],
-      "category": "국내공시",
-      "region": "domestic",
-      "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113123500030",
-      "reviewNote": "DART 등록시각 15:15 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 7,
-      "selection": {
-        "eventKey": "hitejinro-2026q3-results",
-        "eventAt": "2026-11-13T15:15:00+09:00",
-        "newness": "new",
-        "verificationStatus": "confirmed",
-        "materialType": "event",
-        "sourceClass": "filing",
-        "facts": [
-          {
-            "key": "dart-20261113000784-announcement",
-            "occurredAt": "2026-11-13T15:15:00+09:00",
-            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000784",
-            "statement": "하이트진로의 3분기 연결 영업이익은 577억원으로 전년 동기 대비 6.2% 증가했다. 매출은 6,324억원으로 5.5% 감소했다."
-          }
-        ],
-        "scopeRank": 4,
-        "scores": {
-          "impact": 3,
-          "certainty": 5,
-          "novelty": 5,
-          "koreaRelevance": 5
-        },
-        "relatedEvidence": [
-          {
-            "stock": "하이트진로",
-            "sourceUrl": "https://samara.kr/disclosure/20261113000784"
-          }
-        ]
-      }
-    },
-    {
-      "id": "20261113-1850-wonikqnc-2026q3-results",
-      "title": "원익QnC, 3분기 잠정 영업이익 444억원 공시",
-      "summary": "원익QnC는 3분기 연결 잠정 매출 2,836억8,800만원·영업이익 444억2,600만원을 공시했다. 전년 동기 대비 각각 23.2%·455.3% 증가했다.",
-      "publishedAt": "2026-11-13T12:42:00+09:00",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900562",
-      "sourceName": "DART·원문 대체 확인",
-      "relatedStocks": [
-        "원익QnC"
-      ],
-      "category": "국내공시",
-      "region": "domestic",
-      "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113090700527",
-      "reviewNote": "DART 등록시각 12:42 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 8,
-      "selection": {
-        "eventKey": "wonikqnc-2026q3-results",
-        "eventAt": "2026-11-13T12:42:00+09:00",
-        "newness": "new",
-        "verificationStatus": "confirmed",
-        "materialType": "event",
-        "sourceClass": "filing",
-        "facts": [
-          {
-            "key": "dart-20261113900562-announcement",
-            "occurredAt": "2026-11-13T12:42:00+09:00",
-            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900562",
-            "statement": "원익QnC는 3분기 연결 잠정 매출 2,836억8,800만원·영업이익 444억2,600만원을 공시했다. 전년 동기 대비 각각 23.2%·455.3% 증가했다."
-          }
-        ],
-        "scopeRank": 4,
-        "scores": {
-          "impact": 3,
-          "certainty": 5,
-          "novelty": 5,
-          "koreaRelevance": 5
-        },
-        "relatedEvidence": [
-          {
-            "stock": "원익QnC",
-            "sourceUrl": "https://samara.kr/disclosure/20261113900562"
-          }
-        ]
-      }
-    },
-    {
-      "id": "20261113-1850-nongshim-2026q3-results",
-      "title": "농심, 3분기 영업이익 497억원·전년 대비 8.6% 감소",
-      "summary": "농심의 3분기 연결 매출은 9,296억원으로 전년 동기 대비 6.7% 증가했고, 영업이익은 497억원으로 8.6% 감소했다.",
-      "publishedAt": "2026-11-13T11:16:00+09:00",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000302",
-      "sourceName": "DART·원문 대체 확인",
-      "relatedStocks": [
-        "농심"
-      ],
-      "category": "국내공시",
-      "region": "domestic",
-      "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://www.yna.co.kr/view/AKR20261113100500030",
-      "reviewNote": "DART 등록시각 11:16 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 9,
-      "selection": {
-        "eventKey": "nongshim-2026q3-results",
-        "eventAt": "2026-11-13T11:16:00+09:00",
-        "newness": "new",
-        "verificationStatus": "confirmed",
-        "materialType": "event",
-        "sourceClass": "filing",
-        "facts": [
-          {
-            "key": "dart-20261113000302-announcement",
-            "occurredAt": "2026-11-13T11:16:00+09:00",
-            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000302",
-            "statement": "농심의 3분기 연결 매출은 9,296억원으로 전년 동기 대비 6.7% 증가했고, 영업이익은 497억원으로 8.6% 감소했다."
-          }
-        ],
-        "scopeRank": 4,
-        "scores": {
-          "impact": 3,
-          "certainty": 5,
-          "novelty": 5,
-          "koreaRelevance": 5
-        },
-        "relatedEvidence": [
-          {
-            "stock": "농심",
-            "sourceUrl": "https://samara.kr/disclosure/20261113000302"
-          }
-        ]
-      }
-    },
-    {
-      "id": "20261113-1850-dasco-bw-repurchase-20261113",
-      "title": "다스코, BW 50억1,581만원 만기 전 취득 결정",
-      "summary": "다스코는 사채권자의 조기상환청구에 따라 제6회 신주인수권부사채 50억1,581만2,000원을 자기자금으로 취득하기로 결정했다. 지급예정일은 12월 7일이며 취득 후 소각할 예정이다.",
-      "publishedAt": "2026-11-13T17:15:00+09:00",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001541",
-      "sourceName": "DART·원문 대체 확인",
-      "relatedStocks": [
-        "다스코"
-      ],
-      "category": "국내공시",
-      "region": "domestic",
-      "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://www.datatooza.com/article/20261113171703111352ef3a209d_80",
-      "reviewNote": "DART 등록시각 17:15 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 10,
-      "selection": {
-        "eventKey": "dasco-bw-repurchase-20261113",
-        "eventAt": "2026-11-13T17:15:00+09:00",
-        "newness": "new",
-        "verificationStatus": "confirmed",
-        "materialType": "event",
-        "sourceClass": "filing",
-        "facts": [
-          {
-            "key": "dart-20261113001541-announcement",
-            "occurredAt": "2026-11-13T17:15:00+09:00",
-            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001541",
-            "statement": "다스코는 사채권자의 조기상환청구에 따라 제6회 신주인수권부사채 50억1,581만2,000원을 자기자금으로 취득하기로 결정했다. 지급예정일은 12월 7일이며 취득 후 소각할 예정이다."
-          }
-        ],
-        "scopeRank": 4,
+        "scopeRank": 2,
         "scores": {
           "impact": 2,
           "certainty": 5,
-          "novelty": 5,
-          "koreaRelevance": 5
+          "novelty": 3,
+          "koreaRelevance": 4
         },
-        "relatedEvidence": [
-          {
-            "stock": "다스코",
-            "sourceUrl": "https://samara.kr/disclosure/20261113001541"
-          }
-        ]
-      }
-    },
-    {
-      "id": "20261113-1850-kp-aero-uav-fixture-contract-20261113",
-      "title": "케이피항공산업, 무인기 조립 치구 28억9,460만원 계약",
-      "summary": "케이피항공산업은 스페이스프로와 28억9,460만원 규모의 신규 무인기 사업 조립 치구 제작 계약을 체결했다. 최근 연매출의 5.37%이며 계약기간은 11월 13일부터 12월 31일까지다.",
-      "publishedAt": "2026-11-13T14:22:00+09:00",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900774",
-      "sourceName": "DART·원문 대체 확인",
-      "relatedStocks": [
-        "케이피항공산업"
-      ],
-      "category": "국내공시",
-      "region": "domestic",
-      "kind": "news",
-      "reviewedAt": "2026-11-13T10:13:04.523Z",
-      "reviewSourceUrl": "https://www.specialtimes.co.kr/news/articleView.html?idxno=485230",
-      "reviewNote": "DART 등록시각 14:22 KST를 사말아 OpenDART 전재에서 확인하고 공시 원문 서식 또는 신뢰 기사 본문과 수치를 대조. 기사 송고·페이지 갱신시각을 공시시각으로 사용하지 않음. 직전 공개 08:50의 실제 asOf 이후 신규 공시이며 기발행 회차에 같은 사실 없음.",
-      "validUntil": "2026-11-13T20:20:00+09:00",
-      "impactRank": 11,
-      "selection": {
-        "eventKey": "kp-aero-uav-fixture-contract-20261113",
-        "eventAt": "2026-11-13T14:22:00+09:00",
-        "newness": "new",
-        "verificationStatus": "confirmed",
-        "materialType": "event",
-        "sourceClass": "filing",
-        "facts": [
-          {
-            "key": "dart-20261113900774-announcement",
-            "occurredAt": "2026-11-13T14:22:00+09:00",
-            "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113900774",
-            "statement": "케이피항공산업은 스페이스프로와 28억9,460만원 규모의 신규 무인기 사업 조립 치구 제작 계약을 체결했다. 최근 연매출의 5.37%이며 계약기간은 11월 13일부터 12월 31일까지다."
-          }
-        ],
-        "scopeRank": 4,
-        "scores": {
-          "impact": 2,
-          "certainty": 5,
-          "novelty": 5,
-          "koreaRelevance": 5
-        },
-        "relatedEvidence": [
-          {
-            "stock": "케이피항공산업",
-            "sourceUrl": "https://samara.kr/disclosure/20261113900774"
-          }
-        ]
+        "relatedEvidence": []
       }
     }
   ]
