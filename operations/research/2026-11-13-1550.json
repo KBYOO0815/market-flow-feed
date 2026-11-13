@@ -1,0 +1,67 @@
+{
+  "releaseAt": "2026-11-13T15:50:00+09:00",
+  "checkedAt": "2026-11-13T06:44:44.223Z",
+  "mode": "since_previous",
+  "previousReleaseAt": "2026-11-13T08:50:00+09:00",
+  "previousAsOf": "2026-11-12T23:40:36.914Z",
+  "researchCompleted": false,
+  "candidates": [
+    {
+      "title": "금융위원회 11월 13일 보도자료 3건",
+      "sourceUrl": "https://fsc.go.kr/no010101",
+      "decision": "원문 확인 불가",
+      "reason": "목록 날짜만 확인, 각 보도자료 최초 공개시각 및 08:40:36 이후 발표 여부를 확인하지 못함"
+    },
+    {
+      "title": "Reuters 11월 13일 아시아 증시 동향",
+      "sourceUrl": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-13/",
+      "decision": "원문 확인 불가",
+      "reason": "검색 요약에 시세 수치가 있으나 실제 관측시각 및 원문 발표시각이 확인되지 않아 제외"
+    },
+    {
+      "title": "중국 기업 엔비디아 칩 용량 확보",
+      "sourceUrl": "https://www.reuters.com/world/china/chinese-ai-firms-rush-secure-nvidia-chip-capacity-spy-scandal-stirs-fear-us-2026-11-12/",
+      "decision": "시간범위 밖",
+      "reason": "원문 11월 12일 05:31 UTC 발표; 직전 공개본 asOf 이전"
+    },
+    {
+      "title": "미 의회 엔비디아 H200 조사",
+      "sourceUrl": "https://github.com/KBYOO0815/market-flow-feed/blob/main/morning-briefing.json",
+      "decision": "중복",
+      "reason": "08:50 회차에 이미 게재된 사실"
+    },
+    {
+      "title": "금융위원회 코스닥 추가대책 허위정보 유의",
+      "sourceUrl": "https://www.fsc.go.kr/po010101",
+      "decision": "시간범위 밖",
+      "reason": "목록상 11월 12일 발표"
+    }
+  ],
+  "foreignCandidates": 3,
+  "domesticCandidates": 2,
+  "verifiedCandidates": 0,
+  "duplicateExcluded": 1,
+  "selected": 0,
+  "missingCoverage": [
+    "foreign_market",
+    "foreign_policy",
+    "foreign_technology",
+    "domestic_disclosures",
+    "domestic_policy",
+    "domestic_market"
+  ],
+  "errors": [
+    "KRX 연간 거래일 달력·특별공지 교차검증 미완료",
+    "DART selectDate=2026.11.13 목록 본문·건수 미검증",
+    "KIND 원문 및 시각 미검증",
+    "해외 14개 세부영역과 국내 전체 영역의 독립 원문 조사 미완료",
+    "기사별 최초 발표 시각과 실시간 관측 시각 불충분"
+  ],
+  "sourceUrlsChecked": [
+    "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-13/",
+    "https://www.reuters.com/world/china/chinese-ai-firms-rush-secure-nvidia-chip-capacity-spy-scandal-stirs-fear-us-2026-11-12/",
+    "https://fsc.go.kr/no010101",
+    "https://www.fsc.go.kr/po010101"
+  ],
+  "note": "검색결과/목록 확인은 원문 사실검증 완료와 다르며 6개 coverage를 완료로 기록하지 않음."
+}
