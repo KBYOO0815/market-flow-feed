@@ -1,0 +1,9 @@
+{
+  "requestId": "2026-11-13-2010-attempt-1",
+  "releaseAt": "2026-11-13T20:10:00+09:00",
+  "published": false,
+  "state": "collecting",
+  "startedAt": "2026-11-13T19:57:04.114204+09:00",
+  "deadlineAt": "2026-11-13T20:02:04.114204+09:00",
+  "progress": []
+}
