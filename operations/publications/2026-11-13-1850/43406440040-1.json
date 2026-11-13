@@ -2,9 +2,11 @@
   "releaseAt": "2026-11-13T18:50:00+09:00",
   "startedAt": "2026-11-13T19:05:47.302707+09:00",
   "deadlineAt": "2026-11-13T19:20:00+09:00",
-  "state": "publishing",
+  "state": "published",
   "polls": 39,
   "lastIssue": "missing_draft_for_original_slot",
+  "commit": "ba0ef529a76bb8adae9c5ccbee12f27885743922",
   "asOf": "2026-11-13T10:14:58.840Z",
-  "checkedAt": "2026-11-13T19:15:46.198896+09:00"
+  "itemCount": 11,
+  "checkedAt": "2026-11-13T19:15:52.815813+09:00"
 }
