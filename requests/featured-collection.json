@@ -1,6 +1,6 @@
 {
-  "requestId": "krx100-policy-probe-1794552373410",
-  "mode": "collect_probe",
+  "requestId": "2026-11-13-2010-attempt-1",
+  "mode": "collect",
   "releaseAt": "2026-11-13T20:10:00+09:00",
   "evidence": {
     "date": "2026-11-13",
