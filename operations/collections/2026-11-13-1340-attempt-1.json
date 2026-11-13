@@ -2,8 +2,130 @@
   "requestId": "2026-11-13-1340-attempt-1",
   "releaseAt": "2026-11-13T13:40:00+09:00",
   "published": false,
-  "state": "collecting",
+  "state": "collected",
   "startedAt": "2026-11-13T13:32:57.299266+09:00",
   "deadlineAt": "2026-11-13T13:37:57.299266+09:00",
-  "progress": []
+  "progress": [
+    {
+      "stage": "ranking_received",
+      "checkedAt": "2026-11-13T13:33:03.539302+09:00",
+      "market": "KRX",
+      "rows": 2879,
+      "stocks": 2829,
+      "sourceUrl": "https://stock.naver.com/api/domestic/market/stock/default?marketType=ALL&orderType=priceTop&startIdx=0&pageSize=5000&tradeType=KRX"
+    },
+    {
+      "stage": "ranking_received",
+      "checkedAt": "2026-11-13T13:33:03.539813+09:00",
+      "market": "NXT",
+      "rows": 100,
+      "stocks": 100,
+      "sourceUrl": "https://stock.naver.com/api/domestic/market/stock/default?marketType=ALL&orderType=priceTop&startIdx=0&pageSize=5000&tradeType=NXT"
+    },
+    {
+      "stage": "nxt_order_inversion",
+      "checkedAt": "2026-11-13T13:33:03.540053+09:00",
+      "count": 1,
+      "examples": [
+        {
+          "previousCode": "257720",
+          "code": "207940",
+          "previousAmount": 11257163000,
+          "amount": 11451000000
+        }
+      ],
+      "fallback": "complete_official_universe"
+    },
+    {
+      "stage": "nxt_full_scan_started",
+      "checkedAt": "2026-11-13T13:33:06.756274+09:00",
+      "eligibleCount": 603,
+      "officialObservedAt": "2026-11-13 13:13"
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:33:13.529703+09:00",
+      "completed": 60,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:33:19.554432+09:00",
+      "completed": 120,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:33:25.580183+09:00",
+      "completed": 180,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:33:31.591550+09:00",
+      "completed": 240,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:33:37.702652+09:00",
+      "completed": 300,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:33:43.735041+09:00",
+      "completed": 360,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:33:49.752723+09:00",
+      "completed": 420,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:33:55.786033+09:00",
+      "completed": 480,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:34:02.171597+09:00",
+      "completed": 540,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:34:08.547126+09:00",
+      "completed": 600,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T13:34:09.138253+09:00",
+      "completed": 603,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_verified",
+      "checkedAt": "2026-11-13T13:34:09.138659+09:00",
+      "exactQuotes": 603,
+      "officialNonEligible": 2226
+    },
+    {
+      "stage": "top_fifty_verified",
+      "checkedAt": "2026-11-13T13:34:14.745105+09:00",
+      "stockCount": 50,
+      "requestCount": 655
+    }
+  ],
+  "lastStage": "top_fifty_verified",
+  "snapshotPath": "collections/featured-stocks/2026-11-13-1340-attempt-1.json",
+  "stockCount": 50,
+  "publicationEligible": true,
+  "freshnessValidated": true,
+  "completedAt": "2026-11-13T13:34:14.750895+09:00",
+  "elapsedSeconds": 77.451629
 }
