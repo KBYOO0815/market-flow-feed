@@ -19,3 +19,11 @@ def feed_prefix(payload):
 
 def release_prefix(release):
     return 'featured-stocks-v2' if hundred_edition(release) else 'featured-stocks'
+
+
+def regular_close_observation(observed, release):
+    """Only the exchange closing-minute print is a regular-session close."""
+    kst = dt.timezone(dt.timedelta(hours=9))
+    local = observed.astimezone(kst)
+    target = release.astimezone(kst)
+    return local.date() == target.date() and local.hour == 15 and local.minute == 30
