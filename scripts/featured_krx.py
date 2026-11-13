@@ -3,6 +3,7 @@ import datetime as dt
 import re
 from featured_stocks import KST, SLOTS, BASE, stamp, https, number, list_url
 from source_http import CollectionFetch
+from featured_scope import regular_close_observation
 
 
 def collect_krx(release, evidence, fetch, now=None, trace=None, probe=False):
@@ -43,6 +44,18 @@ def collect_krx(release, evidence, fetch, now=None, trace=None, probe=False):
         if (q.get('itemcode') != r['itemcode'] or observed.date() != target.date() or observed > checked
                 or (checked-observed > dt.timedelta(minutes=15) and not (checked >= close and observed >= close))):
             raise ValueError('KRX quote identity/date/freshness mismatch: '+r['itemcode'])
+        close_check = None
+        if target.strftime('%H:%M') == '20:10':
+            if not regular_close_observation(observed, target):
+                raise ValueError('KRX regular-session close observation required; after-hours is not close: '+r['itemcode'])
+            if ('tradeAmount' not in q or 'prevChangeRate' not in q
+                    or number(q['tradeAmount']) != number(r['tradeAmount'])
+                    or number(q['prevChangeRate']) != number(r['prevChangeRate'])):
+                raise ValueError('KRX close ranking/detail amount or rate mismatch: '+r['itemcode'])
+            close_check = {'basis': 'KRX_REGULAR_CLOSE',
+                           'tradeAmount': int(q['tradeAmount']),
+                           'changeRate': float(number(q['prevChangeRate'])),
+                           'sourceUrl': url, 'observedAt': observed.isoformat()}
         stock = {'code':r['itemcode'],'name':r['itemname'],'turnoverRank':rank,
                  'tradeAmount':int(r['tradeAmount']),'krxTradeAmount':int(r['tradeAmount']),
                  'changeRate':float(number(r['prevChangeRate'])),'rateMarket':'KRX',
@@ -50,6 +63,7 @@ def collect_krx(release, evidence, fetch, now=None, trace=None, probe=False):
         if str(r.get('marketSum','')).isdigit(): stock['marketCapKrw']=int(r['marketSum'])
         if str(r.get('nowPrice','')).isdigit() and str(r.get('upperLimitPrice','')).isdigit():
             stock['isUpperLimit']=int(r['nowPrice']) == int(r['upperLimitPrice'])
+        if close_check is not None: stock['closeVerification'] = close_check
         selected.append(stock)
         records.append({'market':'KRX','code':r['itemcode'],'sourceUrl':url,
                         'retrievedAt':(now or cache.times[url].astimezone(KST)).isoformat()})
