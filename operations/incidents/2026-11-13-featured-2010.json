@@ -1,0 +1,67 @@
+{
+  "edition": "featured-stocks",
+  "releaseAt": "2026-11-13T20:10:00+09:00",
+  "deadlineAt": "2026-11-13T20:40:00+09:00",
+  "checkedAt": "2026-11-13T12:09:59.867Z",
+  "state": "publication_missed",
+  "published": false,
+  "reason": "KRX_CLOSE_SOURCE_MISMATCH; original recovery deadline expired before this investigation",
+  "sourceCollection": {
+    "state": "collected",
+    "startedAt": "2026-11-13T19:57:04.114204+09:00",
+    "completedAt": "2026-11-13T19:57:19.135716+09:00",
+    "stockCount": 100,
+    "workflowRunId": 43413067634,
+    "path": "operations/collections/2026-11-13-2010-attempt-1.json"
+  },
+  "editorialReview": {
+    "state": "review_rejected",
+    "checkedAt": "2026-11-13T10:58:50Z",
+    "path": "operations/collections/2026-11-13-2010-attempt-1-review.json",
+    "regularSessionCloseVerified": false,
+    "draftWritten": false
+  },
+  "rootCause": {
+    "collector": "Any KRX observation at or after 15:30 bypassed stale-quote rejection; 19:56 after-hours observations and ranking values were wrongly accepted as regular-session closing data.",
+    "comparisonEvidence": [
+      {
+        "code": "005930",
+        "sourceUrl": "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain",
+        "observedAt": "2026-11-13T15:30:10+09:00",
+        "officialChangeRate": -0.96,
+        "officialTradeAmountKrw": 2658272417000,
+        "snapshotChangeRate": 0,
+        "snapshotTradeAmountKrw": 2675050000000,
+        "snapshotObservedAt": "2026-11-13T19:56:22+09:00"
+      },
+      {
+        "code": "000660",
+        "sourceUrl": "https://kind.krx.co.kr/common/stockprices.do?isurCd=00066&method=searchStockPricesMain",
+        "observedAt": "2026-11-13T15:30:30+09:00",
+        "officialChangeRate": -3.03,
+        "officialTradeAmountKrw": 3988562283000,
+        "snapshotChangeRate": -2.07,
+        "snapshotTradeAmountKrw": 3979108000000,
+        "snapshotObservedAt": "2026-11-13T19:56:23+09:00"
+      }
+    ],
+    "publication": "No reviewed original-edition draft existed. No 20:10 publication execution was present in the inspected latest Actions runs; the exact reason the scheduled execution did not appear is unconfirmed."
+  },
+  "changes": {
+    "regularClose": "20:10 collection and draft validation require actual 15:30 closing-minute observations. Collector additionally requires ranking/detail amount and change-rate agreement. Missing close values block collection; no timestamp relabel or numerical substitution.",
+    "handoff": "Successful server collection triggers the publisher watcher using the original request pinned to the collection run head commit. Probe mode never starts publication.",
+    "conflicts": "Watcher rechecks root/archive/index after Git 409/422 until the original deadline.",
+    "tests": 144,
+    "passed": true,
+    "publicCommit": "2e591ad5dd17bca9e19add032eb489e7fc836873"
+  },
+  "publicStatus": {
+    "draftReleaseAt": "2026-11-13T15:40:00+09:00",
+    "legacyRootReleaseAt": "2026-11-13T15:40:00+09:00",
+    "v2RootExists": false,
+    "v2DailyExists": false,
+    "published": false,
+    "backfillAttempted": false
+  },
+  "remainingLimitation": "The current source was not demonstrated to supply a verified complete regular-session closing top-100 feed. Such data remains blocked; these changes do not claim that a correct 20:10 source feed has been obtained."
+}
