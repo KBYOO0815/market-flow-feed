@@ -1,0 +1,21 @@
+{
+  "releaseAt": "2026-11-13T11:50:00+09:00",
+  "checkedAt": "2026-11-13T02:43:30.952Z",
+  "state": "research_failed",
+  "failedSources": [
+    "DART 당일 목록 본문 미검증",
+    "KIND 당일 공시 미검증",
+    "KRX 거래일 연간 달력 및 특별 공지 교차검증 미완료",
+    "source-checks 1150 미생성"
+  ],
+  "missingCoverage": [
+    "foreign_market",
+    "foreign_policy",
+    "foreign_technology",
+    "domestic_disclosures",
+    "domestic_policy",
+    "domestic_market"
+  ],
+  "reason": "원문·시각·후보 전체 및 거래일 달력 검증이 불충분해 schemaVersion2 신규 브리핑 초안을 발행할 수 없음. 현재 공개 root와 양 초안 유지. 30분 내 재조사 가능.",
+  "researchPath": "operations/research/2026-11-13-1150.json"
+}
