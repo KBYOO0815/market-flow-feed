@@ -1,0 +1,10 @@
+{
+  "requestId": "prepare-20261113-2020-1794568164794",
+  "releaseAt": "2026-11-13T20:20:00+09:00",
+  "mode": "prepare",
+  "state": "intent_accepted",
+  "checkedAt": "2026-11-13T20:09:34.287154+09:00",
+  "deadlineAt": "2026-11-13T20:50:00+09:00",
+  "publicationEligible": true,
+  "published": false
+}
