@@ -101,7 +101,7 @@ def watch(release, record, read=read_remote, write=publish,
                     record(dict(state));return state
         except (urllib.error.URLError,TimeoutError) as error:
             state['lastIssue']=type(error).__name__+': '+str(error)[:400]
-            if isinstance(error,urllib.error.HTTPError) and error.code not in (429,500,502,503,504):
+            if isinstance(error,urllib.error.HTTPError) and error.code not in (409,422,429,500,502,503,504):
                 state.update(state='publication_failed',checkedAt=clock().isoformat())
                 record(dict(state));raise
         except Exception as error:
@@ -118,7 +118,13 @@ def main():
     if os.environ.get('GITHUB_REPOSITORY')!='KBYOO0815/market-flow-feed':
         raise SystemExit('public feed repository only')
     cron=os.environ.get('EVENT_SCHEDULE')
-    if cron:
+    if os.environ.get('COLLECTION_HEAD_SHA'):
+        request, _ = read_remote('requests/featured-collection.json', os.environ['COLLECTION_HEAD_SHA'])
+        if not request or request.get('mode') != 'collect':
+            print('published=false: collection probe does not start a publisher')
+            return
+        release = stamp(request['releaseAt'])
+    elif cron:
         # Anchor to workflow creation, so runner queue delays cannot select the next slot.
         created=api('GET','actions/runs/'+os.environ['GITHUB_RUN_ID'])['created_at']
         release=scheduled_release(stamp(created),cron)
