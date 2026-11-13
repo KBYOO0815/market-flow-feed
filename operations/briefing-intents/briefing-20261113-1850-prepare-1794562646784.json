@@ -1,0 +1,10 @@
+{
+  "requestId": "briefing-20261113-1850-prepare-1794562646784",
+  "releaseAt": "2026-11-13T18:50:00+09:00",
+  "mode": "prepare",
+  "state": "intent_accepted",
+  "checkedAt": "2026-11-13T18:37:37.539811+09:00",
+  "deadlineAt": "2026-11-13T19:20:00+09:00",
+  "publicationEligible": true,
+  "published": false
+}
