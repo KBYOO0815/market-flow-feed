@@ -1,0 +1,5106 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-13T10:15:53.459539+09:00",
+  "collectionStartedAt": "2026-11-13T10:14:54.387099+09:00",
+  "releaseAt": "2026-11-13T09:40:00+09:00",
+  "tradingDayVerified": true,
+  "calendarSourceUrl": "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain",
+  "sourceName": "네이버 증권",
+  "amountUnit": "KRW",
+  "rateBasis": "KRX_PREVIOUS_CLOSE",
+  "serverRetentionCalendarDays": 3,
+  "appVisibleCalendarDays": 2,
+  "sourceRecords": [
+    {
+      "market": "KRX",
+      "sourceUrl": "https://stock.naver.com/api/domestic/market/stock/default?marketType=ALL&orderType=priceTop&startIdx=0&pageSize=5000&tradeType=KRX",
+      "retrievedAt": "2026-11-13T10:14:57.411461+09:00"
+    },
+    {
+      "market": "NXT",
+      "sourceUrl": "https://stock.naver.com/api/domestic/market/stock/default?marketType=ALL&orderType=priceTop&startIdx=0&pageSize=5000&tradeType=NXT",
+      "retrievedAt": "2026-11-13T10:14:56.016516+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000070",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000070/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.144599+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000080",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000080/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.130552+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000100",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000100/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.127513+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000120",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000120/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.140606+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000150",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000150/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.131300+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000210",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000210/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.159210+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000240",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000240/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.727067+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000250",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000250/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.707613+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000270",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000270/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.721488+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000320",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000320/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.715815+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000500",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000500/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.704781+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000640",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000640/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:03.714847+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000660",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000660/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.167375+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000670",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000670/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.153599+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000720",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000720/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.148923+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000810",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000810/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.149297+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000880",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000880/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.148986+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "0008Z0",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/0008Z0/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.160602+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "000990",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/000990/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.600044+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "0009K0",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/0009K0/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.621838+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001040",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001040/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.588520+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001060",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001060/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.587818+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001120",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001120/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.594345+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001130",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001130/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:04.596777+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001270",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001270/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.177719+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001430",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001430/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.176547+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001450",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001450/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.190789+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001460",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001460/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.179108+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001500",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001500/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.184884+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001530",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001530/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.173706+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001630",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001630/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.912734+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001680",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001680/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.913510+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001720",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001720/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.937567+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001750",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001750/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.914128+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.903334+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "001940",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/001940/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:05.908957+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "002020",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/002020/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:06.629533+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "002030",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/002030/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:06.601529+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "002240",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/002240/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:06.612268+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "002320",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/002320/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:06.605076+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "002380",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/002380/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:06.608759+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "002710",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/002710/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:06.619009+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "002790",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/002790/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.064525+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "002810",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/002810/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.053625+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "002840",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/002840/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.062835+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "002960",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/002960/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.057396+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003030",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003030/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.056363+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003090",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003090/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.071971+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003120",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003120/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.626589+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003160",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003160/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.634232+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003200",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003200/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.623253+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003220",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003220/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.670404+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003230",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003230/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.630840+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003240",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003240/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:07.624608+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003300",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003300/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.095065+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003540",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003540/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.110607+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003550",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003550/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.098263+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003570",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003570/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.096633+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003670",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003670/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.116496+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003690",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003690/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.092245+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003850",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003850/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.668973+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003920",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003920/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.669557+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "003960",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/003960/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.672384+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004000",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004000/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.678518+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004020",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004020/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.673397+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004170",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004170/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:08.673001+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004360",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004360/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.257207+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004370",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004370/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.235358+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004490",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004490/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.236664+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004690",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004690/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.236403+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004700",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004700/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.241090+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.237210+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004980",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004980/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.814371+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "004990",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/004990/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.818481+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005070",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005070/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.809367+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005090",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005090/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.810233+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005180",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005180/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.824923+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005250",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005250/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:09.807147+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005290",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005290/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.247913+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005300",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005300/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.254126+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005380",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005380/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.247838+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005420",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005420/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.249817+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005440",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005440/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.260472+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005490",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005490/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.249087+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005500",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005500/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.818795+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005610",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005610/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.830345+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005710",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005710/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.821941+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005810",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005810/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.816704+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005830",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005830/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.816489+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005850",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005850/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:10.832208+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005930",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005930/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.253408+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "005940",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/005940/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.269695+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "006040",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/006040/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.254971+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "006110",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/006110/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.262471+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "006120",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/006120/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.255186+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "006260",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/006260/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.256919+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "006280",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/006280/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.695386+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "006400",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/006400/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.689845+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "006650",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/006650/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.691017+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "006800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/006800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.724429+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "007070",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/007070/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.689643+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "007160",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/007160/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:11.700335+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "007310",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/007310/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.168772+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "007340",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/007340/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.147026+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "007390",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/007390/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.168581+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "007660",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/007660/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.150691+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "007690",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/007690/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.155836+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "007700",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/007700/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.170048+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "007810",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/007810/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.594132+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "008060",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/008060/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.617789+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "008490",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/008490/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.595349+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "008730",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/008730/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.586750+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "008770",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/008770/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.590421+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "008930",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/008930/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:12.599646+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "009150",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/009150/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.067510+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "009240",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/009240/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.057633+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "009420",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/009420/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.047149+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "009450",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/009450/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.037730+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "009520",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/009520/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.044095+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "009540",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/009540/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.040098+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "009680",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/009680/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.510945+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "009900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/009900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.494980+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "009970",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/009970/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.491953+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "010060",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/010060/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.498354+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "010120",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/010120/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.518892+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "010130",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/010130/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:13.492595+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "010140",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/010140/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.077270+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "010780",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/010780/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.086683+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "010950",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/010950/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.083463+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "011070",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/011070/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.087551+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "011170",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/011170/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.092757+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "011200",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/011200/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.079547+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "011210",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/011210/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.526338+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "011760",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/011760/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.525217+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "011780",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/011780/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.528535+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "011790",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/011790/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.522310+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "0120G0",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/0120G0/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.524734+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "012330",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/012330/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:14.533734+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "012450",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/012450/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.229480+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "012630",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/012630/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.241348+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "0126Z0",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/0126Z0/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.243201+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "012750",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/012750/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.239811+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "013030",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/013030/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.235160+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "013890",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/013890/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.240114+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "014620",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/014620/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.676521+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "014680",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/014680/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.674358+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "014820",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/014820/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.673364+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "014830",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/014830/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.671890+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "015360",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/015360/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.670702+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "015750",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/015750/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:15.669688+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "015760",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/015760/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.115875+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "016360",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/016360/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.097860+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "016590",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/016590/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.100460+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "016610",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/016610/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.110305+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "016800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/016800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.097574+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "017390",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/017390/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.107796+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "017670",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/017670/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.537534+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "017800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/017800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.544096+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "017810",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/017810/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.542308+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "017940",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/017940/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.541131+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "017960",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/017960/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.540291+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "018260",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/018260/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.538330+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "018290",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/018290/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.966438+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "018310",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/018310/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.969208+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "018670",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/018670/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.962662+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "019170",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/019170/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.981298+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "020000",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/020000/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.973365+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "020150",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/020150/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:16.971753+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "020560",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/020560/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.405548+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "021240",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/021240/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.404057+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "022100",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/022100/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.398613+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "023160",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/023160/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.411891+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "023530",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/023530/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.409215+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "023590",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/023590/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.406346+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "024110",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/024110/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.844088+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "024720",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/024720/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.835682+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "025320",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/025320/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.861312+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "025540",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/025540/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.844518+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "025900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/025900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.835894+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "026890",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/026890/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:17.835454+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "026960",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/026960/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.284954+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "028260",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/028260/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.299128+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "028300",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/028300/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.300436+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "029460",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/029460/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.293486+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "029530",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/029530/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.284079+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "029780",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/029780/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.305459+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "030000",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/030000/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.741447+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "030190",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/030190/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.724517+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "030200",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/030200/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.733817+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "030520",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/030520/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.727753+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "030610",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/030610/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.736510+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "031210",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/031210/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:18.726265+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "031430",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/031430/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.177567+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "031980",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/031980/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.165070+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "032190",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/032190/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.167950+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "032350",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/032350/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.168400+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "032500",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/032500/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.164561+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "032640",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/032640/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.182541+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "032830",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/032830/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.606400+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "033100",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/033100/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.622471+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "033240",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/033240/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.632359+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "033270",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/033270/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.605487+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "033500",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/033500/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.606717+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "033640",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/033640/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:19.606206+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "033780",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/033780/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.067286+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "034020",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/034020/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.050972+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "034120",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/034120/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.061126+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "034230",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/034230/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.069790+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "034310",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/034310/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.070496+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "034730",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/034730/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.059249+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "034950",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/034950/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.496895+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "035150",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/035150/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.502076+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "035250",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/035250/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.498424+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "035420",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/035420/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.493815+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "035600",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/035600/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.528127+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "035760",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/035760/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.507415+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "035900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/035900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.955622+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "036200",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/036200/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.974722+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "036460",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/036460/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.952202+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "036530",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/036530/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.956093+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "036570",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/036570/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.948874+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "036620",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/036620/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:20.950517+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "036800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/036800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.397954+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "036810",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/036810/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.398776+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "036830",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/036830/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.418419+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "036890",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/036890/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.403261+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "037710",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/037710/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.412663+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "039030",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/039030/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.395568+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "039130",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/039130/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.862513+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "039200",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/039200/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.838245+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "039440",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/039440/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.847506+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "039490",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/039490/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.854991+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "039840",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/039840/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.848118+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "041510",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/041510/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:21.855632+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "041830",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/041830/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.292948+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "042000",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/042000/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.297069+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "042520",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/042520/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.288424+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "042660",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/042660/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.284688+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "042700",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/042700/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.304703+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "043150",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/043150/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.281798+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "043370",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/043370/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.739284+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "044490",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/044490/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.728721+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "045100",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/045100/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.738576+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "046890",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/046890/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.739440+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "047050",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/047050/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.726574+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "047810",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/047810/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:22.742092+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "047920",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/047920/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.168831+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "049070",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/049070/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.166041+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "051360",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/051360/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.168630+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "051500",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/051500/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.163938+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "051600",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/051600/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.166460+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "051900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/051900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.183353+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "051910",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/051910/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.611458+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "052400",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/052400/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.607088+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "052690",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/052690/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.602850+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "053030",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/053030/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.613915+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "053610",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/053610/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.605468+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "053800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/053800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:23.610925+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "054950",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/054950/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.038757+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "055550",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/055550/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.036595+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "056190",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/056190/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.033550+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "058470",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/058470/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.035443+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "058610",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/058610/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.035387+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "058970",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/058970/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.059531+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "059090",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/059090/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.486603+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "060370",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/060370/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.486388+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "060980",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/060980/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.492509+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "061090",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/061090/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.479018+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "062040",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/062040/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.491605+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "064350",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/064350/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.489108+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "064550",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/064550/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.914778+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "064760",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/064760/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.934154+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "064820",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/064820/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.920132+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "064960",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/064960/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.927110+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "065350",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/065350/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.914624+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "065660",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/065660/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:24.920520+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "065680",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/065680/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.359849+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "066570",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/066570/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.363979+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "066970",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/066970/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.363456+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "067080",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/067080/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.364887+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "067160",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/067160/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.364664+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "068270",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/068270/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.378618+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "068760",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/068760/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.803975+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "069080",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/069080/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.807315+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "069260",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/069260/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.817205+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "069620",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/069620/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.801347+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "069960",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/069960/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.799802+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "071050",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/071050/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:25.814755+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "071320",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/071320/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.246663+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "071970",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/071970/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.258153+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "072710",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/072710/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.241527+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "073240",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/073240/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.316608+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "074600",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/074600/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.238252+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "075580",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/075580/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.241019+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "077970",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/077970/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.755989+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "078160",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/078160/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.759043+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "078340",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/078340/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.762621+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "078350",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/078350/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.757668+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "078520",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/078520/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.750540+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "078600",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/078600/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:26.740226+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "078930",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/078930/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.197191+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "079550",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/079550/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.198594+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "079900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/079900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.207417+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "079940",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/079940/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.200412+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "081660",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/081660/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.191050+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "082270",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/082270/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.195742+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "082740",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/082740/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.626340+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "082920",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/082920/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.627473+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "083450",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/083450/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.643411+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "083650",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/083650/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.638912+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "084010",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/084010/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.639419+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "084110",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/084110/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:27.635343+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "084370",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/084370/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.071262+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "084690",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/084690/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.066407+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "084850",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/084850/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.066071+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "085660",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/085660/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.062847+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "086280",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/086280/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.062585+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "086390",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/086390/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.063329+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "086450",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/086450/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.505754+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "086520",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/086520/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.498240+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "086790",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/086790/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.492064+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "086900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/086900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.510313+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "087010",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/087010/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.518857+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "089010",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/089010/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.501046+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "089860",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/089860/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.944316+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "089890",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/089890/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.944889+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "089970",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/089970/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.937147+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "089980",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/089980/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.938455+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "090360",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/090360/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.964921+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "090430",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/090430/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:28.939290+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "090460",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/090460/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.384862+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "092230",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/092230/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.397397+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "092460",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/092460/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.395988+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "092730",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/092730/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.382374+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "093050",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/093050/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.406823+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "093320",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/093320/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.390002+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "093520",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/093520/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.837217+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "094170",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/094170/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.828511+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "094360",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/094360/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.827868+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "095340",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/095340/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.844898+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "095500",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/095500/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.830628+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "095610",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/095610/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:29.829946+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "095660",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/095660/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.273226+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "096530",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/096530/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.272703+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "096770",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/096770/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.265581+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "097520",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/097520/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.264010+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "097950",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/097950/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.263533+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "098070",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/098070/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.279636+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "099190",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/099190/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.710301+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "099320",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/099320/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.732578+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "100840",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/100840/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.726224+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "101160",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/101160/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.700256+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "101360",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/101360/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.725913+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "101490",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/101490/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:30.716767+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "101730",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/101730/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.157674+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "101930",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/101930/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.159013+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "102710",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/102710/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.162027+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "102940",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/102940/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.160121+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "103140",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/103140/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.155445+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "103590",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/103590/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.177325+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "104700",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/104700/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.607455+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "104830",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/104830/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.613341+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "105560",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/105560/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.609630+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "105630",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/105630/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.599315+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "107640",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/107640/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.601268+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "108320",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/108320/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:31.623029+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "108380",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/108380/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.060626+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "108490",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/108490/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.054729+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "108670",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/108670/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.062285+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "108860",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/108860/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.060008+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "110990",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/110990/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.053683+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "111770",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/111770/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.065138+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "112040",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/112040/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.511584+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "114090",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/114090/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.504212+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "114190",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/114190/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.515429+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "114810",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/114810/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.505840+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "114840",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/114840/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.530356+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "115180",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/115180/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.507759+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "117730",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/117730/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.974448+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "119850",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/119850/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.950624+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "120110",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/120110/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.958707+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "121600",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/121600/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.948458+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "122870",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/122870/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.970714+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "124500",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/124500/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:32.959836+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "126340",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/126340/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.420073+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "126720",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/126720/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.403048+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "127120",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/127120/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.397448+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "128940",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/128940/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.405504+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "131290",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/131290/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.403404+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "131970",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/131970/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.412644+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "137310",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/137310/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.845685+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "137400",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/137400/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.860229+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "138040",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/138040/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.866844+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "138610",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/138610/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.849367+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "138930",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/138930/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.832971+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "139130",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/139130/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:33.861343+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "139480",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/139480/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.296282+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "140860",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/140860/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.288761+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "141080",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/141080/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.302517+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "144510",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/144510/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.292435+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "145020",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/145020/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.294858+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "145720",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/145720/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.295121+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "145990",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/145990/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.726151+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "161000",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/161000/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.733462+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "161390",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/161390/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.727385+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "161580",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/161580/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.723374+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "161890",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/161890/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.728475+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "166090",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/166090/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:34.780094+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "168360",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/168360/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.221270+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "170900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/170900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.201899+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "171090",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/171090/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.227832+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "175330",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/175330/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.207149+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "178920",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/178920/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.204773+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "180640",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/180640/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.213289+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "181710",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/181710/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.655394+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "183190",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/183190/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.662648+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "183300",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/183300/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.648912+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "185750",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/185750/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.655484+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "189300",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/189300/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.662871+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "190510",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/190510/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:35.646821+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "192080",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/192080/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.088770+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "192400",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/192400/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.092429+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "192820",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/192820/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.085532+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "194370",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/194370/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.082606+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "194480",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/194480/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.088213+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "194700",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/194700/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.086343+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "195870",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/195870/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.513853+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "195940",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/195940/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.513624+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "196170",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/196170/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.530626+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "199430",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/199430/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.518572+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "199800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/199800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.521855+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "200130",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/200130/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.525372+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "200670",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/200670/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.968216+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "200710",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/200710/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.946777+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "200880",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/200880/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.957146+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "206640",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/206640/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.975419+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "207940",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/207940/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.970998+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "211050",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/211050/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:36.958940+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "213420",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/213420/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.418410+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "214150",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/214150/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.409942+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "214320",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/214320/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.412632+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "214370",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/214370/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.404286+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "214430",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/214430/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.405781+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "214450",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/214450/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.427922+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "215000",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/215000/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.846316+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "215200",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/215200/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.863875+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "218410",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/218410/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.847797+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "220100",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/220100/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.864395+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "222800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/222800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.851248+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "225570",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/225570/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:37.845354+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "226320",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/226320/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.296345+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "226950",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/226950/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.302483+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "228760",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/228760/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.300635+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "229640",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/229640/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.311245+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "236200",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/236200/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.300198+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "237690",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/237690/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.296267+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "237880",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/237880/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.741815+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "241560",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/241560/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.737246+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "241710",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/241710/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.757930+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "241770",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/241770/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.738678+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "243070",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/243070/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.725084+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "247540",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/247540/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:38.739228+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "248070",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/248070/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.176648+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "249420",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/249420/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.185977+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "251270",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/251270/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.189562+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "251970",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/251970/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.203782+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "253450",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/253450/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.207926+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "257720",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/257720/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.187851+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "259960",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/259960/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.636422+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "263750",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/263750/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.639707+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "265520",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/265520/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.649891+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "267250",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/267250/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.650153+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "267260",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/267260/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.633354+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "267270",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/267270/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:39.651994+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "267980",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/267980/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.079358+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "268280",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/268280/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.071692+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "270660",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/270660/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.078633+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "271560",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/271560/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.072325+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "271940",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/271940/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.088853+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "272210",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/272210/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.076435+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "272290",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/272290/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.531915+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "277810",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/277810/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.533376+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "278280",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/278280/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.518373+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "278470",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/278470/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.522954+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "280360",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/280360/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.524098+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "281820",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/281820/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.522081+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "282330",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/282330/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.955784+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "284740",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/284740/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.967664+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "285130",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/285130/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.963626+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "286940",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/286940/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.952947+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "287840",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/287840/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.953014+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "290650",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/290650/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:40.960908+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "294570",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/294570/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.390311+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "294870",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/294870/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.402817+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "295310",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/295310/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.399326+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "298020",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/298020/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.392750+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "298040",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/298040/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.391795+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "298050",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/298050/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.391605+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "298380",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/298380/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.832834+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "299030",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/299030/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.830746+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "300080",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/300080/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.833370+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "300720",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/300720/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.829928+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "302440",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/302440/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.824946+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "304100",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/304100/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:41.826240+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "304360",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/304360/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.277404+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "306200",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/306200/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.272848+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "307950",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/307950/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.272587+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "308430",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/308430/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.271591+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "310210",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/310210/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.277223+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "314930",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/314930/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.270113+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "316140",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/316140/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.701909+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "317330",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/317330/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.718505+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "317450",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/317450/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.698125+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "319660",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/319660/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.709845+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "323280",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/323280/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.710894+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "323410",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/323410/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:42.702955+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "326030",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/326030/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.150017+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "328130",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/328130/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.144499+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "329180",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/329180/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.140649+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "336260",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/336260/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.153092+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "336370",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/336370/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.145570+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "338220",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/338220/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.153705+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "338840",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/338840/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.574961+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "340570",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/340570/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.585019+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "344820",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/344820/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.600233+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "348210",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/348210/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.574887+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "348370",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/348370/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.577482+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "352480",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/352480/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:43.597815+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "352820",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/352820/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.025093+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "356860",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/356860/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.023480+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "357550",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/357550/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.031200+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "357780",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/357780/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.020433+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "358570",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/358570/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.025958+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "361610",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/361610/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.024903+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "365340",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/365340/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.473561+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "372170",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/372170/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.449830+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "372320",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/372320/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.461566+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "373220",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/373220/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.460976+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "376270",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/376270/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.450136+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "376300",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/376300/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.482450+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "376900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/376900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.915455+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "377300",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/377300/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.915223+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "378340",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/378340/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.905851+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "381970",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/381970/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.929090+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "383220",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/383220/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.907048+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "383800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/383800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:44.915733+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "388210",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/388210/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.355761+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "388720",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/388720/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.377675+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "389470",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/389470/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.346465+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "389650",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/389650/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.350650+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "394280",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/394280/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.346259+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "394800",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/394800/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.357355+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "397030",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/397030/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.814098+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "399720",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/399720/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.799800+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "402030",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/402030/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.794848+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "402340",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/402340/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.800105+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "403550",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/403550/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.801275+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "403850",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/403850/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:45.814769+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "416180",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/416180/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.237023+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "419530",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/419530/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.244496+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "420770",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/420770/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.242813+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "424870",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/424870/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.250418+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "425420",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/425420/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.248757+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "437730",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/437730/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.246464+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "439090",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/439090/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.689467+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "439260",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/439260/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.685417+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "441270",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/441270/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.688672+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "443060",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/443060/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.674487+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "445090",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/445090/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.678210+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "445680",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/445680/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:46.681486+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "448280",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/448280/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.118439+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "448900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/448900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.114304+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "450950",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/450950/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.114713+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "452430",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/452430/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.113907+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "453340",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/453340/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.134938+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "455900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/455900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.121892+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "456040",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/456040/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.563065+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "456160",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/456160/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.572148+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "457190",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/457190/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.555998+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "458870",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/458870/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.561373+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "459510",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/459510/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.554580+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "460860",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/460860/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.556190+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "460930",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/460930/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.997127+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "462870",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/462870/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.014280+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "466100",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/466100/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.992086+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "468530",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/468530/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.990494+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "469610",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/469610/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:47.996649+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "472850",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/472850/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.013770+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "473980",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/473980/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.455488+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "475400",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/475400/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.432190+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "475830",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/475830/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.438419+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "475960",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/475960/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.437771+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "476060",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/476060/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.437482+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "476830",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/476830/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.435617+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "481070",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/481070/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.885793+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "483650",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/483650/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.895612+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "484120",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/484120/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.883396+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "484870",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/484870/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.880686+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "486990",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/486990/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.896791+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "488900",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/488900/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:48.892745+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "489790",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/489790/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:49.313680+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "494120",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/494120/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:49.321896+09:00"
+    },
+    {
+      "market": "NXT",
+      "code": "499790",
+      "sourceUrl": "https://stock.naver.com/api/domestic/detail/499790/detail?codeType=NXT",
+      "retrievedAt": "2026-11-13T10:15:49.323280+09:00"
+    },
+    {
+      "market": "NXT",
+      "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+      "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+      "requestMethod": "POST",
+      "requestBody": "pageIndex=1&pageUnit=5000",
+      "retrievedAt": "2026-11-13T10:15:02.567514+09:00",
+      "kind": "complete_official_eligibility",
+      "eligibilityObservedAt": "2026-11-13 09:55",
+      "officialEligibleCount": 603
+    }
+  ],
+  "stocks": [
+    {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "turnoverRank": 1,
+      "krxTradeAmount": 1003584000000,
+      "nxtTradeAmount": 841932000000,
+      "integratedTradeAmount": 1845516000000,
+      "changeRate": 2.63,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:22+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/000660/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:03+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/000660/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "turnoverRank": 2,
+      "krxTradeAmount": 667221000000,
+      "nxtTradeAmount": 777600000000,
+      "integratedTradeAmount": 1444821000000,
+      "changeRate": 2.4,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/005930/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/005930/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "009150",
+      "name": "삼성전기",
+      "turnoverRank": 3,
+      "krxTradeAmount": 206530000000,
+      "nxtTradeAmount": 265931000000,
+      "integratedTradeAmount": 472461000000,
+      "changeRate": 3.05,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:24+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/009150/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/009150/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "402340",
+      "name": "SK스퀘어",
+      "turnoverRank": 4,
+      "krxTradeAmount": 132966000000,
+      "nxtTradeAmount": 116893000000,
+      "integratedTradeAmount": 249859000000,
+      "changeRate": -0.13,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/402340/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/402340/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "005935",
+      "name": "삼성전자우",
+      "turnoverRank": 5,
+      "krxTradeAmount": 200236000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 200236000000,
+      "changeRate": 2.97,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/005935/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "005935",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 005935 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "007810",
+      "name": "코리아써키트",
+      "turnoverRank": 6,
+      "krxTradeAmount": 67215000000,
+      "nxtTradeAmount": 127561000000,
+      "integratedTradeAmount": 194776000000,
+      "changeRate": 6.09,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/007810/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/007810/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "036930",
+      "name": "주성엔지니어링",
+      "turnoverRank": 7,
+      "krxTradeAmount": 190361166000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 190361166000,
+      "changeRate": 5.7,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:19+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/036930/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "036930",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 036930 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "006400",
+      "name": "삼성SDI",
+      "turnoverRank": 8,
+      "krxTradeAmount": 88830000000,
+      "nxtTradeAmount": 84152000000,
+      "integratedTradeAmount": 172982000000,
+      "changeRate": 3.91,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/006400/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/006400/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "035420",
+      "name": "NAVER",
+      "turnoverRank": 9,
+      "krxTradeAmount": 97554000000,
+      "nxtTradeAmount": 55937000000,
+      "integratedTradeAmount": 153491000000,
+      "changeRate": 0.28,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:22+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/035420/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/035420/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "007660",
+      "name": "이수페타시스",
+      "turnoverRank": 10,
+      "krxTradeAmount": 67409000000,
+      "nxtTradeAmount": 70168000000,
+      "integratedTradeAmount": 137577000000,
+      "changeRate": 10.82,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:24+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/007660/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/007660/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "18064K",
+      "name": "한진칼우",
+      "turnoverRank": 11,
+      "krxTradeAmount": 130212000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 130212000000,
+      "changeRate": 7.25,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/18064K/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "18064K",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 18064K 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "180640",
+      "name": "한진칼",
+      "turnoverRank": 12,
+      "krxTradeAmount": 54414000000,
+      "nxtTradeAmount": 69069000000,
+      "integratedTradeAmount": 123483000000,
+      "changeRate": 4.68,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:19+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/180640/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/180640/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "015760",
+      "name": "한국전력",
+      "turnoverRank": 13,
+      "krxTradeAmount": 77112000000,
+      "nxtTradeAmount": 44155000000,
+      "integratedTradeAmount": 121267000000,
+      "changeRate": -9.79,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:19+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/015760/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/015760/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "222800",
+      "name": "심텍",
+      "turnoverRank": 14,
+      "krxTradeAmount": 48543213000,
+      "nxtTradeAmount": 71740698000,
+      "integratedTradeAmount": 120283911000,
+      "changeRate": 2.91,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:23+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/222800/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/222800/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "263860",
+      "name": "지니언스",
+      "turnoverRank": 15,
+      "krxTradeAmount": 113731295000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 113731295000,
+      "changeRate": 13.4,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:18+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/263860/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "263860",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 263860 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "turnoverRank": 16,
+      "krxTradeAmount": 53565000000,
+      "nxtTradeAmount": 40987000000,
+      "integratedTradeAmount": 94552000000,
+      "changeRate": 3.19,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:23+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/005380/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/005380/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "034020",
+      "name": "두산에너빌리티",
+      "turnoverRank": 17,
+      "krxTradeAmount": 36723000000,
+      "nxtTradeAmount": 36152000000,
+      "integratedTradeAmount": 72875000000,
+      "changeRate": 2.22,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/034020/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/034020/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "064400",
+      "name": "LG씨엔에스",
+      "turnoverRank": 18,
+      "krxTradeAmount": 65516000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 65516000000,
+      "changeRate": 7.43,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:23+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/064400/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "064400",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 064400 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "028050",
+      "name": "삼성E&A",
+      "turnoverRank": 19,
+      "krxTradeAmount": 63773000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 63773000000,
+      "changeRate": 3.48,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:22+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/028050/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "028050",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 028050 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "328130",
+      "name": "루닛",
+      "turnoverRank": 20,
+      "krxTradeAmount": 28499188000,
+      "nxtTradeAmount": 34559281000,
+      "integratedTradeAmount": 63058469000,
+      "changeRate": 14.21,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:19+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/328130/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/328130/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "058610",
+      "name": "에스피지",
+      "turnoverRank": 21,
+      "krxTradeAmount": 29669093000,
+      "nxtTradeAmount": 33375279000,
+      "integratedTradeAmount": 63044372000,
+      "changeRate": 13.7,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:24+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/058610/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/058610/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "002990",
+      "name": "금호건설",
+      "turnoverRank": 22,
+      "krxTradeAmount": 62042000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 62042000000,
+      "changeRate": 29.9,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/002990/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "002990",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 002990 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "042700",
+      "name": "한미반도체",
+      "turnoverRank": 23,
+      "krxTradeAmount": 34739000000,
+      "nxtTradeAmount": 26820000000,
+      "integratedTradeAmount": 61559000000,
+      "changeRate": 2.25,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/042700/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/042700/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "353200",
+      "name": "대덕전자",
+      "turnoverRank": 24,
+      "krxTradeAmount": 58953000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 58953000000,
+      "changeRate": 4.18,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/353200/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "353200",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 353200 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "196170",
+      "name": "알테오젠",
+      "turnoverRank": 25,
+      "krxTradeAmount": 33891228000,
+      "nxtTradeAmount": 24096084000,
+      "integratedTradeAmount": 57987312000,
+      "changeRate": 3.78,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:18+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/196170/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/196170/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "356860",
+      "name": "티엘비",
+      "turnoverRank": 26,
+      "krxTradeAmount": 22558157000,
+      "nxtTradeAmount": 35414116000,
+      "integratedTradeAmount": 57972273000,
+      "changeRate": 5.68,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/356860/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/356860/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "030530",
+      "name": "원익홀딩스",
+      "turnoverRank": 27,
+      "krxTradeAmount": 56647021000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 56647021000,
+      "changeRate": 7.4,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/030530/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "030530",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 030530 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "108490",
+      "name": "로보티즈",
+      "turnoverRank": 28,
+      "krxTradeAmount": 23321549000,
+      "nxtTradeAmount": 33172384000,
+      "integratedTradeAmount": 56493933000,
+      "changeRate": 6.46,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:22+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/108490/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/108490/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "399720",
+      "name": "가온칩스",
+      "turnoverRank": 29,
+      "krxTradeAmount": 14191321000,
+      "nxtTradeAmount": 40309892000,
+      "integratedTradeAmount": 54501213000,
+      "changeRate": 28.4,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:24+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/399720/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/399720/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "000990",
+      "name": "DB하이텍",
+      "turnoverRank": 30,
+      "krxTradeAmount": 23693000000,
+      "nxtTradeAmount": 30192000000,
+      "integratedTradeAmount": 53885000000,
+      "changeRate": 2.79,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:22+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/000990/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/000990/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "128940",
+      "name": "한미약품",
+      "turnoverRank": 31,
+      "krxTradeAmount": 28936000000,
+      "nxtTradeAmount": 22603000000,
+      "integratedTradeAmount": 51539000000,
+      "changeRate": 2.54,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:19+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/128940/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:05+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/128940/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "001210",
+      "name": "금호전기",
+      "turnoverRank": 32,
+      "krxTradeAmount": 51046000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 51046000000,
+      "changeRate": 24.7,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/001210/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "001210",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 001210 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "086520",
+      "name": "에코프로",
+      "turnoverRank": 33,
+      "krxTradeAmount": 25230288000,
+      "nxtTradeAmount": 24979301000,
+      "integratedTradeAmount": 50209589000,
+      "changeRate": 4.28,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/086520/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/086520/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "018260",
+      "name": "삼성에스디에스",
+      "turnoverRank": 34,
+      "krxTradeAmount": 28486000000,
+      "nxtTradeAmount": 20482000000,
+      "integratedTradeAmount": 48968000000,
+      "changeRate": 3.69,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/018260/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/018260/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "053800",
+      "name": "안랩",
+      "turnoverRank": 35,
+      "krxTradeAmount": 14094574000,
+      "nxtTradeAmount": 34479738000,
+      "integratedTradeAmount": 48574312000,
+      "changeRate": 3.04,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:19+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/053800/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/053800/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "298040",
+      "name": "효성중공업",
+      "turnoverRank": 36,
+      "krxTradeAmount": 22638000000,
+      "nxtTradeAmount": 24345000000,
+      "integratedTradeAmount": 46983000000,
+      "changeRate": 0.71,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:24+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/298040/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:05+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/298040/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "000150",
+      "name": "두산",
+      "turnoverRank": 37,
+      "krxTradeAmount": 26498000000,
+      "nxtTradeAmount": 19169000000,
+      "integratedTradeAmount": 45667000000,
+      "changeRate": -0.6,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/000150/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:14:49+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/000150/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "012450",
+      "name": "한화에어로스페이스",
+      "turnoverRank": 38,
+      "krxTradeAmount": 35480000000,
+      "nxtTradeAmount": 9469000000,
+      "integratedTradeAmount": 44949000000,
+      "changeRate": -0.61,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/012450/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/012450/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "079650",
+      "name": "서산",
+      "turnoverRank": 39,
+      "krxTradeAmount": 41294957000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 41294957000,
+      "changeRate": 18.11,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:22+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/079650/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "079650",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 079650 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "010120",
+      "name": "LS ELECTRIC",
+      "turnoverRank": 40,
+      "krxTradeAmount": 21128000000,
+      "nxtTradeAmount": 20009000000,
+      "integratedTradeAmount": 41137000000,
+      "changeRate": 2.65,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/010120/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/010120/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "277810",
+      "name": "레인보우로보틱스",
+      "turnoverRank": 41,
+      "krxTradeAmount": 22101758000,
+      "nxtTradeAmount": 17824557000,
+      "integratedTradeAmount": 39926315000,
+      "changeRate": 11.43,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/277810/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/277810/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "211270",
+      "name": "AP위성",
+      "turnoverRank": 42,
+      "krxTradeAmount": 39236244000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 39236244000,
+      "changeRate": 7.49,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:22+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/211270/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "211270",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 211270 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "068270",
+      "name": "셀트리온",
+      "turnoverRank": 43,
+      "krxTradeAmount": 20333000000,
+      "nxtTradeAmount": 17921000000,
+      "integratedTradeAmount": 38254000000,
+      "changeRate": 0.72,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/068270/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/068270/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "105560",
+      "name": "KB금융",
+      "turnoverRank": 44,
+      "krxTradeAmount": 30119000000,
+      "nxtTradeAmount": 7300000000,
+      "integratedTradeAmount": 37419000000,
+      "changeRate": 3.95,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/105560/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:05+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/105560/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "035900",
+      "name": "JYP Ent.",
+      "turnoverRank": 45,
+      "krxTradeAmount": 15228010000,
+      "nxtTradeAmount": 21950702000,
+      "integratedTradeAmount": 37178712000,
+      "changeRate": 0.11,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:21+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/035900/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/035900/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "017670",
+      "name": "SK텔레콤",
+      "turnoverRank": 46,
+      "krxTradeAmount": 20439000000,
+      "nxtTradeAmount": 15988000000,
+      "integratedTradeAmount": 36427000000,
+      "changeRate": 4.17,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:23+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/017670/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:05+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/017670/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "066570",
+      "name": "LG전자",
+      "turnoverRank": 47,
+      "krxTradeAmount": 19507000000,
+      "nxtTradeAmount": 15754000000,
+      "integratedTradeAmount": 35261000000,
+      "changeRate": 2.26,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:22+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/066570/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/066570/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    },
+    {
+      "code": "009830",
+      "name": "한화솔루션",
+      "turnoverRank": 48,
+      "krxTradeAmount": 34825000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 34825000000,
+      "changeRate": 2.1,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:23+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/009830/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "009830",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 009830 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "0158S0",
+      "name": "엘리스",
+      "turnoverRank": 49,
+      "krxTradeAmount": 34007052000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 34007052000,
+      "changeRate": 8.8,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:20+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/0158S0/detail?codeType=KRX"
+        }
+      },
+      "zeroNxtEvidence": {
+        "code": "0158S0",
+        "sourceUrl": "https://nextrade.co.kr/menu/marketData/menuList.do",
+        "requestUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
+        "requestMethod": "POST",
+        "requestBody": "pageIndex=1&pageUnit=5000",
+        "checkedAt": "2026-11-13T10:15:02.567514+09:00",
+        "eligibilityObservedAt": "2026-11-13T09:55:00+09:00",
+        "officialEligibleCount": 603,
+        "reason": "2026-11-13 NXT 공식 거래대상 전체 603종목 목록에 0158S0 미포함; NXT 비거래를 별도 확인."
+      }
+    },
+    {
+      "code": "278470",
+      "name": "에이피알",
+      "turnoverRank": 50,
+      "krxTradeAmount": 19428000000,
+      "nxtTradeAmount": 13231000000,
+      "integratedTradeAmount": 32659000000,
+      "changeRate": -0.83,
+      "rateMarket": "KRX",
+      "quotes": {
+        "KRX": {
+          "observedAt": "2026-11-13T10:15:18+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/278470/detail?codeType=KRX"
+        },
+        "NXT": {
+          "observedAt": "2026-11-13T10:15:04+09:00",
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/278470/detail?codeType=NXT"
+        }
+      },
+      "zeroNxtEvidence": null
+    }
+  ],
+  "byTurnover": [
+    "000660",
+    "005930",
+    "009150",
+    "402340",
+    "005935",
+    "007810",
+    "036930",
+    "006400",
+    "035420",
+    "007660",
+    "18064K",
+    "180640",
+    "015760",
+    "222800",
+    "263860",
+    "005380",
+    "034020",
+    "064400",
+    "028050",
+    "328130",
+    "058610",
+    "002990",
+    "042700",
+    "353200",
+    "196170",
+    "356860",
+    "030530",
+    "108490",
+    "399720",
+    "000990",
+    "128940",
+    "001210",
+    "086520",
+    "018260",
+    "053800",
+    "298040",
+    "000150",
+    "012450",
+    "079650",
+    "010120",
+    "277810",
+    "211270",
+    "068270",
+    "105560",
+    "035900",
+    "017670",
+    "066570",
+    "009830",
+    "0158S0",
+    "278470"
+  ],
+  "byChangeRate": [
+    "002990",
+    "399720",
+    "001210",
+    "079650",
+    "328130",
+    "058610",
+    "263860",
+    "277810",
+    "007660",
+    "0158S0",
+    "211270",
+    "064400",
+    "030530",
+    "18064K",
+    "108490",
+    "007810",
+    "036930",
+    "356860",
+    "180640",
+    "086520",
+    "353200",
+    "017670",
+    "105560",
+    "006400",
+    "196170",
+    "018260",
+    "028050",
+    "005380",
+    "009150",
+    "053800",
+    "005935",
+    "222800",
+    "000990",
+    "010120",
+    "000660",
+    "128940",
+    "005930",
+    "066570",
+    "042700",
+    "034020",
+    "009830",
+    "068270",
+    "298040",
+    "035420",
+    "035900",
+    "402340",
+    "000150",
+    "012450",
+    "278470",
+    "015760"
+  ],
+  "themes": [],
+  "unclassified": [
+    "000660",
+    "005930",
+    "009150",
+    "402340",
+    "005935",
+    "007810",
+    "036930",
+    "006400",
+    "035420",
+    "007660",
+    "18064K",
+    "180640",
+    "015760",
+    "222800",
+    "263860",
+    "005380",
+    "034020",
+    "064400",
+    "028050",
+    "328130",
+    "058610",
+    "002990",
+    "042700",
+    "353200",
+    "196170",
+    "356860",
+    "030530",
+    "108490",
+    "399720",
+    "000990",
+    "128940",
+    "001210",
+    "086520",
+    "018260",
+    "053800",
+    "298040",
+    "000150",
+    "012450",
+    "079650",
+    "010120",
+    "277810",
+    "211270",
+    "068270",
+    "105560",
+    "035900",
+    "017670",
+    "066570",
+    "009830",
+    "0158S0",
+    "278470"
+  ],
+  "collectionDiagnostics": [
+    {
+      "stage": "ranking_received",
+      "checkedAt": "2026-11-13T10:14:57.414945+09:00",
+      "market": "KRX",
+      "rows": 2879,
+      "stocks": 2829,
+      "sourceUrl": "https://stock.naver.com/api/domestic/market/stock/default?marketType=ALL&orderType=priceTop&startIdx=0&pageSize=5000&tradeType=KRX"
+    },
+    {
+      "stage": "ranking_received",
+      "checkedAt": "2026-11-13T10:14:57.415429+09:00",
+      "market": "NXT",
+      "rows": 100,
+      "stocks": 100,
+      "sourceUrl": "https://stock.naver.com/api/domestic/market/stock/default?marketType=ALL&orderType=priceTop&startIdx=0&pageSize=5000&tradeType=NXT"
+    },
+    {
+      "stage": "nxt_order_inversion",
+      "checkedAt": "2026-11-13T10:14:57.415605+09:00",
+      "count": 8,
+      "examples": [
+        {
+          "previousCode": "402030",
+          "code": "277810",
+          "previousAmount": 17780616000,
+          "amount": 17797624000
+        },
+        {
+          "previousCode": "277810",
+          "code": "068270",
+          "previousAmount": 17797624000,
+          "amount": 17802000000
+        },
+        {
+          "previousCode": "131970",
+          "code": "010060",
+          "previousAmount": 12842870000,
+          "amount": 12861000000
+        },
+        {
+          "previousCode": "078350",
+          "code": "012330",
+          "previousAmount": 9227230000,
+          "amount": 9230000000
+        },
+        {
+          "previousCode": "425420",
+          "code": "323280",
+          "previousAmount": 7650278000,
+          "amount": 7650353000
+        },
+        {
+          "previousCode": "062040",
+          "code": "016360",
+          "previousAmount": 7562000000,
+          "amount": 7628000000
+        },
+        {
+          "previousCode": "095340",
+          "code": "066970",
+          "previousAmount": 6722696000,
+          "amount": 6728000000
+        },
+        {
+          "previousCode": "010130",
+          "code": "281820",
+          "previousAmount": 5755000000,
+          "amount": 5769000000
+        }
+      ],
+      "fallback": "complete_official_universe"
+    },
+    {
+      "stage": "nxt_full_scan_started",
+      "checkedAt": "2026-11-13T10:15:02.577988+09:00",
+      "eligibleCount": 603,
+      "officialObservedAt": "2026-11-13 09:55"
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:08.117760+09:00",
+      "completed": 60,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:13.068479+09:00",
+      "completed": 120,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:17.862268+09:00",
+      "completed": 180,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:22.305751+09:00",
+      "completed": 240,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:26.763580+09:00",
+      "completed": 300,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:31.178285+09:00",
+      "completed": 360,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:35.663823+09:00",
+      "completed": 420,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:40.089841+09:00",
+      "completed": 480,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:44.483417+09:00",
+      "completed": 540,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:48.897733+09:00",
+      "completed": 600,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_progress",
+      "checkedAt": "2026-11-13T10:15:49.323610+09:00",
+      "completed": 603,
+      "eligibleCount": 603
+    },
+    {
+      "stage": "nxt_full_scan_verified",
+      "checkedAt": "2026-11-13T10:15:49.324066+09:00",
+      "exactQuotes": 603,
+      "officialNonEligible": 2226
+    },
+    {
+      "stage": "top_fifty_verified",
+      "checkedAt": "2026-11-13T10:15:53.459544+09:00",
+      "stockCount": 50,
+      "requestCount": 655
+    }
+  ],
+  "probeOnly": true
+}
