@@ -1,33 +1,34 @@
 {
   "releaseAt": "2026-11-13T20:20:00+09:00",
-  "requestId": "prepare-20261113-2020-1794568164794",
-  "checkedAt": "2026-11-13T11:10:42.575Z",
-  "state": "research_retrying",
-  "published": false,
-  "failedSources": [
-    {
-      "source": "Reuters",
-      "error": "HTTP 401",
-      "fallback": "연합뉴스 및 공식자료 검색"
-    },
-    {
-      "source": "연합뉴스 개별 기사",
-      "error": "web original-page fetch inaccessible; Firecrawl insufficient credits",
-      "fallback": "Source-check list collected but original timestamp not independently verified"
-    },
-    {
-      "source": "independent NAVER KRX",
-      "error": "2026-11-13 same-date positive trade corroboration not parsed",
-      "fallback": "KIND official trade evidence retained but insufficient alone"
-    }
+  "requestId": "manual-recovery-20261113-2020-1794569944699",
+  "state": "research_completed",
+  "checkedAt": "2026-11-13T11:49:45.740Z",
+  "asOf": "2026-11-13T11:45:57.405Z",
+  "researchPath": "operations/research/2026-11-13-2020.json",
+  "draftVerified": true,
+  "publicReadbackVerified": true,
+  "privateMirrorVerified": true,
+  "publicationEvidencePath": "operations/publications/2026-11-13-2020/43418764739-1.json",
+  "publicationCommit": "19c42c28f36463effdf355446a4f1857439ffdec",
+  "workflowRunId": 43418764739,
+  "workflowConclusion": "success",
+  "itemCount": 1,
+  "rootCause": [
+    "Initial editorial process stopped at 20:10:42 in research_retrying; no actual continued review or original-edition draft was staged.",
+    "After-close NAVER quote observation was outside parser window; immutable same-day two-source trading evidence had not been reused.",
+    "Overlapping original publisher encountered Git ref 422 while recovery publisher completed successfully."
   ],
-  "missingCoverage": [
-    "foreign_market",
-    "foreign_policy",
-    "foreign_technology",
-    "domestic_disclosures",
-    "domestic_policy",
-    "domestic_market"
+  "remediation": [
+    "Actual alternative-source research and candidate decisions saved; verified 20:20 draft staged and published within original deadline.",
+    "Same-day official KIND plus independent NAVER KRX positive-trade evidence can be revalidated without changing original observation timestamps; rejects wrong dates, zero volumes, missing sources, wrong market, future times.",
+    "Operation record Git ref conflict retries increased with bounded backoff; publication watcher rechecks real root/archive following 409/422 instead of declaring immediate failure."
   ],
-  "reason": "Original 20:20 edition is in allowed research window. Source-check preflight completed, but editorial verification and independent trading-day corroboration incomplete. Do not stage fabricated audit or publish unverified candidate."
+  "testResult": {
+    "tests": 138,
+    "passed": true
+  },
+  "limitations": [
+    "Automatic source-check success still does not mean editorial verification. New facts require actual researcher review.",
+    "A cached/stale list or failed source was not recorded as normal zero results; unverified candidates excluded."
+  ]
 }
