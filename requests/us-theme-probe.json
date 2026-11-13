@@ -1,0 +1,4 @@
+{
+  "releaseAt": "2026-11-13T06:40:00+09:00",
+  "purpose": "Source connectivity and top-50 classification probe only; never publish or backfill"
+}

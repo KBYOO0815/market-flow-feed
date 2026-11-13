@@ -114,3 +114,8 @@ asOf must be within 20 minutes before to 30 minutes after the intended release. 
 - 서버 Check briefing sources가 목표 15분 전 6분야 출처를 각각 조회하고 operations/source-checks/YYYY-MM-DD-HHMM.json 및 evidencePath에 후보 링크·조회 시각·HTTP 상태·최대2회 시도·DART 선택 날짜/건수를 남긴다. 원문 장애가 다른 분야를 중단시키지 않는다. 기록은 미검증 후보이며 HTTP 성공을 편집 검증·거래일 확정으로 간주하지 않는다. 오래된 자료는 다시 조사한다.
 - 예약 연구 작업은 위 자료를 먼저 참고하고 실제 원문·시각·후보별 채택/제외 사유를 operations/research/에 별도로 기록한다. 최종 6분야 조사와 거래일 확인이 미완료면 발행은 차단한다.
 - 서버 발행기는 원래 회차를 유지하며 releaseAt+30분까지 15초마다 원격 초안을 재조회한다. 공개본·날짜별 회차 일치를 확인한 뒤에만 published를 기록한다. 목표 시각 이후 발표된 기사는 검증기에서 거부한다. 실제 발행 결과는 operations/publications/에 별도 보존해 연구 실패 기록을 덮어쓰지 않는다. 자세한 운영 방식은 BRIEFING_OPERATIONS.md 참조.
+
+## 미국 강한 테마 (2026-11-16 06:40부터)
+- 06:40에만 미국 정규장 달러 거래대금 상위50 보통주·ADR의 검증된 테마를 가중평균 등락률 순 최대3개 표시한다. ETF·ETN·우선주·시간외·종가×거래량 추정액은 제외한다. 50종목 전체의 단일 주테마 분류와 근거를 확인하고 중복·누락을 허용하지 않는다. 자료·분류 검증 실패는 상단 미집계 표시. 임의 숫자·상승 이유 생성 금지.
+- 06:25 서버 출처 수집에서 06:40 전용 operations/us-theme-sources/YYYY-MM-DD-0640.json 및 evidencePath를 생성한다. 예약 연구 작업은 이 원천과 실제 검증한 테마 분류를 scripts/us_themes.py로 합성한 후 일반 prepare_feed.py --stage 검증을 수행한다. 상세 구조·절차·원천은 US_THEMES_POLICY.md 준수.
+- 기존 APK 호환을 위해 최대3개 테마는 하나의 최상단 요약 항목으로 구성하며 국외10개 한도 안에서 일반 국외뉴스는 최대9개를 유지한다. 구조화 usThemeReport에 실제50종목·원문·검토·계산 결과를 보존한다. 다음07:40에 만료하며 다른 회차에는 넣지 않는다. 기존 역사적 회차를 재표기하지 않는다.

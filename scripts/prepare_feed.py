@@ -49,6 +49,9 @@ def validate(payload):
     items = payload.get("items")
     if not isinstance(items, list) or len(items) > 20:
         raise ValueError("items must be an array with at most 20 entries")
+    from us_themes import validate_block, ROLE
+    validate_block(payload)
+    editorial_count = sum(i.get('role') != ROLE for i in items if isinstance(i, dict))
     # Starting with the next release, require a verifiable research coverage audit.
     # Counts alone do not prove research; source URLs and topic coverage are required.
     if local >= dt.datetime(2026, 11, 12, 11, 30, tzinfo=KST):
@@ -74,7 +77,7 @@ def validate(payload):
             value = audit.get(field)
             if type(value) is not int or value < 0:
                 raise ValueError("nonnegative measured researchAudit count required: " + field)
-        if audit["verifiedCandidates"] < len(items) and payload.get("correction") is None:
+        if audit["verifiedCandidates"] < editorial_count and payload.get("correction") is None:
             raise ValueError("verified candidate count below published item count")
     # Amendments retain the original cutoff and original audit. Post-publication
     # verification is recorded against the actual correction time, never backdated.
@@ -113,7 +116,7 @@ def validate(payload):
         original_review = as_of - dt.timedelta(minutes=15) <= reviewed <= as_of
         correction_review = (item["id"] in correction_added and
                              corrected_at - dt.timedelta(minutes=15) <= reviewed <= corrected_at)
-        if published > release:
+        if published > release and item.get('role') != ROLE:
             raise ValueError("item was published after target releaseAt; use a later edition")
         if published > as_of or not (original_review or correction_review):
             raise ValueError("item publication/review time does not match original cutoff or correction")

@@ -126,6 +126,11 @@ def main():
     result = collect(release)
     save(path, result)
     save('operations/source-checks/' + key(release) + '.json', {'releaseAt': release.isoformat(), 'checkedAt': result['checkedAt'], 'state': result['state'], 'evidencePath': path, 'editorialCoverageVerified': False})
+    # US turnover collection belongs only to the opening 06:40 briefing.
+    if release.strftime('%H:%M') == '06:40':
+        from us_theme_worker import run
+        us_result = run(release.isoformat(), ident)
+        print('US theme snapshot:', us_result['state'])
     print(result['state'], 'unavailableTopics=', result['unavailableTopics'], 'candidates=', len(result['candidates']))
 
 

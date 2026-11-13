@@ -1,0 +1,32 @@
+name: Verify US turnover source
+on:
+  push:
+    branches: [main]
+    paths: ['requests/us-theme-probe.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: us-theme-source-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    if: github.repository == 'KBYOO0815/market-flow-feed'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Verify actual USD turnover and security types without publication
+        env:
+          PUBLISH_TOKEN: ${{ github.token }}
+        run: python3 scripts/us_theme_worker.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: us-theme-source-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: operation-artifacts/
+          if-no-files-found: warn
+          retention-days: 7
