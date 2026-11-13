@@ -54,3 +54,19 @@ class BriefingRecovery(unittest.TestCase):
         official=evidence(KIND_QUOTE,self.body(),self.date,self.now.replace(hour=17))
         independent=evidence(NAVER_QUOTE,self.quote('20261113164000'),self.date,self.now.replace(hour=17))
         self.assertTrue(corroborated({'market':[{'marketTradeEvidence':official},{'marketTradeEvidence':independent}]})['verified'])
+
+    def test_new_evidence_namespaces_can_be_saved_but_public_feed_cannot(self):
+        import operation_store as store
+        from unittest.mock import mock_open
+        calls=[]
+        def api(method,path,body=None):
+            calls.append((method,path,body))
+            if path=='git/ref/heads/main':return {'object':{'sha':'head'}}
+            if path=='git/commits/head':return {'tree':{'sha':'base'}}
+            return {'sha':'new'}
+        with patch.object(store,'api',side_effect=api),patch.object(store.os,'makedirs'),patch('builtins.open',mock_open()):
+            for ns in ['briefing-intents','briefing-diagnostics']:
+                store.save('operations/'+ns+'/request-1550.json',{'published':False})
+            for path in ['morning-briefing.json','operations/briefing-intents/../../morning-briefing.json']:
+                with self.assertRaises(ValueError):store.save(path,{})
+        self.assertEqual(sum(method=='PATCH' for method,path,body in calls),2)
