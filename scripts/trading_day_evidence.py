@@ -60,3 +60,40 @@ def corroborated(results):
         return {'verified':True,'method':'official_kind_trade_plus_independent_krx_quote',
                 'calendarSourceUrl':KIND_QUOTE,'sources':records}
     return {'verified':False,'method':'actual_trade_evidence_incomplete','sources':records}
+
+
+def reuse_same_day(proof, date, checked):
+    """Retain immutable trading-day evidence, never refresh quote timestamps."""
+    if (not isinstance(proof, dict) or proof.get('verified') is not True
+            or proof.get('calendarSourceUrl') != KIND_QUOTE):
+        return None
+    records = proof.get('sources', [])
+    if not isinstance(records, list):
+        return None
+    valid = []
+    for row in records:
+        try:
+            observed = dt.datetime.fromisoformat(row['observedAt'].replace('Z', '+00:00'))
+            original_check = dt.datetime.fromisoformat(row['checkedAt'].replace('Z', '+00:00'))
+            if (row['sourceUrl'] not in (KIND_QUOTE, NAVER_QUOTE)
+                    or row.get('date') != date.isoformat()
+                    or observed.tzinfo is None or original_check.tzinfo is None
+                    or observed.astimezone(KST).date() != date
+                    or not observed <= original_check <= checked
+                    or not dt.time(9) <= observed.astimezone(KST).time().replace(tzinfo=None) <= dt.time(18)
+                    or row.get('market') != 'KRX' or row.get('code') != '005930'
+                    or row.get('kind') != 'actual_krx_trade'
+                    or type(row.get('tradeVolume')) not in (int, float)
+                    or type(row.get('tradeAmount')) not in (int, float)
+                    or not row['tradeVolume'] > 0 or not row['tradeAmount'] > 0):
+                continue
+            valid.append(dict(row))
+        except (KeyError, TypeError, ValueError):
+            continue
+    if {r['sourceUrl'] for r in valid} != {KIND_QUOTE, NAVER_QUOTE}:
+        return None
+    return {'verified': True, 'method': 'official_kind_trade_plus_independent_krx_quote',
+            'calendarSourceUrl': KIND_QUOTE, 'sources': valid,
+            'evidenceUse': 'same_day_trading_calendar_only',
+            'revalidatedAt': checked.isoformat(),
+            'note': 'Original observation/check times retained; not a current market quote.'}
