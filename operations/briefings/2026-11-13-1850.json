@@ -1,7 +1,7 @@
 {
   "releaseAt": "2026-11-13T18:50:00+09:00",
-  "checkedAt": "2026-11-13T10:03:50.837Z",
-  "state": "research_retrying",
+  "checkedAt": "2026-11-13T10:15:44.370Z",
+  "state": "staged",
   "published": false,
   "requestId": "recovery-20261113-1850-1794564056272",
   "previousReleaseAt": "2026-11-13T08:50:00+09:00",
@@ -12,18 +12,25 @@
     "endAt": null
   },
   "failedSources": [
-    "DART selected-date filing list: exact date and count not verified",
-    "KIND actual trade and independent Naver KRX corroboration not verified"
+    {
+      "source": "Reuters",
+      "reason": "Source check 401; no bypass. Individual extraction failed. Alternatives MITI/Dow Jones/Yonhap investigated."
+    },
+    {
+      "source": "DART",
+      "reason": "Server exact-date count 1579; reader extract returned stale morning five filings. Detail viewer bodies unavailable; original-format OpenDART mirrors plus independent articles used."
+    },
+    {
+      "source": "Naver fresh quote",
+      "reason": "Current observation after18:00 not used; preserved17:05:21 actual trade corroborates fresh official KIND15:30:10."
+    },
+    {
+      "source": "Firecrawl",
+      "reason": "Credit exhaustion; request not executed. Continued using independent Tavily and web search."
+    }
   ],
-  "missingCoverage": [
-    "domestic_disclosures",
-    "domestic_market",
-    "domestic_policy",
-    "foreign_market",
-    "foreign_policy",
-    "foreign_technology"
-  ],
-  "reason": "Independent recovery active. Six areas being researched with primary-article extraction and alternatives. Fresh preflight complete; tradingDayEvidence false because independent Naver observation outside 09:00-18:00. Checking preserved dated actual-trade evidence without changing original observation time. Reuters extraction failed; alternative original sources being verified.",
+  "missingCoverage": [],
+  "reason": "Validated editorial sort, full stage schema and D~D-2 fact history. Identical private/public drafts re-read matched. Await actual server publication root/archive verification.",
   "candidates": [
     {
       "sourceUrl": "https://www.reuters.com/business/energy/world-oil-market-is-returning-surplus-gulf-exports-recover-iea-says-2026-11-13/",
@@ -118,5 +125,13 @@
     "intent": "success",
     "sources": "success",
     "publish": "waiting_for_draft"
-  }
+  },
+  "counts": {
+    "foreignCandidates": 13,
+    "domesticCandidates": 29,
+    "verifiedCandidates": 11,
+    "duplicateExcluded": 3
+  },
+  "researchPath": "operations/research/2026-11-13-1850.json",
+  "asOf": "2026-11-13T10:14:58.840Z"
 }
