@@ -7,7 +7,7 @@ from publish_feed import api
 
 
 def save(path, value):
-    if not re.fullmatch(r'operations/(source-checks|publications|us-theme-sources)/[A-Za-z0-9/_-]+\.json', path):
+    if not re.fullmatch(r'operations/(source-checks|publications|us-theme-sources|featured-publications)/[A-Za-z0-9/_-]+\.json', path):
         raise ValueError('operation path outside allowed namespaces')
     content = json.dumps(value, ensure_ascii=False, indent=2) + '\n'
     # Always leave a runner artifact, including when the GitHub write fails.

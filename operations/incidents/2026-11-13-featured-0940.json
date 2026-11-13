@@ -1,0 +1,36 @@
+{
+  "edition": "2026-11-13T09:40:00+09:00",
+  "state": "publication_missed",
+  "published": false,
+  "directCause": "NXT raw top-100 amounts contained order inversions; strict monotonicity guard stopped collection before snapshot/review/draft creation.",
+  "sourceInternalCause": "not_confirmed",
+  "failureStartedAt": "2026-11-13T09:31:36.944839+09:00",
+  "failureCompletedAt": "2026-11-13T09:31:42.339715+09:00",
+  "failureRecord": "operations/collections/2026-11-13-0940-retry-1.json",
+  "failureWorkflow": "https://github.com/KBYOO0815/market-flow-feed/actions/runs/43337720506",
+  "recoveryProbe": {
+    "record": "operations/collections/2026-11-13-0940-full-universe-probe.json",
+    "state": "probe_collected",
+    "startedAt": "2026-11-13T10:14:51.958621+09:00",
+    "completedAt": "2026-11-13T10:15:53.465687+09:00",
+    "elapsedSeconds": 61.507066,
+    "stockCount": 50,
+    "publicationEligible": false,
+    "fullNxtVerified": {
+      "stage": "nxt_full_scan_verified",
+      "checkedAt": "2026-11-13T10:15:49.324066+09:00",
+      "exactQuotes": 603,
+      "officialNonEligible": 2226
+    }
+  },
+  "improvements": [
+    "Official full NXT universe instead of trusting truncated list order",
+    "Preserve source diagnostics and proof; never treat eligible 404 as zero",
+    "Separate unpublishable full-collection probes",
+    "Poll original edition draft to release+30m and verify root/archive/app index"
+  ],
+  "validation": {
+    "unitTestsPassed": 93,
+    "nextEligibleEdition": "2026-11-13T11:40:00+09:00"
+  }
+}

@@ -6,6 +6,9 @@ on:
       - 'drafts/featured-stocks.json'
       - 'scripts/featured_stocks.py'
       - 'scripts/publish_featured_stocks.py'
+      - 'scripts/featured_watch.py'
+      - 'scripts/test_featured_recovery.py'
+      - 'scripts/test_featured_watch.py'
       - 'scripts/test_featured_stocks.py'
       - '.github/workflows/publish-featured-stocks.yml'
   schedule:
@@ -19,15 +22,25 @@ concurrency:
   cancel-in-progress: false
 jobs:
   publish:
+    if: github.repository == 'KBYOO0815/market-flow-feed'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
       - name: Validate featured stocks pipeline
-        run: python3 -m unittest discover -s scripts -p 'test_featured_stocks.py'
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Wait for release and publish reviewed featured stocks
         env:
           PUBLISH_TOKEN: ${{ github.token }}
-        run: python3 scripts/publish_featured_stocks.py
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: python3 scripts/featured_watch.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: featured-publication-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: operation-artifacts/
+          if-no-files-found: warn
+          retention-days: 7
+
