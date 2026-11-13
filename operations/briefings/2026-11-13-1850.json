@@ -1,9 +1,9 @@
 {
   "releaseAt": "2026-11-13T18:50:00+09:00",
-  "checkedAt": "2026-11-13T09:38:23.626Z",
+  "checkedAt": "2026-11-13T10:03:50.837Z",
   "state": "research_retrying",
   "published": false,
-  "requestId": "briefing-20261113-1850-prepare-1794562646784",
+  "requestId": "recovery-20261113-1850-1794564056272",
   "previousReleaseAt": "2026-11-13T08:50:00+09:00",
   "previousAsOf": "2026-11-12T23:40:36.914Z",
   "researchWindow": {
@@ -23,7 +23,7 @@
     "foreign_policy",
     "foreign_technology"
   ],
-  "reason": "Explicit-intent workflow accepted and all six automated source areas collected candidate links. Source evidence explicitly editorialCoverageVerified=false and tradingDayVerified=false; official KIND Samsung trade has volume 1,796,979 and value KRW 370,177,674,000 but independent Naver KRX evidence missing. Original candidate facts/times not fully verified; draft not staged. Continue within original 19:20 deadline.",
+  "reason": "Independent recovery active. Six areas being researched with primary-article extraction and alternatives. Fresh preflight complete; tradingDayEvidence false because independent Naver observation outside 09:00-18:00. Checking preserved dated actual-trade evidence without changing original observation time. Reuters extraction failed; alternative original sources being verified.",
   "candidates": [
     {
       "sourceUrl": "https://www.reuters.com/business/energy/world-oil-market-is-returning-surplus-gulf-exports-recover-iea-says-2026-11-13/",
@@ -98,7 +98,7 @@
     }
   },
   "nextAction": "Check explicit source-check evidencePath and verify actual primary-source timestamps; continue independent six-area investigation and stage only validated draft.",
-  "sourceEvidencePath": "operations/source-checks/2026-11-13-1850/43402875163-1.json",
+  "sourceEvidencePath": "operations/source-checks/2026-11-13-1850/43405826713-1.json",
   "tradingDayEvidence": {
     "verified": false,
     "kind": {
@@ -109,5 +109,14 @@
     },
     "missing": "Independent Naver KRX same-date positive-volume/amount evidence"
   },
-  "sourceChecks": "collected_not_editorially_verified"
+  "sourceChecks": "collected_not_editorially_verified",
+  "recovery": {
+    "startedAt": "2026-11-13T10:03:50.837Z",
+    "originalReleaseAt": "2026-11-13T18:50:00+09:00",
+    "deadlineAt": "2026-11-13T19:20:00+09:00",
+    "workflowRunId": 43405826713,
+    "intent": "success",
+    "sources": "success",
+    "publish": "waiting_for_draft"
+  }
 }
