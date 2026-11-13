@@ -376,6 +376,19 @@ def validate(p):
             close = dt.datetime.combine(release.date(), dt.time(15, 30), KST)
             if as_of - observed > dt.timedelta(minutes=20) and not (market == 'KRX' and as_of >= close and observed >= close):
                 raise ValueError('stale quote')
+    if hundred and release.strftime('%H:%M') == '20:10':
+        from featured_scope import regular_close_observation
+        for stock in stocks:
+            quote = stock['quotes']['KRX']
+            check = stock.get('closeVerification', {})
+            if not regular_close_observation(stamp(quote['observedAt']), release):
+                raise ValueError('KRX regular-session close required; after-hours is not close')
+            if (check.get('basis') != 'KRX_REGULAR_CLOSE'
+                    or check.get('observedAt') != quote['observedAt']
+                    or check.get('sourceUrl') != quote['sourceUrl']
+                    or check.get('tradeAmount') != stock['tradeAmount']
+                    or check.get('changeRate') != stock['changeRate']):
+                raise ValueError('KRX regular-close amount/rate verification required')
     reviewed = stamp(p['reviewedAt'])
     if not as_of <= reviewed <= release + dt.timedelta(minutes=20):
         raise ValueError('invalid actual theme review time')
