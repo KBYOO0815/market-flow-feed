@@ -96,7 +96,7 @@ def list_url(market):
     return BASE + 'market/stock/default?marketType=ALL&orderType=priceTop&startIdx=0&pageSize=5000&tradeType=' + market
 
 
-def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_eligibility):
+def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_eligibility, trace=None, probe=False, full_nxt=False):
     """Use complete KRX universe + NXT top-100 and fill any possible challenger.
 
     A missing NXT detail is NOT evidence for zero. Only independently verified
@@ -106,7 +106,7 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
     target = stamp(release)
     if target.strftime('%H:%M') not in SLOTS or target.weekday() >= 5:
         raise ValueError('invalid featured-stocks release slot')
-    if not target - dt.timedelta(minutes=20) <= started <= target + dt.timedelta(minutes=20):
+    if not probe and not target - dt.timedelta(minutes=20) <= started <= target + dt.timedelta(minutes=20):
         raise ValueError('collection outside original edition window')
     if evidence.get('tradingDayVerified') is not True or not https(evidence.get('calendarSourceUrl')):
         raise ValueError('verified KRX trading-day evidence required')
@@ -114,6 +114,11 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
         raise ValueError('calendar evidence must be for this KST date')
     cached = CollectionFetch(fetch)
     fetch = cached
+    diagnostics = []
+    def report(stage, **values):
+        event = {'stage': stage, 'checkedAt': (now or dt.datetime.now(KST)).isoformat(), **values}
+        diagnostics.append(event)
+        if trace: trace(event)
     cached.prime([list_url(m) for m in ('KRX', 'NXT')])
     records = []
     lists = {}
@@ -122,7 +127,14 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
         rows = fetch(url)
         if not isinstance(rows, list) or not rows or (market == 'KRX' and len(rows) >= 5000):
             raise ValueError('empty or changed Naver response: ' + market)
-        lists[market] = {x['itemcode']: x for x in rows if x.get('type') == 'ST'}
+        stocks = [x for x in rows if x.get('type') == 'ST']
+        if len({x['itemcode'] for x in stocks}) != len(stocks):
+            raise ValueError('duplicate ranking identity: ' + market)
+        if any(not re.fullmatch(r'[0-9A-Z]{6}', x['itemcode']) or
+               not re.fullmatch(r'\d+', str(x.get('tradeAmount', ''))) for x in stocks):
+            raise ValueError('invalid ranking identity/amount: ' + market)
+        lists[market] = {x['itemcode']: x for x in stocks}
+        report('ranking_received', market=market, rows=len(rows), stocks=len(stocks), sourceUrl=url)
         records.append({'market': market, 'sourceUrl': url,
                         'retrievedAt': (now or cached.times[url].astimezone(KST)).isoformat()})
     krx, nxt = lists['KRX'], lists['NXT']
@@ -133,10 +145,50 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
     # The endpoint truncates NXT ranking to 100. The smallest returned amount
     # bounds every omitted stock; list ordering and nonnegative amounts checked.
     nxt_values = [int(x['tradeAmount']) for x in nxt.values()]
-    if nxt_values != sorted(nxt_values, reverse=True) or min(nxt_values) < 0:
-        raise ValueError('NXT ranking order changed')
-    upper = min(nxt_values)
     zero = {}
+    inversions = [{'previousCode': codes[i-1], 'code': codes[i], 'previousAmount': nxt_values[i-1], 'amount': nxt_values[i]}
+                  for codes in [list(nxt)] for i in range(1, len(codes)) if nxt_values[i] > nxt_values[i-1]]
+    if inversions or full_nxt:
+        # Sorting a truncated top-100 list cannot prove the omitted-stock bound.
+        # Verify the complete official eligible universe and read exact NXT values.
+        report('nxt_order_inversion' if inversions else 'nxt_complete_scan_requested', count=len(inversions), examples=inversions[:10], fallback='complete_official_universe')
+        official = eligibility_fetch()
+        checked = now or dt.datetime.now(KST)
+        zero.update(official_zero_nxt(list(krx), nxt, official, checked))
+        eligible = {r['isuSrdCd'].removeprefix('A') for r in official['brdinfoTimeList']} & set(krx)
+        if len(eligible) > 2000:
+            raise ValueError('official NXT universe exceeds bounded full-scan capacity')
+        report('nxt_full_scan_started', eligibleCount=len(eligible), officialObservedAt=official['setTime'])
+        complete = {}
+        for start in range(0, len(eligible), 60):
+            codes = sorted(eligible)[start:start+60]
+            cached.prime([BASE+'detail/'+c+'/detail?codeType=NXT' for c in codes])
+            for code in codes:
+                url = BASE+'detail/'+code+'/detail?codeType=NXT'
+                try:
+                    detail = fetch(url)
+                except urllib.error.HTTPError as error:
+                    raise ValueError('NXT official eligible quote unavailable (404 is not zero): '+code) from error
+                observed = dt.datetime.strptime(detail['tradeTime'], '%Y%m%d%H%M%S').replace(tzinfo=KST)
+                if (detail.get('itemcode') != code or not re.fullmatch(r'\d+', str(detail.get('tradeAmount', '')))
+                    or observed.date() != target.date() or observed > (now or dt.datetime.now(KST))+dt.timedelta(seconds=30)):
+                    raise ValueError('NXT complete universe quote identity/date/amount mismatch: '+code)
+                complete[code] = detail
+                records.append({'market': 'NXT', 'code': code, 'sourceUrl': url,
+                                'retrievedAt': (now or cached.times[url].astimezone(KST)).isoformat()})
+            report('nxt_full_scan_progress', completed=len(complete), eligibleCount=len(eligible))
+            if (now or dt.datetime.now(KST))-started > dt.timedelta(minutes=5):
+                raise ValueError('collection skew exceeds five minutes; collect again')
+        nxt = complete
+        upper = 0  # Every eligible ST value is exact; every other ST has official proof.
+        records.append({'market': 'NXT', 'sourceUrl': NXT_ELIGIBILITY_PAGE, 'requestUrl': NXT_ELIGIBILITY_URL,
+            'requestMethod': 'POST', 'requestBody': 'pageIndex=1&pageUnit=5000', 'retrievedAt': checked.isoformat(),
+            'kind': 'complete_official_eligibility', 'eligibilityObservedAt': official['setTime'],
+            'officialEligibleCount': official['totalCnt']})
+        report('nxt_full_scan_verified', exactQuotes=len(complete), officialNonEligible=len(zero))
+    else:
+        upper = min(nxt_values)
+        report('nxt_truncated_ranking_verified', rows=len(nxt), omittedAmountUpperBound=upper)
     for z in evidence.get('zeroNxt', []):
         if not https(z.get('sourceUrl')) or stamp(z['checkedAt']).date() != target.date() or not z.get('reason'):
             raise ValueError('zero NXT requires dated explicit non-trading evidence')
@@ -215,6 +267,7 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
         raise ValueError('collection skew exceeds five minutes; collect again')
     # Quotes validate contemporaneity; amounts/rates above remain the actual
     # list observations, with their own retrieval times, not relabelled details.
+    report('top_fifty_verified', stockCount=50, requestCount=len(cached.values)+len(cached.errors))
     return {'schemaVersion': 1, 'asOf': ended.isoformat(), 'collectionStartedAt': started.isoformat(),
             'releaseAt': target.isoformat(), 'tradingDayVerified': True,
             'calendarSourceUrl': evidence['calendarSourceUrl'], 'sourceName': '네이버 증권',
@@ -223,7 +276,8 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
             'sourceRecords': records, 'stocks': stocks,
             'byTurnover': ordered,
             'byChangeRate': [s['code'] for s in sorted(stocks, key=lambda s: (-s['changeRate'], -s['integratedTradeAmount'], s['code']))],
-            'themes': [], 'unclassified': list(ordered)}
+            'themes': [], 'unclassified': list(ordered), 'collectionDiagnostics': diagnostics,
+            'probeOnly': probe}
 
 
 def enrich(snapshot, review):
@@ -248,6 +302,8 @@ def enrich(snapshot, review):
 
 
 def validate(p):
+    if p.get('probeOnly') is True:
+        raise ValueError('collection probe is not publishable')
     release, as_of = stamp(p['releaseAt']), stamp(p['asOf'])
     if p.get('schemaVersion') != 1 or release.strftime('%H:%M') not in SLOTS or release.weekday() >= 5:
         raise ValueError('invalid featured-stocks edition')

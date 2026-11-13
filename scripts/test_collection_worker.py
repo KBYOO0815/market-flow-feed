@@ -3,6 +3,11 @@ from unittest.mock import patch
 import collection_worker as w
 
 class WorkerTests(unittest.TestCase):
+    def setUp(self):
+        patcher = patch.object(w, 'write_artifact')
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
     def test_failure_records_reason_without_publishing(self):
         records=[]
         with patch.object(w,'save',side_effect=lambda x:records.append({k:dict(v) for k,v in x.items()})),patch.object(w,'collect',side_effect=ValueError('source failed')):

@@ -4,10 +4,16 @@ import json
 import os
 import pathlib
 import re
+import copy
 from featured_stocks import KST, collect, get, get_nxt_eligibility, list_url, stamp
 from publish_feed import api
 from source_http import CollectionFetch
 from featured_stocks import BASE
+
+
+def write_artifact(ident, status):
+    pathlib.Path('collection-artifacts').mkdir(exist_ok=True)
+    pathlib.Path('collection-artifacts/'+ident+'.json').write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n')
 
 
 def save(entries):
@@ -30,7 +36,8 @@ def run(request):
     started=dt.datetime.now(KST)
     status={'requestId':ident,'releaseAt':request.get('releaseAt'),'published':False,'state':'collecting',
             'startedAt':started.isoformat(),'deadlineAt':(started+dt.timedelta(minutes=5)).isoformat()}
-    save({path:status})
+    status['progress'] = []
+    save({path:copy.deepcopy(status)})
     try:
         entries={}
         if request.get('mode')=='probe':
@@ -50,14 +57,25 @@ def run(request):
             status['probeDetailSucceeded']=len(cache.values)
             status.update(state='probe_passed',scope='network_connectivity_and_load_only',freshnessValidated=False,rankingRows={m:len(v) for m,v in ranks.items()},officialRows=len(official['brdinfoTimeList']),officialObservedAt=official.get('setTime'))
         else:
-            snapshot=collect(request['releaseAt'],request['evidence'])
+            def progress(event):
+                status['progress'].append(event)
+                status['lastStage'] = event['stage']
+                # Keep local evidence even if a later source or repository write fails.
+                write_artifact(ident, status)
+            is_probe = request.get('mode') == 'collect_probe'
+            if request.get('mode') not in ('collect', 'collect_probe', None):
+                raise ValueError('unknown collection mode')
+            snapshot=collect(request['releaseAt'],request['evidence'],trace=progress,probe=is_probe,full_nxt=True)
             dest='collections/featured-stocks/'+ident+'.json';entries[dest]=snapshot
-            status.update(state='collected',snapshotPath=dest,stockCount=len(snapshot['stocks']))
+            status.update(state='probe_collected' if is_probe else 'collected',snapshotPath=dest,stockCount=len(snapshot['stocks']),
+                          publicationEligible=not is_probe, freshnessValidated=not is_probe)
         status['completedAt']=dt.datetime.now(KST).isoformat()
         status['elapsedSeconds']=(stamp(status['completedAt'])-started).total_seconds()
-        entries[path]=status;save(entries)
+        entries[path]=copy.deepcopy(status);save(entries)
+        write_artifact(ident, status)
     except Exception as e:
         status.update(state='collection_failed',errorType=type(e).__name__,error=str(e),completedAt=dt.datetime.now(KST).isoformat())
+        write_artifact(ident, status)
         save({path:status});raise
 
 

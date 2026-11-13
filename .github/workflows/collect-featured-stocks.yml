@@ -11,13 +11,23 @@ concurrency:
   cancel-in-progress: false
 jobs:
   collect:
+    if: github.repository == 'KBYOO0815/market-flow-feed'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Test collection safeguards
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Collect and record status without publishing
         env:
           PUBLISH_TOKEN: ${{ github.token }}
         run: python3 scripts/collection_worker.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: featured-collection-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: collection-artifacts/
+          if-no-files-found: warn
+          retention-days: 7
