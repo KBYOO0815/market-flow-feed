@@ -55,6 +55,18 @@ def payload():
 
 
 class USThemeTests(unittest.TestCase):
+    def test_us_holiday_weekend_early_close_and_dst_calendar(self):
+        self.assertEqual(str(u.previous_us_session(dt.datetime(2026,11,27,6,25,tzinfo=u.KST))), '2026-11-25')
+        self.assertEqual(str(u.previous_us_session(dt.datetime(2026,11,16,6,25,tzinfo=u.KST))), '2026-11-13')
+        self.assertEqual(str(u.previous_us_session(dt.datetime(2026,11,27,13,30,tzinfo=u.NY))), '2026-11-27')
+        self.assertEqual(str(u.previous_us_session(dt.datetime(2026,7,7,6,25,tzinfo=u.KST))), '2026-07-06')
+        with self.assertRaises(ValueError): u.previous_us_session(dt.datetime(2029,1,2,6,25,tzinfo=u.KST))
+
+    def test_consistent_but_stale_quotes_do_not_count_as_last_session(self):
+        data = snapshot()
+        data['collectedAt'] = '2026-11-17T06:30:00+09:00'
+        with self.assertRaisesRegex(ValueError, 'last completed'): u.validate_snapshot(data)
+
     def test_actual_dollar_turnover_and_regular_quote_used_not_volume_or_afterhours(self):
         data = snapshot()
         self.assertEqual(len(data['stocks']), 50)
@@ -154,6 +166,15 @@ class USThemeTests(unittest.TestCase):
             elif field == 'text': composed['items'][0]['summary'] += 'invented'
             else: composed['items'].insert(0, {'id': 'bad'})
             with self.assertRaises(ValueError): validate(composed)
+
+    def test_theme_reason_published_after_target_is_rejected_during_recovery(self):
+        data = snapshot()
+        rev = review(data)
+        rev['reviewedAt'] = (RELEASE+dt.timedelta(minutes=5)).isoformat()
+        rev['groups'][0]['reason'] = {'summary': '검증용 사실', 'sourceUrl': 'https://example.com/event',
+            'publishedAt': (RELEASE+dt.timedelta(minutes=1)).isoformat(), 'causality': 'related_fact_only'}
+        with self.assertRaises(ValueError):
+            u.build_report(data, rev, RELEASE.isoformat(), (RELEASE+dt.timedelta(minutes=5)).isoformat())
 
     def test_real_failure_status_persists_without_becoming_public_news(self):
         saved = {}

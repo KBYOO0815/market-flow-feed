@@ -24,6 +24,7 @@ INDEX_URL = BASE + 'indexFutures/list?nationType=USA'
 EXCHANGES = {'NASDAQ', 'NYSE', 'AMEX'}
 SECURITY_TYPES = {'ORD', 'ADR'}
 ROLE = 'us_theme_summary'
+CALENDAR = json.loads((pathlib.Path(__file__).resolve().parent.parent / 'config/us-market-calendar.json').read_text())
 
 
 def stamp(value):
@@ -62,6 +63,20 @@ def basic_url(code):
     return 'https://api.stock.naver.com/stock/' + urllib.parse.quote(code, safe='.') + '/basic'
 
 
+def previous_us_session(now):
+    local = now.astimezone(NY)
+    for offset in range(8):
+        date = local.date()-dt.timedelta(days=offset)
+        if str(date.year) not in CALENDAR['holidays']:
+            raise ValueError('US calendar year not verified; do not assume a trading session')
+        if date.weekday() >= 5 or date.isoformat() in CALENDAR['holidays'][str(date.year)]:
+            continue
+        close = dt.time.fromisoformat(CALENDAR['earlyCloses'].get(date.isoformat(), '16:00'))
+        if dt.datetime.combine(date, close, NY) <= local:
+            return date
+    raise ValueError('no completed verified US session')
+
+
 def fetch(url):
     return json.loads(read(urllib.request.Request(url, headers={'User-Agent': 'MarketFlow/1.0', 'Accept': 'application/json'}), attempts=2))
 
@@ -83,6 +98,8 @@ def collect_snapshot(release_at, get=fetch, now=None, probe=False):
     if len(session_dates) != 1 or any(stamp(i['localTradedAt']) > checked for i in anchors):
         raise ValueError('inconsistent or future US session evidence')
     session = session_dates.pop()
+    if session != previous_us_session(checked):
+        raise ValueError('provider returned an older session than the verified US calendar')
     if not dt.timedelta(0) <= checked.astimezone(NY).date() - session <= dt.timedelta(days=4):
         raise ValueError('US session evidence too old')
     stocks, excluded, pages, seen = [], [], [], set()
@@ -140,6 +157,7 @@ def collect_snapshot(release_at, get=fetch, now=None, probe=False):
                     result = {'schemaVersion': 1, 'state': 'collected', 'publishable': not probe,
                         'releaseAt': release.isoformat(), 'collectedAt': dt.datetime.now(KST).isoformat() if now is None else checked.isoformat(),
                         'sessionDate': session.isoformat(), 'sessionSourceUrl': INDEX_URL,
+                        'calendarSourceUrl': CALENDAR['sourceUrl'],
                         'sessionEvidence': anchors, 'rankingSourceUrls': pages, 'sourceUrl': PAGE,
                         'currency': 'USD', 'turnoverMethod': 'provider_reported_regular_session_turnover',
                         'scope': 'provider_US_NASDAQ_NYSE_AMEX_common_and_ADR',
@@ -159,6 +177,8 @@ def validate_snapshot(snapshot):
     previous = Decimal('Infinity')
     checked = stamp(snapshot['collectedAt'])
     session = dt.date.fromisoformat(snapshot['sessionDate'])
+    if snapshot.get('calendarSourceUrl') != CALENDAR['sourceUrl'] or session != previous_us_session(checked):
+        raise ValueError('snapshot is not the last completed US calendar session')
     release = stamp(snapshot['releaseAt']).astimezone(KST)
     anchors = snapshot.get('sessionEvidence', [])
     if (not enabled(release) or release.weekday() >= 5 or type(snapshot.get('publishable')) is not bool

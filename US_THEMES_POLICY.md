@@ -22,7 +22,11 @@ NASDAQ·NYSE·AMEX의 보통주(ORD)와 ADR만 포함한다. 각 후보의 공�
 `overMarketPriceInfo`는 읽지 않는다. 다우·나스닥의 마지막 완료 세션 날짜와
 50종목의 정규장 날짜가 모두 같아야 한다. 미국 시각은 America/New_York으로
 변환하며 휴장일의 오래된 날짜나 혼합 세션을 당일 데이터로 조작하지 않는다.
-원천 세션 증거가 4일보다 오래되면 추가 확인 전 미집계한다.
+NYSE 공식2026~2028 휴장일·조기폐장 표(config/us-market-calendar.json)와
+서머타임을 적용해 직전 완료 세션을 계산하고 실제 날짜와 대조한다. 캘린더가
+없는 연도나 자료 날짜가 다른 경우 미집계한다. 임시휴장으로 원천과 예정 달력이
+상충하면 추정하지 않고 달력 갱신 전 미집계한다. 원천 세션 증거가4일보다
+오래되어도 추가 확인 전 미집계한다.
 
 기록은 `operations/us-theme-sources/YYYY-MM-DD-0640/RUN-ATTEMPT.json`,
 최신 회차 포인터는 `operations/us-theme-sources/YYYY-MM-DD-0640.json`이다.
