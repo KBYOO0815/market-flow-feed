@@ -60,7 +60,7 @@ def watch(release, record, read=read_remote, write=publish,
                     return state
         except (urllib.error.URLError, TimeoutError) as error:
             state['lastIssue'] = type(error).__name__ + ': ' + str(error)[:400]
-            if isinstance(error, urllib.error.HTTPError) and error.code not in (429, 500, 502, 503, 504):
+            if isinstance(error, urllib.error.HTTPError) and error.code not in (409, 422, 429, 500, 502, 503, 504):
                 state.update(state='publication_failed', checkedAt=clock().isoformat())
                 record(dict(state))
                 raise
