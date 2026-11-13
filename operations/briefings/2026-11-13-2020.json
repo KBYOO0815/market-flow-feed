@@ -1,10 +1,26 @@
 {
   "releaseAt": "2026-11-13T20:20:00+09:00",
   "requestId": "prepare-20261113-2020-1794568164794",
-  "checkedAt": "2026-11-13T11:09:51.613Z",
-  "state": "researching",
+  "checkedAt": "2026-11-13T11:10:42.575Z",
+  "state": "research_retrying",
   "published": false,
-  "failedSources": [],
+  "failedSources": [
+    {
+      "source": "Reuters",
+      "error": "HTTP 401",
+      "fallback": "연합뉴스 및 공식자료 검색"
+    },
+    {
+      "source": "연합뉴스 개별 기사",
+      "error": "web original-page fetch inaccessible; Firecrawl insufficient credits",
+      "fallback": "Source-check list collected but original timestamp not independently verified"
+    },
+    {
+      "source": "independent NAVER KRX",
+      "error": "2026-11-13 same-date positive trade corroboration not parsed",
+      "fallback": "KIND official trade evidence retained but insufficient alone"
+    }
+  ],
   "missingCoverage": [
     "foreign_market",
     "foreign_policy",
@@ -13,5 +29,5 @@
     "domestic_policy",
     "domestic_market"
   ],
-  "reason": "Actual original-slot research initiated; server preflight source evidence and editorial candidate verification pending. Previous public edition 18:50, asOf 2026-11-13T10:14:58.840Z. No news selected without source-time verification."
+  "reason": "Original 20:20 edition is in allowed research window. Source-check preflight completed, but editorial verification and independent trading-day corroboration incomplete. Do not stage fabricated audit or publish unverified candidate."
 }
