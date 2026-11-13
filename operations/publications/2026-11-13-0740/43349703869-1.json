@@ -2,6 +2,8 @@
   "releaseAt": "2026-11-13T07:40:00+09:00",
   "startedAt": "2026-11-13T11:06:09.789999+09:00",
   "deadlineAt": "2026-11-13T08:10:00+09:00",
-  "state": "waiting_for_draft",
-  "polls": 0
+  "state": "published",
+  "polls": 1,
+  "alreadyPublished": true,
+  "checkedAt": "2026-11-13T11:06:12.407937+09:00"
 }
