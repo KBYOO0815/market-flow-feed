@@ -1,7 +1,7 @@
 {
   "releaseAt": "2026-11-13T18:50:00+09:00",
-  "checkedAt": "2026-11-13T10:14:38.918Z",
-  "state": "research_retrying",
+  "checkedAt": "2026-11-13T10:17:04.858Z",
+  "state": "published",
   "requestId": "recovery-20261113-1850-1794564056272",
   "deadlineAt": "2026-11-13T19:20:00+09:00",
   "previousReleaseAt": "2026-11-13T08:50:00+09:00",
@@ -1718,5 +1718,29 @@
       "reason": "Credit exhaustion; request not executed. Continued using independent Tavily and web search."
     }
   ],
-  "note": "Counts include only explicit candidate decisions here, not all search URLs or all 1579 filings. Missing detailed validation is recorded as exclusion, never verified. No market snapshots; no US themes."
+  "note": "Counts include only explicit candidate decisions here, not all search URLs or all 1579 filings. Missing detailed validation is recorded as exclusion, never verified. No market snapshots; no US themes.",
+  "verification": {
+    "checkedAt": "2026-11-13T10:17:04.858Z",
+    "publicRootMatches": true,
+    "datedEditionMatches": true,
+    "privateDraftMatches": true,
+    "publicDraftMatches": true,
+    "privateMirrorMatches": true,
+    "itemCount": 11,
+    "foreignCount": 1,
+    "domesticCount": 10,
+    "publicationCommit": "68508264e0585ed7ad3fd49884357e6dc7634006",
+    "asOf": "2026-11-13T10:14:58.840Z",
+    "workflow": {
+      "id": 43405826713,
+      "attempt": 2,
+      "conclusion": "success"
+    },
+    "initialFailure": {
+      "phase": "publication operation record write after successful atomic publication",
+      "httpStatus": 422,
+      "recoveredBy": "rerun_failed_jobs_already_published_readback"
+    }
+  },
+  "selectionEndAt": "2026-11-13T10:14:58.840Z"
 }
