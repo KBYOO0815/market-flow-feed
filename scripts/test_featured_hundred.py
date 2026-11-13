@@ -25,6 +25,8 @@ def snapshot():
                             'changeRate':10 if i<15 else -1,'rateMarket':'KRX',
                             'quotes':{'KRX':{'observedAt':'2026-11-13T15:30:00+09:00',
                                              'sourceUrl':'https://stock.naver.com/api/domestic/detail/'+str(i)}}})
+    for s in p['stocks']:
+        s['closeVerification']={'basis':'KRX_REGULAR_CLOSE', 'tradeAmount':s['tradeAmount'], 'changeRate':s['changeRate'], **s['quotes']['KRX']}
     p['byTurnover']=[s['code'] for s in p['stocks']]
     p['byChangeRate']=p['byTurnover'][:]
     p['unclassified']=p['byTurnover'][:]
@@ -46,7 +48,7 @@ class HundredTests(unittest.TestCase):
 
     def test_all_hundred_including_members_below_fifty_are_eligible(self):
         p=snapshot()
-        for s in p['stocks'][70:73]:s['changeRate']=25
+        for s in p['stocks'][70:73]:s['changeRate']=25;s['closeVerification']['changeRate']=25
         p['byChangeRate']=[s['code'] for s in sorted(p['stocks'],key=lambda s:(-s['changeRate'],-s['tradeAmount'],s['code']))]
         r=enrich(p,{'reviewedAt':'2026-11-13T20:05:00+09:00',
                     'themes':[group(['000070','000071','000072'])]})
@@ -132,7 +134,7 @@ class HundredTests(unittest.TestCase):
             self.assertNotIn('NXT',url)
             if '/market/stock/' in url:return rows
             code=url.split('/detail/')[1].split('/')[0]
-            return {'itemcode':code,'tradeTime':'20261113153000'}
+            return {'itemcode':code,'tradeTime':'20261113153000','tradeAmount':str(20000-int(code)),'prevChangeRate':'1.2'}
         p=collect('2026-11-13T20:10:00+09:00',{'date':'2026-11-13','tradingDayVerified':True,
                   'calendarSourceUrl':'https://global.krx.co.kr/calendar'},fetch=fetch,
                   now=dt.datetime(2026,11,13,20,0,tzinfo=KST),full_nxt=True,
@@ -149,6 +151,7 @@ class HundredTests(unittest.TestCase):
 
     def test_majority_decliners_and_individual_events_still_excluded(self):
         p=snapshot();p['stocks'][1]['changeRate']=-10;p['stocks'][2]['changeRate']=-10
+        for s in p['stocks']:s['closeVerification']['changeRate']=s['changeRate']
         p['byChangeRate']=[s['code'] for s in sorted(p['stocks'],key=lambda s:(-s['changeRate'],-s['tradeAmount'],s['code']))]
         r=enrich(p,{'reviewedAt':'2026-11-13T20:05:00+09:00','themes':[group(['000000','000001','000002'])]})
         self.assertFalse(r['themes'])
