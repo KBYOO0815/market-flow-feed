@@ -1,0 +1,40 @@
+{
+  "requestId": "2026-11-13-2010-attempt-1",
+  "releaseAt": "2026-11-13T20:10:00+09:00",
+  "state": "review_rejected",
+  "checkedAt": "2026-11-13T10:58:50Z",
+  "published": false,
+  "publicationEligible": false,
+  "serverCollectionState": "collected",
+  "serverCollectionStockCount": 100,
+  "snapshotPath": "collections/featured-stocks/2026-11-13-2010-attempt-1.json",
+  "workflowUrl": "https://github.com/KBYOO0815/market-flow-feed/actions/runs/43413067634",
+  "lastServerStage": "top_hundred_verified",
+  "reason": "KRX regular-session close semantics failed independent official-source comparison. Snapshot KRX observedAt is mostly 19:56-19:57 and official KRX closing changes/amounts disagree. Do not relabel observations or substitute individual numbers; full KRX top-100 ranking is not confirmed.",
+  "officialComparisons": [
+    {
+      "code": "005930",
+      "sourceUrl": "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain",
+      "observedAt": "2026-11-13T15:30:10+09:00",
+      "officialChangeRate": -0.96,
+      "officialTradeAmountKrw": 2658272417000,
+      "snapshotChangeRate": 0,
+      "snapshotTradeAmountKrw": 2675050000000,
+      "snapshotObservedAt": "2026-11-13T19:56:22+09:00"
+    },
+    {
+      "code": "000660",
+      "sourceUrl": "https://kind.krx.co.kr/common/stockprices.do?isurCd=00066&method=searchStockPricesMain",
+      "observedAt": "2026-11-13T15:30:30+09:00",
+      "officialChangeRate": -3.03,
+      "officialTradeAmountKrw": 3988562283000,
+      "snapshotChangeRate": -2.07,
+      "snapshotTradeAmountKrw": 3979108000000,
+      "snapshotObservedAt": "2026-11-13T19:56:23+09:00"
+    }
+  ],
+  "retryPerformed": false,
+  "retryReason": "Not an established transient source failure; observation/market-session mismatch must not be guessed through.",
+  "classificationPerformed": false,
+  "draftWritten": false
+}
