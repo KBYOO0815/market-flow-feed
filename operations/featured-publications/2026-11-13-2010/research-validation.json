@@ -1,0 +1,10 @@
+{
+  "releaseAt": "2026-11-13T20:10:00+09:00",
+  "state": "publication_blocked",
+  "published": false,
+  "checkedAt": "2026-11-13T10:58:50Z",
+  "reason": "KRX_CLOSE_SOURCE_MISMATCH",
+  "collectionReviewPath": "operations/collections/2026-11-13-2010-attempt-1-review.json",
+  "draftWritten": false,
+  "mirrorWritten": false
+}
