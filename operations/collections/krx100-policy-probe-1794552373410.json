@@ -2,8 +2,30 @@
   "requestId": "krx100-policy-probe-1794552373410",
   "releaseAt": "2026-11-13T20:10:00+09:00",
   "published": false,
-  "state": "collecting",
+  "state": "probe_collected",
   "startedAt": "2026-11-13T15:46:24.095223+09:00",
   "deadlineAt": "2026-11-13T15:51:24.095223+09:00",
-  "progress": []
+  "progress": [
+    {
+      "stage": "krx_universe_verified",
+      "checkedAt": "2026-11-13T15:46:28.805095+09:00",
+      "stockUniverseCount": 2829,
+      "selectedCount": 100,
+      "turnoverBasis": "KRX"
+    },
+    {
+      "stage": "top_hundred_verified",
+      "checkedAt": "2026-11-13T15:46:39.099379+09:00",
+      "stockCount": 100,
+      "requestCount": 101,
+      "turnoverBasis": "KRX"
+    }
+  ],
+  "lastStage": "top_hundred_verified",
+  "snapshotPath": "collections/featured-stocks/krx100-policy-probe-1794552373410.json",
+  "stockCount": 100,
+  "publicationEligible": false,
+  "freshnessValidated": false,
+  "completedAt": "2026-11-13T15:46:39.103170+09:00",
+  "elapsedSeconds": 15.007947
 }
