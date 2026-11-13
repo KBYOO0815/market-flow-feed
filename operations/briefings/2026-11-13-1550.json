@@ -1,0 +1,22 @@
+{
+  "releaseAt": "2026-11-13T15:50:00+09:00",
+  "checkedAt": "2026-11-13T06:44:44.223Z",
+  "state": "research_failed",
+  "reason": "필수 6개 조사 분야 및 거래일 교차검증 미완료; 후보 최초 발표시각과 DART/KIND 원문 확인 부족",
+  "failedSources": [
+    "DART 원문·건수 검증 미완료",
+    "KIND 원문 검증 미완료",
+    "KRX 거래일 교차검증 미완료"
+  ],
+  "missingCoverage": [
+    "foreign_market",
+    "foreign_policy",
+    "foreign_technology",
+    "domestic_disclosures",
+    "domestic_policy",
+    "domestic_market"
+  ],
+  "researchPath": "operations/research/2026-11-13-1550.json",
+  "draftUpdated": false,
+  "published": false
+}
