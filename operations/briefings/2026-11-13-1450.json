@@ -1,0 +1,18 @@
+{
+  "releaseAt": "2026-11-13T14:50:00+09:00",
+  "checkedAt": "2026-11-13T05:42:15.025Z",
+  "state": "research_failed",
+  "failedSources": [],
+  "missingCoverage": [
+    "foreign_market",
+    "foreign_policy",
+    "foreign_technology",
+    "domestic_disclosures",
+    "domestic_policy",
+    "domestic_market"
+  ],
+  "reason": "전체 필수 조사 및 KRX 거래일 공식 교차검증 미완료; validated draft 없음. 공개 루트는 변경하지 않음.",
+  "researchPath": "operations/research/2026-11-13-1450.json",
+  "previousReleaseAt": "2026-11-13T08:50:00+09:00",
+  "previousAsOf": "2026-11-12T23:40:36.914Z"
+}
