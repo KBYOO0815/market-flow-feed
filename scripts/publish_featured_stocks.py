@@ -8,40 +8,43 @@ import urllib.error
 from featured_stocks import KST, archive, retained_dates, stamp, validate
 from publish_feed import REPO, api, output, read_remote
 import json
+from featured_scope import feed_prefix
 
 
 def publication_entries(payload, day, dates):
+    prefix = feed_prefix(payload)
     date = stamp(payload['releaseAt']).date()
     visible = retained_dates(dates, date, 2)
-    index = {'schemaVersion': 1, 'asOf': payload['asOf'], 'releaseAt': payload['releaseAt'],
+    index = {'schemaVersion': payload['schemaVersion'], 'asOf': payload['asOf'], 'releaseAt': payload['releaseAt'],
              'appVisibleCalendarDays': 2,
              'visibleUntil': dt.datetime.combine(date + dt.timedelta(days=2), dt.time(), KST).isoformat(),
-             'dates': [{'date': d, 'path': 'featured-stocks/' + d + '.json'} for d in reversed(visible)]}
-    content = [('featured-stocks.json', payload),
-               ('featured-stocks/' + date.isoformat() + '.json', day),
-               ('featured-stocks/index.json', index)]
+             'dates': [{'date': d, 'path': prefix+'/' + d + '.json'} for d in reversed(visible)]}
+    content = [(prefix+'.json', payload),
+               (prefix+'/' + date.isoformat() + '.json', day),
+               (prefix+'/index.json', index)]
     entries = [{'path': p, 'mode': '100644', 'type': 'blob',
                 'content': json.dumps(body, ensure_ascii=False, indent=2) + '\n'} for p, body in content]
-    if payload.get('themeSelectionVersion') == 2:
-        entries.append({'path': 'featured-stocks/latest.md', 'mode': '100644', 'type': 'blob',
+    if payload.get('themeSelectionVersion') in (2,3):
+        entries.append({'path': prefix+'/latest.md', 'mode': '100644', 'type': 'blob',
                         'content': payload['reportMarkdown']})
     retained = retained_dates(dates, date, 3)
-    entries.extend({'path': 'featured-stocks/' + old + '.json', 'mode': '100644', 'type': 'blob', 'sha': None}
+    entries.extend({'path': prefix+'/' + old + '.json', 'mode': '100644', 'type': 'blob', 'sha': None}
                    for old in dates if old not in retained and dt.date.fromisoformat(old) < date)
     return entries, index
 
 
 def publish(payload):
+    prefix = feed_prefix(payload)
     for attempt in range(3):
         head = api('GET', 'git/ref/heads/main')['object']['sha']
         commit = api('GET', 'git/commits/' + head)
-        current, _ = read_remote('featured-stocks.json', head, missing=True)
+        current, _ = read_remote(prefix+'.json', head, missing=True)
         if current and (stamp(current['releaseAt']) > stamp(payload['releaseAt']) or stamp(current['asOf']) > stamp(payload['asOf'])):
             raise ValueError('refusing featured-stocks rollback')
         tree = api('GET', 'git/trees/' + commit['tree']['sha'] + '?recursive=1')
-        dates = [n['path'][16:26] for n in tree['tree'] if re.fullmatch(r'featured-stocks/\d{4}-\d{2}-\d{2}\.json', n['path'])]
+        dates = [n['path'][len(prefix)+1:-5] for n in tree['tree'] if re.fullmatch(re.escape(prefix)+r'/\d{4}-\d{2}-\d{2}\.json', n['path'])]
         date = stamp(payload['releaseAt']).date().isoformat()
-        path = 'featured-stocks/' + date + '.json'
+        path = prefix+'/' + date + '.json'
         previous, _ = read_remote(path, head, missing=True)
         day = archive(payload, previous)
         entries, index = publication_entries(payload, day, sorted(set(dates + [date])))
@@ -54,12 +57,12 @@ def publish(payload):
             if error.code not in (409, 422) or attempt == 2:
                 raise
             continue
-        for name, expected in [('featured-stocks.json', payload), (path, day), ('featured-stocks/index.json', index)]:
+        for name, expected in [(prefix+'.json', payload), (path, day), (prefix+'/index.json', index)]:
             actual, _ = read_remote(name, new['sha'])
             if actual != expected:
                 raise RuntimeError('featured-stocks readback mismatch: ' + name)
-        if payload.get('themeSelectionVersion') == 2:
-            report = api('GET', 'contents/featured-stocks/latest.md?ref=' + new['sha'])
+        if payload.get('themeSelectionVersion') in (2,3):
+            report = api('GET', 'contents/'+prefix+'/latest.md?ref=' + new['sha'])
             if base64.b64decode(report['content']).decode('utf-8') != payload['reportMarkdown']:
                 raise RuntimeError('featured conclusion readback mismatch')
         return new['sha']

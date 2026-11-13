@@ -1,9 +1,11 @@
 """Evidence-gated breadth/money/catalyst ranking; percentages are percentage points.
 
-Version 2 is effective from the 2026-11-13 15:40 KST edition. Thresholds
+Version 2 starts at 2026-11-13 15:40 KST. Version 3 starts at 20:10:
+KRX top 100 and every eligible theme; the former cap is historical only. Thresholds
 are operating defaults, not statistical estimates of investment returns.
 """
 import datetime as dt
+from featured_scope import amount, hundred_edition
 from urllib.parse import urlparse
 
 VERSION = 2
@@ -46,8 +48,8 @@ def assess(theme, stocks, payload):
     up = [s for s in members if s['changeRate'] > 0]
     down = [s for s in members if s['changeRate'] < 0]
     n, u, d = len(members), len(up), len(down)
-    total_money = sum(s['integratedTradeAmount'] for s in stocks.values())
-    up_money = sum(s['integratedTradeAmount'] for s in up)
+    total_money = sum(amount(s) for s in stocks.values())
+    up_money = sum(amount(s) for s in up)
     share = up_money / total_money if total_money else 0
     money_top = set(payload['byTurnover'][:20])
     gain_top = set([c for c in payload['byChangeRate'] if stocks[c]['changeRate'] > 0][:20])
@@ -82,7 +84,7 @@ def assess(theme, stocks, payload):
     elif u <= 2 or kind == 'individual_event' or not ordinary:
         label = '개별 강세'
     elif not eligible:
-        label = '선별 강세' if up_money and max(s['integratedTradeAmount'] for s in up) / up_money >= .7 else '부분 강세'
+        label = '선별 강세' if up_money and max(amount(s) for s in up) / up_money >= .7 else '부분 강세'
     elif score >= 85 and u >= 5 and ten >= 3 and both >= 3 and share >= .20:
         label = '압도적 주도'
     elif score >= 65 and both >= 2 and share >= .08:
@@ -129,10 +131,12 @@ def conclusions(themes, stocks):
 def analyze(payload, themes):
     stocks = {s['code']: s for s in payload['stocks']}
     rows = [assess(t, stocks, payload) for t in themes]
-    rows.sort(key=lambda t: (-t['strength']['score'], -t['integratedTradeAmount'], t['id']))
-    selected = [t for t in rows if t['strength']['eligible']][:3]
+    rows.sort(key=lambda t: (-t['strength']['score'], -amount(t), t['id']))
+    selected = [t for t in rows if t['strength']['eligible']]
+    if not hundred_edition(payload['releaseAt']):
+        selected = selected[:3]  # Preserve pre-migration editions exactly.
     used = {c for t in selected for c in t['stockCodes']}
-    return {'themeSelectionVersion': VERSION, 'themeAssessments': rows, 'themes': selected,
+    return {'themeSelectionVersion': 3 if hundred_edition(payload['releaseAt']) else VERSION, 'themeAssessments': rows, 'themes': selected,
             'unclassified': [c for c in payload['byChangeRate'] if c not in used],
             'reportMarkdown': conclusions(selected, stocks)}
 

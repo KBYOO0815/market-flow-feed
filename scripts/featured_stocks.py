@@ -14,6 +14,7 @@ import urllib.request
 from urllib.parse import urlparse
 from source_http import CollectionFetch, json_response
 from featured_strength import active as strength_active, analyze, verify_analysis
+from featured_scope import amount, hundred_edition
 
 KST = dt.timezone(dt.timedelta(hours=9))
 SLOTS = ('09:40', '11:40', '13:40', '15:40', '20:10')
@@ -86,10 +87,10 @@ def official_zero_nxt(candidates, known_nxt, body, checked):
 
 
 def weighted(stocks):
-    total = sum(s['integratedTradeAmount'] for s in stocks)
+    total = sum(amount(s) for s in stocks)
     if total <= 0:
         raise ValueError('positive theme turnover required')
-    return float((sum(number(s['changeRate']) * s['integratedTradeAmount'] for s in stocks) / total)
+    return float((sum(number(s['changeRate']) * amount(s) for s in stocks) / total)
                  .quantize(D('0.000001'), rounding=decimal.ROUND_HALF_UP))
 
 
@@ -103,6 +104,9 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
     A missing NXT detail is NOT evidence for zero. Only independently verified
     zero-NXT records supplied by the researcher can establish that value.
     """
+    if hundred_edition(release):
+        from featured_krx import collect_krx
+        return collect_krx(release, evidence, fetch, now=now, trace=trace, probe=probe)
     started = now or dt.datetime.now(KST)
     target = stamp(release)
     if target.strftime('%H:%M') not in SLOTS or target.weekday() >= 5:
@@ -295,11 +299,11 @@ def enrich(snapshot, review):
         used.update(codes)
         theme = dict(entry)
         members = [by_code[c] for c in codes]
-        theme['stockCodes'] = [s['code'] for s in sorted(members, key=lambda s: (-s['changeRate'], -s['integratedTradeAmount'], s['code']))]
+        theme['stockCodes'] = [s['code'] for s in sorted(members, key=lambda s: (-s['changeRate'], -amount(s), s['code']))]
         theme['weightedChangeRate'] = weighted(members)
-        theme['integratedTradeAmount'] = sum(s['integratedTradeAmount'] for s in members)
+        theme['tradeAmount' if result.get('schemaVersion') == 2 else 'integratedTradeAmount'] = sum(amount(s) for s in members)
         themes.append(theme)
-    result['themes'] = sorted(themes, key=lambda t: (-t['weightedChangeRate'], -t['integratedTradeAmount'], t['id']))
+    result['themes'] = sorted(themes, key=lambda t: (-t['weightedChangeRate'], -amount(t), t['id']))
     result['unclassified'] = [c for c in result['byChangeRate'] if c not in used]
     result['reviewedAt'] = review['reviewedAt']
     if strength_active(result):
@@ -311,7 +315,8 @@ def validate(p):
     if p.get('probeOnly') is True:
         raise ValueError('collection probe is not publishable')
     release, as_of = stamp(p['releaseAt']), stamp(p['asOf'])
-    if p.get('schemaVersion') != 1 or release.strftime('%H:%M') not in SLOTS or release.weekday() >= 5:
+    hundred = hundred_edition(release)
+    if p.get('schemaVersion') != (2 if hundred else 1) or release.strftime('%H:%M') not in SLOTS or release.weekday() >= 5:
         raise ValueError('invalid featured-stocks edition')
     if p.get('tradingDayVerified') is not True or not https(p.get('calendarSourceUrl')):
         raise ValueError('trading day evidence required')
@@ -322,26 +327,32 @@ def validate(p):
     started = stamp(p['collectionStartedAt'])
     if not dt.timedelta(0) <= as_of - started <= dt.timedelta(minutes=5):
         raise ValueError('invalid collection window')
+    if hundred and (p.get('turnoverBasis') != 'KRX' or p.get('universeSize') != 100):
+        raise ValueError('KRX top-100 basis required')
     sources = p.get('sourceRecords', [])
-    if not {'KRX', 'NXT'}.issubset({s['market'] for s in sources}):
+    if not ({'KRX'} if hundred else {'KRX', 'NXT'}).issubset({s['market'] for s in sources}):
         raise ValueError('both market source records required')
     if any(not https(s.get('sourceUrl')) or not started <= stamp(s['retrievedAt']) <= as_of for s in sources):
         raise ValueError('invalid source retrieval time')
     stocks = p['stocks']
-    if len(stocks) != 50 or len({s['code'] for s in stocks}) != 50:
-        raise ValueError('exactly 50 unique stocks required')
-    expected = sorted(stocks, key=lambda s: (-s['integratedTradeAmount'], s['code']))
+    size = 100 if hundred else 50
+    if len(stocks) != size or len({s['code'] for s in stocks}) != size:
+        raise ValueError('exactly '+str(size)+' unique stocks required')
+    expected = sorted(stocks, key=lambda s: (-amount(s), s['code']))
     if p['byTurnover'] != [s['code'] for s in expected]:
         raise ValueError('incorrect turnover order')
-    if p['byChangeRate'] != [s['code'] for s in sorted(stocks, key=lambda s: (-s['changeRate'], -s['integratedTradeAmount'], s['code']))]:
+    if p['byChangeRate'] != [s['code'] for s in sorted(stocks, key=lambda s: (-s['changeRate'], -amount(s), s['code']))]:
         raise ValueError('incorrect rate order')
     for rank, s in enumerate(expected, 1):
         if s['turnoverRank'] != rank or not re.fullmatch(r'[0-9A-Z]{6}', s['code']) or not s['name']:
             raise ValueError('invalid stock identity/rank')
-        for key in ('krxTradeAmount', 'nxtTradeAmount', 'integratedTradeAmount'):
+        for key in (('krxTradeAmount', 'tradeAmount') if hundred else ('krxTradeAmount', 'nxtTradeAmount', 'integratedTradeAmount')):
             if type(s[key]) is not int or s[key] < 0:
                 raise ValueError('invalid turnover')
-        if s['integratedTradeAmount'] != s['krxTradeAmount'] + s['nxtTradeAmount']:
+        if hundred:
+            if amount(s) != s['krxTradeAmount'] or 'nxtTradeAmount' in s or 'integratedTradeAmount' in s:
+                raise ValueError('KRX-only amount mismatch; do not zero-fill NXT')
+        elif amount(s) != s['krxTradeAmount'] + s['nxtTradeAmount']:
             raise ValueError('turnover sum mismatch')
         number(s['changeRate'])
         if 'marketCapKrw' in s and (type(s['marketCapKrw']) is not int or s['marketCapKrw'] < 0):
@@ -350,7 +361,7 @@ def validate(p):
             raise ValueError('invalid observed limit-up flag')
         if s.get('rateMarket') != 'KRX':
             raise ValueError('mixed rate basis')
-        for market in ('KRX', 'NXT'):
+        for market in (('KRX',) if hundred else ('KRX', 'NXT')):
             q = s['quotes'].get(market)
             if q is None:
                 z = s.get('zeroNxtEvidence')
@@ -371,8 +382,8 @@ def validate(p):
     by_code, used = {s['code']: s for s in stocks}, set()
     ids = set()
     new_selection = strength_active(p)
-    if new_selection and p.get('themeSelectionVersion') != 2:
-        raise ValueError('theme selection version 2 required for new editions')
+    if new_selection and p.get('themeSelectionVersion') != (3 if hundred else 2):
+        raise ValueError('theme selection version '+str(3 if hundred else 2)+' required for new editions')
     for t in (p.get('themeAssessments', []) if new_selection else p['themes']):
         if not t['id'] or t['id'] in ids or not t['name']:
             raise ValueError('theme identity duplicated/missing')
@@ -382,11 +393,11 @@ def validate(p):
             raise ValueError('invalid theme membership')
         used.update(codes)
         members = [by_code[c] for c in codes]
-        if codes != [s['code'] for s in sorted(members, key=lambda s: (-s['changeRate'], -s['integratedTradeAmount'], s['code']))]:
+        if codes != [s['code'] for s in sorted(members, key=lambda s: (-s['changeRate'], -amount(s), s['code']))]:
             raise ValueError('incorrect theme member order')
         if abs(number(t['weightedChangeRate']) - number(weighted(members))) > D('0.000001'):
             raise ValueError('weighted rate mismatch')
-        if t['integratedTradeAmount'] != sum(s['integratedTradeAmount'] for s in members):
+        if amount(t) != sum(amount(s) for s in members):
             raise ValueError('theme turnover mismatch')
         evidence = t.get('membershipEvidence', [])
         if len(evidence) != len(codes) or {e['code'] for e in evidence} != set(codes) or any(not https(e.get('sourceUrl')) or not e.get('fact') for e in evidence):
@@ -403,10 +414,10 @@ def validate(p):
     if new_selection:
         verify_analysis(p)
         used = {c for t in p['themes'] for c in t['stockCodes']}
-    if not new_selection and p['themes'] != sorted(p['themes'], key=lambda t: (-t['weightedChangeRate'], -t['integratedTradeAmount'], t['id'])):
+    if not new_selection and p['themes'] != sorted(p['themes'], key=lambda t: (-t['weightedChangeRate'], -amount(t), t['id'])):
         raise ValueError('theme order mismatch')
     if len(p['unclassified']) != len(set(p['unclassified'])) or set(p['unclassified']) != set(by_code) - used:
-        raise ValueError('all 50 stocks must be accounted for')
+        raise ValueError('all '+str(size)+' stocks must be accounted for')
     return p
 
 

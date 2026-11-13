@@ -7,22 +7,24 @@ from featured_stocks import KST, SLOTS, stamp, validate
 from publish_featured_stocks import publish
 from publish_feed import api, read_remote
 from operation_store import save
+from featured_scope import feed_prefix, release_prefix
 
 
 def index_matches(index, payload):
+    prefix=feed_prefix(payload)
     date=stamp(payload['releaseAt']).date()
-    if (not isinstance(index,dict) or index.get('schemaVersion')!=1 or index.get('appVisibleCalendarDays')!=2
+    if (not isinstance(index,dict) or index.get('schemaVersion')!=payload['schemaVersion'] or index.get('appVisibleCalendarDays')!=2
         or index.get('releaseAt')!=payload['releaseAt'] or index.get('asOf')!=payload['asOf']
         or index.get('visibleUntil')!=dt.datetime.combine(date+dt.timedelta(days=2),dt.time(),KST).isoformat()):
         return False
     rows=index.get('dates',[])
     if not isinstance(rows,list) or not 1<=len(rows)<=2:
         return False
-    expected={'date':date.isoformat(),'path':'featured-stocks/'+date.isoformat()+'.json'}
+    expected={'date':date.isoformat(),'path':prefix+'/'+date.isoformat()+'.json'}
     try:
         return (expected in rows and len({r['date'] for r in rows})==len(rows) and
                 all(date-dt.timedelta(days=1)<=dt.date.fromisoformat(r['date'])<=date
-                    and r['path']=='featured-stocks/'+r['date']+'.json' for r in rows))
+                    and r['path']==prefix+'/'+r['date']+'.json' for r in rows))
     except (KeyError,TypeError,ValueError):
         return False
 
@@ -49,6 +51,7 @@ def watch(release, record, read=read_remote, write=publish,
         raise ValueError('invalid original featured-stock edition')
     if clock() < release-dt.timedelta(minutes=20):
         raise ValueError('edition outside preparation window')
+    prefix = release_prefix(release)
     deadline = release+dt.timedelta(minutes=30)
     state = {'releaseAt':release.isoformat(),'state':'waiting_for_draft','startedAt':clock().isoformat(),
              'deadlineAt':deadline.isoformat(),'published':False,'polls':0}
@@ -57,9 +60,9 @@ def watch(release, record, read=read_remote, write=publish,
     while True:
         state['polls']+=1
         try:
-            root,_=read('featured-stocks.json',missing=True)
-            day,_=read('featured-stocks/'+date+'.json',missing=True)
-            indexed,_=read('featured-stocks/index.json',missing=True)
+            root,_=read(prefix+'.json',missing=True)
+            day,_=read(prefix+'/'+date+'.json',missing=True)
+            indexed,_=read(prefix+'/index.json',missing=True)
             archived=(day or {}).get('editions',{}).get(slot)
             if root and archived and stamp(archived['releaseAt'])==release:
                 newer=stamp(root['releaseAt'])>release
@@ -88,9 +91,9 @@ def watch(release, record, read=read_remote, write=publish,
                         record(dict(state));return state
                     record({**state,'state':'publishing','asOf':draft['asOf']})
                     sha=write(draft)
-                    confirmed,_=read('featured-stocks.json',sha)
-                    archive,_=read('featured-stocks/'+date+'.json',sha)
-                    index,_=read('featured-stocks/index.json',sha)
+                    confirmed,_=read(prefix+'.json',sha)
+                    archive,_=read(prefix+'/'+date+'.json',sha)
+                    index,_=read(prefix+'/index.json',sha)
                     if (confirmed!=draft or archive.get('editions',{}).get(slot)!=draft
                         or not index_matches(index,draft)):
                         raise RuntimeError('featured root/archive/index readback mismatch')
