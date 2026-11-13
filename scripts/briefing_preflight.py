@@ -134,6 +134,20 @@ def main():
     path = 'operations/source-checks/' + key(release) + '/' + ident + '.json'
     save(path, {'state': 'checking_sources', 'releaseAt': release.isoformat(), 'startedAt': now.isoformat(), 'editorialCoverageVerified': False})
     result = collect(release)
+    # A completed same-day KRX trade remains evidence of an open trading day
+    # after quote APIs roll past their supported observation window.
+    if not result['tradingDayVerified'] and release.hour >= 11:
+        from publish_feed import read_remote
+        from trading_day_evidence import reuse_same_day
+        try:
+            previous, previous_sha = read_remote('morning-briefing.json')
+            proof = reuse_same_day((previous or {}).get('tradingDayEvidence'),
+                                   release.date(), dt.datetime.now(KST))
+            if proof:
+                proof['provenance'] = {'path': 'morning-briefing.json', 'sha': previous_sha}
+                result.update(tradingDayVerified=True, tradingDayEvidence=proof)
+        except Exception as error:
+            result['retainedTradingDayEvidenceError'] = str(error)[:400]
     save(path, result)
     save('operations/source-checks/' + key(release) + '.json', {'releaseAt': release.isoformat(), 'checkedAt': result['checkedAt'], 'state': result['state'], 'evidencePath': path, 'editorialCoverageVerified': False})
     # US turnover collection belongs only to the opening 06:40 briefing.
