@@ -2,8 +2,30 @@
   "requestId": "2026-11-13-2010-attempt-1",
   "releaseAt": "2026-11-13T20:10:00+09:00",
   "published": false,
-  "state": "collecting",
+  "state": "collected",
   "startedAt": "2026-11-13T19:57:04.114204+09:00",
   "deadlineAt": "2026-11-13T20:02:04.114204+09:00",
-  "progress": []
+  "progress": [
+    {
+      "stage": "krx_universe_verified",
+      "checkedAt": "2026-11-13T19:57:08.989042+09:00",
+      "stockUniverseCount": 2829,
+      "selectedCount": 100,
+      "turnoverBasis": "KRX"
+    },
+    {
+      "stage": "top_hundred_verified",
+      "checkedAt": "2026-11-13T19:57:19.132657+09:00",
+      "stockCount": 100,
+      "requestCount": 101,
+      "turnoverBasis": "KRX"
+    }
+  ],
+  "lastStage": "top_hundred_verified",
+  "snapshotPath": "collections/featured-stocks/2026-11-13-2010-attempt-1.json",
+  "stockCount": 100,
+  "publicationEligible": true,
+  "freshnessValidated": true,
+  "completedAt": "2026-11-13T19:57:19.135716+09:00",
+  "elapsedSeconds": 15.021512
 }
