@@ -13,6 +13,7 @@ import urllib.error
 import urllib.request
 from urllib.parse import urlparse
 from source_http import CollectionFetch, json_response
+from featured_strength import active as strength_active, analyze, verify_analysis
 
 KST = dt.timezone(dt.timedelta(hours=9))
 SLOTS = ('09:40', '11:40', '13:40', '15:40', '20:10')
@@ -261,7 +262,10 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
                        'nxtTradeAmount': int(n['tradeAmount']) if n else 0,
                        'integratedTradeAmount': known[code], 'changeRate': float(number(k['prevChangeRate'])),
                        'rateMarket': 'KRX', 'quotes': quotes,
-                       'zeroNxtEvidence': zero.get(code)})
+                       'zeroNxtEvidence': zero.get(code),
+                       **({'marketCapKrw': int(k['marketSum'])} if k.get('marketSum', '').isdigit() else {}),
+                       **({'isUpperLimit': k['nowPrice'] == k['upperLimitPrice']}
+                          if k.get('nowPrice', '').isdigit() and k.get('upperLimitPrice', '').isdigit() else {})})
     ended = now or dt.datetime.now(KST)
     if ended - started > dt.timedelta(minutes=5):
         raise ValueError('collection skew exceeds five minutes; collect again')
@@ -298,6 +302,8 @@ def enrich(snapshot, review):
     result['themes'] = sorted(themes, key=lambda t: (-t['weightedChangeRate'], -t['integratedTradeAmount'], t['id']))
     result['unclassified'] = [c for c in result['byChangeRate'] if c not in used]
     result['reviewedAt'] = review['reviewedAt']
+    if strength_active(result):
+        result.update(analyze(result, themes))
     return validate(result)
 
 
@@ -338,6 +344,10 @@ def validate(p):
         if s['integratedTradeAmount'] != s['krxTradeAmount'] + s['nxtTradeAmount']:
             raise ValueError('turnover sum mismatch')
         number(s['changeRate'])
+        if 'marketCapKrw' in s and (type(s['marketCapKrw']) is not int or s['marketCapKrw'] < 0):
+            raise ValueError('invalid observed market cap')
+        if 'isUpperLimit' in s and type(s['isUpperLimit']) is not bool:
+            raise ValueError('invalid observed limit-up flag')
         if s.get('rateMarket') != 'KRX':
             raise ValueError('mixed rate basis')
         for market in ('KRX', 'NXT'):
@@ -360,7 +370,10 @@ def validate(p):
         raise ValueError('invalid actual theme review time')
     by_code, used = {s['code']: s for s in stocks}, set()
     ids = set()
-    for t in p['themes']:
+    new_selection = strength_active(p)
+    if new_selection and p.get('themeSelectionVersion') != 2:
+        raise ValueError('theme selection version 2 required for new editions')
+    for t in (p.get('themeAssessments', []) if new_selection else p['themes']):
         if not t['id'] or t['id'] in ids or not t['name']:
             raise ValueError('theme identity duplicated/missing')
         ids.add(t['id'])
@@ -376,7 +389,7 @@ def validate(p):
         if t['integratedTradeAmount'] != sum(s['integratedTradeAmount'] for s in members):
             raise ValueError('theme turnover mismatch')
         evidence = t.get('membershipEvidence', [])
-        if {e['code'] for e in evidence} != set(codes) or any(not https(e.get('sourceUrl')) or not e.get('fact') for e in evidence):
+        if len(evidence) != len(codes) or {e['code'] for e in evidence} != set(codes) or any(not https(e.get('sourceUrl')) or not e.get('fact') for e in evidence):
             raise ValueError('verified business/theme relation required for every member')
         reason = t.get('reason')
         if reason is not None:
@@ -387,7 +400,10 @@ def validate(p):
                 raise ValueError('reason publication/review time mismatch')
             if reason.get('causality') not in ('source_attributed', 'related_fact_only'):
                 raise ValueError('separate reported cause from merely related facts')
-    if p['themes'] != sorted(p['themes'], key=lambda t: (-t['weightedChangeRate'], -t['integratedTradeAmount'], t['id'])):
+    if new_selection:
+        verify_analysis(p)
+        used = {c for t in p['themes'] for c in t['stockCodes']}
+    if not new_selection and p['themes'] != sorted(p['themes'], key=lambda t: (-t['weightedChangeRate'], -t['integratedTradeAmount'], t['id'])):
         raise ValueError('theme order mismatch')
     if len(p['unclassified']) != len(set(p['unclassified'])) or set(p['unclassified']) != set(by_code) - used:
         raise ValueError('all 50 stocks must be accounted for')

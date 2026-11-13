@@ -1,4 +1,5 @@
 """Publish reviewed featured stocks atomically; never overwrite briefing data."""
+import base64
 import datetime as dt
 import os
 import re
@@ -21,6 +22,9 @@ def publication_entries(payload, day, dates):
                ('featured-stocks/index.json', index)]
     entries = [{'path': p, 'mode': '100644', 'type': 'blob',
                 'content': json.dumps(body, ensure_ascii=False, indent=2) + '\n'} for p, body in content]
+    if payload.get('themeSelectionVersion') == 2:
+        entries.append({'path': 'featured-stocks/latest.md', 'mode': '100644', 'type': 'blob',
+                        'content': payload['reportMarkdown']})
     retained = retained_dates(dates, date, 3)
     entries.extend({'path': 'featured-stocks/' + old + '.json', 'mode': '100644', 'type': 'blob', 'sha': None}
                    for old in dates if old not in retained and dt.date.fromisoformat(old) < date)
@@ -54,6 +58,10 @@ def publish(payload):
             actual, _ = read_remote(name, new['sha'])
             if actual != expected:
                 raise RuntimeError('featured-stocks readback mismatch: ' + name)
+        if payload.get('themeSelectionVersion') == 2:
+            report = api('GET', 'contents/featured-stocks/latest.md?ref=' + new['sha'])
+            if base64.b64decode(report['content']).decode('utf-8') != payload['reportMarkdown']:
+                raise RuntimeError('featured conclusion readback mismatch')
         return new['sha']
     raise RuntimeError('concurrent featured-stocks publication failed')
 
