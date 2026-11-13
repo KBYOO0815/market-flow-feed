@@ -1,6 +1,6 @@
 {
   "releaseAt": "2026-11-13T18:50:00+09:00",
-  "checkedAt": "2026-11-13T09:37:53.304Z",
+  "checkedAt": "2026-11-13T09:38:23.626Z",
   "state": "research_retrying",
   "published": false,
   "requestId": "briefing-20261113-1850-prepare-1794562646784",
@@ -23,7 +23,7 @@
     "foreign_policy",
     "foreign_technology"
   ],
-  "reason": "Explicit prepare intent accepted and news searches initiated, but original publication times, trading-day dual evidence, and six-area editorial checks are not yet complete. Do not stage unverifiable news. Retry source checks and alternative originals within original 19:20 deadline.",
+  "reason": "Explicit-intent workflow accepted and all six automated source areas collected candidate links. Source evidence explicitly editorialCoverageVerified=false and tradingDayVerified=false; official KIND Samsung trade has volume 1,796,979 and value KRW 370,177,674,000 but independent Naver KRX evidence missing. Original candidate facts/times not fully verified; draft not staged. Continue within original 19:20 deadline.",
   "candidates": [
     {
       "sourceUrl": "https://www.reuters.com/business/energy/world-oil-market-is-returning-surplus-gulf-exports-recover-iea-says-2026-11-13/",
@@ -44,6 +44,31 @@
       "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20261113034900002",
       "decision": "excluded",
       "reason": "09:30 event announcement predates afternoon window; no verified new outcome"
+    },
+    {
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113137600002",
+      "decision": "pending",
+      "reason": "USD/KRW close candidate; primary article text and exact observation not accessible; source index only"
+    },
+    {
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113134000079",
+      "decision": "pending",
+      "reason": "Iran gas tanker incident claim; must separate IRGC assertion from independently confirmed explosion"
+    },
+    {
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113146400009",
+      "decision": "excluded",
+      "reason": "Unverified hacker allegation regarding TSMC personal data; no breach confirmed"
+    },
+    {
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113136700009",
+      "decision": "pending",
+      "reason": "US Commerce Secretary congressional testimony agreement; original article publication time not confirmed"
+    },
+    {
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001675",
+      "decision": "pending",
+      "reason": "Capital reduction filing found in date-scoped DART index but company and filing details not yet verified"
     }
   ],
   "coverageAttempts": {
@@ -72,5 +97,17 @@
       "verified": false
     }
   },
-  "nextAction": "Check explicit source-check evidencePath and verify actual primary-source timestamps; continue independent six-area investigation and stage only validated draft."
+  "nextAction": "Check explicit source-check evidencePath and verify actual primary-source timestamps; continue independent six-area investigation and stage only validated draft.",
+  "sourceEvidencePath": "operations/source-checks/2026-11-13-1850/43402875163-1.json",
+  "tradingDayEvidence": {
+    "verified": false,
+    "kind": {
+      "sourceUrl": "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain",
+      "date": "2026-11-13",
+      "tradeVolume": 1796979,
+      "tradeAmount": 370177674000
+    },
+    "missing": "Independent Naver KRX same-date positive-volume/amount evidence"
+  },
+  "sourceChecks": "collected_not_editorially_verified"
 }
