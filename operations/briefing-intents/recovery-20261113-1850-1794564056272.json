@@ -1,0 +1,10 @@
+{
+  "requestId": "recovery-20261113-1850-1794564056272",
+  "releaseAt": "2026-11-13T18:50:00+09:00",
+  "mode": "prepare",
+  "state": "intent_accepted",
+  "checkedAt": "2026-11-13T19:01:05.292788+09:00",
+  "deadlineAt": "2026-11-13T19:20:00+09:00",
+  "publicationEligible": true,
+  "published": false
+}
