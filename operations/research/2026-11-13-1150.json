@@ -1,0 +1,86 @@
+{
+  "releaseAt": "2026-11-13T11:50:00+09:00",
+  "checkedAt": "2026-11-13T02:43:30.952Z",
+  "previousReleaseAt": "2026-11-13T08:50:00+09:00",
+  "previousAsOf": "2026-11-12T23:40:36.914Z",
+  "mode": "since_previous",
+  "status": "research_failed",
+  "candidates": [
+    {
+      "id": "skbiopharm-japan-launch",
+      "region": "domestic",
+      "title": "SK바이오팜 세노바메이트 일본 판매 시작",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113055900017",
+      "publishedAt": "2026-11-13T10:06:00+09:00",
+      "newFact": "SK바이오팜은 일본 파트너 오노약품공업을 통해 세노바메이트의 현지 판매를 시작했다고 발표",
+      "decision": "hold",
+      "reason": "기사 원문 시각·발표 사실 확인. 전체 필수 6개 분야 조사와 거래일 교차검증 미완료로 발행 차단"
+    },
+    {
+      "id": "japan-supply-chain-nationalization-consideration",
+      "region": "foreign",
+      "title": "일본 경제산업성 핵심물자 민간 설비 국유화 방안 검토 보도",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113061300009",
+      "publishedAt": "2026-11-13T10:22:00+09:00",
+      "newFact": "일본 경제산업성의 방안 검토가 니혼게이자이 보도를 통해 알려짐",
+      "decision": "exclude",
+      "reason": "확정 정책·실행 사실이 아닌 검토 보도, 최초 일본 원문·발표 시각 미확인"
+    },
+    {
+      "id": "jo-hyun-apec-remarks",
+      "region": "domestic",
+      "title": "조현 장관 APEC 북한 초청 가능성 관련 발언",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113054600504",
+      "publishedAt": "2026-11-13T10:13:00+09:00",
+      "newFact": "조현 장관이 북한 APEC 초청 가능성에 대해 발언",
+      "decision": "exclude",
+      "reason": "전망성 발언으로 경제적 확정 사실 없음; 앞선 북미접촉 관련 보도와 중복 위험"
+    },
+    {
+      "id": "infectious-disease-symposium",
+      "region": "domestic",
+      "title": "감염병 치료제 R&D 성과교류회 개최 발표",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20261113058000530",
+      "publishedAt": "2026-11-13T10:10:00+09:00",
+      "newFact": "질병청·복지부·과기정통부 연구성과 교류 행사 개최 발표",
+      "decision": "exclude",
+      "reason": "국내 증시 직접 관련·경제적 영향 확인 불가"
+    }
+  ],
+  "counts": {
+    "foreignCandidates": 1,
+    "domesticCandidates": 3,
+    "verifiedCandidateFacts": 2,
+    "selected": 0,
+    "duplicateExcluded": 0
+  },
+  "coverage": {
+    "foreign_market": {
+      "status": "incomplete",
+      "reason": "현재 회차 미국 지수·Fed·환율의 원문별 발표시각 확인 미완료"
+    },
+    "foreign_policy": {
+      "status": "incomplete",
+      "reason": "외교·지정학 전 영역의 신규 발표 원문 시각 확인 미완료"
+    },
+    "foreign_technology": {
+      "status": "incomplete",
+      "reason": "AI·반도체·빅테크 신규 공시 및 원문 시각 확인 미완료"
+    },
+    "domestic_disclosures": {
+      "status": "incomplete",
+      "reason": "DART selectDate=2026.11.13의 실제 목록 본문·KIND 공시 접수 시각 검증 미완료"
+    },
+    "domestic_policy": {
+      "status": "partial",
+      "reason": "연합뉴스 정부·외교 기사 일부 확인, 정부 전체 정책 출처 미완료"
+    },
+    "domestic_market": {
+      "status": "incomplete",
+      "reason": "KRX 당일 거래 상태·실시간 관측과 거래일 달력 교차 확인 미완료"
+    }
+  },
+  "calendarStatus": "unverified",
+  "sourceCheckStatus": "operations/source-checks/2026-11-13-1150.json 404, 사전 수집 증거 없음",
+  "reason": "원문·시각·후보 전체 및 거래일 달력 검증이 불충분해 schemaVersion2 신규 브리핑 초안을 발행할 수 없음. 현재 공개 root와 양 초안 유지. 30분 내 재조사 가능."
+}
