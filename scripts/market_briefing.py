@@ -143,6 +143,21 @@ def merge(current,draft,today=None):
         result['days'].append(day)
     require(day['isKrxTradingDay']==draft['isKrxTradingDay'],'trading evidence conflict')
     session=draft['session']
+    def fact_keys(news):
+        keys={str(f.get('factKey',f.get('key'))) for f in news.get('facts',[]) if f.get('factKey',f.get('key'))}
+        return keys or ({'event:'+news['eventKey']} if news.get('eventKey') else set())
+    published=set()
+    for other_day in result['days']:
+        for other in other_day['sessions']:
+            if other_day['date']==draft['date'] and other['slot']==session['slot']:
+                continue
+            for n in other['foreignNews']+other['domesticNews']:
+                published.update(fact_keys(n))
+    incoming=set()
+    for n in session['foreignNews']+session['domesticNews']:
+        keys=fact_keys(n)
+        require(keys and not keys.intersection(published|incoming),'missing or duplicate event/fact keys')
+        incoming.update(keys)
     old=next((s for s in day['sessions'] if s['slot']==session['slot']),None)
     require(old is None or timestamp(old['asOf'])<=timestamp(session['asOf']),'stale replacement')
     if 'researchState' in draft:

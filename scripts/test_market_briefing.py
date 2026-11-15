@@ -32,6 +32,14 @@ class MarketBriefingTest(unittest.TestCase):
     def test_stale_replace_rejected(self):
         d=draft();current=merge(empty(),d,TODAY);d['session']['asOf']='2026-11-16T06:41:00+09:00'
         with self.assertRaises(ValueError):merge(current,d,TODAY)
+    def test_duplicate_fact_in_different_slot_rejected(self):
+        d=draft()
+        n={'id':'first','title':'x','summary':'x','sourceName':'x','category':'x','region':'foreign','impactRank':1,'relatedStocks':[],'sourceUrl':'https://example.org','publishedAt':'2026-11-16T06:00:00+09:00','eventKey':'event','facts':[{'factKey':'stable-fact'}]}
+        d['session']['foreignNews']=[n]
+        current=merge(empty(),d,TODAY)
+        later=copy.deepcopy(d);later['session']['slot']='08:40';later['session']['usThemeStatus']='not_applicable';later['session']['researchAudit']['domains']['usThemes']['status']='not_applicable';later['session']['foreignNews'][0]['id']='renamed'
+        with self.assertRaises(ValueError):merge(current,later,TODAY)
+
     def test_future_news_rejected(self):
         d=draft();d['session']['foreignNews']=[{'id':'x','title':'x','summary':'x','sourceName':'x','category':'x','region':'foreign','impactRank':1,'relatedStocks':[],'sourceUrl':'https://example.org','publishedAt':'2026-11-16T07:00:00+09:00'}]
         with self.assertRaises(ValueError):merge(empty(),d,TODAY)
