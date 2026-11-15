@@ -1,7 +1,287 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-15T10:46:24.790Z",
+  "updatedAt": "2026-11-15T21:44:15.640Z",
   "days": [
+    {
+      "date": "2026-11-16",
+      "isKrxTradingDay": true,
+      "sessions": [
+        {
+          "slot": "06:40",
+          "asOf": "2026-11-16T06:40:02.425+09:00",
+          "usThemes": [],
+          "foreignNews": [
+            {
+              "id": "20261116-0640-fed-schmid-inflation",
+              "title": "캔자스시티 연은 총재, 물가가 2%를 불편하게 웃돌며 잘못된 방향이라고 평가",
+              "summary": "제프 슈미드 캔자스시티 연은 총재는 물가상승률이 2% 목표를 불편하게 웃돌고 최근 흐름도 잘못된 방향이라며 연준에 대응 수단과 책임이 있다고 말했다. 추가 금리 인상을 명시적으로 요구하지는 않았다.",
+              "publishedAt": "2026-11-16T03:42:52+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/us/fed-has-some-work-do-inflation-kc-fed-chief-says-2026-11-15/",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "연준·기준금리",
+              "region": "foreign",
+              "eventKey": "fed-schmid-hawaii-inflation-speech-20261115",
+              "eventAt": "2026-11-16T03:42:52+09:00",
+              "facts": [
+                {
+                  "factKey": "fed-schmid-inflation-uncomfortably-above-two-20261115",
+                  "statement": "물가가 2% 목표를 불편하게 웃돌고 잘못된 방향이라고 평가했으나 추가 인상을 명시적으로 요구하지 않음",
+                  "sourceUrl": "https://www.reuters.com/world/us/fed-has-some-work-do-inflation-kc-fed-chief-says-2026-11-15/"
+                }
+              ]
+            },
+            {
+              "id": "20261116-0640-asean-china-coc-no-deal",
+              "title": "아세안·중국, 남중국해 행동규범 합의 불발…약 80% 잠정 합의",
+              "summary": "필리핀 외교장관은 아세안과 중국이 남중국해 행동규범을 타결하지 못했다고 밝혔다. 문안의 약 80%에는 잠정 합의했지만 법적 구속력 등 핵심 쟁점이 남았고, 협상은 내년 싱가포르 의장국 체제로 넘어간다.",
+              "publishedAt": "2026-11-15T22:38:59+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/china/asean-china-fail-conclude-south-china-sea-code-conduct-2026-11-15/",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "중국·남중국해",
+              "region": "foreign",
+              "eventKey": "asean-china-south-china-sea-coc-no-agreement-20261115",
+              "eventAt": "2026-11-15T22:38:59+09:00",
+              "facts": [
+                {
+                  "factKey": "asean-china-coc-provisional-agreement-share-20261115",
+                  "value": 80,
+                  "unit": "approximately_percent",
+                  "sourceUrl": "https://www.reuters.com/world/china/asean-china-fail-conclude-south-china-sea-code-conduct-2026-11-15/"
+                },
+                {
+                  "factKey": "asean-china-coc-not-concluded-20261115",
+                  "statement": "법적 구속력 등 핵심 쟁점 미해결로 행동규범 타결 불발",
+                  "sourceUrl": "https://www.reuters.com/world/china/asean-china-fail-conclude-south-china-sea-code-conduct-2026-11-15/"
+                }
+              ]
+            },
+            {
+              "id": "20261116-0640-eu-ets-free-permit-proposal",
+              "title": "EU 의장국, 산업계 무상 탄소배출권 감축 속도 완화안 제시",
+              "summary": "아일랜드 EU 의장국은 산업계 무상 탄소배출권의 단계적 폐지 속도를 늦추고, 연 5,000개 미만을 받는 시설의 투자계획 제출을 면제하는 절충안을 제안했다. 수요일 논의 예정으로 최종 법률 합의는 아니다.",
+              "publishedAt": "2026-11-16T05:57:00+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/sustainability/cop/irish-eu-presidency-proposes-slower-cuts-industrys-free-carbon-permits-2026-11-15/",
+              "relatedStocks": [],
+              "impactRank": 3,
+              "category": "EU 탄소규제·산업",
+              "region": "foreign",
+              "eventKey": "eu-irish-presidency-ets-free-permit-compromise-20261115",
+              "eventAt": "2026-11-16T05:57:00+09:00",
+              "facts": [
+                {
+                  "factKey": "eu-ets-small-site-investment-plan-exemption-proposal-20261115",
+                  "value": 5000,
+                  "unit": "free_permits_threshold_below",
+                  "sourceUrl": "https://www.reuters.com/sustainability/cop/irish-eu-presidency-proposes-slower-cuts-industrys-free-carbon-permits-2026-11-15/"
+                },
+                {
+                  "factKey": "eu-ets-free-permit-phaseout-slowdown-proposal-20261115",
+                  "statement": "의장국 절충 제안이며 최종 법률 합의 전",
+                  "sourceUrl": "https://www.reuters.com/sustainability/cop/irish-eu-presidency-proposes-slower-cuts-industrys-free-carbon-permits-2026-11-15/"
+                }
+              ]
+            },
+            {
+              "id": "20261116-0640-bessent-nvidia-comments",
+              "title": "미 재무장관, Nvidia 외부 CEO 물색·수출통제 문화 점검 요구",
+              "summary": "스콧 베선트 미 재무장관은 Nvidia가 차기 CEO를 외부에서 찾아야 한다고 말하고, 이사회와 외부 법률자문이 수출통제 준수 문화 관련 질문에 10일 안에 답해야 한다고 밝혔다. 이는 정부 인사의 요구로 Nvidia의 공식 인선 결정은 아니다.",
+              "publishedAt": "2026-11-16T00:50:00+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/bessent-says-nvidia-must-go-outside-company-find-new-ceo-2026-11-15/",
+              "relatedStocks": [
+                "Nvidia(NVDA)"
+              ],
+              "impactRank": 4,
+              "category": "미국 정책·AI 반도체",
+              "region": "foreign",
+              "eventKey": "bessent-nvidia-ceo-search-compliance-comments-20261115",
+              "eventAt": "2026-11-16T00:50:00+09:00",
+              "facts": [
+                {
+                  "factKey": "bessent-nvidia-external-ceo-search-comment-20261115",
+                  "statement": "Nvidia가 외부에서 차기 CEO를 찾아야 한다는 재무장관 발언; 회사 결정 아님",
+                  "sourceUrl": "https://www.reuters.com/world/bessent-says-nvidia-must-go-outside-company-find-new-ceo-2026-11-15/"
+                },
+                {
+                  "factKey": "bessent-nvidia-compliance-response-days-20261115",
+                  "value": 10,
+                  "unit": "days",
+                  "sourceUrl": "https://www.reuters.com/world/bessent-says-nvidia-must-go-outside-company-find-new-ceo-2026-11-15/"
+                }
+              ]
+            },
+            {
+              "id": "20261116-0640-ula-vulcan-amazon-leo-failure",
+              "title": "ULA 벌컨 로켓 발사 실패…Amazon Leo 위성 40기 소실",
+              "summary": "보잉·록히드마틴 합작사 ULA의 벌컨 로켓이 발사 약 10분 뒤 실패해 탑재된 Amazon Leo 인터넷 위성 40기가 소실됐다. 벌컨의 첫 임무 실패이며 원인은 아직 확인되지 않았다.",
+              "publishedAt": "2026-11-16T05:26:00+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/aerospace-defense/us-rocket-fails-after-launch-payload-amazon-internet-satellites-destroyed-2026-11-15/",
+              "relatedStocks": [
+                "Boeing(BA)",
+                "Lockheed Martin(LMT)",
+                "Amazon(AMZN)"
+              ],
+              "impactRank": 5,
+              "category": "우주·방산·위성통신",
+              "region": "foreign",
+              "eventKey": "ula-vulcan-amazon-leo-launch-failure-20261115",
+              "eventAt": "2026-11-16T05:26:00+09:00",
+              "facts": [
+                {
+                  "factKey": "ula-vulcan-amazon-leo-satellites-destroyed-20261115",
+                  "value": 40,
+                  "unit": "satellites",
+                  "sourceUrl": "https://www.reuters.com/business/aerospace-defense/us-rocket-fails-after-launch-payload-amazon-internet-satellites-destroyed-2026-11-15/"
+                },
+                {
+                  "factKey": "ula-vulcan-first-mission-failure-20261115",
+                  "statement": "발사 약 10분 뒤 실패; 원인 미확인",
+                  "sourceUrl": "https://www.reuters.com/business/aerospace-defense/us-rocket-fails-after-launch-payload-amazon-internet-satellites-destroyed-2026-11-15/"
+                }
+              ]
+            },
+            {
+              "id": "20261116-0640-new-world-rights-issue",
+              "title": "홍콩 신세계개발, 249억홍콩달러 유상증자 추진",
+              "summary": "신세계개발은 기존 1주당 11주의 신주를 주당 0.90홍콩달러에 배정해 249억홍콩달러를 조달하는 유상증자를 제안했다. 대주주 CTFE가 전액 인수하고, 순부채비율은 68.3%에서 48.3%로 낮아질 것으로 회사는 예상했다.",
+              "publishedAt": "2026-11-15T22:33:00+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/markets/europe/new-world-development-proposes-32-billion-rights-issue-2026-11-15/",
+              "relatedStocks": [
+                "New World Development(0017.HK)"
+              ],
+              "impactRank": 6,
+              "category": "부동산·자본조달",
+              "region": "foreign",
+              "eventKey": "new-world-development-rights-issue-20261115",
+              "eventAt": "2026-11-15T22:33:00+09:00",
+              "facts": [
+                {
+                  "factKey": "nwd-rights-issue-size-hkd-20261115",
+                  "value": 24900000000,
+                  "unit": "HKD",
+                  "sourceUrl": "https://www.reuters.com/markets/europe/new-world-development-proposes-32-billion-rights-issue-2026-11-15/"
+                },
+                {
+                  "factKey": "nwd-rights-issue-ratio-price-20261115",
+                  "statement": "기존 1주당 11주, 신주 발행가 주당 0.90홍콩달러",
+                  "sourceUrl": "https://www.reuters.com/markets/europe/new-world-development-proposes-32-billion-rights-issue-2026-11-15/"
+                },
+                {
+                  "factKey": "nwd-expected-net-debt-equity-after-rights-20261115",
+                  "value": 48.3,
+                  "unit": "percent",
+                  "sourceUrl": "https://www.reuters.com/markets/europe/new-world-development-proposes-32-billion-rights-issue-2026-11-15/"
+                }
+              ]
+            }
+          ],
+          "domesticNews": [],
+          "marketSnapshot": null,
+          "researchAudit": {
+            "window": {
+              "startExclusive": "2026-11-15T19:41:44+09:00",
+              "cutoffInclusive": "2026-11-16T06:40:02.425+09:00",
+              "baselineFile": "market-briefing.json",
+              "baselineSha": "6f6f54e38da4590e1caf1192f80dca8dc34f9bdb"
+            },
+            "krxTradingDayEvidence": {
+              "result": true,
+              "reason": "KRX 공식 시장 운영 규정과 KRX 일정 기반 거래일 자료에서 2026-11-16 월요일 정규장 09:00~15:30 개장으로 확인",
+              "sources": [
+                "https://global.krx.co.kr/contents/GLB/06/0602/0602010201/GLB0602010201T1.jsp",
+                "https://www.traderda.com/market-holidays/south-korea-stock-exchange"
+              ]
+            },
+            "usRegularSessionEvidence": {
+              "sessionDate": "2026-11-13",
+              "status": "regular_session",
+              "reason": "NYSE·Nasdaq 2026 공식 휴장 일정상 11월 13일은 휴장·조기폐장일이 아니며 Reuters의 당일 미국 증시 마감 기사로 정규장 종료 확인",
+              "sources": [
+                "https://www.nyse.com/publicdocs/nyse/markets/nyse/NYSE_2026_Holiday_Calendar.pdf",
+                "https://www.nasdaq.com/market-activity/stock-market-holiday-schedule",
+                "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-13/"
+              ]
+            },
+            "coverage": {
+              "foreign": [
+                "미국 증시·연준·금리·국채·달러",
+                "유가·천연가스·금·구리·원자재",
+                "미국 정책·관세·규제·주요 정치인 발언",
+                "AI·반도체·HBM·ASIC·데이터센터·빅테크",
+                "중국·대만·러시아/우크라이나·중동",
+                "글로벌 기업 실적·가이던스·자본조달"
+              ],
+              "domestic": [
+                "DART·KIND·KRX",
+                "금융위원회·재정경제부·산업통상자원부·대통령실·한국은행",
+                "기업 공시·실적·수주·투자·M&A·증자·CB/BW·자사주",
+                "거래정지·투자경고·바이오 허가·신규상장·합병·분할"
+              ],
+              "shortlistReviewed": {
+                "foreign": 14,
+                "domestic": 6
+              },
+              "selected": {
+                "foreign": 6,
+                "domestic": 0
+              },
+              "duplicateExcluded": 3,
+              "excludedSummary": [
+                {
+                  "reason": "기존 중동·FAA 사건의 재보도 또는 시장 반응으로 새 사실 없음",
+                  "count": 3
+                },
+                {
+                  "reason": "회사 확인 없는 인선·거래 보도 또는 상대국 확인 없는 공격 주장",
+                  "count": 3
+                },
+                {
+                  "reason": "조사구간 이전 발표·기존 공시 요약·과거 정책 재소개",
+                  "count": 5
+                },
+                {
+                  "reason": "전망·분석 중심이며 신규 확정 사건 없음",
+                  "count": 3
+                }
+              ]
+            },
+            "usThemesFailure": {
+              "reason": "직전 미국 정규장 2026-11-13의 개별기업 보통주 실제 달러거래대금 1~50위 전체를 검증하지 못함. 확보 가능한 자료는 상위 12개 또는 25개에 그쳤고, 한 자료는 금지된 종가×총거래량 방식이어서 순위·강도 계산에 사용하지 않음.",
+              "checkedSources": [
+                "https://stockanalysis.com/markets/most-active/",
+                "https://www.stocktitan.net/rankings/stocks-by-dollar-volume.html"
+              ]
+            },
+            "failures": [
+              {
+                "source": "DART 날짜별 전체공시",
+                "dates": [
+                  "2026-11-15",
+                  "2026-11-16"
+                ],
+                "reason": "날짜별 원문 목록의 본문과 전체 건수를 직접 확인하지 못해 0건으로 단정하지 않음"
+              },
+              {
+                "source": "미국 정규장 실제 달러거래대금 Top 50",
+                "date": "2026-11-13",
+                "reason": "실제 거래대금 기준 전체 50개 종목·순위 검증 불가; usThemes를 빈 배열로 저장"
+              }
+            ],
+            "notes": [
+              "06:40 정상 회차",
+              "국내는 검증된 신규 확정 재료 0건; 원천 장애와 정상 0건을 구분해 DART 실패를 별도 기록"
+            ]
+          }
+        }
+      ]
+    },
     {
       "date": "2026-11-15",
       "isKrxTradingDay": false,
