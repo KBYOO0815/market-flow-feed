@@ -1,6 +1,6 @@
 {
-  "requestId": "integrated-v3-final-1540-probe-20261116",
-  "mode": "collect_probe",
+  "requestId": "integrated-v3-1540-20261116-attempt-1",
+  "mode": "collect",
   "releaseAt": "2026-11-16T15:40:00+09:00",
   "evidence": {
     "tradingDayEvidence": {
@@ -34,6 +34,5 @@
         }
       ]
     }
-  },
-  "purpose": "Verify final deployed adapter using actual observations, strict five-minute deadline and no public publication"
+  }
 }
