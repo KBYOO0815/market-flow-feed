@@ -2,8 +2,24 @@
   "requestId": "integrated-v3-full-scan-20261116-1540-probe",
   "releaseAt": "2026-11-16T15:40:00+09:00",
   "published": false,
-  "state": "collecting",
+  "state": "collection_failed",
   "startedAt": "2026-11-16T15:17:05.816004+09:00",
   "deadlineAt": "2026-11-16T15:22:05.816004+09:00",
-  "progress": []
+  "progress": [
+    {
+      "stage": "integrated_source_queries",
+      "checkedAt": "2026-11-16T15:17:14.804633+09:00",
+      "evidencePath": "collection-artifacts/integrated-2026-11-16-1540.json",
+      "errors": {},
+      "markets": [
+        "KRX",
+        "NXT",
+        "NXT_OFFICIAL"
+      ]
+    }
+  ],
+  "lastStage": "integrated_source_queries",
+  "errorType": "ValueError",
+  "error": "complete eligible universe mismatch between broker master and Naver",
+  "completedAt": "2026-11-16T15:17:15.933412+09:00"
 }
