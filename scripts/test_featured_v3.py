@@ -161,3 +161,18 @@ class LiveAdapterContract(unittest.TestCase):
                 stocks,proof=rank_universe(package['securityMaster'],package['krxQuotes'],package['nxtQuotes'],package['coverage'],'2026-11-16',now,'13:40')
                 self.assertEqual(stocks[0]['code'],'001100');self.assertNotIn('001099',{s['code'] for s in proof['allMarketRows']});self.assertEqual(stocks[2]['securityType'],'PREFERRED')
             finally:os.chdir(original)
+
+class ObservationScope(unittest.TestCase):
+    def test_old_last_trade_outside_top100_is_not_a_missing_venue_amount(self):
+        p=fixture();outside=next(r for r in p['rankingProof']['allMarketRows'] if r['code']=='000119')
+        outside['quotes']['KRX']['observedAt']='2026-11-16T10:00:00+09:00'
+        # Same-day cumulative amount with current retrieval; it cannot enter Top100.
+        validate(p)
+        p['rankingProof']['allMarketRows'][0]['quotes']['KRX']['observedAt']='2026-11-16T10:00:00+09:00'
+        with self.assertRaisesRegex(ValueError,'stale selected'):validate(p)
+    def test_1540_aftermarket_return_uses_previous_regular_base(self):
+        p=fixture('15:40');rows=p['rankingProof']['allMarketRows'];rows[0]['quotes']['KRX']['session']='KRX_AFTER_MARKET'
+        rows[0]['quotes']['KRX']['price']=108;rows[0]['quotes']['KRX']['previousRegularClose']=100
+        p['stocks'],p['rankingProof']=rank_universe(rows,[r['quotes']['KRX'] for r in rows],[r['quotes']['NXT'] for r in rows],p['rankingProof'],p['date'],stamp(p['asOf']),'15:40')
+        p=enrich(p,{'reviewedAt':p['reviewedAt'],'themes':[]})
+        self.assertEqual(next(s['changeRate'] for s in p['stocks'] if s['code']==rows[0]['code']),8)

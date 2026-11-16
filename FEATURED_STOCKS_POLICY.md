@@ -10,6 +10,8 @@ schemaVersion=3, turnoverBasis=KRX_NXT, universeSize=100, amountUnit=KRW, rateBa
 
 stocks는 통합금액 내림차순/동률 코드순 정확히100종목이다. 수집 단계 rankingProof.allMarketRows에는 재계산 가능한 전체 적격 후보, 각 거래소의 정규화 원자료와 완전성 근거를 남긴다. 공개 단계에서는 해당 증빙을 collections/featured-proofs/의 불변 blob에 한 번 저장하고 rankingProof.evidencePath/evidenceBlobSha로 참조한다. 공개 root·날짜별 회차에는 전체 Top100 원자료를 유지하되 전체시장 증빙을 매 회차 중복 전송하지 않는다. 공개 검증기는 동일 blob SHA의 전체 증빙을 읽어 순위를 재검증한다. 통합금액=krxTradeAmount+nxtTradeAmount. 가격, KRX 전일 정규 종가 및 출처로 changeRate를 재계산한다. 신규상장 공식 기준가는 별도 comparison으로 근거를 명시하며 유효 비교가 불가능하면 비교불가로 표시한다.
 
+15:40 장후 KRX 가격을 사용할 때도 원문 장후 자체 등락률(정규장 종가 대비)을 복사하지 않는다. 당일 KIS 기준가와 락구분00을 확인해 전일 정규장 기준으로 실제 KRX 가격의 수익률을 다시 계산한다. 권리락 등 비교기준이 불명확한 Top100 종목은 발행을 차단한다. 같은 날 누적 금액을 조회한 비선정 저유동성 종목의 마지막 체결시각과 수집시각을 구분하며, 실제 선별 Top100의 시세 신선도는 별도로 검증한다.
+
 20:10은 KRX REGULAR_CLOSE와 closeConfirmed, NXT NXT_FINAL과 closeConfirmed를 요구한다. 장후 시세를 KRX 종가로 바꾸지 않는다. 각 금액은 시장별 turnoverScope와 tradeDate, sourceUrl, observedAt, retrievedAt을 갖는다.
 
 selectedStockCodes는 비교 가능한 changeRate>=4.00 전체이며 누락/추가 금지. 이 종목들만 themes 또는 individualStocks에 정확히 한 번 배정한다. 테마는 최소2종목, 개수 상한 없음, industry 또는 shared_catalyst 근거를 갖는다. 서로 다른 원인을 공통 재료로 단정하지 않는다. 테마 가중값은 포함된 +4% 이상 종목들만의 통합금액 가중평균이며 전체 산업 지수가 아니다. 테마는 가중상승률순, 개별은 상승률순. 하락 대표주 관측이 있으면 부분 강세라고 설명한다.

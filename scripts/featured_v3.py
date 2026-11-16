@@ -58,7 +58,7 @@ def quote(q,date,asof,market):
     observed=stamp(q['observedAt']);checked=stamp(q['retrievedAt'])
     require(observed.date().isoformat()==date and observed<=checked<=asof,'quote observation/retrieval invalid')
     require(dt.timedelta(0)<=asof-checked<=dt.timedelta(minutes=5),'quote retrieval stale')
-    require(q.get('session') in ('REGULAR_MARKET','REGULAR_CLOSE','NXT_CUMULATIVE','NXT_FINAL'),'unrecognized session')
+    require(q.get('session') in ('REGULAR_MARKET','REGULAR_CLOSE','KRX_AFTER_MARKET','NXT_CUMULATIVE','NXT_FINAL'),'unrecognized session')
     money(q['turnover'])
 
 
@@ -85,9 +85,7 @@ def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
             require(k['session']=='REGULAR_CLOSE' and k.get('closeConfirmed') is True,'20:10 requires verified KRX regular close')
             require(not n or n['session']=='NXT_FINAL' and n.get('closeConfirmed') is True,'20:10 requires actual NXT final total')
         else:
-            require(k['session'] in ('REGULAR_MARKET','REGULAR_CLOSE'),'KRX aftermarket price not allowed')
-            require(asof-stamp(k['observedAt'])<=dt.timedelta(minutes=15) or k.get('closeConfirmed') is True,'stale KRX quote')
-            require(not n or asof-stamp(n['observedAt'])<=dt.timedelta(minutes=15),'stale NXT quote')
+            require(k['session'] in ('REGULAR_MARKET','REGULAR_CLOSE') or slot=='15:40' and k['session']=='KRX_AFTER_MARKET','unrecognized price session for original slot')
         base=k.get('previousRegularClose');price=k.get('price')
         comparison=k.get('comparison',{'eligible':True,'basis':'KRX_PREVIOUS_REGULAR_CLOSE'})
         if comparison.get('eligible'):
@@ -103,7 +101,12 @@ def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
             **({'zeroNxtEvidence':{'sourceUrl':coverage['sourceUrl'],'tradeDate':date,'reason':'공식 전체 NXT 거래대상 미포함'}} if not n else {})})
     rows.sort(key=lambda s:(-s['integratedTradeAmount'],s['code']))
     require(len(rows)>=100,'fewer than 100 eligible stocks')
-    for i,s in enumerate(rows[:100],1):s['turnoverRank']=i
+    for i,s in enumerate(rows[:100],1):
+        s['turnoverRank']=i
+        require(s['comparison'].get('eligible') or s['comparison'].get('basis')=='UNAVAILABLE_NEW_LISTING','Top100 price comparison not verified')
+        if slot!='20:10':
+            require(asof-stamp(s['quotes']['KRX']['observedAt'])<=dt.timedelta(minutes=15) or s['quotes']['KRX'].get('closeConfirmed') is True,'stale selected KRX quote')
+            require('NXT' not in s['quotes'] or asof-stamp(s['quotes']['NXT']['observedAt'])<=dt.timedelta(minutes=15),'stale selected NXT quote')
     proof={**copy.deepcopy(coverage),'nxtEligibleCodes':sorted(official & eligible_codes),'method':'full_universe','eligibleCount':len(rows),'cutoffAmount':rows[99]['integratedTradeAmount'],
            'excludedMaxAmount':rows[100]['integratedTradeAmount'] if len(rows)>100 else 0,'allMarketRows':rows}
     return rows[:100],proof

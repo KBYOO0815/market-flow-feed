@@ -71,27 +71,30 @@ def normalize(raw,release,fetch,now=None,trace=None):
             try:
                 q=cache(url);retrieved=(now or cache.times[url].astimezone(KST));observed=dt.datetime.strptime(q['tradeTime'],'%Y%m%d%H%M%S').replace(tzinfo=KST)
                 require(q.get('itemcode')==code and observed.date()==target.date(),'quote identity/trading date mismatch')
-                require(observed<=retrieved and (retrieved-observed<=dt.timedelta(minutes=15) or venue=='KRX' and observed.hour==15 and observed.minute==30),'stale market quote')
+                require(observed<=retrieved,'future market quote')
                 amount=int(q['tradeAmount']);require(str(q['tradeAmount']).isdigit(),'invalid turnover')
                 session=q.get('tradingSessionType')
                 if venue=='KRX':
                     regular_close=(observed.hour==15 and observed.minute==30 and session in ('REGULAR_MARKET','REGULAR_CLOSE'))
-                    require(session in ('REGULAR_MARKET','REGULAR_CLOSE'),'aftermarket price is not KRX regular price')
-                    session='REGULAR_CLOSE' if regular_close else 'REGULAR_MARKET'
+                    require(session in ('REGULAR_MARKET','REGULAR_CLOSE') or target.strftime('%H:%M')=='15:40' and session=='AFTER_MARKET','aftermarket price is not KRX regular close')
+                    session='REGULAR_CLOSE' if regular_close else 'KRX_AFTER_MARKET' if session=='AFTER_MARKET' else 'REGULAR_MARKET'
                 else:
                     require(target.strftime('%H:%M')!='20:10','NXT official final total confirmation adapter required at20:10')
                     session='NXT_CUMULATIVE';regular_close=False
                 quote={'code':code,'market':venue,'tradeDate':date,'turnoverScope':venue+'_ONLY','sourceUrl':url,'retrievedAt':retrieved.isoformat(),'observedAt':observed.isoformat(),
                     'turnover':amount,'session':session,'closeConfirmed':regular_close}
                 if venue=='KRX':
-                    price=num(q['nowPrice']);change=num(q['prevChangePrice']);rate=num(q['prevChangeRate'])
-                    signed=-abs(change) if rate<0 else abs(change);base=price-signed
-                    require(base>0 and abs((price/base-1)*100-rate)<=num('.011'),'KRX previous-close arithmetic mismatch')
+                    price=num(q['nowPrice']);base=num(master[code]['referencePrice'])
                     new_listing=allkrx[code].get('listedDate')==target.strftime('%Y%m%d')
-                    require(num(q.get('stdPrice'))==base and num(master[code].get('referencePrice'))==base,'independent KRX comparison reference mismatch')
-                    require(new_listing or master[code].get('exRightsCode')=='00','corporate-action day requires actual prior regular-close source, not adjusted reference')
+                    confirmed=master[code].get('exRightsCode')=='00'
+                    require(price>0 and base>0,'invalid observed price/reference')
+                    if session!='KRX_AFTER_MARKET':
+                        change=num(q['prevChangePrice']);rate=num(q['prevChangeRate']);signed=-abs(change) if rate<0 else abs(change)
+                        confirmed=confirmed and num(q.get('stdPrice'))==base and price-signed==base and abs((price/base-1)*100-rate)<=num('.011')
                     quote.update(price=float(price),previousRegularClose=None if new_listing else float(base),priceSourceUrl=url,
-                        comparison={'eligible':not new_listing,'basis':'UNAVAILABLE_NEW_LISTING' if new_listing else 'KRX_PREVIOUS_REGULAR_CLOSE','explanation':'신규상장: 전일 KRX 정규장 종가 없음; 별도 공식 기준가 검증 전 필터 제외' if new_listing else 'Naver 기준가·전일대비 산술과 당일 KIS 기준가 교차대조; 락구분00 확인. 장후 종가 필드는 사용 안 함'})
+                        comparison={'eligible':confirmed and not new_listing,'basis':'UNAVAILABLE_NEW_LISTING' if new_listing else 'KRX_PREVIOUS_REGULAR_CLOSE' if confirmed else 'UNVERIFIED_ADJUSTED_REFERENCE',
+                            'explanation':'신규상장: 전일 KRX 정규장 종가 없음; 별도 공식 기준가 검증 전 필터 제외' if new_listing else '당일 KIS 기준가 및 락구분00으로 전일 정규장 비교기준 검증; 장후 원문 자체 등락률 대신 KRX 실제 가격으로 재계산' if confirmed else '권리락/기준가 불일치: Top100 포함시 발행 차단',
+                            'referenceSourceUrl':master[code]['sourceUrl']})
                 result.append(quote)
             except Exception as e:issues.append({'market':venue,'code':code,'sourceUrl':url,'reason':type(e).__name__+': '+str(e)})
         venues[venue]=result
