@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T03:50:49.040Z",
+  "updatedAt": "2026-11-16T03:51:12.775Z",
   "days": [
     {
       "date": "2026-11-16",
@@ -2234,7 +2234,11 @@
             }
           },
           "storageVerification": {
-            "status": "pending"
+            "status": "verified",
+            "verifiedAt": "2026-11-16T03:51:12.775Z",
+            "verifiedCommit": "6844c3554c352c91becd02d2a0d595f4462431f1",
+            "verifiedBlobSha": "fb9c0c55c23fbf07da4ded1edd17a8932f4dc44b",
+            "method": "초기 병합 커밋을 원격 재조회해 JSON 문법·대상 회차·FIFO·중복·정렬·상태·SHA 일치를 확인. 이 메타데이터 추가 커밋도 다시 재조회함."
           }
         }
       ]
