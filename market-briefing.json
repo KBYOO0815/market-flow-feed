@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T10:47:21.676723+09:00",
+  "updatedAt": "2026-11-16T01:49:18.191Z",
   "days": [
     {
       "date": "2026-11-16",
@@ -478,14 +478,17 @@
           ],
           "researchStatus": "partial",
           "storageVerification": {
-            "status": "structurally_validated_pending_remote_readback",
-            "note": "원격 저장 후 재조회로만 저장 성공을 보고. 이 필드는 조사가 완료됐음을 뜻하지 않음."
+            "status": "verified",
+            "verifiedAt": "2026-11-16T01:49:18.191Z",
+            "verifiedCommit": "426a00193384cbbe1d6fd110c63ade69436546eb",
+            "verifiedBlobSha": "8485c9e125219aae9f1b68f1899d5be9c65846c8",
+            "method": "최초 복구 커밋을 원격 재조회해 전체 JSON 일치 확인. 아래 메타데이터 추가 커밋도 다시 재조회한다."
           },
           "recovery": {
             "isRecovery": true,
             "originalSlot": "08:40",
             "detectedAt": "2026-11-16T00:16:46Z",
-            "recoveredAt": "2026-11-16T01:46:51.641Z",
+            "recoveredAt": "2026-11-16T01:49:18.191Z",
             "reason": "예약 비활성 상태로 원래 08:40 실행 누락. 사용자 지시에 따라 실제 조사와 지연 저장 수행. 과거 asOf를 생성하지 않음.",
             "startedAt": "2026-11-16T00:17:50.739Z"
           },
