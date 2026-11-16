@@ -79,16 +79,20 @@ def publish(payload,api,read,clock=lambda:dt.datetime.now(KST)):
 def mirror(root,token):
     require(bool(token),'APP_MIRROR_TOKEN is not configured; public success is not mirror success')
     url='https://api.github.com/repos/KBYOO0815/market-flow-app/contents/data/featured-stocks.json'
-    def request(method,body=None):
-        r=urllib.request.Request(url,data=json.dumps(body).encode() if body else None,method=method,
+    def request(method,body=None,resource_url=None):
+        r=urllib.request.Request(resource_url or url,data=json.dumps(body).encode() if body else None,method=method,
             headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'})
         with urllib.request.urlopen(r,timeout=30) as response:return json.load(response)
+    def decode(obj):
+        if obj.get('encoding')!='base64' or not obj.get('content'):
+            obj=request('GET',resource_url='https://api.github.com/repos/KBYOO0815/market-flow-app/git/blobs/'+obj['sha'])
+        return json.loads(base64.b64decode(obj['content']))
     for attempt in range(5):
-        obj=request('GET');current=json.loads(base64.b64decode(obj['content']))
+        obj=request('GET');current=decode(obj)
         require(stamp(current['releaseAt'])<=stamp(root['releaseAt']),'mirror rollback forbidden')
         try:request('PUT',{'message':'Mirror verified featured stocks '+root['releaseAt'],'sha':obj['sha'],'content':base64.b64encode((json.dumps(root,ensure_ascii=False,indent=2)+'\n').encode()).decode()})
         except urllib.error.HTTPError as e:
             if e.code not in (409,422) or attempt==4:raise
             continue
-        require(json.loads(base64.b64decode(request('GET')['content']))==root,'private mirror readback mismatch');return True
+        require(decode(request('GET'))==root,'private mirror readback mismatch');return True
     raise RuntimeError('mirror conflict retries exhausted')

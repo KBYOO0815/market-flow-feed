@@ -8,7 +8,7 @@ schemaVersion=3, turnoverBasis=KRX_NXT, universeSize=100, amountUnit=KRW, rateBa
 
 전체 security master, 전체 KRX venue-only 금액, 공식 전체 NXT 거래대상과 각 종목의 venue-only 금액을 같은 거래일로 대조한다. 잘린 두 Top100 목록만으로 순위를 확정하지 않는다. 현재 구현은 더 엄격한 full_universe 증명을 사용한다. nxtEligibleCodes 전체에 실제 NXT quote가 있어야 한다. 공식 거래대상 미포함인 경우에만 증빙을 남기고 0을 허용한다. 미조회/404/장애는 0이 아니다.
 
-stocks는 통합금액 내림차순/동률 코드순 정확히100종목이다. rankingProof.allMarketRows에는 재계산 가능한 전체 적격 후보, 각 거래소의 원자료와 완전성 근거를 남긴다. 통합금액=krxTradeAmount+nxtTradeAmount. 가격, KRX 전일 정규 종가 및 출처로 changeRate를 재계산한다. 신규상장 공식 기준가는 별도 comparison으로 근거를 명시하며 유효 비교가 불가능하면 비교불가로 표시한다.
+stocks는 통합금액 내림차순/동률 코드순 정확히100종목이다. 수집 단계 rankingProof.allMarketRows에는 재계산 가능한 전체 적격 후보, 각 거래소의 정규화 원자료와 완전성 근거를 남긴다. 공개 단계에서는 해당 증빙을 collections/featured-proofs/의 불변 blob에 한 번 저장하고 rankingProof.evidencePath/evidenceBlobSha로 참조한다. 공개 root·날짜별 회차에는 전체 Top100 원자료를 유지하되 전체시장 증빙을 매 회차 중복 전송하지 않는다. 공개 검증기는 동일 blob SHA의 전체 증빙을 읽어 순위를 재검증한다. 통합금액=krxTradeAmount+nxtTradeAmount. 가격, KRX 전일 정규 종가 및 출처로 changeRate를 재계산한다. 신규상장 공식 기준가는 별도 comparison으로 근거를 명시하며 유효 비교가 불가능하면 비교불가로 표시한다.
 
 20:10은 KRX REGULAR_CLOSE와 closeConfirmed, NXT NXT_FINAL과 closeConfirmed를 요구한다. 장후 시세를 KRX 종가로 바꾸지 않는다. 각 금액은 시장별 turnoverScope와 tradeDate, sourceUrl, observedAt, retrievedAt을 갖는다.
 
@@ -28,7 +28,7 @@ reason=null이면 앱에 `당일 상승 이유 확인 안 됨`을 표시한다. 
 
 ## 실제 수집 어댑터의 보류 조건
 
-`featured_integrated.py`는 Naver KRX/NXT와 NXT 공식 원자료를 실제 재조회하고 collection-artifacts에 오류까지 남긴다. 기본 자동 어댑터 `featured_naver_v3.py`는 한국투자증권 당일 전체 종목 마스터(KOSPI/KOSDAQ), Naver 전체 KRX 목록의 그룹/시장, SPAC·우선주 코드를 교차 확인한다. 전체 적격 KRX 종목과 NXT 공식 거래대상 전체의 venue별 detail을 bounded 병렬 조회한다. 원문 거래일/체결시각/세션/금액/전일대비를 검증하며 5분 초과나 한 경계 후보의 미확인도 발행을 보류한다. 신규상장은 전일종가가 없음을 명시하고 공식 대체 기준 검증 전 선별에서 제외한다. API 접근제한을 우회하지 않는다.
+`featured_integrated.py`는 Naver KRX/NXT와 NXT 공식 원자료를 실제 재조회하고 collection-artifacts에 오류까지 남긴다. 기본 자동 어댑터 `featured_naver_v3.py`는 한국투자증권 당일 전체 종목 마스터(KOSPI/KOSDAQ), Naver 전체 KRX 목록의 그룹/시장, SPAC·우선주 코드를 교차 확인한다. ST 주권과 FS 외국주권은 기업 주식으로 포함하며 DR 및 기타 증권은 제외한다. 전체 마스터에 있으나 순위 목록에서 누락된 종목도 실제 상세 조회로 확장한다. 전체 적격 KRX 종목과 NXT 공식 거래대상 전체의 venue별 detail을 bounded 병렬 조회한다. 원문 거래일/체결시각/세션/금액/전일대비를 검증하며 5분 초과나 한 경계 후보의 미확인도 발행을 보류한다. 신규상장은 전일종가가 없음을 명시하고 공식 대체 기준 검증 전 선별에서 제외한다. API 접근제한을 우회하지 않는다.
 
 외부 대체 normalized integratedSourcePackage를 지정하는 경우에도 실제 재조회 rawResponses와 일치해야 한다. 20:10 NXT 공식 최종집계 확인 및 KRX 종가 원천이 확인되지 않으면 자동 정규화를 중단한다. 어댑터 코드/시험 통과를 실데이터 정상 발행으로 보고하지 않는다.
 

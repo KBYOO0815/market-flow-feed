@@ -30,7 +30,7 @@ def normalize(raw,release,fetch,now=None,trace=None):
         code=r['itemcode'];m=master.get(code)
         require(m is not None,'KRX listed security absent from current master: '+code)
         require(r.get('type')==m['groupCode'],'security type contradicts broker master: '+code)
-        if r.get('type')!='ST' or m['spacFlag']=='Y':continue
+        if r.get('type') not in ('ST','FS') or m['spacFlag']=='Y':continue
         require(m['spacFlag']=='N' and m['preferredCode'] in ('0','1','2','9'),'unrecognized security classification: '+code)
         eligible.append(code)
         universe.append({'code':code,'name':r['itemname'],'market':m['market'],'securityType':'COMMON' if m['preferredCode']=='0' else 'PREFERRED',
@@ -38,13 +38,13 @@ def normalize(raw,release,fetch,now=None,trace=None):
             'classificationEvidence':{'naverType':r['type'],'brokerGroup':m['groupCode'],'spacFlag':m['spacFlag'],'preferredCode':m['preferredCode'],'masterRetrievedAt':m['masterRetrievedAt']}})
     # Expand outside the ranking when the complete master lists extra names.
     # Their actual venue quote is mandatory; a missing quote never becomes zero.
-    expected={c for c,m in master.items() if m['groupCode']=='ST' and m['spacFlag']=='N'}
+    expected={c for c,m in master.items() if m['groupCode'] in ('ST','FS') and m['spacFlag']=='N'}
     supplemental=sorted(expected-set(eligible))
     require(not set(eligible)-expected,'Naver eligible security absent from classified master')
     for code in supplemental:
         m=master[code]
         require(m['preferredCode'] in ('0','1','2','9'),'unknown supplemental share class')
-        allkrx[code]={'itemcode':code,'itemname':m['name'],'type':'ST','sosok':'0' if m['market']=='KOSPI' else '1','listedDate':m.get('listingDate')}
+        allkrx[code]={'itemcode':code,'itemname':m['name'],'type':m['groupCode'],'sosok':'0' if m['market']=='KOSPI' else '1','listedDate':m.get('listingDate')}
         eligible.append(code)
         universe.append({'code':code,'name':m['name'],'market':m['market'],'securityType':'COMMON' if m['preferredCode']=='0' else 'PREFERRED','classificationVerified':True,
             'classificationSourceUrl':m['sourceUrl'],'classificationEvidence':{'brokerGroup':m['groupCode'],'spacFlag':m['spacFlag'],'preferredCode':m['preferredCode'],'masterRetrievedAt':m['masterRetrievedAt'],'rankingSupplement':True}})
@@ -56,7 +56,11 @@ def normalize(raw,release,fetch,now=None,trace=None):
     urls=[BASE+'detail/'+c+'/detail?codeType='+v for v,codes in [('KRX',sorted(eligible)),('NXT',nxt_codes)] for c in codes]
     if trace:trace({'stage':'full_integrated_scan_started','checkedAt':clock().isoformat(),'krxEligibleCount':len(eligible),'nxtEligibleCount':len(nxt_codes),'requestCount':len(urls)})
     for i in range(0,len(urls),60):
-        cache.prime(urls[i:i+60])
+        try:cache.prime(urls[i:i+60])
+        except Exception as error:
+            pathlib.Path('collection-artifacts/integrated-partial-quotes.json').write_text(json.dumps({'completed':len(cache.values),'sourceUrl':getattr(error,'url',None),'error':str(error),'quotes':cache.values},ensure_ascii=False,indent=2)+'\n')
+            if trace:trace({'stage':'full_integrated_scan_source_failed','checkedAt':clock().isoformat(),'completed':len(cache.values),'sourceUrl':getattr(error,'url',None),'error':str(error)})
+            raise
         if trace:trace({'stage':'full_integrated_scan_progress','checkedAt':clock().isoformat(),'completed':min(i+60,len(urls)),'total':len(urls)})
         require(clock()-start<=dt.timedelta(minutes=5),'complete market scan exceeded five minutes; no publication')
     venues={};issues=[]
