@@ -2,8 +2,352 @@
   "requestId": "integrated-v3-final-1540-probe-20261116",
   "releaseAt": "2026-11-16T15:40:00+09:00",
   "published": false,
-  "state": "collecting",
+  "state": "collection_failed",
   "startedAt": "2026-11-16T15:33:37.968516+09:00",
   "deadlineAt": "2026-11-16T15:38:37.968516+09:00",
-  "progress": []
+  "progress": [
+    {
+      "stage": "integrated_source_queries",
+      "checkedAt": "2026-11-16T15:33:46.475739+09:00",
+      "evidencePath": "collection-artifacts/integrated-2026-11-16-1540.json",
+      "errors": {},
+      "markets": [
+        "KRX",
+        "NXT",
+        "NXT_OFFICIAL"
+      ]
+    },
+    {
+      "stage": "krx_ranking_candidates_expanded",
+      "checkedAt": "2026-11-16T15:33:49.335787+09:00",
+      "supplementalCodes": [
+        "002785",
+        "002787"
+      ]
+    },
+    {
+      "stage": "full_integrated_scan_started",
+      "checkedAt": "2026-11-16T15:33:49.342364+09:00",
+      "krxEligibleCount": 2667,
+      "nxtEligibleCount": 603,
+      "requestCount": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:33:55.751606+09:00",
+      "completed": 60,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:01.528360+09:00",
+      "completed": 120,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:07.453839+09:00",
+      "completed": 180,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:12.879507+09:00",
+      "completed": 240,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:18.458625+09:00",
+      "completed": 300,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:23.730935+09:00",
+      "completed": 360,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:29.022556+09:00",
+      "completed": 420,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:34.608544+09:00",
+      "completed": 480,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:39.899670+09:00",
+      "completed": 540,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:45.352774+09:00",
+      "completed": 600,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:50.637125+09:00",
+      "completed": 660,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:34:56.360951+09:00",
+      "completed": 720,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:02.115147+09:00",
+      "completed": 780,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:07.958748+09:00",
+      "completed": 840,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:13.536849+09:00",
+      "completed": 900,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:19.628049+09:00",
+      "completed": 960,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:25.486851+09:00",
+      "completed": 1020,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:30.731182+09:00",
+      "completed": 1080,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:36.135952+09:00",
+      "completed": 1140,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:41.544262+09:00",
+      "completed": 1200,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:47.013110+09:00",
+      "completed": 1260,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:52.318111+09:00",
+      "completed": 1320,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:35:58.288225+09:00",
+      "completed": 1380,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:04.708455+09:00",
+      "completed": 1440,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:10.431042+09:00",
+      "completed": 1500,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:16.660020+09:00",
+      "completed": 1560,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:21.899550+09:00",
+      "completed": 1620,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:27.374261+09:00",
+      "completed": 1680,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:32.609680+09:00",
+      "completed": 1740,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:37.857613+09:00",
+      "completed": 1800,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:43.264067+09:00",
+      "completed": 1860,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:48.516802+09:00",
+      "completed": 1920,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:53.778745+09:00",
+      "completed": 1980,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:36:59.176273+09:00",
+      "completed": 2040,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:37:05.427195+09:00",
+      "completed": 2100,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:37:10.643845+09:00",
+      "completed": 2160,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:37:16.121509+09:00",
+      "completed": 2220,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:37:22.189681+09:00",
+      "completed": 2280,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:37:28.072700+09:00",
+      "completed": 2340,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:37:33.510529+09:00",
+      "completed": 2400,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:37:39.070619+09:00",
+      "completed": 2460,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:37:44.663896+09:00",
+      "completed": 2520,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:37:49.930913+09:00",
+      "completed": 2580,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:37:55.212251+09:00",
+      "completed": 2640,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:38:00.482305+09:00",
+      "completed": 2700,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:38:06.141521+09:00",
+      "completed": 2760,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:38:12.062156+09:00",
+      "completed": 2820,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:38:17.336537+09:00",
+      "completed": 2880,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:38:22.764031+09:00",
+      "completed": 2940,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:38:28.632289+09:00",
+      "completed": 3000,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_progress",
+      "checkedAt": "2026-11-16T15:38:34.417769+09:00",
+      "completed": 3060,
+      "total": 3270
+    },
+    {
+      "stage": "full_integrated_scan_source_failed",
+      "checkedAt": "2026-11-16T15:38:38.288643+09:00",
+      "completed": 3082,
+      "sourceUrl": null,
+      "error": "absolute five-minute collection deadline exceeded; existing public data preserved"
+    }
+  ],
+  "lastStage": "full_integrated_scan_source_failed",
+  "errorType": "TimeoutError",
+  "error": "absolute five-minute collection deadline exceeded; existing public data preserved",
+  "completedAt": "2026-11-16T15:38:38.289192+09:00"
 }
