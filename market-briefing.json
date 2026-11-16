@@ -1,7 +1,542 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T21:13:21+09:00",
+  "updatedAt": "2026-11-17T06:49:03.140+09:00",
   "days": [
+    {
+      "date": "2026-11-17",
+      "isKrxTradingDay": true,
+      "sessions": [
+        {
+          "slot": "06:40",
+          "asOf": "2026-11-17T06:41:26.353+09:00",
+          "usThemes": [],
+          "usThemeStatus": "insufficient_data",
+          "foreignNews": [
+            {
+              "id": "20261117-0640-warsh-si-productivity-risks",
+              "title": "파월 후임 워시 연준 의장, AI 생산성 기대와 고용·금융 위험 시나리오 제시",
+              "summary": "케빈 워시 연준 의장은 AI가 아이디어 생성을 가속해 성장률을 높일 수 있지만, 자동화에 따른 실업 상승이나 투자수익 실망에 따른 주가 하락·경기둔화도 가능하다고 밝혔다. 이는 예측이 아니라 통화정책 준비를 위한 시나리오라고 명시했다.",
+              "publishedAt": "2026-11-17T02:00:00+09:00",
+              "sourceName": "미국 연방준비제도",
+              "sourceUrl": "https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "연준·AI 생산성",
+              "region": "foreign",
+              "eventKey": "fed-warsh-productivity-jobs-task-force-opening-20261116",
+              "eventAt": "2026-11-17T02:00:00+09:00",
+              "facts": [
+                {
+                  "factKey": "fed-warsh-si-scenarios-monetary-policy-20261116",
+                  "statement": "AI의 생산성 상방과 고용·금융 하방을 모두 시나리오로 검토하며 예측이 아니라고 명시",
+                  "sourceUrl": "https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm"
+                }
+              ]
+            },
+            {
+              "id": "20261117-0640-nvidia-board-huang-return-report",
+              "title": "Reuters “Nvidia 이사회, 젠슨 황 CEO 복귀 검토하지 않아”",
+              "summary": "Reuters는 사안에 정통한 세 명을 인용해 Nvidia 이사회가 젠슨 황의 CEO 복귀를 검토하지 않고 있다고 보도했다. 회사의 공식 발표가 아닌 익명 취재원 보도이며, 후임 CEO 선임과 관련 조사는 미결 상태다.",
+              "publishedAt": "2026-11-16T22:46:37+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/legal/transactional/silicon-valley-leaders-back-call-jensen-huangs-return-nvidia-2026-11-16/",
+              "relatedStocks": [
+                "Nvidia(NVDA)",
+                "TSMC(2330.TW)"
+              ],
+              "impactRank": 2,
+              "category": "AI 반도체·기업지배구조",
+              "region": "foreign",
+              "eventKey": "nvidia-board-huang-return-not-considered-report-20261116",
+              "eventAt": "2026-11-16T22:46:37+09:00",
+              "facts": [
+                {
+                  "factKey": "nvidia-board-not-considering-huang-return-reuters-20261116",
+                  "statement": "Reuters가 세 명의 취재원을 인용해 이사회가 황의 복귀를 검토하지 않는다고 보도; 회사 공식 확인은 아님",
+                  "sourceUrl": "https://www.reuters.com/legal/transactional/silicon-valley-leaders-back-call-jensen-huangs-return-nvidia-2026-11-16/"
+                }
+              ]
+            },
+            {
+              "id": "20261117-0640-tyson-fy2027-outlook",
+              "title": "Tyson Foods, 2027 회계연도 매출 3.5~5.5% 감소 전망",
+              "summary": "Tyson Foods는 2027 회계연도 매출이 전년보다 3.5~5.5% 감소하고 조정 영업이익은 17억~21억5천만달러가 될 것으로 전망했다. 닭고기 부문 조정 영업이익 전망은 13억~16억달러다.",
+              "publishedAt": "2026-11-16T21:35:00+09:00",
+              "sourceName": "Tyson Foods",
+              "sourceUrl": "https://www.tysonfoods.com/news/news-releases/2026/11/tyson-foods-reports-fourth-quarter-2026-results",
+              "relatedStocks": [
+                "Tyson Foods(TSN)"
+              ],
+              "impactRank": 3,
+              "category": "글로벌 기업실적·가이던스",
+              "region": "foreign",
+              "eventKey": "tyson-foods-fy2026-results-fy2027-guidance-20261116",
+              "eventAt": "2026-11-16T21:35:00+09:00",
+              "facts": [
+                {
+                  "factKey": "tyson-fy2027-sales-change-guidance-20261116",
+                  "minValue": -5.5,
+                  "maxValue": -3.5,
+                  "unit": "percent_yoy",
+                  "sourceUrl": "https://www.tysonfoods.com/news/news-releases/2026/11/tyson-foods-reports-fourth-quarter-2026-results"
+                },
+                {
+                  "factKey": "tyson-fy2027-adjusted-operating-income-guidance-20261116",
+                  "minValue": 1700000000,
+                  "maxValue": 2150000000,
+                  "unit": "USD",
+                  "sourceUrl": "https://www.tysonfoods.com/news/news-releases/2026/11/tyson-foods-reports-fourth-quarter-2026-results"
+                },
+                {
+                  "factKey": "tyson-fy2027-chicken-adjusted-operating-income-guidance-20261116",
+                  "minValue": 1300000000,
+                  "maxValue": 1600000000,
+                  "unit": "USD",
+                  "sourceUrl": "https://www.tysonfoods.com/news/news-releases/2026/11/tyson-foods-reports-fourth-quarter-2026-results"
+                }
+              ]
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "20261117-0640-curocell-ind-change-application",
+              "title": "큐로셀, 안발셀 거대 B세포 림프종 1·2상 IND 변경승인 신청",
+              "summary": "큐로셀은 CRC01(안발캅타젠오토류셀·안발셀)의 거대 B세포 림프종 제1·2상 임상시험계획 변경승인을 신청했다고 공시했다. 신청 사실이며 규제기관의 승인 완료를 뜻하지 않는다.",
+              "publishedAt": "2026-11-16T18:29:00+09:00",
+              "sourceName": "DART·한국거래소",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116902532",
+              "relatedStocks": [
+                "큐로셀(372320)"
+              ],
+              "impactRank": 1,
+              "category": "바이오·임상",
+              "region": "domestic",
+              "eventKey": "curocell-crc01-ind-change-application-20261116",
+              "eventAt": "2026-11-16T18:29:00+09:00",
+              "facts": [
+                {
+                  "factKey": "curocell-crc01-ind-change-application-filed-20261116",
+                  "statement": "안발셀 거대 B세포 림프종 제1·2상 IND 변경승인 신청; 승인 완료 아님",
+                  "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116902532"
+                }
+              ]
+            },
+            {
+              "id": "20261117-0640-shinhan13spac-trading-suspension",
+              "title": "신한제13호스팩, 상장폐지 사유 발생으로 주권매매 정지",
+              "summary": "한국거래소 코스닥시장본부는 상장폐지 사유 발생을 이유로 신한제13호스팩 주권매매거래를 정지했다고 공시했다.",
+              "publishedAt": "2026-11-16T20:01:00+09:00",
+              "sourceName": "DART·한국거래소",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116902611",
+              "relatedStocks": [
+                "신한제13호스팩"
+              ],
+              "impactRank": 2,
+              "category": "거래정지·상장폐지",
+              "region": "domestic",
+              "eventKey": "shinhan13spac-trading-suspension-delisting-cause-20261116",
+              "eventAt": "2026-11-16T20:01:00+09:00",
+              "facts": [
+                {
+                  "factKey": "shinhan13spac-trading-suspension-delisting-cause-20261116",
+                  "statement": "상장폐지 사유 발생에 따른 주권매매거래 정지",
+                  "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116902611"
+                }
+              ]
+            }
+          ],
+          "marketSnapshot": null,
+          "researchStatus": "partial",
+          "storageVerification": {
+            "status": "pending",
+            "checkedAt": null,
+            "remoteSha": null,
+            "commitSha": null,
+            "reason": "initial merge before GitHub write/readback"
+          },
+          "researchAudit": {
+            "window": {
+              "startExclusive": "2026-11-13T20:45:57.405+09:00",
+              "cutoffInclusive": "2026-11-17T06:41:26.353+09:00",
+              "baselineFile": "market-briefing.json",
+              "baselineSha": "732f121615b20ee78da4563c31c24afc9bc22b9b"
+            },
+            "krxTradingDayEvidence": {
+              "result": true,
+              "checkedAt": "2026-11-16T21:48:17.220Z",
+              "reason": "KRX 공식 2026 Market Closing(Holiday) 목록에 11월 17일이 없고 KRX Market Notice에서 특별 휴장 공지를 찾지 못함",
+              "sources": [
+                "https://global.krx.co.kr/contents/GLB/05/0501/0501110000/GLB0501110000.jsp",
+                "https://global.krx.co.kr/board/GLB0501020000/bbs",
+                "https://global.krx.co.kr/contents/GLB/06/0602/0602010201/GLB0602010201.jsp"
+              ]
+            },
+            "domains": {
+              "foreignNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-16T21:48:17.220Z",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "windowStartExclusive": "2026-11-15T19:41:44+09:00",
+                "windowEndInclusive": "2026-11-17T06:41:26.353+09:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "Reuters direct extraction",
+                    "reason": "선별 URL 6건 본문 추출 실패; 별도 Reuters 검색 결과와 공식 원문으로 일부 대체"
+                  }
+                ],
+                "alternativeSources": [
+                  "미국 연방준비제도 공식 연설",
+                  "Tyson Foods 공식 실적발표",
+                  "Reuters 상세 검색 본문",
+                  "BIS 공식 보도자료"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-15T19:41:44+09:00",
+                    "reason": "이전 회차 완료 수준 미확인 및 해외 일부 영역 최신 원문 검증 미완료",
+                    "endInclusive": "2026-11-16T00:17:50.739Z"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T00:17:50.739Z",
+                    "endInclusive": "2026-11-16T12:45:26.571+09:00",
+                    "reason": "국외 필수범위 일부 최신 원문·최초발표시각의 연속 전수 검증 미완료"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T12:45:26.571+09:00",
+                    "endInclusive": "2026-11-16T21:13:21+09:00",
+                    "reason": "해외 전체 필수 범위의 연속·전수 원문 검증 미완료; 확인된 2개 Reuters 보도만 채택"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T21:13:21+09:00",
+                    "endInclusive": "2026-11-17T06:41:26.353+09:00",
+                    "reason": "국외 필수범위의 연속 전수 원문 검증 미완료; Reuters 일부 원문 추출 실패와 분야별 공백 보존"
+                  }
+                ]
+              },
+              "domesticNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-16T21:48:17.220Z",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "windowStartExclusive": "2026-11-13T20:45:57.405+09:00",
+                "windowEndInclusive": "2026-11-17T06:41:26.353+09:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "DART 2026-11-16 전체공시 본문",
+                    "reason": "전체 2,299건·23페이지 중 목록 첫 페이지와 일부 공시만 검증; 모든 본문·정정 차이 미완료"
+                  },
+                  {
+                    "source": "KIND 전수목록",
+                    "reason": "검색으로 일부 항목만 확인해 전체 연속 검증 불가"
+                  }
+                ],
+                "alternativeSources": [
+                  "DART 최근공시 공식 목록",
+                  "금융위원회 공식 보도자료",
+                  "산업통상부·정책브리핑 공식 목록"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-13T20:45:57.405+09:00",
+                    "reason": "이전 DART 장애 구간과 현재 공시·정부 전체 본문 검증 미완료",
+                    "endInclusive": "2026-11-16T00:17:50.739Z"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T00:17:50.739Z",
+                    "endInclusive": "2026-11-16T12:45:26.571+09:00",
+                    "reason": "DART 당일 전체목록 직접 접근 실패 및 국내 전 공시·기관 원문의 연속 전수 검증 미완료"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T12:45:26.571+09:00",
+                    "endInclusive": "2026-11-16T21:13:21+09:00",
+                    "reason": "DART/KIND 및 국내 공식기관의 전수 원문 검증 미완료; 신규 채택 0건은 정상 0건 판정이 아님"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T21:13:21+09:00",
+                    "endInclusive": "2026-11-17T06:41:26.353+09:00",
+                    "reason": "11월 16일 DART 전체 2,299건의 날짜·건수와 첫 페이지는 확인했으나 23개 페이지 전체 본문·정정 전후 검증 미완료"
+                  }
+                ]
+              },
+              "usThemes": {
+                "status": "partial",
+                "attemptedAt": "2026-11-16T21:48:17.220Z",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "windowStartExclusive": "2026-11-16T09:30:00-05:00",
+                "windowEndInclusive": "2026-11-16T16:00:00-05:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "Barchart volume leaders",
+                    "reason": "Daily Volume 순위로 거래대금 순위가 아님"
+                  },
+                  {
+                    "source": "StockTitan dollar volume ranking",
+                    "reason": "2026-11-16 정규장 1~50위 전체 역사자료를 확보하지 못함"
+                  }
+                ],
+                "alternativeSources": [],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-16T09:30:00-05:00",
+                    "endInclusive": "2026-11-16T16:00:00-05:00",
+                    "reason": "Top50 실제 거래대금 전체·상품유형 검증 미완료"
+                  }
+                ]
+              }
+            },
+            "usThemeEvidence": {
+              "sessionDate": "2026-11-16",
+              "sessionTimezone": "America/New_York",
+              "sessionStart": "2026-11-16T09:30:00-05:00",
+              "sessionEnd": "2026-11-16T16:00:00-05:00",
+              "observedAt": "2026-11-16T21:48:17.220Z",
+              "collectedAt": "2026-11-16T21:48:17.220Z",
+              "sourceUrls": [
+                "https://www.barchart.com/stocks/most-active/daily-volume-leaders",
+                "https://www.stocktitan.net/rankings/stocks-by-dollar-volume.html"
+              ],
+              "dollarVolumeDefinition": {
+                "providerReported": false,
+                "session": "US regular session",
+                "currency": "USD",
+                "reason": "Barchart는 Daily Volume이고 StockTitan의 해당 세션 Top50 역사 자료는 확보하지 못해 provider-reported turnover로 인정하지 않음"
+              },
+              "completeness": {
+                "expectedRows": 50,
+                "verifiedRows": 0,
+                "rankCompleteness": false,
+                "sessionVerified": true,
+                "dollarVolumeDefinitionVerified": false,
+                "securityTypesVerified": false,
+                "sourceValuesVerified": false,
+                "arithmeticVerified": false
+              },
+              "universe": [],
+              "exclusions": [
+                {
+                  "sourceUrl": "https://www.barchart.com/stocks/most-active/daily-volume-leaders",
+                  "reason": "거래량 기준이며 거래대금 기준 불명확"
+                },
+                {
+                  "sourceUrl": "https://www.stocktitan.net/rankings/stocks-by-dollar-volume.html",
+                  "reason": "11월 16일 세션의 50개 전체 역사 스냅샷 미확보"
+                }
+              ],
+              "commonCatalysts": [],
+              "themeCalculations": [],
+              "reason": "top50_full_provider_turnover_unverified"
+            },
+            "candidates": [
+              {
+                "region": "foreign",
+                "eventKey": "fed-warsh-productivity-jobs-task-force-opening-20261116",
+                "factKeys": [
+                  "fed-warsh-si-scenarios-monetary-policy-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm"
+                ],
+                "sourcePublishedAt": "2026-11-17T02:00:00+09:00",
+                "eventAt": "2026-11-17T02:00:00+09:00",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "연준 공식 연설 원문과 발표시각 확인"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "nvidia-board-huang-return-not-considered-report-20261116",
+                "factKeys": [
+                  "nvidia-board-not-considering-huang-return-reuters-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/legal/transactional/silicon-valley-leaders-back-call-jensen-huangs-return-nvidia-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T22:46:37+09:00",
+                "eventAt": "2026-11-16T22:46:37+09:00",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "Reuters 취재원 보도로 한정하고 회사 공식결정으로 변환하지 않음"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "tyson-foods-fy2026-results-fy2027-guidance-20261116",
+                "factKeys": [
+                  "tyson-fy2027-sales-change-guidance-20261116",
+                  "tyson-fy2027-adjusted-operating-income-guidance-20261116",
+                  "tyson-fy2027-chicken-adjusted-operating-income-guidance-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.tysonfoods.com/news/news-releases/2026/11/tyson-foods-reports-fourth-quarter-2026-results"
+                ],
+                "sourcePublishedAt": "2026-11-16T21:35:00+09:00",
+                "eventAt": "2026-11-16T21:35:00+09:00",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "회사 공식 실적·가이던스 원문과 최초 배포시각 확인"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "curocell-crc01-ind-change-application-20261116",
+                "factKeys": [
+                  "curocell-crc01-ind-change-application-filed-20261116"
+                ],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116902532"
+                ],
+                "sourcePublishedAt": "2026-11-16T18:29:00+09:00",
+                "eventAt": "2026-11-16T18:29:00+09:00",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "DART 당일 전체목록에서 실제 신청 공시 확인; 승인과 구분"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "shinhan13spac-trading-suspension-delisting-cause-20261116",
+                "factKeys": [
+                  "shinhan13spac-trading-suspension-delisting-cause-20261116"
+                ],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116902611"
+                ],
+                "sourcePublishedAt": "2026-11-16T20:01:00+09:00",
+                "eventAt": "2026-11-16T20:01:00+09:00",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "한국거래소 소관 DART 공시에서 거래정지 사유 확인"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "oil-market-hormuz-flow-price-reaction-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/business/energy/oil-prices-fall-expectations-coming-supply-surplus-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": false,
+                "previousMatch": "기발행 IEA·호르무즈 사건",
+                "decision": "duplicate",
+                "reason": "기존 공급·해협 사건에 대한 가격 반응 중심이며 최초발표시각도 현재 창에서 확정하지 못함"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "gold-one-year-low-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/world/india/gold-edges-higher-investors-await-warsh-remarks-rate-signals-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": false,
+                "previousMatch": "기발행 연준 인플레이션 우려",
+                "decision": "other_excluded",
+                "reason": "가격 움직임과 기존 금리 재료의 시장반응으로 신규 사건 아님"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "bis-remote-access-ai-chip-rule-20261115",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology"
+                ],
+                "sourcePublishedAt": "2026-11-15",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "공식 원문은 확인했으나 최초 발표시각이 날짜 단위뿐이라 조사창 신규성을 확정하지 않음"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "doosan-enerbility-contract-correction-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116802608"
+                ],
+                "sourcePublishedAt": "2026-11-16T19:55:00+09:00",
+                "eventAt": "2026-11-16T19:55:00+09:00",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "정정공시 존재는 확인했으나 정정 전후 핵심 수치와 새 사실을 본문에서 검증하지 못함"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "jr-global-reit-review-opinion-or-capital-impairment-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116802560"
+                ],
+                "sourcePublishedAt": "2026-11-16T18:09:00+09:00",
+                "eventAt": "2026-11-16T18:09:00+09:00",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "목록 제목만으로 부적정·의견거절·완전자본잠식 중 실제 해당 사유를 확정할 수 없어 제외"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "fsc-governance-card-repost-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.fsc.go.kr/no010101/88125"
+                ],
+                "sourcePublishedAt": "2026-11-12T22:44:41+09:00",
+                "eventAt": "2026-11-12T22:44:41+09:00",
+                "checkedAt": "2026-11-16T21:48:17.220Z",
+                "newFact": false,
+                "previousMatch": "2026-11-12 공식 개선방안",
+                "decision": "duplicate",
+                "reason": "11월 16일 카드뉴스는 11월 12일 발표한 기존 개선방안 재게시"
+              }
+            ],
+            "coverage": {
+              "foreignReviewed": 17,
+              "domesticReviewed": 12,
+              "selected": {
+                "foreign": 3,
+                "domestic": 2
+              },
+              "duplicateExcluded": 3,
+              "unverifiedExcluded": 3,
+              "otherExcluded": 2
+            },
+            "helperValidation": {
+              "status": "equivalent_manual_checks",
+              "protocolSha": "21152677bcb60a8a7c29741acd8587d7eedd66fe",
+              "scriptSha": "08b50b74dd65ee6850f2fa197ddf5e1e0c4ba78f",
+              "reason": "로컬 실행 환경 미배정으로 Python helper 미실행; 동일한 schema/FIFO/slot/timestamp/rank/HTTPS/event-fact dedupe/domain-window/pending 보존 검사를 직접 수행",
+              "checks": [
+                "schemaVersion1",
+                "required arrays",
+                "foreign/domestic <=10 and independent ranks",
+                "themes <=3 and 06:40 only",
+                "asOf KST date",
+                "publishedAt <= asOf",
+                "incoming event/fact uniqueness",
+                "D~D-3 FIFO",
+                "researchState pending windows preserved",
+                "US theme evidence insufficient_data consistency"
+              ]
+            }
+          }
+        }
+      ]
+    },
     {
       "date": "2026-11-16",
       "isKrxTradingDay": true,
@@ -2879,9 +3414,14 @@
           "startExclusive": "2026-11-16T12:45:26.571+09:00",
           "endInclusive": "2026-11-16T21:13:21+09:00",
           "reason": "해외 전체 필수 범위의 연속·전수 원문 검증 미완료; 확인된 2개 Reuters 보도만 채택"
+        },
+        {
+          "startExclusive": "2026-11-16T21:13:21+09:00",
+          "endInclusive": "2026-11-17T06:41:26.353+09:00",
+          "reason": "국외 필수범위의 연속 전수 원문 검증 미완료; Reuters 일부 원문 추출 실패와 분야별 공백 보존"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-16T21:13:21+09:00"
+      "lastAttemptedCutoff": "2026-11-17T06:41:26.353+09:00"
     },
     "domesticNews": {
       "status": "partial",
@@ -2901,9 +3441,14 @@
           "startExclusive": "2026-11-16T12:45:26.571+09:00",
           "endInclusive": "2026-11-16T21:13:21+09:00",
           "reason": "DART/KIND 및 국내 공식기관의 전수 원문 검증 미완료; 신규 채택 0건은 정상 0건 판정이 아님"
+        },
+        {
+          "startExclusive": "2026-11-16T21:13:21+09:00",
+          "endInclusive": "2026-11-17T06:41:26.353+09:00",
+          "reason": "11월 16일 DART 전체 2,299건의 날짜·건수와 첫 페이지는 확인했으나 23개 페이지 전체 본문·정정 전후 검증 미완료"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-16T21:13:21+09:00"
+      "lastAttemptedCutoff": "2026-11-17T06:41:26.353+09:00"
     },
     "usThemes": {
       "status": "partial",
@@ -2915,6 +3460,39 @@
           "slot": "06:40",
           "sessionDate": "2026-11-13",
           "reason": "기존 06:40 Top50 전체 검증 실패; 08:40 테마 배열에 복사하지 않음"
+        },
+        {
+          "date": "2026-11-17",
+          "slot": "06:40",
+          "sessionDate": "2026-11-16",
+          "reason": "정규장 실제 거래대금 기준 개별기업 보통주·ADR 1~50위 전체와 상품유형을 검증하지 못함"
+        }
+      ]
+    },
+    "sessionAudit": {
+      "checkedAt": "2026-11-16T21:48:17.220Z",
+      "missingSessions": [
+        {
+          "date": "2026-11-14",
+          "slot": "06:40",
+          "reason": "비거래일 도래 정규슬롯이 원격 JSON에 없음; 날짜 변경 후이므로 소급 session 생성 금지"
+        },
+        {
+          "date": "2026-11-14",
+          "slot": "19:40",
+          "reason": "비거래일 도래 정규슬롯이 원격 JSON에 없음; 날짜 변경 후이므로 소급 session 생성 금지"
+        },
+        {
+          "date": "2026-11-15",
+          "slot": "06:40",
+          "reason": "비거래일 도래 정규슬롯이 원격 JSON에 없음; 날짜 변경 후이므로 소급 session 생성 금지"
+        }
+      ],
+      "confirmedExisting": [
+        {
+          "date": "2026-11-16",
+          "slot": "19:40",
+          "asOf": "2026-11-16T21:13:21+09:00"
         }
       ]
     }
