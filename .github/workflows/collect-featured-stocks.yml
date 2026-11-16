@@ -1,33 +1,17 @@
-name: Collect featured stocks on server
+# Retired on 2026-11-16: featured-stock collection moved to the existing
+# ChatGPT automation. Keep this stub for rollback/audit; no scheduled or
+# push-triggered collection and no GitHub writes.
+name: "[Retired] Collect featured stocks on server"
 on:
-  push:
-    branches: [main]
-    paths: ['requests/featured-collection.json']
   workflow_dispatch:
 permissions:
-  contents: write
-concurrency:
-  group: featured-collection
-  cancel-in-progress: false
+  contents: read
 jobs:
-  collect:
-    if: github.repository == 'KBYOO0815/market-flow-feed'
+  retired:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event_name == 'push' && github.sha || 'main' }}
-      - name: Test collection safeguards
-        run: python3 -m unittest discover -s scripts -p 'test_featured_v3.py'
-      - name: Collect and record status without publishing
-        env:
-          PUBLISH_TOKEN: ${{ github.token }}
-        run: python3 scripts/collection_worker.py
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: featured-collection-evidence-${{ github.run_id }}-${{ github.run_attempt }}
-          path: collection-artifacts/
-          if-no-files-found: warn
-          retention-days: 7
+      - name: Explain migration
+        run: |
+          echo "Legacy server-based featured-stock collection is disabled."
+          echo "Owner: ChatGPT Automation_19be7cd0af808191aecbcc421c15a01c."
+          echo "Do not publish or write featured-stocks JSON from this workflow."
