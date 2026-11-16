@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event_name == 'push' && github.sha || 'main' }}
       - name: Test collection safeguards
         run: python3 -m unittest discover -s scripts -p 'test_featured_v3.py'
       - name: Collect and record status without publishing

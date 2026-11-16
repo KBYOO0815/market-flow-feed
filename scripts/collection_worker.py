@@ -5,6 +5,7 @@ import os
 import pathlib
 import re
 import copy
+import signal
 from featured_stocks import KST, collect, get, get_nxt_eligibility, list_url, stamp
 from publish_feed import api
 from source_http import CollectionFetch
@@ -72,6 +73,7 @@ def run(request):
         else:
             def progress(event):
                 status['progress'].append(event)
+                print(json.dumps(event,ensure_ascii=False),flush=True)
                 status['lastStage'] = event['stage']
                 # Keep local evidence even if a later source or repository write fails.
                 write_artifact(ident, status)
@@ -94,4 +96,9 @@ def run(request):
 
 if __name__=='__main__':
     if os.environ.get('GITHUB_REPOSITORY')!='KBYOO0815/market-flow-feed':raise SystemExit('public data repo only')
-    run(json.loads(pathlib.Path('requests/featured-collection.json').read_text()))
+    def deadline_expired(signum,frame):
+        raise TimeoutError('absolute five-minute collection deadline exceeded; existing public data preserved')
+    signal.signal(signal.SIGALRM,deadline_expired)
+    signal.alarm(300)
+    try:run(json.loads(pathlib.Path('requests/featured-collection.json').read_text()))
+    finally:signal.alarm(0)
