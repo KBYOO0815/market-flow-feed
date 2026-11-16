@@ -1,3 +1,5 @@
+# Legacy historical schema1/2 analysis only. Schema3 uses featured_v3.enrich,
+# every >=4% selection, no strong-theme gate and no final rank report.
 """Evidence-gated breadth/money/catalyst ranking; percentages are percentage points.
 
 Version 2 starts at 2026-11-13 15:40 KST. Version 3 starts at 20:10:

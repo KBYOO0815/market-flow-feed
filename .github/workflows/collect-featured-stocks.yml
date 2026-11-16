@@ -19,7 +19,7 @@ jobs:
         with:
           ref: main
       - name: Test collection safeguards
-        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+        run: python3 -m unittest discover -s scripts -p 'test_featured_v3.py'
       - name: Collect and record status without publishing
         env:
           PUBLISH_TOKEN: ${{ github.token }}

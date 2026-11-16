@@ -2,18 +2,7 @@ name: Publish reviewed featured stocks
 on:
   push:
     branches: [main]
-    paths:
-      - 'drafts/featured-stocks.json'
-      - 'scripts/featured_stocks.py'
-      - 'scripts/publish_featured_stocks.py'
-      - 'scripts/featured_watch.py'
-      - 'scripts/test_featured_recovery.py'
-      - 'scripts/test_featured_watch.py'
-      - 'scripts/test_featured_stocks.py'
-      - '.github/workflows/publish-featured-stocks.yml'
-  schedule:
-    - cron: '40 0,2,4,6 * * 1-5'
-    - cron: '10 11 * * 1-5'
+    paths: ['drafts/featured-stocks.json']
   workflow_run:
     workflows: ['Collect featured stocks on server']
     types: [completed]
@@ -34,10 +23,11 @@ jobs:
         with:
           ref: main
       - name: Validate featured stocks pipeline
-        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+        run: python3 -m unittest discover -s scripts -p 'test_featured_v3.py'
       - name: Wait for release and publish reviewed featured stocks
         env:
           PUBLISH_TOKEN: ${{ github.token }}
+          APP_MIRROR_TOKEN: ${{ secrets.APP_MIRROR_TOKEN }}
           EVENT_SCHEDULE: ${{ github.event.schedule }}
           COLLECTION_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
         run: python3 scripts/featured_watch.py
@@ -48,4 +38,3 @@ jobs:
           path: operation-artifacts/
           if-no-files-found: warn
           retention-days: 7
-

@@ -18,7 +18,7 @@ def feed_prefix(payload):
 
 
 def release_prefix(release):
-    return 'featured-stocks-v2' if hundred_edition(release) else 'featured-stocks'
+    return 'featured-stocks'
 
 
 def regular_close_observation(observed, release):

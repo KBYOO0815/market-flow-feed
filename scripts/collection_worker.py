@@ -37,6 +37,13 @@ def run(request):
     status={'requestId':ident,'releaseAt':request.get('releaseAt'),'published':False,'state':'collecting',
             'startedAt':started.isoformat(),'deadlineAt':(started+dt.timedelta(minutes=5)).isoformat()}
     status['progress'] = []
+    trading = request.get('evidence', {}).get('tradingDayEvidence', {})
+    if trading.get('verified') is True and trading.get('isTradingDay') is False and trading.get('date') == stamp(request['releaseAt']).date().isoformat():
+        from featured_v3 import https
+        if not https(trading.get('sourceUrl')) or not trading.get('facts'):
+            raise ValueError('holiday skip needs verified calendar source and facts')
+        status.update(state='skipped_non_trading_day', completedAt=started.isoformat())
+        save({path:status});write_artifact(ident,status);return status
     save({path:copy.deepcopy(status)})
     try:
         entries={}
@@ -53,6 +60,7 @@ def run(request):
             for url in urls:
                 quote=cache(url)
                 if not quote.get('tradeTime'):raise ValueError('detail observation missing')
+            pathlib.Path('collection-artifacts/'+ident+'-raw.json').write_text(json.dumps({'queriedAt':dt.datetime.now(KST).isoformat(),'rankings':ranks,'nxtOfficial':official},ensure_ascii=False,indent=2)+'\n')
             status['probeDetailRequests']=len(set(urls))
             status['probeDetailSucceeded']=len(cache.values)
             status.update(state='probe_passed',scope='network_connectivity_and_load_only',freshnessValidated=False,rankingRows={m:len(v) for m,v in ranks.items()},officialRows=len(official['brdinfoTimeList']),officialObservedAt=official.get('setTime'))

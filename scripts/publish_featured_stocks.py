@@ -6,7 +6,8 @@ import re
 import time
 import urllib.error
 from featured_stocks import KST, archive, retained_dates, stamp, validate
-from publish_feed import REPO, api, output, read_remote
+from publish_feed import REPO, api, output
+from featured_remote import read_remote
 import json
 from featured_scope import feed_prefix
 
@@ -34,6 +35,10 @@ def publication_entries(payload, day, dates):
 
 
 def publish(payload):
+    if payload.get("schemaVersion") == 3:
+        from publish_featured_v3 import publish as publish_v3
+        return publish_v3(payload, api, read_remote)
+    raise ValueError("Legacy featured publication disabled; existing public data preserved")
     prefix = feed_prefix(payload)
     for attempt in range(3):
         head = api('GET', 'git/ref/heads/main')['object']['sha']
@@ -105,4 +110,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

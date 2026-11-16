@@ -104,9 +104,8 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
     A missing NXT detail is NOT evidence for zero. Only independently verified
     zero-NXT records supplied by the researcher can establish that value.
     """
-    if hundred_edition(release):
-        from featured_krx import collect_krx
-        return collect_krx(release, evidence, fetch, now=now, trace=trace, probe=probe)
+    from featured_integrated import collect_integrated
+    return collect_integrated(release, evidence, fetch, now=now, trace=trace, probe=probe, eligibility_fetch=eligibility_fetch)
     started = now or dt.datetime.now(KST)
     target = stamp(release)
     if target.strftime('%H:%M') not in SLOTS or target.weekday() >= 5:
@@ -289,6 +288,9 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
 
 
 def enrich(snapshot, review):
+    if snapshot.get("schemaVersion") == 3:
+        from featured_v3 import enrich as enrich_v3
+        return enrich_v3(snapshot, review)
     result = dict(snapshot)
     by_code = {s['code']: s for s in snapshot['stocks']}
     used, themes = set(), []
@@ -312,6 +314,9 @@ def enrich(snapshot, review):
 
 
 def validate(p):
+    if p.get("schemaVersion") == 3:
+        from featured_v3 import validate as validate_v3
+        return validate_v3(p)
     if p.get('probeOnly') is True:
         raise ValueError('collection probe is not publishable')
     release, as_of = stamp(p['releaseAt']), stamp(p['asOf'])
@@ -441,7 +446,7 @@ def archive(payload, previous=None):
         raise ValueError('archive date mismatch')
     editions = dict((previous or {}).get('editions', {}))
     editions[slot] = payload
-    return {'date': date, 'editions': dict(sorted(editions.items()))}
+    return {'date': date, 'editions': dict(sorted(editions.items(), reverse=True))}
 
 
 def retained_dates(dates, today, days):
@@ -480,4 +485,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

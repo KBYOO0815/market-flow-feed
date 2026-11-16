@@ -1,64 +1,35 @@
-# 특징주 데이터 운영 정책
+# Market Flow 특징주 계약 v3
 
-## 현재 적용 정책: 2026-11-13 20:10 KST부터
+예약은 기존 ChatGPT `Automation_19be7cd0af808191aecbcc421c15a01c` 하나를 유지한다. KST 09:40/11:40/13:40/15:40/20:10, 공식 확인된 KRX 거래일에만 실행한다. 서버에는 별도 cron을 두지 않는다. scheduled_for의 원래 releaseAt, 실제 asOf/observedAt/retrievedAt/reviewedAt/publishedAt은 구분한다. 지연 시 과거 시세를 만들지 않는다. 뉴스 브리핑은 변경하지 않는다.
 
-이 절과 FEATURED_THEME_PROMPT.md가 아래 과거 정책의 상위50·통합금액·최대3개 제한을 대체한다. **KRX 거래대금 상위100종목 안에서 강한 테마를 개수 제한 없이 전부 선정**한다. NXT 미합산이며 NXT 미조회 금액을 0원으로 채우지 않는다. 입력 밖 종목 금지, 실제 사업·동일 재료 검증, 하락·보합 구성원 포함, 개별 이벤트 분리, 상승 이유 미확인 문구, 복합 강도 순위는 유지한다. 부분·선별·개별 강세는 강한 테마와 구분해 평가 기록에 보존한다. 실제 선정된 테마 전체를 결론 표와 마지막 순위에 표시한다.
+## 정량 계약
 
-서버 schemaVersion=2/universeSize=100/turnoverBasis=KRX/themeSelectionVersion=3. 수집은 featured_krx.py, 금액·회차 분기는 featured_scope.py, 선별은 featured_strength.py, 검증은 featured_stocks.py를 함께 사용한다. 새 공개본은 featured-stocks-v2.json 및 featured-stocks-v2/ 날짜별·목록·latest.md, 초안은 기존 drafts/featured-stocks.json이다. 100종목을 기존 50종목용 공개 경로에 쓰지 않는다. 진행 중인 15:40 회차와 이전 자료는 소급 변경하지 않는다. 09:40/11:40/13:40/15:40/20:10 예약과 보존 기간은 유지한다. 설치된 APK00.13은 새 피드를 읽지 못하므로 앱 업데이트가 필요하다.
+schemaVersion=3, turnoverBasis=KRX_NXT, universeSize=100, amountUnit=KRW, rateBasis=KRX_PREVIOUS_CLOSE. KOSPI/KOSDAQ 개별기업 COMMON/PREFERRED만 허용한다. ETF/ETN/SPAC/REIT/FUND/BOND/기타는 제외한다. 종목 유형은 classificationVerified와 HTTPS classificationSourceUrl로 확인하며 Naver type=ST만으로 확정하지 않는다.
 
-## 아래는 20:10 이전 회차의 과거 정책
+전체 security master, 전체 KRX venue-only 금액, 공식 전체 NXT 거래대상과 각 종목의 venue-only 금액을 같은 거래일로 대조한다. 잘린 두 Top100 목록만으로 순위를 확정하지 않는다. 현재 구현은 더 엄격한 full_universe 증명을 사용한다. nxtEligibleCodes 전체에 실제 NXT quote가 있어야 한다. 공식 거래대상 미포함인 경우에만 증빙을 남기고 0을 허용한다. 미조회/404/장애는 0이 아니다.
 
+stocks는 통합금액 내림차순/동률 코드순 정확히100종목이다. rankingProof.allMarketRows에는 재계산 가능한 전체 적격 후보, 각 거래소의 원자료와 완전성 근거를 남긴다. 통합금액=krxTradeAmount+nxtTradeAmount. 가격, KRX 전일 정규 종가 및 출처로 changeRate를 재계산한다. 신규상장 공식 기준가는 별도 comparison으로 근거를 명시하며 유효 비교가 불가능하면 비교불가로 표시한다.
 
-## 시간표와 보관
-- KOSPI 실제 거래일에만 KST 검색→발행: 09:30→09:40, 11:30→11:40, 13:30→13:40, 15:30→15:40, 20:00→20:10. 휴장 또는 거래일 확인 불가는 수집·발행하지 않는다.
-- 회차는 scheduled_for로 고정한다. 발행 목표 30분 이후는 놓친 회차로 보고하며 다른 회차로 재표기하지 않는다. 늦은 실행도 실제 수집·검증 시각을 기록한다. 검색 예정 몇 분 전 시작된 작업도 해당 회차를 바로 준비한다.
-- 서버 featured-stocks/YYYY-MM-DD.json은 발행일 D~D-2, 3개 **달력 날짜**를 보관한다. 검증된 발행 커밋에서만 D-3 이전 날짜 파일을 삭제한다.
-- 앱 목록 featured-stocks/index.json은 D~D-1만 제공한다. 앱은 목록이 오래됐더라도 **현재 KST 달력 날짜 기준** D~D-1만 표시한다. 주말·휴일에 마지막 거래일을 D로 재해석하지 않는다.
-- 특징주와 브리핑은 별도 데이터·회차다. 기존 브리핑 파일·시간표·보관 규칙에 영향을 주지 않는다.
+20:10은 KRX REGULAR_CLOSE와 closeConfirmed, NXT NXT_FINAL과 closeConfirmed를 요구한다. 장후 시세를 KRX 종가로 바꾸지 않는다. 각 금액은 시장별 turnoverScope와 tradeDate, sourceUrl, observedAt, retrievedAt을 갖는다.
 
-## 시세 수집과 순위
-- 기본 소스는 네이버 증권. 종목코드 기준 KRX 누적 거래대금 + NXT 누적 거래대금(KRW)을 합산해 상위 50개를 선정한다. ETF·ETN은 제외하며 네이버 주식 유형 ST를 사용한다. 우선주를 포함한다. 그 밖의 종목 범위 변경은 별도 결정한다.
-- 동일한 50개 종목에서 거래대금 순위와 등락률 순위를 각각 생성한다. 상승률 상위 50개를 전체 시장에서 따로 가져오지 않는다. 하락 종목도 상위 50에 들면 보존한다.
-- 등락률은 **KRX 전일 종가 대비 KRX 등락률**. 특히 20:10 회차에도 이 기준을 유지한다. NXT 현재 등락률과 혼합하지 않는다. 거래대금은 두 시장 누적 합산이므로 KRX 종가 이후에도 바뀔 수 있다.
-- 수집 시작·종료, 각 소스 조회시각, 시장별 실제 체결 관측시각을 구별해 기록한다. 서로 다른 시장의 체결이 동시에 있었다고 표현하지 않는다. 수집 전체 시차 5분을 넘으면 재수집한다. 해당일 KRX 종가가 확인된 후에는 그 종가 관측을 역사적 정규장 수치로 보존할 수 있다.
-- 네이버 비공식 웹 데이터 경로는 변경/차단될 수 있다. 응답 형태·전체 시장 범위·관측일을 검사한다. 네이버 NXT 상위 목록이 100개로 제한되므로 누락 종목의 가능한 거래대금 상한과 50위 경계를 계산하고 후보별 NXT 상세를 추가 조회한다.
-- NXT 404/누락은 0이 아니다. 합산 50위에 영향을 줄 수 있는 미확인 종목이 있으면 발행을 차단한다. NXT 비거래/당일 거래대금 0은 해당 종목·날짜의 공식 목록이나 명시적 원문 근거를 별도 기록할 때만 0으로 인정한다. 기존 근거를 자동 이월하지 않는다.
-- 일치하지 않는 순위·누락·오래된 시세를 임의 수치나 이전 회차로 채우지 않는다. 실패 시 공개본을 유지하고 원래 기준시각을 바꾸지 않는다.
+selectedStockCodes는 비교 가능한 changeRate>=4.00 전체이며 누락/추가 금지. 이 종목들만 themes 또는 individualStocks에 정확히 한 번 배정한다. 테마는 최소2종목, 개수 상한 없음, industry 또는 shared_catalyst 근거를 갖는다. 서로 다른 원인을 공통 재료로 단정하지 않는다. 테마 가중값은 포함된 +4% 이상 종목들만의 통합금액 가중평균이며 전체 산업 지수가 아니다. 테마는 가중상승률순, 개별은 상승률순. 하락 대표주 관측이 있으면 부분 강세라고 설명한다.
 
-## 테마와 상승 이유
-- 상위 50종목을 객관적으로 확인된 사업·제품·계약 관계로 테마에 배정한다. 대표 테마 1개에만 배정하며 종목별 관계의 HTTPS 근거와 사실을 기록한다. 확인 불가는 unclassified에 남긴다.
-- 테마 등락률 = Σ(종목 등락률 × 종목 통합거래대금) / Σ(종목 통합거래대금). **상위 50에 포함된 해당 테마 구성원만** 계산한다. 시장 전체 테마지수라고 표현하지 않는다.
-- 반올림 전 계산 후 소수 여섯 자리로 저장한다. 테마는 가중평균 등락률 내림차순, 동률은 거래대금 내림차순·테마 ID 순. 테마 안의 종목은 등락률 내림차순, 동률은 거래대금·종목코드 순.
-- 테마별 당일 뉴스·공시·정책을 각각 검색하고 실제 원문 발표시각과 사실을 확인한다. reason에는 짧은 사실 요약, sourceUrl, publishedAt, checkedAt, causality를 기록한다. source_attributed는 출처에서 상승 원인을 명시한 경우, related_fact_only는 단순 관련 발표이며 직접 원인으로 단정하지 않는다.
-- 원문 확인이 안 되거나 근거가 없으면 reason=null. 앱에는 '상승 이유 확인 안 됨'으로 표시한다. 전망·추정·루머·투자판단·기사 전문을 넣지 않는다.
-- 같은 테마가 계속 존재할 수 있다. 회차마다 구성원·시세·새 소식을 실제로 재확인한다. 옛 기사·상승률을 시각만 바꿔 사용하지 않는다.
+## 이유 검증
 
-## 실행과 공개
-1. 매 회차 양쪽 저장소의 이 정책을 읽는다. KRX 거래일을 확인하고 evidence JSON에 date, tradingDayVerified, calendarSourceUrl을 실제 근거로 작성한다. 필요시 zeroNxt=[{code,sourceUrl,checkedAt,reason}]를 추가한다.
-2. `python3 scripts/featured_stocks.py collect --release-at <원래 회차 ISO시각> --evidence <evidence.json> --output <snapshot.json>`으로 실제 네이버 수치를 수집한다. 환경에 파일이 없으면 GitHub 최신 소스를 읽어 사용한다. 시세 수집 실패를 검색 요약 수치로 대신하지 않는다.
-3. 각 테마·종목의 사업 관계와 당일 상승 관련 원문을 조사한다. review JSON은 reviewedAt과 themes 배열. 테마마다 id,name,stockCodes,membershipEvidence:[{code,sourceUrl,fact}],reason:null 또는 위 근거 객체를 사용한다. 검증 못한 테마로 수를 채우지 않는다.
-4. `python3 scripts/featured_stocks.py stage <snapshot.json> <review.json> <draft.json>` 검증 후 동일 JSON을 비공개 data/drafts/featured-stocks.json과 공개 drafts/featured-stocks.json에 현재 SHA로 저장한다. 두 파일을 다시 읽어 일치를 확인한다. 연구 작업은 공개 루트를 직접 쓰지 않는다.
-5. 공개 Publish reviewed featured stocks 워크플로가 발행시각까지 기다리고 재검증 후 featured-stocks.json, 날짜별 파일, 앱 목록을 원자적으로 게시한다. Github 예약은 지연될 수 있으며 발행 목표가 실제 발행 성공을 보장하지 않는다.
-6. 워크플로 성공과 공개 루트·날짜별 회차의 releaseAt/asOf 일치를 확인해야 발행 성공이다. 그 전에는 초안 준비·발행 대기로 보고한다. 검증된 실제 공개본은 비공개 data/featured-stocks.json에 미러링한다. 권한 오류는 저장소와 오류를 보고한다. 비공개 소스 저장소를 공개 전환하지 않는다.
-7. 앱 데이터 어댑터는 D~D-1 제한을 적용한다. 화면 연결·APK 빌드는 별도 배포 단계이며 서버 준비만으로 설치 앱이 바뀌었다고 보고하지 않는다.
+reason=null이면 앱에 `당일 상승 이유 확인 안 됨`을 표시한다. 확인한 이유에는 summary, HTTPS sourceUrl, 최초 publishedAt, 실제 checkedAt, facts, verificationStatus=confirmed, causality(source_attributed/related_fact_only)를 기록한다. 당일 최초 사실과 실제 관측 cutoff 이전 여부를 검증한다. 숫자를 추정하지 않는다. 투자판단/목표주가/루머 제외. 별도 최종 테마 판정/마지막 순위 요약 금지.
 
+## 공개·보관·전환
 
-## NXT 비거래 종목의 공식 확인 보완
-- 네이버 NXT 상세가 404이고 합산 상위 50위 판정에 영향을 주는 종목은 넥스트레이드 공식 `시장정보 → 거래대상종목` 전체 목록과 추가 대조한다. 404만으로는 계속 0 처리하지 않는다.
-- 공식 목록의 전체 건수·페이지 완결성·고유 종목코드·당일 aggDd/nowDd·실제 관측시각(조회시각 전 30분 이내)을 모두 검증한다. 네이버에서 실제 NXT 거래가 확인된 종목이 공식 목록에 없으면 상충으로 차단한다.
-- 이 검증을 통과한 전체 공식 거래대상 목록에 미포함된 종목만 NXT 비거래로 확인하여 0을 인정한다. zeroNxtEvidence에 종목코드, 공식 페이지, 실제 POST 조회 경로·파라미터, checkedAt, 목록 관측시각·전체 건수·판정 사유를 남긴다. 다음 회차에는 다시 조회한다.
-- 공식 목록이 오래됐거나 불완전하거나 해당 종목이 거래대상인데 상세 시세가 누락됐으면 발행을 계속 차단한다.
+운영 root `featured-stocks.json`, 날짜별 `featured-stocks/YYYY-MM-DD.json`, index `featured-stocks/index.json`, private mirror `data/featured-stocks.json` 유지. v3 root는 최신 회차 필드와 days(날짜별 editions)를 함께 보관한다. D..D-3 달력4일, 각 날짜 최대5슬롯, 최신순. 동일 회차 최신 검증자료로 교체하며 다른 회차 보존. 휴일/미발행에 가짜 회차 생성 금지.
 
-## 서버 수집 실행 경로 (2026-11-12 개선)
-- 시세는 ChatGPT 실행 환경에서 직접 대량 조회하지 않고 공개 저장소의 `Collect featured stocks on server` GitHub Actions에서 수집한다. 연구 작업은 거래일 근거를 확인한 후 `requests/featured-collection.json`을 갱신한다.
-- 요청 형식: `{requestId:고유한 영문숫자/하이픈 ID, mode:"collect", releaseAt:원래 회차 ISO시각, evidence:{date:KST날짜,tradingDayVerified:true,calendarSourceUrl:실제 근거 URL}}`.
-- 결과 상태는 `operations/collections/<requestId>.json`, 검증 전 수집본은 상태의 snapshotPath에 저장한다. collecting/collected/collection_failed를 구분하고 실제 시작·종료·오류·기한을 기록한다. deadlineAt이 지났는데 collecting이면 정지/지연 상태로 판단한다.
-- collected는 발행 성공이 아니다. 연구 작업은 수집본으로 테마·원문 검증을 수행하고 기존 stage 검증을 통과한 초안만 게시한다. 미분류나 reason=null을 근거 없이 채우지 않는다. 공개 root를 직접 쓰지 않는다.
-- 원천 조회는 최대 6개 동시 처리, 회차 내 중복 제거, 10초 연결 제한을 사용한다. 일시적 429/500/502/503/504 및 네트워크 오류는 최대 3회 시도한다. 403/404를 재시도·우회하지 않는다. 5분 전체 수집 시차와 NXT 미확인 차단은 그대로 유지한다.
-- mode=probe는 원천 연결 점검 전용이다. 과거 회차·현재 회차를 발행하지 않으며 published=false 상태를 유지한다.
+동일 HEAD로 전체 읽기→병합→Git tree/commit 원자 갱신(non-force)→충돌시 최신 HEAD 재조회 최대5회→해당 commit root/일별/index/FIFO 삭제 재조회. 첫 v3 전환 시 기존 root blob을 backups/featured-stocks/pre-v3-<blob>.json에 보존한다. 구형 v1/v2는 앱에서 과거자료로 읽되 서버 재발행은 금지한다. 구 APK는 v3를 거절하므로 새 APK 설치가 필요하다. 새 검증 전 기존 정상 root를 교체하지 않는다.
 
-- stage를 로컬에서 실행할 경우 `scripts/featured_stocks.py`와 의존 파일 `scripts/source_http.py`를 함께 최신으로 받아 사용한다.
+공개 성공과 private 미러 성공을 구분한다. APP_MIRROR_TOKEN이 설정돼야 서버에서 private 미러 저장/재조회가 가능하다. 미설정이면 public_published_mirror_pending으로 보고하고 완료라 하지 않는다.
 
-## 2026-11-13 15:40 이후: 강한 테마 선별 버전 2
+## 실제 수집 어댑터의 보류 조건
 
-**이 절과 FEATURED_THEME_PROMPT.md는 기존 '테마 가중 등락률 내림차순' 규칙을 대체한다.** 최신 회차는 scripts/featured_strength.py를 반드시 함께 읽고 사용한다. 입력 50종목 안에서 확산·상승 강도·자금·대장·가치사슬 확산·당일 재료를 종합 평가하여 적격 최대3개만 선정한다. 신규 groupingBasis/membershipEvidence의 이벤트·역할/reason.scope 계약은 FEATURED_THEME_PROMPT.md를 따른다. 한두 종목 급등·대부분 하락·기업 단독 이벤트·관계 미확인은 주도 테마 선정에서 제외한다. 출력은 결론 표와 최종 순위 한 줄, 미확인 재료는 '명확한 당일 재료 확인 부족'. 선정·탈락 평가는 themeAssessments에 남긴다. 서버가 점수/판정/선정/문구를 재검증하며 JSON과 featured-stocks/latest.md를 원자적으로 발행한다. 과거 회차와 미국 06:40 테마는 변경하지 않는다. 자세한 운영 기본값 및 APK00.13 표시 제한도 FEATURED_THEME_PROMPT.md가 기준이다.
+`featured_integrated.py`는 Naver KRX/NXT와 NXT 공식 원자료를 실제 재조회하고 collection-artifacts에 오류까지 남긴다. 현재 공급자 응답을 검증한 integratedSourcePackage(완전한 종목분류, 거래소별 금액 정의, KRX 정규 종가 기준)를 요구한다. 원자료와 normalized package가 다르거나 미제공이면 발행 보류한다. 이 계약/시험 통과를 해당 어댑터의 실데이터 정상가동으로 보고하지 않는다. 자동 normalization/공식 master 확보 및 실시간 검증이 끝나기 전 자동 발행은 준비되지 않은 상태다.
+
+## 실행
+
+수집요청 requests/featured-collection.json → collection_worker (수집만) → 실제 원문 조사 review → featured_stocks.py stage → drafts/featured-stocks.json → featured_watch → 공개/미러 검증. `mode=collect_probe`와 시험 fixtures는 발행 불가. 휴장 검증결과는 skipped_non_trading_day. source failure는 collection_failed. 공개 성공은 원격 재조회 후만 인정한다.

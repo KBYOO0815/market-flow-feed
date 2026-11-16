@@ -6,7 +6,7 @@ from source_http import CollectionFetch
 from featured_scope import regular_close_observation
 
 
-def collect_krx(release, evidence, fetch, now=None, trace=None, probe=False):
+def collect_krx_legacy(release, evidence, fetch, now=None, trace=None, probe=False):
     started = now or dt.datetime.now(KST)
     target = stamp(release)
     if target.strftime('%H:%M') not in SLOTS or target.weekday() >= 5:
@@ -79,3 +79,9 @@ def collect_krx(release, evidence, fetch, now=None, trace=None, probe=False):
             'byChangeRate':[s['code'] for s in sorted(selected,key=lambda s:(-s['changeRate'],-s['tradeAmount'],s['code']))],
             'themes':[],'unclassified':[s['code'] for s in selected],
             'collectionDiagnostics':diagnostics,'probeOnly':probe}
+
+
+def collect_krx(release, evidence, fetch, now=None, trace=None, probe=False):
+    """Compatibility import routes new collection to combined venue contract."""
+    from featured_integrated import collect_integrated
+    return collect_integrated(release,evidence,fetch,now=now,trace=trace,probe=probe)

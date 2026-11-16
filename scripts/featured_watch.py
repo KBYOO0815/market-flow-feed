@@ -5,12 +5,17 @@ import time
 import urllib.error
 from featured_stocks import KST, SLOTS, stamp, validate
 from publish_featured_stocks import publish
-from publish_feed import api, read_remote
+from publish_feed import api
+from featured_remote import read_remote
 from operation_store import save
 from featured_scope import feed_prefix, release_prefix
 
 
 def index_matches(index, payload):
+    if payload.get('schemaVersion') == 3:
+        return (isinstance(index,dict) and index.get('schemaVersion')==3 and index.get('appVisibleCalendarDays')==4
+                and index.get('releaseAt')==payload['releaseAt'] and index.get('asOf')==payload['asOf']
+                and 1<=len(index.get('dates',[]))<=4)
     prefix=feed_prefix(payload)
     date=stamp(payload['releaseAt']).date()
     if (not isinstance(index,dict) or index.get('schemaVersion')!=payload['schemaVersion'] or index.get('appVisibleCalendarDays')!=2
@@ -67,7 +72,8 @@ def watch(release, record, read=read_remote, write=publish,
             if root and archived and stamp(archived['releaseAt'])==release:
                 newer=stamp(root['releaseAt'])>release
                 index_ok=index_matches(indexed,root)
-                if newer or (root==archived and index_ok):
+                same = root == archived or root.get('schemaVersion') == 3 and {k:v for k,v in root.items() if k!='days'} == archived
+                if newer or (same and index_ok):
                     state.update(state='published',published=True,alreadyPublished=True,checkedAt=clock().isoformat())
                     record(dict(state));return state
             if clock()>deadline: break
@@ -94,10 +100,22 @@ def watch(release, record, read=read_remote, write=publish,
                     confirmed,_=read(prefix+'.json',sha)
                     archive,_=read(prefix+'/'+date+'.json',sha)
                     index,_=read(prefix+'/index.json',sha)
-                    if (confirmed!=draft or archive.get('editions',{}).get(slot)!=draft
-                        or not index_matches(index,draft)):
+                    expected = dict(draft)
+                    if draft.get('schemaVersion') == 3:
+                        expected['publishedAt']=confirmed.get('publishedAt')
+                        expected['status']={**draft['status'],'publication':'success'}
+                        validate(expected)
+                    if ({k:v for k,v in confirmed.items() if k!='days'}!=expected or archive.get('editions',{}).get(slot)!=expected
+                        or not index_matches(index,expected)):
                         raise RuntimeError('featured root/archive/index readback mismatch')
-                    state.update(state='published',published=True,commit=sha,asOf=draft['asOf'],checkedAt=clock().isoformat())
+                    mirror_status='not_attempted'
+                    if draft.get('schemaVersion') == 3:
+                        from publish_featured_v3 import mirror
+                        try:
+                            mirror(confirmed,os.environ.get('APP_MIRROR_TOKEN'));mirror_status='verified'
+                        except Exception as error:
+                            mirror_status='failed: '+str(error)
+                    state.update(state='published' if mirror_status in ('verified','not_attempted') else 'public_published_mirror_pending',published=True,mirrorStatus=mirror_status,commit=sha,asOf=draft['asOf'],checkedAt=clock().isoformat())
                     record(dict(state));return state
         except (urllib.error.URLError,TimeoutError) as error:
             state['lastIssue']=type(error).__name__+': '+str(error)[:400]
