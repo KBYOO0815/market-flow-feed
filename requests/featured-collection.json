@@ -1,5 +1,5 @@
 {
-  "requestId": "integrated-v3-full-scan-20261116-1540-probe",
+  "requestId": "integrated-v3-expanded-scan-20261116-1540-probe",
   "mode": "collect_probe",
   "releaseAt": "2026-11-16T15:40:00+09:00",
   "evidence": {
@@ -35,5 +35,5 @@
       ]
     }
   },
-  "purpose": "Full live source normalization probe; observations retain actual times; never publish test"
+  "purpose": "Live expanded full-universe probe only; no publication"
 }

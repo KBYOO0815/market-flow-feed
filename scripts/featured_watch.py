@@ -114,6 +114,8 @@ def watch(release, record, read=read_remote, write=publish,
                         expected['publishedAt']=confirmed.get('publishedAt')
                         expected['status']={**draft['status'],'publication':'success'}
                         validate(expected)
+                        from publish_featured_v3 import publication_view
+                        expected,_,_=publication_view(expected)
                     if ({k:v for k,v in confirmed.items() if k!='days'}!=expected or archive.get('editions',{}).get(slot)!=expected
                         or not index_matches(index,expected)):
                         raise RuntimeError('featured root/archive/index readback mismatch')

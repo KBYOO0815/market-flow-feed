@@ -36,9 +36,19 @@ def normalize(raw,release,fetch,now=None,trace=None):
         universe.append({'code':code,'name':r['itemname'],'market':m['market'],'securityType':'COMMON' if m['preferredCode']=='0' else 'PREFERRED',
             'classificationVerified':True,'classificationSourceUrl':m['sourceUrl'],
             'classificationEvidence':{'naverType':r['type'],'brokerGroup':m['groupCode'],'spacFlag':m['spacFlag'],'preferredCode':m['preferredCode'],'masterRetrievedAt':m['masterRetrievedAt']}})
-    # Master universe must not hide an eligible market listing missing in Naver.
+    # Expand outside the ranking when the complete master lists extra names.
+    # Their actual venue quote is mandatory; a missing quote never becomes zero.
     expected={c for c,m in master.items() if m['groupCode']=='ST' and m['spacFlag']=='N'}
-    require(expected==set(eligible),'complete eligible universe mismatch between broker master and Naver')
+    supplemental=sorted(expected-set(eligible))
+    require(not set(eligible)-expected,'Naver eligible security absent from classified master')
+    for code in supplemental:
+        m=master[code]
+        require(m['preferredCode'] in ('0','1','2','9'),'unknown supplemental share class')
+        allkrx[code]={'itemcode':code,'itemname':m['name'],'type':'ST','sosok':'0' if m['market']=='KOSPI' else '1','listedDate':m.get('listingDate')}
+        eligible.append(code)
+        universe.append({'code':code,'name':m['name'],'market':m['market'],'securityType':'COMMON' if m['preferredCode']=='0' else 'PREFERRED','classificationVerified':True,
+            'classificationSourceUrl':m['sourceUrl'],'classificationEvidence':{'brokerGroup':m['groupCode'],'spacFlag':m['spacFlag'],'preferredCode':m['preferredCode'],'masterRetrievedAt':m['masterRetrievedAt'],'rankingSupplement':True}})
+    if trace and supplemental:trace({'stage':'krx_ranking_candidates_expanded','checkedAt':clock().isoformat(),'supplementalCodes':supplemental})
     official=raw['NXT_OFFICIAL'];official_zero_nxt([],{},official,clock())
     official_codes={r['isuSrdCd'].removeprefix('A') for r in official['brdinfoTimeList']}
     require(official_codes<=set(allkrx),'official NXT listing absent from KRX master')
@@ -68,7 +78,7 @@ def normalize(raw,release,fetch,now=None,trace=None):
                     require(target.strftime('%H:%M')!='20:10','NXT official final total confirmation adapter required at20:10')
                     session='NXT_CUMULATIVE';regular_close=False
                 quote={'code':code,'market':venue,'tradeDate':date,'turnoverScope':venue+'_ONLY','sourceUrl':url,'retrievedAt':retrieved.isoformat(),'observedAt':observed.isoformat(),
-                    'turnover':amount,'session':session,'closeConfirmed':regular_close,'rawQuote':q}
+                    'turnover':amount,'session':session,'closeConfirmed':regular_close}
                 if venue=='KRX':
                     price=num(q['nowPrice']);change=num(q['prevChangePrice']);rate=num(q['prevChangeRate'])
                     signed=-abs(change) if rate<0 else abs(change);base=price-signed
@@ -79,8 +89,9 @@ def normalize(raw,release,fetch,now=None,trace=None):
                 result.append(quote)
             except Exception as e:issues.append({'market':venue,'code':code,'sourceUrl':url,'reason':type(e).__name__+': '+str(e)})
         venues[venue]=result
+    pathlib.Path('collection-artifacts/integrated-raw-quotes.json').write_text(json.dumps(cache.values,ensure_ascii=False,indent=2)+'\n')
     evidence=pathlib.Path('collection-artifacts/integrated-normalization.json')
     evidence.write_text(json.dumps({'checkedAt':clock().isoformat(),'issues':issues,'masterStatus':master_status,'venueCounts':{v:len(q) for v,q in venues.items()}},ensure_ascii=False,indent=2)+'\n')
     require(not issues,'full market normalization incomplete; '+str(len(issues))+' quote issues; evidence='+str(evidence)+'; first='+str(issues[:2]))
     return {'securityMaster':universe,'krxQuotes':venues['KRX'],'nxtQuotes':venues['NXT'],'coverage':{'date':date,'securityMasterComplete':True,'krxComplete':True,'nxtComplete':True,
-        'nxtEligibleCodes':nxt_codes,'sourceUrl':NXT_ELIGIBILITY_URL,'officialEligibleCount':official['totalCnt'],'officialObservedAt':official['setTime'],'masterStatus':master_status}}
+        'nxtEligibleCodes':nxt_codes,'sourceUrl':NXT_ELIGIBILITY_URL,'officialEligibleCount':official['totalCnt'],'officialObservedAt':official['setTime'],'masterStatus':master_status,'rankingSupplementCodes':supplemental}}

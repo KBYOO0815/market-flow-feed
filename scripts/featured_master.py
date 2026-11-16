@@ -31,7 +31,7 @@ def probe():
                 require(len(line)>sum(widths)+21,'master layout length mismatch')
                 part=line[-sum(widths):];prefix=line[:-sum(widths)];fields=[];offset=0
                 for width in widths:fields.append(part[offset:offset+width].strip());offset+=width
-                rows.append({'code':prefix[:9].strip(),'isin':prefix[9:21].strip(),'name':prefix[21:].strip(),'groupCode':fields[0],'spacFlag':fields[spac],'preferredCode':fields[pref]})
+                rows.append({'code':prefix[:9].strip(),'isin':prefix[9:21].strip(),'name':prefix[21:].strip(),'groupCode':fields[0],'spacFlag':fields[spac],'preferredCode':fields[pref],'listingDate':fields[49 if market=='KOSPI' else 44]})
             require(len(rows)==len({r['code'] for r in rows}),'duplicate master code')
             body={'sourceUrl':url,'retrievedAt':dt.datetime.now(KST).isoformat(),'zipFileTimestamp':info.date_time,'sha256':hashlib.sha256(raw).hexdigest(),'rows':rows,'publishable':False}
             (out/(basename+'-master-probe.json')).write_text(json.dumps(body,ensure_ascii=False,indent=2)+'\n')

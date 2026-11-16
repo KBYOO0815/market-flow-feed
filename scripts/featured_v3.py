@@ -149,7 +149,16 @@ def validate(p):
     require(stamp(p['collectionStartedAt'])<=asof<=reviewed,'actual chronology invalid')
     require(asof.date()==release.date(),'cross-day snapshot forbidden')
     trading(p['tradingDayEvidence'],date)
-    proof=p['rankingProof'];rows=proof['allMarketRows']
+    proof=p['rankingProof']
+    if 'allMarketRows' not in proof:
+        import base64,json
+        from featured_remote import api
+        require(re.fullmatch(r'[0-9a-f]{40}',proof.get('evidenceBlobSha','')) is not None,'immutable proof blob required')
+        body=api('GET','git/blobs/'+proof['evidenceBlobSha'])
+        full=json.loads(base64.b64decode(body['content']))
+        require({k:v for k,v in proof.items() if k not in ('evidencePath','evidenceBlobSha')}=={k:v for k,v in full.items() if k!='allMarketRows'},'immutable proof summary mismatch')
+        proof=full
+    rows=proof['allMarketRows']
     rebuilt,check=rank_universe(rows,[s['quotes']['KRX'] for s in rows],[s['quotes']['NXT'] for s in rows if 'NXT' in s['quotes']],proof,date,asof,slot)
     require(p['stocks']==rebuilt and len(p['stocks'])==100,'raw top100 differs from complete-universe proof')
     require(proof['cutoffAmount']==check['cutoffAmount'] and proof['eligibleCount']==check['eligibleCount'],'ranking proof mismatch')

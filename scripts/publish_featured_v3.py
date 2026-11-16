@@ -3,11 +3,24 @@ import base64
 import copy
 import datetime as dt
 import json
+import hashlib
 import os
 import re
 import urllib.error
 import urllib.request
 from featured_v3 import KST, stamp, validate, require
+
+
+def publication_view(payload):
+    """Keep full-market proof once, not repeated in every mobile day/session."""
+    public=copy.deepcopy(payload);proof=public['rankingProof']
+    if 'allMarketRows' not in proof:return public,None,None
+    full=copy.deepcopy(proof)
+    content=json.dumps(full,ensure_ascii=False,indent=2)+'\n'
+    encoded=content.encode();sha=hashlib.sha1(('blob '+str(len(encoded))+'\0').encode()+encoded).hexdigest()
+    path='collections/featured-proofs/'+public['date']+'-'+public['slot'].replace(':','')+'-'+sha+'.json'
+    proof.pop('allMarketRows');proof.update(evidencePath=path,evidenceBlobSha=sha)
+    return public,path,full
 
 
 def merge(payload,days,today):
@@ -31,6 +44,7 @@ def publish(payload,api,read,clock=lambda:dt.datetime.now(KST)):
         now=clock();require(now.date().isoformat()==payload['date'],'no historical publication')
         require(stamp(payload['reviewedAt'])<=now,'future review')
         final=copy.deepcopy(payload);final['publishedAt']=now.isoformat();final['status']['publication']='success';validate(final)
+        final,proof_path,proof_body=publication_view(final)
         head=api('GET','git/ref/heads/main')['object']['sha'];commit=api('GET','git/commits/'+head)
         tree=api('GET','git/trees/'+commit['tree']['sha']+'?recursive=1')
         paths=[x['path'] for x in tree['tree'] if re.fullmatch(r'featured-stocks/\d{4}-\d{2}-\d{2}\.json',x['path'])]
@@ -40,6 +54,7 @@ def publish(payload,api,read,clock=lambda:dt.datetime.now(KST)):
         index={'schemaVersion':3,'appVisibleCalendarDays':4,'releaseAt':root['releaseAt'],'asOf':root['asOf'],
             'dates':[{'date':d,'path':'featured-stocks/'+d+'.json'} for d in sorted(retained,reverse=True)]}
         contents={'featured-stocks.json':root,'featured-stocks/index.json':index,**{'featured-stocks/'+d+'.json':day for d,day in retained.items()}}
+        if proof_path:contents[proof_path]=proof_body
         entries=[{'path':p,'mode':'100644','type':'blob','content':json.dumps(v,ensure_ascii=False,indent=2)+'\n'} for p,v in contents.items()]
         for path in paths:
             if path[-15:-5] not in retained:entries.append({'path':path,'mode':'100644','type':'blob','sha':None})
