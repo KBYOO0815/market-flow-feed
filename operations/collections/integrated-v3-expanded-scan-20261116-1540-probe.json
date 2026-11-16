@@ -1,0 +1,9 @@
+{
+  "requestId": "integrated-v3-expanded-scan-20261116-1540-probe",
+  "releaseAt": "2026-11-16T15:40:00+09:00",
+  "published": false,
+  "state": "collecting",
+  "startedAt": "2026-11-16T15:19:55.279908+09:00",
+  "deadlineAt": "2026-11-16T15:24:55.279908+09:00",
+  "progress": []
+}
