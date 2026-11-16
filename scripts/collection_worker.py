@@ -64,6 +64,8 @@ def run(request):
             pathlib.Path('collection-artifacts/'+ident+'-raw.json').write_text(json.dumps({'queriedAt':dt.datetime.now(KST).isoformat(),'rankings':ranks,'nxtOfficial':official},ensure_ascii=False,indent=2)+'\n')
             status['probeDetailRequests']=len(set(urls))
             status['probeDetailSucceeded']=len(cache.values)
+            from featured_source_probe import trading_probe
+            status['tradingDayProbe']=trading_probe()
             status.update(state='probe_passed',scope='network_connectivity_and_load_only',freshnessValidated=False,rankingRows={m:len(v) for m,v in ranks.items()},officialRows=len(official['brdinfoTimeList']),officialObservedAt=official.get('setTime'))
         else:
             def progress(event):

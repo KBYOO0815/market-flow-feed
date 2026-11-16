@@ -69,6 +69,7 @@ def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
     require(len(universe)==len({s['code'] for s in universe}),'duplicate master identity')
     require(len(krx)==len({s['code'] for s in krx}) and len(nxt)==len({s['code'] for s in nxt}),'duplicate venue quote')
     km={s['code']:s for s in krx};nm={s['code']:s for s in nxt}
+    require(all(re.fullmatch(r'[0-9A-Z]{6}',s.get('code','')) and s.get('name') for s in universe),'invalid security identity')
     eligible_codes={s['code'] for s in universe if eligible(s)}
     require(eligible_codes<=set(km),'KRX universe incomplete')
     official=set(coverage.get('nxtEligibleCodes',[]))

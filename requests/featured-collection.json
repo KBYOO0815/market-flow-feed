@@ -1,6 +1,1 @@
-{
-  "requestId": "integrated-v3-source-probe-20261116-1355",
-  "mode": "probe",
-  "releaseAt": "2026-11-16T13:40:00+09:00",
-  "purpose": "Actual source connectivity and schema probe only; no publication"
-}
+{"requestId":"integrated-v3-calendar-probe-20261116-1402","mode":"probe","releaseAt":"2026-11-16T13:40:00+09:00","purpose":"Read-only actual source and trading-day probe; no publication"}
