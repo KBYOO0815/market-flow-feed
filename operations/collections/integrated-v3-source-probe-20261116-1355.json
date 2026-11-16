@@ -2,8 +2,20 @@
   "requestId": "integrated-v3-source-probe-20261116-1355",
   "releaseAt": "2026-11-16T13:40:00+09:00",
   "published": false,
-  "state": "collecting",
+  "state": "probe_passed",
   "startedAt": "2026-11-16T13:53:06.126862+09:00",
   "deadlineAt": "2026-11-16T13:58:06.126862+09:00",
-  "progress": []
+  "progress": [],
+  "probeDetailRequests": 80,
+  "probeDetailSucceeded": 80,
+  "scope": "network_connectivity_and_load_only",
+  "freshnessValidated": false,
+  "rankingRows": {
+    "KRX": 2880,
+    "NXT": 100
+  },
+  "officialRows": 603,
+  "officialObservedAt": "2026-11-16 13:33",
+  "completedAt": "2026-11-16T13:53:25.085727+09:00",
+  "elapsedSeconds": 18.958865
 }
