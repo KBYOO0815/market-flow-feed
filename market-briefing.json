@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-17T06:49:23.634+09:00",
+  "updatedAt": "2026-11-16T23:45:21.027Z",
   "days": [
     {
       "date": "2026-11-17",
@@ -534,6 +534,274 @@
                 "researchState pending windows preserved",
                 "US theme evidence insufficient_data consistency"
               ]
+            }
+          }
+        },
+        {
+          "slot": "08:40",
+          "asOf": "2026-11-17T08:41:51.799+09:00",
+          "usThemes": [],
+          "usThemeStatus": "not_applicable",
+          "foreignNews": [
+            {
+              "id": "20261117-0840-jpmorgan-software-bug-transactions",
+              "title": "JPMorgan, 소프트웨어 버그로 일부 거래 처리 지연",
+              "summary": "JPMorgan은 온프레미스 하드웨어 시스템의 소프트웨어 버그로 일부 고객 서비스와 타 은행 연계 거래 처리가 평소보다 늦어졌다고 밝혔다. 고객은 계좌와 자금에 접근할 수 있으며, 사이버 공격이나 시스템 전체 장애의 증거는 없다고 설명했다.",
+              "publishedAt": "2026-11-17T04:12:49+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/legal/transactional/downdetector-reports-outages-major-us-banks-2026-11-16/",
+              "relatedStocks": [
+                "JPMorgan Chase(JPM)"
+              ],
+              "impactRank": 1,
+              "category": "글로벌 금융·운영장애",
+              "region": "foreign",
+              "eventKey": "jpmorgan-transaction-processing-software-bug-20261116",
+              "facts": [
+                {
+                  "factKey": "jpmorgan-onprem-software-bug-transaction-delays-20261116",
+                  "statement": "JPMorgan이 온프레미스 하드웨어 소프트웨어 버그로 일부 거래 처리가 지연됐다고 확인",
+                  "sourceUrl": "https://www.reuters.com/legal/transactional/downdetector-reports-outages-major-us-banks-2026-11-16/"
+                },
+                {
+                  "factKey": "jpmorgan-bug-not-cyber-or-systemic-20261116",
+                  "statement": "은행은 사이버 관련 증거가 없고 시스템 전체 장애가 아니며 고객의 계좌·자금 접근은 가능하다고 설명",
+                  "sourceUrl": "https://www.reuters.com/legal/transactional/downdetector-reports-outages-major-us-banks-2026-11-16/"
+                }
+              ]
+            }
+          ],
+          "domesticNews": [],
+          "marketSnapshot": null,
+          "researchStatus": "partial",
+          "storageVerification": {
+            "status": "pending",
+            "checkedAt": null,
+            "exactContentMatch": false,
+            "targetSessionPresent": false,
+            "reason": "저장 후 원격 재조회 전"
+          },
+          "researchAudit": {
+            "window": {
+              "startExclusive": "2026-11-13T20:45:57.405+09:00",
+              "cutoffInclusive": "2026-11-17T08:41:51.799+09:00",
+              "baselineFile": "market-briefing.json",
+              "baselineSha": "bb3cf847054f75caa9986d2eab294a0892f885cf"
+            },
+            "krxTradingDayEvidence": {
+              "result": true,
+              "checkedAt": "2026-11-16T23:45:13.241Z",
+              "reason": "KRX 공식 휴장일·Market Notice 재조회 및 신뢰 가능한 KRX 기준 거래일 자료에서 2026-11-17 정상 거래일 확인",
+              "sources": [
+                "https://global.krx.co.kr/contents/GLB/05/0501/0501110000/GLB0501110000.jsp",
+                "https://global.krx.co.kr/board/GLB0501020000/bbs",
+                "https://traderda.com/market/market-holidays"
+              ]
+            },
+            "domains": {
+              "foreignNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-16T23:45:13.241Z",
+                "checkedAt": "2026-11-16T23:45:13.241Z",
+                "windowStartExclusive": "2026-11-15T19:41:44+09:00",
+                "windowEndInclusive": "2026-11-17T08:41:51.799+09:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "Reuters direct extraction",
+                    "reason": "대만거래소·중국 원유 관련 후보 직접 추출 실패; 검색서비스 원문 접근 및 대체 출처를 재시도했으나 전체 연속검증에는 부족"
+                  }
+                ],
+                "alternativeSources": [
+                  "Reuters JPMorgan 원문 직접 조회",
+                  "미국·정부 공식 도메인 검색",
+                  "Reuters 최신 국제·원자재·기업 검색"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-15T19:41:44+09:00",
+                    "reason": "이전 회차 완료 수준 미확인 및 해외 일부 영역 최신 원문 검증 미완료",
+                    "endInclusive": "2026-11-16T00:17:50.739Z"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T00:17:50.739Z",
+                    "endInclusive": "2026-11-16T12:45:26.571+09:00",
+                    "reason": "국외 필수범위 일부 최신 원문·최초발표시각의 연속 전수 검증 미완료"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T12:45:26.571+09:00",
+                    "endInclusive": "2026-11-16T21:13:21+09:00",
+                    "reason": "해외 전체 필수 범위의 연속·전수 원문 검증 미완료; 확인된 2개 Reuters 보도만 채택"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T21:13:21+09:00",
+                    "endInclusive": "2026-11-17T06:41:26.353+09:00",
+                    "reason": "국외 필수범위의 연속 전수 원문 검증 미완료; Reuters 일부 원문 추출 실패와 분야별 공백 보존"
+                  },
+                  {
+                    "startExclusive": "2026-11-17T06:41:26.353+09:00",
+                    "endInclusive": "2026-11-17T08:41:51.799+09:00",
+                    "reason": "08:40 회차에서 필수 국외 범위를 폭넓게 조회했으나 Reuters 일부 직접 추출 실패 및 전체 원천의 연속 전수 검증 미완료"
+                  }
+                ]
+              },
+              "domesticNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-16T23:45:13.241Z",
+                "checkedAt": "2026-11-16T23:45:13.241Z",
+                "windowStartExclusive": "2026-11-13T20:45:57.405+09:00",
+                "windowEndInclusive": "2026-11-17T08:41:51.799+09:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "DART 2026-11-17 전체공시",
+                    "reason": "08:41 KST 조회 시 최근공시 페이지가 2026-11-16 2,299건·23페이지를 표시; 11월 17일 신규 목록 확인 불가"
+                  },
+                  {
+                    "source": "KIND·국내 공식기관 전수목록",
+                    "reason": "검색으로 일부 범위만 확인되어 전체 연속 검증 불가"
+                  }
+                ],
+                "alternativeSources": [
+                  "DART 최근공시 공식 페이지",
+                  "금융위원회·기획재정부·한국은행·산업부 공식 도메인 검색"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-13T20:45:57.405+09:00",
+                    "reason": "이전 DART 장애 구간과 현재 공시·정부 전체 본문 검증 미완료",
+                    "endInclusive": "2026-11-16T00:17:50.739Z"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T00:17:50.739Z",
+                    "endInclusive": "2026-11-16T12:45:26.571+09:00",
+                    "reason": "DART 당일 전체목록 직접 접근 실패 및 국내 전 공시·기관 원문의 연속 전수 검증 미완료"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T12:45:26.571+09:00",
+                    "endInclusive": "2026-11-16T21:13:21+09:00",
+                    "reason": "DART/KIND 및 국내 공식기관의 전수 원문 검증 미완료; 신규 채택 0건은 정상 0건 판정이 아님"
+                  },
+                  {
+                    "startExclusive": "2026-11-16T21:13:21+09:00",
+                    "endInclusive": "2026-11-17T06:41:26.353+09:00",
+                    "reason": "11월 16일 DART 전체 2,299건의 날짜·건수와 첫 페이지는 확인했으나 23개 페이지 전체 본문·정정 전후 검증 미완료"
+                  },
+                  {
+                    "startExclusive": "2026-11-17T06:41:26.353+09:00",
+                    "endInclusive": "2026-11-17T08:41:51.799+09:00",
+                    "reason": "DART가 11월 16일 2,299건 목록만 노출했고 11월 17일 DART/KIND·공식기관 전수 원문 검증 미완료"
+                  }
+                ]
+              },
+              "usThemes": {
+                "status": "not_applicable",
+                "attemptedAt": "2026-11-16T23:45:13.241Z",
+                "checkedAt": "2026-11-16T23:45:13.241Z",
+                "windowStartExclusive": "2026-11-17T06:41:26.353+09:00",
+                "windowEndInclusive": "2026-11-17T08:41:51.799+09:00",
+                "completedThrough": "2026-11-17T08:41:51.799+09:00",
+                "failedSources": [],
+                "alternativeSources": [],
+                "pendingWindows": []
+              }
+            },
+            "candidates": [
+              {
+                "region": "foreign",
+                "eventKey": "jpmorgan-transaction-processing-software-bug-20261116",
+                "factKeys": [
+                  "jpmorgan-onprem-software-bug-transaction-delays-20261116",
+                  "jpmorgan-bug-not-cyber-or-systemic-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/legal/transactional/downdetector-reports-outages-major-us-banks-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-17T04:12:49+09:00",
+                "checkedAt": "2026-11-16T23:45:13.241Z",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "Reuters 원문과 정확한 송고시각, JPMorgan 대변인 설명을 확인; 기존 D~D-3 factKey와 불일치"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "twse-stabilisation-measures-statement-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/markets/europe/taiwan-stock-exchange-says-it-will-take-stabilisation-measures-if-needed-2026-11-16",
+                  "https://www.mof.gov.tw/Eng/singlehtml/6727?cntId=8c25356e7310486a99b5845d1f8b6840"
+                ],
+                "sourcePublishedAt": "2026-11-17",
+                "checkedAt": "2026-11-16T23:45:13.241Z",
+                "newFact": false,
+                "previousMatch": "2026-11-06 대만 국가금융안정기금 시장안정조치 가동",
+                "decision": "duplicate",
+                "reason": "기존 가동 조치 이후 필요 시 안정화 조치를 취한다는 설명으로 실질적 추가 조치·새 수치 확정 아님; 정확한 최초 송고시각도 미확인"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "china-crude-stockpiling-commentary-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/commentary/reuters-open-interest/china-resumes-storing-crude-oil-giving-it-fuel-export-options-2026-11-16"
+                ],
+                "sourcePublishedAt": "2026-11-17",
+                "checkedAt": "2026-11-16T23:45:13.241Z",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "Reuters Open Interest 분석 후보이나 직접 원문 추출과 정확한 최초 송고시각·기초 수치 원천 확인 실패"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "dart-20261117-preopen-scan",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsac001/mainAll.do"
+                ],
+                "sourcePublishedAt": "2026-11-17",
+                "checkedAt": "2026-11-16T23:45:13.241Z",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "공식 페이지가 11월 16일 전체 2,299건을 표시해 11월 17일 신규 공시를 확정할 수 없음"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "nvidia-board-huang-return-not-considered-report-20261116",
+                "factKeys": [
+                  "nvidia-board-not-considering-huang-return-reuters-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/legal/transactional/silicon-valley-leaders-back-call-jensen-huangs-return-nvidia-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T22:46:37+09:00",
+                "checkedAt": "2026-11-16T23:45:13.241Z",
+                "newFact": false,
+                "previousMatch": "2026-11-17 06:40 외신 2위",
+                "decision": "duplicate",
+                "reason": "06:40 회차에 이미 채택된 동일 사건·사실"
+              }
+            ],
+            "coverage": {
+              "foreignCandidatesReviewed": 14,
+              "domesticCandidatesReviewed": 9,
+              "foreignSelected": 1,
+              "domesticSelected": 0,
+              "duplicateExcluded": 2,
+              "unverifiedExcluded": 2,
+              "otherExcluded": 18,
+              "notes": [
+                "국외 필수 범위별 검색 및 공식·Reuters 대체 접근 수행",
+                "국내 DART/KIND·금융위·기재부·한국은행·산업부 검색 수행",
+                "국내 0건은 정상 0건 판정이 아니라 검증채택 0건·조사미완료"
+              ]
+            },
+            "helperValidation": {
+              "status": "equivalent_manual_checks",
+              "checkedAt": "2026-11-16T23:45:13.241Z",
+              "reason": "현재 실행환경에서 원격 Python helper 직접 실행 경로가 제공되지 않아 동일 구조 검사를 직접 수행"
             }
           }
         }
@@ -3421,9 +3689,14 @@
           "startExclusive": "2026-11-16T21:13:21+09:00",
           "endInclusive": "2026-11-17T06:41:26.353+09:00",
           "reason": "국외 필수범위의 연속 전수 원문 검증 미완료; Reuters 일부 원문 추출 실패와 분야별 공백 보존"
+        },
+        {
+          "startExclusive": "2026-11-17T06:41:26.353+09:00",
+          "endInclusive": "2026-11-17T08:41:51.799+09:00",
+          "reason": "08:40 회차에서 필수 국외 범위를 폭넓게 조회했으나 Reuters 일부 직접 추출 실패 및 전체 원천의 연속 전수 검증 미완료"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-17T06:41:26.353+09:00"
+      "lastAttemptedCutoff": "2026-11-17T08:41:51.799+09:00"
     },
     "domesticNews": {
       "status": "partial",
@@ -3448,9 +3721,14 @@
           "startExclusive": "2026-11-16T21:13:21+09:00",
           "endInclusive": "2026-11-17T06:41:26.353+09:00",
           "reason": "11월 16일 DART 전체 2,299건의 날짜·건수와 첫 페이지는 확인했으나 23개 페이지 전체 본문·정정 전후 검증 미완료"
+        },
+        {
+          "startExclusive": "2026-11-17T06:41:26.353+09:00",
+          "endInclusive": "2026-11-17T08:41:51.799+09:00",
+          "reason": "DART가 11월 16일 2,299건 목록만 노출했고 11월 17일 DART/KIND·공식기관 전수 원문 검증 미완료"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-17T06:41:26.353+09:00"
+      "lastAttemptedCutoff": "2026-11-17T08:41:51.799+09:00"
     },
     "usThemes": {
       "status": "partial",
@@ -3472,7 +3750,7 @@
       ]
     },
     "sessionAudit": {
-      "checkedAt": "2026-11-16T21:48:17.220Z",
+      "checkedAt": "2026-11-16T23:45:13.241Z",
       "missingSessions": [
         {
           "date": "2026-11-14",
