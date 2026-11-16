@@ -1,42 +1,18 @@
-name: Publish reviewed briefing
+# Retired 2026-11-16. Market Flow briefing is published directly by the
+# existing ChatGPT "Market Flow 시장 재료 저장" automation.
+# No cron, push-triggered publisher, GitHub writes or draft publication.
+name: "[Retired] Publish reviewed briefing"
 on:
-  push:
-    branches: [main]
-    paths: ['drafts/morning-briefing.json']
-  schedule:
-    - cron: '40 21,22 * * 0-4'
-    - cron: '50 23 * * 0-4'
-    - cron: '50 2,5,6,9 * * 1-5'
-    - cron: '20 11 * * 1-5'
   workflow_dispatch:
 permissions:
-  contents: write
-  actions: read
-concurrency:
-  group: reviewed-briefing-publication
-  cancel-in-progress: false
+  contents: read
 jobs:
-  publish:
-    if: github.repository == 'KBYOO0815/market-flow-feed'
+  retired:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - name: Test editorial freshness guards
-        run: python3 -m unittest discover -s scripts -p 'test_*.py'
-      - name: Publish only a fresh reviewed draft at its release time
-        id: publication
-        env:
-          PUBLISH_TOKEN: ${{ github.token }}
-          EVENT_SCHEDULE: ${{ github.event.schedule }}
-        run: python3 scripts/briefing_watch.py
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: briefing-publication-evidence-${{ github.run_id }}-${{ github.run_attempt }}
-          path: operation-artifacts/
-          if-no-files-found: warn
-          retention-days: 7
-
+      - name: Explain migration
+        run: |
+          echo "Legacy briefing publisher is retired."
+          echo "Owner: ChatGPT Automation_f7a1c2f075188191b451d7a9050c333d."
+          echo "Canonical app feed: market-briefing.json."
+          echo "No GitHub write or publication is performed."
