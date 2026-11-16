@@ -2,8 +2,94 @@
   "requestId": "integrated-v3-master-probe-20261116-1512",
   "releaseAt": "2026-11-16T15:40:00+09:00",
   "published": false,
-  "state": "collecting",
+  "state": "probe_passed",
   "startedAt": "2026-11-16T15:11:16.922206+09:00",
   "deadlineAt": "2026-11-16T15:16:16.922206+09:00",
-  "progress": []
+  "progress": [],
+  "probeDetailRequests": 83,
+  "probeDetailSucceeded": 83,
+  "tradingDayProbe": {
+    "checkedAt": "2026-11-16T15:11:33.241956+09:00",
+    "proof": {
+      "verified": false,
+      "method": "actual_trade_evidence_incomplete",
+      "sources": [
+        {
+          "sourceUrl": "https://stock.naver.com/api/domestic/detail/005930/detail?codeType=KRX",
+          "market": "KRX",
+          "code": "005930",
+          "date": "2026-11-16",
+          "observedAt": "2026-11-16T15:11:22+09:00",
+          "checkedAt": "2026-11-16T15:11:33.238604+09:00",
+          "tradeVolume": 13484786,
+          "tradeAmount": 2699504000000,
+          "kind": "actual_krx_trade"
+        }
+      ]
+    },
+    "errors": {
+      "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    "scope": "trading_day_only_not_top100",
+    "publishable": false
+  },
+  "securityMasterProbe": {
+    "KOSPI": {
+      "rows": 2579,
+      "groups": {
+        "BC": 75,
+        "ST": 910,
+        "EF": 1190,
+        "RT": 23,
+        "PF": 2,
+        "IF": 2,
+        "MF": 1,
+        "DR": 1,
+        "SW": 4,
+        "SR": 2,
+        "EN": 368,
+        "FS": 1
+      },
+      "spacFlags": {
+        "N": 2579
+      },
+      "preferredCodes": {
+        "0": 2470,
+        "2": 21,
+        "1": 76,
+        "9": 12
+      },
+      "sourceUrl": "https://new.real.download.dws.co.kr/common/master/kospi_code.mst.zip",
+      "publishable": false
+    },
+    "KOSDAQ": {
+      "rows": 1835,
+      "groups": {
+        "FS": 11,
+        "ST": 1815,
+        "DR": 9
+      },
+      "spacFlags": {
+        "N": 1765,
+        "Y": 70
+      },
+      "preferredCodes": {
+        "0": 1833,
+        "2": 1,
+        "9": 1
+      },
+      "sourceUrl": "https://new.real.download.dws.co.kr/common/master/kosdaq_code.mst.zip",
+      "publishable": false
+    }
+  },
+  "scope": "network_connectivity_and_load_only",
+  "freshnessValidated": false,
+  "rankingRows": {
+    "KRX": 2880,
+    "NXT": 100
+  },
+  "officialRows": 603,
+  "officialObservedAt": "2026-11-16 14:51",
+  "completedAt": "2026-11-16T15:11:34.107140+09:00",
+  "elapsedSeconds": 17.184934
 }
