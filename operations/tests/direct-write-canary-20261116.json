@@ -1,6 +1,0 @@
-{
-  "test": "market-flow-direct-github-write-read-delete",
-  "dateKst": "2026-11-16",
-  "purpose": "Verify Github connector write/read ability without touching production feeds",
-  "isProductionFeed": false
-}
