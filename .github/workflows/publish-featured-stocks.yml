@@ -1,40 +1,17 @@
-name: Publish reviewed featured stocks
+# Retired on 2026-11-16: featured-stock publication moved to the existing
+# ChatGPT automation. This no-op workflow preserves an audit/rollback entry;
+# neither draft pushes nor collection workflow completion can publish.
+name: "[Retired] Publish reviewed featured stocks"
 on:
-  push:
-    branches: [main]
-    paths: ['drafts/featured-stocks.json']
-  workflow_run:
-    workflows: ['Collect featured stocks on server']
-    types: [completed]
   workflow_dispatch:
 permissions:
-  contents: write
-  actions: read
-concurrency:
-  group: reviewed-featured-stocks-publication
-  cancel-in-progress: false
+  contents: read
 jobs:
-  publish:
-    if: github.repository == 'KBYOO0815/market-flow-feed' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+  retired:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - name: Validate featured stocks pipeline
-        run: python3 -m unittest discover -s scripts -p 'test_featured_v3.py'
-      - name: Wait for release and publish reviewed featured stocks
-        env:
-          PUBLISH_TOKEN: ${{ github.token }}
-          APP_MIRROR_TOKEN: ${{ secrets.APP_MIRROR_TOKEN }}
-          EVENT_SCHEDULE: ${{ github.event.schedule }}
-          COLLECTION_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
-        run: python3 scripts/featured_watch.py
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: featured-publication-evidence-${{ github.run_id }}-${{ github.run_attempt }}
-          path: operation-artifacts/
-          if-no-files-found: warn
-          retention-days: 7
+      - name: Explain migration
+        run: |
+          echo "Legacy server-side featured-stock publisher is disabled."
+          echo "Owner: ChatGPT Automation_19be7cd0af808191aecbcc421c15a01c."
+          echo "No GitHub writes are performed by this workflow."
