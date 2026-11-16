@@ -20,7 +20,9 @@ def collect_integrated(release,evidence,fetch,now=None,trace=None,probe=False,el
         url=list_url(venue)
         try:
             raw[venue]=fetch(url);require(isinstance(raw[venue],list) and raw[venue],'empty/changed market response')
-            records.append({'market':venue,'sourceUrl':url,'retrievedAt':(now or dt.datetime.now(KST)).isoformat()})
+            retrieved=(now or dt.datetime.now(KST)).isoformat()
+            records.append({'market':venue,'sourceUrl':url,'retrievedAt':retrieved})
+            raw.setdefault('_retrievedAt',{})[venue]=retrieved
         except Exception as e:errors[venue]=type(e).__name__+': '+str(e)
     try:raw['NXT_OFFICIAL']=(eligibility_fetch or get_nxt_eligibility)()
     except Exception as e:errors['NXT_OFFICIAL']=type(e).__name__+': '+str(e)

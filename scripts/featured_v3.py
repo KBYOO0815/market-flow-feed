@@ -63,8 +63,24 @@ def quote(q,date,asof,market):
 
 
 def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
-    """Full security master and full market amounts, not a union of top100 lists."""
-    require(coverage.get('securityMasterComplete') is True and coverage.get('krxComplete') is True and coverage.get('nxtComplete') is True,'complete market coverage required; truncated ranking is not proof')
+    """Rank a full scan or a proven KRX/NXT Top100 union without zero fill."""
+    method=coverage.get('method','full_universe')
+    require(method in ('full_universe','top100_union_boundary'),'unknown ranking proof method')
+    if method=='full_universe':
+        require(coverage.get('securityMasterComplete') is True and coverage.get('krxComplete') is True and coverage.get('nxtComplete') is True,'complete market coverage required; truncated ranking is not proof')
+    else:
+        require(coverage.get('securityMasterComplete') is True and coverage.get('sourceTop100Complete') is True,'Top100 source/master proof incomplete')
+        require(coverage.get('candidateMasterComplete') is True and coverage.get('candidateMarketAmountsComplete') is True,'candidate verification incomplete')
+        candidate_codes=coverage.get('candidateCodes',[])
+        require(len(candidate_codes)>=100 and len(candidate_codes)==len(set(candidate_codes)),'candidate union incomplete/duplicated')
+        require(coverage.get('candidateCount')==len(candidate_codes),'candidate count mismatch')
+        require(len(coverage.get('krxTop100Codes',[]))==100 and len(set(coverage['krxTop100Codes']))==100,'KRX Top100 proof incomplete')
+        require(len(coverage.get('nxtTop100Codes',[]))==100 and len(set(coverage['nxtTop100Codes']))==100,'NXT Top100 proof incomplete')
+        source_union=set(coverage['krxTop100Codes'])|set(coverage['nxtTop100Codes']);excluded=set(coverage.get('excludedTop100Codes',[]))
+        require(not set(candidate_codes).intersection(excluded) and set(candidate_codes)|excluded==source_union,'candidate union/exclusion proof mismatch')
+        k100=money(coverage.get('krxRank100Amount'));n100=money(coverage.get('nxtRank100Amount'))
+        require(coverage.get('boundaryUpperBound')==k100+n100,'outside-union boundary mismatch')
+        require(set(candidate_codes)=={s.get('code') for s in universe},'candidate master differs from source union')
     require(coverage.get('date')==date and https(coverage.get('sourceUrl')),'coverage date/source required')
     require(len(universe)==len({s['code'] for s in universe}),'duplicate master identity')
     require(len(krx)==len({s['code'] for s in krx}) and len(nxt)==len({s['code'] for s in nxt}),'duplicate venue quote')
@@ -101,14 +117,18 @@ def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
             **({'zeroNxtEvidence':{'sourceUrl':coverage['sourceUrl'],'tradeDate':date,'reason':'공식 전체 NXT 거래대상 미포함'}} if not n else {})})
     rows.sort(key=lambda s:(-s['integratedTradeAmount'],s['code']))
     require(len(rows)>=100,'fewer than 100 eligible stocks')
+    if method=='top100_union_boundary':
+        require(rows[99]['integratedTradeAmount']>coverage['boundaryUpperBound'],'Top100 boundary not proven: T100 must exceed K100 + N100')
     for i,s in enumerate(rows[:100],1):
         s['turnoverRank']=i
         require(s['comparison'].get('eligible') or s['comparison'].get('basis')=='UNAVAILABLE_NEW_LISTING','Top100 price comparison not verified')
         if slot!='20:10':
             require(asof-stamp(s['quotes']['KRX']['observedAt'])<=dt.timedelta(minutes=15) or s['quotes']['KRX'].get('closeConfirmed') is True,'stale selected KRX quote')
             require('NXT' not in s['quotes'] or asof-stamp(s['quotes']['NXT']['observedAt'])<=dt.timedelta(minutes=15),'stale selected NXT quote')
-    proof={**copy.deepcopy(coverage),'nxtEligibleCodes':sorted(official & eligible_codes),'method':'full_universe','eligibleCount':len(rows),'cutoffAmount':rows[99]['integratedTradeAmount'],
-           'excludedMaxAmount':rows[100]['integratedTradeAmount'] if len(rows)>100 else 0,'allMarketRows':rows}
+    proof={**copy.deepcopy(coverage),'nxtEligibleCodes':sorted(official & eligible_codes),'method':method,'eligibleCount':len(rows),'cutoffAmount':rows[99]['integratedTradeAmount'],
+           'excludedMaxAmount':rows[100]['integratedTradeAmount'] if len(rows)>100 else 0,
+           **({'boundaryPassed':True,'boundaryMargin':rows[99]['integratedTradeAmount']-coverage['boundaryUpperBound']} if method=='top100_union_boundary' else {}),
+           'allMarketRows':rows}
     return rows[:100],proof
 
 

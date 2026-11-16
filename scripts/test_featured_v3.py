@@ -38,6 +38,17 @@ class Contract(unittest.TestCase):
     def test_incomplete_coverage(self):
         p=fixture();p['rankingProof']['krxComplete']=False
         with self.assertRaisesRegex(ValueError,'complete market'):validate(p)
+    def test_top100_union_boundary_proof(self):
+        p=fixture();rows=copy.deepcopy(p['rankingProof']['allMarketRows']);codes=[r['code'] for r in rows]
+        coverage={'date':p['date'],'method':'top100_union_boundary','securityMasterComplete':True,'sourceTop100Complete':True,
+                  'candidateMasterComplete':True,'candidateMarketAmountsComplete':True,'candidateCodes':codes,'candidateCount':len(codes),
+                  'krxTop100Codes':codes[:100],'nxtTop100Codes':codes[20:120],'excludedTop100Codes':[],
+                  'krxRank100Amount':1,'nxtRank100Amount':1,'boundaryUpperBound':2,
+                  'nxtEligibleCodes':codes,'sourceUrl':'https://example.org/coverage'}
+        stocks,proof=rank_universe(rows,[r['quotes']['KRX'] for r in rows],[r['quotes']['NXT'] for r in rows],coverage,p['date'],stamp(p['asOf']),p['slot'])
+        self.assertEqual(len(stocks),100);self.assertTrue(proof['boundaryPassed']);self.assertGreater(proof['boundaryMargin'],0)
+        coverage['krxRank100Amount']=10000;coverage['nxtRank100Amount']=10000;coverage['boundaryUpperBound']=20000
+        with self.assertRaisesRegex(ValueError,'T100 must exceed'):rank_universe(rows,[r['quotes']['KRX'] for r in rows],[r['quotes']['NXT'] for r in rows],coverage,p['date'],stamp(p['asOf']),p['slot'])
     def test_nontrading(self):
         p=fixture();p['tradingDayEvidence']['isTradingDay']=False
         with self.assertRaisesRegex(ValueError,'KRX closed'):validate(p)
@@ -145,8 +156,9 @@ class LiveAdapterContract(unittest.TestCase):
         now=stamp('2026-11-16T13:40:00+09:00');krx=[];master=[]
         for i in range(1101):
             code=str(i).zfill(6);master.append({'code':code,'name':'TEST','groupCode':'ST','spacFlag':'Y' if i==1099 else 'N','preferredCode':'9' if i==1 else '0','referencePrice':'100','exRightsCode':'00'})
-            krx.append({'itemcode':code,'itemname':'TEST','type':'ST','sosok':'0','listedDate':'20200101'})
+            krx.append({'itemcode':code,'itemname':'TEST','type':'ST','sosok':'0','listedDate':'20200101','tradeAmount':str(10000-i)})
         codes=[str(i).zfill(6) for i in range(99)]+['001100']
+        nxt=[{'itemcode':c,'itemname':'TEST','type':'ST','sosok':'0','listedDate':'20200101','tradeAmount':str(1000000 if c=='001100' else 1)} for c in codes]
         official={'totalCnt':100,'records':100,'total':1,'setTime':'2026-11-16 13:40','brdinfoTimeList':[{'isuSrdCd':'A'+c,'aggDd':'20261116','nowDd':'20261116'} for c in codes]}
         def fetch(url):
             code=url.split('/detail/')[1].split('/')[0];nxt=url.endswith('NXT')
@@ -157,7 +169,7 @@ class LiveAdapterContract(unittest.TestCase):
             try:
                 pathlib.Path('collection-artifacts').mkdir()
                 for name,rows in [('kospi',master),('kosdaq',[])]:pathlib.Path('collection-artifacts/'+name+'-master-probe.json').write_text(json.dumps({'rows':rows,'zipFileTimestamp':[2026,11,16,7,35,0],'sourceUrl':'https://example.org/master','retrievedAt':now.isoformat()}))
-                with patch.object(adapter,'master_probe',return_value={'KOSPI':{},'KOSDAQ':{}}):package=adapter.normalize({'KRX':krx,'NXT_OFFICIAL':official},now.isoformat(),fetch,now=now)
+                with patch.object(adapter,'master_probe',return_value={'KOSPI':{},'KOSDAQ':{}}):package=adapter.normalize({'KRX':krx,'NXT':nxt,'NXT_OFFICIAL':official},now.isoformat(),fetch,now=now)
                 stocks,proof=rank_universe(package['securityMaster'],package['krxQuotes'],package['nxtQuotes'],package['coverage'],'2026-11-16',now,'13:40')
                 self.assertEqual(stocks[0]['code'],'001100');self.assertNotIn('001099',{s['code'] for s in proof['allMarketRows']});self.assertEqual(stocks[2]['securityType'],'PREFERRED')
             finally:os.chdir(original)
