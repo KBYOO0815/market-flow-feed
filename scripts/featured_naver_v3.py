@@ -88,8 +88,10 @@ def normalize(raw,release,fetch,now=None,trace=None):
                     signed=-abs(change) if rate<0 else abs(change);base=price-signed
                     require(base>0 and abs((price/base-1)*100-rate)<=num('.011'),'KRX previous-close arithmetic mismatch')
                     new_listing=allkrx[code].get('listedDate')==target.strftime('%Y%m%d')
+                    require(num(q.get('stdPrice'))==base and num(master[code].get('referencePrice'))==base,'independent KRX comparison reference mismatch')
+                    require(new_listing or master[code].get('exRightsCode')=='00','corporate-action day requires actual prior regular-close source, not adjusted reference')
                     quote.update(price=float(price),previousRegularClose=None if new_listing else float(base),priceSourceUrl=url,
-                        comparison={'eligible':not new_listing,'basis':'UNAVAILABLE_NEW_LISTING' if new_listing else 'KRX_PREVIOUS_REGULAR_CLOSE','explanation':'신규상장: 전일 KRX 정규장 종가 없음; 별도 공식 기준가 검증 전 필터 제외' if new_listing else '원문 현재가와 전일대비 금액/부호로 기준 종가 재계산 후 원문 등락률 대조'})
+                        comparison={'eligible':not new_listing,'basis':'UNAVAILABLE_NEW_LISTING' if new_listing else 'KRX_PREVIOUS_REGULAR_CLOSE','explanation':'신규상장: 전일 KRX 정규장 종가 없음; 별도 공식 기준가 검증 전 필터 제외' if new_listing else 'Naver 기준가·전일대비 산술과 당일 KIS 기준가 교차대조; 락구분00 확인. 장후 종가 필드는 사용 안 함'})
                 result.append(quote)
             except Exception as e:issues.append({'market':venue,'code':code,'sourceUrl':url,'reason':type(e).__name__+': '+str(e)})
         venues[venue]=result

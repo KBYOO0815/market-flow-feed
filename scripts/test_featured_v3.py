@@ -144,13 +144,13 @@ class LiveAdapterContract(unittest.TestCase):
         import featured_naver_v3 as adapter
         now=stamp('2026-11-16T13:40:00+09:00');krx=[];master=[]
         for i in range(1101):
-            code=str(i).zfill(6);master.append({'code':code,'name':'TEST','groupCode':'ST','spacFlag':'Y' if i==1099 else 'N','preferredCode':'9' if i==1 else '0'})
+            code=str(i).zfill(6);master.append({'code':code,'name':'TEST','groupCode':'ST','spacFlag':'Y' if i==1099 else 'N','preferredCode':'9' if i==1 else '0','referencePrice':'100','exRightsCode':'00'})
             krx.append({'itemcode':code,'itemname':'TEST','type':'ST','sosok':'0','listedDate':'20200101'})
         codes=[str(i).zfill(6) for i in range(99)]+['001100']
         official={'totalCnt':100,'records':100,'total':1,'setTime':'2026-11-16 13:40','brdinfoTimeList':[{'isuSrdCd':'A'+c,'aggDd':'20261116','nowDd':'20261116'} for c in codes]}
         def fetch(url):
             code=url.split('/detail/')[1].split('/')[0];nxt=url.endswith('NXT')
-            return {'itemcode':code,'tradeTime':'20261116134000','tradingSessionType':'REGULAR_MARKET','tradeAmount':str(1000000 if nxt and code=='001100' else 10000-int(code) if not nxt else 1),'nowPrice':'104','prevChangePrice':'4','prevChangeRate':'4'}
+            return {'itemcode':code,'tradeTime':'20261116134000','tradingSessionType':'REGULAR_MARKET','tradeAmount':str(1000000 if nxt and code=='001100' else 10000-int(code) if not nxt else 1),'nowPrice':'104','stdPrice':'100','prevChangePrice':'4','prevChangeRate':'4'}
         original=os.getcwd()
         with tempfile.TemporaryDirectory() as temp:
             os.chdir(temp)
