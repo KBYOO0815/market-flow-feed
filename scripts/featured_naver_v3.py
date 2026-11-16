@@ -59,14 +59,13 @@ def normalize(raw,release,fetch,now=None,trace=None):
     for start_index in range(0,len(candidate_codes),40):
         batch_codes=candidate_codes[start_index:start_index+40]
         urls=[BASE+'detail/'+c+'/detail?codeType='+venue for c in batch_codes for venue in (('KRX','NXT') if c in official_codes else ('KRX',))]
-        for attempt in range(3):
-            try:
-                cache.prime(urls);break
-            except Exception as error:
-                if attempt==2:
-                    pathlib.Path('collection-artifacts/integrated-partial-quotes.json').write_text(json.dumps({'completed':len(cache.values),'sourceUrl':getattr(error,'url',None),'error':str(error),'quotes':cache.values},ensure_ascii=False,indent=2)+'\n')
-                    if trace:trace({'stage':'integrated_union_source_failed','checkedAt':clock().isoformat(),'completed':len(cache.values),'sourceUrl':getattr(error,'url',None),'error':str(error),'attempt':attempt+1})
-                    raise
+        try:
+            # Production get() already applies the three-attempt transport cap.
+            cache.prime(urls)
+        except Exception as error:
+            pathlib.Path('collection-artifacts/integrated-partial-quotes.json').write_text(json.dumps({'completed':len(cache.values),'sourceUrl':getattr(error,'url',None),'error':str(error),'quotes':cache.values},ensure_ascii=False,indent=2)+'\n')
+            if trace:trace({'stage':'integrated_union_source_failed','checkedAt':clock().isoformat(),'completed':len(cache.values),'sourceUrl':getattr(error,'url',None),'error':str(error),'transportAttemptLimit':3})
+            raise
         if trace:trace({'stage':'integrated_union_scan_progress','checkedAt':clock().isoformat(),'completedCandidates':min(start_index+40,len(candidate_codes)),'totalCandidates':len(candidate_codes)})
         require(clock()-start<=dt.timedelta(minutes=5),'complete market scan exceeded five minutes; no publication')
     venues={};issues=[]
