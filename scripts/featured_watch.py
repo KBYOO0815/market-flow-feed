@@ -81,7 +81,7 @@ def watch(release, record, read=read_remote, write=publish,
                 same = root == archived or root.get('schemaVersion') == 3 and {k:v for k,v in root.items() if k!='days'} == archived
                 replacement,_=read('drafts/featured-stocks.json',missing=True) if archived.get('schemaVersion')==3 else (None,None)
                 replace_pending=(replacement and replacement.get('schemaVersion')==3 and stamp(replacement['releaseAt'])==release
-                                 and stamp(replacement['asOf'])>stamp(archived['asOf']))
+                                 and (stamp(replacement['asOf'])>stamp(archived['asOf']) or stamp(replacement['asOf'])==stamp(archived['asOf']) and stamp(replacement['reviewedAt'])>stamp(archived.get('reviewedAt',archived['asOf']))))
                 if newer or (same and index_ok and not replace_pending):
                     state.update(state='published',published=True,alreadyPublished=True,checkedAt=clock().isoformat())
                     record(dict(state));return state

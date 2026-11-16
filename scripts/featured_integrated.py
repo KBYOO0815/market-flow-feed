@@ -31,8 +31,11 @@ def collect_integrated(release,evidence,fetch,now=None,trace=None,probe=False,el
     # The normalized source package must bind to these just-fetched responses.
     # Do not trust an old hand-entered quote package as current market evidence.
     package=evidence.get('integratedSourcePackage')
-    require(isinstance(package,dict),'source adapter blocked: complete classified security master, venue-only turnover definitions and verified KRX regular-close reference not supplied; raw source evidence saved')
-    require(package.get('rawResponses')==raw,'normalized package does not match actual source responses')
+    if package is None:
+        from featured_naver_v3 import normalize
+        package=normalize(raw,release,fetch,now=now,trace=trace)
+    else:
+        require(isinstance(package,dict) and package.get('rawResponses')==raw,'normalized package does not match actual source responses')
     ended=now or dt.datetime.now(KST)
     stocks,proof=rank_universe(package['securityMaster'],package['krxQuotes'],package['nxtQuotes'],package['coverage'],date,ended,slot)
     if trace:trace({'stage':'integrated_top100_verified','checkedAt':ended.isoformat(),'stockCount':100,'cutoffAmount':proof['cutoffAmount']})

@@ -28,7 +28,9 @@ reason=null이면 앱에 `당일 상승 이유 확인 안 됨`을 표시한다. 
 
 ## 실제 수집 어댑터의 보류 조건
 
-`featured_integrated.py`는 Naver KRX/NXT와 NXT 공식 원자료를 실제 재조회하고 collection-artifacts에 오류까지 남긴다. 현재 공급자 응답을 검증한 integratedSourcePackage(완전한 종목분류, 거래소별 금액 정의, KRX 정규 종가 기준)를 요구한다. 원자료와 normalized package가 다르거나 미제공이면 발행 보류한다. 이 계약/시험 통과를 해당 어댑터의 실데이터 정상가동으로 보고하지 않는다. 자동 normalization/공식 master 확보 및 실시간 검증이 끝나기 전 자동 발행은 준비되지 않은 상태다.
+`featured_integrated.py`는 Naver KRX/NXT와 NXT 공식 원자료를 실제 재조회하고 collection-artifacts에 오류까지 남긴다. 기본 자동 어댑터 `featured_naver_v3.py`는 한국투자증권 당일 전체 종목 마스터(KOSPI/KOSDAQ), Naver 전체 KRX 목록의 그룹/시장, SPAC·우선주 코드를 교차 확인한다. 전체 적격 KRX 종목과 NXT 공식 거래대상 전체의 venue별 detail을 bounded 병렬 조회한다. 원문 거래일/체결시각/세션/금액/전일대비를 검증하며 5분 초과나 한 경계 후보의 미확인도 발행을 보류한다. 신규상장은 전일종가가 없음을 명시하고 공식 대체 기준 검증 전 선별에서 제외한다. API 접근제한을 우회하지 않는다.
+
+외부 대체 normalized integratedSourcePackage를 지정하는 경우에도 실제 재조회 rawResponses와 일치해야 한다. 20:10 NXT 공식 최종집계 확인 및 KRX 종가 원천이 확인되지 않으면 자동 정규화를 중단한다. 어댑터 코드/시험 통과를 실데이터 정상 발행으로 보고하지 않는다.
 
 ## 실행
 

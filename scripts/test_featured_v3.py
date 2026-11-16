@@ -127,3 +127,37 @@ class ProductionGuards(unittest.TestCase):
         from featured_watch import index_matches
         p=fixture();index={'schemaVersion':3,'appVisibleCalendarDays':4,'releaseAt':p['releaseAt'],'asOf':p['asOf'],'dates':[{'date':'2026-11-16','path':'featured-stocks/2026-11-16.json'}]}
         self.assertTrue(index_matches(index,p));index['dates'][0]['path']='market-briefing.json';self.assertFalse(index_matches(index,p))
+
+class CalculationAndReason(unittest.TestCase):
+    def test_nonuniform_weighting(self):
+        self.assertEqual(weighted([{'changeRate':4,'integratedTradeAmount':100},{'changeRate':8,'integratedTradeAmount':300}]),7)
+    def test_confirmed_source_time_and_fact(self):
+        p=fixture();r={'summary':'TEST ONLY CONFIRMED','sourceUrl':'https://example.org/original','publishedAt':'2026-11-16T13:39:00+09:00','checkedAt':p['reviewedAt'],'facts':['TEST ONLY FACT'],'verificationStatus':'confirmed','causality':'related_fact_only'}
+        p['individualStocks'][0]['reason']=r;validate(p)
+        p['individualStocks'][0]['reason']['publishedAt']='2026-11-16T13:41:00+09:00'
+        with self.assertRaisesRegex(ValueError,'chronology'):validate(p)
+
+class LiveAdapterContract(unittest.TestCase):
+    def test_master_join_spac_and_outside_krx_top100(self):
+        import os,pathlib,tempfile,json
+        from unittest.mock import patch
+        import featured_naver_v3 as adapter
+        now=stamp('2026-11-16T13:40:00+09:00');krx=[];master=[]
+        for i in range(1101):
+            code=str(i).zfill(6);master.append({'code':code,'name':'TEST','groupCode':'ST','spacFlag':'Y' if i==1099 else 'N','preferredCode':'9' if i==1 else '0'})
+            krx.append({'itemcode':code,'itemname':'TEST','type':'ST','sosok':'0','listedDate':'20200101'})
+        codes=[str(i).zfill(6) for i in range(99)]+['001100']
+        official={'totalCnt':100,'records':100,'total':1,'setTime':'2026-11-16 13:40','brdinfoTimeList':[{'isuSrdCd':'A'+c,'aggDd':'20261116','nowDd':'20261116'} for c in codes]}
+        def fetch(url):
+            code=url.split('/detail/')[1].split('/')[0];nxt=url.endswith('NXT')
+            return {'itemcode':code,'tradeTime':'20261116134000','tradingSessionType':'REGULAR_MARKET','tradeAmount':str(1000000 if nxt and code=='001100' else 10000-int(code) if not nxt else 1),'nowPrice':'104','prevChangePrice':'4','prevChangeRate':'4'}
+        original=os.getcwd()
+        with tempfile.TemporaryDirectory() as temp:
+            os.chdir(temp)
+            try:
+                pathlib.Path('collection-artifacts').mkdir()
+                for name,rows in [('kospi',master),('kosdaq',[])]:pathlib.Path('collection-artifacts/'+name+'-master-probe.json').write_text(json.dumps({'rows':rows,'zipFileTimestamp':[2026,11,16,7,35,0],'sourceUrl':'https://example.org/master','retrievedAt':now.isoformat()}))
+                with patch.object(adapter,'master_probe',return_value={'KOSPI':{},'KOSDAQ':{}}):package=adapter.normalize({'KRX':krx,'NXT_OFFICIAL':official},now.isoformat(),fetch,now=now)
+                stocks,proof=rank_universe(package['securityMaster'],package['krxQuotes'],package['nxtQuotes'],package['coverage'],'2026-11-16',now,'13:40')
+                self.assertEqual(stocks[0]['code'],'001100');self.assertNotIn('001099',{s['code'] for s in proof['allMarketRows']});self.assertEqual(stocks[2]['securityType'],'PREFERRED')
+            finally:os.chdir(original)
