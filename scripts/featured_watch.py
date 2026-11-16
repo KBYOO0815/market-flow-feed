@@ -13,9 +13,15 @@ from featured_scope import feed_prefix, release_prefix
 
 def index_matches(index, payload):
     if payload.get('schemaVersion') == 3:
-        return (isinstance(index,dict) and index.get('schemaVersion')==3 and index.get('appVisibleCalendarDays')==4
+        if not isinstance(index,dict):return False
+        date=stamp(payload['releaseAt']).date();rows=index.get('dates',[])
+        try:
+            dates=[r['date'] for r in rows]
+            return (index.get('schemaVersion')==3 and index.get('appVisibleCalendarDays')==4
                 and index.get('releaseAt')==payload['releaseAt'] and index.get('asOf')==payload['asOf']
-                and 1<=len(index.get('dates',[]))<=4)
+                and 1<=len(rows)<=4 and dates==sorted(set(dates),reverse=True) and date.isoformat() in dates
+                and all(date-dt.timedelta(days=3)<=dt.date.fromisoformat(r['date'])<=date and r['path']=='featured-stocks/'+r['date']+'.json' for r in rows))
+        except (TypeError,KeyError,ValueError):return False
     prefix=feed_prefix(payload)
     date=stamp(payload['releaseAt']).date()
     if (not isinstance(index,dict) or index.get('schemaVersion')!=payload['schemaVersion'] or index.get('appVisibleCalendarDays')!=2

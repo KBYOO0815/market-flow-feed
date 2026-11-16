@@ -111,3 +111,19 @@ class AtomicPublication(unittest.TestCase):
         self.assertEqual(conflicts[0],1);self.assertEqual(versions[sha]['market-briefing.json'],{'unchanged':'news'})
         self.assertEqual(versions[sha]['other-file.json'],{'preserved':True});self.assertEqual(versions[sha]['featured-stocks.json']['status']['publication'],'success')
         self.assertEqual(versions[sha]['featured-stocks/2026-11-16.json']['editions']['13:40']['asOf'],fixture()['asOf'])
+
+class ProductionGuards(unittest.TestCase):
+    def test_legacy_publication_is_disabled(self):
+        from publish_featured_stocks import publish
+        with self.assertRaisesRegex(ValueError,'Legacy'):publish({'schemaVersion':2})
+    def test_verified_holiday_never_calls_sources(self):
+        from unittest.mock import patch
+        import collection_worker as worker
+        date='2026-11-16';request={'requestId':'holiday-test-only','releaseAt':date+'T13:40:00+09:00','evidence':{'tradingDayEvidence':{'date':date,'verified':True,'isTradingDay':False,'sourceUrl':'https://example.org/calendar','facts':['TEST ONLY HOLIDAY']}}}
+        with patch.object(worker,'save') as save,patch.object(worker,'write_artifact'),patch.object(worker,'collect') as collect:
+            result=worker.run(request)
+        self.assertEqual(result['state'],'skipped_non_trading_day');collect.assert_not_called();save.assert_called_once()
+    def test_index_four_day_validation(self):
+        from featured_watch import index_matches
+        p=fixture();index={'schemaVersion':3,'appVisibleCalendarDays':4,'releaseAt':p['releaseAt'],'asOf':p['asOf'],'dates':[{'date':'2026-11-16','path':'featured-stocks/2026-11-16.json'}]}
+        self.assertTrue(index_matches(index,p));index['dates'][0]['path']='market-briefing.json';self.assertFalse(index_matches(index,p))
