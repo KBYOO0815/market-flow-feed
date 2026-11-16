@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T03:51:12.775Z",
+  "updatedAt": "2026-11-16T21:13:21+09:00",
   "days": [
     {
       "date": "2026-11-16",
@@ -2240,6 +2240,157 @@
             "verifiedBlobSha": "fb9c0c55c23fbf07da4ded1edd17a8932f4dc44b",
             "method": "초기 병합 커밋을 원격 재조회해 JSON 문법·대상 회차·FIFO·중복·정렬·상태·SHA 일치를 확인. 이 메타데이터 추가 커밋도 다시 재조회함."
           }
+        },
+        {
+          "slot": "19:40",
+          "asOf": "2026-11-16T21:13:21+09:00",
+          "usThemes": [],
+          "usThemeStatus": "not_applicable",
+          "foreignNews": [
+            {
+              "id": "20261116-1940-us-allies-ai-supply-declaration",
+              "title": "미국·한국 등 10개국, AI 공급망·핵심 인프라 보호 협력 선언",
+              "summary": "로이터는 미국 국무부 발표를 인용해 미국과 한국·일본·인도 등 10개국이 AI 기술과 핵심 인프라 공급망을 보호하기 위한 협력 선언에 서명했다고 보도했다. AI 정책·공급망·안보 분야별 협의체 구성이 포함된다.",
+              "publishedAt": "2026-11-16T18:00:00+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/china/us-allies-team-up-protect-ai-tech-infrastructure-amid-china-rivalry-2026-11-16/",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "AI·반도체 공급망·국제협력",
+              "region": "foreign",
+              "eventKey": "pax-silica-san-francisco-declaration-20261116",
+              "facts": [
+                {
+                  "factKey": "ten-country-ai-infrastructure-declaration-confirmed-20261116",
+                  "statement": "미국과 한국 등 10개국 AI 인프라·공급망 협력 선언 서명",
+                  "sourceUrl": "https://www.reuters.com/world/china/us-allies-team-up-protect-ai-tech-infrastructure-amid-china-rivalry-2026-11-16/"
+                }
+              ]
+            },
+            {
+              "id": "20261116-1940-fed-barr-ai-financial-risks",
+              "title": "미 연준 바 이사, AI 거래·금융안정 위험 경고",
+              "summary": "연준 마이클 바 이사는 AI 거래의 쏠림과 시장교란, 사이버 공격, 은행 고객 계좌의 AI 대리인 권한 검증 문제 등을 위험으로 지목했다. 지난주 연준 금융안정보고서 설문에서는 응답 접촉자의 87%가 AI를 주요 위험으로 언급했다. 통화정책 전망은 언급하지 않았다.",
+              "publishedAt": "2026-11-16T19:02:00+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/feds-barr-warns-ai-risks-financial-system-2026-11-16/",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "미국 금융안정·AI 위험",
+              "region": "foreign",
+              "eventKey": "fed-governor-barr-ai-financial-stability-remarks-20261116",
+              "facts": [
+                {
+                  "factKey": "fed-barr-ai-trading-cyber-bank-agent-risk-remarks-20261116",
+                  "statement": "AI 거래·사이버·금융대리인 권한 위험 관련 바 이사 발언",
+                  "sourceUrl": "https://www.reuters.com/world/feds-barr-warns-ai-risks-financial-system-2026-11-16/"
+                }
+              ]
+            }
+          ],
+          "domesticNews": [],
+          "researchStatus": "partial",
+          "marketSnapshot": {
+            "observedAt": "2026-11-16T16:10:00+09:00",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261116134900008",
+            "kospiClose": 5100.5,
+            "kospiChangePct": -3.59,
+            "kosdaqClose": 665.65,
+            "kosdaqChangePct": -4.86,
+            "note": "연합뉴스 16:10 발표 KRX 정규장 마감 수치; 뉴스 신규건수에는 미포함"
+          },
+          "recovery": {
+            "isRecovery": true,
+            "originalSlot": "19:40",
+            "detectedAt": "2026-11-16T21:13:21+09:00",
+            "startedAt": "2026-11-16T21:13:21+09:00",
+            "recoveredAt": "2026-11-16T21:13:21+09:00",
+            "reason": "정규 19:40 예약 미기동에 따른 동일 날짜 일회성 지연 복구"
+          },
+          "researchAudit": {
+            "domains": {
+              "foreignNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-16T21:13:21+09:00",
+                "checkedAt": "2026-11-16T21:13:21+09:00",
+                "windowStartExclusive": "2026-11-16T12:45:26.571+09:00",
+                "windowEndInclusive": "2026-11-16T21:13:21+09:00",
+                "completedThrough": null,
+                "failedSources": [],
+                "alternativeSources": [],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-16T12:45:26.571+09:00",
+                    "endInclusive": "2026-11-16T21:13:21+09:00",
+                    "reason": "해외 전체 필수 범위의 연속·전수 원문 검증 미완료; 확인된 2개 Reuters 보도만 채택"
+                  }
+                ]
+              },
+              "domesticNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-16T21:13:21+09:00",
+                "checkedAt": "2026-11-16T21:13:21+09:00",
+                "windowStartExclusive": "2026-11-16T12:45:26.571+09:00",
+                "windowEndInclusive": "2026-11-16T21:13:21+09:00",
+                "completedThrough": null,
+                "failedSources": [],
+                "alternativeSources": [],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-16T12:45:26.571+09:00",
+                    "endInclusive": "2026-11-16T21:13:21+09:00",
+                    "reason": "DART/KIND 및 국내 공식기관의 전수 원문 검증 미완료; 신규 채택 0건은 정상 0건 판정이 아님"
+                  }
+                ]
+              },
+              "usThemes": {
+                "status": "not_applicable",
+                "attemptedAt": "2026-11-16T21:13:21+09:00",
+                "checkedAt": "2026-11-16T21:13:21+09:00",
+                "windowStartExclusive": "2026-11-16T12:45:26.571+09:00",
+                "windowEndInclusive": "2026-11-16T21:13:21+09:00",
+                "completedThrough": null,
+                "failedSources": [],
+                "alternativeSources": [],
+                "pendingWindows": []
+              }
+            },
+            "candidates": [
+              {
+                "region": "foreign",
+                "eventKey": "pax-silica-san-francisco-declaration-20261116",
+                "factKeys": [
+                  "ten-country-ai-infrastructure-declaration-confirmed-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/world/china/us-allies-team-up-protect-ai-tech-infrastructure-amid-china-rivalry-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T18:00:00+09:00",
+                "checkedAt": "2026-11-16T21:13:21+09:00",
+                "newFact": true,
+                "previousMatch": false,
+                "decision": "selected",
+                "reason": "로이터 원문과 최초 기사 시각 확인; 기존 발행 factKey 미중복"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "fed-governor-barr-ai-financial-stability-remarks-20261116",
+                "factKeys": [
+                  "fed-barr-ai-trading-cyber-bank-agent-risk-remarks-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/world/feds-barr-warns-ai-risks-financial-system-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T19:02:00+09:00",
+                "checkedAt": "2026-11-16T21:13:21+09:00",
+                "newFact": true,
+                "previousMatch": false,
+                "decision": "selected",
+                "reason": "로이터 원문과 최초 기사 시각 확인; 기존 발행 factKey 미중복"
+              }
+            ],
+            "coverage": "Reuters 2건 원문 확인, 국내 공식공시 전체 범위 미완료, 해외 필수분야 전체 미완료"
+          }
         }
       ]
     },
@@ -2723,9 +2874,14 @@
           "startExclusive": "2026-11-16T00:17:50.739Z",
           "endInclusive": "2026-11-16T12:45:26.571+09:00",
           "reason": "국외 필수범위 일부 최신 원문·최초발표시각의 연속 전수 검증 미완료"
+        },
+        {
+          "startExclusive": "2026-11-16T12:45:26.571+09:00",
+          "endInclusive": "2026-11-16T21:13:21+09:00",
+          "reason": "해외 전체 필수 범위의 연속·전수 원문 검증 미완료; 확인된 2개 Reuters 보도만 채택"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-16T12:45:26.571+09:00"
+      "lastAttemptedCutoff": "2026-11-16T21:13:21+09:00"
     },
     "domesticNews": {
       "status": "partial",
@@ -2740,9 +2896,14 @@
           "startExclusive": "2026-11-16T00:17:50.739Z",
           "endInclusive": "2026-11-16T12:45:26.571+09:00",
           "reason": "DART 당일 전체목록 직접 접근 실패 및 국내 전 공시·기관 원문의 연속 전수 검증 미완료"
+        },
+        {
+          "startExclusive": "2026-11-16T12:45:26.571+09:00",
+          "endInclusive": "2026-11-16T21:13:21+09:00",
+          "reason": "DART/KIND 및 국내 공식기관의 전수 원문 검증 미완료; 신규 채택 0건은 정상 0건 판정이 아님"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-16T12:45:26.571+09:00"
+      "lastAttemptedCutoff": "2026-11-16T21:13:21+09:00"
     },
     "usThemes": {
       "status": "partial",
