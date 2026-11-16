@@ -4,6 +4,12 @@ The canonical public data is `market-briefing.json`, schemaVersion 1. ChatGPT's 
 
 KST slots: 06:40, 08:40, 12:40, 19:40. On verified KRX closed days only 06:40 and 19:40 run. Preserve the scheduled slot despite delayed execution. Retain calendar D through D-3; no fabricated empty days. The app displays the same four calendar days. Feature-stock data is independent and remains on its existing feed.
 
+## Direct-publication cutover (2026-11-16)
+
+The existing enabled ChatGPT task `Automation_f7a1c2f075188191b451d7a9050c333d` is the **only briefing research and publishing scheduler**. GitHub Actions legacy workflows `publish-reviewed-briefing.yml`, `run-briefing-edition.yml`, `check-briefing-sources.yml` and `check-us-themes.yml` have been converted to **manual read-only no-op stubs**: they no longer have cron or push triggers and must not be used for publishing. `validate-editorial-policy.yml` remains read-only CI testing, not a data publisher. Old source-collection, draft and publishing scripts are retained for code history/validation but must not be invoked by the direct briefing task.
+
+The task writes `market-briefing.json` directly through its GitHub connection, using latest remote SHA and a safe read/merge/retry/readback cycle, keeping D through D-3. The app already fetches this canonical public JSON through `src/feed.ts` and needs no change for this migration. If GitHub write fails, do not claim publication or substitute a new empty file. Source-research completeness and actual storage success are separate statuses.
+
 ## Storage and research are separate
 
 `session.asOf` is the actual research cutoff, never a claim of complete coverage. `researchStatus` is complete/partial/failed. `researchAudit.domains.foreignNews`, `domesticNews`, `usThemes` each hold status, actual attemptedAt/checkedAt, windowStartExclusive/windowEndInclusive, completedThrough, failedSources, alternativeSources and pendingWindows. Only a verified contiguous complete interval advances completedThrough. The next run rechecks unresolved news windows independently. Carry pending ranges and completedThrough in top-level `researchState` before FIFO removes session content. Do not copy expired news into that state.
