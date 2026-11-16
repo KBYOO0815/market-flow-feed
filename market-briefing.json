@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T01:49:18.191Z",
+  "updatedAt": "2026-11-16T03:50:49.040Z",
   "days": [
     {
       "date": "2026-11-16",
@@ -1520,6 +1520,722 @@
             ]
           },
           "asOf": "2026-11-16T00:17:50.739Z"
+        },
+        {
+          "slot": "12:40",
+          "asOf": "2026-11-16T12:45:26.571+09:00",
+          "researchStatus": "partial",
+          "usThemes": [],
+          "usThemeStatus": "not_applicable",
+          "foreignNews": [
+            {
+              "id": "20261116-1240-china-october-activity",
+              "title": "중국 10월 산업생산 4.8%·소매판매 0.4% 증가, 고정자산투자 8.1% 감소",
+              "summary": "중국 국가통계국 자료에 따르면 10월 산업생산은 전년 대비 4.8%, 소매판매는 0.4% 증가했다. 1~10월 고정자산투자는 8.1% 감소했고 조사대상 도시 실업률은 5.1%였다.",
+              "publishedAt": "2026-11-16T11:06:00+09:00",
+              "sourceName": "Reuters·중국 국가통계국",
+              "sourceUrl": "https://www.reuters.com/world/chinas-factory-output-retail-sales-growth-slow-october-2026-11-16/",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "중국 경기·실물지표",
+              "region": "foreign",
+              "eventKey": "china-nbs-october-activity-data-20261116",
+              "eventAt": "2026-11-16T11:06:00+09:00",
+              "facts": [
+                {
+                  "factKey": "china-industrial-output-yoy-202610",
+                  "value": 4.8,
+                  "unit": "percent",
+                  "sourceUrl": "https://www.reuters.com/world/chinas-factory-output-retail-sales-growth-slow-october-2026-11-16/"
+                },
+                {
+                  "factKey": "china-retail-sales-yoy-202610",
+                  "value": 0.4,
+                  "unit": "percent",
+                  "sourceUrl": "https://www.reuters.com/world/chinas-factory-output-retail-sales-growth-slow-october-2026-11-16/"
+                },
+                {
+                  "factKey": "china-fixed-asset-investment-yoy-2026-jan-oct",
+                  "value": -8.1,
+                  "unit": "percent",
+                  "sourceUrl": "https://www.reuters.com/world/chinas-factory-output-retail-sales-growth-slow-october-2026-11-16/"
+                }
+              ]
+            },
+            {
+              "id": "20261116-1240-china-home-prices",
+              "title": "중국 10월 신규주택가격, 전월비 0.1%·전년비 2.4% 하락",
+              "summary": "중국 국가통계국 자료를 Reuters가 계산한 결과 10월 신규주택가격은 전월 대비 0.1%, 전년 대비 2.4% 하락했다. 전년 하락률은 2025년 11월 이후 가장 낮았다.",
+              "publishedAt": "2026-11-16T10:44:00+09:00",
+              "sourceName": "Reuters·중국 국가통계국",
+              "sourceUrl": "https://www.reuters.com/markets/asia/drop-chinas-new-home-prices-narrows-11-month-low-2026-11-16/",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "중국 부동산",
+              "region": "foreign",
+              "eventKey": "china-new-home-prices-202610-release-20261116",
+              "eventAt": "2026-11-16T10:44:00+09:00",
+              "facts": [
+                {
+                  "factKey": "china-new-home-prices-mom-202610",
+                  "value": -0.1,
+                  "unit": "percent",
+                  "sourceUrl": "https://www.reuters.com/markets/asia/drop-chinas-new-home-prices-narrows-11-month-low-2026-11-16/"
+                },
+                {
+                  "factKey": "china-new-home-prices-yoy-202610",
+                  "value": -2.4,
+                  "unit": "percent",
+                  "sourceUrl": "https://www.reuters.com/markets/asia/drop-chinas-new-home-prices-narrows-11-month-low-2026-11-16/"
+                }
+              ]
+            },
+            {
+              "id": "20261116-1240-canaccord-sale-take-private",
+              "title": "Canaccord, 영국 자산관리사업 매각·잔여회사 비상장화 합의",
+              "summary": "Canaccord Genuity는 영국 자산관리사업을 기업가치 약 11억7천만파운드에 매각하기로 합의했다. CEO 주도 투자자는 매각 성사를 조건으로 나머지 회사를 비상장화하며, 두 거래는 승인 절차를 거쳐 2027년 상반기 종결 예정이다.",
+              "publishedAt": "2026-11-16T11:18:00+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/canaccord-sell-uk-wealth-unit-155-billion-ceo-take-company-private-2026-11-16/",
+              "relatedStocks": [
+                "Canaccord Genuity(CF.TO)"
+              ],
+              "impactRank": 3,
+              "category": "금융·기업거래",
+              "region": "foreign",
+              "eventKey": "canaccord-uk-wealth-sale-take-private-20261116",
+              "facts": [
+                {
+                  "factKey": "canaccord-uk-wealth-sale-enterprise-value-20261116",
+                  "value": 1170000000,
+                  "unit": "GBP",
+                  "sourceUrl": "https://www.reuters.com/business/canaccord-sell-uk-wealth-unit-155-billion-ceo-take-company-private-2026-11-16/"
+                },
+                {
+                  "factKey": "canaccord-ceo-led-take-private-agreement-20261116",
+                  "statement": "영국 사업 매각 성사를 조건으로 CEO가 잔여 보통주 전량 인수에 합의",
+                  "sourceUrl": "https://www.reuters.com/business/canaccord-sell-uk-wealth-unit-155-billion-ceo-take-company-private-2026-11-16/"
+                }
+              ]
+            },
+            {
+              "id": "20261116-1240-mahanadi-ipo-band",
+              "title": "Coal India 자회사 Mahanadi, IPO 가격밴드 확정",
+              "summary": "Mahanadi Coalfields는 IPO 가격밴드를 주당 129~136루피로 정해 최대 9천억루피 기업가치를 제시했다. 모회사 Coal India가 지분 약 10%에 해당하는 6억6,180만주를 매각하며 청약은 11월 19~23일 진행된다.",
+              "publishedAt": "2026-11-16T11:31:00+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/energy/coal-indias-mahanadi-coalfields-seeks-96-billion-valuation-ipo-2026-11-16/",
+              "relatedStocks": [
+                "Coal India(COAL.NS)"
+              ],
+              "impactRank": 4,
+              "category": "석탄·IPO",
+              "region": "foreign",
+              "eventKey": "mahanadi-coalfields-ipo-price-band-20261116",
+              "eventAt": "2026-11-16T11:31:00+09:00",
+              "facts": [
+                {
+                  "factKey": "mahanadi-ipo-price-band-20261116",
+                  "statement": "주당 129~136루피",
+                  "sourceUrl": "https://www.reuters.com/business/energy/coal-indias-mahanadi-coalfields-seeks-96-billion-valuation-ipo-2026-11-16/"
+                },
+                {
+                  "factKey": "mahanadi-ipo-shares-offered-20261116",
+                  "value": 661800000,
+                  "unit": "shares",
+                  "sourceUrl": "https://www.reuters.com/business/energy/coal-indias-mahanadi-coalfields-seeks-96-billion-valuation-ipo-2026-11-16/"
+                }
+              ]
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "20261116-1240-korea-ict-exports-october",
+              "title": "10월 ICT 수출 703.5억달러…전년비 202.0% 증가",
+              "summary": "과기정통부·산업통상부 발표 기준 10월 ICT 수출은 703.5억달러, 수입은 198.0억달러로 무역수지 505.5억달러 흑자를 기록했다. 반도체 수출은 564.7억달러로 259.4% 증가했다.",
+              "publishedAt": "2026-11-15T11:00:00+09:00",
+              "sourceName": "과학기술정보통신부·산업통상부",
+              "sourceUrl": "https://www.motir.go.kr/attach/down/095a2dda9c864e1d90d751f7668a1117/f604a620244b9bf41395655d434b6bf4",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "ICT·반도체 수출",
+              "region": "domestic",
+              "eventKey": "korea-ict-exports-202610-release-20261115",
+              "eventAt": "2026-11-15T11:00:00+09:00",
+              "facts": [
+                {
+                  "factKey": "korea-ict-exports-usd-202610",
+                  "value": 70350000000,
+                  "unit": "USD",
+                  "sourceUrl": "https://www.motir.go.kr/attach/down/095a2dda9c864e1d90d751f7668a1117/f604a620244b9bf41395655d434b6bf4"
+                },
+                {
+                  "factKey": "korea-ict-exports-yoy-202610",
+                  "value": 202,
+                  "unit": "percent",
+                  "sourceUrl": "https://www.motir.go.kr/attach/down/095a2dda9c864e1d90d751f7668a1117/f604a620244b9bf41395655d434b6bf4"
+                },
+                {
+                  "factKey": "korea-semiconductor-exports-usd-202610",
+                  "value": 56470000000,
+                  "unit": "USD",
+                  "sourceUrl": "https://www.motir.go.kr/attach/down/095a2dda9c864e1d90d751f7668a1117/f604a620244b9bf41395655d434b6bf4"
+                }
+              ]
+            },
+            {
+              "id": "20261116-1240-korea-auto-october",
+              "title": "10월 자동차 수출 65.5억달러…역대 10월 최대",
+              "summary": "산업통상부는 10월 자동차 수출액이 전년 대비 18.1% 증가한 65.5억달러로 역대 10월 최대라고 발표했다. 내수 판매는 13.7만대로 7.9%, 생산은 38.1만대로 25.8% 증가했다.",
+              "publishedAt": "2026-11-16T11:00:00+09:00",
+              "sourceName": "산업통상부",
+              "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789381&pWise=sub&pWiseSub=C2",
+              "relatedStocks": [
+                "현대차(005380)",
+                "기아(000270)"
+              ],
+              "impactRank": 2,
+              "category": "자동차 수출·산업",
+              "region": "domestic",
+              "eventKey": "korea-auto-industry-202610-release-20261116",
+              "eventAt": "2026-11-16T11:00:00+09:00",
+              "facts": [
+                {
+                  "factKey": "korea-auto-exports-usd-202610",
+                  "value": 6550000000,
+                  "unit": "USD",
+                  "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789381&pWise=sub&pWiseSub=C2"
+                },
+                {
+                  "factKey": "korea-auto-exports-yoy-202610",
+                  "value": 18.1,
+                  "unit": "percent",
+                  "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789381&pWise=sub&pWiseSub=C2"
+                },
+                {
+                  "factKey": "korea-auto-production-yoy-202610",
+                  "value": 25.8,
+                  "unit": "percent",
+                  "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789381&pWise=sub&pWiseSub=C2"
+                }
+              ]
+            },
+            {
+              "id": "20261116-1240-fsc-security-institute-order",
+              "title": "금융위, 금융보안원 침해사고 원인조사·IT 체계 전면 재점검 지시",
+              "summary": "금융위원회는 11월 9일 발생한 금융보안원 침해사고와 관련해 원인조사, IT 시스템·업무체계 전반 재점검, 소비자 피해 방지와 재발방지 대책 마련을 지시했다. 사고 원인과 피해 범위가 확정됐다는 발표는 아니다.",
+              "publishedAt": "2026-11-16T10:01:00+09:00",
+              "sourceName": "금융위원회",
+              "sourceUrl": "https://www.fsc.go.kr/no010101/88152?curPage=&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+              "relatedStocks": [],
+              "impactRank": 3,
+              "category": "금융보안·규제",
+              "region": "domestic",
+              "eventKey": "fsc-financial-security-institute-cyber-response-20261116",
+              "eventAt": "2026-11-16T09:30:00+09:00",
+              "facts": [
+                {
+                  "factKey": "fsc-orders-fsi-root-cause-and-it-review-20261116",
+                  "statement": "금융보안원 침해사고의 원인조사와 IT시스템·업무체계 전반 재점검 및 재발방지 대책 마련 지시",
+                  "sourceUrl": "https://www.fsc.go.kr/no010101/88152?curPage=&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText="
+                }
+              ]
+            },
+            {
+              "id": "20261116-1240-asan-iled-center",
+              "title": "아산 무기발광 디스플레이 실증센터 착공…1,461억원 투입",
+              "summary": "산업통상부는 아산탕정테크노일반산업단지에서 스마트모듈러센터 착공식을 열었다. 2032년까지 센터에 1,461억원을 투입해 2028년 하반기 완공하고 2029년부터 화소·패널·모듈 실증을 지원할 계획이다.",
+              "publishedAt": "2026-11-16T11:00:00+09:00",
+              "sourceName": "산업통상부",
+              "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789382",
+              "relatedStocks": [],
+              "impactRank": 4,
+              "category": "디스플레이·산업투자",
+              "region": "domestic",
+              "eventKey": "asan-iled-smart-modular-center-groundbreaking-20261116",
+              "eventAt": "2026-11-16T11:00:00+09:00",
+              "facts": [
+                {
+                  "factKey": "asan-smart-modular-center-investment-20261116",
+                  "value": 146100000000,
+                  "unit": "KRW",
+                  "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789382"
+                },
+                {
+                  "factKey": "asan-smart-modular-center-support-start-2029",
+                  "value": 2029,
+                  "unit": "year",
+                  "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789382"
+                }
+              ]
+            },
+            {
+              "id": "20261116-1240-kftc-mobility-consent-process",
+              "title": "공정위, 카카오·티맵모빌리티 등 대리운전 동의의결 절차 개시",
+              "summary": "공정위는 카카오모빌리티·티맵모빌리티 등 4개사의 단체보험·기사등급제 관련 공정거래법 위반 혐의에 대해 동의의결 절차 개시를 결정했다고 발표했다. 최종 동의의결은 이해관계자 의견수렴과 위원회 심의를 거쳐 별도로 결정된다.",
+              "publishedAt": "2026-11-16T12:00:00+09:00",
+              "sourceName": "공정거래위원회",
+              "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789383",
+              "relatedStocks": [
+                "카카오(035720)"
+              ],
+              "impactRank": 5,
+              "category": "플랫폼 규제·모빌리티",
+              "region": "domestic",
+              "eventKey": "kftc-driver-platform-consent-order-procedure-20261116",
+              "facts": [
+                {
+                  "factKey": "kftc-opens-consent-order-process-driver-platforms-20261116",
+                  "statement": "카카오모빌리티·티맵모빌리티·씨엠엔피·와이엘피 대상 동의의결 절차 개시; 최종 인용 결정 전",
+                  "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789383"
+                },
+                {
+                  "factKey": "kakao-mobility-proposed-support-total-20261116",
+                  "value": 2775000000,
+                  "unit": "KRW",
+                  "sourceUrl": "https://www.yna.co.kr/view/AKR20261116069200002"
+                }
+              ]
+            },
+            {
+              "id": "20261116-1240-yky-mc-listing",
+              "title": "영광와이케이엠씨, 코스닥 신규상장·거래 개시",
+              "summary": "반도체·디스플레이 장비용 정밀부품 제조사 영광와이케이엠씨가 코스닥시장에 신규 상장해 거래를 시작했다. 공모가는 1만1,000원이며 종목코드는 345290이다.",
+              "publishedAt": "2026-11-16T09:07:00+09:00",
+              "sourceName": "한국거래소·연합뉴스",
+              "sourceUrl": "https://www.yna.co.kr/view/AKR20261116030200008",
+              "relatedStocks": [
+                "영광와이케이엠씨(345290)"
+              ],
+              "impactRank": 6,
+              "category": "신규상장",
+              "region": "domestic",
+              "eventKey": "yky-mc-kosdaq-listing-20261116",
+              "eventAt": "2026-11-16T09:00:00+09:00",
+              "facts": [
+                {
+                  "factKey": "yky-mc-kosdaq-trading-start-20261116",
+                  "statement": "2026년 11월 16일 코스닥 신규상장 및 거래 개시",
+                  "sourceUrl": "https://kind.krx.co.kr/corpgeneral/corpList.do?beginIndex=&comAbbrv=&comAbbrvTmp=&currentPageSize=1500&fiscalYearEnd=all&industry=&isurCd=&location=all&marketType=kosdaqMkt&method=searchCorpList&orderMode=3&orderStat=D&pageIndex=1&repIsuSrtCd=&searchCodeType=&searchType=13"
+                },
+                {
+                  "factKey": "yky-mc-ipo-price-20261116",
+                  "value": 11000,
+                  "unit": "KRW_per_share",
+                  "sourceUrl": "https://www.yna.co.kr/view/AKR20261112170900008"
+                }
+              ]
+            }
+          ],
+          "marketSnapshot": null,
+          "researchAudit": {
+            "window": {
+              "cutoffInclusive": "2026-11-16T12:45:26.571+09:00",
+              "baselineSha": "b23ea606edbd522f43fa7b3e2c85555a4990084f"
+            },
+            "domains": {
+              "foreignNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-16T12:45:26.571+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "windowStartExclusive": "2026-11-15T19:41:44+09:00",
+                "windowEndInclusive": "2026-11-16T12:45:26.571+09:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "국외 필수범위 연속검증",
+                    "reason": "Reuters·공식기관·기업 발표를 폭넓게 조회했으나 모든 필수 영역의 최신 원문과 최초 발표시각을 연속적으로 닫지 못함"
+                  }
+                ],
+                "alternativeSources": [
+                  "https://www.reuters.com/",
+                  "https://www.esri.cao.go.jp/",
+                  "https://www.nyse.com/"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-15T19:41:44+09:00",
+                    "endInclusive": "2026-11-16T12:45:26.571+09:00",
+                    "reason": "미완료 이관 구간과 이번 구간의 전 필수영역 연속검증 미완료"
+                  }
+                ]
+              },
+              "domesticNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-16T12:45:26.571+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "windowStartExclusive": "2026-11-13T20:45:57.405+09:00",
+                "windowEndInclusive": "2026-11-16T12:45:26.571+09:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "DART 날짜별 전체공시",
+                    "reason": "2026-11-16 전체목록 페이지 직접 접근이 차단되어 전체 본문·총건수 검증 불가"
+                  },
+                  {
+                    "source": "KIND 실시간 전체목록",
+                    "reason": "일부 목록·시장조치는 확인했으나 모든 당일 공시 본문을 연속 검증하지 못함"
+                  }
+                ],
+                "alternativeSources": [
+                  "https://www.korea.kr/briefing/pressReleaseList.do",
+                  "https://www.fsc.go.kr/no010101",
+                  "https://kind.krx.co.kr/",
+                  "https://www.yna.co.kr/"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-13T20:45:57.405+09:00",
+                    "endInclusive": "2026-11-16T12:45:26.571+09:00",
+                    "reason": "이전 DART 장애와 이번 당일 전체공시 직접조회 실패"
+                  }
+                ]
+              },
+              "usThemes": {
+                "status": "not_applicable",
+                "attemptedAt": "2026-11-16T12:45:26.571+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "windowStartExclusive": "2026-11-16T00:17:50.739Z",
+                "windowEndInclusive": "2026-11-16T12:45:26.571+09:00",
+                "completedThrough": null,
+                "failedSources": [],
+                "alternativeSources": [],
+                "pendingWindows": []
+              }
+            },
+            "krxTradingDayEvidence": {
+              "result": true,
+              "reason": "KRX 공식 운영규정과 2026-11-16 장중 KOSPI 거래 보도를 교차 확인",
+              "sources": [
+                "https://global.krx.co.kr/contents/GLB/06/0602/0602010201/GLB0602010201T1.jsp",
+                "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-16/"
+              ]
+            },
+            "coverage": {
+              "shortlistReviewed": {
+                "foreign": 9,
+                "domestic": 10
+              },
+              "selected": {
+                "foreign": 4,
+                "domestic": 6
+              },
+              "duplicateExcluded": 3
+            },
+            "candidates": [
+              {
+                "region": "foreign",
+                "eventKey": "china-nbs-october-activity-data-20261116",
+                "factKeys": [
+                  "china-industrial-output-yoy-202610",
+                  "china-retail-sales-yoy-202610",
+                  "china-fixed-asset-investment-yoy-2026-jan-oct"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/world/chinas-factory-output-retail-sales-growth-slow-october-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T11:06:00+09:00",
+                "eventAt": "2026-11-16T11:06:00+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": "중국 국가통계국 자료에 따르면 10월 산업생산은 전년 대비 4.8%, 소매판매는 0.4% 증가했다. 1~10월 고정자산투자는 8.1% 감소했고 조사대상 도시 실업률은 5.1%였다.",
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "원문 발표시각·수치·신규성을 확인하고 기존 event/fact와 불일치 확인"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "china-new-home-prices-202610-release-20261116",
+                "factKeys": [
+                  "china-new-home-prices-mom-202610",
+                  "china-new-home-prices-yoy-202610"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/markets/asia/drop-chinas-new-home-prices-narrows-11-month-low-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T10:44:00+09:00",
+                "eventAt": "2026-11-16T10:44:00+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": "중국 국가통계국 자료를 Reuters가 계산한 결과 10월 신규주택가격은 전월 대비 0.1%, 전년 대비 2.4% 하락했다. 전년 하락률은 2025년 11월 이후 가장 낮았다.",
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "원문 발표시각·수치·신규성을 확인하고 기존 event/fact와 불일치 확인"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "canaccord-uk-wealth-sale-take-private-20261116",
+                "factKeys": [
+                  "canaccord-uk-wealth-sale-enterprise-value-20261116",
+                  "canaccord-ceo-led-take-private-agreement-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/business/canaccord-sell-uk-wealth-unit-155-billion-ceo-take-company-private-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T11:18:00+09:00",
+                "eventAt": null,
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": "Canaccord Genuity는 영국 자산관리사업을 기업가치 약 11억7천만파운드에 매각하기로 합의했다. CEO 주도 투자자는 매각 성사를 조건으로 나머지 회사를 비상장화하며, 두 거래는 승인 절차를 거쳐 2027년 상반기 종결 예정이다.",
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "원문 발표시각·수치·신규성을 확인하고 기존 event/fact와 불일치 확인"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "mahanadi-coalfields-ipo-price-band-20261116",
+                "factKeys": [
+                  "mahanadi-ipo-price-band-20261116",
+                  "mahanadi-ipo-shares-offered-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/business/energy/coal-indias-mahanadi-coalfields-seeks-96-billion-valuation-ipo-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T11:31:00+09:00",
+                "eventAt": "2026-11-16T11:31:00+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": "Mahanadi Coalfields는 IPO 가격밴드를 주당 129~136루피로 정해 최대 9천억루피 기업가치를 제시했다. 모회사 Coal India가 지분 약 10%에 해당하는 6억6,180만주를 매각하며 청약은 11월 19~23일 진행된다.",
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "원문 발표시각·수치·신규성을 확인하고 기존 event/fact와 불일치 확인"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "korea-ict-exports-202610-release-20261115",
+                "factKeys": [
+                  "korea-ict-exports-usd-202610",
+                  "korea-ict-exports-yoy-202610",
+                  "korea-semiconductor-exports-usd-202610"
+                ],
+                "sourceUrls": [
+                  "https://www.motir.go.kr/attach/down/095a2dda9c864e1d90d751f7668a1117/f604a620244b9bf41395655d434b6bf4"
+                ],
+                "sourcePublishedAt": "2026-11-15T11:00:00+09:00",
+                "eventAt": "2026-11-15T11:00:00+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": "과기정통부·산업통상부 발표 기준 10월 ICT 수출은 703.5억달러, 수입은 198.0억달러로 무역수지 505.5억달러 흑자를 기록했다. 반도체 수출은 564.7억달러로 259.4% 증가했다.",
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "이전 국내 미완료 창에서 누락된 공식 발표를 이번 재조사로 검증"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "korea-auto-industry-202610-release-20261116",
+                "factKeys": [
+                  "korea-auto-exports-usd-202610",
+                  "korea-auto-exports-yoy-202610",
+                  "korea-auto-production-yoy-202610"
+                ],
+                "sourceUrls": [
+                  "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789381&pWise=sub&pWiseSub=C2"
+                ],
+                "sourcePublishedAt": "2026-11-16T11:00:00+09:00",
+                "eventAt": "2026-11-16T11:00:00+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": "산업통상부는 10월 자동차 수출액이 전년 대비 18.1% 증가한 65.5억달러로 역대 10월 최대라고 발표했다. 내수 판매는 13.7만대로 7.9%, 생산은 38.1만대로 25.8% 증가했다.",
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "공식 원문 또는 공식원문과 시각 확인 가능한 신뢰매체를 교차 확인"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "fsc-financial-security-institute-cyber-response-20261116",
+                "factKeys": [
+                  "fsc-orders-fsi-root-cause-and-it-review-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.fsc.go.kr/no010101/88152?curPage=&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText="
+                ],
+                "sourcePublishedAt": "2026-11-16T10:01:00+09:00",
+                "eventAt": "2026-11-16T09:30:00+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": "금융위원회는 11월 9일 발생한 금융보안원 침해사고와 관련해 원인조사, IT 시스템·업무체계 전반 재점검, 소비자 피해 방지와 재발방지 대책 마련을 지시했다. 사고 원인과 피해 범위가 확정됐다는 발표는 아니다.",
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "공식 원문 또는 공식원문과 시각 확인 가능한 신뢰매체를 교차 확인"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "asan-iled-smart-modular-center-groundbreaking-20261116",
+                "factKeys": [
+                  "asan-smart-modular-center-investment-20261116",
+                  "asan-smart-modular-center-support-start-2029"
+                ],
+                "sourceUrls": [
+                  "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789382"
+                ],
+                "sourcePublishedAt": "2026-11-16T11:00:00+09:00",
+                "eventAt": "2026-11-16T11:00:00+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": "산업통상부는 아산탕정테크노일반산업단지에서 스마트모듈러센터 착공식을 열었다. 2032년까지 센터에 1,461억원을 투입해 2028년 하반기 완공하고 2029년부터 화소·패널·모듈 실증을 지원할 계획이다.",
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "공식 원문 또는 공식원문과 시각 확인 가능한 신뢰매체를 교차 확인"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "kftc-driver-platform-consent-order-procedure-20261116",
+                "factKeys": [
+                  "kftc-opens-consent-order-process-driver-platforms-20261116",
+                  "kakao-mobility-proposed-support-total-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789383"
+                ],
+                "sourcePublishedAt": "2026-11-16T12:00:00+09:00",
+                "eventAt": null,
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": "공정위는 카카오모빌리티·티맵모빌리티 등 4개사의 단체보험·기사등급제 관련 공정거래법 위반 혐의에 대해 동의의결 절차 개시를 결정했다고 발표했다. 최종 동의의결은 이해관계자 의견수렴과 위원회 심의를 거쳐 별도로 결정된다.",
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "공식 원문 또는 공식원문과 시각 확인 가능한 신뢰매체를 교차 확인"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "yky-mc-kosdaq-listing-20261116",
+                "factKeys": [
+                  "yky-mc-kosdaq-trading-start-20261116",
+                  "yky-mc-ipo-price-20261116"
+                ],
+                "sourceUrls": [
+                  "https://www.yna.co.kr/view/AKR20261116030200008"
+                ],
+                "sourcePublishedAt": "2026-11-16T09:07:00+09:00",
+                "eventAt": "2026-11-16T09:00:00+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": "반도체·디스플레이 장비용 정밀부품 제조사 영광와이케이엠씨가 코스닥시장에 신규 상장해 거래를 시작했다. 공모가는 1만1,000원이며 종목코드는 345290이다.",
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "공식 원문 또는 공식원문과 시각 확인 가능한 신뢰매체를 교차 확인"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "japan-gdp-2026q3-first-preliminary",
+                "factKeys": [
+                  "japan-real-gdp-2026q3-first-preliminary-annualized"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/business/japans-economy-unexpectedly-shrinks-july-september-consumption-falters-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T09:13:00+09:00",
+                "eventAt": "2026-11-16T08:50:00+09:00",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": null,
+                "previousMatch": "japan-gdp-2026q3-first-preliminary",
+                "decision": "duplicate",
+                "reason": "08:40 회차에 같은 GDP 사실이 이미 저장됨"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "global-markets-asia-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T10:35:52+09:00",
+                "eventAt": null,
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": null,
+                "previousMatch": null,
+                "decision": "other_excluded",
+                "reason": "기존 Nvidia·Fed·일본 GDP 사건의 시장반응과 예정 일정 중심"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "oil-market-supply-surplus-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/business/energy/oil-prices-fall-expectations-coming-supply-surplus-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T11:00:00+09:00",
+                "eventAt": null,
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": null,
+                "previousMatch": null,
+                "decision": "other_excluded",
+                "reason": "가격 반응 기사이며 IEA·Jones Act 핵심 사실은 조사창 이전 발표"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "un-autonomous-weapons-talks-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/world/us-russia-oppose-talks-limiting-autonomous-weapons-2026-11-16/"
+                ],
+                "sourcePublishedAt": "2026-11-16T09:03:45+09:00",
+                "eventAt": null,
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": null,
+                "previousMatch": null,
+                "decision": "scheduled_only",
+                "reason": "협상 개시 전 각국의 기존 입장과 예정 회의 보도이며 새 결정 없음"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "jensen-comeback-ft-report-20261115",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/world/china/jensen-huang-discusses-comeback-nvidia-ceo-with-allies-ft-reports-2026-11-15/"
+                ],
+                "sourcePublishedAt": null,
+                "eventAt": null,
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": null,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "회사 확인과 최초 보도시각을 확정하지 못한 인선 논의 보도"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "npk-management-designation-effective-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://kind.krx.co.kr/investwarn/adminissue.do?currentPageSize=3000&method=searchAdminIssueSub&orderMode=1&orderStat=D&pageIndex=1"
+                ],
+                "sourcePublishedAt": null,
+                "eventAt": "2026-11-16",
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": null,
+                "previousMatch": null,
+                "decision": "scheduled_only",
+                "reason": "11월 13일 공지된 시가총액 미달 관리종목 지정의 예정 효력일로 신규 발표시각 확인 불충분"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "fsc-europe-fsb-ecb-trip-20261115",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.fsc.go.kr/no010101"
+                ],
+                "sourcePublishedAt": null,
+                "eventAt": null,
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": null,
+                "previousMatch": "fsc-chair-europe-fsb-ecb-trip-20261115",
+                "decision": "duplicate",
+                "reason": "11월 15일 19:40에 MOU 추진·출장 일정이 이미 저장됐고 실제 체결은 아직 확인되지 않음"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "dart-full-list-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsac001/mainAll.do?selectDate=2026.11.16&currentPage=1"
+                ],
+                "sourcePublishedAt": null,
+                "eventAt": null,
+                "checkedAt": "2026-11-16T03:50:48.580Z",
+                "newFact": null,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "당일 전체목록 페이지 직접 접근 차단으로 전체 본문·총건수 검증 미완료"
+              }
+            ],
+            "helperValidation": {
+              "status": "equivalent_manual_checks",
+              "reason": "원격 스크립트를 읽었으나 로컬 파일 쓰기 없이 동일 구조·중복·FIFO 검사를 직접 수행"
+            }
+          },
+          "storageVerification": {
+            "status": "pending"
+          }
         }
       ]
     },
@@ -1998,9 +2714,14 @@
           "startExclusive": "2026-11-15T19:41:44+09:00",
           "reason": "이전 회차 완료 수준 미확인 및 해외 일부 영역 최신 원문 검증 미완료",
           "endInclusive": "2026-11-16T00:17:50.739Z"
+        },
+        {
+          "startExclusive": "2026-11-16T00:17:50.739Z",
+          "endInclusive": "2026-11-16T12:45:26.571+09:00",
+          "reason": "국외 필수범위 일부 최신 원문·최초발표시각의 연속 전수 검증 미완료"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-16T00:17:50.739Z"
+      "lastAttemptedCutoff": "2026-11-16T12:45:26.571+09:00"
     },
     "domesticNews": {
       "status": "partial",
@@ -2010,9 +2731,14 @@
           "startExclusive": "2026-11-13T20:45:57.405+09:00",
           "reason": "이전 DART 장애 구간과 현재 공시·정부 전체 본문 검증 미완료",
           "endInclusive": "2026-11-16T00:17:50.739Z"
+        },
+        {
+          "startExclusive": "2026-11-16T00:17:50.739Z",
+          "endInclusive": "2026-11-16T12:45:26.571+09:00",
+          "reason": "DART 당일 전체목록 직접 접근 실패 및 국내 전 공시·기관 원문의 연속 전수 검증 미완료"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-16T00:17:50.739Z"
+      "lastAttemptedCutoff": "2026-11-16T12:45:26.571+09:00"
     },
     "usThemes": {
       "status": "partial",
