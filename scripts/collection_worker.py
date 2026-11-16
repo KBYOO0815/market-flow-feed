@@ -37,6 +37,7 @@ def run(request):
     status={'requestId':ident,'releaseAt':request.get('releaseAt'),'published':False,'state':'collecting',
             'startedAt':started.isoformat(),'deadlineAt':(started+dt.timedelta(minutes=5)).isoformat()}
     status['progress'] = []
+    pathlib.Path('collection-artifacts').mkdir(exist_ok=True)
     trading = request.get('evidence', {}).get('tradingDayEvidence', {})
     if trading.get('verified') is True and trading.get('isTradingDay') is False and trading.get('date') == stamp(request['releaseAt']).date().isoformat():
         from featured_v3 import https

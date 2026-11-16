@@ -1,9 +1,10 @@
+# Historical schema1/2 compatibility regression; new production collection is tested in test_featured_v3.py.
 import copy
 import datetime as dt
 import unittest
 from unittest.mock import patch
 import publish_featured_stocks as publisher
-from featured_stocks import KST, SLOTS, archive, collect, enrich, retained_dates, validate, weighted, official_zero_nxt
+from featured_stocks import KST, SLOTS, archive, collect_legacy as collect, enrich, retained_dates, validate, weighted, official_zero_nxt
 from publish_featured_stocks import publication_entries
 
 
@@ -165,4 +166,3 @@ class FeaturedStocksTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

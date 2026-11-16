@@ -1,3 +1,4 @@
+# Historical collector safeguards; production uses schema3.
 import copy
 import datetime as dt
 import unittest
@@ -32,7 +33,7 @@ def official():
 class FeaturedRecoveryTests(unittest.TestCase):
     def test_unsorted_truncated_list_uses_complete_official_universe_and_finds_omitted_winner(self):
         events = []
-        snap = f.collect(RELEASE,EVIDENCE,source,NOW,official,trace=events.append)
+        snap = f.collect_legacy(RELEASE,EVIDENCE,source,NOW,official,trace=events.append)
         self.assertEqual(snap['byTurnover'][0], '000149')
         self.assertEqual(len(snap['stocks']),50)
         self.assertIn('nxt_order_inversion',[e['stage'] for e in events])
@@ -45,7 +46,7 @@ class FeaturedRecoveryTests(unittest.TestCase):
             obj=source(url)
             if 'tradeType=NXT' in url: obj.sort(key=lambda r:-int(r['tradeAmount']))
             return obj
-        snap = f.collect(RELEASE,EVIDENCE,get,NOW,official,full_nxt=True)
+        snap = f.collect_legacy(RELEASE,EVIDENCE,get,NOW,official,full_nxt=True)
         self.assertEqual(snap['byTurnover'][0],'000149')
 
     def test_official_eligible_404_remains_unknown_and_not_zero(self):
@@ -53,18 +54,18 @@ class FeaturedRecoveryTests(unittest.TestCase):
             if '/000149/' in url and 'codeType=NXT' in url:
                 raise urllib.error.HTTPError(url,404,'missing',{},None)
             return source(url)
-        with self.assertRaisesRegex(ValueError,'404 is not zero'): f.collect(RELEASE,EVIDENCE,get,NOW,official)
+        with self.assertRaisesRegex(ValueError,'404 is not zero'): f.collect_legacy(RELEASE,EVIDENCE,get,NOW,official)
 
     def test_stale_official_list_cannot_establish_complete_universe(self):
         bad=official();bad['setTime']='2026-11-12 09:10'
-        with self.assertRaises(ValueError): f.collect(RELEASE,EVIDENCE,source,NOW,lambda:bad)
+        with self.assertRaises(ValueError): f.collect_legacy(RELEASE,EVIDENCE,source,NOW,lambda:bad)
 
     def test_duplicate_ids_are_not_silently_overwritten(self):
         def get(url):
             obj=source(url)
             if 'tradeType=NXT' in url: obj.append(copy.deepcopy(obj[0]))
             return obj
-        with self.assertRaisesRegex(ValueError,'duplicate ranking'): f.collect(RELEASE,EVIDENCE,get,NOW,official)
+        with self.assertRaisesRegex(ValueError,'duplicate ranking'): f.collect_legacy(RELEASE,EVIDENCE,get,NOW,official)
 
     def test_probe_can_test_full_collection_outside_release_window_but_never_stage(self):
         later=NOW+dt.timedelta(hours=1)
@@ -72,10 +73,10 @@ class FeaturedRecoveryTests(unittest.TestCase):
             obj=source(url)
             if isinstance(obj,dict):obj['tradeTime']='20261113103000'
             return obj
-        snap=f.collect(RELEASE,EVIDENCE,current_source,later,lambda:{**official(),'setTime':'2026-11-13 10:10'},probe=True)
+        snap=f.collect_legacy(RELEASE,EVIDENCE,current_source,later,lambda:{**official(),'setTime':'2026-11-13 10:10'},probe=True)
         self.assertTrue(snap['probeOnly'])
         with self.assertRaisesRegex(ValueError,'not publishable'): f.enrich(snap,{'reviewedAt':later.isoformat(),'themes':[]})
-        with self.assertRaisesRegex(ValueError,'outside original'): f.collect(RELEASE,EVIDENCE,source,later,official)
+        with self.assertRaisesRegex(ValueError,'outside original'): f.collect_legacy(RELEASE,EVIDENCE,source,later,official)
 
 
 if __name__=='__main__': unittest.main()

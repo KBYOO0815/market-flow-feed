@@ -98,14 +98,15 @@ def list_url(market):
     return BASE + 'market/stock/default?marketType=ALL&orderType=priceTop&startIdx=0&pageSize=5000&tradeType=' + market
 
 
-def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_eligibility, trace=None, probe=False, full_nxt=False):
+def collect_legacy(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_eligibility, trace=None, probe=False, full_nxt=False):
     """Use complete KRX universe + NXT top-100 and fill any possible challenger.
 
     A missing NXT detail is NOT evidence for zero. Only independently verified
     zero-NXT records supplied by the researcher can establish that value.
     """
-    from featured_integrated import collect_integrated
-    return collect_integrated(release, evidence, fetch, now=now, trace=trace, probe=probe, eligibility_fetch=eligibility_fetch)
+    if hundred_edition(release):
+        from featured_krx import collect_krx_legacy
+        return collect_krx_legacy(release,evidence,fetch,now=now,trace=trace,probe=probe)
     started = now or dt.datetime.now(KST)
     target = stamp(release)
     if target.strftime('%H:%M') not in SLOTS or target.weekday() >= 5:
@@ -285,6 +286,11 @@ def collect(release, evidence, fetch=get, now=None, eligibility_fetch=get_nxt_el
             'byChangeRate': [s['code'] for s in sorted(stocks, key=lambda s: (-s['changeRate'], -s['integratedTradeAmount'], s['code']))],
             'themes': [], 'unclassified': list(ordered), 'collectionDiagnostics': diagnostics,
             'probeOnly': probe}
+
+
+def collect(release,evidence,fetch=get,now=None,eligibility_fetch=get_nxt_eligibility,trace=None,probe=False,full_nxt=False):
+    from featured_integrated import collect_integrated
+    return collect_integrated(release,evidence,fetch,now=now,trace=trace,probe=probe,eligibility_fetch=eligibility_fetch)
 
 
 def enrich(snapshot, review):

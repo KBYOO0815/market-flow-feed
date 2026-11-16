@@ -1,9 +1,10 @@
+# Historical schema1/2 compatibility regression; new production collection is tested in test_featured_v3.py.
 """KRX-100 migration, unlimited qualifying themes and legacy-feed isolation."""
 import copy
 import datetime as dt
 import unittest
 from unittest.mock import patch
-from featured_stocks import KST, collect, enrich, validate, archive
+from featured_stocks import KST, collect_legacy as collect, enrich, validate, archive
 from featured_scope import feed_prefix
 from featured_watch import watch, index_matches
 from publish_featured_stocks import publication_entries
@@ -108,7 +109,7 @@ class HundredTests(unittest.TestCase):
             if path.endswith('/index.json'):return publication_entries(p,archive(p),['2026-11-13'])[1],None
             return archive(p),None
         with patch.object(pub,'api',side_effect=api),patch.object(pub,'read_remote',side_effect=read):
-            self.assertEqual(pub.publish(p),'new')
+            self.assertEqual(pub.publish_legacy(p),'new')
         self.assertFalse(any(path.startswith('featured-stocks/') or path=='featured-stocks.json' for path,ref in reads))
         self.assertTrue(any(path=='contents/featured-stocks-v2/latest.md?ref=new' for method,path,body in api_calls))
 
@@ -121,7 +122,8 @@ class HundredTests(unittest.TestCase):
             if path=='featured-stocks-v2/'+date+'.json':return archive(p),None
             if path=='featured-stocks-v2/index.json':return index,None
             raise AssertionError(path)
-        r=watch(release,lambda s:None,read=read,clock=lambda:release)
+        with patch('featured_watch.release_prefix', return_value='featured-stocks-v2'):
+            r=watch(release,lambda s:None,read=read,clock=lambda:release)
         self.assertTrue(r['published'])
         self.assertTrue(all(x.startswith('featured-stocks-v2') for x in seen))
 

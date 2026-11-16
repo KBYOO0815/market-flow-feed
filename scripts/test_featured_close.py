@@ -1,10 +1,11 @@
+# Historical close-source regression; v3 close rules have separate tests.
 import copy
 import datetime as dt
 import os
 import unittest
 from unittest.mock import Mock, patch
 import featured_watch as watcher
-from featured_krx import collect_krx
+from featured_krx import collect_krx_legacy as collect_krx
 from featured_stocks import KST, validate
 from test_featured_hundred import staged
 

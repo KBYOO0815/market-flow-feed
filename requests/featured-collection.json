@@ -1,6 +1,6 @@
 {
-  "requestId": "integrated-v3-source-probe-20261116-1349",
+  "requestId": "integrated-v3-source-probe-20261116-1355",
   "mode": "probe",
   "releaseAt": "2026-11-16T13:40:00+09:00",
-  "purpose": "Live source connectivity/schema probe only; no quotes backdated and no publication"
+  "purpose": "Actual source connectivity and schema probe only; no publication"
 }

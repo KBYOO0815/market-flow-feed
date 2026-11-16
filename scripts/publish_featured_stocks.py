@@ -39,6 +39,10 @@ def publish(payload):
         from publish_featured_v3 import publish as publish_v3
         return publish_v3(payload, api, read_remote)
     raise ValueError("Legacy featured publication disabled; existing public data preserved")
+
+
+def publish_legacy(payload):
+    """Historical regression harness only; main/watch never call this."""
     prefix = feed_prefix(payload)
     for attempt in range(3):
         head = api('GET', 'git/ref/heads/main')['object']['sha']
