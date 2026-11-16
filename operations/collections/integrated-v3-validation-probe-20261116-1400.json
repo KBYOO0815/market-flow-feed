@@ -2,8 +2,24 @@
   "requestId": "integrated-v3-validation-probe-20261116-1400",
   "releaseAt": "2026-11-16T13:40:00+09:00",
   "published": false,
-  "state": "collecting",
+  "state": "collection_failed",
   "startedAt": "2026-11-16T13:59:56.365804+09:00",
   "deadlineAt": "2026-11-16T14:04:56.365804+09:00",
-  "progress": []
+  "progress": [
+    {
+      "stage": "integrated_source_queries",
+      "checkedAt": "2026-11-16T14:00:06.046341+09:00",
+      "evidencePath": "collection-artifacts/integrated-2026-11-16-1340.json",
+      "errors": {},
+      "markets": [
+        "KRX",
+        "NXT",
+        "NXT_OFFICIAL"
+      ]
+    }
+  ],
+  "lastStage": "integrated_source_queries",
+  "errorType": "ValueError",
+  "error": "source adapter blocked: complete classified security master, venue-only turnover definitions and verified KRX regular-close reference not supplied; raw source evidence saved",
+  "completedAt": "2026-11-16T14:00:06.046563+09:00"
 }
