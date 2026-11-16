@@ -66,6 +66,8 @@ def run(request):
             status['probeDetailSucceeded']=len(cache.values)
             from featured_source_probe import trading_probe
             status['tradingDayProbe']=trading_probe()
+            from featured_master import probe as master_probe
+            status['securityMasterProbe']=master_probe()
             status.update(state='probe_passed',scope='network_connectivity_and_load_only',freshnessValidated=False,rankingRows={m:len(v) for m,v in ranks.items()},officialRows=len(official['brdinfoTimeList']),officialObservedAt=official.get('setTime'))
         else:
             def progress(event):
