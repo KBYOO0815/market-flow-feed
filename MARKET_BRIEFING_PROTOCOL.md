@@ -1,38 +1,86 @@
-# Market Flow single-file protocol (2026-11-16)
+# Market Flow 브리핑 — 데이터 계약 및 GitHub 발행 규칙
 
-The canonical public data is `market-briefing.json`, schemaVersion 1. ChatGPT's single scheduled task directly reads, researches, merges with the latest GitHub SHA, writes and verifies this file. No Actions publisher, draft, request, private mirror or daily JSON is involved. Existing historical feeds remain historical and are not fallback sources for the new app.
+> 이 문서는 **앱과 GitHub JSON 사이의 데이터 형식·저장·발행 규칙만** 정의한다. 뉴스 검색어, 검색 원천·횟수·순서, 후보 수집, 중요도 판단, 중복 판정 방법, 사실 검증 방법, SEC/DART 탐색 방법, 기업·CEO SNS 탐색 방법은 **ChatGPT 브리핑 정규 예약 작업**이 자율적으로 결정한다. 이 문서를 AI 뉴스 분석 지침으로 사용하지 않는다.
 
-KST slots: 06:40, 08:40, 12:40, 19:40. On verified KRX closed days only 06:40 and 19:40 run. Preserve the scheduled slot despite delayed execution. Retain calendar D through D-3; no fabricated empty days. The app displays the same four calendar days. Feature-stock data is independent and remains on its existing feed.
+## 운영 구조
 
-## Direct-publication cutover (2026-11-16)
+- **정규 발행:** ChatGPT 예약 `Automation_f7a1c2f075188191b451d7a9050c333d` → 신규 재료 조사·분석 → 최종 JSON 생성 → GitHub 공개 저장소 `KBYOO0815/market-flow-feed`에 직접 저장 → 원격 재조회 → 앱 조회.
+- **독립 감시:** `6afafb9de2288191a51add93c667ed60`은 발행 누락·손상·품질 이상을 점검하고 필요한 경우 안전하게 복구한다.
+- GitHub Actions, 구형 draft/publisher/request 경로는 현행 브리핑 발행 경로가 아니다.
+- 앱 개발 저장소의 문서는 참고용 미러이며, 공개 feed 저장소의 이 계약과 실제 앱 파서가 데이터 호환 기준이다.
 
-The existing enabled ChatGPT task `Automation_f7a1c2f075188191b451d7a9050c333d` is the **only briefing research and publishing scheduler**. GitHub Actions legacy workflows `publish-reviewed-briefing.yml`, `run-briefing-edition.yml`, `check-briefing-sources.yml` and `check-us-themes.yml` have been converted to **manual read-only no-op stubs**: they no longer have cron or push triggers and must not be used for publishing. `validate-editorial-policy.yml` remains read-only CI testing, not a data publisher. Old source-collection, draft and publishing scripts are retained for code history/validation but must not be invoked by the direct briefing task.
+## 회차와 조사 구간
 
-The task writes `market-briefing.json` directly through its GitHub connection, using latest remote SHA and a safe read/merge/retry/readback cycle, keeping D through D-3. The app already fetches this canonical public JSON through `src/feed.ts` and needs no change for this migration. If GitHub write fails, do not claim publication or substitute a new empty file. Source-research completeness and actual storage success are separate statuses.
+- Asia/Seoul 기준 정규 회차: **06:40, 08:40, 12:40, 19:40**.
+- KRX 비거래일에는 **06:40, 19:40**만 정상 회차다.
+- 각 회차는 원칙적으로 **직전 도래 회차의 실제 `asOf` 초과부터 현재 회차의 실제 조사 cutoff까지 새로 공개된 사실**을 저장한다.
+- `asOf`는 실제 조사 cutoff다. 예약 시각이나 임의 시각으로 만들지 않는다.
+- 과거 누락·partial 복구는 원래 시간창을 보존하며 현재 회차 신규 사실로 위장하지 않는다.
 
-## Storage and research are separate
+## 공개 JSON 계약
 
-`session.asOf` is the actual research cutoff, never a claim of complete coverage. `researchStatus` is complete/partial/failed. `researchAudit.domains.foreignNews`, `domesticNews`, `usThemes` each hold status, actual attemptedAt/checkedAt, windowStartExclusive/windowEndInclusive, completedThrough, failedSources, alternativeSources and pendingWindows. Only a verified contiguous complete interval advances completedThrough. The next run rechecks unresolved news windows independently. Carry pending ranges and completedThrough in top-level `researchState` before FIFO removes session content. Do not copy expired news into that state.
+공개 파일은 `market-briefing.json` 하나이며 `schemaVersion: 1`을 사용한다.
 
-`usThemeStatus`: verified_themes, verified_no_theme, insufficient_data; non-06:40 is not_applicable. Empty themes with insufficient evidence do not mean no strong theme. Missing legacy audit fields mean unknown, not complete. Report stored/verified separately from source research.
+최상위 기본 구조:
 
-## Reproducibility
-
-Foreign/domestic news: each <=10, independent impactRank sequences, explicit region, HTTPS source, actual publication time, event/fact keys and candidate decisions. Existing baseline is not new delta. Preannounced schedules are not new events. A reputable report of discussion remains an attributed report, not a confirmed decision. Unverified publication time cannot establish newness.
-
-06:40 evidence stays in the same JSON under researchAudit.usThemeEvidence: sessionDate, session/timezone, sourceUrls, observed/collected times, dollarVolumeDefinition, completeness, all 50 ranked rows (ticker, companyName, common/adr securityType, rank, dollarVolume in USD, regularChangePct, HTTPS sourceUrl, observedAt; after-hours values with separate sources and times if verified), exclusions and common catalyst sources. Actual turnover is required; closing price times total volume is not actual turnover. Every selected theme has `memberTickers` listing all calculation members, weightedChangePct, totalDollarVolume and up to five display stocks. At least two verified members, positive turnover-weighted change, same-day common catalyst; no invented ranking. Arithmetic correctness does not prove input correctness or universe completeness.
-
-## Writer helper
-
-Run locally within the research task (not a scheduled Actions publisher):
-
+```json
+{
+  "schemaVersion": 1,
+  "updatedAt": "ISO8601",
+  "researchState": {},
+  "days": []
+}
 ```
-python3 scripts/market_briefing.py validate market-briefing.json
-python3 scripts/market_briefing.py merge CURRENT.json DRAFT.json OUTPUT.json
-```
 
-DRAFT is `{date,isKrxTradingDay,session,researchState?}`. Fresh drafts require domain audit statuses. Old sessions are accepted structurally without silently certifying their research. Re-read remote JSON and SHA immediately before merging; retry conflicts by reading/remerging, never force-write. Re-read the exact saved file afterwards and compare. The helper checks structure, retention, timestamps, status consistency and arithmetic; it cannot certify article truth, KRX trading status, dollar-turnover methodology or coverage.
+- `days`: 최신순 날짜 데이터. **D~D-3, 4개 달력 날짜 범위**만 유지한다.
+- 날짜 객체: `date`, `isKrxTradingDay`, `sessions`.
+- 회차 객체 기본 필드: `slot`, `asOf`, `researchStatus`, `usThemeStatus`, `usThemes`, `foreignNews`, `domesticNews`.
+- 같은 `date + slot`은 하나만 존재한다. 정정·복구 시 해당 session을 교체하고 다른 정상 회차는 보존한다.
+- 존재하지 않는 날짜·회차를 빈 성공 데이터로 만들지 않는다.
 
-## APK 00.14
+## 뉴스 데이터 계약
 
-Reads the single public JSON once per refresh, shows four slots and four retained dates, preserves manual selection on refresh/restart, distinguishes closed-day slots, missing/future editions and research/US-theme uncertainty. Invalid/network responses retain the last good display with an error. No private credentials are bundled. The build/device workflows build and test APKs only; they are not news publishers. Model/reasoning choice is not asserted by app code.
+- `foreignNews`: 최대 10개.
+- `domesticNews`: 최대 10개.
+- 각 배열의 `impactRank`는 1부터 연속이다.
+- 뉴스 기본 필드: `id,title,summary,publishedAt,sourceName,sourceUrl,relatedStocks,impactRank,category,region`.
+- 검증 가능한 경우 `eventKey,eventAt,facts` 등 보조 메타를 추가할 수 있다.
+- `sourceUrl`은 HTTPS 실제 근거 URL, `publishedAt`은 확인된 실제 원문/공시/공식발표 시각을 사용한다.
+- 확인되지 않은 숫자·시각·출처를 임의 생성하지 않는다.
+- 어떤 뉴스를 찾고 선택하며 검증할지는 이 문서가 강제하지 않고 정규 예약 작업이 담당한다.
+
+## 조사 상태 메타데이터
+
+- `researchStatus`: `complete | partial | failed`.
+- `researchAudit`, `researchState`, `storageVerification`은 조사·저장 상태를 감사하기 위한 보조 메타데이터다.
+- 이 메타데이터는 실제 수행 사실만 기록하며, 특정 검색 키워드·뉴스 원천·후보 개수·검색 횟수를 강제하는 정책으로 사용하지 않는다.
+- GitHub 저장 성공과 뉴스 조사 완료는 별개의 상태다.
+
+## 06:40 미국 테마 데이터 계약
+
+- `usThemes`는 **06:40 회차에만** 최대 3개 저장할 수 있다.
+- 다른 회차는 `usThemes: []`, `usThemeStatus: "not_applicable"`.
+- 06:40 `usThemeStatus`: `verified_themes | verified_no_theme | insufficient_data`.
+- 테마 기본 필드: `rank,theme,weightedChangePct,totalDollarVolume,afterHoursStatus,reason,stocks,relatedKoreanStocks`.
+- 종목 필드는 앱이 사용하는 `ticker,companyName,regularChangePct,dollarVolume,dollarVolumeRank` 및 확인 가능한 시간외 필드를 포함할 수 있다.
+- 계산·원천·Top50 증거 등 상세 감사정보는 `researchAudit.usThemeEvidence`에 기록할 수 있다.
+- 미국 테마의 원천 탐색·Top50 구성 방식·테마 판정·재료 검증 방법은 **정규 예약 작업 프롬프트가 전담**하며 이 문서에서 고정하지 않는다.
+
+## GitHub 발행·보존 규칙
+
+1. 작업 시작 시 최신 공개 JSON과 현재 blob SHA를 읽는다.
+2. 최종 검증된 session만 기존 정상 데이터에 병합한다.
+3. 쓰기 직전 최신 HEAD/SHA를 다시 확인하고 충돌 시 재조회·재병합한다.
+4. 강제 덮어쓰기하지 않는다.
+5. 저장 후 공개 `market-briefing.json`을 다시 읽어 대상 session, JSON 구조, 날짜 범위, 다른 회차 보존 여부와 실제 저장 내용을 확인한 뒤에만 발행 성공으로 보고한다.
+6. D~D-3 밖 데이터는 제거하되 미완료 조사 상태가 필요하면 콘텐츠가 아닌 감사 메타데이터 범위만 `researchState`에 보존할 수 있다.
+
+## 앱 호환
+
+- 앱은 공개 `market-briefing.json`을 읽어 날짜별 4개 회차를 표시한다.
+- 현재 앱 파서 `src/feed.ts`와 `src/editions.ts`가 구조적 호환성의 최종 기준이다.
+- 데이터 계약을 변경해 앱 필수 필드나 회차 구조가 달라질 경우 앱 파서와 함께 변경해야 한다.
+
+---
+
+**이 문서는 데이터 계약이다. 뉴스 검색·선별·중복 판단·사실 검증·시장 중요도 판단은 ChatGPT 정규 예약 작업의 프롬프트가 전담한다.**
