@@ -1,9 +1,9 @@
-# Market Flow 특징주 — 단일 ChatGPT 예약 → GitHub JSON → 앱 (2026-11-16)
+# Market Flow 특징주 — 단일 ChatGPT 예약 → GitHub JSON → 앱 (2026-11-17)
 
 ## 운영자 / 데이터 흐름
-- **유일한 실행자:** ChatGPT 예약 작업 `Automation_19be7cd0af808191aecbcc421c15a01c` (기존 작업 유지·활성화).
+- **정규 발행 실행자:** ChatGPT 예약 작업 `Automation_19be7cd0af808191aecbcc421c15a01c` (기존 작업 유지·활성화). 독립 감시 `6afafb9de2288191a51add93c667ed60`은 누락/품질 결함 확인 및 허용된 복구만 수행하고 정규 회차를 새로 생성하지 않는다.
 - 일정: `Asia/Seoul`, KRX 거래일 09:40 · 11:40 · 13:40 · 15:40 · 20:10. 월~금이라도 공식 KRX 비거래일에는 신규발행하지 않음.
-- **새 주 경로:** ChatGPT 공개 시세 직접 조회 → 뉴스·공시 확인 → 이 파일의 스키마로 JSON 생성·검증 → GitHub 직접 커밋 → 재조회 → 앱이 공개 JSON 읽기.
+- **단일 발행 경로:** ChatGPT 공개 시세 직접 조회 → 통합 Top100과 +4% 종목 확정 → **선정 종목 전부 종목별 뉴스·공시·산업 재료 검색 → 조사 완전성 및 테마 검증** → 앱용 JSON 1회 원자 커밋 → 원격 재조회 → 앱 공개 JSON 조회. 시세 우선발행/상승재료 추가발행의 2단계 방식 사용 금지.
 - **GitHub Actions 특징주 수집/발행 비활성화:** `.github/workflows/collect-featured-stocks.yml`, `.github/workflows/publish-featured-stocks.yml`는 수동 호출 시 안내 메시지만 출력. 특징주 서버 수집 및 발행 스크립트는 역사적 백업으로 남기며 신규 발행 경로에 연결하지 않음. `requests/featured-collection.json`, `drafts/featured-stocks.json`에 신규 요청·초안을 쓰지 않음.
 - 뉴스 브리핑 `market-briefing.json`과 `Market Flow 시장 재료 저장` 작업은 별개이며 변경 금지.
 
@@ -15,6 +15,35 @@
 - **경계 증명:** K100(검증된 KRX 100위), N100(검증된 NXT 100위), T100(후보 통합 100위)에서 `T100 > K100 + N100`이면, 두 원천 Top100이 각 시장에서 완전하고 후보 합집합의 거래대금·상장 유형이 전부 검증되었을 때 합집합 밖의 종목이 Top100에 진입할 수 없음. 세 원 단위 정수와 계산·출처·기준시각을 `rankingProof`에 남김. 이 조건을 만족하지 못하거나 100위 동률·원천 범위 오류가 있으면 추가 후보 검증; 증명 실패하면 발행 보류. 무관한 저유동성 종목 상세조회 404는 경계 증명이 충분할 때 장애 이유가 아님.
 - 상승률은 **KRX 전일 정규장 종가 대비**. NXT 현재가/장후 등락률과 혼합하지 않음. 가능한 KRX 실제 가격과 전일 정규장 종가를 확인하여 `changeRate = (price / previousRegularClose - 1) * 100` 계산하고 원문 표시율과 비교. 신규상장으로 기준가격 미확인이면 comparison.eligible=false, changeRate=null. 20:10 KRX 정규장 종가 및 NXT 당일 최종 누적 거래대금 각각 확인, 전일·당일 혼합 금지.
 - Top100 중 비교 가능한 상승률 `>= 4.00`을 모두 선별. 같은 업종 상승 종목 복수는 실제 사업 연결·공통 재료 구분 후 themes, 기업 단독 이벤트는 individualStocks. 동일 종목 정확히 한 곳만. 테마 가중 상승률 = Σ(changeRate×integratedTradeAmount)/Σ(integratedTradeAmount), 포함된 +4% 종목에 한함. 별도 '최종 테마 판정' 표 금지.
+
+## 종목별 상승 재료 조사 및 단일 발행 (2026-11-17)
+
+**이 절은 모든 신규 정규 발행 회차에 필수**이며, 예약 프롬프트의 2026-11-17 최우선 검색·검증 규칙과 동일하다.
+
+1. **순서 고정:** KRX+NXT 통합 거래대금 Top100 및 KRX 전일 정규장 종가 대비 +4.00% 이상 `selectedStockCodes` 전부 확정 → **선정된 모든 종목**에 대해 뉴스·공시 검색 → 실제 발표시각/기업 관련성/인과성·공통 테마 분석 → 종목별 검색 완료 감사 → 앱 `validateV3` 동등검사 → **근거를 포함한 JSON 단 한 번의 원자적 발행** → GitHub 원격 재조회. **시세만 먼저 성공 발행하고 재료를 나중에 덧붙이는 2단계 발행을 하지 않는다.**
+2. **각 종목 개별 의무 검색:** 회사명·6자리 종목코드·핵심 사업/업종을 사용. (a) 당일 DART/KIND 공시·정정 및 기업 공식 발표, (b) 당일 첫 기사와 회사명+'상승/급등/특징주' 검색, (c) 최근 5거래일의 실적·수주·정책·투자·증권사 리포트·업종 관련 뉴스. 공통 테마 여부는 다른 선정 종목의 사업 연관성·동반 상승·공통 출처도 교차 확인. **검색 한 번 0건은 조사 완료 증명이 아니다.** 조회 실패·원문 접근 불가·검색 범위 누락과 실제 0건을 분리한다.
+3. **발표시각·인과관계:** 기사 게시시각과 원문 사실이 **최초 공개된 시각**을 분리한다. 정규 시세 관측 `asOf`보다 나중에 첫 공개된 사실을 그 회차 당시의 상승 원인으로 소급하지 않는다. 원문에서 상승 인과를 명시한 경우에만 `source_attributed`; 관련 기업 실적·기존 정책·사업·업종 움직임 등 인과 미입증 사실은 `related_fact_only`. 기존 사실을 '당일 신규 재료'라고 표시하지 않는다. 분석 의견을 확인된 사건과 동일시하지 않는다. 추측·루머·출처 없는 단정 금지.
+4. **검색 결과 6개 상태 구분:** `new_fact_today`(당일 신규), `prior_fact`(기존 재료), `sector_theme`(공통 업종/테마), `related_fact_only`(관련 사실만 확인), `unconfirmed`(충분히 검색했지만 원인 불명), `incomplete`(검색/원문 검증 미완료). 실제 확인된 관련 사실은 정해진 `reason` 객체로 저장한다. **`reason:null`은 `unconfirmed`이면서 종목별 조사가 완료됐을 때만 허용**한다. 이유가 없다는 판정과 조사 자체가 누락된 상태를 혼동하지 않는다.
+5. **종목별 감사(앱 v3 호환 선택 필드의 운영상 필수화):** 기존 앱 필수 계약은 변경하지 않고 edition에 `reasonResearchAudit` 배열을 추가한다. 각 원소는 아래 의미를 갖고, 실제 수행된 검색만 기록한다.
+   - `code`: `selectedStockCodes`의 종목코드, 중복 불가
+   - `status`: `completed` 또는 `incomplete`
+   - `checkedAt`: 해당 종목 실제 검색/검토 KST ISO8601
+   - `searchedSources`: 실제 사용한 공식 공시·기업·뉴스·리포트 등 출처 유형 배열
+   - `searchQueries`: 실제 수행한 검색어 배열
+   - `checkedWindow`: 실제 조사한 `{start,end}` 검색 기간
+   - `evidenceUrls`: 확인한 HTTPS 원문 링크(검색 완료 후 관련 원문이 없으면 빈 배열 가능)
+   - `reasonClassification`: 위의 6가지 상태 중 하나
+   - `failureReason`: `incomplete`인 경우 실제 원천/접근/시간 실패 이유
+   - 감사 기록만으로 모든 URL의 진실성까지 보증하지는 않는다. `searchedSources`, `searchQueries`, `checkedWindow`, `checkedAt`은 실제 조회 증거를 추적할 수 있어야 한다.
+6. **발행 완료 게이트:** `selectedStockCodes.length === reasonResearchAudit.length`, 감사 종목코드의 집합/중복 없음, **모든 `status=completed`**, 필수 검색원천 유형·검색기간·출처 검증, `reason`과 `reasonClassification`/자료발표시각의 정합성을 통과한 때만 `status.publication=success`를 발행한다. 일부 종목이 `incomplete`이면 같은 실행에서 최대 두 번 추가 검색(총 세 번 시도) 후에도 해결되지 않을 경우 **운영 JSON 미발행, 기존 정상본 보존, 종목별 실패 이유 보고**. 검증된 자료가 없으나 전수 검색 완료된 종목은 `reason:null`과 `unconfirmed`으로 정상 발행 가능. 선정 종목 0개라면 감사 배열도 0개로 하되 시세 선별 완전성 증거는 필수.
+7. **보고 필수 숫자:** 선정 종목수, 검색 완료 종목수, 미완료 종목수, 확인된 상승 관련 자료 종목수, `reason:null` 종목수, 당일/기존/테마 분류 건수, 출처 URL, 저장 커밋 SHA, 원격 JSON 재조회 일치 여부를 분리해 표시한다. 뉴스 '검색 실행'과 '관련 상승 원인 확인'을 별개 성공조건으로 판단한다.
+
+### 독립 감시·복구의 범위
+
+- 기존 별도 작업 `6afafb9de2288191a51add93c667ed60`을 **재사용**한다. 새로운 감시 예약 작업을 중복 생성하지 않는다.
+- 감시자는 도래한 회차의 **존재/원자 저장/원격 재조회**뿐 아니라 `selectedStockCodes`와 `reasonResearchAudit`의 **1:1 대응·전종목 검색 완료·실제 시각·근거/인과 정합성**을 점검한다. 최신 규칙 적용 이전에 발행된 회차는 `legacy_audit_missing`으로 구분하고 검증 성공이라고 표현하지 않는다.
+- 결함이 발견되어도 기존 정상 시세·회차를 삭제하거나 전체 빈 발행물로 바꾸지 않는다. 필요하면 실제 조사·검증을 수행하여 **원래 관측 `asOf`보다 앞선 사실만** 같은 date/slot에 보완하고, 수정 시 `reviewedAt`/`publishedAt`을 실제 수정시각으로 기입한다. 최신 HEAD 재조회, 충돌 시 안전 병합, 원자 커밋, 재조회 검증이 불가능하면 **품질 미완료로 보고하고 기존 정상본 보존**. 과거 확인되지 않은 검색을 완료했다고 허위 기록하지 않는다.
+- 감시자와 정규 작업 모두 동일한 예약 인프라에 의존하므로 자동 복구는 **최대 노력 기반**이며 정시 실행/완전 발행을 보장하지 않는다.
 
 ## 앱 호환 JSON 계약
 기존 앱 `KBYOO0815/market-flow-app/src/featuredStocks.ts`의 `parseDailyFeaturedStocks` / `validateV3` 및 `src/FeaturedStocksScreen.tsx` 기준을 계속 충족할 것. 앱 코드를 변경하지 않고 JSON을 맞춘다.
@@ -28,12 +57,12 @@
 - `tradingDayEvidence`: `date, verified:true, isTradingDay:true, sourceUrl, checkedAt, facts`.
 - `status`: `{collection:"success",validation:"success",publication:"success"}`는 세 단계 실제 성공이 확인된 발행물에만 사용. GitHub 변경 실패 시 기존 발행물 보존하며 허위 상태를 만들지 않는다.
 - `stocks`는 통합 거래대금 내림차순·동률 코드순 **정확히100개**. `code,name,turnoverRank,krxTradeAmount,nxtTradeAmount,integratedTradeAmount,changeRate,rateMarket:"KRX",price,previousRegularClose,comparison` 필드. 금액은 원 정수, 가격은 실제 원문. comparison은 `{eligible:true,basis:"KRX_PREVIOUS_REGULAR_CLOSE"}` 또는 비교불가 이유 명시. 앱은 계산수익률과 changeRate 차이 0.000002% 이내까지 검사한다. 없는 가격을 역산하여 채우지 않는다.
-- `selectedStockCodes`는 실제 +4% 전체를 하락 아닌 순서로 정렬한 배열, `themes`와 `individualStocks`는 전부 중복 없이 분할. `themes`: `id,name,stockCodes,weightedChangeRate,integratedTradeAmount,reason`, 최소 2개 종목. 개별: `{code,reason}`. `reason:null`은 허용하며 화면에 '당일 상승 이유 확인 안 됨'으로 표시.
+- `selectedStockCodes`는 실제 +4% 전체를 하락 아닌 순서로 정렬한 배열, `themes`와 `individualStocks`는 전부 중복 없이 분할. `themes`: `id,name,stockCodes,weightedChangeRate,integratedTradeAmount,reason`, 최소 2개 종목. 개별: `{code,reason}`. **기존 앱은 `reason:null`을 허용하지만 신규 운영 회차에서는 종목별 검색 완료 감사의 `unconfirmed` 판정이 있는 경우에만 허용**하며, 화면은 여전히 '당일 상승 이유 확인 안 됨'으로 표시한다.
 - `reason`이 있다면 `summary,sourceUrl(HTTPS),publishedAt,checkedAt,causality(source_attributed|related_fact_only),verificationStatus:"confirmed",facts` 필수. publishedAt<=asOf<=checkedAt<=reviewedAt 실제시각 엄수. 새 사실이 미확인이면 reason=null.
-- 현 앱의 필수 검사는 `src/featuredStocks.ts`의 현재 코드를 최우선한다. 모의 JSON을 실거래 성공 데이터로 발행하지 않는다.
+- 현 앱의 필수 검사는 `src/featuredStocks.ts`의 현재 코드를 최우선한다. `reasonResearchAudit`는 **신규 운영상의 필수 추가 메타데이터**이나 기존 앱 파서에는 선택 필드이므로 기존 UI·앱 코드를 수정할 필요는 없다. 감시자가 운영 품질 계약을 별도로 검증한다. 모의 JSON을 실거래 성공 데이터로 발행하지 않는다.
 
 ## GitHub 직접 커밋·중복발행 방지
-1. 실제 KST 날짜·원래 예약 slot 및 거래일 증거 확정. 공개 시세/종목 유형/뉴스 원문 조사 완료. 원자료·분석·스키마·100위 경계값·+4% 누락·테마 가중률·시각 확인 후 발행 후보 작성.
+1. 실제 KST 날짜·원래 예약 slot 및 거래일 증거 확정. 공개 시세/종목 유형 검증 후 +4% 대상 전 종목의 뉴스·공시·산업 자료 조사와 `reasonResearchAudit` 완료 여부를 검사. 원자료·분석·스키마·100위 경계값·+4% 누락·테마 가중률·시각 검증을 모두 마친 뒤 한 번의 발행 후보 작성.
 2. **GitHub 연결 도구로** `main` HEAD와 현재 root/날짜별/index/보관기간 내 파일을 조회. 한 회차만 교체하고 다른 회차 보존; 더 최신 root가 있어도 과거 회차 보존 여부를 확인. 같은 날짜/slot의 후퇴 데이터 덮어쓰기 금지.
 3. `D,D-1,D-2,D-3` 실제 성공 날짜만 보관, D-4 이전 날짜별 JSON 삭제. 하나의 Git Tree/Commit과 비강제 HEAD 이동으로 root·날짜별·index·삭제를 가능한 한 **원자적**으로 처리. 기존 충돌은 최신 HEAD를 다시 읽어 병합·재검증 후 제한 재시도. 여러 파일에 독립 `update_file`만 하고 원자 게시 성공이라 주장하지 않는다.
 4. 작성한 커밋 기준으로 공개 root/날짜별/index/FIFO 삭제 내역 모두 재조회하여 완전히 같을 때만 공개 성공 보고. 비공개 `market-flow-app/data/featured-stocks.json` 미러는 앱의 실제 조회 경로가 아니므로 **선택적**; 갱신하지 않았다면 동기화되었다고 주장하지 않는다. 공개 파일만으로 앱이 동작함을 우선한다.
