@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-18T06:48:08+09:00",
+  "updatedAt": "2026-11-18T08:48:51.857+09:00",
   "days": [
     {
       "date": "2026-11-18",
@@ -582,6 +582,209 @@
                 "sourceFamilyCoverage present"
               ],
               "reason": "최신 protocol/script를 읽었으나 네트워크 응답을 로컬 helper 입력으로 직접 전달할 수 없어 동일 구조 검사를 실행환경에서 수행"
+            }
+          }
+        },
+        {
+          "slot": "08:40",
+          "asOf": "2026-11-18T08:43:53.162+09:00",
+          "usThemes": [],
+          "usThemeStatus": "not_applicable",
+          "foreignNews": [],
+          "domesticNews": [],
+          "marketSnapshot": null,
+          "researchStatus": "complete",
+          "storageVerification": {
+            "status": "pending_remote_reread",
+            "checkedAt": null,
+            "remoteSha": null,
+            "commitSha": null,
+            "exactContentMatch": false,
+            "targetSessionPresent": false,
+            "reason": "저장 직후 원격 HEAD 재조회 전"
+          },
+          "researchAudit": {
+            "window": {
+              "startExclusive": "2026-11-18T06:40:48.688+09:00",
+              "cutoffInclusive": "2026-11-18T08:43:53.162+09:00",
+              "baselineFile": "market-briefing.json",
+              "baselineSha": "43bfbfb31fc0e97004776b8182727341896a8553"
+            },
+            "currentWindowDiscoveryStatus": "complete",
+            "historicalBackfillStatus": {
+              "status": "deferred",
+              "reason": "현재 회차 신규 탐색 우선; 기존 pendingWindows는 researchState에 보존"
+            },
+            "krxTradingDayEvidence": {
+              "result": true,
+              "checkedAt": "2026-11-18T08:48:51.857+09:00",
+              "reason": "KRX 공식 시장일정·휴장 안내와 11월19일 수능일 특별 거래시간 공지를 재확인했으며 11월18일은 정상 거래일",
+              "sources": [
+                "https://global.krx.co.kr/contents/GLB/05/0501/0501060000/GLB0501060000.jsp",
+                "https://global.krx.co.kr/contents/GLB/05/0501/0501110000/GLB0501110000.jsp?yyyy=2026",
+                "https://www.krx.co.kr"
+              ]
+            },
+            "domains": {
+              "foreignNews": {
+                "status": "complete",
+                "attemptedAt": "2026-11-18T08:48:51.857+09:00",
+                "checkedAt": "2026-11-18T08:48:51.857+09:00",
+                "windowStartExclusive": "2026-11-18T06:40:48.688+09:00",
+                "windowEndInclusive": "2026-11-18T08:43:53.162+09:00",
+                "completedThrough": "2026-11-18T08:43:53.162+09:00",
+                "failedSources": [
+                  {
+                    "source": "Reuters 일부 직접 추출",
+                    "reason": "페이지 직접 추출 실패; Reuters 검색결과·연합뉴스 재보도·NVIDIA 공식 IR로 대체 확인"
+                  }
+                ],
+                "alternativeSources": [
+                  "NVIDIA IR",
+                  "Reuters 검색 결과",
+                  "연합뉴스",
+                  "Bloomberg 최신 피드 검색"
+                ],
+                "pendingWindows": []
+              },
+              "domesticNews": {
+                "status": "complete",
+                "attemptedAt": "2026-11-18T08:48:51.857+09:00",
+                "checkedAt": "2026-11-18T08:48:51.857+09:00",
+                "windowStartExclusive": "2026-11-18T06:40:48.688+09:00",
+                "windowEndInclusive": "2026-11-18T08:43:53.162+09:00",
+                "completedThrough": "2026-11-18T08:43:53.162+09:00",
+                "failedSources": [],
+                "alternativeSources": [
+                  "DART 최근공시",
+                  "KRX",
+                  "연합뉴스",
+                  "국내 정부·기업 공식 발표 검색"
+                ],
+                "pendingWindows": []
+              },
+              "usThemes": {
+                "status": "not_applicable",
+                "attemptedAt": "2026-11-18T08:48:51.857+09:00",
+                "checkedAt": "2026-11-18T08:48:51.857+09:00",
+                "windowStartExclusive": "2026-11-18T06:40:48.688+09:00",
+                "windowEndInclusive": "2026-11-18T08:43:53.162+09:00",
+                "completedThrough": "2026-11-18T08:43:53.162+09:00",
+                "failedSources": [],
+                "alternativeSources": [],
+                "pendingWindows": []
+              }
+            },
+            "candidates": [
+              {
+                "region": "foreign",
+                "eventKey": "nvidia-q3-fy2027-results-20261117",
+                "factKeys": [
+                  "nvidia-q4-fy2027-revenue-guidance-130b-pm3",
+                  "nvidia-q3-fy2027-data-center-revenue-107-6b",
+                  "nvidia-buyback-authorization-increase-150b-20261117",
+                  "nvidia-hugging-face-acquisition-agreement-20261117"
+                ],
+                "sourceUrls": [
+                  "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+                  "https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html"
+                ],
+                "sourcePublishedAt": "2026-11-18T06:20:00+09:00",
+                "checkedAt": "2026-11-18T08:48:51.857+09:00",
+                "newFact": true,
+                "previousMatch": "06:40 session same event",
+                "decision": "outside_window",
+                "reason": "같은 06:20 공식 실적자료에 포함된 추가 사실로 조사창 시작 전 공개; 08:40 신규 배열에 소급하지 않음"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "nvidia-fy2027-q3-earnings-call-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/live/nvidia-earnings-live-first-results-since-jensen-huangs-exit-interim-ceo-host-2026-11-17",
+                  "https://investor.nvidia.com/"
+                ],
+                "checkedAt": "2026-11-18T08:48:51.857+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "07:00 KST 시작 콜의 독립적 신규 핵심 발언과 정확한 최초시각을 cutoff까지 원문으로 확정하지 못함"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "nvidia-afterhours-reaction-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.yna.co.kr/amp/view/AKR20261118015900009"
+                ],
+                "sourcePublishedAt": "2026-11-18T07:09:00+09:00",
+                "checkedAt": "2026-11-18T08:48:51.857+09:00",
+                "newFact": false,
+                "previousMatch": "nvidia-q3-fy2027-results-20261117",
+                "decision": "other_excluded",
+                "reason": "06:20 실적 발표에 대한 시간외 시장반응·재보도로 독립 새 사건이 아님"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "korea-content-industry-report-20261118",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.yna.co.kr/view/AKR20261117127700003"
+                ],
+                "sourcePublishedAt": "2026-11-18T07:30:00+09:00",
+                "checkedAt": "2026-11-18T08:48:51.857+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "other_excluded",
+                "reason": "조사창 내 신규 보도이나 개별 시장재료로서 영향도·즉시성이 최종 선별 기준에 미달"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "dart-premarket-check-20261118",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsac001/mainAll.do"
+                ],
+                "checkedAt": "2026-11-18T08:48:51.857+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "other_excluded",
+                "reason": "cutoff 이전 중요 신규 공시를 원문·접수시각 기준으로 확정하지 못해 채택 0건"
+              }
+            ],
+            "coverage": {
+              "selected": {
+                "foreign": 0,
+                "domestic": 0
+              },
+              "duplicateExcluded": 1,
+              "outsideWindow": 1,
+              "unverifiedExcluded": 1,
+              "otherExcluded": 3,
+              "note": "국외·국내 주요 뉴스, 공시, 공식기관·기업 발표를 폭넓게 탐색한 뒤 중요 후보를 검증; 건수 충원 없이 0건 선정"
+            },
+            "qualityRecovery": [
+              {
+                "eventKey": "nvidia-q3-fy2027-results-20261117",
+                "originalWindow": "before 2026-11-18T06:40:48.688+09:00",
+                "status": "candidate",
+                "reason": "06:20 공식자료의 Q4 가이던스·데이터센터 매출·자사주 매입권한·Hugging Face 인수합의는 이번 창 밖이므로 08:40 뉴스에 소급하지 않음"
+              }
+            ],
+            "helperValidation": {
+              "status": "equivalent_manual_checks",
+              "protocolSha": "8812d14b351b5d36016dcaeb627957d117d229fd",
+              "scriptSha": "08b50b74dd65ee6850f2fa197ddf5e1e0c4ba78f",
+              "checks": [
+                "schemaVersion1",
+                "required arrays",
+                "foreign/domestic <=10 and ranks",
+                "08:40 themes empty/not_applicable",
+                "asOf KST date",
+                "event/fact uniqueness",
+                "D~D-3 FIFO",
+                "other sessions preserved"
+              ]
             }
           }
         }
@@ -5448,7 +5651,7 @@
           "reason": "현재창 핵심 원천 family 탐색 완료 전수성 부족; 일부 원문·장마감·공시 미완료"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-18T06:40:48.688+09:00"
+      "lastAttemptedCutoff": "2026-11-18T08:43:53.162+09:00"
     },
     "domesticNews": {
       "status": "partial",
@@ -5500,7 +5703,7 @@
           "reason": "현재창 국내 야간 원천 탐색 결과 채택 0건이나 KIND·기업IR·공식SNS 전수성 부족"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-18T06:40:48.688+09:00"
+      "lastAttemptedCutoff": "2026-11-18T08:43:53.162+09:00"
     },
     "usThemes": {
       "status": "partial",
@@ -5593,6 +5796,14 @@
         "originalWindowEndInclusive": "2026-11-17T19:41:44.070+09:00",
         "status": "pending",
         "reason": "현재 회차에서 발견했으나 현재창 밖 최초공개라 06:40 신규 배열에 소급하지 않음"
+      },
+      {
+        "detectedAt": "2026-11-18T08:48:51.857+09:00",
+        "eventKey": "nvidia-q3-fy2027-results-20261117",
+        "originalWindowStartExclusive": "2026-11-18T00:00:00+09:00",
+        "originalWindowEndInclusive": "2026-11-18T06:40:48.688+09:00",
+        "status": "candidate",
+        "reason": "06:20 공식자료의 추가 핵심 사실을 08:40에서 발견했으나 현재창 밖이라 신규 배열에 소급하지 않음"
       }
     ]
   }
