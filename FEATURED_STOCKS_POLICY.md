@@ -45,6 +45,34 @@
 - 결함이 발견되어도 기존 정상 시세·회차를 삭제하거나 전체 빈 발행물로 바꾸지 않는다. 필요하면 실제 조사·검증을 수행하여 **원래 관측 `asOf`보다 앞선 사실만** 같은 date/slot에 보완하고, 수정 시 `reviewedAt`/`publishedAt`을 실제 수정시각으로 기입한다. 최신 HEAD 재조회, 충돌 시 안전 병합, 원자 커밋, 재조회 검증이 불가능하면 **품질 미완료로 보고하고 기존 정상본 보존**. 과거 확인되지 않은 검색을 완료했다고 허위 기록하지 않는다.
 - 감시자와 정규 작업 모두 동일한 예약 인프라에 의존하므로 자동 복구는 **최대 노력 기반**이며 정시 실행/완전 발행을 보장하지 않는다.
 
+## 회차 간 근거 승계·새 자료 검색·발행 전 회귀검증 (2026-11-17)
+
+**정규 특징주 발행은 한 번의 ChatGPT 예약 실행에서 종목선정부터 분석·검증·GitHub 1회 발행까지 끝낸다.** 앱 파서나 UI를 수정하지 않는다. 이전 슬롯의 검증된 상승 관련 자료를 재조회·확인하지 않고 `reason:null`로 초기화하는 것은 금지한다.
+
+### 1. 이전 회차 검증 자료 승계
+1. 시세 원천의 통합 Top100과 `selectedStockCodes`를 확정한 직후, 운영 저장소 최신 HEAD에서 서버 D~D-3 범위의 `featured-stocks/YYYY-MM-DD.json` 및 root의 이전 발행 회차를 읽는다. **이번 회차에 선정된 종목코드만** 과거 `individualStocks[].reason`, `themes[].reason` 및 `reasonResearchAudit`와 조인한다. 날짜/종목코드/공개시각/출처 URL/`facts`/분류를 비교한다.
+2. 이전 자료가 실제 그 기업과 관련되고 **최초 공개시각 <= 이번 회차 시세 `asOf`**, 원문·공시가 확인 가능하며 정정·취소·기간 만료·근거 오류가 없으면 **이번 회차에도 `reason`의 기존 관련 사실로 유지**한다. 계속 유효한 과거 재료는 `prior_fact` 또는 단순 관련 사실로 표현하고, 오늘의 신규 상승 원인이라고 단정하지 않는다.
+3. 이번 회차에 더 중요한 신규 발표가 확인되면 신규 사실을 대표 `reason`으로 선택하고 이전 유효 출처도 감사의 `priorEvidence`에 기록한다. 단, 과거 `reason:null` 자체를 증거로 승계하지 않는다. 이전 재료를 제외해야 하면 원문 확인 후 구체적인 `rejectedPriorEvidence`를 남긴다. *당일 검색에 새 결과가 없다*는 것은 이전 검증 자료를 폐기할 이유가 아니다.
+4. 기존 이유 객체를 승계할 때 `reason.publishedAt`은 **원문 사실의 최초 발표시각**으로 보존한다. `reason.checkedAt`은 이번 실행에서 실제 재확인한 시각(`asOf <= checkedAt <= reviewedAt`)을 사용한다. 기사 재게시나 당일 재검토를 신규 발표로 조작하지 않는다. 원문 재확인이 불가능하면 그대로 사실로 확정하지 말고 미검증으로 기록·재시도한다.
+
+### 2. 종목별 실제 검색 증거 강화
+1. `selectedStockCodes`의 모든 종목에서 (i) DART/KIND 및 회사 공식 공시, (ii) 당일 종목명+코드·급등·특징주·계약·실적 보도, (iii) 최근 5거래일 증권사 리포트·업종 정책·제품/산업 키워드, (iv) 동반 강세 종목과 공통 테마를 **구분하여 검색**한다. 결과가 불충분하면 회사명·상품명·사업군 별 대체 검색을 실시한다.
+2. 단일 공시 목록, 종목 소개 페이지, 포털 검색 URL만을 2개 적어 조사 완료로 판정하지 않는다. 기사/공시 원문의 유무, 확인된 **실제 결과 수(확인 가능한 경우만)**, 출처 유형, 검색어, 조회시각, 기업 일치성, 첫 발표시각, 확인 사실, 기각 이유를 기록한다. 미실행 검색을 `completed`로 기록하거나 결과 수를 만들어 넣지 않는다.
+3. `reason=null`은 **필수 원천·검색어를 실제 조사하고 기존 검증 근거와 최신 관련 자료도 없음을 확인**한 `unconfirmed` 경우만 허용한다. 소스 차단·검색 시간 부족·원문 미열람은 `incomplete`이며 같은 실행에서 최대 2회 추가 시도 후 발행을 보류한다.
+
+### 3. JSON 감사 필드 및 발행 차단 조건
+- 기존 `schemaVersion=3`, `stocks[100]`, `selectedStockCodes`, `themes`, `individualStocks` 및 앱 필수 검증 필드는 유지한다. 앱에서 무시할 수 있는 운영 감사 메타만 `reasonResearchAudit`의 각 종목에 추가한다.
+- 기존 필수 감사 필드(`code,status,checkedAt,searchedSources,searchQueries,checkedWindow,evidenceUrls,reasonClassification,failureReason`)는 그대로 두고, 실제 증거가 있을 때 `previousEditionChecks:[{slot,sourceUrl,reasonSummary,decision,decisionReason}]`, `priorEvidence:[{sourceUrl,publishedAt,summary}]`, `rejectedPriorEvidence:[{sourceUrl,reason}]`, `sourceChecks:[{sourceKind,query,resultCount?,actualUrl?,checkedAt,verified,issue?}]`, `evidenceFirstPublishedAt`, `provenanceClass`를 선택 필드로 둔다. `decision`은 `carried|superseded|rejected` 중 하나.
+- **발행 차단 조건**: (a) 선정 종목과 audit가 1:1 일치, 조사 상태 전부 `completed`; (b) **이전 회차에 유효한 `reason`이 있었으나 이번에 `null`이면** `reason`으로 승계했거나 원문 근거의 정당한 `rejectedPriorEvidence`가 기록되어야 한다; (c) 신규·기존 사실의 인과/발표시각 검증; (d) 원문 및 검색 확인 증거의 실재; (e) 전체 v3 형식·시세·100위 증명 충족. 실패 시 정상 기존 JSON 보존, 실패한 코드와 이유 보고.
+- **회귀검증 실제 사례:** `232140` 와이씨 11:40→13:40, `356860` 티엘비 11:40→13:40, `043260` 성호전자 09:40→13:40 (모두 2026-11-17). 기존 `reason`이 뒤 회차에서 `null`로 소실됐던 사례이므로 신규 발행에서 같은 전환이 나타나면 조사·검증 없이 통과시키지 않는다.
+- **발행 방식 변경 없음:** 감사/승계/신규 검색을 한 예약 실행에서 마친 뒤 root·날짜별·index를 **Git Tree 단일 원자적 커밋**으로 저장, 최신 HEAD에서 세 파일 내용 및 FIFO 재조회. 별도 시세 임시 발행 또는 별도 신규 예약 작업 생성 금지.
+
+### 4. 독립 감시자의 회차 간 품질 검사
+- 기존 `Market Flow 발행 감시·복구` 예약 작업 `6afafb9de2288191a51add93c667ed60`이 **인접 슬롯뿐 아니라 같은 날 이전 회차에서 확인된 reason을 비교**한다. 이번 회차 `reason=null`이 과거 유효한 근거를 삭제했다면 `reason_regression`으로 보고한다. 단, 과거 자료의 사실·출처 오류나 정당한 만료·정정이 검증된 경우는 예외.
+- 감시자는 새 정규 작업을 만들지 않고 최신 GitHub HEAD로 이전·현재 근거, 감사 기록, 미검증 원문과 인과관계를 실제 확인하여 품질복구 가능성을 평가한다. 사후 보완은 과거 시세 `asOf`를 바꾸지 않고 당시까지 발표된 원문만 사용하며 원래 조사 이력을 허위 소급하지 않는다. 안전한 원자 재발행과 앱 스키마 및 원격 재조회 검증이 실패하면 정상 공개본을 보존한다.
+- 회차별 보고에는 **이전 근거 대상 종목수, 유지·교체·정당한 제외 건수, 사유 없는 근거 소실 건수, 전종목 실제 검색 완료수, 재료 확인/미확인 수** 및 발행/복구 SHA를 분리하여 표기한다.
+
+---
 ## 앱 호환 JSON 계약
 기존 앱 `KBYOO0815/market-flow-app/src/featuredStocks.ts`의 `parseDailyFeaturedStocks` / `validateV3` 및 `src/FeaturedStocksScreen.tsx` 기준을 계속 충족할 것. 앱 코드를 변경하지 않고 JSON을 맞춘다.
 
