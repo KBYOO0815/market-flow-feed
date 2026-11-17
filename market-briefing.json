@@ -1,7 +1,592 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-17T10:48:42.858Z",
+  "updatedAt": "2026-11-18T06:47:28+09:00",
   "days": [
+    {
+      "date": "2026-11-18",
+      "isKrxTradingDay": true,
+      "sessions": [
+        {
+          "slot": "06:40",
+          "asOf": "2026-11-18T06:40:48.688+09:00",
+          "usThemes": [],
+          "usThemeStatus": "insufficient_data",
+          "foreignNews": [
+            {
+              "id": "20261118-0640-nvidia-q3-fy2027-results",
+              "title": "Nvidia 3분기 매출 1,158억달러…전년 대비 103% 증가",
+              "summary": "Nvidia는 2027회계연도 3분기 매출 1,158억달러, 비GAAP 희석 EPS 2.68달러를 발표했다. 매출은 전분기 대비 20%, 전년 대비 103% 증가했고 비GAAP 매출총이익률은 74.9%였다.",
+              "publishedAt": "2026-11-18T06:20:00+09:00",
+              "sourceName": "NVIDIA",
+              "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+              "relatedStocks": [
+                "Nvidia(NVDA)",
+                "SK하이닉스(000660)",
+                "삼성전자(005930)"
+              ],
+              "impactRank": 1,
+              "category": "AI 반도체·실적",
+              "region": "foreign",
+              "eventKey": "nvidia-q3-fy2027-results-20261117",
+              "eventAt": "2026-11-18T06:20:00+09:00",
+              "facts": [
+                {
+                  "factKey": "nvidia-q3-fy2027-revenue-115844m",
+                  "value": 115844000000,
+                  "unit": "USD",
+                  "statement": "3분기 매출 1,158억4,400만달러",
+                  "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx"
+                },
+                {
+                  "factKey": "nvidia-q3-fy2027-nongaap-eps-2-68",
+                  "value": 2.68,
+                  "unit": "USD_per_diluted_share",
+                  "statement": "비GAAP 희석 EPS 2.68달러",
+                  "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx"
+                },
+                {
+                  "factKey": "nvidia-q3-fy2027-nongaap-gm-74-9",
+                  "value": 74.9,
+                  "unit": "percent",
+                  "statement": "비GAAP 매출총이익률 74.9%",
+                  "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx"
+                }
+              ]
+            },
+            {
+              "id": "20261118-0640-us-thailand-art-substantial-conclusion",
+              "title": "미국·태국, 상호무역협정 협상 ‘실질적 타결’ 확인",
+              "summary": "미국과 태국 정상은 상호무역협정 협상이 실질적으로 타결됐다고 공동성명에 서명했다. 양국은 최종 협정 서명과 발효를 위한 국내 절차에 착수하며, 이번 성명 자체는 최종 협정 발효가 아니다.",
+              "publishedAt": "2026-11-17T21:43:27+09:00",
+              "sourceName": "미국 백악관",
+              "sourceUrl": "https://www.whitehouse.gov/briefings-statements/2026/11/joint-statement-on-an-agreement-between-the-united-states-of-america-and-the-kingdom-of-thailand-on-reciprocal-trade",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "미국 통상정책·아시아",
+              "region": "foreign",
+              "eventKey": "us-thailand-art-substantial-conclusion-20261117",
+              "facts": [
+                {
+                  "factKey": "us-thailand-art-substantial-conclusion-confirmed-20261117",
+                  "statement": "양국 정상이 상호무역협정 협상의 실질적 타결을 확인하고 공동성명에 서명",
+                  "sourceUrl": "https://www.whitehouse.gov/briefings-statements/2026/11/joint-statement-on-an-agreement-between-the-united-states-of-america-and-the-kingdom-of-thailand-on-reciprocal-trade"
+                },
+                {
+                  "factKey": "us-thailand-art-not-yet-final-entry-20261117",
+                  "statement": "최종 협정 서명·발효를 위한 국내 절차가 남아 있음",
+                  "sourceUrl": "https://www.whitehouse.gov/briefings-statements/2026/11/joint-statement-on-an-agreement-between-the-united-states-of-america-and-the-kingdom-of-thailand-on-reciprocal-trade"
+                }
+              ]
+            },
+            {
+              "id": "20261118-0640-us-september-business-inventories",
+              "title": "미국 9월 기업재고 0.5% 증가…기업매출 1.8% 늘어",
+              "summary": "미 상무부 인구조사국 자료를 인용한 Reuters 보도에 따르면 9월 기업재고는 전월 대비 0.5%, 기업매출은 1.8% 증가했다. 재고·매출 비율은 8월 1.35개월에서 1.33개월로 낮아졌다.",
+              "publishedAt": "2026-11-18T00:28:10+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/us-business-inventories-increase-september-2026-11-17",
+              "relatedStocks": [],
+              "impactRank": 3,
+              "category": "미국 거시경제",
+              "region": "foreign",
+              "eventKey": "us-business-inventories-september-2026-release",
+              "eventAt": "2026-11-18T00:00:00+09:00",
+              "facts": [
+                {
+                  "factKey": "us-business-inventories-sep2026-mom-0-5",
+                  "value": 0.5,
+                  "unit": "percent_mom",
+                  "sourceUrl": "https://www.reuters.com/business/us-business-inventories-increase-september-2026-11-17"
+                },
+                {
+                  "factKey": "us-business-sales-sep2026-mom-1-8",
+                  "value": 1.8,
+                  "unit": "percent_mom",
+                  "sourceUrl": "https://www.reuters.com/business/us-business-inventories-increase-september-2026-11-17"
+                },
+                {
+                  "factKey": "us-inventory-sales-ratio-sep2026-1-33",
+                  "value": 1.33,
+                  "unit": "months",
+                  "sourceUrl": "https://www.reuters.com/business/us-business-inventories-increase-september-2026-11-17"
+                }
+              ]
+            },
+            {
+              "id": "20261118-0640-basf-evonik-new-offer-report",
+              "title": "Reuters “BASF, Evonik에 새 인수 제안 준비”",
+              "summary": "Reuters는 Bloomberg 보도를 인용해 BASF가 Evonik에 새 인수 제안을 준비 중이며 수일 내 제시될 수 있다고 전했다. 익명 취재원 보도이고 양사 확인이나 공식 제안·합의는 아직 없다.",
+              "publishedAt": "2026-11-18T00:06:04+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.marketscreener.com/news/basf-preparing-new-takeover-offer-for-evonik-bloomberg-news-reports-ce785edcda88f426",
+              "relatedStocks": [
+                "BASF(BASFY)",
+                "Evonik(EVK.DE)"
+              ],
+              "impactRank": 4,
+              "category": "글로벌 M&A",
+              "region": "foreign",
+              "eventKey": "basf-evonik-new-takeover-offer-preparation-report-20261117",
+              "eventAt": "2026-11-18T00:06:04+09:00",
+              "facts": [
+                {
+                  "factKey": "basf-evonik-new-offer-preparation-bloomberg-reuters-20261117",
+                  "statement": "Reuters가 Bloomberg의 익명 취재원 보도를 인용해 새 제안 준비 가능성을 보도; 공식 제안·합의 아님",
+                  "sourceUrl": "https://www.marketscreener.com/news/basf-preparing-new-takeover-offer-for-evonik-bloomberg-news-reports-ce785edcda88f426"
+                }
+              ]
+            }
+          ],
+          "domesticNews": [],
+          "marketSnapshot": null,
+          "researchStatus": "partial",
+          "storageVerification": {
+            "status": "pending",
+            "checkedAt": null,
+            "remoteSha": null,
+            "commitSha": null,
+            "exactContentMatch": false,
+            "targetSessionPresent": false,
+            "reason": "최신 SHA 병합 전"
+          },
+          "researchAudit": {
+            "window": {
+              "startExclusive": "2026-11-17T19:41:44.070+09:00",
+              "cutoffInclusive": "2026-11-18T06:40:48.688+09:00",
+              "baselineFile": "market-briefing.json",
+              "baselineSha": "484dae374543f0273e71416852c7c633f18ac355"
+            },
+            "currentWindowDiscoveryStatus": "partial",
+            "historicalBackfillStatus": {
+              "status": "deferred",
+              "reason": "현재창 우선 규칙에 따라 과거 pendingWindows 전수복구는 수행하지 않음",
+              "qualityRecovery": [
+                {
+                  "eventKey": "nvidia-q3-2026-13f-holdings-change",
+                  "originalWindow": "2026-11-17T12:40:14.956+09:00/2026-11-17T19:41:44.070+09:00",
+                  "reason": "중요 지분변동 후보를 이번 실행에서 발견했으나 현재창 밖이라 신규 배열에 소급하지 않음"
+                }
+              ]
+            },
+            "krxTradingDayEvidence": {
+              "result": true,
+              "checkedAt": "2026-11-18T06:47:28+09:00",
+              "reason": "KRX 공식 Market Calendar·Market Closing(Holiday) 및 11월19일 수능일 특별 거래시간 공지를 확인했고, 신뢰 가능한 2026 KRX 휴장일 목록에서 11월18일이 휴장일이 아님을 교차확인",
+              "sources": [
+                "https://global.krx.co.kr/contents/GLB/05/0501/0501060000/GLB0501060000.jsp",
+                "https://global.krx.co.kr/contents/GLB/05/0501/0501110000/GLB0501110000.jsp?yyyy=2026",
+                "https://www.krx.co.kr",
+                "https://www.forexchurch.com/stock-market-holidays/korea-stock-exchange"
+              ]
+            },
+            "domains": {
+              "foreignNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-18T06:47:28+09:00",
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "windowStartExclusive": "2026-11-17T19:41:44.070+09:00",
+                "windowEndInclusive": "2026-11-18T06:40:48.688+09:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "Reuters 직접 추출",
+                    "reason": "일부 원문 URL 직접 추출 실패; Reuters 재배포·공식원문으로 일부 대체"
+                  },
+                  {
+                    "source": "미국 장마감 종합시세",
+                    "reason": "동일 관측시각의 지수·금리·달러·유가 전체값 검증 미완료"
+                  }
+                ],
+                "alternativeSources": [
+                  "NVIDIA IR",
+                  "미국 백악관",
+                  "미국 Census",
+                  "Reuters 재배포 원문"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-17T19:41:44.070+09:00",
+                    "endInclusive": "2026-11-18T06:40:48.688+09:00",
+                    "reason": "핵심 원천 family는 탐색했으나 일부 공시·공식 SNS·장마감 교차검증이 불충분"
+                  }
+                ]
+              },
+              "domesticNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-18T06:47:28+09:00",
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "windowStartExclusive": "2026-11-17T19:41:44.070+09:00",
+                "windowEndInclusive": "2026-11-18T06:40:48.688+09:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "DART/KIND 전체목록 연속검증",
+                    "reason": "DART 최근목록 최종시각은 확인했으나 KIND·기업 IR·공식 SNS 전체의 연속 검증 미완료"
+                  }
+                ],
+                "alternativeSources": [
+                  "DART 최근공시",
+                  "KRX",
+                  "금융위·산업부·한국은행 공식목록",
+                  "국내 주요뉴스 검색"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-17T19:41:44.070+09:00",
+                    "endInclusive": "2026-11-18T06:40:48.688+09:00",
+                    "reason": "채택 0건이나 회사 IR·공식 SNS 포함 전체 원천 family 완전성 미확인"
+                  }
+                ]
+              },
+              "usThemes": {
+                "status": "partial",
+                "attemptedAt": "2026-11-18T06:47:28+09:00",
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "windowStartExclusive": "2026-11-17T09:30:00-05:00",
+                "windowEndInclusive": "2026-11-17T16:00:00-05:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "Barchart Price Volume Leaders",
+                    "reason": "추출 결과가 2026-10-17 스냅샷으로 현재 11월17일 세션과 불일치하고 표 행 미노출"
+                  },
+                  {
+                    "source": "Nasdaq/Yahoo/TradingView most-active",
+                    "reason": "정규장 거래대금 기준 1~50 전체 동일세션 자료 확보 실패"
+                  },
+                  {
+                    "source": "TheStreet/StockTitan dollar-volume",
+                    "reason": "현재 세션 전체 50행 역사 스냅샷 확보 실패"
+                  }
+                ],
+                "alternativeSources": [
+                  "provider-reported price volume",
+                  "정규장 most-active 페이지",
+                  "정규장 종가·거래량 랭킹"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-17T09:30:00-05:00",
+                    "endInclusive": "2026-11-17T16:00:00-05:00",
+                    "reason": "Top50 50행 전체·상품유형·동일 세션 거래대금 검증 미완료"
+                  }
+                ]
+              }
+            },
+            "sourceFamilyCoverage": {
+              "foreign": {
+                "newsWires": {
+                  "status": "partial",
+                  "sourceUrls": [
+                    "https://www.reuters.com/business/us-business-inventories-increase-september-2026-11-17",
+                    "https://www.marketscreener.com/news/basf-preparing-new-takeover-offer-for-evonik-bloomberg-news-reports-ce785edcda88f426"
+                  ],
+                  "failure": "Reuters 일부 직접 추출 실패",
+                  "alternative": "Reuters 재배포·공식 원문"
+                },
+                "officialAuthorities": {
+                  "status": "partial",
+                  "sourceUrls": [
+                    "https://www.whitehouse.gov/briefings-statements/2026/11/joint-statement-on-an-agreement-between-the-united-states-of-america-and-the-kingdom-of-thailand-on-reciprocal-trade",
+                    "https://www.census.gov/mtis",
+                    "https://www.federalreserve.gov/newsevents.htm"
+                  ],
+                  "failure": "접근 가능한 주요 목록은 조회했으나 전 기관 연속성 미보장"
+                },
+                "companyFilings": {
+                  "status": "partial",
+                  "sourceUrls": [
+                    "https://www.sec.gov/edgar/search/"
+                  ],
+                  "failure": "Lucky Strike 13D/A 원문 확정 실패"
+                },
+                "companyIR": {
+                  "status": "partial",
+                  "sourceUrls": [
+                    "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+                    "https://investor.nvidia.com/home/default.aspx"
+                  ],
+                  "failure": "고영향 후보 중심 검증, 전체 기업 IR 전수 아님"
+                },
+                "officialSocial_directStatements": {
+                  "status": "partial",
+                  "sourceUrls": [
+                    "https://investor.nvidia.com/home/default.aspx"
+                  ],
+                  "failure": "공식 SNS 전체 피드 직접 조회 미완료"
+                }
+              },
+              "domestic": {
+                "newsWires": {
+                  "status": "partial",
+                  "sourceUrls": [
+                    "https://www.yna.co.kr/economy/index",
+                    "https://www.newsis.com/economy/"
+                  ],
+                  "failure": "야간 전체 피드 연속성 미확인"
+                },
+                "officialAuthorities": {
+                  "status": "partial",
+                  "sourceUrls": [
+                    "https://www.fsc.go.kr/no010101",
+                    "https://www.bok.or.kr/portal/bbs/P0000559/list.do",
+                    "https://www.krx.co.kr"
+                  ],
+                  "failure": "접근 가능한 주요 목록은 조회했으나 전 기관 연속성 미보장"
+                },
+                "companyFilings": {
+                  "status": "partial",
+                  "sourceUrls": [
+                    "https://dart.fss.or.kr/dsac001/mainAll.do",
+                    "https://kind.krx.co.kr/"
+                  ],
+                  "failure": "DART 최종 노출시각 확인; KIND 전수 직접 검증 미완료"
+                },
+                "companyIR": {
+                  "status": "partial",
+                  "sourceUrls": [],
+                  "failure": "검색 후보 역추적만 수행, 전체 IR 피드 미탐색"
+                },
+                "officialSocial_directStatements": {
+                  "status": "partial",
+                  "sourceUrls": [],
+                  "failure": "공식 계정 전체 탐색 미완료"
+                }
+              }
+            },
+            "usThemeEvidence": {
+              "sessionDate": "2026-11-17",
+              "sessionTimezone": "America/New_York",
+              "sessionStart": "2026-11-17T09:30:00-05:00",
+              "sessionEnd": "2026-11-17T16:00:00-05:00",
+              "observedAt": "2026-11-18T06:47:28+09:00",
+              "collectedAt": "2026-11-18T06:47:28+09:00",
+              "sourceUrls": [
+                "https://www.barchart.com/stocks/most-active/price-volume-leaders",
+                "https://www.nasdaq.com/market-activity/most-active",
+                "https://finance.yahoo.com/markets/stocks/most-active/",
+                "https://www.tradingview.com/markets/stocks-usa/market-movers-active/",
+                "https://www.stocktitan.net/rankings/stocks-by-dollar-volume.html"
+              ],
+              "dollarVolumeDefinition": {
+                "providerReported": null,
+                "session": "US regular session 09:30-16:00 ET",
+                "currency": "USD",
+                "reason": "provider-reported turnover와 close×regular-session-volume 추정 두 경로를 시도했으나 동일 기준 50행 완성 실패"
+              },
+              "completeness": {
+                "expectedRows": 50,
+                "verifiedRows": 0,
+                "rankCompleteness": false,
+                "sessionVerified": true,
+                "dollarVolumeDefinitionVerified": false,
+                "securityTypesVerified": false,
+                "sourceValuesVerified": false,
+                "arithmeticVerified": false
+              },
+              "universe": [],
+              "exclusions": [
+                {
+                  "sourceUrl": "https://www.barchart.com/stocks/most-active/price-volume-leaders",
+                  "reason": "추출된 스냅샷이 2026-10-17로 현재 세션 불일치"
+                },
+                {
+                  "sourceUrl": "https://www.nasdaq.com/market-activity/most-active",
+                  "reason": "거래대금 기준 1~50 전체 자료 미확보"
+                },
+                {
+                  "sourceUrl": "https://finance.yahoo.com/markets/stocks/most-active/",
+                  "reason": "동일 세션 정규장 거래대금 전체 50행 미확보"
+                }
+              ],
+              "commonCatalysts": [],
+              "themeCalculations": [],
+              "reason": "top50_full_same_session_unverified"
+            },
+            "candidates": [
+              {
+                "region": "foreign",
+                "eventKey": "nvidia-q3-fy2027-results-20261117",
+                "factKeys": [
+                  "nvidia-q3-fy2027-revenue-115844m",
+                  "nvidia-q3-fy2027-nongaap-eps-2-68",
+                  "nvidia-q3-fy2027-nongaap-gm-74-9"
+                ],
+                "sourceUrls": [
+                  "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx"
+                ],
+                "sourcePublishedAt": "2026-11-18T06:20:00+09:00",
+                "eventAt": "2026-11-18T06:20:00+09:00",
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "회사 IR 원문에서 실제 실적 수치와 예정 발표시각 13:20 PT를 확인"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "us-thailand-art-substantial-conclusion-20261117",
+                "factKeys": [
+                  "us-thailand-art-substantial-conclusion-confirmed-20261117",
+                  "us-thailand-art-not-yet-final-entry-20261117"
+                ],
+                "sourceUrls": [
+                  "https://www.whitehouse.gov/briefings-statements/2026/11/joint-statement-on-an-agreement-between-the-united-states-of-america-and-the-kingdom-of-thailand-on-reciprocal-trade"
+                ],
+                "sourcePublishedAt": "2026-11-17T21:43:27+09:00",
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "백악관 공동성명 원문에서 실질적 타결과 최종 서명·발효 전 단계임을 확인"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "us-business-inventories-september-2026-release",
+                "factKeys": [
+                  "us-business-inventories-sep2026-mom-0-5",
+                  "us-business-sales-sep2026-mom-1-8",
+                  "us-inventory-sales-ratio-sep2026-1-33"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/business/us-business-inventories-increase-september-2026-11-17",
+                  "https://www.investing.com/news/economic-indicators/us-business-inventories-increase-in-september-5033471",
+                  "https://www.census.gov/mtis"
+                ],
+                "sourcePublishedAt": "2026-11-18T00:28:10+09:00",
+                "eventAt": "2026-11-18T00:00:00+09:00",
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "Reuters 본문 수치와 Census 공식 MTIS 프로그램·발표일정을 교차확인; Census PDF 직접 최신본은 지연"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "basf-evonik-new-takeover-offer-preparation-report-20261117",
+                "factKeys": [
+                  "basf-evonik-new-offer-preparation-bloomberg-reuters-20261117"
+                ],
+                "sourceUrls": [
+                  "https://www.marketscreener.com/news/basf-preparing-new-takeover-offer-for-evonik-bloomberg-news-reports-ce785edcda88f426"
+                ],
+                "sourcePublishedAt": "2026-11-18T00:06:04+09:00",
+                "eventAt": "2026-11-18T00:06:04+09:00",
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "newFact": true,
+                "previousMatch": "기존 10월 제안·거절 이후의 새 제안 준비 보도",
+                "decision": "selected",
+                "reason": "새 후속 사실을 Reuters의 Bloomberg 인용 보도로 한정; 회사확인·합의로 변환하지 않음"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "nvidia-q3-2026-13f-holdings-change",
+                "factKeys": [
+                  "nvidia-q3-2026-13f-spacex-increase-intel-nokia-synopsys-reduction"
+                ],
+                "sourceUrls": [
+                  "https://mlq.ai/stocks/NVDA/sec-filings/0001045810-26-000321/"
+                ],
+                "sourcePublishedAt": "2026-11-17T14:07:41+09:00",
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "outside_window",
+                "reason": "직전 19:40 회차 조사창에 해당하며 이번 06:40 신규 배열로 소급하지 않고 qualityRecovery 대상으로 기록"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "lucky-strike-take-private-proposal-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.sec.gov/edgar/search/"
+                ],
+                "sourcePublishedAt": "2026-11-17T21:51:00+09:00",
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "검색 결과에서 4.35달러 제안 후보를 발견했으나 실제 Schedule 13D/A 원문 URL과 제출시각을 확정하지 못함"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "us-market-close-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.wsj.com/market-data/quotes/index/SOX",
+                  "https://www.bloomberg.com/news/articles/2026-11-16/stock-market-today-dow-s-p-live-updates"
+                ],
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "시장 마감 스냅샷을 검토했으나 S&P500·Nasdaq·SOX·미10년물·달러·유가의 동일 관측시각 기준값을 모두 검증하지 못해 저장 제외"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "dart-after-1941-window-check-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsac001/mainAll.do"
+                ],
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "other_excluded",
+                "reason": "DART 11월17일 최근공시 목록의 최종 노출시각이 18:19로 조사창 시작 전; 현재창 신규 후보 없음"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "korean-official-and-company-overnight-search-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.fsc.go.kr/no010101",
+                  "https://www.motie.go.kr/kor/article/ATCL3f49a5a8c",
+                  "https://www.bok.or.kr/portal/bbs/P0000559/list.do"
+                ],
+                "checkedAt": "2026-11-18T06:47:28+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "other_excluded",
+                "reason": "정부·기업·주요뉴스 야간 원천을 탐색했으나 조사창 내 최초 공개시각과 시장중요성을 원문으로 확정한 신규 후보 없음; 전 원천 완전성은 미확인"
+              }
+            ],
+            "coverage": {
+              "foreignReviewed": 34,
+              "domesticReviewed": 18,
+              "selected": {
+                "foreign": 4,
+                "domestic": 0
+              },
+              "duplicateExcluded": 0,
+              "outsideWindow": 1,
+              "unverifiedExcluded": 3,
+              "otherExcluded": 6,
+              "reasonForDomesticBelowTarget": "조사창이 국내 야간 시간대였고 DART 최종 노출시각 18:19 이후 신규 공시가 검색되지 않았으나 원천 family 완전성 부족으로 조사상태 partial"
+            },
+            "helperValidation": {
+              "status": "equivalent_manual_checks",
+              "protocolSha": "8812d14b351b5d36016dcaeb627957d117d229fd",
+              "scriptSha": "08b50b74dd65ee6850f2fa197ddf5e1e0c4ba78f",
+              "checks": [
+                "schemaVersion1",
+                "required arrays",
+                "foreign/domestic <=10 and ranks",
+                "themes <=3 and 06:40 only",
+                "asOf KST date",
+                "publishedAt <= asOf",
+                "event/fact uniqueness",
+                "D~D-3 FIFO",
+                "pending windows preserved",
+                "insufficient_data evidence consistency",
+                "sourceFamilyCoverage present"
+              ],
+              "reason": "최신 protocol/script를 읽었으나 네트워크 응답을 로컬 helper 입력으로 직접 전달할 수 없어 동일 구조 검사를 실행환경에서 수행"
+            }
+          }
+        }
+      ]
+    },
     {
       "date": "2026-11-17",
       "isKrxTradingDay": true,
@@ -4856,9 +5441,14 @@
           "startExclusive": "2026-11-17T12:40:14.956+09:00",
           "endInclusive": "2026-11-17T19:41:44.070+09:00",
           "reason": "필수 국외 11개 영역과 추가 기업·M&A 영역에서 30개 이상 후보를 검토했으나 Reuters 일부 직접 추출 실패와 전 원천 연속검증 미완료; 현재창 중요후보 발견·선별은 완료"
+        },
+        {
+          "startExclusive": "2026-11-17T19:41:44.070+09:00",
+          "endInclusive": "2026-11-18T06:40:48.688+09:00",
+          "reason": "현재창 핵심 원천 family 탐색 완료 전수성 부족; 일부 원문·장마감·공시 미완료"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-17T19:41:44.070+09:00"
+      "lastAttemptedCutoff": "2026-11-18T06:40:48.688+09:00"
     },
     "domesticNews": {
       "status": "partial",
@@ -4903,9 +5493,14 @@
           "startExclusive": "2026-11-17T12:40:14.956+09:00",
           "endInclusive": "2026-11-17T19:41:44.070+09:00",
           "reason": "국내 5개 원천 계열과 25개 이상 후보를 검토하고 DART 9건을 확인했으나 DART/KIND·공식기관 전체목록의 연속 전수검증 미완료"
+        },
+        {
+          "startExclusive": "2026-11-17T19:41:44.070+09:00",
+          "endInclusive": "2026-11-18T06:40:48.688+09:00",
+          "reason": "현재창 국내 야간 원천 탐색 결과 채택 0건이나 KIND·기업IR·공식SNS 전수성 부족"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-17T19:41:44.070+09:00"
+      "lastAttemptedCutoff": "2026-11-18T06:40:48.688+09:00"
     },
     "usThemes": {
       "status": "partial",
@@ -4915,6 +5510,11 @@
           "startExclusive": "2026-11-16T09:30:00-05:00",
           "endInclusive": "2026-11-16T16:00:00-05:00",
           "reason": "Top50 실제 거래대금 전체·상품유형 검증 미완료"
+        },
+        {
+          "startExclusive": "2026-11-17T09:30:00-05:00",
+          "endInclusive": "2026-11-17T16:00:00-05:00",
+          "reason": "Top50 동일 세션 50행 전체 검증 미완료"
         }
       ],
       "pendingSessions": [
@@ -4929,11 +5529,17 @@
           "slot": "06:40",
           "sessionDate": "2026-11-16",
           "reason": "정규장 실제 거래대금 기준 개별기업 보통주·ADR 1~50위 전체와 상품유형을 검증하지 못함"
+        },
+        {
+          "date": "2026-11-18",
+          "slot": "06:40",
+          "sessionDate": "2026-11-17",
+          "reason": "Top50 동일 기준 50행 전체를 확보하지 못해 insufficient_data"
         }
       ]
     },
     "sessionAudit": {
-      "checkedAt": "2026-11-17T19:41:44.070+09:00",
+      "checkedAt": "2026-11-18T06:47:28+09:00",
       "missingSessions": [
         {
           "date": "2026-11-14",
@@ -4971,8 +5577,23 @@
           "date": "2026-11-17",
           "slot": "12:40",
           "asOf": "2026-11-17T12:40:14.956+09:00"
+        },
+        {
+          "date": "2026-11-18",
+          "slot": "06:40",
+          "asOf": "2026-11-18T06:40:48.688+09:00"
         }
       ]
-    }
+    },
+    "qualityRecovery": [
+      {
+        "detectedAt": "2026-11-18T06:47:28+09:00",
+        "eventKey": "nvidia-q3-2026-13f-holdings-change",
+        "originalWindowStartExclusive": "2026-11-17T12:40:14.956+09:00",
+        "originalWindowEndInclusive": "2026-11-17T19:41:44.070+09:00",
+        "status": "pending",
+        "reason": "현재 회차에서 발견했으나 현재창 밖 최초공개라 06:40 신규 배열에 소급하지 않음"
+      }
+    ]
   }
 }
