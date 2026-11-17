@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T23:45:35.160Z",
+  "updatedAt": "2026-11-17T03:47:08.161Z",
   "days": [
     {
       "date": "2026-11-17",
@@ -804,6 +804,397 @@
               "status": "equivalent_manual_checks",
               "checkedAt": "2026-11-16T23:45:13.241Z",
               "reason": "현재 실행환경에서 원격 Python helper 직접 실행 경로가 제공되지 않아 동일 구조 검사를 직접 수행"
+            }
+          }
+        },
+        {
+          "slot": "12:40",
+          "asOf": "2026-11-17T12:40:14.956+09:00",
+          "usThemes": [],
+          "usThemeStatus": "not_applicable",
+          "foreignNews": [],
+          "domesticNews": [
+            {
+              "id": "20261117-1240-namkwang-kwater-godeok-contract",
+              "title": "남광토건, 수자원공사 고덕산단 용수공급시설 공사 316억6천만원 계약",
+              "summary": "남광토건은 한국수자원공사와 고덕일반산업단지 2단계 용수공급시설 2공구 건설공사를 계약했다. 회사 지분 50% 기준 계약금액은 316억5,982만8,699원(부가세 제외)으로 2025년 연결매출의 8.86%이며, 계약기간은 2026년 11월 30일부터 2030년 6월 28일까지다.",
+              "publishedAt": "2026-11-17T10:12:35+09:00",
+              "sourceName": "DART·한국거래소",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117800167",
+              "relatedStocks": [
+                "남광토건(001260)"
+              ],
+              "impactRank": 1,
+              "category": "수주·건설",
+              "region": "domestic",
+              "eventKey": "namkwang-korea-water-resources-godeok-water-supply-contract-20261117",
+              "facts": [
+                {
+                  "factKey": "namkwang-godeok-contract-company-share-31659828699-krw-20261117",
+                  "statement": "회사 지분 50% 기준 계약금액 31,659,828,699원(부가세 제외), 2025년 연결매출 대비 8.86%",
+                  "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117800167"
+                },
+                {
+                  "factKey": "namkwang-godeok-contract-period-20261130-20300628",
+                  "statement": "계약기간 2026-11-30~2030-06-28",
+                  "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117800167"
+                }
+              ]
+            },
+            {
+              "id": "20261117-1240-mirae-samsung-semiconductor-equipment-contract",
+              "title": "미래컴퍼니, 삼성전자와 20억9천만원 반도체 장비 공급계약",
+              "summary": "미래컴퍼니는 삼성전자와 반도체 제조장비 공급계약을 체결했다고 공시했다. 계약금액은 20억9천만원으로 최근 매출액의 5.11%이며, 계약기간은 2026년 11월 16일부터 12월 30일까지다.",
+              "publishedAt": "2026-11-17T10:51:00+09:00",
+              "sourceName": "DART·한국거래소",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117900200",
+              "relatedStocks": [
+                "미래컴퍼니(049950)",
+                "삼성전자(005930)"
+              ],
+              "impactRank": 2,
+              "category": "반도체 장비·공급계약",
+              "region": "domestic",
+              "eventKey": "mirae-corp-samsung-semiconductor-equipment-contract-20261117",
+              "facts": [
+                {
+                  "factKey": "mirae-samsung-equipment-contract-2090000000-krw-20261117",
+                  "statement": "삼성전자 대상 반도체 제조장비 공급계약 2,090,000,000원, 최근 매출액 대비 5.11%",
+                  "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117900200"
+                },
+                {
+                  "factKey": "mirae-samsung-equipment-contract-period-20261116-20261230",
+                  "statement": "계약기간 2026-11-16~2026-12-30",
+                  "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117900200"
+                }
+              ]
+            }
+          ],
+          "marketSnapshot": {
+            "observedAt": "2026-11-17T10:42:09+09:00",
+            "basis": "Reuters 아시아 오전 외환시장 관측",
+            "sourceName": "Reuters",
+            "sourceUrl": "https://www.reuters.com/world/africa/us-dollar-hits-19-month-peak-fed-hike-bets-aussie-dips-2026-11-17/",
+            "summary": "달러지수는 103.66으로 2025년 4월 2일 이후 최고치를 기록하며 6거래일 연속 상승했다. 달러/엔은 159.49엔, 유로/달러는 1.0985달러였다.",
+            "metrics": [
+              {
+                "name": "DXY",
+                "value": 103.66,
+                "unit": "index_points",
+                "context": "19개월 고점·6거래일 연속 상승"
+              },
+              {
+                "name": "USDJPY",
+                "value": 159.49,
+                "unit": "JPY_per_USD"
+              },
+              {
+                "name": "EURUSD",
+                "value": 1.0985,
+                "unit": "USD_per_EUR"
+              }
+            ]
+          },
+          "researchStatus": "partial",
+          "storageVerification": {
+            "status": "pending",
+            "checkedAt": null,
+            "remoteSha": null,
+            "commitSha": null,
+            "exactContentMatch": false,
+            "targetSessionPresent": false,
+            "reason": "저장 후 GitHub HEAD 재조회 전"
+          },
+          "researchAudit": {
+            "window": {
+              "startExclusive": "2026-11-17T08:41:51.799+09:00",
+              "cutoffInclusive": "2026-11-17T12:40:14.956+09:00",
+              "baselineFile": "market-briefing.json",
+              "baselineSha": "89e6cce3e0f4a5b2a2058d10dac23794971f57f7"
+            },
+            "krxTradingDayEvidence": {
+              "result": true,
+              "checkedAt": "2026-11-17T12:40:14.956+09:00",
+              "reason": "KRX 공식 휴장일·Market Notice를 확인했고 2026-11-17 특별휴장 공지를 찾지 못해 정상 거래일로 확인",
+              "sources": [
+                "https://global.krx.co.kr/contents/GLB/05/0501/0501110000/GLB0501110000.jsp",
+                "https://global.krx.co.kr/contents/GLB/06/0602/0602010201/GLB0602010201T1.jsp"
+              ]
+            },
+            "currentWindowDiscoveryStatus": {
+              "foreignNews": {
+                "status": "complete",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "areasAttempted": 12,
+                "candidatesReviewed": 30,
+                "reason": "필수 11개 영역과 M&A·투자 추가 영역을 독립 검색한 뒤 중요 후보를 압축"
+              },
+              "domesticNews": {
+                "status": "complete",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "sourceFamiliesAttempted": 5,
+                "candidatesReviewed": 25,
+                "reason": "공시·집계·공식기관·기업IR·산업/행위별 5개 원천 계열을 독립 검색"
+              }
+            },
+            "historicalBackfillStatus": {
+              "status": "deferred",
+              "reason": "최신 규칙 20~30에 따라 현재 회차 발견·검증·저장을 우선하고 기존 pendingWindows를 보존",
+              "pendingWindowsPreserved": true
+            },
+            "domains": {
+              "foreignNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-17T12:40:14.956+09:00",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "windowStartExclusive": "2026-11-17T08:41:51.799+09:00",
+                "windowEndInclusive": "2026-11-17T12:40:14.956+09:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "Reuters 직접 추출",
+                    "reason": "달러 기사 직접 추출 실패; 검색 서비스에서 정확한 송고시각·핵심 수치는 확인했으나 전체 Reuters 후보 연속 원문 검증은 미완료"
+                  }
+                ],
+                "alternativeSources": [
+                  "미국 연준·정부·기업 뉴스룸 공식 페이지 검색",
+                  "Reuters 외 Bloomberg·FT·WSJ 및 신뢰매체 검색",
+                  "지역별 공식기관·기업 발표 검색"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-17T08:41:51.799+09:00",
+                    "endInclusive": "2026-11-17T12:40:14.956+09:00",
+                    "reason": "필수 국외 11개 영역을 독립 검색하고 30개 이상 후보를 검토했으나 일부 Reuters 직접 추출 실패와 전 원천 연속검증 미완료; 현재창 발견은 완료, 원문 전수검증은 부분"
+                  }
+                ]
+              },
+              "domesticNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-17T12:40:14.956+09:00",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "windowStartExclusive": "2026-11-17T08:41:51.799+09:00",
+                "windowEndInclusive": "2026-11-17T12:40:14.956+09:00",
+                "completedThrough": null,
+                "failedSources": [
+                  {
+                    "source": "DART/KIND 전체목록",
+                    "reason": "개별 DART 공시 2건은 검증했으나 당일 전체 공시와 정정 전후를 연속 전수 검증하지 못함"
+                  },
+                  {
+                    "source": "DART 미래컴퍼니 직접 추출",
+                    "reason": "직접 추출은 404였으나 DART 공시 필드 미러와 신뢰매체로 접수시각·핵심 수치를 대체 확인"
+                  }
+                ],
+                "alternativeSources": [
+                  "DART 개별 공시 원문",
+                  "공시 필드 미러·개장전/장중 집계",
+                  "기업IR·공식기관·산업별 검색"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-17T08:41:51.799+09:00",
+                    "endInclusive": "2026-11-17T12:40:14.956+09:00",
+                    "reason": "국내 5개 원천 계열과 25개 이상 후보를 검토하고 DART 2건을 검증했으나 DART/KIND·공식기관 전체목록의 연속 전수검증 미완료"
+                  }
+                ]
+              },
+              "usThemes": {
+                "status": "not_applicable",
+                "attemptedAt": "2026-11-17T12:40:14.956+09:00",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "windowStartExclusive": "2026-11-17T08:41:51.799+09:00",
+                "windowEndInclusive": "2026-11-17T12:40:14.956+09:00",
+                "completedThrough": "2026-11-17T12:40:14.956+09:00",
+                "failedSources": [],
+                "alternativeSources": [],
+                "pendingWindows": []
+              }
+            },
+            "candidates": [
+              {
+                "region": "foreign",
+                "eventKey": "us-dollar-19-month-high-20261117",
+                "factKeys": [
+                  "dxy-10366-19-month-high-sixth-gain-day-20261117"
+                ],
+                "sourceUrls": [
+                  "https://www.reuters.com/world/africa/us-dollar-hits-19-month-peak-fed-hike-bets-aussie-dips-2026-11-17/"
+                ],
+                "sourcePublishedAt": "2026-11-17T10:42:09+09:00",
+                "eventAt": "2026-11-17T10:42:09+09:00",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "Reuters 송고시각과 수치를 확인해 marketSnapshot으로 저장; 가격반응을 뉴스 사건으로 재포장하지 않음"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "berlin-ukraine-envoys-planned-meeting-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.axios.com/2026/11/16/trump-witkoff-kushner-ukraine-russia-berlin"
+                ],
+                "sourcePublishedAt": "2026-11-17T11:57:13+09:00",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "scheduled_only",
+                "reason": "향후 회동 계획 보도이며 실제 회동·합의가 아님"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "ukraine-european-negotiators-talks-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.president.gov.ua/en/news/na-peremovinah-iz-rosiyanami-yevropu-predstavlyatimut-franci-107353"
+                ],
+                "sourcePublishedAt": "2026-11-16T20:17:00+09:00",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "outside_window",
+                "reason": "현재창 시작 전 발표"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "microsoft-service-outage-root-cause-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/technology/"
+                ],
+                "sourcePublishedAt": "2026-11-17T06:11:00+09:00",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "outside_window",
+                "reason": "현재창 시작 전 송고"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "nvidia-next-earnings-scheduled-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://investor.nvidia.com/"
+                ],
+                "sourcePublishedAt": "2026-11-17",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "scheduled_only",
+                "reason": "기발표된 예정 일정이며 실제 실적 발표가 아님"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "us-ai-chip-remote-access-rule-discussion-20261116",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/technology/"
+                ],
+                "sourcePublishedAt": "2026-11-16",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "outside_window",
+                "reason": "현재창 이전 보도이며 규칙 확정·시행 신규 사실도 확인되지 않음"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "namkwang-korea-water-resources-godeok-water-supply-contract-20261117",
+                "factKeys": [
+                  "namkwang-godeok-contract-company-share-31659828699-krw-20261117",
+                  "namkwang-godeok-contract-period-20261130-20300628"
+                ],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117800167"
+                ],
+                "sourcePublishedAt": "2026-11-17T10:12:35+09:00",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "DART 원문·접수시각·계약금액·매출비중·계약기간 확인; 기존 D~D-3 event/fact와 불일치"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "mirae-corp-samsung-semiconductor-equipment-contract-20261117",
+                "factKeys": [
+                  "mirae-samsung-equipment-contract-2090000000-krw-20261117",
+                  "mirae-samsung-equipment-contract-period-20261116-20261230"
+                ],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117900200",
+                  "https://www.digitaltoday.co.kr/news/articleView.html?idxno=610000"
+                ],
+                "sourcePublishedAt": "2026-11-17T10:51:00+09:00",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "DART 공시 필드와 신뢰매체 송고시각으로 계약 상대·금액·매출비중·기간 확인; 기존 event/fact와 불일치"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "dart-prior-day-aggregate-20261117",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://dart.fss.or.kr/dsac001/mainAll.do"
+                ],
+                "sourcePublishedAt": "2026-11-17",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": false,
+                "previousMatch": "기발행 06:40 국내 공시",
+                "decision": "duplicate",
+                "reason": "전일 공시 집계 재노출로 신규 사건·사실 아님"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "gaonchips-price-move-20261117",
+                "factKeys": [],
+                "sourceUrls": [],
+                "sourcePublishedAt": "2026-11-17",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "가격 움직임 기사만 확인되고 현재창 내 새로운 공식 촉매 원문·최초시각을 확정하지 못함"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "kistron-capacity-investment-recirculation-20261117",
+                "factKeys": [],
+                "sourceUrls": [],
+                "sourcePublishedAt": "2026-11-17",
+                "checkedAt": "2026-11-17T12:40:14.956+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "SNS 재유통만 발견되어 공식 원문·최초시각 미확인"
+              }
+            ],
+            "coverage": {
+              "foreignCandidatesReviewed": 30,
+              "domesticCandidatesReviewed": 25,
+              "foreignSelected": 0,
+              "domesticSelected": 2,
+              "marketSnapshotsSelected": 1,
+              "duplicateExcluded": 1,
+              "unverifiedExcluded": 3,
+              "scheduledOnlyExcluded": 2,
+              "outsideWindowExcluded": 4,
+              "otherExcluded": 42,
+              "notes": [
+                "국외: Fed/금리/국채, 달러/환율, 원자재, AI반도체, 빅테크, AI CAPEX·신용, 미국정책, 중국·대만, 러시아·우크라이나, 중동, 실적·가이던스, M&A·투자를 분리 검색",
+                "국내: DART/KIND/KRX, 주요 뉴스 집계, 공식기관, 기업 IR, 산업·행위별 최신 검색을 각각 수행",
+                "후보 검토 수는 검색결과에서 명백한 구형·무관 결과를 제외하고 검토한 건수; 최종 채택을 위한 원문·시각 검증은 별도",
+                "국외 0건은 조사완료 0건이 아니라 검증 채택 0건·조사 부분이며, 달러 움직임 1건은 marketSnapshot으로 저장"
+              ]
+            },
+            "helperValidation": {
+              "status": "passed",
+              "checkedAt": "2026-11-17T12:44:20.000+09:00",
+              "reason": "공개 저장소 최신 scripts/market_briefing.py로 merge 및 validate 통과; 실제 원천 검증과는 별개"
             }
           }
         }
@@ -3662,7 +4053,8 @@
               "06:40 회차가 아니므로 usThemes는 빈 배열",
               "market-briefing.json 최초 404는 공개 저장소 존재 확인 및 raw URL 404로 실제 파일 부재와 구분"
             ]
-          }
+          },
+          "usThemeStatus": "not_applicable"
         }
       ]
     }
@@ -3696,9 +4088,19 @@
           "startExclusive": "2026-11-17T06:41:26.353+09:00",
           "endInclusive": "2026-11-17T08:41:51.799+09:00",
           "reason": "08:40 회차에서 필수 국외 범위를 폭넓게 조회했으나 Reuters 일부 직접 추출 실패 및 전체 원천의 연속 전수 검증 미완료"
+        },
+        {
+          "startExclusive": "2026-11-17T08:41:51.799+09:00",
+          "endInclusive": "2026-11-17T12:40:14.956+09:00",
+          "reason": "필수 국외 11개 영역을 독립 검색하고 30개 이상 후보를 검토했으나 일부 Reuters 직접 추출 실패와 전 원천 연속검증 미완료; 현재창 발견은 완료, 원문 전수검증은 부분"
+        },
+        {
+          "startExclusive": "2026-11-15T19:41:44+09:00",
+          "endInclusive": "2026-11-16T12:45:26.571+09:00",
+          "reason": "미완료 이관 구간과 이번 구간의 전 필수영역 연속검증 미완료"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-17T08:41:51.799+09:00"
+      "lastAttemptedCutoff": "2026-11-17T12:40:14.956+09:00"
     },
     "domesticNews": {
       "status": "partial",
@@ -3728,14 +4130,30 @@
           "startExclusive": "2026-11-17T06:41:26.353+09:00",
           "endInclusive": "2026-11-17T08:41:51.799+09:00",
           "reason": "DART가 11월 16일 2,299건 목록만 노출했고 11월 17일 DART/KIND·공식기관 전수 원문 검증 미완료"
+        },
+        {
+          "startExclusive": "2026-11-17T08:41:51.799+09:00",
+          "endInclusive": "2026-11-17T12:40:14.956+09:00",
+          "reason": "국내 5개 원천 계열과 25개 이상 후보를 검토하고 DART 2건을 검증했으나 DART/KIND·공식기관 전체목록의 연속 전수검증 미완료"
+        },
+        {
+          "startExclusive": "2026-11-13T20:45:57.405+09:00",
+          "endInclusive": "2026-11-16T12:45:26.571+09:00",
+          "reason": "이전 DART 장애와 이번 당일 전체공시 직접조회 실패"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-17T08:41:51.799+09:00"
+      "lastAttemptedCutoff": "2026-11-17T12:40:14.956+09:00"
     },
     "usThemes": {
       "status": "partial",
       "completedThrough": null,
-      "pendingWindows": [],
+      "pendingWindows": [
+        {
+          "startExclusive": "2026-11-16T09:30:00-05:00",
+          "endInclusive": "2026-11-16T16:00:00-05:00",
+          "reason": "Top50 실제 거래대금 전체·상품유형 검증 미완료"
+        }
+      ],
       "pendingSessions": [
         {
           "date": "2026-11-16",
@@ -3752,7 +4170,7 @@
       ]
     },
     "sessionAudit": {
-      "checkedAt": "2026-11-16T23:45:13.241Z",
+      "checkedAt": "2026-11-17T12:40:14.956+09:00",
       "missingSessions": [
         {
           "date": "2026-11-14",
@@ -3775,6 +4193,16 @@
           "date": "2026-11-16",
           "slot": "19:40",
           "asOf": "2026-11-16T21:13:21+09:00"
+        },
+        {
+          "date": "2026-11-17",
+          "slot": "06:40",
+          "asOf": "2026-11-17T06:41:26.353+09:00"
+        },
+        {
+          "date": "2026-11-17",
+          "slot": "08:40",
+          "asOf": "2026-11-17T08:41:51.799+09:00"
         }
       ]
     }
