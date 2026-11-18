@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-18T08:49:22.661+09:00",
+  "updatedAt": "2026-11-18T12:44:53+09:00",
   "days": [
     {
       "date": "2026-11-18",
@@ -780,6 +780,400 @@
                 "required arrays",
                 "foreign/domestic <=10 and ranks",
                 "08:40 themes empty/not_applicable",
+                "asOf KST date",
+                "event/fact uniqueness",
+                "D~D-3 FIFO",
+                "other sessions preserved"
+              ]
+            }
+          }
+        },
+        {
+          "slot": "12:40",
+          "asOf": "2026-11-18T12:40:07+09:00",
+          "usThemes": [],
+          "usThemeStatus": "not_applicable",
+          "foreignNews": [],
+          "domesticNews": [
+            {
+              "id": "20261118-1240-kdi-2026-h2-outlook",
+              "title": "KDI, 2026년 성장률 전망 3.8%로 상향…반도체가 절반가량 기여",
+              "summary": "KDI는 2026년 성장률 전망을 8월의 3.2%에서 3.8%로 0.6%포인트 올렸다. 반도체 파급효과가 올해 성장의 절반가량을 견인한 것으로 분석했으며, 민간소비 증가율 전망은 2.3%에서 1.8%로 낮췄다.",
+              "publishedAt": "2026-11-18T12:00:00+09:00",
+              "sourceName": "한국개발연구원(KDI)",
+              "sourceUrl": "https://www.kdi.re.kr/research/reportView?pub_no=19321",
+              "relatedStocks": [
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ],
+              "impactRank": 1,
+              "category": "거시경제·성장전망",
+              "region": "domestic",
+              "eventKey": "kdi-2026-h2-economic-outlook-20261118",
+              "eventAt": "2026-11-18T12:00:00+09:00",
+              "facts": [
+                {
+                  "factKey": "kdi-2026-gdp-growth-forecast-3_8",
+                  "value": 3.8,
+                  "unit": "percent",
+                  "statement": "2026년 실질 GDP 성장률 전망 3.8%",
+                  "sourceUrl": "https://www.kdi.re.kr/research/reportView?pub_no=19321"
+                },
+                {
+                  "factKey": "kdi-2026-gdp-growth-forecast-revision-plus-0_6pp",
+                  "value": 0.6,
+                  "unit": "percentage_point",
+                  "statement": "8월 전망 3.2% 대비 0.6%포인트 상향",
+                  "sourceUrl": "https://www3.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02981526645647032"
+                },
+                {
+                  "factKey": "kdi-2026-private-consumption-forecast-1_8",
+                  "value": 1.8,
+                  "unit": "percent",
+                  "statement": "2026년 민간소비 증가율 전망 1.8%",
+                  "sourceUrl": "https://www3.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02981526645647032"
+                }
+              ]
+            },
+            {
+              "id": "20261118-1240-bok-q3-household-credit",
+              "title": "3분기 가계신용 2,030.5조원…증가폭 1년 6개월 만에 최소",
+              "summary": "한국은행은 9월 말 가계신용 잔액이 2,030.5조원으로 전분기보다 9.8조원 증가했다고 발표했다. 가계대출은 4.7조원 늘어난 1,896.8조원, 주택 관련 대출은 9.6조원 증가한 1,202.3조원이었고 기타대출은 4.9조원 감소했다.",
+              "publishedAt": "2026-11-18T12:00:00+09:00",
+              "sourceName": "한국은행",
+              "sourceUrl": "https://www.bok.or.kr/portal/stats/statsPublictSchdul/listCldr.do?menuNo=200775",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "가계부채·금융",
+              "region": "domestic",
+              "eventKey": "bok-2026q3-household-credit-release-20261118",
+              "eventAt": "2026-11-18T12:00:00+09:00",
+              "facts": [
+                {
+                  "factKey": "bok-2026q3-household-credit-2030_5tn",
+                  "value": 2030.5,
+                  "unit": "KRW_trillion",
+                  "statement": "2026년 3분기 말 가계신용 잔액 2,030.5조원",
+                  "sourceUrl": "https://biz.chosun.com/policy/policy_sub/2026/11/18/EF344YSUEJGZBKEAFYANPKVE2I?outputType=amp"
+                },
+                {
+                  "factKey": "bok-2026q3-household-credit-qoq-plus-9_8tn",
+                  "value": 9.8,
+                  "unit": "KRW_trillion",
+                  "statement": "전분기 대비 9.8조원 증가",
+                  "sourceUrl": "https://biz.chosun.com/policy/policy_sub/2026/11/18/EF344YSUEJGZBKEAFYANPKVE2I?outputType=amp"
+                },
+                {
+                  "factKey": "bok-2026q3-other-household-loans-minus-4_9tn",
+                  "value": -4.9,
+                  "unit": "KRW_trillion",
+                  "statement": "기타대출 전분기 대비 4.9조원 감소",
+                  "sourceUrl": "https://biz.chosun.com/policy/policy_sub/2026/11/18/EF344YSUEJGZBKEAFYANPKVE2I?outputType=amp"
+                }
+              ]
+            },
+            {
+              "id": "20261118-1240-fsc-electronic-financial-security-rule",
+              "title": "금융위, 전 금융권 IT자산 식별·관리 의무화 개정안 예고",
+              "summary": "금융위원회는 전 금융회사에 IT자산 식별·관리 의무를 두고, 총자산 2조원 이상·상시종업원 300명 이상 금융회사의 취약점 분석·평가 주기를 연 1회에서 반기 1회로 강화하는 전자금융감독규정 개정안을 예고했다. 관련 절차를 거쳐 2027년 1분기 시행을 추진한다.",
+              "publishedAt": "2026-11-18T11:00:00+09:00",
+              "sourceName": "금융위원회",
+              "sourceUrl": "https://www.fsc.go.kr/no010101/88162",
+              "relatedStocks": [],
+              "impactRank": 3,
+              "category": "금융규제·사이버보안",
+              "region": "domestic",
+              "eventKey": "fsc-electronic-financial-supervision-rule-amendment-20261118",
+              "eventAt": "2026-11-18T11:00:00+09:00",
+              "facts": [
+                {
+                  "factKey": "fsc-it-asset-identification-management-obligation-20261118",
+                  "statement": "전 금융회사의 IT자산 식별·관리 의무 도입을 규정변경예고",
+                  "sourceUrl": "https://www.fsc.go.kr/no010101/88162"
+                },
+                {
+                  "factKey": "fsc-large-financial-firm-vulnerability-assessment-semiannual-20261118",
+                  "statement": "총자산 2조원 이상·상시종업원 300명 이상 금융회사의 취약점 분석·평가 주기를 연 1회에서 반기 1회로 강화",
+                  "sourceUrl": "https://www.fsc.go.kr/no010101/88162"
+                }
+              ]
+            },
+            {
+              "id": "20261118-1240-korea-uae-used-car-origin",
+              "title": "한·UAE, 중고차 원산지 증명 차대번호로 간소화…2027년 4월 시행",
+              "summary": "재정경제부와 관세청은 UAE와 합의한 중고차 원산지 증명 간소화에 따라 제조사 원산지 자료 없이 17자리 차대번호로 한국산 여부를 확인하고 세관이 증명서를 발급하도록 할 계획이다. 관련 시행규칙은 2027년 3월 공포하고 4월 1일부터 UAE 수출분에 적용한다.",
+              "publishedAt": "2026-11-18T10:00:00+09:00",
+              "sourceName": "연합뉴스",
+              "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20261118045000002",
+              "relatedStocks": [],
+              "impactRank": 4,
+              "category": "통상·자동차수출",
+              "region": "domestic",
+              "eventKey": "korea-uae-used-car-origin-certification-simplification-20261118",
+              "eventAt": "2026-11-18T10:00:00+09:00",
+              "facts": [
+                {
+                  "factKey": "korea-uae-used-car-origin-vin-only-agreement-20261118",
+                  "statement": "한·UAE가 제조사 원산지 소명자료 없이 17자리 차대번호로 한국산 여부를 확인하는 절차에 합의",
+                  "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20261118045000002"
+                },
+                {
+                  "factKey": "korea-uae-used-car-origin-certificates-start-20270401",
+                  "value": "2027-04-01",
+                  "unit": "date",
+                  "statement": "UAE 수출 중고차 원산지증명서 발급 시작 예정일",
+                  "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20261118045000002"
+                }
+              ]
+            }
+          ],
+          "marketSnapshot": null,
+          "researchStatus": "partial",
+          "storageVerification": {
+            "status": "pending",
+            "checkedAt": null,
+            "remoteSha": null,
+            "commitSha": null,
+            "exactContentMatch": false,
+            "targetSessionPresent": false,
+            "reason": "원격 저장·재조회 전"
+          },
+          "researchAudit": {
+            "window": {
+              "startExclusive": "2026-11-18T08:43:53.162+09:00",
+              "cutoffInclusive": "2026-11-18T12:40:07+09:00",
+              "baselineFile": "market-briefing.json",
+              "baselineSha": "dc0e49c1207f37256a9370adaf7cf0fa035f398b"
+            },
+            "currentWindowDiscoveryStatus": "partial",
+            "historicalBackfillStatus": {
+              "status": "deferred",
+              "reason": "현재 회차 신규 탐색 우선; 기존 pendingWindows는 researchState에 보존"
+            },
+            "krxTradingDayEvidence": {
+              "result": true,
+              "checkedAt": "2026-11-18T12:44:53+09:00",
+              "reason": "KRX 공식 시장일정·휴장 안내와 11월19일 수능일 특별 거래시간 공지를 확인했으며 11월18일은 정상 거래일",
+              "sources": [
+                "https://global.krx.co.kr/contents/GLB/05/0501/0501060000/GLB0501060000.jsp",
+                "https://global.krx.co.kr/contents/GLB/05/0501/0501110000/GLB0501110000.jsp?yyyy=2026",
+                "https://www.krx.co.kr"
+              ]
+            },
+            "domains": {
+              "foreignNews": {
+                "status": "complete",
+                "attemptedAt": "2026-11-18T12:44:53+09:00",
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "windowStartExclusive": "2026-11-18T08:43:53.162+09:00",
+                "windowEndInclusive": "2026-11-18T12:40:07+09:00",
+                "completedThrough": "2026-11-18T12:40:07+09:00",
+                "failedSources": [],
+                "alternativeSources": [
+                  "Reuters",
+                  "Bloomberg",
+                  "주요 기업 IR·공식 발표"
+                ],
+                "pendingWindows": []
+              },
+              "domesticNews": {
+                "status": "partial",
+                "attemptedAt": "2026-11-18T12:44:53+09:00",
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "windowStartExclusive": "2026-11-18T08:43:53.162+09:00",
+                "windowEndInclusive": "2026-11-18T12:40:07+09:00",
+                "completedThrough": "2026-11-18T08:43:53.162+09:00",
+                "failedSources": [
+                  {
+                    "source": "DART 당일 전체목록",
+                    "reason": "직접 페이지가 11월17일 243건을 노출해 11월18일 오전 전체목록을 연속 확인하지 못함"
+                  },
+                  {
+                    "source": "goinsider 공시 대체목록",
+                    "reason": "페이지 추출 실패"
+                  }
+                ],
+                "alternativeSources": [
+                  "KDI",
+                  "한국은행",
+                  "금융위원회",
+                  "연합뉴스",
+                  "ATS View·공시 검색"
+                ],
+                "pendingWindows": [
+                  {
+                    "startExclusive": "2026-11-18T08:43:53.162+09:00",
+                    "endInclusive": "2026-11-18T12:40:07+09:00",
+                    "reason": "당일 DART/KIND 전체목록 직접 검증 미완료; 공식기관·언론·공시 대체검색으로 확인한 중요 재료만 채택"
+                  }
+                ]
+              },
+              "usThemes": {
+                "status": "not_applicable",
+                "attemptedAt": "2026-11-18T12:44:53+09:00",
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "windowStartExclusive": "2026-11-18T08:43:53.162+09:00",
+                "windowEndInclusive": "2026-11-18T12:40:07+09:00",
+                "completedThrough": "2026-11-18T12:40:07+09:00",
+                "failedSources": [],
+                "alternativeSources": [],
+                "pendingWindows": []
+              }
+            },
+            "candidates": [
+              {
+                "region": "domestic",
+                "eventKey": "kdi-2026-h2-economic-outlook-20261118",
+                "factKeys": [
+                  "kdi-2026-gdp-growth-forecast-3_8",
+                  "kdi-2026-gdp-growth-forecast-revision-plus-0_6pp",
+                  "kdi-2026-private-consumption-forecast-1_8"
+                ],
+                "sourceUrls": [
+                  "https://www.kdi.re.kr/research/reportView?pub_no=19321",
+                  "https://www.kdi.re.kr/research/reportView?pub_no=19321",
+                  "https://www3.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02981526645647032"
+                ],
+                "sourcePublishedAt": "2026-11-18T12:00:00+09:00",
+                "eventAt": "2026-11-18T12:00:00+09:00",
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "조사창 내 최초 공개·시장 영향과 사실 확정성을 확인"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "bok-2026q3-household-credit-release-20261118",
+                "factKeys": [
+                  "bok-2026q3-household-credit-2030_5tn",
+                  "bok-2026q3-household-credit-qoq-plus-9_8tn",
+                  "bok-2026q3-other-household-loans-minus-4_9tn"
+                ],
+                "sourceUrls": [
+                  "https://www.bok.or.kr/portal/stats/statsPublictSchdul/listCldr.do?menuNo=200775",
+                  "https://biz.chosun.com/policy/policy_sub/2026/11/18/EF344YSUEJGZBKEAFYANPKVE2I?outputType=amp"
+                ],
+                "sourcePublishedAt": "2026-11-18T12:00:00+09:00",
+                "eventAt": "2026-11-18T12:00:00+09:00",
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "조사창 내 최초 공개·시장 영향과 사실 확정성을 확인"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "fsc-electronic-financial-supervision-rule-amendment-20261118",
+                "factKeys": [
+                  "fsc-it-asset-identification-management-obligation-20261118",
+                  "fsc-large-financial-firm-vulnerability-assessment-semiannual-20261118"
+                ],
+                "sourceUrls": [
+                  "https://www.fsc.go.kr/no010101/88162",
+                  "https://www.fsc.go.kr/no010101/88162"
+                ],
+                "sourcePublishedAt": "2026-11-18T11:00:00+09:00",
+                "eventAt": "2026-11-18T11:00:00+09:00",
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "조사창 내 최초 공개·시장 영향과 사실 확정성을 확인"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "korea-uae-used-car-origin-certification-simplification-20261118",
+                "factKeys": [
+                  "korea-uae-used-car-origin-vin-only-agreement-20261118",
+                  "korea-uae-used-car-origin-certificates-start-20270401"
+                ],
+                "sourceUrls": [
+                  "https://www.yna.co.kr/amp/view/AKR20261118045000002",
+                  "https://www.yna.co.kr/amp/view/AKR20261118045000002"
+                ],
+                "sourcePublishedAt": "2026-11-18T10:00:00+09:00",
+                "eventAt": "2026-11-18T10:00:00+09:00",
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "selected",
+                "reason": "조사창 내 최초 공개·시장 영향과 사실 확정성을 확인"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "nvidia-results-asia-market-reaction-20261118",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/world/asia-pacific/asia-stocks-set-snap-losing-streak-nvidia-beat-boosts-ai-stocks-2026-11-18/"
+                ],
+                "sourcePublishedAt": "2026-11-18T10:46:14+09:00",
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "newFact": false,
+                "previousMatch": "nvidia-q3-fy2027-results-20261117",
+                "decision": "duplicate",
+                "reason": "06:20 저장 실적에 대한 아시아 시장반응·재보도로 독립 새 사실이 아님"
+              },
+              {
+                "region": "foreign",
+                "eventKey": "dollar-near-19-month-high-market-reaction-20261118",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://www.reuters.com/world/middle-east/dollar-holds-near-19-month-high-data-supports-case-us-rate-hikes-2026-11-18"
+                ],
+                "sourcePublishedAt": "2026-11-18T10:00:00+09:00",
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "newFact": false,
+                "previousMatch": null,
+                "decision": "other_excluded",
+                "reason": "기존 지표·연준 발언에 대한 시장반응으로 독립 신규 정책·사건이 아님"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "fss-bank-loan-delinquency-202609",
+                "factKeys": [],
+                "sourceUrls": [
+                  "https://ket.kr/news/article.html?no=42158"
+                ],
+                "sourcePublishedAt": "2026-11-18T06:00:00+09:00",
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "outside_window",
+                "reason": "금감원 자료 최초 공개시각이 06:00으로 현재 조사창 시작 전"
+              },
+              {
+                "region": "domestic",
+                "eventKey": "kdb-life-sale-talks-ended-20261118",
+                "factKeys": [],
+                "sourceUrls": [],
+                "checkedAt": "2026-11-18T12:44:53+09:00",
+                "newFact": true,
+                "previousMatch": null,
+                "decision": "unverified",
+                "reason": "공식 종료 보도의 최초 송고시각이 cutoff 이내인지 확인하지 못함"
+              }
+            ],
+            "coverage": {
+              "selected": {
+                "foreign": 0,
+                "domestic": 4
+              },
+              "duplicateExcluded": 1,
+              "outsideWindow": 1,
+              "unverifiedExcluded": 1,
+              "otherExcluded": 1,
+              "note": "국외 주요 뉴스·기업 발표와 국내 공식기관·공시·경제뉴스를 폭넓게 탐색하고 확인된 신규 재료만 선정; DART 당일 전체목록 장애로 국내 조사 partial"
+            },
+            "helperValidation": {
+              "status": "equivalent_manual_checks",
+              "protocolSha": "8812d14b351b5d36016dcaeb627957d117d229fd",
+              "scriptSha": "08b50b74dd65ee6850f2fa197ddf5e1e0c4ba78f",
+              "checks": [
+                "schemaVersion1",
+                "required arrays",
+                "foreign/domestic <=10 and ranks",
+                "12:40 themes empty/not_applicable",
                 "asOf KST date",
                 "event/fact uniqueness",
                 "D~D-3 FIFO",
@@ -5651,7 +6045,7 @@
           "reason": "현재창 핵심 원천 family 탐색 완료 전수성 부족; 일부 원문·장마감·공시 미완료"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-18T08:43:53.162+09:00"
+      "lastAttemptedCutoff": "2026-11-18T12:40:07+09:00"
     },
     "domesticNews": {
       "status": "partial",
@@ -5701,9 +6095,14 @@
           "startExclusive": "2026-11-17T19:41:44.070+09:00",
           "endInclusive": "2026-11-18T06:40:48.688+09:00",
           "reason": "현재창 국내 야간 원천 탐색 결과 채택 0건이나 KIND·기업IR·공식SNS 전수성 부족"
+        },
+        {
+          "startExclusive": "2026-11-18T08:43:53.162+09:00",
+          "endInclusive": "2026-11-18T12:40:07+09:00",
+          "reason": "당일 DART/KIND 전체목록 직접 검증 미완료; 현재창의 공식기관·언론·공시 대체검색 결과만 검증 채택"
         }
       ],
-      "lastAttemptedCutoff": "2026-11-18T08:43:53.162+09:00"
+      "lastAttemptedCutoff": "2026-11-18T12:40:07+09:00"
     },
     "usThemes": {
       "status": "partial",
