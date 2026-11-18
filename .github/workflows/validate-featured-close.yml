@@ -1,0 +1,31 @@
+name: Validate featured KRX regular close
+
+on:
+  push:
+    paths:
+      - 'featured-stocks.json'
+      - 'featured-stocks/*.json'
+      - 'scripts/check_featured_close.py'
+      - 'scripts/test_check_featured_close.py'
+      - '.github/workflows/validate-featured-close.yml'
+  pull_request:
+    paths:
+      - 'featured-stocks.json'
+      - 'featured-stocks/*.json'
+      - 'scripts/check_featured_close.py'
+      - 'scripts/test_check_featured_close.py'
+      - '.github/workflows/validate-featured-close.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-regular-close:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run deterministic KRX close tests
+        run: python3 -m unittest discover -s scripts -p 'test_check_featured_close.py'
+      - name: Check published 15:40 vs 20:10 KRX prices
+        run: python3 scripts/check_featured_close.py
