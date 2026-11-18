@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-18T14:34:00+09:00",
+  "updatedAt": "2026-11-18T19:42:49+09:00",
   "days": [
     {
       "date": "2026-11-18",
@@ -134,6 +134,56 @@
               "relatedStocks": [],
               "impactRank": 4,
               "category": "통상·자동차수출",
+              "region": "domestic"
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "partial",
+          "usThemeStatus": "not_applicable"
+        },
+        {
+          "slot": "19:40",
+          "asOf": "2026-11-18T19:40:11+09:00",
+          "foreignNews": [
+            {
+              "id": "20261118-1940-xi-apec-trade-opening",
+              "title": "시진핑, APEC서 관세 인하·시장개방 확대 방침 재확인",
+              "summary": "시진핑 중국 국가주석은 APEC CEO 서밋에서 WTO 중심의 다자무역체제와 자유로운 무역·투자를 지지한다고 밝혔다. 중국은 관세를 낮추고 시장 접근을 확대하며 제조업 진입 여건과 서비스업 개방을 개선하겠다고 했으나, 구체적인 인하 품목·폭·시행시점은 제시하지 않았다.",
+              "publishedAt": "2026-11-18T17:10:00+09:00",
+              "sourceName": "Reuters·아사히신문",
+              "sourceUrl": "https://www.asahi.com/ajw/articles/17060368",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "중국 통상정책·APEC",
+              "region": "foreign"
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "20261118-1940-korea-china-fta-services-investment",
+              "title": "한중 FTA 서비스·투자 후속협상 실질 타결",
+              "summary": "한국과 중국은 8년 8개월간 진행한 FTA 서비스·투자 후속협상을 실질적으로 타결했다. 중국은 한국 영화·게임의 사전심사에 최혜국대우를 적용하고, 공동제작 인정 범위를 영화에서 드라마·애니메이션·예능·다큐멘터리로 확대하기로 했다. 일부 기술적 문안은 실무협의로 마무리한다.",
+              "publishedAt": "2026-11-18T16:45:00+09:00",
+              "sourceName": "산업통상부·연합뉴스",
+              "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20261118152400003",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "한중 통상·서비스시장",
+              "region": "domestic"
+            },
+            {
+              "id": "20261118-1940-kakaogames-me2on-merger-review",
+              "title": "공정위, 카카오게임즈의 미투온 인수 기업결합심사 완료",
+              "summary": "공정거래위원회는 카카오게임즈의 미투온 인수 거래가 공정거래법 제9조 제1항에 위반되지 않는다고 통보했다. 이는 주요 선행조건 충족이며 인수 완료는 아니다. 양사는 11월 27일로 변경된 거래종결을 위한 남은 절차를 진행 중이다.",
+              "publishedAt": "2026-11-18T13:33:34+09:00",
+              "sourceName": "뉴시스",
+              "sourceUrl": "https://mobile.newsis.com/view/NISX20261118_0003873171",
+              "relatedStocks": [
+                "카카오게임즈(293490)",
+                "미투온(201490)"
+              ],
+              "impactRank": 2,
+              "category": "M&A·기업결합심사",
               "region": "domestic"
             }
           ],
