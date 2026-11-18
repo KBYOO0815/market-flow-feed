@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T08:15:46.786+09:00",
+  "updatedAt": "2026-11-19T08:44:09+09:00",
   "days": [
     {
       "date": "2026-11-19",
@@ -124,6 +124,59 @@
           ],
           "researchStatus": "complete",
           "usThemeStatus": "verified_themes"
+        },
+        {
+          "slot": "08:40",
+          "asOf": "2026-11-19T08:41:14+09:00",
+          "foreignNews": [],
+          "domesticNews": [
+            {
+              "id": "20261119-0840-korea-zinc-share-issuance-appeal",
+              "title": "고려아연, 신주발행무효 항소심 승소…1심 판결 취소",
+              "summary": "서울고등법원은 고려아연의 항소를 받아들여 1심 판결을 취소하고 신주발행무효 청구를 기각했다. 법원은 HMG 글로벌 대상 신주발행이 경영상 필요 범위에서 이뤄졌고 정관상 외국 합작법인 대상 제3자배정 요건에도 부합한다고 판단했다.",
+              "publishedAt": "2026-11-19T07:57:00+09:00",
+              "sourceName": "DART·한국거래소",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800002",
+              "relatedStocks": [
+                "고려아연(010130)"
+              ],
+              "impactRank": 1,
+              "category": "경영권 분쟁·법원 판결",
+              "region": "domestic"
+            },
+            {
+              "id": "20261119-0840-peptron-pt403-phase1-approval",
+              "title": "펩트론, 비만 치료제 PT403 국내 임상 1상 승인",
+              "summary": "펩트론은 식품의약품안전처가 비만 치료제 PT403의 임상 1상을 승인했다고 공시했다. 충남대병원에서 건강한 성인 22명을 대상으로 단회 피하 투여의 안전성·내약성·약동학을 평가하며 예상 종료일은 2027년 11월 30일이다.",
+              "publishedAt": "2026-11-19T07:49:00+09:00",
+              "sourceName": "DART·한국거래소",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119900001",
+              "relatedStocks": [
+                "펩트론(087010)"
+              ],
+              "impactRank": 2,
+              "category": "바이오·임상",
+              "region": "domestic"
+            },
+            {
+              "id": "20261119-0840-korea-zinc-director-injunction",
+              "title": "영풍 측, 고려아연 임원 6명 직무정지 가처분 신청",
+              "summary": "영풍·한국기업투자홀딩스·와이피씨는 고려아연 임원 6명을 상대로 이사·감사위원 직무집행정지와 직무대행자 선임을 요구하는 가처분을 신청했다. 신청 목적물 가액은 2억원이며 법원의 결정은 아직 나오지 않았다.",
+              "publishedAt": "2026-11-19T07:57:00+09:00",
+              "sourceName": "DART·한국거래소",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800003",
+              "relatedStocks": [
+                "고려아연(010130)",
+                "영풍(000670)"
+              ],
+              "impactRank": 3,
+              "category": "경영권 분쟁·가처분",
+              "region": "domestic"
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "usThemeStatus": "not_applicable"
         }
       ]
     },
