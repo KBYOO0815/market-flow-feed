@@ -1,7 +1,107 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-18T19:42:49+09:00",
+  "updatedAt": "2026-11-19T06:50:32+09:00",
   "days": [
+    {
+      "date": "2026-11-19",
+      "isKrxTradingDay": true,
+      "sessions": [
+        {
+          "slot": "06:40",
+          "asOf": "2026-11-19T06:43:36+09:00",
+          "foreignNews": [
+            {
+              "id": "20261119-0640-fomc-oct-minutes",
+              "title": "FOMC 의사록, 추가 금리인상 가능성 시사…일부는 25bp 초과도 거론",
+              "summary": "10월 27~28일 FOMC 의사록에서 거의 모든 참석자는 기본 전망이 유지되면 추가 금리인상이 적절할 가능성이 크다고 판단했다. 일부 참석자는 향후 물가 지표가 불리할 경우 12월에 25bp를 넘는 인상도 검토할 수 있다고 밝혔다.",
+              "publishedAt": "2026-11-19T04:00:00+09:00",
+              "sourceName": "미국 연방준비제도",
+              "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "미국 통화정책",
+              "region": "foreign"
+            },
+            {
+              "id": "20261119-0640-fed-barr-economic-outlook",
+              "title": "연준 바 이사, 전망대로면 추가 금리인상이 적절하다고 평가",
+              "summary": "마이클 바 연준 이사는 미국 경제와 고용이 견조하지만 물가는 여전히 너무 높다며, 경제가 자신의 전망대로 전개될 경우 물가를 2%로 되돌리기 위해 금리를 더 올리는 것이 적절하다고 밝혔다.",
+              "publishedAt": "2026-11-19T03:00:00+09:00",
+              "sourceName": "미국 연방준비제도",
+              "sourceUrl": "https://www.federalreserve.gov/newsevents/speech/barr20261118a.htm",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "미국 통화정책·연준 발언",
+              "region": "foreign"
+            },
+            {
+              "id": "20261119-0640-newsmax-fox-roku-lawsuit",
+              "title": "Newsmax, Fox의 220억달러 Roku 인수 무효화 요구 소송",
+              "summary": "Newsmax는 Fox의 220억달러 Roku 인수가 무료 광고형 스트리밍 시장 경쟁을 훼손한다고 주장하며 캘리포니아 연방법원에 소송을 제기했다. Roku 통합 중단과 거래 무효화 또는 Tubi·Roku Channel 중 하나의 매각을 요구했으며, 이는 원고 측 주장으로 법원 판단은 아직 나오지 않았다.",
+              "publishedAt": "2026-11-19T03:00:00+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/legal/transactional/newsmax-sues-fox-unwind-22-billion-roku-takeover-2026-11-18",
+              "relatedStocks": [
+                "Fox(FOX)",
+                "Roku(ROKU)",
+                "Newsmax(NMAX)"
+              ],
+              "impactRank": 3,
+              "category": "미디어 M&A·반독점",
+              "region": "foreign"
+            }
+          ],
+          "domesticNews": [],
+          "usThemes": [
+            {
+              "direction": "up",
+              "theme": "미국 유통·소매 실적 강세",
+              "reason": "TJX는 3분기 동일점포매출 4% 증가와 계획을 웃돈 이익을 발표했고 Target도 분기 실적과 연간 전망 상향을 내놓으면서 두 종목이 정규장에서 동반 강세를 보였다.",
+              "stocks": [
+                {
+                  "ticker": "TJX",
+                  "companyName": "TJX Companies",
+                  "regularChangePct": 10.77,
+                  "sourceUrl": "https://www.chartmill.com/news/UNH/Chartmill-58892-SP-500-Unusual-Volume-Movers-Nov-18-2026"
+                },
+                {
+                  "ticker": "TGT",
+                  "companyName": "Target",
+                  "regularChangePct": 6.99,
+                  "sourceUrl": "https://www.chartmill.com/news/UNH/Chartmill-58892-SP-500-Unusual-Volume-Movers-Nov-18-2026"
+                }
+              ],
+              "relatedKoreanStocks": []
+            },
+            {
+              "direction": "down",
+              "theme": "AI 인프라·반도체 실적 소화 약세",
+              "reason": "Nvidia의 강한 실적 발표 뒤 장전 상승이 정규장에서 반전됐고, AI 인프라 업체 CoreWeave도 함께 하락했다. 매파적인 FOMC 의사록 공개 이후 장기 성장주의 금리 민감도가 다시 부각됐다.",
+              "stocks": [
+                {
+                  "ticker": "NVDA",
+                  "companyName": "Nvidia",
+                  "regularChangePct": -2.9,
+                  "sourceUrl": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-18-2026"
+                },
+                {
+                  "ticker": "CRWV",
+                  "companyName": "CoreWeave",
+                  "regularChangePct": -4.13,
+                  "sourceUrl": "https://finance.yahoo.com/quote/CRWV"
+                }
+              ],
+              "relatedKoreanStocks": [
+                "SK하이닉스(000660)",
+                "삼성전자(005930)"
+              ]
+            }
+          ],
+          "researchStatus": "complete",
+          "usThemeStatus": "verified_themes"
+        }
+      ]
+    },
     {
       "date": "2026-11-18",
       "isKrxTradingDay": true,
@@ -864,209 +964,6 @@
           "domesticNews": [],
           "usThemes": [],
           "researchStatus": "partial",
-          "usThemeStatus": "not_applicable"
-        }
-      ]
-    },
-    {
-      "date": "2026-11-15",
-      "isKrxTradingDay": false,
-      "sessions": [
-        {
-          "slot": "19:40",
-          "asOf": "2026-11-15T19:41:44+09:00",
-          "foreignNews": [
-            {
-              "id": "20261113-1940-us-oct-ppi-2026",
-              "title": "미국 10월 생산자물가, 전월비 0.3%·전년비 6.5%",
-              "summary": "미 노동부 발표 기준 10월 최종수요 생산자물가지수(PPI)는 전월 대비 0.3%, 전년 대비 6.5% 상승했다. 전년 상승률은 2022년 11월 이후 최고였고, 식품은 전월 대비 1.3%, 전자부품·액세서리는 4.2% 올랐다.",
-              "publishedAt": "2026-11-13T22:44:09+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/business/us-producer-prices-rise-further-october-2026-11-13/",
-              "relatedStocks": [],
-              "impactRank": 1,
-              "category": "미국 물가·금리",
-              "region": "foreign"
-            },
-            {
-              "id": "20261114-1940-fed-jefferson-inflation-signal",
-              "title": "연준 부의장, 통화정책 판단에서 물가 흐름을 우선 신호로 제시",
-              "summary": "필립 제퍼슨 연준 부의장은 경제활동과 노동시장이 대체로 견조하지만 물가 압력이 지속되고 있다며, 향후 통화정책 기조를 정할 때 물가 흐름을 더 중요한 신호로 보겠다고 밝혔다. 금리 조정 시점이나 폭은 제시하지 않았다.",
-              "publishedAt": "2026-11-14T09:03:33+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/business/feds-jefferson-says-he-is-taking-his-policy-cues-inflation-2026-11-14/",
-              "relatedStocks": [],
-              "impactRank": 2,
-              "category": "연준·기준금리",
-              "region": "foreign"
-            },
-            {
-              "id": "20261115-1940-bahrain-iran-aerial-attacks",
-              "title": "바레인, 이란 공중공격 요격…이란은 미군기지 공격 주장",
-              "summary": "바레인은 이란의 공중공격 여러 건을 목표 도달 전에 요격했다고 밝혔다. 이란 혁명수비대는 바레인 알리파 헬기기지의 미군 방공 레이더를 겨냥해 드론 6대를 발사했다고 주장했으나, 미국 측의 즉각적인 확인은 없었다.",
-              "publishedAt": "2026-11-15T13:25:49+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/middle-east/bahrains-interior-ministry-issues-alerts-potential-threats-2026-11-15/",
-              "relatedStocks": [],
-              "impactRank": 3,
-              "category": "중동 지정학·에너지",
-              "region": "foreign"
-            },
-            {
-              "id": "20261115-1940-yemen-bab-el-mandeb-withdrawal",
-              "title": "예멘 정부군, 바브엘만데브 인근 철수…후티가 전략 요충지 장악",
-              "summary": "사우디 지원 예멘 정부 측 병력은 바브엘만데브 해협을 내려다보는 지역에서 철수한다고 발표했다. 철수 뒤 이란 연계 후티가 해당 지역을 통제하게 돼, 아시아와 유럽을 잇는 주요 해상 운송로의 위험이 커졌다.",
-              "publishedAt": "2026-11-15T17:34:04+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/middle-east/yemen-government-forces-withdraw-area-near-bab-el-mandeb-strait-houthis-control-2026-11-15/",
-              "relatedStocks": [],
-              "impactRank": 4,
-              "category": "해운·중동 지정학",
-              "region": "foreign"
-            },
-            {
-              "id": "20261114-1940-hormuz-three-tankers-mines",
-              "title": "이란 해군, 호르무즈서 유조선 3척 기뢰 충돌·화재 발표",
-              "summary": "이란 국영매체는 이란 해군 발표를 인용해 유조선 3척이 호르무즈 해협에서 기뢰에 부딪혀 불이 났다고 전했다. Reuters는 이란 측 발표를 즉시 독립 확인하지 못했다고 명시했다.",
-              "publishedAt": "2026-11-14T19:31:17+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/middle-east/irans-navy-says-oil-tanker-fire-after-hitting-mine-hormuz-2026-11-14/",
-              "relatedStocks": [],
-              "impactRank": 5,
-              "category": "유가·해운·중동",
-              "region": "foreign"
-            },
-            {
-              "id": "20261114-1940-trump-iran-strike-deliberation",
-              "title": "트럼프, 추가 도발 없으면 이란 공격 보류 가능성 검토",
-              "summary": "Reuters는 복수의 관계자를 인용해 트럼프 대통령이 이란이나 후티의 새 도발이 없다면 추가 공격을 보류하는 방안을 참모들에게 언급했다고 보도했다. 백악관은 최종 결정은 대통령만 안다고 밝혔으며, 공격 중단 결정이 확정된 것은 아니다.",
-              "publishedAt": "2026-11-14T20:03:42+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/middle-east/trump-tells-advisers-he-may-hold-off-iran-attacks-barring-new-provocations-2026-11-14/",
-              "relatedStocks": [],
-              "impactRank": 6,
-              "category": "미국 정책·중동",
-              "region": "foreign"
-            },
-            {
-              "id": "20261115-1940-us-air-traffic-disruption",
-              "title": "미국 항공망 장애, 토요일 6,400편 이상 취소·8,000편 이상 지연",
-              "summary": "FlightAware 집계 기준 토요일 미국 항공편은 6,400편 이상 취소되고 8,000편 이상 지연됐다. FAA는 금요일 통신 장애로 전국 출발편을 약 5시간 멈췄으며, 일요일 늦게야 운항이 대체로 정상화될 것으로 예상했다.",
-              "publishedAt": "2026-11-15T00:56:55+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/business/aerospace-defense/thousands-us-flights-canceled-delayed-air-travel-system-recovers-shutdown-2026-11-14/",
-              "relatedStocks": [],
-              "impactRank": 7,
-              "category": "항공·운송",
-              "region": "foreign"
-            },
-            {
-              "id": "20261115-1940-philippines-australia-defense-pact",
-              "title": "필리핀·호주, 남중국해 협력 강화 방위협정 체결",
-              "summary": "필리핀과 호주는 공동 군사활동 절차를 간소화하는 방위협력 합의에 서명했다. 해양 감시·정보 공유, 훈련, 상호운용성, 방위 인프라 협력을 확대하고 호주는 드론·장비·훈련 투자를 추가하기로 했다.",
-              "publishedAt": "2026-11-15T13:48:23+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/china/philippines-australia-sign-defence-pact-with-eye-china-2026-11-15/",
-              "relatedStocks": [],
-              "impactRank": 8,
-              "category": "중국·남중국해·방산",
-              "region": "foreign"
-            },
-            {
-              "id": "20261115-1940-us-diesel-below-six",
-              "title": "미국 경유 평균가격, 두 달 만에 갤런당 6달러 아래로 하락",
-              "summary": "미국 경유 평균가격은 지정학적 긴장 완화와 계절적 수요 약화로 토요일 갤런당 6달러 아래로 내려갔다. 두 달 동안 6달러를 웃돈 뒤 처음이며, 휘발유도 8월 10일 이후 처음으로 이달 4달러 아래로 하락했다.",
-              "publishedAt": "2026-11-15T10:22:24+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/business/energy/us-diesel-below-6-gallon-2-month-low-easing-tensions-weaker-demand-2026-11-15/",
-              "relatedStocks": [],
-              "impactRank": 9,
-              "category": "에너지·물가",
-              "region": "foreign"
-            },
-            {
-              "id": "20261115-1940-novelis-china-unit-sale",
-              "title": "노벨리스, 중국 자회사 2곳 2억6,500만달러에 매각 합의",
-              "summary": "힌달코는 미국 알루미늄 업체 노벨리스가 완전 자회사인 중국 법인 2곳을 2억6,500만달러에 매각하기로 합의했다고 거래소 공시를 통해 밝혔다.",
-              "publishedAt": "2026-11-15T15:37:30+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/china/hindalcos-novelis-sell-two-china-units-265-million-2026-11-15/",
-              "relatedStocks": [
-                "Hindalco Industries(HALC.NS)"
-              ],
-              "impactRank": 10,
-              "category": "기업 매각·알루미늄",
-              "region": "foreign"
-            }
-          ],
-          "domesticNews": [
-            {
-              "id": "20261115-1940-korea-energy-price-control-costs",
-              "title": "석유 최고가격제 1차 정산 임박…한전 부채 209.6조원",
-              "summary": "산업통상부는 3월 13일~6월 30일 석유 최고가격제의 1차 손실보전 정산액을 이르면 11월 말 정유사별로 통보할 예정이다. 정부의 손실보전 예비비는 올해 4.2조원, 내년 예산안 추가분은 1조4,497억원이다. 한국전력의 3분기 말 총부채는 209.6조원, 가스공사의 도시가스 민수용 미수금은 13조8,277억원으로 확인됐다.",
-              "publishedAt": "2026-11-15T06:17:00+09:00",
-              "sourceName": "연합뉴스",
-              "sourceUrl": "https://www.yna.co.kr/view/AKR20261113178000003",
-              "relatedStocks": [
-                "한국전력(015760)",
-                "한국가스공사(036460)"
-              ],
-              "impactRank": 1,
-              "category": "에너지 정책·공기업 재무",
-              "region": "domestic"
-            },
-            {
-              "id": "20261115-1940-gvcm-nine-country-signing",
-              "title": "한국 등 9개국, 글로벌 고신뢰 탄소시장 협력 의향서 서명",
-              "summary": "한국·싱가포르 등 9개국이 COP31에서 글로벌 고신뢰 탄소시장(GVCM) 공동 협력 의향서에 서명했다. 재정경제부는 GGGI·ICVCM과 품질 제고를 위한 3자 MOU도 체결했으며 2027년 중 탄소크레딧 발행기구 구축 완료를 목표로 제시했다.",
-              "publishedAt": "2026-11-15T14:00:00+09:00",
-              "sourceName": "연합뉴스·재정경제부",
-              "sourceUrl": "https://www.yna.co.kr/view/AKR20261115024900002",
-              "relatedStocks": [],
-              "impactRank": 2,
-              "category": "탄소시장·정책",
-              "region": "domestic"
-            },
-            {
-              "id": "20261115-1940-gwangju-autonomous-driving-test",
-              "title": "광주 자율주행 실증도시, 11월 30일 첫차 투입 준비",
-              "summary": "국토교통부는 광주 자율주행 실증도시에 11월 30일 첫 실증차량을 투입할 준비를 진행 중이라고 밝혔다. 현대차는 SDV 200대 공급 계획 중 67대를 인도했고, 허가와 개조가 순조로우면 연말까지 약 120대가 실제 도로에 투입될 전망이다.",
-              "publishedAt": "2026-11-15T11:00:00+09:00",
-              "sourceName": "국토교통부",
-              "sourceUrl": "https://www.molit.go.kr/USR/NEWS/dtl.jsp?id=95092599&lcmspage=1",
-              "relatedStocks": [
-                "현대차(005380)"
-              ],
-              "impactRank": 3,
-              "category": "자율주행·자동차",
-              "region": "domestic"
-            },
-            {
-              "id": "20261115-1940-coastal-vessel-modernization-fund",
-              "title": "연안선박 현대화 펀드 4차 공모…건조비 30~60% 지원",
-              "summary": "해양수산부는 11월 16일~12월 4일 연안선박 현대화 펀드 2026년 4차 지원 대상자를 모집한다. 올해부터 지원 구간 기준가격을 2.5배 높여 150억원 이하는 건조비 60%, 150억~300억원은 50%, 300억원 초과는 30%를 지원한다.",
-              "publishedAt": "2026-11-15T11:00:00+09:00",
-              "sourceName": "해양수산부",
-              "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789251",
-              "relatedStocks": [],
-              "impactRank": 4,
-              "category": "조선·해운 정책",
-              "region": "domestic"
-            },
-            {
-              "id": "20261115-1940-fsc-europe-fsb-ecb",
-              "title": "금융위원장, FSB 총회 참석·ECB 은행감독 MOU 추진",
-              "summary": "이억원 금융위원장은 11월 15~20일 스위스·독일·영국을 방문해 FSB 총회에서 글로벌 금융 취약성, AI, 스테이블코인 등을 논의한다. ECB 감독위원회 부의장과는 은행감독 협력 MOU 체결을 추진한다. MOU는 아직 체결 완료가 아닌 계획 단계다.",
-              "publishedAt": "2026-11-15T12:00:00+09:00",
-              "sourceName": "연합뉴스·금융위원회",
-              "sourceUrl": "https://www.yna.co.kr/amp/view/AKR20261115019200002",
-              "relatedStocks": [],
-              "impactRank": 5,
-              "category": "금융정책·국제협력",
-              "region": "domestic"
-            }
-          ],
-          "usThemes": [],
           "usThemeStatus": "not_applicable"
         }
       ]
