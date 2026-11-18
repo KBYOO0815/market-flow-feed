@@ -1,9 +1,13 @@
 {
   "schemaVersion": 3,
   "appVisibleCalendarDays": 2,
-  "releaseAt": "2026-11-17T20:10:00+09:00",
-  "asOf": "2026-11-17T20:12:00.356906+09:00",
+  "releaseAt": "2026-11-18T09:40:00+09:00",
+  "asOf": "2026-11-18T09:41:00.407390+09:00",
   "dates": [
+    {
+      "date": "2026-11-18",
+      "path": "featured-stocks/2026-11-18.json"
+    },
     {
       "date": "2026-11-17",
       "path": "featured-stocks/2026-11-17.json"
