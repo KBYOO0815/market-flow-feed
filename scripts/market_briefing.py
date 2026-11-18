@@ -1,22 +1,17 @@
 """Minimal validator/merger for Market Flow briefing JSON.
 
-This helper validates only the app-facing data contract. It does not decide how
-news is searched, selected, ranked, verified, or how U.S. themes are discovered.
+Validates only the app-facing contract. Search, editorial judgment and market
+analysis remain the scheduled task's responsibility.
 """
-import argparse
-import copy
-import datetime as dt
-import json
-import math
+import argparse, copy, datetime as dt, json, math
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
-SLOTS = ("06:40", "08:40", "12:40", "19:40")
+SLOTS = ("06:40", "08:40", "12:40", "15:40", "19:40")
 KST = ZoneInfo("Asia/Seoul")
 
 def require(ok, message):
-    if not ok:
-        raise ValueError(message)
+    if not ok: raise ValueError(message)
 
 def timestamp(value):
     require(isinstance(value, str), "timestamp string required")
@@ -31,8 +26,8 @@ def https(url):
     except (TypeError, ValueError):
         return False
 
-def finite(value):
-    return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
+def finite(v):
+    return isinstance(v, (int, float)) and not isinstance(v, bool) and math.isfinite(v)
 
 def validate_theme(theme):
     require(isinstance(theme, dict), "theme object required")
@@ -40,17 +35,24 @@ def validate_theme(theme):
     require(isinstance(theme.get("reason"), str) and theme["reason"].strip(), "theme reason required")
     if theme.get("direction") is not None:
         require(theme["direction"] in ("up", "down"), "invalid theme direction")
-    if theme.get("weightedChangePct") is not None:
-        require(finite(theme["weightedChangePct"]), "invalid weightedChangePct")
-    if theme.get("totalDollarVolume") is not None:
-        require(finite(theme["totalDollarVolume"]) and theme["totalDollarVolume"] >= 0, "invalid totalDollarVolume")
+    for key in ("weightedChangePct", "totalDollarVolume"):
+        if theme.get(key) is not None: require(finite(theme[key]), "invalid theme numeric")
     stocks = theme.get("stocks", [])
     require(isinstance(stocks, list) and len(stocks) <= 5, "theme stocks limit")
-    for stock in stocks:
-        require(isinstance(stock, dict) and isinstance(stock.get("ticker"), str) and stock["ticker"].strip(), "theme ticker required")
-        for key in ("regularChangePct", "afterHoursChangePct"):
-            if stock.get(key) is not None:
-                require(finite(stock[key]), "invalid theme stock change")
+
+def validate_market_close(value):
+    require(isinstance(value, dict), "marketClose object required")
+    require(isinstance(value.get("summary"), str) and value["summary"].strip(), "marketClose summary required")
+    for name in ("kospi", "kosdaq"):
+        index = value.get(name)
+        require(isinstance(index, dict), f"{name} required")
+        require(finite(index.get("close")) and finite(index.get("changePct")), f"{name} close/change required")
+    for key in ("leadingThemes", "weakThemes"):
+        require(isinstance(value.get(key, []), list) and all(isinstance(x, str) for x in value.get(key, [])), f"{key} invalid")
+    sources = value.get("sources")
+    require(isinstance(sources, list) and len(sources) >= 1, "marketClose source required")
+    for source in sources:
+        require(isinstance(source, dict) and isinstance(source.get("name"), str) and source["name"].strip() and https(source.get("url")), "marketClose source invalid")
 
 def validate_session(session, date, trading):
     require(isinstance(session, dict), "session object required")
@@ -68,10 +70,8 @@ def validate_session(session, date, trading):
             require(isinstance(item, dict), "news object required")
             for key in ("id", "title", "summary", "sourceName", "category"):
                 require(isinstance(item.get(key), str) and item[key].strip(), "news strings")
-            require(item.get("region") == region, "news region")
-            require(item.get("impactRank") == rank, "news rank")
-            require(item["id"] not in ids, "duplicate news id")
-            ids.add(item["id"])
+            require(item.get("region") == region and item.get("impactRank") == rank, "news region/rank")
+            require(item["id"] not in ids, "duplicate news id"); ids.add(item["id"])
             require(timestamp(item.get("publishedAt")) <= cutoff, "news after cutoff")
             require(https(item.get("sourceUrl")), "HTTPS source required")
             require(isinstance(item.get("relatedStocks"), list) and all(isinstance(x, str) for x in item["relatedStocks"]), "relatedStocks")
@@ -79,8 +79,15 @@ def validate_session(session, date, trading):
     themes = session.get("usThemes")
     require(isinstance(themes, list) and len(themes) <= 6, "theme limit")
     require(session["slot"] == "06:40" or not themes, "themes outside 06:40")
-    for theme in themes:
-        validate_theme(theme)
+    for theme in themes: validate_theme(theme)
+
+    close = session.get("marketClose")
+    if session["slot"] == "15:40":
+        require(trading, "marketClose on closed day")
+        require(not session["foreignNews"] and not session["domesticNews"] and not themes, "15:40 must be marketClose only")
+        validate_market_close(close)
+    else:
+        require(close is None, "marketClose outside 15:40")
 
     if session.get("researchStatus") is not None:
         require(session["researchStatus"] in ("complete", "partial", "failed"), "invalid researchStatus")
@@ -92,20 +99,16 @@ def validate(body, today=None):
     require(isinstance(body, dict) and body.get("schemaVersion") == 1, "schemaVersion")
     timestamp(body.get("updatedAt"))
     require(isinstance(body.get("days"), list), "days required")
-
     seen_dates = set()
     for day in body["days"]:
         require(isinstance(day, dict), "day object required")
         date = dt.date.fromisoformat(day["date"])
         require(today - dt.timedelta(days=3) <= date <= today, "outside FIFO range")
-        require(date not in seen_dates, "duplicate date")
-        seen_dates.add(date)
+        require(date not in seen_dates, "duplicate date"); seen_dates.add(date)
         require(type(day.get("isKrxTradingDay")) is bool, "trading flag")
-        require(isinstance(day.get("sessions"), list), "sessions required")
         seen_slots = set()
-        for session in day["sessions"]:
-            require(session.get("slot") not in seen_slots, "duplicate slot")
-            seen_slots.add(session["slot"])
+        for session in day.get("sessions", []):
+            require(session.get("slot") not in seen_slots, "duplicate slot"); seen_slots.add(session["slot"])
             validate_session(session, day["date"], day["isKrxTradingDay"])
     return body
 
@@ -115,48 +118,35 @@ def merge(current, draft, today=None):
     require(isinstance(draft.get("date"), str), "draft date required")
     require(type(draft.get("isKrxTradingDay")) is bool, "draft trading flag required")
     validate_session(draft.get("session"), draft["date"], draft["isKrxTradingDay"])
-
     result = copy.deepcopy(current)
     result.pop("researchState", None)
-    result["days"] = [
-        d for d in result.get("days", [])
-        if today - dt.timedelta(days=3) <= dt.date.fromisoformat(d["date"]) <= today
-    ]
-
+    result["days"] = [d for d in result.get("days", []) if today-dt.timedelta(days=3) <= dt.date.fromisoformat(d["date"]) <= today]
     day = next((d for d in result["days"] if d["date"] == draft["date"]), None)
     if day is None:
         day = {"date": draft["date"], "isKrxTradingDay": draft["isKrxTradingDay"], "sessions": []}
         result["days"].append(day)
     require(day["isKrxTradingDay"] == draft["isKrxTradingDay"], "trading flag conflict")
-
     session = copy.deepcopy(draft["session"])
     old = next((s for s in day["sessions"] if s["slot"] == session["slot"]), None)
-    if old is not None:
-        require(timestamp(old["asOf"]) <= timestamp(session["asOf"]), "stale replacement")
+    if old is not None: require(timestamp(old["asOf"]) <= timestamp(session["asOf"]), "stale replacement")
     day["sessions"] = [s for s in day["sessions"] if s["slot"] != session["slot"]] + [session]
-    day["sessions"].sort(key=lambda s: s["slot"])
+    day["sessions"].sort(key=lambda s: SLOTS.index(s["slot"]))
     result["days"].sort(key=lambda d: d["date"], reverse=True)
     result["updatedAt"] = dt.datetime.now(KST).isoformat()
     return validate(result, today)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=["validate", "merge"])
-    parser.add_argument("files", nargs="+")
-    parser.add_argument("--today", type=dt.date.fromisoformat)
-    args = parser.parse_args()
-
-    with open(args.files[0], encoding="utf-8") as f:
-        body = json.load(f)
-
-    if args.mode == "validate":
-        validate(body, args.today)
-        print("Market briefing JSON contract valid.")
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("mode", choices=["validate", "merge"])
+    p.add_argument("files", nargs="+")
+    p.add_argument("--today", type=dt.date.fromisoformat)
+    a = p.parse_args()
+    with open(a.files[0], encoding="utf-8") as f: body = json.load(f)
+    if a.mode == "validate":
+        validate(body, a.today); print("Market briefing JSON contract valid.")
     else:
-        require(len(args.files) == 3, "merge CURRENT DRAFT OUTPUT")
-        with open(args.files[1], encoding="utf-8") as f:
-            draft = json.load(f)
-        result = merge(body, draft, args.today)
-        with open(args.files[2], "w", encoding="utf-8") as f:
-            json.dump(result, f, ensure_ascii=False, indent=2)
-            f.write("\n")
+        require(len(a.files) == 3, "merge CURRENT DRAFT OUTPUT")
+        with open(a.files[1], encoding="utf-8") as f: draft = json.load(f)
+        result = merge(body, draft, a.today)
+        with open(a.files[2], "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2); f.write("\n")
