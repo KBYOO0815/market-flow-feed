@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
   "date": "2026-11-18",
-  "slot": "09:40",
-  "releaseAt": "2026-11-18T09:40:00+09:00",
-  "collectionStartedAt": "2026-11-18T09:40:25.075915+09:00",
-  "asOf": "2026-11-18T09:41:00.407390+09:00",
-  "reviewedAt": "2026-11-18T09:45:44+09:00",
-  "publishedAt": "2026-11-18T09:45:44+09:00",
+  "slot": "11:40",
+  "releaseAt": "2026-11-18T11:40:00+09:00",
+  "collectionStartedAt": "2026-11-18T11:43:41.005320+09:00",
+  "asOf": "2026-11-18T11:44:22.632974+09:00",
+  "reviewedAt": "2026-11-18T11:48:44+09:00",
+  "publishedAt": "2026-11-18T11:48:44+09:00",
   "turnoverBasis": "KRX_NXT",
   "universeSize": 100,
   "amountUnit": "KRW",
@@ -16,11 +16,7 @@
     "verified": true,
     "isTradingDay": true,
     "sourceUrl": "https://kind.krx.co.kr/common/stockprices.do?isurCd=00593&method=searchStockPricesMain",
-    "checkedAt": "2026-11-18T09:45:44+09:00",
-    "facts": [
-      "KIND 공식 시세 원문에서 2026-11-18 KRX 실제 체결·거래대금 확인",
-      "09:40 회차는 실제 장중 KRX 가격과 동일 시점 누적 KRX·NXT 거래대금을 사용"
-    ]
+    "checkedAt": "2026-11-18T11:48:44+09:00"
   },
   "status": {
     "collection": "success",
@@ -32,19 +28,19 @@
       "code": "000660",
       "name": "SK하이닉스",
       "turnoverRank": 1,
-      "krxTradeAmount": 782433000000,
-      "nxtTradeAmount": 900589000000,
-      "integratedTradeAmount": 1683022000000,
-      "price": 1161000,
+      "krxTradeAmount": 1929872000000,
+      "nxtTradeAmount": 1315982000000,
+      "integratedTradeAmount": 3245854000000,
+      "price": 1118000,
       "previousRegularClose": 1098000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 5.737704918032782,
+      "changeRate": 1.821493624772308,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389418+09:00",
+      "observedAt": "2026-11-18T11:43:58.621971+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000660",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000660"
@@ -54,19 +50,19 @@
       "code": "005930",
       "name": "삼성전자",
       "turnoverRank": 2,
-      "krxTradeAmount": 701838000000,
-      "nxtTradeAmount": 785761000000,
-      "integratedTradeAmount": 1487599000000,
-      "price": 197300,
+      "krxTradeAmount": 1772104000000,
+      "nxtTradeAmount": 1230495000000,
+      "integratedTradeAmount": 3002599000000,
+      "price": 190300,
       "previousRegularClose": 190300,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 3.6784025223331573,
+      "changeRate": 0,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.38943+09:00",
+      "observedAt": "2026-11-18T11:43:58.621979+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/005930",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/005930"
@@ -76,19 +72,19 @@
       "code": "009150",
       "name": "삼성전기",
       "turnoverRank": 3,
-      "krxTradeAmount": 186077000000,
-      "nxtTradeAmount": 304122000000,
-      "integratedTradeAmount": 490199000000,
-      "price": 794000,
+      "krxTradeAmount": 422179000000,
+      "nxtTradeAmount": 429730000000,
+      "integratedTradeAmount": 851909000000,
+      "price": 753000,
       "previousRegularClose": 754000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 5.305039787798416,
+      "changeRate": -0.13262599469495706,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.38945+09:00",
+      "observedAt": "2026-11-18T11:43:58.621992+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/009150",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/009150"
@@ -98,767 +94,943 @@
       "code": "471800",
       "name": "에이엘로봇",
       "turnoverRank": 4,
-      "krxTradeAmount": 223531000000,
+      "krxTradeAmount": 482151000000,
       "nxtTradeAmount": 0,
-      "integratedTradeAmount": 223531000000,
-      "price": 17360,
+      "integratedTradeAmount": 482151000000,
+      "price": 15980,
       "previousRegularClose": null,
       "comparison": {
         "eligible": false,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+        "basis": "NOT_COMPARABLE"
       },
       "changeRate": null,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.38944+09:00",
+      "observedAt": "2026-11-18T11:43:58.621986+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/471800",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/471800"
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
       "code": "005935",
       "name": "삼성전자우",
       "turnoverRank": 5,
-      "krxTradeAmount": 169724000000,
+      "krxTradeAmount": 361926000000,
       "nxtTradeAmount": 0,
-      "integratedTradeAmount": 169724000000,
-      "price": 157600,
+      "integratedTradeAmount": 361926000000,
+      "price": 152400,
       "previousRegularClose": 152000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 3.6842105263157787,
+      "changeRate": 0.2631578947368318,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389461+09:00",
+      "observedAt": "2026-11-18T11:43:58.621997+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/005935",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/005935"
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
       "code": "402340",
       "name": "SK스퀘어",
       "turnoverRank": 6,
-      "krxTradeAmount": 75730000000,
-      "nxtTradeAmount": 74923000000,
-      "integratedTradeAmount": 150653000000,
-      "price": 708000,
+      "krxTradeAmount": 174974000000,
+      "nxtTradeAmount": 104041000000,
+      "integratedTradeAmount": 279015000000,
+      "price": 689000,
       "previousRegularClose": 679000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 4.270986745213556,
+      "changeRate": 1.4727540500736325,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389481+09:00",
+      "observedAt": "2026-11-18T11:43:58.622009+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/402340",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/402340"
       }
     },
     {
-      "code": "007810",
-      "name": "코리아써키트",
+      "code": "030530",
+      "name": "원익홀딩스",
       "turnoverRank": 7,
-      "krxTradeAmount": 33016000000,
-      "nxtTradeAmount": 112279000000,
-      "integratedTradeAmount": 145295000000,
-      "price": 95500,
-      "previousRegularClose": 89900,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 6.229143492769751,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389587+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/007810",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/007810"
-      }
-    },
-    {
-      "code": "263860",
-      "name": "지니언스",
-      "turnoverRank": 8,
-      "krxTradeAmount": 120923000000,
+      "krxTradeAmount": 251329000000,
       "nxtTradeAmount": 0,
-      "integratedTradeAmount": 120923000000,
-      "price": 41050,
-      "previousRegularClose": 36600,
+      "integratedTradeAmount": 251329000000,
+      "price": 34450,
+      "previousRegularClose": 32000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 12.158469945355188,
+      "changeRate": 7.656250000000009,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389471+09:00",
+      "observedAt": "2026-11-18T11:43:58.622003+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/263860",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/263860"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/030530",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
       "code": "006400",
       "name": "삼성SDI",
-      "turnoverRank": 9,
-      "krxTradeAmount": 45272000000,
-      "nxtTradeAmount": 72768000000,
-      "integratedTradeAmount": 118040000000,
-      "price": 453000,
+      "turnoverRank": 8,
+      "krxTradeAmount": 118287000000,
+      "nxtTradeAmount": 118870000000,
+      "integratedTradeAmount": 237157000000,
+      "price": 429750,
       "previousRegularClose": 445000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 1.7977528089887729,
+      "changeRate": -3.4269662921348365,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389524+09:00",
+      "observedAt": "2026-11-18T11:43:58.622032+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/006400",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/006400"
       }
     },
     {
-      "code": "000150",
-      "name": "두산",
-      "turnoverRank": 10,
-      "krxTradeAmount": 50825000000,
-      "nxtTradeAmount": 50112000000,
-      "integratedTradeAmount": 100937000000,
-      "price": 615000,
-      "previousRegularClose": 541000,
+      "code": "000250",
+      "name": "삼천당제약",
+      "turnoverRank": 9,
+      "krxTradeAmount": 122376000000,
+      "nxtTradeAmount": 97752000000,
+      "integratedTradeAmount": 220128000000,
+      "price": 133500,
+      "previousRegularClose": 160700,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 13.678373382624764,
+      "changeRate": -16.925948973242065,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389513+09:00",
+      "observedAt": "2026-11-18T11:43:58.622026+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000150",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000150"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000250",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000250"
+      }
+    },
+    {
+      "code": "007810",
+      "name": "코리아써키트",
+      "turnoverRank": 10,
+      "krxTradeAmount": 67132000000,
+      "nxtTradeAmount": 148115000000,
+      "integratedTradeAmount": 215247000000,
+      "price": 92300,
+      "previousRegularClose": 89900,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 2.6696329254727535,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622072+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/007810",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/007810"
       }
     },
     {
       "code": "222800",
       "name": "심텍",
       "turnoverRank": 11,
-      "krxTradeAmount": 30168000000,
-      "nxtTradeAmount": 69672000000,
-      "integratedTradeAmount": 99840000000,
-      "price": 111600,
+      "krxTradeAmount": 75515000000,
+      "nxtTradeAmount": 96941000000,
+      "integratedTradeAmount": 172456000000,
+      "price": 103600,
       "previousRegularClose": 107500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 3.8139534883721016,
+      "changeRate": -3.6279069767441885,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389609+09:00",
+      "observedAt": "2026-11-18T11:43:58.622055+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/222800",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/222800"
       }
     },
     {
+      "code": "263860",
+      "name": "지니언스",
+      "turnoverRank": 12,
+      "krxTradeAmount": 169324000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 169324000000,
+      "price": 39700,
+      "previousRegularClose": 36600,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 8.469945355191255,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622014+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/263860",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "028050",
+      "name": "삼성E&A",
+      "turnoverRank": 13,
+      "krxTradeAmount": 167531000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 167531000000,
+      "price": 62000,
+      "previousRegularClose": 67900,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -8.689248895434465,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.62202+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/028050",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "000150",
+      "name": "두산",
+      "turnoverRank": 14,
+      "krxTradeAmount": 88154000000,
+      "nxtTradeAmount": 67575000000,
+      "integratedTradeAmount": 155729000000,
+      "price": 572000,
+      "previousRegularClose": 541000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 5.73012939001849,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622049+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000150",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000150"
+      }
+    },
+    {
       "code": "007660",
       "name": "이수페타시스",
-      "turnoverRank": 12,
-      "krxTradeAmount": 30555000000,
-      "nxtTradeAmount": 52833000000,
-      "integratedTradeAmount": 83388000000,
-      "price": 84800,
+      "turnoverRank": 15,
+      "krxTradeAmount": 68682000000,
+      "nxtTradeAmount": 82680000000,
+      "integratedTradeAmount": 151362000000,
+      "price": 79400,
       "previousRegularClose": 83800,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 1.193317422434359,
+      "changeRate": -5.250596658711215,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389598+09:00",
+      "observedAt": "2026-11-18T11:43:58.622067+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/007660",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/007660"
       }
     },
     {
-      "code": "053800",
-      "name": "안랩",
-      "turnoverRank": 13,
-      "krxTradeAmount": 39621000000,
-      "nxtTradeAmount": 43572000000,
-      "integratedTradeAmount": 83193000000,
-      "price": 110500,
-      "previousRegularClose": 102000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 8.333333333333325,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389556+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/053800",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/053800"
-      }
-    },
-    {
-      "code": "030530",
-      "name": "원익홀딩스",
-      "turnoverRank": 14,
-      "krxTradeAmount": 74708000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 74708000000,
-      "price": 34600,
-      "previousRegularClose": 32000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 8.125000000000004,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389492+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/030530",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/030530"
-      }
-    },
-    {
-      "code": "356860",
-      "name": "티엘비",
-      "turnoverRank": 15,
-      "krxTradeAmount": 14204000000,
-      "nxtTradeAmount": 55919000000,
-      "integratedTradeAmount": 70123000000,
-      "price": 43500,
-      "previousRegularClose": 40000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 8.749999999999991,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.71+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/356860",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/356860"
-      }
-    },
-    {
-      "code": "028050",
-      "name": "삼성E&A",
-      "turnoverRank": 16,
-      "krxTradeAmount": 66071000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 66071000000,
-      "price": 65100,
-      "previousRegularClose": 67900,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -4.123711340206182,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389503+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/028050",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/028050"
-      }
-    },
-    {
-      "code": "180640",
-      "name": "한진칼",
-      "turnoverRank": 17,
-      "krxTradeAmount": 22584000000,
-      "nxtTradeAmount": 32410000000,
-      "integratedTradeAmount": 54994000000,
-      "price": 224500,
-      "previousRegularClose": 215500,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 4.17633410672853,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389665+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/180640",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/180640"
-      }
-    },
-    {
       "code": "108490",
       "name": "로보티즈",
-      "turnoverRank": 18,
-      "krxTradeAmount": 17048000000,
-      "nxtTradeAmount": 32639000000,
-      "integratedTradeAmount": 49687000000,
-      "price": 229750,
+      "turnoverRank": 16,
+      "krxTradeAmount": 61298000000,
+      "nxtTradeAmount": 66732000000,
+      "integratedTradeAmount": 128030000000,
+      "price": 231000,
       "previousRegularClose": 211500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 8.628841607565008,
+      "changeRate": 9.219858156028371,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389777+09:00",
+      "observedAt": "2026-11-18T11:43:58.622078+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/108490",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/108490"
       }
     },
     {
+      "code": "053800",
+      "name": "안랩",
+      "turnoverRank": 17,
+      "krxTradeAmount": 52937000000,
+      "nxtTradeAmount": 53737000000,
+      "integratedTradeAmount": 106674000000,
+      "price": 106300,
+      "previousRegularClose": 102000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 4.215686274509811,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622101+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/053800",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/053800"
+      }
+    },
+    {
+      "code": "036930",
+      "name": "주성엔지니어링",
+      "turnoverRank": 18,
+      "krxTradeAmount": 105852000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 105852000000,
+      "price": 144100,
+      "previousRegularClose": 147700,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -2.437373053486802,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622038+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/036930",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "180640",
+      "name": "한진칼",
+      "turnoverRank": 19,
+      "krxTradeAmount": 46886000000,
+      "nxtTradeAmount": 54024000000,
+      "integratedTradeAmount": 100910000000,
+      "price": 222000,
+      "previousRegularClose": 215500,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 3.0162412993039345,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622124+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/180640",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/180640"
+      }
+    },
+    {
+      "code": "356860",
+      "name": "티엘비",
+      "turnoverRank": 20,
+      "krxTradeAmount": 28679000000,
+      "nxtTradeAmount": 67475000000,
+      "integratedTradeAmount": 96154000000,
+      "price": 41350,
+      "previousRegularClose": 40000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 3.3749999999999947,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284548+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/356860",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/356860"
+      }
+    },
+    {
       "code": "034020",
       "name": "두산에너빌리티",
-      "turnoverRank": 19,
-      "krxTradeAmount": 19876000000,
-      "nxtTradeAmount": 24017000000,
-      "integratedTradeAmount": 43893000000,
-      "price": 43350,
+      "turnoverRank": 21,
+      "krxTradeAmount": 54375000000,
+      "nxtTradeAmount": 41255000000,
+      "integratedTradeAmount": 95630000000,
+      "price": 41850,
       "previousRegularClose": 42600,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 1.760563380281699,
+      "changeRate": -1.7605633802816878,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389708+09:00",
+      "observedAt": "2026-11-18T11:43:58.622095+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/034020",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/034020"
       }
     },
     {
-      "code": "036930",
-      "name": "주성엔지니어링",
-      "turnoverRank": 20,
-      "krxTradeAmount": 43764000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 43764000000,
-      "price": 153200,
-      "previousRegularClose": 147700,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 3.7237643872714887,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389535+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/036930",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/036930"
-      }
-    },
-    {
       "code": "043260",
       "name": "성호전자",
-      "turnoverRank": 21,
-      "krxTradeAmount": 43557000000,
+      "turnoverRank": 22,
+      "krxTradeAmount": 92777000000,
       "nxtTradeAmount": 0,
-      "integratedTradeAmount": 43557000000,
-      "price": 26500,
+      "integratedTradeAmount": 92777000000,
+      "price": 25250,
       "previousRegularClose": 22750,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 16.483516483516492,
+      "changeRate": 10.989010989010994,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389545+09:00",
+      "observedAt": "2026-11-18T11:43:58.622044+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/043260",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/043260"
-      }
-    },
-    {
-      "code": "437730",
-      "name": "삼현",
-      "turnoverRank": 22,
-      "krxTradeAmount": 16533000000,
-      "nxtTradeAmount": 26080000000,
-      "integratedTradeAmount": 42613000000,
-      "price": 51400,
-      "previousRegularClose": 48000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 7.08333333333333,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389795+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/437730",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/437730"
-      }
-    },
-    {
-      "code": "261780",
-      "name": "아리바이오랩",
-      "turnoverRank": 23,
-      "krxTradeAmount": 38228000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 38228000000,
-      "price": 5290,
-      "previousRegularClose": 4070,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 29.975429975429968,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389566+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/261780",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/261780"
-      }
-    },
-    {
-      "code": "399720",
-      "name": "가온칩스",
-      "turnoverRank": 24,
-      "krxTradeAmount": 5214000000,
-      "nxtTradeAmount": 32566000000,
-      "integratedTradeAmount": 37780000000,
-      "price": 38200,
-      "previousRegularClose": 37750,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 1.192052980132452,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699553+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/399720",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/399720"
-      }
-    },
-    {
-      "code": "042700",
-      "name": "한미반도체",
-      "turnoverRank": 25,
-      "krxTradeAmount": 19353000000,
-      "nxtTradeAmount": 16805000000,
-      "integratedTradeAmount": 36158000000,
-      "price": 170900,
-      "previousRegularClose": 165300,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 3.3877797943133725,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389718+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/042700",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/042700"
-      }
-    },
-    {
-      "code": "035420",
-      "name": "NAVER",
-      "turnoverRank": 26,
-      "krxTradeAmount": 16888000000,
-      "nxtTradeAmount": 19087000000,
-      "integratedTradeAmount": 35975000000,
-      "price": 170400,
-      "previousRegularClose": 170000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 0.23529411764706687,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389768+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/035420",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/035420"
-      }
-    },
-    {
-      "code": "105560",
-      "name": "KB금융",
-      "turnoverRank": 27,
-      "krxTradeAmount": 29041000000,
-      "nxtTradeAmount": 5678000000,
-      "integratedTradeAmount": 34719000000,
-      "price": 154500,
-      "previousRegularClose": 156800,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -1.466836734693877,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389619+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/105560",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/105560"
-      }
-    },
-    {
-      "code": "353200",
-      "name": "대덕전자",
-      "turnoverRank": 28,
-      "krxTradeAmount": 34695000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 34695000000,
-      "price": 84300,
-      "previousRegularClose": 80700,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 4.4609665427509215,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389577+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/353200",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/353200"
-      }
-    },
-    {
-      "code": "068270",
-      "name": "셀트리온",
-      "turnoverRank": 29,
-      "krxTradeAmount": 18659000000,
-      "nxtTradeAmount": 16029000000,
-      "integratedTradeAmount": 34688000000,
-      "price": 211000,
-      "previousRegularClose": 213000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -0.9389671361502372,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389739+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/068270",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/068270"
-      }
-    },
-    {
-      "code": "190510",
-      "name": "나무가",
-      "turnoverRank": 30,
-      "krxTradeAmount": 9477000000,
-      "nxtTradeAmount": 24969000000,
-      "integratedTradeAmount": 34446000000,
-      "price": 17360,
-      "previousRegularClose": 17340,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 0.11534025374855261,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710275+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/190510",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/190510"
-      }
-    },
-    {
-      "code": "005380",
-      "name": "현대차",
-      "turnoverRank": 31,
-      "krxTradeAmount": 14014000000,
-      "nxtTradeAmount": 18565000000,
-      "integratedTradeAmount": 32579000000,
-      "price": 260500,
-      "previousRegularClose": 259000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 0.5791505791505891,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.71001+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/005380",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/005380"
-      }
-    },
-    {
-      "code": "017670",
-      "name": "SK텔레콤",
-      "turnoverRank": 32,
-      "krxTradeAmount": 12570000000,
-      "nxtTradeAmount": 19527000000,
-      "integratedTradeAmount": 32097000000,
-      "price": 82900,
-      "previousRegularClose": 82900,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 0,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710055+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/017670",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/017670"
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
       "code": "277810",
       "name": "레인보우로보틱스",
-      "turnoverRank": 33,
-      "krxTradeAmount": 15340000000,
-      "nxtTradeAmount": 16072000000,
-      "integratedTradeAmount": 31412000000,
-      "price": 383000,
+      "turnoverRank": 23,
+      "krxTradeAmount": 47184000000,
+      "nxtTradeAmount": 39361000000,
+      "integratedTradeAmount": 86545000000,
+      "price": 387500,
       "previousRegularClose": 339000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 12.979351032448383,
+      "changeRate": 14.306784660766958,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.709991+09:00",
+      "observedAt": "2026-11-18T11:43:58.622112+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/277810",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/277810"
       }
     },
     {
+      "code": "005380",
+      "name": "현대차",
+      "turnoverRank": 24,
+      "krxTradeAmount": 42355000000,
+      "nxtTradeAmount": 37709000000,
+      "integratedTradeAmount": 80064000000,
+      "price": 254000,
+      "previousRegularClose": 259000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -1.9305019305019266,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622141+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/005380",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/005380"
+      }
+    },
+    {
+      "code": "437730",
+      "name": "삼현",
+      "turnoverRank": 25,
+      "krxTradeAmount": 35640000000,
+      "nxtTradeAmount": 41746000000,
+      "integratedTradeAmount": 77386000000,
+      "price": 50700,
+      "previousRegularClose": 48000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 5.624999999999991,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284471+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/437730",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/437730"
+      }
+    },
+    {
+      "code": "035420",
+      "name": "NAVER",
+      "turnoverRank": 26,
+      "krxTradeAmount": 45849000000,
+      "nxtTradeAmount": 30641000000,
+      "integratedTradeAmount": 76490000000,
+      "price": 168900,
+      "previousRegularClose": 170000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -0.6470588235294117,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.62213+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/035420",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/035420"
+      }
+    },
+    {
+      "code": "042700",
+      "name": "한미반도체",
+      "turnoverRank": 27,
+      "krxTradeAmount": 45878000000,
+      "nxtTradeAmount": 26391000000,
+      "integratedTradeAmount": 72269000000,
+      "price": 163300,
+      "previousRegularClose": 165300,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -1.2099213551119203,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622135+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/042700",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/042700"
+      }
+    },
+    {
+      "code": "353200",
+      "name": "대덕전자",
+      "turnoverRank": 28,
+      "krxTradeAmount": 71627000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 71627000000,
+      "price": 78500,
+      "previousRegularClose": 80700,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -2.7261462205700138,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622061+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/353200",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "017670",
+      "name": "SK텔레콤",
+      "turnoverRank": 29,
+      "krxTradeAmount": 40258000000,
+      "nxtTradeAmount": 30446000000,
+      "integratedTradeAmount": 70704000000,
+      "price": 81100,
+      "previousRegularClose": 82900,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -2.171290711700846,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622163+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/017670",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/017670"
+      }
+    },
+    {
+      "code": "068270",
+      "name": "셀트리온",
+      "turnoverRank": 30,
+      "krxTradeAmount": 41536000000,
+      "nxtTradeAmount": 22807000000,
+      "integratedTradeAmount": 64343000000,
+      "price": 210000,
+      "previousRegularClose": 213000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -1.4084507042253502,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622146+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/068270",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/068270"
+      }
+    },
+    {
+      "code": "493260",
+      "name": "옵토닉스",
+      "turnoverRank": 31,
+      "krxTradeAmount": 61159000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 61159000000,
+      "price": 16400,
+      "previousRegularClose": 18170,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -9.74133186571271,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622084+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/493260",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "105560",
+      "name": "KB금융",
+      "turnoverRank": 32,
+      "krxTradeAmount": 52874000000,
+      "nxtTradeAmount": 7663000000,
+      "integratedTradeAmount": 60537000000,
+      "price": 155900,
+      "previousRegularClose": 156800,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -0.5739795918367374,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.622107+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/105560",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/105560"
+      }
+    },
+    {
+      "code": "261780",
+      "name": "아리바이오랩",
+      "turnoverRank": 33,
+      "krxTradeAmount": 59900000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 59900000000,
+      "price": 5150,
+      "previousRegularClose": 4070,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 26.535626535626534,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:43:58.62209+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/261780",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
       "code": "034730",
       "name": "SK",
       "turnoverRank": 34,
-      "krxTradeAmount": 25410000000,
-      "nxtTradeAmount": 5678000000,
-      "integratedTradeAmount": 31088000000,
-      "price": 488500,
+      "krxTradeAmount": 47063000000,
+      "nxtTradeAmount": 7414000000,
+      "integratedTradeAmount": 54477000000,
+      "price": 477000,
       "previousRegularClose": 466000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 4.828326180257503,
+      "changeRate": 2.3605150214592197,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389655+09:00",
+      "observedAt": "2026-11-18T11:43:58.622118+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/034730",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/034730"
       }
     },
     {
+      "code": "066570",
+      "name": "LG전자",
+      "turnoverRank": 35,
+      "krxTradeAmount": 33068000000,
+      "nxtTradeAmount": 18335000000,
+      "integratedTradeAmount": 51403000000,
+      "price": 129600,
+      "previousRegularClose": 129300,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 0.23201856148491462,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284518+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/066570",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/066570"
+      }
+    },
+    {
+      "code": "373220",
+      "name": "LG에너지솔루션",
+      "turnoverRank": 36,
+      "krxTradeAmount": 33725000000,
+      "nxtTradeAmount": 12644000000,
+      "integratedTradeAmount": 46369000000,
+      "price": 299500,
+      "previousRegularClose": 305500,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -1.9639934533551506,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284487+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/373220",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/373220"
+      }
+    },
+    {
+      "code": "399720",
+      "name": "가온칩스",
+      "turnoverRank": 37,
+      "krxTradeAmount": 9667000000,
+      "nxtTradeAmount": 36559000000,
+      "integratedTradeAmount": 46226000000,
+      "price": 36550,
+      "previousRegularClose": 37750,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -3.1788079470198682,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647709+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/399720",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/399720"
+      }
+    },
+    {
+      "code": "190510",
+      "name": "나무가",
+      "turnoverRank": 38,
+      "krxTradeAmount": 15353000000,
+      "nxtTradeAmount": 30246000000,
+      "integratedTradeAmount": 45599000000,
+      "price": 16470,
+      "previousRegularClose": 17340,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -5.017301038062283,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647715+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/190510",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/190510"
+      }
+    },
+    {
       "code": "298040",
       "name": "효성중공업",
-      "turnoverRank": 35,
-      "krxTradeAmount": 12153000000,
-      "nxtTradeAmount": 13701000000,
-      "integratedTradeAmount": 25854000000,
-      "price": 1701000,
+      "turnoverRank": 39,
+      "krxTradeAmount": 25316000000,
+      "nxtTradeAmount": 20205000000,
+      "integratedTradeAmount": 45521000000,
+      "price": 1643000,
       "previousRegularClose": 1646000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 3.3414337788578274,
+      "changeRate": -0.18226002430133947,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710108+09:00",
+      "observedAt": "2026-11-18T11:44:05.284604+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/298040",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/298040"
       }
     },
     {
-      "code": "493260",
-      "name": "옵토닉스",
-      "turnoverRank": 36,
-      "krxTradeAmount": 25411000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 25411000000,
-      "price": 17270,
-      "previousRegularClose": 18170,
+      "code": "010120",
+      "name": "LS ELECTRIC",
+      "turnoverRank": 40,
+      "krxTradeAmount": 25075000000,
+      "nxtTradeAmount": 19411000000,
+      "integratedTradeAmount": 44486000000,
+      "price": 112900,
+      "previousRegularClose": 113600,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": -4.95321959273528,
+      "changeRate": -0.616197183098588,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389642+09:00",
+      "observedAt": "2026-11-18T11:44:05.284616+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/493260",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/493260"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/010120",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/010120"
       }
     },
     {
       "code": "278470",
       "name": "에이피알",
-      "turnoverRank": 37,
-      "krxTradeAmount": 13558000000,
-      "nxtTradeAmount": 10882000000,
-      "integratedTradeAmount": 24440000000,
-      "price": 237500,
+      "turnoverRank": 41,
+      "krxTradeAmount": 28658000000,
+      "nxtTradeAmount": 15464000000,
+      "integratedTradeAmount": 44122000000,
+      "price": 233500,
       "previousRegularClose": 231000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 2.813852813852824,
+      "changeRate": 1.0822510822510845,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710028+09:00",
+      "observedAt": "2026-11-18T11:44:05.284568+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/278470",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/278470"
       }
     },
     {
+      "code": "196170",
+      "name": "알테오젠",
+      "turnoverRank": 42,
+      "krxTradeAmount": 28451000000,
+      "nxtTradeAmount": 14698000000,
+      "integratedTradeAmount": 43149000000,
+      "price": 169600,
+      "previousRegularClose": 173000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -1.965317919075149,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284562+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/196170",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/196170"
+      }
+    },
+    {
+      "code": "012330",
+      "name": "현대모비스",
+      "turnoverRank": 43,
+      "krxTradeAmount": 28844000000,
+      "nxtTradeAmount": 13138000000,
+      "integratedTradeAmount": 41982000000,
+      "price": 350000,
+      "previousRegularClose": 346000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 1.1560693641618602,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284542+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/012330",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/012330"
+      }
+    },
+    {
+      "code": "010060",
+      "name": "OCI홀딩스",
+      "turnoverRank": 44,
+      "krxTradeAmount": 22461000000,
+      "nxtTradeAmount": 19511000000,
+      "integratedTradeAmount": 41972000000,
+      "price": 168900,
+      "previousRegularClose": 171500,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -1.5160349854227428,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284651+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/010060",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/010060"
+      }
+    },
+    {
+      "code": "218410",
+      "name": "RFHIC",
+      "turnoverRank": 45,
+      "krxTradeAmount": 18802000000,
+      "nxtTradeAmount": 23070000000,
+      "integratedTradeAmount": 41872000000,
+      "price": 54400,
+      "previousRegularClose": 54700,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -0.5484460694698323,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647621+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/218410",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/218410"
+      }
+    },
+    {
       "code": "328130",
       "name": "루닛",
-      "turnoverRank": 38,
-      "krxTradeAmount": 7743000000,
-      "nxtTradeAmount": 16483000000,
-      "integratedTradeAmount": 24226000000,
-      "price": 15960,
+      "turnoverRank": 46,
+      "krxTradeAmount": 17251000000,
+      "nxtTradeAmount": 24242000000,
+      "integratedTradeAmount": 41493000000,
+      "price": 15680,
       "previousRegularClose": 15820,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 0.8849557522123908,
+      "changeRate": -0.8849557522123908,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699449+09:00",
+      "observedAt": "2026-11-18T11:44:10.647663+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/328130",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/328130"
@@ -867,768 +1039,702 @@
     {
       "code": "131290",
       "name": "티에스이",
-      "turnoverRank": 39,
-      "krxTradeAmount": 8094000000,
-      "nxtTradeAmount": 14768000000,
-      "integratedTradeAmount": 22862000000,
-      "price": 187700,
+      "turnoverRank": 47,
+      "krxTradeAmount": 20621000000,
+      "nxtTradeAmount": 20558000000,
+      "integratedTradeAmount": 41179000000,
+      "price": 178400,
       "previousRegularClose": 186100,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 0.8597528210639416,
+      "changeRate": -4.137560451370225,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699427+09:00",
+      "observedAt": "2026-11-18T11:44:10.64755+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/131290",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/131290"
       }
     },
     {
-      "code": "066570",
-      "name": "LG전자",
-      "turnoverRank": 40,
-      "krxTradeAmount": 11463000000,
-      "nxtTradeAmount": 11388000000,
-      "integratedTradeAmount": 22851000000,
-      "price": 133000,
-      "previousRegularClose": 129300,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 2.861562258313999,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710158+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/066570",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/066570"
-      }
-    },
-    {
-      "code": "010060",
-      "name": "OCI홀딩스",
-      "turnoverRank": 41,
-      "krxTradeAmount": 9964000000,
-      "nxtTradeAmount": 12772000000,
-      "integratedTradeAmount": 22736000000,
-      "price": 176700,
-      "previousRegularClose": 171500,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 3.0320699708454857,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710255+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/010060",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/010060"
-      }
-    },
-    {
-      "code": "012200",
-      "name": "계양전기",
-      "turnoverRank": 42,
-      "krxTradeAmount": 21608000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 21608000000,
-      "price": 2905,
-      "previousRegularClose": 2935,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -1.0221465076660996,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389676+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/012200",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/012200"
-      }
-    },
-    {
-      "code": "010120",
-      "name": "LS ELECTRIC",
-      "turnoverRank": 43,
-      "krxTradeAmount": 9156000000,
-      "nxtTradeAmount": 11977000000,
-      "integratedTradeAmount": 21133000000,
-      "price": 117500,
-      "previousRegularClose": 113600,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 3.4330985915492995,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699438+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/010120",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/010120"
-      }
-    },
-    {
-      "code": "218410",
-      "name": "RFHIC",
-      "turnoverRank": 44,
-      "krxTradeAmount": 6068000000,
-      "nxtTradeAmount": 14238000000,
-      "integratedTradeAmount": 20306000000,
-      "price": 57800,
-      "previousRegularClose": 54700,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 5.667276051188308,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699558+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/218410",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/218410"
-      }
-    },
-    {
       "code": "010170",
       "name": "대한광통신",
-      "turnoverRank": 45,
-      "krxTradeAmount": 20226000000,
+      "turnoverRank": 48,
+      "krxTradeAmount": 40224000000,
       "nxtTradeAmount": 0,
-      "integratedTradeAmount": 20226000000,
-      "price": 13540,
+      "integratedTradeAmount": 40224000000,
+      "price": 12880,
       "previousRegularClose": 12930,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 4.717710750193338,
+      "changeRate": -0.3866976024748614,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389687+09:00",
+      "observedAt": "2026-11-18T11:43:58.622152+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/010170",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/010170"
-      }
-    },
-    {
-      "code": "290690",
-      "name": "아리바이오홀딩스",
-      "turnoverRank": 46,
-      "krxTradeAmount": 19768000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 19768000000,
-      "price": 3165,
-      "previousRegularClose": 2560,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 23.6328125,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389697+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/290690",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/290690"
-      }
-    },
-    {
-      "code": "100790",
-      "name": "미래에셋벤처투자",
-      "turnoverRank": 47,
-      "krxTradeAmount": 18720000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 18720000000,
-      "price": 15200,
-      "previousRegularClose": 13920,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 9.195402298850585,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389729+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/100790",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/100790"
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
       "code": "079550",
       "name": "LIG디펜스앤에어로스페이스",
-      "turnoverRank": 48,
-      "krxTradeAmount": 12418000000,
-      "nxtTradeAmount": 6086000000,
-      "integratedTradeAmount": 18504000000,
-      "price": 352500,
+      "turnoverRank": 49,
+      "krxTradeAmount": 30657000000,
+      "nxtTradeAmount": 9513000000,
+      "integratedTradeAmount": 40170000000,
+      "price": 350500,
       "previousRegularClose": 345500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 2.026049204052094,
+      "changeRate": 1.447178002894356,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710075+09:00",
+      "observedAt": "2026-11-18T11:44:05.284536+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/079550",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/079550"
       }
     },
     {
-      "code": "012330",
-      "name": "현대모비스",
-      "turnoverRank": 49,
-      "krxTradeAmount": 11984000000,
-      "nxtTradeAmount": 6394000000,
-      "integratedTradeAmount": 18378000000,
-      "price": 356000,
-      "previousRegularClose": 346000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 2.8901734104046284,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710119+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/012330",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/012330"
-      }
-    },
-    {
-      "code": "373220",
-      "name": "LG에너지솔루션",
+      "code": "100790",
+      "name": "미래에셋벤처투자",
       "turnoverRank": 50,
-      "krxTradeAmount": 12416000000,
-      "nxtTradeAmount": 5682000000,
-      "integratedTradeAmount": 18098000000,
-      "price": 309750,
-      "previousRegularClose": 305500,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 1.3911620294599025,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710129+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/373220",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/373220"
-      }
-    },
-    {
-      "code": "086790",
-      "name": "하나금융지주",
-      "turnoverRank": 51,
-      "krxTradeAmount": 15965000000,
-      "nxtTradeAmount": 1775000000,
-      "integratedTradeAmount": 17740000000,
-      "price": 123100,
-      "previousRegularClose": 125100,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -1.5987210231814597,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389786+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/086790",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/086790"
-      }
-    },
-    {
-      "code": "042510",
-      "name": "라온시큐어",
-      "turnoverRank": 52,
-      "krxTradeAmount": 17604000000,
+      "krxTradeAmount": 40169000000,
       "nxtTradeAmount": 0,
-      "integratedTradeAmount": 17604000000,
-      "price": 14850,
-      "previousRegularClose": 13030,
+      "integratedTradeAmount": 40169000000,
+      "price": 15190,
+      "previousRegularClose": 13920,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 13.967766692248663,
+      "changeRate": 9.123563218390807,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:43.389759+09:00",
+      "observedAt": "2026-11-18T11:43:58.622158+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/042510",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/042510"
-      }
-    },
-    {
-      "code": "086520",
-      "name": "에코프로",
-      "turnoverRank": 53,
-      "krxTradeAmount": 7443000000,
-      "nxtTradeAmount": 9788000000,
-      "integratedTradeAmount": 17231000000,
-      "price": 68900,
-      "previousRegularClose": 67600,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 1.9230769230769162,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699494+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/086520",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/086520"
-      }
-    },
-    {
-      "code": "015760",
-      "name": "한국전력",
-      "turnoverRank": 54,
-      "krxTradeAmount": 8062000000,
-      "nxtTradeAmount": 8916000000,
-      "integratedTradeAmount": 16978000000,
-      "price": 24800,
-      "previousRegularClose": 25100,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -1.195219123505975,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699421+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/015760",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/015760"
-      }
-    },
-    {
-      "code": "010140",
-      "name": "삼성중공업",
-      "turnoverRank": 55,
-      "krxTradeAmount": 8332000000,
-      "nxtTradeAmount": 7978000000,
-      "integratedTradeAmount": 16310000000,
-      "price": 15880,
-      "previousRegularClose": 16000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -0.7499999999999951,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699392+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/010140",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/010140"
-      }
-    },
-    {
-      "code": "207940",
-      "name": "삼성바이오로직스",
-      "turnoverRank": 56,
-      "krxTradeAmount": 10116000000,
-      "nxtTradeAmount": 5576000000,
-      "integratedTradeAmount": 15692000000,
-      "price": 1390000,
-      "previousRegularClose": 1414000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -1.6973125884017004,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710245+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/207940",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/207940"
-      }
-    },
-    {
-      "code": "012450",
-      "name": "한화에어로스페이스",
-      "turnoverRank": 57,
-      "krxTradeAmount": 10489000000,
-      "nxtTradeAmount": 5180000000,
-      "integratedTradeAmount": 15669000000,
-      "price": 629000,
-      "previousRegularClose": 623000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 0.9630818619582593,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710226+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/012450",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/012450"
-      }
-    },
-    {
-      "code": "000500",
-      "name": "가온전선",
-      "turnoverRank": 58,
-      "krxTradeAmount": 3173000000,
-      "nxtTradeAmount": 12458000000,
-      "integratedTradeAmount": 15631000000,
-      "price": 219000,
-      "previousRegularClose": 211000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 3.791469194312791,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699564+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000500",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000500"
-      }
-    },
-    {
-      "code": "031980",
-      "name": "피에스케이홀딩스",
-      "turnoverRank": 59,
-      "krxTradeAmount": 8385000000,
-      "nxtTradeAmount": 7106000000,
-      "integratedTradeAmount": 15491000000,
-      "price": 130900,
-      "previousRegularClose": 127000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 3.070866141732287,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699398+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/031980",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/031980"
-      }
-    },
-    {
-      "code": "064400",
-      "name": "LG씨엔에스",
-      "turnoverRank": 60,
-      "krxTradeAmount": 15422000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 15422000000,
-      "price": 78800,
-      "previousRegularClose": 77200,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 2.0725388601036343,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.709979+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/064400",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/064400"
-      }
-    },
-    {
-      "code": "035900",
-      "name": "JYP Ent.",
-      "turnoverRank": 61,
-      "krxTradeAmount": 7659000000,
-      "nxtTradeAmount": 7561000000,
-      "integratedTradeAmount": 15220000000,
-      "price": 45500,
-      "previousRegularClose": 43000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 5.813953488372103,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699477+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/035900",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/035900"
-      }
-    },
-    {
-      "code": "028260",
-      "name": "삼성물산",
-      "turnoverRank": 62,
-      "krxTradeAmount": 9420000000,
-      "nxtTradeAmount": 5749000000,
-      "integratedTradeAmount": 15169000000,
-      "price": 274500,
-      "previousRegularClose": 265500,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 3.3898305084745672,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710436+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/028260",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/028260"
-      }
-    },
-    {
-      "code": "000810",
-      "name": "삼성화재",
-      "turnoverRank": 63,
-      "krxTradeAmount": 12529000000,
-      "nxtTradeAmount": 2557000000,
-      "integratedTradeAmount": 15086000000,
-      "price": 547000,
-      "previousRegularClose": 527000,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 3.795066413662229,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710046+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000810",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000810"
-      }
-    },
-    {
-      "code": "000270",
-      "name": "기아",
-      "turnoverRank": 64,
-      "krxTradeAmount": 10221000000,
-      "nxtTradeAmount": 4842000000,
-      "integratedTradeAmount": 15063000000,
-      "price": 91600,
-      "previousRegularClose": 92100,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -0.5428881650380024,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710216+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000270",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000270"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/100790",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
       "code": "042660",
       "name": "한화오션",
-      "turnoverRank": 65,
-      "krxTradeAmount": 7882000000,
-      "nxtTradeAmount": 7180000000,
-      "integratedTradeAmount": 15062000000,
-      "price": 44850,
+      "turnoverRank": 51,
+      "krxTradeAmount": 24547000000,
+      "nxtTradeAmount": 14828000000,
+      "integratedTradeAmount": 39375000000,
+      "price": 43350,
       "previousRegularClose": 44850,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 0,
+      "changeRate": -3.3444816053511683,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699444+09:00",
+      "observedAt": "2026-11-18T11:44:05.284622+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/042660",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/042660"
       }
     },
     {
-      "code": "003230",
-      "name": "삼양식품",
-      "turnoverRank": 66,
-      "krxTradeAmount": 8254000000,
-      "nxtTradeAmount": 6791000000,
-      "integratedTradeAmount": 15045000000,
-      "price": 1298000,
-      "previousRegularClose": 1271000,
+      "code": "086520",
+      "name": "에코프로",
+      "turnoverRank": 52,
+      "krxTradeAmount": 22662000000,
+      "nxtTradeAmount": 15952000000,
+      "integratedTradeAmount": 38614000000,
+      "price": 66300,
+      "previousRegularClose": 67600,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 2.124311565696302,
+      "changeRate": -1.9230769230769273,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699415+09:00",
+      "observedAt": "2026-11-18T11:44:05.284645+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/003230",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/003230"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/086520",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/086520"
       }
     },
     {
-      "code": "196170",
-      "name": "알테오젠",
-      "turnoverRank": 67,
-      "krxTradeAmount": 7700000000,
-      "nxtTradeAmount": 7314000000,
-      "integratedTradeAmount": 15014000000,
-      "price": 174700,
-      "previousRegularClose": 173000,
+      "code": "000270",
+      "name": "기아",
+      "turnoverRank": 53,
+      "krxTradeAmount": 27488000000,
+      "nxtTradeAmount": 10494000000,
+      "integratedTradeAmount": 37982000000,
+      "price": 90500,
+      "previousRegularClose": 92100,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 0.9826589595375745,
+      "changeRate": -1.7372421281216077,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699483+09:00",
+      "observedAt": "2026-11-18T11:44:05.28458+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/196170",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/196170"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000270",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000270"
       }
     },
     {
-      "code": "011070",
-      "name": "LG이노텍",
-      "turnoverRank": 68,
-      "krxTradeAmount": 7661000000,
-      "nxtTradeAmount": 7301000000,
-      "integratedTradeAmount": 14962000000,
-      "price": 281000,
-      "previousRegularClose": 268000,
+      "code": "0035S0",
+      "name": "빅웨이브로보틱스",
+      "turnoverRank": 54,
+      "krxTradeAmount": 37439000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 37439000000,
+      "price": 16150,
+      "previousRegularClose": 13150,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 4.850746268656714,
+      "changeRate": 22.81368821292775,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699471+09:00",
+      "observedAt": "2026-11-18T11:43:58.622169+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/011070",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/011070"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/0035S0",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "010140",
+      "name": "삼성중공업",
+      "turnoverRank": 55,
+      "krxTradeAmount": 21859000000,
+      "nxtTradeAmount": 15223000000,
+      "integratedTradeAmount": 37082000000,
+      "price": 15470,
+      "previousRegularClose": 16000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -3.312499999999996,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284681+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/010140",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/010140"
+      }
+    },
+    {
+      "code": "086790",
+      "name": "하나금융지주",
+      "turnoverRank": 56,
+      "krxTradeAmount": 33179000000,
+      "nxtTradeAmount": 2298000000,
+      "integratedTradeAmount": 35477000000,
+      "price": 124100,
+      "previousRegularClose": 125100,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -0.7993605115907298,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284499+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/086790",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/086790"
+      }
+    },
+    {
+      "code": "015760",
+      "name": "한국전력",
+      "turnoverRank": 57,
+      "krxTradeAmount": 19631000000,
+      "nxtTradeAmount": 15625000000,
+      "integratedTradeAmount": 35256000000,
+      "price": 24550,
+      "previousRegularClose": 25100,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -2.1912350597609542,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647574+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/015760",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/015760"
+      }
+    },
+    {
+      "code": "064400",
+      "name": "LG씨엔에스",
+      "turnoverRank": 58,
+      "krxTradeAmount": 35143000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 35143000000,
+      "price": 76000,
+      "previousRegularClose": 77200,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -1.5544041450777257,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.28448+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/064400",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "012450",
+      "name": "한화에어로스페이스",
+      "turnoverRank": 59,
+      "krxTradeAmount": 25278000000,
+      "nxtTradeAmount": 9770000000,
+      "integratedTradeAmount": 35048000000,
+      "price": 627000,
+      "previousRegularClose": 623000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 0.6420545746388395,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.28461+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/012450",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/012450"
+      }
+    },
+    {
+      "code": "035900",
+      "name": "JYP Ent.",
+      "turnoverRank": 60,
+      "krxTradeAmount": 18706000000,
+      "nxtTradeAmount": 15867000000,
+      "integratedTradeAmount": 34573000000,
+      "price": 45425,
+      "previousRegularClose": 43000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 5.639534883720931,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647627+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/035900",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/035900"
+      }
+    },
+    {
+      "code": "000810",
+      "name": "삼성화재",
+      "turnoverRank": 61,
+      "krxTradeAmount": 31454000000,
+      "nxtTradeAmount": 2939000000,
+      "integratedTradeAmount": 34393000000,
+      "price": 534000,
+      "previousRegularClose": 527000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 1.3282732447817747,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284524+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000810",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000810"
+      }
+    },
+    {
+      "code": "003490",
+      "name": "대한항공",
+      "turnoverRank": 62,
+      "krxTradeAmount": 33627000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 33627000000,
+      "price": 31200,
+      "previousRegularClose": 31950,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -2.3474178403755874,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284493+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/003490",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
       "code": "062040",
       "name": "산일전기",
-      "turnoverRank": 69,
-      "krxTradeAmount": 7066000000,
-      "nxtTradeAmount": 7892000000,
-      "integratedTradeAmount": 14958000000,
-      "price": 114900,
+      "turnoverRank": 63,
+      "krxTradeAmount": 20474000000,
+      "nxtTradeAmount": 12348000000,
+      "integratedTradeAmount": 32822000000,
+      "price": 109400,
       "previousRegularClose": 111000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 3.513513513513522,
+      "changeRate": -1.4414414414414378,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699524+09:00",
+      "observedAt": "2026-11-18T11:44:10.647557+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/062040",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/062040"
       }
     },
     {
+      "code": "0039P0",
+      "name": "매드업",
+      "turnoverRank": 64,
+      "krxTradeAmount": 32819000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 32819000000,
+      "price": 7980,
+      "previousRegularClose": 7600,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 5.000000000000004,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284506+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/0039P0",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "051910",
+      "name": "LG화학",
+      "turnoverRank": 65,
+      "krxTradeAmount": 23192000000,
+      "nxtTradeAmount": 9056000000,
+      "integratedTradeAmount": 32248000000,
+      "price": 203500,
+      "previousRegularClose": 214500,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -5.128205128205132,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.28464+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/051910",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/051910"
+      }
+    },
+    {
+      "code": "009830",
+      "name": "한화솔루션",
+      "turnoverRank": 66,
+      "krxTradeAmount": 32016000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 32016000000,
+      "price": 20700,
+      "previousRegularClose": 21150,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -2.127659574468088,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284512+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/009830",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
       "code": "005490",
       "name": "POSCO홀딩스",
-      "turnoverRank": 70,
-      "krxTradeAmount": 9741000000,
-      "nxtTradeAmount": 5169000000,
-      "integratedTradeAmount": 14910000000,
-      "price": 265000,
+      "turnoverRank": 67,
+      "krxTradeAmount": 22246000000,
+      "nxtTradeAmount": 9063000000,
+      "integratedTradeAmount": 31309000000,
+      "price": 259500,
       "previousRegularClose": 261500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 1.3384321223709472,
+      "changeRate": -0.7648183556405397,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.71041+09:00",
+      "observedAt": "2026-11-18T11:44:05.284657+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/005490",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/005490"
       }
     },
     {
+      "code": "080220",
+      "name": "제주반도체",
+      "turnoverRank": 68,
+      "krxTradeAmount": 30900000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 30900000000,
+      "price": 49600,
+      "previousRegularClose": 51300,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -3.3138401559454245,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.28453+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/080220",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "011070",
+      "name": "LG이노텍",
+      "turnoverRank": 69,
+      "krxTradeAmount": 18969000000,
+      "nxtTradeAmount": 11890000000,
+      "integratedTradeAmount": 30859000000,
+      "price": 269000,
+      "previousRegularClose": 268000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 0.3731343283582156,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.64761+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/011070",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/011070"
+      }
+    },
+    {
+      "code": "003230",
+      "name": "삼양식품",
+      "turnoverRank": 70,
+      "krxTradeAmount": 19735000000,
+      "nxtTradeAmount": 10755000000,
+      "integratedTradeAmount": 30490000000,
+      "price": 1284000,
+      "previousRegularClose": 1271000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 1.0228166797797034,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647569+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/003230",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/003230"
+      }
+    },
+    {
+      "code": "207940",
+      "name": "삼성바이오로직스",
+      "turnoverRank": 71,
+      "krxTradeAmount": 22330000000,
+      "nxtTradeAmount": 7729000000,
+      "integratedTradeAmount": 30059000000,
+      "price": 1388500,
+      "previousRegularClose": 1414000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -1.8033946251768018,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284663+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/207940",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/207940"
+      }
+    },
+    {
+      "code": "003670",
+      "name": "포스코퓨처엠",
+      "turnoverRank": 72,
+      "krxTradeAmount": 19579000000,
+      "nxtTradeAmount": 10457000000,
+      "integratedTradeAmount": 30036000000,
+      "price": 161500,
+      "previousRegularClose": 165700,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -2.5347012673506364,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.64758+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/003670",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/003670"
+      }
+    },
+    {
       "code": "055550",
       "name": "신한지주",
-      "turnoverRank": 71,
-      "krxTradeAmount": 12365000000,
-      "nxtTradeAmount": 2411000000,
-      "integratedTradeAmount": 14776000000,
-      "price": 86350,
+      "turnoverRank": 73,
+      "krxTradeAmount": 26059000000,
+      "nxtTradeAmount": 3022000000,
+      "integratedTradeAmount": 29081000000,
+      "price": 87100,
       "previousRegularClose": 87500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": -1.3142857142857123,
+      "changeRate": -0.45714285714285596,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710066+09:00",
+      "observedAt": "2026-11-18T11:44:05.284598+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/055550",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/055550"
       }
     },
     {
-      "code": "425420",
-      "name": "티에프이",
-      "turnoverRank": 72,
-      "krxTradeAmount": 5395000000,
-      "nxtTradeAmount": 8884000000,
-      "integratedTradeAmount": 14279000000,
-      "price": 75400,
-      "previousRegularClose": 75900,
+      "code": "192820",
+      "name": "코스맥스",
+      "turnoverRank": 74,
+      "krxTradeAmount": 18924000000,
+      "nxtTradeAmount": 10114000000,
+      "integratedTradeAmount": 29038000000,
+      "price": 298500,
+      "previousRegularClose": 292500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": -0.6587615283267456,
+      "changeRate": 2.051282051282044,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:55.542342+09:00",
+      "observedAt": "2026-11-18T11:44:10.647616+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/425420",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/425420"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/192820",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/192820"
+      }
+    },
+    {
+      "code": "031980",
+      "name": "피에스케이홀딩스",
+      "turnoverRank": 75,
+      "krxTradeAmount": 18219000000,
+      "nxtTradeAmount": 10664000000,
+      "integratedTradeAmount": 28883000000,
+      "price": 123300,
+      "previousRegularClose": 127000,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -2.913385826771653,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647645+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/031980",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/031980"
+      }
+    },
+    {
+      "code": "232140",
+      "name": "와이씨",
+      "turnoverRank": 76,
+      "krxTradeAmount": 28782000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 28782000000,
+      "price": 13860,
+      "previousRegularClose": 13720,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 1.0204081632652962,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284554+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/232140",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "058610",
+      "name": "에스피지",
+      "turnoverRank": 77,
+      "krxTradeAmount": 14350000000,
+      "nxtTradeAmount": 14281000000,
+      "integratedTradeAmount": 28631000000,
+      "price": 72200,
+      "previousRegularClose": 67800,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 6.4896755162241915,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647726+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/058610",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/058610"
       }
     },
     {
       "code": "039030",
       "name": "이오테크닉스",
-      "turnoverRank": 73,
-      "krxTradeAmount": 9237000000,
-      "nxtTradeAmount": 4734000000,
-      "integratedTradeAmount": 13971000000,
-      "price": 328500,
+      "turnoverRank": 78,
+      "krxTradeAmount": 21835000000,
+      "nxtTradeAmount": 6500000000,
+      "integratedTradeAmount": 28335000000,
+      "price": 308000,
       "previousRegularClose": 316500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 3.791469194312791,
+      "changeRate": -2.6856240126382325,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699365+09:00",
+      "observedAt": "2026-11-18T11:44:05.284675+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/039030",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/039030"
@@ -1637,635 +1743,506 @@
     {
       "code": "128940",
       "name": "한미약품",
-      "turnoverRank": 74,
-      "krxTradeAmount": 8273000000,
-      "nxtTradeAmount": 5623000000,
-      "integratedTradeAmount": 13896000000,
-      "price": 447000,
+      "turnoverRank": 79,
+      "krxTradeAmount": 17446000000,
+      "nxtTradeAmount": 10464000000,
+      "integratedTradeAmount": 27910000000,
+      "price": 432500,
       "previousRegularClose": 448500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": -0.33444816053511683,
+      "changeRate": -3.5674470457079166,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699432+09:00",
+      "observedAt": "2026-11-18T11:44:10.647651+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/128940",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/128940"
       }
     },
     {
-      "code": "490470",
-      "name": "세미파이브",
-      "turnoverRank": 75,
-      "krxTradeAmount": 13838000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 13838000000,
-      "price": 13790,
-      "previousRegularClose": 13360,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 3.218562874251507,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710019+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/490470",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/490470"
-      }
-    },
-    {
-      "code": "003670",
-      "name": "포스코퓨처엠",
-      "turnoverRank": 76,
-      "krxTradeAmount": 7346000000,
-      "nxtTradeAmount": 6264000000,
-      "integratedTradeAmount": 13610000000,
-      "price": 169400,
-      "previousRegularClose": 165700,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 2.2329511164755678,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.6995+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/003670",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/003670"
-      }
-    },
-    {
-      "code": "058610",
-      "name": "에스피지",
-      "turnoverRank": 77,
-      "krxTradeAmount": 5464000000,
-      "nxtTradeAmount": 7817000000,
-      "integratedTradeAmount": 13281000000,
-      "price": 72900,
-      "previousRegularClose": 67800,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 7.52212389380531,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:55.542374+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/058610",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/058610"
-      }
-    },
-    {
-      "code": "003160",
-      "name": "디아이",
-      "turnoverRank": 78,
-      "krxTradeAmount": 4206000000,
-      "nxtTradeAmount": 9068000000,
-      "integratedTradeAmount": 13274000000,
-      "price": 28700,
-      "previousRegularClose": 27100,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 5.904059040590415,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699575+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/003160",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/003160"
-      }
-    },
-    {
-      "code": "316140",
-      "name": "우리금융지주",
-      "turnoverRank": 79,
-      "krxTradeAmount": 9646000000,
-      "nxtTradeAmount": 3280000000,
-      "integratedTradeAmount": 12926000000,
-      "price": 31950,
-      "previousRegularClose": 32600,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -1.9938650306748462,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710446+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/316140",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/316140"
-      }
-    },
-    {
-      "code": "003490",
-      "name": "대한항공",
+      "code": "028260",
+      "name": "삼성물산",
       "turnoverRank": 80,
-      "krxTradeAmount": 12875000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 12875000000,
-      "price": 31900,
-      "previousRegularClose": 31950,
+      "krxTradeAmount": 19654000000,
+      "nxtTradeAmount": 8012000000,
+      "integratedTradeAmount": 27666000000,
+      "price": 263500,
+      "previousRegularClose": 265500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": -0.15649452269170805,
+      "changeRate": -0.7532956685499026,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710038+09:00",
+      "observedAt": "2026-11-18T11:44:10.647586+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/003490",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/003490"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/028260",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/028260"
       }
     },
     {
-      "code": "002710",
-      "name": "TCC스틸",
+      "code": "290690",
+      "name": "아리바이오홀딩스",
       "turnoverRank": 81,
-      "krxTradeAmount": 1258000000,
-      "nxtTradeAmount": 10873000000,
-      "integratedTradeAmount": 12131000000,
-      "price": 9210,
-      "previousRegularClose": 8570,
+      "krxTradeAmount": 27560000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 27560000000,
+      "price": 3030,
+      "previousRegularClose": 2560,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 7.467911318553089,
+      "changeRate": 18.359375,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.69957+09:00",
+      "observedAt": "2026-11-18T11:44:05.284574+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/002710",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/002710"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/290690",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
-      "code": "103590",
-      "name": "일진전기",
+      "code": "000500",
+      "name": "가온전선",
       "turnoverRank": 82,
-      "krxTradeAmount": 3829000000,
-      "nxtTradeAmount": 8251000000,
-      "integratedTradeAmount": 12080000000,
-      "price": 56700,
-      "previousRegularClose": 56000,
+      "krxTradeAmount": 8924000000,
+      "nxtTradeAmount": 18277000000,
+      "integratedTradeAmount": 27201000000,
+      "price": 209000,
+      "previousRegularClose": 211000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 1.2499999999999956,
+      "changeRate": -0.9478672985781977,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:55.54235+09:00",
+      "observedAt": "2026-11-18T11:44:10.647721+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/103590",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/103590"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000500",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000500"
       }
     },
     {
-      "code": "009830",
-      "name": "한화솔루션",
+      "code": "240810",
+      "name": "원익IPS",
       "turnoverRank": 83,
-      "krxTradeAmount": 12029000000,
+      "krxTradeAmount": 27027000000,
       "nxtTradeAmount": 0,
-      "integratedTradeAmount": 12029000000,
-      "price": 21550,
-      "previousRegularClose": 21150,
+      "integratedTradeAmount": 27027000000,
+      "price": 68900,
+      "previousRegularClose": 68900,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 1.891252955082745,
+      "changeRate": 0,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710097+09:00",
+      "observedAt": "2026-11-18T11:44:05.284586+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/009830",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/009830"
-      }
-    },
-    {
-      "code": "080220",
-      "name": "제주반도체",
-      "turnoverRank": 84,
-      "krxTradeAmount": 11997000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 11997000000,
-      "price": 52600,
-      "previousRegularClose": 51300,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 2.5341130604288553,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710086+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/080220",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/080220"
-      }
-    },
-    {
-      "code": "281820",
-      "name": "케이씨텍",
-      "turnoverRank": 85,
-      "krxTradeAmount": 6222000000,
-      "nxtTradeAmount": 5718000000,
-      "integratedTradeAmount": 11940000000,
-      "price": 81100,
-      "previousRegularClose": 75700,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 7.133421400264206,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:55.542406+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/281820",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/281820"
-      }
-    },
-    {
-      "code": "000990",
-      "name": "DB하이텍",
-      "turnoverRank": 86,
-      "krxTradeAmount": 3808000000,
-      "nxtTradeAmount": 8097000000,
-      "integratedTradeAmount": 11905000000,
-      "price": 75100,
-      "previousRegularClose": 72500,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 3.5862068965517135,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:55.542358+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000990",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000990"
-      }
-    },
-    {
-      "code": "047050",
-      "name": "포스코인터내셔널",
-      "turnoverRank": 87,
-      "krxTradeAmount": 7170000000,
-      "nxtTradeAmount": 4593000000,
-      "integratedTradeAmount": 11763000000,
-      "price": 51600,
-      "previousRegularClose": 48900,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 5.521472392638027,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699506+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/047050",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/047050"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/240810",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
       "code": "329180",
       "name": "HD현대중공업",
-      "turnoverRank": 88,
-      "krxTradeAmount": 7442000000,
-      "nxtTradeAmount": 4306000000,
-      "integratedTradeAmount": 11748000000,
-      "price": 256000,
+      "turnoverRank": 84,
+      "krxTradeAmount": 19659000000,
+      "nxtTradeAmount": 7337000000,
+      "integratedTradeAmount": 26996000000,
+      "price": 251500,
       "previousRegularClose": 256500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": -0.19493177387914784,
+      "changeRate": -1.949317738791423,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699489+09:00",
+      "observedAt": "2026-11-18T11:44:10.647591+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/329180",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/329180"
       }
     },
     {
-      "code": "232140",
-      "name": "와이씨",
+      "code": "012200",
+      "name": "계양전기",
+      "turnoverRank": 85,
+      "krxTradeAmount": 26425000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 26425000000,
+      "price": 2705,
+      "previousRegularClose": 2935,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -7.836456558773419,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284592+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/012200",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "425420",
+      "name": "티에프이",
+      "turnoverRank": 86,
+      "krxTradeAmount": 13430000000,
+      "nxtTradeAmount": 12080000000,
+      "integratedTradeAmount": 25510000000,
+      "price": 75000,
+      "previousRegularClose": 75900,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -1.1857707509881465,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:16.878935+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/425420",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/425420"
+      }
+    },
+    {
+      "code": "316140",
+      "name": "우리금융지주",
+      "turnoverRank": 87,
+      "krxTradeAmount": 20715000000,
+      "nxtTradeAmount": 4471000000,
+      "integratedTradeAmount": 25186000000,
+      "price": 32350,
+      "previousRegularClose": 32600,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -0.7668711656441674,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647544+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/316140",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/316140"
+      }
+    },
+    {
+      "code": "131970",
+      "name": "두산테스나",
+      "turnoverRank": 88,
+      "krxTradeAmount": 15117000000,
+      "nxtTradeAmount": 9869000000,
+      "integratedTradeAmount": 24986000000,
+      "price": 69800,
+      "previousRegularClose": 66400,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 5.12048192771084,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:16.878976+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/131970",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/131970"
+      }
+    },
+    {
+      "code": "000990",
+      "name": "DB하이텍",
       "turnoverRank": 89,
-      "krxTradeAmount": 11475000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 11475000000,
-      "price": 14860,
-      "previousRegularClose": 13720,
+      "krxTradeAmount": 11205000000,
+      "nxtTradeAmount": 13645000000,
+      "integratedTradeAmount": 24850000000,
+      "price": 71400,
+      "previousRegularClose": 72500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 8.309037900874628,
+      "changeRate": -1.5172413793103412,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710149+09:00",
+      "observedAt": "2026-11-18T11:44:10.647732+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/232140",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/232140"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/000990",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/000990"
       }
     },
     {
-      "code": "003780",
-      "name": "진양산업",
+      "code": "403870",
+      "name": "HPSP",
       "turnoverRank": 90,
-      "krxTradeAmount": 11441000000,
+      "krxTradeAmount": 24511000000,
       "nxtTradeAmount": 0,
-      "integratedTradeAmount": 11441000000,
-      "price": 8380,
-      "previousRegularClose": 6700,
+      "integratedTradeAmount": 24511000000,
+      "price": 36200,
+      "previousRegularClose": 36000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 25.074626865671632,
+      "changeRate": 0.5555555555555536,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710167+09:00",
+      "observedAt": "2026-11-18T11:44:05.284628+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/003780",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/003780"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/403870",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
-      "code": "005500",
-      "name": "삼진제약",
+      "code": "003160",
+      "name": "디아이",
       "turnoverRank": 91,
-      "krxTradeAmount": 6375000000,
-      "nxtTradeAmount": 4954000000,
-      "integratedTradeAmount": 11329000000,
-      "price": 18630,
-      "previousRegularClose": 16940,
+      "krxTradeAmount": 11171000000,
+      "nxtTradeAmount": 13204000000,
+      "integratedTradeAmount": 24375000000,
+      "price": 27150,
+      "previousRegularClose": 27100,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 9.976387249114516,
+      "changeRate": 0.1845018450184588,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:55.542418+09:00",
+      "observedAt": "2026-11-18T11:44:16.878911+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/005500",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/005500"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/003160",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/003160"
       }
     },
     {
-      "code": "430690",
-      "name": "한싹",
+      "code": "032830",
+      "name": "삼성생명",
       "turnoverRank": 92,
-      "krxTradeAmount": 11151000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 11151000000,
-      "price": 3965,
-      "previousRegularClose": 3435,
+      "krxTradeAmount": 19341000000,
+      "nxtTradeAmount": 4476000000,
+      "integratedTradeAmount": 23817000000,
+      "price": 247500,
+      "previousRegularClose": 242000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 15.429403202328974,
+      "changeRate": 2.2727272727272707,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710177+09:00",
+      "observedAt": "2026-11-18T11:44:10.647598+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/430690",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/430690"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/032830",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/032830"
       }
     },
     {
-      "code": "240810",
-      "name": "원익IPS",
+      "code": "042510",
+      "name": "라온시큐어",
       "turnoverRank": 93,
-      "krxTradeAmount": 11133000000,
+      "krxTradeAmount": 23331000000,
       "nxtTradeAmount": 0,
-      "integratedTradeAmount": 11133000000,
-      "price": 71500,
-      "previousRegularClose": 68900,
+      "integratedTradeAmount": 23331000000,
+      "price": 14160,
+      "previousRegularClose": 13030,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 3.7735849056603765,
+      "changeRate": 8.672294704528017,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710187+09:00",
+      "observedAt": "2026-11-18T11:44:05.284634+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/240810",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/240810"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/042510",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      }
+    },
+    {
+      "code": "272210",
+      "name": "한화시스템",
+      "turnoverRank": 94,
+      "krxTradeAmount": 16121000000,
+      "nxtTradeAmount": 7142000000,
+      "integratedTradeAmount": 23263000000,
+      "price": 48450,
+      "previousRegularClose": 49100,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -1.3238289205702691,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647686+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/272210",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/272210"
+      }
+    },
+    {
+      "code": "352820",
+      "name": "하이브",
+      "turnoverRank": 95,
+      "krxTradeAmount": 16651000000,
+      "nxtTradeAmount": 6256000000,
+      "integratedTradeAmount": 22907000000,
+      "price": 160900,
+      "previousRegularClose": 154800,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": 3.9405684754521886,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:10.647675+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/352820",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/352820"
+      }
+    },
+    {
+      "code": "0158S0",
+      "name": "엘리스",
+      "turnoverRank": 96,
+      "krxTradeAmount": 22451000000,
+      "nxtTradeAmount": 0,
+      "integratedTradeAmount": 22451000000,
+      "price": 53800,
+      "previousRegularClose": 57100,
+      "comparison": {
+        "eligible": true,
+        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
+      },
+      "changeRate": -5.779334500875654,
+      "rateMarket": "KRX",
+      "tradingDate": "2026-11-18",
+      "observedAt": "2026-11-18T11:44:05.284669+09:00",
+      "sources": {
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/0158S0",
+        "nxt": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
       }
     },
     {
       "code": "018260",
       "name": "삼성에스디에스",
-      "turnoverRank": 94,
-      "krxTradeAmount": 4329000000,
-      "nxtTradeAmount": 6771000000,
-      "integratedTradeAmount": 11100000000,
-      "price": 231000,
+      "turnoverRank": 97,
+      "krxTradeAmount": 11593000000,
+      "nxtTradeAmount": 10364000000,
+      "integratedTradeAmount": 21957000000,
+      "price": 224000,
       "previousRegularClose": 226000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 2.212389380530966,
+      "changeRate": -0.8849557522123908,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:55.542382+09:00",
+      "observedAt": "2026-11-18T11:44:16.878965+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/018260",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/018260"
       }
     },
     {
-      "code": "0158S0",
-      "name": "엘리스",
-      "turnoverRank": 95,
-      "krxTradeAmount": 11087000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 11087000000,
-      "price": 60000,
-      "previousRegularClose": 57100,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 5.078809106830118,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710139+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/0158S0",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/0158S0"
-      }
-    },
-    {
       "code": "267260",
       "name": "HD현대일렉트릭",
-      "turnoverRank": 96,
-      "krxTradeAmount": 6372000000,
-      "nxtTradeAmount": 4674000000,
-      "integratedTradeAmount": 11046000000,
-      "price": 390000,
+      "turnoverRank": 98,
+      "krxTradeAmount": 15107000000,
+      "nxtTradeAmount": 6842000000,
+      "integratedTradeAmount": 21949000000,
+      "price": 373500,
       "previousRegularClose": 378500,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 3.038309114927351,
+      "changeRate": -1.3210039630118908,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:55.542461+09:00",
+      "observedAt": "2026-11-18T11:44:16.879056+09:00",
       "sources": {
         "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/267260",
         "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/267260"
       }
     },
     {
-      "code": "051910",
-      "name": "LG화학",
-      "turnoverRank": 97,
-      "krxTradeAmount": 7218000000,
-      "nxtTradeAmount": 3759000000,
-      "integratedTradeAmount": 10977000000,
-      "price": 213500,
-      "previousRegularClose": 214500,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": -0.4662004662004615,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:51.699512+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/051910",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/051910"
-      }
-    },
-    {
-      "code": "192820",
-      "name": "코스맥스",
-      "turnoverRank": 98,
-      "krxTradeAmount": 6039000000,
-      "nxtTradeAmount": 4938000000,
-      "integratedTradeAmount": 10977000000,
-      "price": 304500,
-      "previousRegularClose": 292500,
-      "comparison": {
-        "eligible": true,
-        "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
-      },
-      "changeRate": 4.10256410256411,
-      "rateMarket": "KRX",
-      "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:55.542449+09:00",
-      "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/192820",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/192820"
-      }
-    },
-    {
-      "code": "323280",
-      "name": "태성",
+      "code": "281820",
+      "name": "케이씨텍",
       "turnoverRank": 99,
-      "krxTradeAmount": 2693000000,
-      "nxtTradeAmount": 7992000000,
-      "integratedTradeAmount": 10685000000,
-      "price": 45450,
-      "previousRegularClose": 42800,
+      "krxTradeAmount": 13161000000,
+      "nxtTradeAmount": 8560000000,
+      "integratedTradeAmount": 21721000000,
+      "price": 75700,
+      "previousRegularClose": 75700,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": 6.191588785046731,
+      "changeRate": 0,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:55.542366+09:00",
+      "observedAt": "2026-11-18T11:44:16.878996+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/323280",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/323280"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/281820",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/281820"
       }
     },
     {
-      "code": "446840",
-      "name": "지슨",
+      "code": "103590",
+      "name": "일진전기",
       "turnoverRank": 100,
-      "krxTradeAmount": 10632000000,
-      "nxtTradeAmount": 0,
-      "integratedTradeAmount": 10632000000,
-      "price": 5640,
-      "previousRegularClose": 6030,
+      "krxTradeAmount": 8771000000,
+      "nxtTradeAmount": 12834000000,
+      "integratedTradeAmount": 21605000000,
+      "price": 53800,
+      "previousRegularClose": 56000,
       "comparison": {
         "eligible": true,
         "basis": "KRX_PREVIOUS_REGULAR_CLOSE"
       },
-      "changeRate": -6.467661691542292,
+      "changeRate": -3.9285714285714257,
       "rateMarket": "KRX",
       "tradingDate": "2026-11-18",
-      "observedAt": "2026-11-18T09:40:47.710196+09:00",
+      "observedAt": "2026-11-18T11:44:16.878924+09:00",
       "sources": {
-        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/446840",
-        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/446840"
+        "krx": "https://polling.finance.naver.com/api/realtime/domestic/stock/103590",
+        "nxt": "https://polling.finance.naver.com/api/realtime/domestic/stock/103590"
       }
     }
   ],
   "selectedStockCodes": [
     "261780",
-    "003780",
+    "0035S0",
     "290690",
-    "043260",
-    "430690",
-    "042510",
-    "000150",
     "277810",
-    "263860",
-    "005500",
-    "100790",
-    "356860",
+    "043260",
     "108490",
-    "053800",
-    "232140",
+    "100790",
+    "042510",
+    "263860",
     "030530",
     "058610",
-    "002710",
-    "281820",
-    "437730",
-    "007810",
-    "323280",
-    "003160",
+    "000150",
     "035900",
-    "000660",
-    "218410",
-    "047050",
-    "009150",
-    "0158S0",
-    "011070",
-    "034730",
-    "010170",
-    "353200",
-    "402340",
-    "180640",
-    "192820"
+    "437730",
+    "131970",
+    "0039P0",
+    "053800"
   ],
   "themes": [
     {
@@ -2273,14 +2250,13 @@
       "name": "AR1001 알츠하이머 치료제",
       "stockCodes": [
         "261780",
-        "290690",
-        "005500"
+        "290690"
       ],
       "reason": {
-        "summary": "AR1001 글로벌 3상에서 사전설정한 단독요법군 1차 평가지표 달성과 삼진제약의 국내 독점 생산·판매권이 확인됨",
+        "summary": "AR1001 글로벌 3상 단독요법군의 1차 평가지표 달성과 국내 독점 생산·판매권이 확인됨",
         "sourceUrl": "https://samara.kr/disclosure/20261117800165",
         "publishedAt": "2026-11-17T10:11:00+09:00",
-        "checkedAt": "2026-11-18T09:45:44+09:00",
+        "checkedAt": "2026-11-18T11:48:44+09:00",
         "facts": [
           "AR1001 단독요법군 CDR-SB 변화량이 위약 대비 통계적으로 유의",
           "삼진제약은 AR1001 국내 독점 생산·판매권 보유"
@@ -2288,14 +2264,29 @@
         "verificationStatus": "confirmed",
         "causality": "related_fact_only"
       },
-      "integratedTradeAmount": 69325000000,
-      "weightedChangeRate": 24.898617609029284
+      "integratedTradeAmount": 87460000000,
+      "weightedChangeRate": 23.959163097233354
+    },
+    {
+      "id": "robotics-physical-ai",
+      "name": "로봇·피지컬 AI",
+      "stockCodes": [
+        "0035S0",
+        "277810",
+        "108490",
+        "030530",
+        "058610",
+        "000150",
+        "437730"
+      ],
+      "reason": null,
+      "integratedTradeAmount": 765089000000,
+      "weightedChangeRate": 8.770754666345217
     },
     {
       "id": "cybersecurity",
       "name": "사이버보안",
       "stockCodes": [
-        "430690",
         "042510",
         "263860",
         "053800"
@@ -2304,94 +2295,26 @@
         "summary": "금융보안원 정보 유출 사고 뒤 보안 투자 확대 필요성이 부각되며 관련주 동반 강세가 보도됨",
         "sourceUrl": "https://mobile2.newspim.com/news/view/20261111000302",
         "publishedAt": "2026-11-11T09:43:00+09:00",
-        "checkedAt": "2026-11-18T09:45:44+09:00",
+        "checkedAt": "2026-11-18T11:48:44+09:00",
         "facts": [
           "금융보안원 정보보호 상시평가 사이트 침해 사고",
-          "한싹·라온시큐어·지니언스·안랩은 보안 소프트웨어·인증 사업 관련 종목"
+          "라온시큐어·지니언스·안랩은 인증·보안 소프트웨어 관련 기업"
         ],
         "verificationStatus": "confirmed",
         "causality": "related_fact_only"
       },
-      "integratedTradeAmount": 232871000000,
-      "weightedChangeRate": 11.085345539640832
-    },
-    {
-      "id": "robotics-physical-ai",
-      "name": "로봇·피지컬 AI",
-      "stockCodes": [
-        "000150",
-        "277810",
-        "108490",
-        "030530",
-        "058610",
-        "437730"
-      ],
-      "reason": null,
-      "integratedTradeAmount": 312638000000,
-      "weightedChangeRate": 10.318158741020952
-    },
-    {
-      "id": "pcb-package-substrate",
-      "name": "PCB·패키지기판",
-      "stockCodes": [
-        "356860",
-        "007810",
-        "323280",
-        "009150",
-        "353200"
-      ],
-      "reason": {
-        "summary": "메모리 모듈 기판 공급 부족과 고부가 기판 수요 증가 전망이 확인됨",
-        "sourceUrl": "https://www.newspim.com/news/view/20261112000157",
-        "publishedAt": "2026-11-12T08:34:00+09:00",
-        "checkedAt": "2026-11-18T09:45:44+09:00",
-        "facts": [
-          "티엘비의 SoCAMM 매출 증가 전망",
-          "PCB·패키지기판 업체의 수주·가동률·판가 개선 흐름"
-        ],
-        "verificationStatus": "confirmed",
-        "causality": "related_fact_only"
-      },
-      "integratedTradeAmount": 750997000000,
-      "weightedChangeRate": 5.7791112522286285
-    },
-    {
-      "id": "hbm-memory",
-      "name": "HBM·메모리 반도체",
-      "stockCodes": [
-        "232140",
-        "281820",
-        "003160",
-        "000660"
-      ],
-      "reason": {
-        "summary": "엔비디아 3분기 호실적과 시간외 상승으로 국내 AI·HBM 공급망의 투자심리 회복 가능성이 당일 개장 전 보도됨",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20261118024600008",
-        "publishedAt": "2026-11-18T08:06:00+09:00",
-        "checkedAt": "2026-11-18T09:45:44+09:00",
-        "facts": [
-          "엔비디아 주가가 한국시간 오전 7시55분 시간외에서 4.57% 상승",
-          "SK하이닉스·메모리 검사·장비 기업이 동일 HBM·메모리 투자 사이클에 연결"
-        ],
-        "verificationStatus": "confirmed",
-        "causality": "related_fact_only"
-      },
-      "integratedTradeAmount": 1719711000000,
-      "weightedChangeRate": 5.765837020112017
+      "integratedTradeAmount": 299329000000,
+      "weightedChangeRate": 6.969596840669654
     }
   ],
   "individualStocks": [
     {
-      "code": "003780",
-      "reason": null
-    },
-    {
       "code": "043260",
       "reason": {
-        "summary": "3분기 매출과 영업이익이 크게 증가한 실적이 당일 보도됨",
+        "summary": "3분기 매출과 영업이익이 크게 증가한 실적이 보도됨",
         "sourceUrl": "https://www.mt.co.kr/stock/2026/11/17/2026111708329679029",
         "publishedAt": "2026-11-17T08:38:00+09:00",
-        "checkedAt": "2026-11-18T09:45:44+09:00",
+        "checkedAt": "2026-11-18T11:48:44+09:00",
         "facts": [
           "3분기 매출 797억원, 전년 동기 대비 43% 증가",
           "3분기 영업이익 43억원, 전년 동기 대비 703% 증가"
@@ -2406,7 +2329,7 @@
         "summary": "자기주식 100만주 취득 결정과 스페이스X 투자 관련성이 최근 강세 재료로 확인됨",
         "sourceUrl": "https://meerae.ai/insights/6afa56ca1b7a270986871a83/",
         "publishedAt": "2026-11-16T10:05:00+09:00",
-        "checkedAt": "2026-11-18T09:45:44+09:00",
+        "checkedAt": "2026-11-18T11:48:44+09:00",
         "facts": [
           "자기주식 100만주 취득 결정",
           "스페이스X 투자 업체로 시장에서 부각"
@@ -2416,16 +2339,12 @@
       }
     },
     {
-      "code": "002710",
-      "reason": null
-    },
-    {
       "code": "035900",
       "reason": {
         "summary": "3분기 실적 개선과 스트레이키즈 공연 확대에 따른 2027년 성장 전망이 확인됨",
         "sourceUrl": "https://www.newspim.com/news/view/20261117000386",
         "publishedAt": "2026-11-17T09:58:00+09:00",
-        "checkedAt": "2026-11-18T09:45:44+09:00",
+        "checkedAt": "2026-11-18T11:48:44+09:00",
         "facts": [
           "3분기 영업이익 480억원, 전년 동기 대비 17.6% 증가",
           "스트레이키즈 2027년 월드투어 도시 확대 전망"
@@ -2435,58 +2354,19 @@
       }
     },
     {
-      "code": "218410",
+      "code": "131970",
+      "reason": null
+    },
+    {
+      "code": "0039P0",
       "reason": {
-        "summary": "당일 증권사 실적 전망 보고서가 공개됨",
-        "sourceUrl": "https://www.newspim.com/news/view/20261117000553",
-        "publishedAt": "2026-11-17T11:04:00+09:00",
-        "checkedAt": "2026-11-18T09:45:44+09:00",
+        "summary": "누적 영업이익 증가와 주주환원 계획이 최근 공개됨",
+        "sourceUrl": "https://www.thebell.co.kr/front/newsview.asp?code=0701&key=202611121159171040108350",
+        "publishedAt": "2026-11-12T14:00:00+09:00",
+        "checkedAt": "2026-11-18T11:48:44+09:00",
         "facts": [
-          "유진투자증권 당일 리포트",
-          "RFHIC 실적 추이와 전망 제시"
-        ],
-        "verificationStatus": "confirmed",
-        "causality": "related_fact_only"
-      }
-    },
-    {
-      "code": "047050",
-      "reason": null
-    },
-    {
-      "code": "0158S0",
-      "reason": null
-    },
-    {
-      "code": "011070",
-      "reason": null
-    },
-    {
-      "code": "034730",
-      "reason": null
-    },
-    {
-      "code": "010170",
-      "reason": null
-    },
-    {
-      "code": "402340",
-      "reason": null
-    },
-    {
-      "code": "180640",
-      "reason": null
-    },
-    {
-      "code": "192820",
-      "reason": {
-        "summary": "3분기 역대 최대 매출과 증권사 목표주가 상향이 최근 강세 배경으로 보도됨",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20261112045451008",
-        "publishedAt": "2026-11-12T15:41:00+09:00",
-        "checkedAt": "2026-11-18T09:45:44+09:00",
-        "facts": [
-          "3분기 한국 매출이 전분기 대비 19% 증가",
-          "복수 증권사가 실적 발표 후 목표주가 상향"
+          "누적 영업이익 증가가 보도됨",
+          "상장 이후 주주환원 계획이 확인됨"
         ],
         "verificationStatus": "confirmed",
         "causality": "related_fact_only"
@@ -2500,201 +2380,201 @@
     "471800",
     "005935",
     "402340",
-    "007810",
-    "263860",
-    "006400",
-    "000150",
-    "222800",
-    "007660",
-    "053800",
     "030530",
-    "356860",
+    "006400",
+    "000250",
+    "007810",
+    "222800",
+    "263860",
     "028050",
-    "180640",
+    "000150",
+    "007660",
     "108490",
-    "034020",
+    "053800",
     "036930",
+    "180640",
+    "356860",
+    "034020",
     "043260",
-    "437730",
-    "261780",
-    "399720",
-    "042700",
-    "035420",
-    "105560",
-    "353200",
-    "068270",
-    "190510",
-    "005380",
-    "017670",
     "277810",
-    "034730",
-    "298040",
+    "005380",
+    "437730",
+    "035420",
+    "042700",
+    "353200",
+    "017670",
+    "068270",
     "493260",
+    "105560",
+    "261780",
+    "034730",
+    "066570",
+    "373220",
+    "399720",
+    "190510",
+    "298040",
+    "010120",
     "278470",
+    "196170",
+    "012330",
+    "010060",
+    "218410",
     "328130",
     "131290",
-    "066570",
-    "010060",
-    "012200",
-    "010120",
-    "218410",
     "010170",
-    "290690",
-    "100790",
     "079550",
-    "012330",
-    "373220",
-    "086790",
-    "042510",
-    "086520",
-    "015760",
-    "010140",
-    "207940",
-    "012450",
-    "000500",
-    "031980",
-    "064400",
-    "035900",
-    "028260",
-    "000810",
-    "000270",
+    "100790",
     "042660",
-    "003230",
-    "196170",
-    "011070",
+    "086520",
+    "000270",
+    "0035S0",
+    "010140",
+    "086790",
+    "015760",
+    "064400",
+    "012450",
+    "035900",
+    "000810",
+    "003490",
     "062040",
+    "0039P0",
+    "051910",
+    "009830",
     "005490",
+    "080220",
+    "011070",
+    "003230",
+    "207940",
+    "003670",
     "055550",
-    "425420",
+    "192820",
+    "031980",
+    "232140",
+    "058610",
     "039030",
     "128940",
-    "490470",
-    "003670",
-    "058610",
-    "003160",
-    "316140",
-    "003490",
-    "002710",
-    "103590",
-    "009830",
-    "080220",
-    "281820",
-    "000990",
-    "047050",
-    "329180",
-    "232140",
-    "003780",
-    "005500",
-    "430690",
+    "028260",
+    "290690",
+    "000500",
     "240810",
-    "018260",
+    "329180",
+    "012200",
+    "425420",
+    "316140",
+    "131970",
+    "000990",
+    "403870",
+    "003160",
+    "032830",
+    "042510",
+    "272210",
+    "352820",
     "0158S0",
+    "018260",
     "267260",
-    "051910",
-    "192820",
-    "323280",
-    "446840"
+    "281820",
+    "103590"
   ],
   "byChangeRate": [
     "261780",
-    "003780",
+    "0035S0",
     "290690",
-    "043260",
-    "430690",
-    "042510",
-    "000150",
     "277810",
-    "263860",
-    "005500",
-    "100790",
-    "356860",
+    "043260",
     "108490",
-    "053800",
-    "232140",
+    "100790",
+    "042510",
+    "263860",
     "030530",
     "058610",
-    "002710",
-    "281820",
-    "437730",
-    "007810",
-    "323280",
-    "003160",
+    "000150",
     "035900",
-    "000660",
-    "218410",
-    "047050",
-    "009150",
-    "0158S0",
-    "011070",
-    "034730",
-    "010170",
-    "353200",
-    "402340",
+    "437730",
+    "131970",
+    "0039P0",
+    "053800",
+    "352820",
+    "356860",
     "180640",
+    "007810",
+    "034730",
+    "032830",
     "192820",
-    "222800",
-    "000810",
-    "000500",
-    "039030",
-    "240810",
-    "036930",
-    "005935",
-    "005930",
-    "000990",
-    "062040",
-    "010120",
-    "028260",
-    "042700",
-    "298040",
-    "490470",
-    "031980",
-    "267260",
-    "010060",
-    "012330",
-    "066570",
-    "278470",
-    "080220",
-    "003670",
-    "018260",
-    "003230",
-    "064400",
+    "000660",
+    "402340",
     "079550",
-    "086520",
-    "009830",
-    "006400",
-    "034020",
-    "373220",
-    "005490",
-    "103590",
-    "007660",
-    "399720",
-    "196170",
+    "000810",
+    "012330",
+    "278470",
+    "003230",
+    "232140",
     "012450",
-    "328130",
-    "131290",
-    "005380",
-    "035420",
-    "190510",
-    "017670",
-    "042660",
-    "003490",
-    "329180",
-    "128940",
-    "051910",
-    "000270",
-    "425420",
-    "010140",
-    "068270",
-    "012200",
-    "015760",
+    "403870",
+    "011070",
+    "005935",
+    "066570",
+    "003160",
+    "005930",
+    "240810",
+    "281820",
+    "009150",
+    "298040",
+    "010170",
     "055550",
+    "218410",
     "105560",
-    "086790",
-    "207940",
+    "010120",
+    "035420",
+    "028260",
+    "005490",
     "316140",
+    "086790",
+    "018260",
+    "328130",
+    "000500",
+    "425420",
+    "042700",
+    "267260",
+    "272210",
+    "068270",
+    "062040",
+    "010060",
+    "000990",
+    "064400",
+    "000270",
+    "034020",
+    "207940",
+    "086520",
+    "005380",
+    "329180",
+    "373220",
+    "196170",
+    "009830",
+    "017670",
+    "015760",
+    "003490",
+    "036930",
+    "003670",
+    "039030",
+    "353200",
+    "031980",
+    "399720",
+    "010140",
+    "080220",
+    "042660",
+    "006400",
+    "128940",
+    "222800",
+    "103590",
+    "131290",
+    "190510",
+    "051910",
+    "007660",
+    "0158S0",
+    "012200",
     "028050",
     "493260",
-    "446840",
+    "000250",
     "471800"
   ],
   "rankingProof": {
@@ -2704,25 +2584,25 @@
     "detailSourceTemplate": "https://polling.finance.naver.com/api/realtime/domestic/stock/<comma-separated-codes>",
     "nxtEligibilitySourceUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
     "retrievedAt": {
-      "startedAt": "2026-11-18T09:40:25.075915+09:00",
-      "completedAt": "2026-11-18T09:41:00.407390+09:00"
+      "startedAt": "2026-11-18T11:43:41.005320+09:00",
+      "completedAt": "2026-11-18T11:44:22.632974+09:00"
     },
     "krxSourceCount": 100,
     "nxtSourceCount": 100,
-    "candidateUnionCount": 144,
-    "candidateDetailsReceived": 144,
-    "krx100thAmount": 6579000000,
-    "nxt100thAmount": 2806000000,
-    "outsideCandidateUpperBound": 9385000000,
-    "integrated100thAmount": 10632000000,
+    "candidateUnionCount": 141,
+    "candidateDetailsReceived": 141,
+    "krx100thAmount": 15734318000,
+    "nxt100thAmount": 4977000000,
+    "outsideCandidateUpperBound": 20711318000,
+    "integrated100thAmount": 21605000000,
     "strictBoundaryPassed": true,
-    "calculation": "T100 > K100 + N100; 10,632,000,000 > 6,579,000,000 + 2,806,000,000",
+    "calculation": "T100 > K100 + N100; 21,605,000,000 > 15,734,318,000 + 4,977,000,000",
     "batchSizes": [
       35,
       35,
       35,
       35,
-      4
+      1
     ],
     "missingCandidateCodes": [],
     "duplicateCandidateCodes": [],
@@ -2737,62 +2617,76 @@
     {
       "market": "KRX",
       "sourceUrl": "https://stock.naver.com/api/domestic/market/stock/default?tradeType=KRX&marketType=ALL&orderType=priceTop&startIdx=0&pageSize=100",
-      "retrievedAt": "2026-11-18T09:40:25.075915+09:00"
+      "retrievedAt": "2026-11-18T11:43:41.005320+09:00"
     },
     {
       "market": "NXT",
       "sourceUrl": "https://stock.naver.com/api/domestic/market/stock/default?tradeType=NXT&marketType=ALL&orderType=priceTop&startIdx=0&pageSize=100",
-      "retrievedAt": "2026-11-18T09:40:25.075915+09:00"
+      "retrievedAt": "2026-11-18T11:43:41.005320+09:00"
     },
     {
       "market": "NXT_ELIGIBILITY",
       "sourceUrl": "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do",
-      "retrievedAt": "2026-11-18T09:41:05.022352+09:00"
+      "retrievedAt": "2026-11-18T11:44:29.738719+09:00"
     }
   ],
   "reasonResearchAudit": [
     {
       "code": "261780",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "아리바이오랩 261780 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "아리바이오랩 261780 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
-        "https://samara.kr/disclosure/20261117800165",
-        "https://koreastockinfo.com/stock/261780/disclosures/"
+        "https://samara.kr/disclosure/20261117800165"
       ],
       "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
+      "previousEditionChecks": [
+        {
+          "slot": "09:40",
+          "sourceUrl": "https://samara.kr/disclosure/20261117800165",
+          "reasonSummary": "AR1001 글로벌 3상에서 사전설정한 단독요법군 1차 평가지표 달성과 삼진제약의 국내 독점 생산·판매권이 확인됨",
+          "decision": "carried",
+          "decisionReason": "동일 종목의 기존 검증 근거와 발표시각을 재확인"
+        }
+      ],
+      "priorEvidence": [
+        {
+          "sourceUrl": "https://samara.kr/disclosure/20261117800165",
+          "publishedAt": "2026-11-17T10:11:00+09:00",
+          "summary": "AR1001 글로벌 3상에서 사전설정한 단독요법군 1차 평가지표 달성과 삼진제약의 국내 독점 생산·판매권이 확인됨"
+        }
+      ],
       "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-17T10:11:00+09:00",
-      "provenanceClass": "verified_shared_material"
+      "provenanceClass": "carried_prior_fact",
+      "evidenceFirstPublishedAt": "2026-11-17T10:11:00+09:00"
     },
     {
-      "code": "003780",
+      "code": "0035S0",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "진양산업 003780 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "빅웨이브로보틱스 0035S0 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
-        "https://www.yna.co.kr/view/AKR20261023108600004",
-        "https://alphasquare.co.kr/home/stock-issue?code=003780&type=disclosure"
+        "https://stock.mk.co.kr/news/view/1193419",
+        "https://securities.miraeasset.com/bbs/download/2148498.pdf?attachmentId=2148498",
+        "https://www.hankyung.com/article/2026111725876"
       ],
       "reasonClassification": "unconfirmed",
       "previousEditionChecks": [],
@@ -2803,68 +2697,90 @@
     {
       "code": "290690",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "아리바이오홀딩스 290690 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "아리바이오홀딩스 290690 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
-        "https://samara.kr/disclosure/20261117800165",
-        "https://koreastockinfo.com/stock/290690/disclosures/"
+        "https://samara.kr/disclosure/20261117800165"
       ],
       "reasonClassification": "sector_theme",
+      "previousEditionChecks": [
+        {
+          "slot": "09:40",
+          "sourceUrl": "https://samara.kr/disclosure/20261117800165",
+          "reasonSummary": "AR1001 글로벌 3상에서 사전설정한 단독요법군 1차 평가지표 달성과 삼진제약의 국내 독점 생산·판매권이 확인됨",
+          "decision": "carried",
+          "decisionReason": "동일 종목의 기존 검증 근거와 발표시각을 재확인"
+        }
+      ],
+      "priorEvidence": [
+        {
+          "sourceUrl": "https://samara.kr/disclosure/20261117800165",
+          "publishedAt": "2026-11-17T10:11:00+09:00",
+          "summary": "AR1001 글로벌 3상에서 사전설정한 단독요법군 1차 평가지표 달성과 삼진제약의 국내 독점 생산·판매권이 확인됨"
+        }
+      ],
+      "rejectedPriorEvidence": [],
+      "provenanceClass": "carried_prior_fact",
+      "evidenceFirstPublishedAt": "2026-11-17T10:11:00+09:00"
+    },
+    {
+      "code": "277810",
+      "status": "completed",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
+      "searchedSources": [
+        "당일·최근 공시·언론·산업자료 자율검색"
+      ],
+      "searchQueries": [
+        "레인보우로보틱스 277810 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
+      ],
+      "checkedWindow": {
+        "start": "2026-11-11T00:00:00+09:00",
+        "end": "2026-11-18T11:44:22.632974+09:00"
+      },
+      "evidenceUrls": [
+        "https://securities.miraeasset.com/bbs/download/2148498.pdf?attachmentId=2148498",
+        "https://www.hankyung.com/article/2026111725876"
+      ],
+      "reasonClassification": "unconfirmed",
       "previousEditionChecks": [],
       "priorEvidence": [],
       "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-17T10:11:00+09:00",
-      "provenanceClass": "verified_shared_material"
+      "provenanceClass": "unconfirmed_after_broad_search"
     },
     {
       "code": "043260",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "성호전자 043260 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "성호전자 043260 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
-        "https://www.mt.co.kr/stock/2026/11/17/2026111708329679029",
-        "https://koreastockinfo.com/stock/043260/disclosures/"
+        "https://www.mt.co.kr/stock/2026/11/17/2026111708329679029"
       ],
       "reasonClassification": "prior_fact",
       "previousEditionChecks": [
         {
           "slot": "09:40",
           "sourceUrl": "https://www.mt.co.kr/stock/2026/11/17/2026111708329679029",
-          "reasonSummary": "3분기 연결 영업이익 43억원으로 전년 동기 대비 703% 증가",
-          "decision": "carried",
-          "decisionReason": "동일 근거의 유효성과 시각을 재확인"
-        },
-        {
-          "slot": "15:40",
-          "sourceUrl": "https://www.mt.co.kr/stock/2026/11/17/2026111708329679029",
           "reasonSummary": "3분기 매출과 영업이익이 크게 증가한 실적이 당일 보도됨",
           "decision": "carried",
-          "decisionReason": "동일 근거의 유효성과 시각을 재확인"
-        },
-        {
-          "slot": "20:10",
-          "sourceUrl": "https://www.mt.co.kr/stock/2026/11/17/2026111708329679029",
-          "reasonSummary": "3분기 매출과 영업이익이 크게 증가한 실적이 당일 보도됨",
-          "decision": "carried",
-          "decisionReason": "동일 근거의 유효성과 시각을 재확인"
+          "decisionReason": "동일 종목의 기존 검증 근거와 발표시각을 재확인"
         }
       ],
       "priorEvidence": [
@@ -2875,273 +2791,26 @@
         }
       ],
       "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-17T08:38:00+09:00",
-      "provenanceClass": "carried_prior_fact"
-    },
-    {
-      "code": "430690",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "한싹 430690 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://mobile2.newspim.com/news/view/20261111000302",
-        "https://www.awakeplus.co.kr/data/view/20261116000196"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-11T09:43:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "042510",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "라온시큐어 042510 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://mobile2.newspim.com/news/view/20261111000302",
-        "https://www.awakeplus.co.kr/data/view/20261116001256"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-11T09:43:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "000150",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "두산 000150 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://securities.miraeasset.com/bbs/download/2148498.pdf?attachmentId=2148498",
-        "https://koreastockinfo.com/stock/000150/disclosures/"
-      ],
-      "reasonClassification": "unconfirmed",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "provenanceClass": "unconfirmed_after_broad_search"
-    },
-    {
-      "code": "277810",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "레인보우로보틱스 277810 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://securities.miraeasset.com/bbs/download/2148498.pdf?attachmentId=2148498",
-        "https://koreastockinfo.com/stock/277810/disclosures/"
-      ],
-      "reasonClassification": "unconfirmed",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "provenanceClass": "unconfirmed_after_broad_search"
-    },
-    {
-      "code": "263860",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "지니언스 263860 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://mobile2.newspim.com/news/view/20261111000302",
-        "https://www.newspim.com/news/view/20261113000189"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [
-        {
-          "slot": "15:40",
-          "sourceUrl": "https://www.newspim.com/news/view/20261113000189",
-          "reasonSummary": "4분기 보안 성수기와 NAC·EDR 매출 성장 전망을 확인",
-          "decision": "superseded",
-          "decisionReason": "이번 회차의 더 넓은 공통 재료 또는 최신 검증 사실을 우선 적용"
-        },
-        {
-          "slot": "20:10",
-          "sourceUrl": "https://www.newspim.com/news/view/20261113000189",
-          "reasonSummary": "4분기 보안 성수기와 NAC·EDR 매출 성장 전망을 확인",
-          "decision": "superseded",
-          "decisionReason": "이번 회차의 더 넓은 공통 재료 또는 최신 검증 사실을 우선 적용"
-        }
-      ],
-      "priorEvidence": [
-        {
-          "sourceUrl": "https://www.newspim.com/news/view/20261113000189",
-          "publishedAt": "2026-11-13T08:34:00+09:00",
-          "summary": "4분기 보안 성수기와 NAC·EDR 매출 성장 전망을 확인"
-        }
-      ],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-11T09:43:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "005500",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "삼진제약 005500 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://samara.kr/disclosure/20261117800165",
-        "https://web3.newspim.com/news/view/20261117000113"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-17T10:11:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "100790",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "미래에셋벤처투자 100790 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://meerae.ai/insights/6afa56ca1b7a270986871a83/",
-        "https://alphasquare.co.kr/home/stock-issue?code=100790&type=news"
-      ],
-      "reasonClassification": "related_fact_only",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-16T10:05:00+09:00",
-      "provenanceClass": "new_or_recent_related_fact"
-    },
-    {
-      "code": "356860",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "티엘비 356860 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://www.newspim.com/news/view/20261112000157",
-        "https://file.alphasquare.co.kr/media/pdfs/market-report/%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90PCB20261117iM%EC%A6%9D%EA%B6%8C.pdf"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [
-        {
-          "slot": "11:40",
-          "sourceUrl": "https://www.newspim.com/news/view/20261112000157",
-          "reasonSummary": "키움증권은 3분기 SOCAMM 매출 증가와 메모리 모듈 기판 공급 부족 지속을 언급했다.",
-          "decision": "carried",
-          "decisionReason": "동일 근거의 유효성과 시각을 재확인"
-        },
-        {
-          "slot": "15:40",
-          "sourceUrl": "https://www.newspim.com/news/view/20261112000157",
-          "reasonSummary": "SoCAMM 매출 증가와 메모리 모듈 기판 공급 부족 전망을 확인",
-          "decision": "carried",
-          "decisionReason": "동일 근거의 유효성과 시각을 재확인"
-        },
-        {
-          "slot": "20:10",
-          "sourceUrl": "https://www.newspim.com/news/view/20261112000157",
-          "reasonSummary": "SoCAMM 매출 증가와 메모리 모듈 기판 공급 부족 전망을 확인",
-          "decision": "carried",
-          "decisionReason": "동일 근거의 유효성과 시각을 재확인"
-        }
-      ],
-      "priorEvidence": [
-        {
-          "sourceUrl": "https://www.newspim.com/news/view/20261112000157",
-          "publishedAt": "2026-11-12T08:34:00+09:00",
-          "summary": "SoCAMM 매출 증가와 메모리 모듈 기판 공급 부족 전망을 확인"
-        }
-      ],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-12T08:34:00+09:00",
-      "provenanceClass": "carried_prior_fact"
+      "provenanceClass": "carried_prior_fact",
+      "evidenceFirstPublishedAt": "2026-11-17T08:38:00+09:00"
     },
     {
       "code": "108490",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "로보티즈 108490 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "로보티즈 108490 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
-        "https://www.hankyung.com/article/2026111725876",
-        "https://securities.miraeasset.com/bbs/download/2148498.pdf?attachmentId=2148498"
+        "https://securities.miraeasset.com/bbs/download/2148498.pdf?attachmentId=2148498",
+        "https://www.hankyung.com/article/2026111725876"
       ],
       "reasonClassification": "unconfirmed",
       "previousEditionChecks": [],
@@ -3150,100 +2819,136 @@
       "provenanceClass": "unconfirmed_after_broad_search"
     },
     {
-      "code": "053800",
+      "code": "100790",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "안랩 053800 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "미래에셋벤처투자 100790 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
-        "https://mobile2.newspim.com/news/view/20261111000302",
-        "https://markets.hankyung.com/stock/263860"
+        "https://meerae.ai/insights/6afa56ca1b7a270986871a83/"
       ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-11T09:43:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "232140",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "와이씨 232140 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://www.yna.co.kr/view/AKR20261118024600008",
-        "https://www.mt.co.kr/index.php/stock/2026/11/17/2026111708393496503"
-      ],
-      "reasonClassification": "sector_theme",
+      "reasonClassification": "prior_fact",
       "previousEditionChecks": [
         {
-          "slot": "11:40",
-          "sourceUrl": "https://www.mt.co.kr/index.php/stock/2026/11/17/2026111708393496503",
-          "reasonSummary": "신한투자증권은 메모리 설비투자 확대 수혜와 2027년 실적 추정치 상향을 제시했다.",
-          "decision": "superseded",
-          "decisionReason": "이번 회차의 더 넓은 공통 재료 또는 최신 검증 사실을 우선 적용"
-        },
-        {
-          "slot": "15:40",
-          "sourceUrl": "https://www.mt.co.kr/index.php/stock/2026/11/17/2026111708393496503",
-          "reasonSummary": "메모리 설비투자 확대 수혜와 2027년 실적 성장 전망이 당일 보도됨",
-          "decision": "superseded",
-          "decisionReason": "이번 회차의 더 넓은 공통 재료 또는 최신 검증 사실을 우선 적용"
-        },
-        {
-          "slot": "20:10",
-          "sourceUrl": "https://www.mt.co.kr/index.php/stock/2026/11/17/2026111708393496503",
-          "reasonSummary": "메모리 설비투자 확대 수혜와 2027년 실적 성장 전망이 당일 보도됨",
-          "decision": "superseded",
-          "decisionReason": "이번 회차의 더 넓은 공통 재료 또는 최신 검증 사실을 우선 적용"
+          "slot": "09:40",
+          "sourceUrl": "https://meerae.ai/insights/6afa56ca1b7a270986871a83/",
+          "reasonSummary": "자기주식 100만주 취득 결정과 스페이스X 투자 관련성이 최근 강세 재료로 확인됨",
+          "decision": "carried",
+          "decisionReason": "동일 종목의 기존 검증 근거와 발표시각을 재확인"
         }
       ],
       "priorEvidence": [
         {
-          "sourceUrl": "https://www.mt.co.kr/index.php/stock/2026/11/17/2026111708393496503",
-          "publishedAt": "2026-11-17T08:52:00+09:00",
-          "summary": "메모리 설비투자 확대 수혜와 2027년 실적 성장 전망이 당일 보도됨"
+          "sourceUrl": "https://meerae.ai/insights/6afa56ca1b7a270986871a83/",
+          "publishedAt": "2026-11-16T10:05:00+09:00",
+          "summary": "자기주식 100만주 취득 결정과 스페이스X 투자 관련성이 최근 강세 재료로 확인됨"
         }
       ],
       "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-18T08:06:00+09:00",
-      "provenanceClass": "verified_shared_material"
+      "provenanceClass": "carried_prior_fact",
+      "evidenceFirstPublishedAt": "2026-11-16T10:05:00+09:00"
     },
     {
-      "code": "030530",
+      "code": "042510",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "원익홀딩스 030530 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "라온시큐어 042510 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
+      },
+      "evidenceUrls": [
+        "https://mobile2.newspim.com/news/view/20261111000302"
+      ],
+      "reasonClassification": "sector_theme",
+      "previousEditionChecks": [
+        {
+          "slot": "09:40",
+          "sourceUrl": "https://mobile2.newspim.com/news/view/20261111000302",
+          "reasonSummary": "금융보안원 정보 유출 사고 뒤 보안 투자 확대 필요성이 부각되며 관련주 동반 강세가 보도됨",
+          "decision": "carried",
+          "decisionReason": "동일 종목의 기존 검증 근거와 발표시각을 재확인"
+        }
+      ],
+      "priorEvidence": [
+        {
+          "sourceUrl": "https://mobile2.newspim.com/news/view/20261111000302",
+          "publishedAt": "2026-11-11T09:43:00+09:00",
+          "summary": "금융보안원 정보 유출 사고 뒤 보안 투자 확대 필요성이 부각되며 관련주 동반 강세가 보도됨"
+        }
+      ],
+      "rejectedPriorEvidence": [],
+      "provenanceClass": "carried_prior_fact",
+      "evidenceFirstPublishedAt": "2026-11-11T09:43:00+09:00"
+    },
+    {
+      "code": "263860",
+      "status": "completed",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
+      "searchedSources": [
+        "당일·최근 공시·언론·산업자료 자율검색"
+      ],
+      "searchQueries": [
+        "지니언스 263860 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
+      ],
+      "checkedWindow": {
+        "start": "2026-11-11T00:00:00+09:00",
+        "end": "2026-11-18T11:44:22.632974+09:00"
+      },
+      "evidenceUrls": [
+        "https://mobile2.newspim.com/news/view/20261111000302"
+      ],
+      "reasonClassification": "sector_theme",
+      "previousEditionChecks": [
+        {
+          "slot": "09:40",
+          "sourceUrl": "https://mobile2.newspim.com/news/view/20261111000302",
+          "reasonSummary": "금융보안원 정보 유출 사고 뒤 보안 투자 확대 필요성이 부각되며 관련주 동반 강세가 보도됨",
+          "decision": "carried",
+          "decisionReason": "동일 종목의 기존 검증 근거와 발표시각을 재확인"
+        }
+      ],
+      "priorEvidence": [
+        {
+          "sourceUrl": "https://mobile2.newspim.com/news/view/20261111000302",
+          "publishedAt": "2026-11-11T09:43:00+09:00",
+          "summary": "금융보안원 정보 유출 사고 뒤 보안 투자 확대 필요성이 부각되며 관련주 동반 강세가 보도됨"
+        }
+      ],
+      "rejectedPriorEvidence": [],
+      "provenanceClass": "carried_prior_fact",
+      "evidenceFirstPublishedAt": "2026-11-11T09:43:00+09:00"
+    },
+    {
+      "code": "030530",
+      "status": "completed",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
+      "searchedSources": [
+        "당일·최근 공시·언론·산업자료 자율검색"
+      ],
+      "searchQueries": [
+        "원익홀딩스 030530 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
+      ],
+      "checkedWindow": {
+        "start": "2026-11-11T00:00:00+09:00",
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
         "https://securities.miraeasset.com/bbs/download/2148498.pdf?attachmentId=2148498",
-        "https://alphasquare.co.kr/home/stock-summary?code=030530"
+        "https://www.hankyung.com/article/2026111725876"
       ],
       "reasonClassification": "unconfirmed",
       "previousEditionChecks": [],
@@ -3254,16 +2959,16 @@
     {
       "code": "058610",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "에스피지 058610 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "에스피지 058610 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
         "https://securities.miraeasset.com/bbs/download/2148498.pdf?attachmentId=2148498",
@@ -3276,67 +2981,18 @@
       "provenanceClass": "unconfirmed_after_broad_search"
     },
     {
-      "code": "002710",
+      "code": "000150",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "TCC스틸 002710 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "두산 000150 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://markets.hankyung.com/stock/002710",
-        "https://koreastockinfo.com/stock/002710/disclosures/"
-      ],
-      "reasonClassification": "unconfirmed",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "provenanceClass": "unconfirmed_after_broad_search"
-    },
-    {
-      "code": "281820",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "케이씨텍 281820 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://www.yna.co.kr/view/AKR20261118024600008",
-        "https://www.vlsi.kr/ko/supply-chain-check-2026-11-17-ko/"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-18T08:06:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "437730",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "삼현 437730 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
         "https://securities.miraeasset.com/bbs/download/2148498.pdf?attachmentId=2148498",
@@ -3347,221 +3003,62 @@
       "priorEvidence": [],
       "rejectedPriorEvidence": [],
       "provenanceClass": "unconfirmed_after_broad_search"
-    },
-    {
-      "code": "007810",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "코리아써키트 007810 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://stock.mk.co.kr/news/view/1198045",
-        "https://file.alphasquare.co.kr/media/pdfs/market-report/%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90PCB20261117iM%EC%A6%9D%EA%B6%8C.pdf"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [
-        {
-          "slot": "11:40",
-          "sourceUrl": "https://stock.mk.co.kr/news/view/1198045",
-          "reasonSummary": "메모리용 BT 기판 공급 부족과 판가 인상 기대가 관련 기판주 강세의 배경으로 보도됐다.",
-          "decision": "superseded",
-          "decisionReason": "이번 회차의 더 넓은 공통 재료 또는 최신 검증 사실을 우선 적용"
-        }
-      ],
-      "priorEvidence": [
-        {
-          "sourceUrl": "https://stock.mk.co.kr/news/view/1198045",
-          "publishedAt": "2026-11-13T09:05:51+09:00",
-          "summary": "메모리용 BT 기판 공급 부족과 판가 인상 기대가 관련 기판주 강세의 배경으로 보도됐다."
-        }
-      ],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-12T08:34:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "323280",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "태성 323280 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://file.alphasquare.co.kr/media/pdfs/market-report/%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90PCB20261117iM%EC%A6%9D%EA%B6%8C.pdf",
-        "https://koreastockinfo.com/stock/323280/disclosures/"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-12T08:34:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "003160",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "디아이 003160 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://www.yna.co.kr/view/AKR20261118024600008",
-        "https://koreastockinfo.com/stock/003160/disclosures/"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-18T08:06:00+09:00",
-      "provenanceClass": "verified_shared_material"
     },
     {
       "code": "035900",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "JYP Ent. 035900 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "JYP Ent. 035900 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
-        "https://www.newspim.com/news/view/20261117000386",
-        "https://dartbrief.com/disclosures/20261111900490"
-      ],
-      "reasonClassification": "related_fact_only",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-17T09:58:00+09:00",
-      "provenanceClass": "new_or_recent_related_fact"
-    },
-    {
-      "code": "000660",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "SK하이닉스 000660 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://www.yna.co.kr/view/AKR20261118024600008",
-        "https://alphasquare.co.kr/home/stock-issue?code=000660&type=disclosure"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-18T08:06:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "218410",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "RFHIC 218410 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://www.newspim.com/news/view/20261117000553",
-        "https://alphasquare.co.kr/home/stock-issue?code=218410&type=disclosure"
+        "https://www.newspim.com/news/view/20261117000386"
       ],
       "reasonClassification": "prior_fact",
       "previousEditionChecks": [
         {
-          "slot": "11:40",
-          "sourceUrl": "https://www.newspim.com/news/view/20261111000182",
-          "reasonSummary": "하나증권은 RFHIC의 3분기 매출 711억원과 영업이익 217억원을 제시하며 무선통신 사업을 분석했다.",
-          "decision": "superseded",
-          "decisionReason": "이번 회차의 더 넓은 공통 재료 또는 최신 검증 사실을 우선 적용"
-        },
-        {
-          "slot": "13:40",
-          "sourceUrl": "https://www.newspim.com/news/view/20261117000553",
-          "reasonSummary": "당일 증권사 실적 전망 보고서가 공개됨",
+          "slot": "09:40",
+          "sourceUrl": "https://www.newspim.com/news/view/20261117000386",
+          "reasonSummary": "3분기 실적 개선과 스트레이키즈 공연 확대에 따른 2027년 성장 전망이 확인됨",
           "decision": "carried",
-          "decisionReason": "동일 근거의 유효성과 시각을 재확인"
-        },
-        {
-          "slot": "20:10",
-          "sourceUrl": "https://www.newspim.com/news/view/20261117000553",
-          "reasonSummary": "당일 증권사 실적 전망 보고서가 공개됨",
-          "decision": "carried",
-          "decisionReason": "동일 근거의 유효성과 시각을 재확인"
+          "decisionReason": "동일 종목의 기존 검증 근거와 발표시각을 재확인"
         }
       ],
       "priorEvidence": [
         {
-          "sourceUrl": "https://www.newspim.com/news/view/20261111000182",
-          "publishedAt": "2026-11-11T08:35:00+09:00",
-          "summary": "하나증권은 RFHIC의 3분기 매출 711억원과 영업이익 217억원을 제시하며 무선통신 사업을 분석했다."
-        },
-        {
-          "sourceUrl": "https://www.newspim.com/news/view/20261117000553",
-          "publishedAt": "2026-11-17T11:04:00+09:00",
-          "summary": "당일 증권사 실적 전망 보고서가 공개됨"
+          "sourceUrl": "https://www.newspim.com/news/view/20261117000386",
+          "publishedAt": "2026-11-17T09:58:00+09:00",
+          "summary": "3분기 실적 개선과 스트레이키즈 공연 확대에 따른 2027년 성장 전망이 확인됨"
         }
       ],
       "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-17T11:04:00+09:00",
-      "provenanceClass": "carried_prior_fact"
+      "provenanceClass": "carried_prior_fact",
+      "evidenceFirstPublishedAt": "2026-11-17T09:58:00+09:00"
     },
     {
-      "code": "047050",
+      "code": "437730",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "포스코인터내셔널 047050 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "삼현 437730 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
-        "https://markets.hankyung.com/stock/047050",
-        "https://alphasquare.co.kr/home/stock-issue?code=047050&type=disclosure"
+        "https://securities.miraeasset.com/bbs/download/2148498.pdf?attachmentId=2148498",
+        "https://www.hankyung.com/article/2026111725876"
       ],
       "reasonClassification": "unconfirmed",
       "previousEditionChecks": [],
@@ -3570,222 +3067,89 @@
       "provenanceClass": "unconfirmed_after_broad_search"
     },
     {
-      "code": "009150",
+      "code": "131970",
       "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
       "searchedSources": [
         "당일·최근 공시·언론·산업자료 자율검색"
       ],
       "searchQueries": [
-        "삼성전기 009150 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
+        "두산테스나 131970 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
       ],
       "checkedWindow": {
         "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
+        "end": "2026-11-18T11:44:22.632974+09:00"
       },
       "evidenceUrls": [
-        "https://file.alphasquare.co.kr/media/pdfs/market-report/%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90PCB20261117iM%EC%A6%9D%EA%B6%8C.pdf",
-        "https://dartbrief.com/stocks/009150"
+        "https://w4.kirs.or.kr/download/research/260515_%EB%91%90%EC%82%B0%ED%85%8C%EC%8A%A4%EB%82%98(%EA%B8%80%EC%84%B8)_%EC%88%98%EC%A0%95.pdf"
+      ],
+      "reasonClassification": "unconfirmed",
+      "previousEditionChecks": [],
+      "priorEvidence": [],
+      "rejectedPriorEvidence": [],
+      "provenanceClass": "unconfirmed_after_broad_search"
+    },
+    {
+      "code": "0039P0",
+      "status": "completed",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
+      "searchedSources": [
+        "당일·최근 공시·언론·산업자료 자율검색"
+      ],
+      "searchQueries": [
+        "매드업 0039P0 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
+      ],
+      "checkedWindow": {
+        "start": "2026-11-11T00:00:00+09:00",
+        "end": "2026-11-18T11:44:22.632974+09:00"
+      },
+      "evidenceUrls": [
+        "https://www.thebell.co.kr/front/newsview.asp?code=0701&key=202611121159171040108350"
+      ],
+      "reasonClassification": "prior_fact",
+      "previousEditionChecks": [],
+      "priorEvidence": [],
+      "rejectedPriorEvidence": [],
+      "provenanceClass": "verified_related_fact",
+      "evidenceFirstPublishedAt": "2026-11-12T14:00:00+09:00"
+    },
+    {
+      "code": "053800",
+      "status": "completed",
+      "checkedAt": "2026-11-18T11:48:44+09:00",
+      "searchedSources": [
+        "당일·최근 공시·언론·산업자료 자율검색"
+      ],
+      "searchQueries": [
+        "안랩 053800 2026년 11월 18일 상승 이유 공시 실적 산업 재료"
+      ],
+      "checkedWindow": {
+        "start": "2026-11-11T00:00:00+09:00",
+        "end": "2026-11-18T11:44:22.632974+09:00"
+      },
+      "evidenceUrls": [
+        "https://mobile2.newspim.com/news/view/20261111000302"
       ],
       "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
+      "previousEditionChecks": [
+        {
+          "slot": "09:40",
+          "sourceUrl": "https://mobile2.newspim.com/news/view/20261111000302",
+          "reasonSummary": "금융보안원 정보 유출 사고 뒤 보안 투자 확대 필요성이 부각되며 관련주 동반 강세가 보도됨",
+          "decision": "carried",
+          "decisionReason": "동일 종목의 기존 검증 근거와 발표시각을 재확인"
+        }
+      ],
+      "priorEvidence": [
+        {
+          "sourceUrl": "https://mobile2.newspim.com/news/view/20261111000302",
+          "publishedAt": "2026-11-11T09:43:00+09:00",
+          "summary": "금융보안원 정보 유출 사고 뒤 보안 투자 확대 필요성이 부각되며 관련주 동반 강세가 보도됨"
+        }
+      ],
       "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-12T08:34:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "0158S0",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "엘리스 0158S0 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://alphasquare.co.kr/home/stock-issue?code=0158S0&type=disclosure"
-      ],
-      "reasonClassification": "unconfirmed",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "provenanceClass": "unconfirmed_after_broad_search"
-    },
-    {
-      "code": "011070",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "LG이노텍 011070 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://koreastockinfo.com/stock/011070/disclosures/",
-        "https://dartbrief.com/stocks/011070"
-      ],
-      "reasonClassification": "unconfirmed",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "provenanceClass": "unconfirmed_after_broad_search"
-    },
-    {
-      "code": "034730",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "SK 034730 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://koreastockinfo.com/stock/034730/disclosures/",
-        "https://alphasquare.co.kr/home/stock-issue?code=034730&type=disclosure"
-      ],
-      "reasonClassification": "unconfirmed",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "provenanceClass": "unconfirmed_after_broad_search"
-    },
-    {
-      "code": "010170",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "대한광통신 010170 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://pickstock.ai/stock/218410",
-        "https://koreastockinfo.com/stock/010170/disclosures/"
-      ],
-      "reasonClassification": "unconfirmed",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "provenanceClass": "unconfirmed_after_broad_search"
-    },
-    {
-      "code": "353200",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "대덕전자 353200 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://file.alphasquare.co.kr/media/pdfs/market-report/%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90PCB20261117iM%EC%A6%9D%EA%B6%8C.pdf",
-        "https://koreastockinfo.com/stock/353200/disclosures/"
-      ],
-      "reasonClassification": "sector_theme",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-12T08:34:00+09:00",
-      "provenanceClass": "verified_shared_material"
-    },
-    {
-      "code": "402340",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "SK스퀘어 402340 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://koreastockinfo.com/stock/402340/disclosures/",
-        "https://alphasquare.co.kr/home/stock-issue?code=402340&type=disclosure"
-      ],
-      "reasonClassification": "unconfirmed",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "provenanceClass": "unconfirmed_after_broad_search"
-    },
-    {
-      "code": "180640",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "한진칼 180640 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://koreastockinfo.com/stock/180640/disclosures/",
-        "https://www.k5.co.kr/stock/180640/official_notice"
-      ],
-      "reasonClassification": "unconfirmed",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "provenanceClass": "unconfirmed_after_broad_search"
-    },
-    {
-      "code": "192820",
-      "status": "completed",
-      "checkedAt": "2026-11-18T09:45:44+09:00",
-      "searchedSources": [
-        "당일·최근 공시·언론·산업자료 자율검색"
-      ],
-      "searchQueries": [
-        "코스맥스 192820 2026년 11월 18일 상승 급등 특징주 공시 실적 이유"
-      ],
-      "checkedWindow": {
-        "start": "2026-11-11T00:00:00+09:00",
-        "end": "2026-11-18T09:41:00.407390+09:00"
-      },
-      "evidenceUrls": [
-        "https://www.yna.co.kr/view/AKR20261112045451008",
-        "https://alphasquare.co.kr/home/stock-issue?code=192820&type=disclosure"
-      ],
-      "reasonClassification": "related_fact_only",
-      "previousEditionChecks": [],
-      "priorEvidence": [],
-      "rejectedPriorEvidence": [],
-      "evidenceFirstPublishedAt": "2026-11-12T15:41:00+09:00",
-      "provenanceClass": "new_or_recent_related_fact"
+      "provenanceClass": "carried_prior_fact",
+      "evidenceFirstPublishedAt": "2026-11-11T09:43:00+09:00"
     }
   ],
   "days": [
