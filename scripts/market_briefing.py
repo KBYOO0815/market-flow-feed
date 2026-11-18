@@ -1,193 +1,162 @@
-"""Validate/merge the single direct-write feed. No workflow or network publishing.
+"""Minimal validator/merger for Market Flow briefing JSON.
 
-validate FILE [--today YYYY-MM-DD]
-merge CURRENT DRAFT OUTPUT [--today YYYY-MM-DD]
-DRAFT: {date,isKrxTradingDay,session,researchState?}. Writer must re-read SHA
-before merge and verify the saved JSON using a fresh GitHub read.
+This helper validates only the app-facing data contract. It does not decide how
+news is searched, selected, ranked, verified, or how U.S. themes are discovered.
 """
 import argparse
 import copy
 import datetime as dt
 import json
 import math
-from zoneinfo import ZoneInfo
 from urllib.parse import urlsplit
+from zoneinfo import ZoneInfo
 
-SLOTS = ('06:40', '08:40', '12:40', '19:40')
-KST = ZoneInfo('Asia/Seoul')
+SLOTS = ("06:40", "08:40", "12:40", "19:40")
+KST = ZoneInfo("Asia/Seoul")
 
 def require(ok, message):
     if not ok:
         raise ValueError(message)
 
 def timestamp(value):
-    require(isinstance(value,str), 'timestamp string required')
-    parsed=dt.datetime.fromisoformat(value.replace('Z','+00:00'))
-    require(parsed.tzinfo is not None, 'timezone required')
+    require(isinstance(value, str), "timestamp string required")
+    parsed = dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
+    require(parsed.tzinfo is not None, "timezone required")
     return parsed
 
 def https(url):
     try:
-        u=urlsplit(url)
-        return u.scheme=='https' and bool(u.hostname) and not u.username and not u.password
-    except (TypeError,ValueError):
+        u = urlsplit(url)
+        return u.scheme == "https" and bool(u.hostname) and not u.username and not u.password
+    except (TypeError, ValueError):
         return False
 
-def finite(n):
-    return isinstance(n,(int,float)) and not isinstance(n,bool) and math.isfinite(n)
+def finite(value):
+    return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
 
-def validate_session(s, date, trading, strict=False):
-    require(s['slot'] in SLOTS, 'invalid slot')
-    require(trading or s['slot'] in ('06:40','19:40'), 'closed-day slot')
-    cutoff=timestamp(s['asOf'])
-    require(cutoff.astimezone(KST).date()==dt.date.fromisoformat(date),'asOf date mismatch')
-    require(cutoff<=dt.datetime.now(KST),'future asOf')
-    keys=set()
-    for region,field in [('foreign','foreignNews'),('domestic','domesticNews')]:
-        news=s[field]
-        require(isinstance(news,list) and len(news)<=10, 'news limit')
-        for rank,n in enumerate(news,1):
-            require(all(isinstance(n.get(k),str) and n[k].strip() for k in ('id','title','summary','sourceName','category')), 'news strings')
-            require(n['region']==region and n['impactRank']==rank,'region/rank')
-            require(n['id'] not in keys,'duplicate id')
-            keys.add(n['id'])
-            require(timestamp(n['publishedAt'])<=cutoff,'news after cutoff')
-            require(https(n['sourceUrl']),'HTTPS source required')
-            require(isinstance(n['relatedStocks'],list) and all(isinstance(x,str) for x in n['relatedStocks']),'relatedStocks')
-    themes=s['usThemes']
-    require(isinstance(themes,list) and len(themes)<=3,'theme limit')
-    require(s['slot']=='06:40' or not themes,'themes outside 06:40')
-    if not strict:
-        return
-    require(s.get('researchStatus') in ('complete','partial','failed'),'researchStatus required')
-    audit=s['researchAudit']
-    domains=audit['domains']
-    for key in ('foreignNews','domesticNews','usThemes'):
-        d=domains[key]
-        require(d['status'] in ('complete','partial','failed','not_applicable'),'domain status')
-        require(d['status']!='not_applicable' or (key=='usThemes' and s['slot']!='06:40'),'invalid not_applicable')
-        start,end=timestamp(d['windowStartExclusive']),timestamp(d['windowEndInclusive'])
-        require(start<=end<=cutoff,'domain window')
-        require(isinstance(d['pendingWindows'],list),'pending windows required')
-        if d.get('completedThrough'):
-            require(timestamp(d['completedThrough'])<=end,'completedThrough after end')
-        if d['status']=='complete':
-            require(d.get('completedThrough') and timestamp(d['completedThrough'])==end and not d['pendingWindows'],'incomplete domain marked complete')
-    if s['researchStatus']=='complete':
-        require(all(d['status'] in ('complete','not_applicable') for d in domains.values()),'partial domain marked complete')
-    state=s.get('usThemeStatus')
-    if s['slot']!='06:40':
-        require(state=='not_applicable','theme status outside 06:40')
-    else:
-        require(state in ('verified_themes','verified_no_theme','insufficient_data'),'theme state')
-        if state=='insufficient_data':
-            require(not themes,'unverified themes')
-        else:
-            require(domains['usThemes']['status']=='complete','theme domain incomplete')
-            require(bool(themes)==(state=='verified_themes'),'theme state and results mismatch')
-            evidence=audit['usThemeEvidence']
-            rows=evidence['universe']
-            require(len(rows)==50 and len({r['ticker'] for r in rows})==50,'complete 50 required')
-            require(sorted(r['dollarVolumeRank'] for r in rows)==list(range(1,51)),'rank completeness')
-            for r in rows:
-                require(finite(r['dollarVolume']) and r['dollarVolume']>0 and finite(r['regularChangePct']),'numeric universe values')
-                require(https(r['sourceUrl']) and r['securityType'] in ('common','adr'),'universe evidence/type')
-            universe={r['ticker']:r for r in rows}
-            for t in themes:
-                members=t['memberTickers']
-                require(len(set(members))==len(members)>=2 and all(m in universe for m in members),'theme membership')
-                denom=sum(universe[m]['dollarVolume'] for m in members)
-                change=sum(universe[m]['dollarVolume']*universe[m]['regularChangePct'] for m in members)/denom
-                require(change>0 and math.isclose(t['weightedChangePct'],change,abs_tol=0.0001),'theme weighted change')
-                require(math.isclose(t['totalDollarVolume'],denom,rel_tol=1e-8),'theme turnover')
-                require(len(t['stocks'])<=5 and all(r['ticker'] in members for r in t['stocks']),'display stocks')
+def validate_theme(theme):
+    require(isinstance(theme, dict), "theme object required")
+    require(isinstance(theme.get("theme"), str) and theme["theme"].strip(), "theme name required")
+    require(isinstance(theme.get("reason"), str) and theme["reason"].strip(), "theme reason required")
+    if theme.get("direction") is not None:
+        require(theme["direction"] in ("up", "down"), "invalid theme direction")
+    if theme.get("weightedChangePct") is not None:
+        require(finite(theme["weightedChangePct"]), "invalid weightedChangePct")
+    if theme.get("totalDollarVolume") is not None:
+        require(finite(theme["totalDollarVolume"]) and theme["totalDollarVolume"] >= 0, "invalid totalDollarVolume")
+    stocks = theme.get("stocks", [])
+    require(isinstance(stocks, list) and len(stocks) <= 5, "theme stocks limit")
+    for stock in stocks:
+        require(isinstance(stock, dict) and isinstance(stock.get("ticker"), str) and stock["ticker"].strip(), "theme ticker required")
+        for key in ("regularChangePct", "afterHoursChangePct"):
+            if stock.get(key) is not None:
+                require(finite(stock[key]), "invalid theme stock change")
+
+def validate_session(session, date, trading):
+    require(isinstance(session, dict), "session object required")
+    require(session.get("slot") in SLOTS, "invalid slot")
+    require(trading or session["slot"] in ("06:40", "19:40"), "closed-day slot")
+    cutoff = timestamp(session.get("asOf"))
+    require(cutoff.astimezone(KST).date() == dt.date.fromisoformat(date), "asOf date mismatch")
+    require(cutoff <= dt.datetime.now(KST), "future asOf")
+
+    ids = set()
+    for region, field in (("foreign", "foreignNews"), ("domestic", "domesticNews")):
+        items = session.get(field)
+        require(isinstance(items, list) and len(items) <= 10, "news limit")
+        for rank, item in enumerate(items, 1):
+            require(isinstance(item, dict), "news object required")
+            for key in ("id", "title", "summary", "sourceName", "category"):
+                require(isinstance(item.get(key), str) and item[key].strip(), "news strings")
+            require(item.get("region") == region, "news region")
+            require(item.get("impactRank") == rank, "news rank")
+            require(item["id"] not in ids, "duplicate news id")
+            ids.add(item["id"])
+            require(timestamp(item.get("publishedAt")) <= cutoff, "news after cutoff")
+            require(https(item.get("sourceUrl")), "HTTPS source required")
+            require(isinstance(item.get("relatedStocks"), list) and all(isinstance(x, str) for x in item["relatedStocks"]), "relatedStocks")
+
+    themes = session.get("usThemes")
+    require(isinstance(themes, list) and len(themes) <= 6, "theme limit")
+    require(session["slot"] == "06:40" or not themes, "themes outside 06:40")
+    for theme in themes:
+        validate_theme(theme)
+
+    if session.get("researchStatus") is not None:
+        require(session["researchStatus"] in ("complete", "partial", "failed"), "invalid researchStatus")
+    if session.get("usThemeStatus") is not None:
+        require(session["usThemeStatus"] in ("verified_themes", "verified_no_theme", "insufficient_data", "not_applicable"), "invalid usThemeStatus")
 
 def validate(body, today=None):
-    today=today or dt.datetime.now(KST).date()
-    require(body['schemaVersion']==1,'schemaVersion')
-    timestamp(body['updatedAt'])
-    seen=set()
-    for d in body['days']:
-        date=dt.date.fromisoformat(d['date'])
-        require(today-dt.timedelta(days=3)<=date<=today,'outside FIFO range')
-        require(date not in seen,'duplicate date')
-        seen.add(date)
-        require(type(d['isKrxTradingDay']) is bool,'trading flag')
-        slots=set()
-        for s in d['sessions']:
-            require(s['slot'] not in slots,'duplicate slot')
-            slots.add(s['slot'])
-            validate_session(s,d['date'],d['isKrxTradingDay'])
+    today = today or dt.datetime.now(KST).date()
+    require(isinstance(body, dict) and body.get("schemaVersion") == 1, "schemaVersion")
+    timestamp(body.get("updatedAt"))
+    require(isinstance(body.get("days"), list), "days required")
+
+    seen_dates = set()
+    for day in body["days"]:
+        require(isinstance(day, dict), "day object required")
+        date = dt.date.fromisoformat(day["date"])
+        require(today - dt.timedelta(days=3) <= date <= today, "outside FIFO range")
+        require(date not in seen_dates, "duplicate date")
+        seen_dates.add(date)
+        require(type(day.get("isKrxTradingDay")) is bool, "trading flag")
+        require(isinstance(day.get("sessions"), list), "sessions required")
+        seen_slots = set()
+        for session in day["sessions"]:
+            require(session.get("slot") not in seen_slots, "duplicate slot")
+            seen_slots.add(session["slot"])
+            validate_session(session, day["date"], day["isKrxTradingDay"])
     return body
 
-def merge(current,draft,today=None):
-    today=today or dt.datetime.now(KST).date()
-    validate_session(draft['session'],draft['date'],draft['isKrxTradingDay'],strict=True)
-    result=copy.deepcopy(current)
-    # Before FIFO, preserve unresolved domain windows without retaining old content.
-    state=result.setdefault('researchState',{})
-    for historical in result['days']:
-        for record in historical['sessions']:
-            for key,domain in record.get('researchAudit',{}).get('domains',{}).items():
-                if domain.get('pendingWindows'):
-                    kept=state.setdefault(key,{'pendingWindows':[]})
-                    for pending in domain['pendingWindows']:
-                        if pending not in kept.setdefault('pendingWindows',[]):
-                            kept['pendingWindows'].append(copy.deepcopy(pending))
-    # Prune content only; outstanding windows remain in researchState.
-    result['days']=[d for d in result['days'] if today-dt.timedelta(days=3)<=dt.date.fromisoformat(d['date'])<=today]
-    validate(result,today)
-    day=next((d for d in result['days'] if d['date']==draft['date']),None)
-    if day is None:
-        day={'date':draft['date'],'isKrxTradingDay':draft['isKrxTradingDay'],'sessions':[]}
-        result['days'].append(day)
-    require(day['isKrxTradingDay']==draft['isKrxTradingDay'],'trading evidence conflict')
-    session=draft['session']
-    def fact_keys(news):
-        keys={str(f.get('factKey',f.get('key'))) for f in news.get('facts',[]) if f.get('factKey',f.get('key'))}
-        return keys or ({'event:'+news['eventKey']} if news.get('eventKey') else set())
-    published=set()
-    for other_day in result['days']:
-        for other in other_day['sessions']:
-            if other_day['date']==draft['date'] and other['slot']==session['slot']:
-                continue
-            for n in other['foreignNews']+other['domesticNews']:
-                published.update(fact_keys(n))
-    incoming=set()
-    for n in session['foreignNews']+session['domesticNews']:
-        keys=fact_keys(n)
-        require(keys and not keys.intersection(published|incoming),'missing or duplicate event/fact keys')
-        incoming.update(keys)
-    old=next((s for s in day['sessions'] if s['slot']==session['slot']),None)
-    require(old is None or timestamp(old['asOf'])<=timestamp(session['asOf']),'stale replacement')
-    if 'researchState' in draft:
-        previous=result.get('researchState',{})
-        for key,value in previous.items():
-            require(key in draft['researchState'],'researchState domain lost')
-            proposed=draft['researchState'][key]
-            if value.get('completedThrough') and proposed.get('completedThrough'):
-                require(timestamp(proposed['completedThrough'])>=timestamp(value['completedThrough']),'watermark regression')
-            for pending in value.get('pendingWindows',[]):
-                completed=proposed.get('completedThrough')
-                require(pending in proposed.get('pendingWindows',[]) or (completed and timestamp(completed)>=timestamp(pending['endInclusive'])),'unresolved window lost')
-        result['researchState']=copy.deepcopy(draft['researchState'])
-    day['sessions']=[s for s in day['sessions'] if s['slot']!=session['slot']]+[copy.deepcopy(session)]
-    day['sessions'].sort(key=lambda s:s['slot'])
-    result['days'].sort(key=lambda d:d['date'],reverse=True)
-    result['updatedAt']=dt.datetime.now(KST).isoformat()
-    return validate(result,today)
+def merge(current, draft, today=None):
+    today = today or dt.datetime.now(KST).date()
+    require(isinstance(draft, dict), "draft object required")
+    require(isinstance(draft.get("date"), str), "draft date required")
+    require(type(draft.get("isKrxTradingDay")) is bool, "draft trading flag required")
+    validate_session(draft.get("session"), draft["date"], draft["isKrxTradingDay"])
 
-if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('mode',choices=['validate','merge'])
-    p.add_argument('files',nargs='+')
-    p.add_argument('--today',type=dt.date.fromisoformat)
-    a=p.parse_args()
-    body=json.load(open(a.files[0]))
-    if a.mode=='validate':
-        validate(body,a.today)
-        print('JSON structural validation passed; source research is not certified.')
+    result = copy.deepcopy(current)
+    result.pop("researchState", None)
+    result["days"] = [
+        d for d in result.get("days", [])
+        if today - dt.timedelta(days=3) <= dt.date.fromisoformat(d["date"]) <= today
+    ]
+
+    day = next((d for d in result["days"] if d["date"] == draft["date"]), None)
+    if day is None:
+        day = {"date": draft["date"], "isKrxTradingDay": draft["isKrxTradingDay"], "sessions": []}
+        result["days"].append(day)
+    require(day["isKrxTradingDay"] == draft["isKrxTradingDay"], "trading flag conflict")
+
+    session = copy.deepcopy(draft["session"])
+    old = next((s for s in day["sessions"] if s["slot"] == session["slot"]), None)
+    if old is not None:
+        require(timestamp(old["asOf"]) <= timestamp(session["asOf"]), "stale replacement")
+    day["sessions"] = [s for s in day["sessions"] if s["slot"] != session["slot"]] + [session]
+    day["sessions"].sort(key=lambda s: s["slot"])
+    result["days"].sort(key=lambda d: d["date"], reverse=True)
+    result["updatedAt"] = dt.datetime.now(KST).isoformat()
+    return validate(result, today)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("mode", choices=["validate", "merge"])
+    parser.add_argument("files", nargs="+")
+    parser.add_argument("--today", type=dt.date.fromisoformat)
+    args = parser.parse_args()
+
+    with open(args.files[0], encoding="utf-8") as f:
+        body = json.load(f)
+
+    if args.mode == "validate":
+        validate(body, args.today)
+        print("Market briefing JSON contract valid.")
     else:
-        require(len(a.files)==3,'merge CURRENT DRAFT OUTPUT')
-        result=merge(body,json.load(open(a.files[1])),a.today)
-        with open(a.files[2],'w') as f: json.dump(result,f,ensure_ascii=False,indent=2);f.write('\n')
+        require(len(args.files) == 3, "merge CURRENT DRAFT OUTPUT")
+        with open(args.files[1], encoding="utf-8") as f:
+            draft = json.load(f)
+        result = merge(body, draft, args.today)
+        with open(args.files[2], "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+            f.write("\n")
