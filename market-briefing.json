@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T06:50:32+09:00",
+  "updatedAt": "2026-11-19T08:15:46.786+09:00",
   "days": [
     {
       "date": "2026-11-19",
@@ -51,7 +51,32 @@
               "region": "foreign"
             }
           ],
-          "domesticNews": [],
+          "domesticNews": [
+            {
+              "id": "20261119-0640-fss-overseas-realestate",
+              "title": "금융권 해외부동산 투자 55.6조원…부실우려 규모 2.64조원으로 증가",
+              "summary": "금융감독원 발표 기준 2026년 6월 말 국내 금융회사의 해외 부동산 대체투자 잔액은 55조6000억원으로 지난해 말보다 3000억원 감소했지만, 기한이익상실(EOD) 사유가 발생한 규모는 2조6400억원으로 5600억원 증가했다.",
+              "publishedAt": "2026-11-19T06:00:00+09:00",
+              "sourceName": "뉴시스",
+              "sourceUrl": "https://www.newsis.com/view/NISX20261118_0003873776",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "금융권 리스크·해외부동산",
+              "region": "domestic"
+            },
+            {
+              "id": "20261119-0640-xiaomi-korea-ev-trademark",
+              "title": "샤오미, 한국서 SU7·YU7 등 전기차 상표권 출원",
+              "summary": "대한민국 지식재산처에 따르면 샤오미는 한국에서 SU7·SU7 울트라·YU7 상표권을 출원했으며, 한국 법인의 사업 목적에도 자동차·자동차 부품 수입 및 도소매업이 포함돼 있다. 국내 자동차·전기차 시장 진입 준비 가능성이 주목된다.",
+              "publishedAt": "2026-11-19T05:00:00+09:00",
+              "sourceName": "뉴시스",
+              "sourceUrl": "https://www.newsis.com/view/NISX20261118_0003873836",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "자동차·전기차",
+              "region": "domestic"
+            }
+          ],
           "usThemes": [
             {
               "direction": "up",
