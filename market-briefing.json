@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-18T12:44:53+09:00",
+  "updatedAt": "2026-11-18T12:47:16+09:00",
   "days": [
     {
       "date": "2026-11-18",
@@ -930,13 +930,13 @@
           "marketSnapshot": null,
           "researchStatus": "partial",
           "storageVerification": {
-            "status": "pending",
-            "checkedAt": null,
-            "remoteSha": null,
-            "commitSha": null,
-            "exactContentMatch": false,
-            "targetSessionPresent": false,
-            "reason": "원격 저장·재조회 전"
+            "status": "verified",
+            "checkedAt": "2026-11-18T12:47:16+09:00",
+            "remoteSha": "34fb6ddcc3866a06a93377545b6db351bf77008a",
+            "commitSha": "1506895d99caf25f743bcbcd5d433602a3a5ed83",
+            "exactContentMatch": true,
+            "targetSessionPresent": true,
+            "reason": "1차 저장 후 main의 market-briefing.json을 새로 조회해 전체 내용·대상 회차·FIFO·다른 회차 보존을 확인; 본 검증 메타는 후속 커밋으로 반영"
           },
           "researchAudit": {
             "window": {
