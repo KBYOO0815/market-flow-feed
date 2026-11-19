@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T22:41:03.597Z",
+  "updatedAt": "2026-11-19T23:46:58.990Z",
   "days": [
     {
       "date": "2026-11-20",
@@ -227,6 +227,28 @@
           "slot": "07:40",
           "asOf": "2026-11-20T07:40:09+09:00",
           "foreignNews": [],
+          "domesticNews": [],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "usThemeStatus": "not_applicable"
+        },
+        {
+          "slot": "08:40",
+          "asOf": "2026-11-20T08:44:59+09:00",
+          "foreignNews": [
+            {
+              "id": "20261120-0840-japan-oct-cpi",
+              "title": "일본 10월 소비자물가 2.3% 상승…신선식품 제외 2.2%",
+              "summary": "일본 총무성 통계국은 10월 전국 소비자물가지수가 전년 동월보다 2.3% 상승했다고 발표했다. 신선식품 제외 지수는 2.2%, 신선식품·에너지 제외 지수도 2.2% 상승했다. 전월 대비 계절조정치는 각각 0.5%, 0.3%, 0.2% 올랐다.",
+              "publishedAt": "2026-11-20T08:30:00+09:00",
+              "sourceName": "일본 총무성 통계국",
+              "sourceUrl": "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/pdf/zenkoku.pdf",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "일본 물가·통화정책",
+              "region": "foreign"
+            }
+          ],
           "domesticNews": [],
           "usThemes": [],
           "researchStatus": "complete",
