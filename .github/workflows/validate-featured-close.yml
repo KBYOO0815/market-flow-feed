@@ -1,4 +1,4 @@
-name: Validate featured KRX regular close
+name: Validate featured session market prices
 
 on:
   push:
@@ -21,11 +21,11 @@ permissions:
   contents: read
 
 jobs:
-  verify-regular-close:
+  verify-session-prices:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run deterministic KRX close tests
+      - name: Run session-source validation tests
         run: python3 -m unittest discover -s scripts -p 'test_check_featured_close.py'
-      - name: Check published 15:40 vs 20:10 KRX prices
+      - name: Check published session prices and previous-close denominators
         run: python3 scripts/check_featured_close.py
