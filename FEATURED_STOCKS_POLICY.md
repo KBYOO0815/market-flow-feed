@@ -11,17 +11,17 @@
 
 ## 시세·선정 데이터 규격
 
-- 기본 계약은 `schemaVersion: 3`, `turnoverBasis: "KRX_NXT"`, `universeSize: 100`, `amountUnit: "KRW"`, `rateBasis: "KRX_PREVIOUS_CLOSE"`다. `rateBasis`는 **분모가 KRX 전 거래일 정규장 종가**라는 뜻으로, 분자의 실제 거래시장·세션은 별도 `priceMarket`·`priceSession`으로 증명한다. 단, 현행 앱의 검증기는 실제로 `rateMarket:"KRX"`만 허용하므로 신규 NXT 프리·애프터 가격을 거짓으로 KRX라 적어 호환시켜서는 안 된다.
+- 기본 계약은 `schemaVersion: 3`, `turnoverBasis: "KRX_NXT"`, `universeSize: 100`, `amountUnit: "KRW"`, `rateBasis: "KRX_PREVIOUS_CLOSE"`다. `rateBasis`는 **분모가 KRX 전 거래일 정규장 종가**라는 뜻으로, 분자의 실제 거래시장·세션은 별도 `priceMarket`·`priceSession`으로 증명한다. 단, 현행 앱 TypeScript 타입은 `rateMarket:"KRX"`를 명시하나 **JSON v3 런타임 검증은 이 값을 직접 검사하지 않는다**. NXT 시장 값을 KRX로 거짓 표기해서는 안 되며, v3 소비자의 실제 로딩 동작을 확인해 호환성을 판정한다.
 - 대상은 KOSPI·KOSDAQ의 개별기업 보통주/우선주이며 ETF·ETN·SPAC·리츠·펀드·채권 등은 제외한다.
 - KRX 거래대금 상위 100과 NXT 거래대금 상위 100의 종목코드 합집합에서 **같은 거래일의 KRX+NXT 누적 거래대금**으로 진짜 통합 Top100을 산정한다. 원천 미조회·404를 0원으로 간주하지 않는다.
 - 통합 Top100 완전성은 KRX 100위 `K100`, NXT 100위 `N100`, 후보 통합 100위 `T100`에 대해 **`T100 > K100 + N100`** 및 원천 완전성을 검증하거나 동등한 근거를 `rankingProof`에 기록한다. 검증 불가 시 정상 발행하지 않는다.
 - **회차별 상승률:** `changeRate = (price / previousRegularClose - 1) * 100`에서 분모는 언제나 KRX 전 거래일 정규장 종가다. 분자는 08:40=NXT 프리마켓, 09:40·11:40·13:40=KRX 정규장, 15:40=KRX 정규장 당일 종가(특별 거래시간으로 아직 장중이면 당시 정규장 체결가), 20:10=당일 애프터마켓(KRX·NXT)의 시장·시각이 검증된 최종 유효 체결가를 사용한다. 20:10 시각에 거래 중이었다고 표시하지 않는다. 전일 기준가·분자 가격·체결시장·세션·시각·거래일·거래대금 원천을 확인한다.
-- **세션 간 가격 검증:** 같은 거래일 15:40·20:10 회차의 당일 `price`는 달라도 정상이다(정규장·애프터마켓 별도 거래). 공통 종목의 `previousRegularClose`는 같아야 한다. 각 종목의 상승률 산식을 검증하고, 프리·애프터마켓 종목은 실제 가격 출처(`priceMarket`, `priceSession`, `priceObservedAt`, 원천 URL)를 남긴다. 구형 `scripts/check_featured_close.py`의 '20:10=15:40 가격 일치' 검사는 변경된 기준에 맞춰 갱신한다. GitHub Actions 검사는 **발행 후 읽기 전용**이며 직접 커밋을 차단하거나 상승 이유를 재판정하지 않는다.
+- **세션 간 가격 검증:** 같은 거래일 15:40·20:10 회차의 당일 `price`는 달라도 정상이다(정규장·애프터마켓 별도 거래). 공통 종목의 `previousRegularClose`는 같아야 한다. 각 종목의 상승률 산식을 검증하고, 프리·애프터마켓 종목은 실제 가격 출처(edition의 `priceSession`, 종목의 `priceMarket`, `priceObservedAt`, `priceSourceUrl`)를 남긴다. 구형 `scripts/check_featured_close.py`의 '20:10=15:40 가격 일치' 검사는 변경된 기준에 맞춰 갱신한다. GitHub Actions 검사는 **발행 후 읽기 전용**이며 직접 커밋을 차단하거나 상승 이유를 재판정하지 않는다.
 - 통합 Top100 중 비교 가능한 `changeRate >= 4.00` 종목을 **모두** `selectedStockCodes`에 담는다. 기준가격이 없으면 임의 역산하지 않고 비교 불가를 명시한다. 테마는 최소 2종목이고 개별 종목과 중복되지 않는다. 테마 가중 등락률은 포함된 선정 종목의 통합 거래대금 가중평균이다.
 
 ## 앱 호환 JSON 계약
 
-기존 앱 `KBYOO0815/market-flow-app/src/featuredStocks.ts`의 `validateV3` 및 화면을 변경하지 않는다는 제약이 있다. 현재 앱은 **08:40을 허용하지 않고, 모든 종목에 `rateMarket:"KRX"`를 요구**한다. 따라서 앱이 지원하기 전에는 `08:40` 회차나 NXT 가격을 사용하는 회차를 날짜별 JSON에 추가하면 **전체 날짜 데이터가 거부될 수 있다**. 프리·애프터마켓 가격을 KRX로 허위 표기하지 않는다. 발행 전 앱 호환성을 확인하고 미호환이면 해당 회차를 발행 보류·명시 보고한다. 앱 업데이트가 승인되면 `08:40`과 `priceMarket`·`priceSession`을 검증하도록 앱 데이터 어댑터를 개편해야 정상 서비스가 가능하다.
+기존 앱 `KBYOO0815/market-flow-app/src/featuredStocks.ts`의 `validateV3` 및 화면을 변경하지 않는다는 제약이 있다. 현재 앱의 `FEATURED_SLOTS`에 **08:40이 없어 해당 회차를 날짜별 JSON에 추가하면 전체 날짜 파일이 거부된다**. `rateMarket`은 TypeScript 타입에서 KRX 고정이나, 실제 JSON v3 런타임 검증은 이를 검사하지 않으므로 NXT 가격 회차의 로딩 가능 여부는 별도로 검증한다. 프리·애프터마켓 가격을 KRX로 허위 표기하지 않는다. 발행 전 앱의 실제 파싱·표시 호환성을 확인하고 미호환이면 해당 회차를 발행 보류·명시 보고한다. 앱 업데이트가 승인되면 `08:40`과 `priceMarket`·`priceSession`을 검증하도록 앱 데이터 어댑터를 개편해야 정상 서비스가 가능하다.
 
 | 공개 경로 | 계약 |
 |---|---|
