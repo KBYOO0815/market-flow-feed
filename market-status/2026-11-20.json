@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-20",
+  "editions": {
+    "06:10": {
+      "date": "2026-11-20",
+      "slot": "06:10",
+      "scheduledFor": "2026-11-20T06:10:00+09:00",
+      "asOf": "2026-11-20T06:14:42.132+09:00",
+      "publishedAt": "2026-11-20T06:14:42.132+09:00",
+      "sessionStatus": "US REGULAR CLOSED (2026-11-19 16:00 EST); KR PRE (2026-11-20 09:00 KST opening scheduled)",
+      "scope": "US_KR",
+      "us": {
+        "summary": "미국 11월19일 정규장 마감: S&P500 약 -2.0%, Nasdaq Composite 약 -2.3%, Dow 약 -2.2%. Anthropic IPO 강세에도 AI·반도체 관련주가 하락하고 S&P500 구성 종목 90% 이상이 하락. 10년물 미 국채 금리·달러 지수 종가 및 주요 지수 정확한 종가 수준은 원천 검증 불충분으로 미확인.",
+        "observedAt": "2026-11-20T06:14:42.132+09:00",
+        "indices": [
+          {
+            "name": "S&P 500",
+            "value": null,
+            "changePct": -2,
+            "observedAt": "2026-11-20T06:00:00+09:00",
+            "sourceUrl": "https://www.marketwatch.com/livecoverage/stock-market-today-nasdaq-leads-dow-sp500-higher-on-anthropic-ai-optimism-walmart-earnings/card/dow-s-p-500-nasdaq-end-sharply-lower-after-anthropic-s-public-market-debut-NqpTMwtQZb9Zxc3cLBRQ"
+          },
+          {
+            "name": "Nasdaq Composite",
+            "value": null,
+            "changePct": -2.3,
+            "observedAt": "2026-11-20T06:00:00+09:00",
+            "sourceUrl": "https://www.marketwatch.com/livecoverage/stock-market-today-nasdaq-leads-dow-sp500-higher-on-anthropic-ai-optimism-walmart-earnings/card/dow-s-p-500-nasdaq-end-sharply-lower-after-anthropic-s-public-market-debut-NqpTMwtQZb9Zxc3cLBRQ"
+          },
+          {
+            "name": "Dow Jones Industrial Average",
+            "value": null,
+            "changePct": -2.2,
+            "observedAt": "2026-11-20T06:00:00+09:00",
+            "sourceUrl": "https://www.marketwatch.com/livecoverage/stock-market-today-nasdaq-leads-dow-sp500-higher-on-anthropic-ai-optimism-walmart-earnings/card/dow-s-p-500-nasdaq-end-sharply-lower-after-anthropic-s-public-market-debut-NqpTMwtQZb9Zxc3cLBRQ"
+          }
+        ],
+        "themes": [
+          "AI·반도체 약세",
+          "위험회피 확대"
+        ],
+        "notes": [
+          "등락률은 보도된 반올림 잠정치이며 정확한 종가·등락률은 미확인",
+          "Anthropic IPO는 상승했으나 기술주 전반 반등을 견인하지 못함",
+          "미 국채 금리 방향은 하락 보도, 정확한 수익률 null",
+          "달러 지수·미국 주가지수 선물 수치 미확인"
+        ]
+      },
+      "kr": {
+        "summary": "2026-11-20 한국 정규장 개장 전. 11월19일 수능일은 10:00~16:30 순연 거래했으며, 20일은 정상 09:00~15:30 예정. 전일 KOSPI·KOSDAQ 확정 종가·거래대금·투자자별 수급은 검증 가능한 원천 수치 미확보. 미국 AI·반도체 약세는 국내 반도체 투자심리의 하방 위험요인이나 한국 장중 실적은 아직 관측되지 않음.",
+        "observedAt": "2026-11-20T06:14:42.132+09:00",
+        "indices": [
+          {
+            "name": "KOSPI (2026-11-19 종가)",
+            "value": null,
+            "changePct": null,
+            "observedAt": "2026-11-19T16:30:00+09:00",
+            "sourceUrl": "https://www.krx.co.kr/"
+          },
+          {
+            "name": "KOSDAQ (2026-11-19 종가)",
+            "value": null,
+            "changePct": null,
+            "observedAt": "2026-11-19T16:30:00+09:00",
+            "sourceUrl": "https://www.krx.co.kr/"
+          }
+        ],
+        "themes": [
+          "미국 AI·반도체 약세의 한국 시장 파급 주시"
+        ],
+        "notes": [
+          "외국인·기관·개인 수급, 상승·하락종목 수, 거래대금, 원/달러 환율: 미확인",
+          "전일 종가 관측 가능 시각은 16:30 KST 이후이나 수치 미확인",
+          "20일 장전이므로 당일 지수·수급 수치는 미발생"
+        ]
+      },
+      "highlights": [
+        "미국 11월19일 정규장 주요 3대 지수 약 2% 내외 하락 (잠정 반올림치)",
+        "한국 11월20일 06:10 회차는 정규장 개장 전",
+        "정확한 지수 종가 및 한국 전일 수급 수치 미확인 — 0으로 대체하지 않음"
+      ],
+      "sources": [
+        {
+          "name": "AP 미국 증시 11월19일 종가",
+          "url": "https://apnews.com/article/206c84045137824feabe052a29ff6140",
+          "checkedAt": "2026-11-20T06:14:42.132+09:00"
+        },
+        {
+          "name": "MarketWatch 미국 주요 지수 11월19일 마감",
+          "url": "https://www.marketwatch.com/livecoverage/stock-market-today-nasdaq-leads-dow-sp500-higher-on-anthropic-ai-optimism-walmart-earnings/card/dow-s-p-500-nasdaq-end-sharply-lower-after-anthropic-s-public-market-debut-NqpTMwtQZb9Zxc3cLBRQ",
+          "checkedAt": "2026-11-20T06:14:42.132+09:00"
+        },
+        {
+          "name": "KRX 2026년11월20일 거래일 확인",
+          "url": "https://marketsopen.today/krx/2026-11-20",
+          "checkedAt": "2026-11-20T06:14:42.132+09:00"
+        },
+        {
+          "name": "KRX 수능일 거래시간 변경",
+          "url": "https://www.yna.co.kr/amp/view/AKR20261105065500008",
+          "checkedAt": "2026-11-20T06:14:42.132+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      }
+    }
+  }
+}
