@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19T08:44:09+09:00",
+  "updatedAt": "2026-11-19T09:13:54+09:00",
   "days": [
     {
       "date": "2026-11-19",
@@ -318,6 +318,54 @@
           "usThemes": [],
           "researchStatus": "partial",
           "usThemeStatus": "not_applicable"
+        },
+        {
+          "slot": "15:40",
+          "asOf": "2026-11-18T15:40:00+09:00",
+          "foreignNews": [],
+          "domesticNews": [],
+          "usThemes": [],
+          "marketClose": {
+            "summary": "2026년 11월 18일 KRX 정규장 마감: 코스피 5,067.44(+1.99%), 코스닥 662.81(+1.96%). 두 시장 모두 상승했으며 코스피 오락·문화(+3.85%), 보험(+3.73%), 전기·전자(+2.95%)가 강세, 제약(-2.88%), 종이·목재(-2.43%)가 약세였다. 투자자 수급 및 전체 거래대금은 출처별 집계 차이로 기재하지 않는다. 15:30 종가의 사후 복구이며 15:40 뉴스 조사창을 새로 생성하지 않는다.",
+            "kospi": {
+              "close": 5067.44,
+              "changePct": 1.99
+            },
+            "kosdaq": {
+              "close": 662.81,
+              "changePct": 1.96
+            },
+            "leadingThemes": [
+              "오락·문화",
+              "보험",
+              "전기·전자"
+            ],
+            "weakThemes": [
+              "제약",
+              "종이·목재"
+            ],
+            "sources": [
+              {
+                "name": "MOAJOO KIS 일별지수 기준 2026-11-18",
+                "url": "https://moajoo.com/korea-market-20261118/"
+              },
+              {
+                "name": "네이버페이 증권 인용 마감 기록",
+                "url": "https://magambriefing.com/briefing/2026-11-18"
+              },
+              {
+                "name": "TITAN 2026-11-18 마감 시황",
+                "url": "https://titanplus.net/daily/2026-11-18"
+              }
+            ]
+          },
+          "researchStatus": "complete",
+          "recovery": {
+            "isRecovery": true,
+            "reason": "missing_market_close",
+            "originalSlot": "15:40",
+            "recoveredAt": "2026-11-19T09:13:54+09:00"
+          }
         },
         {
           "slot": "19:40",
