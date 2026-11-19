@@ -107,6 +107,123 @@
         "validation": "success",
         "publication": "success"
       }
+    },
+    "07:10": {
+      "date": "2026-11-20",
+      "slot": "07:10",
+      "scheduledFor": "2026-11-20T07:10:00+09:00",
+      "asOf": "2026-11-20T07:11:45+09:00",
+      "publishedAt": "2026-11-20T07:11:45+09:00",
+      "sessionStatus": "US REGULAR CLOSED (2026-11-19 16:00 EST); KR PRE (2026-11-20 09:00 KST scheduled)",
+      "scope": "US_KR",
+      "us": {
+        "summary": "미국 11월 19일 정규장 확정 종가: S&P500 7,175.83(-2.0%), Nasdaq Composite 23,879.20(-2.3%), Dow 49,097.06(-2.2%). AI 설비투자 수익성·기술주 고평가 우려로 광범위한 매도, S&P500 구성 종목 90% 이상 하락. Anthropic IPO 강세에도 반등 지속 실패. 엔비디아 약세 및 데이터센터 관련주 하락, 미 국채 수익률 하락 방향 보도. 10년물 금리·달러지수 정확한 값은 미확인.",
+        "observedAt": "2026-11-20T07:11:45+09:00",
+        "indices": [
+          {
+            "name": "S&P 500",
+            "value": 7175.83,
+            "changePct": -2,
+            "observedAt": "2026-11-20T06:00:00+09:00",
+            "sourceUrl": "https://apnews.com/article/2f178054aea79d282e5ccf8d62f26a28"
+          },
+          {
+            "name": "Nasdaq Composite",
+            "value": 23879.2,
+            "changePct": -2.3,
+            "observedAt": "2026-11-20T06:00:00+09:00",
+            "sourceUrl": "https://apnews.com/article/2f178054aea79d282e5ccf8d62f26a28"
+          },
+          {
+            "name": "Dow Jones Industrial Average",
+            "value": 49097.06,
+            "changePct": -2.2,
+            "observedAt": "2026-11-20T06:00:00+09:00",
+            "sourceUrl": "https://apnews.com/article/2f178054aea79d282e5ccf8d62f26a28"
+          }
+        ],
+        "themes": [
+          "AI·반도체 하락",
+          "미국 주식 전반 위험회피 확대",
+          "Anthropic 상장 첫날 강세와 광범위한 기술주 약세 병존"
+        ],
+        "notes": [
+          "11월19일 미국 정규장 마감 확정치, 등락률은 AP 보도 반올림",
+          "Reuters: S&P500 -2.03%, Nasdaq -2.23%, Dow -2.20%로 보도되어 매체별 반올림 차이 있음",
+          "VIX 28.44(+15.8%)는 WSJ 보도치, 독립 원천 교차확인 미완료",
+          "미 10년물 국채수익률·달러지수 종가 미확인(null), 선물/시간외 가격을 정규장 지수로 대체하지 않음"
+        ]
+      },
+      "kr": {
+        "summary": "한국 2026-11-20 07:10 정규장 개장 전. 11월19일은 수능일 10:00~16:30 거래, 11월20일 정규장 09:00 개장 예정. 전일 KOSPI·KOSDAQ 종가 및 수급에 대해 복수 2차 자료 수치가 상충하여 공식 확정치 확인 전까지 미확인 처리. 미국 11월19일 AI·반도체주 하락은 국내 관련 업종의 잠재 위험요인이나 한국 당일 시장 반응은 아직 관측되지 않음.",
+        "observedAt": "2026-11-20T07:11:45+09:00",
+        "indices": [
+          {
+            "name": "KOSPI (2026-11-19 종가)",
+            "value": null,
+            "changePct": null,
+            "observedAt": "2026-11-19T16:30:00+09:00",
+            "sourceUrl": "https://www.krx.co.kr/"
+          },
+          {
+            "name": "KOSDAQ (2026-11-19 종가)",
+            "value": null,
+            "changePct": null,
+            "observedAt": "2026-11-19T16:30:00+09:00",
+            "sourceUrl": "https://www.krx.co.kr/"
+          }
+        ],
+        "themes": [
+          "미국 AI·반도체 하락의 국내 반도체 관련주 영향 관찰 필요"
+        ],
+        "notes": [
+          "2026-11-19 한국 지수 2차 자료 불일치: 강남스탁 KOSPI 5,119.17·KOSDAQ 681.14 vs WAEDGE KOSPI 5,137.89·KOSDAQ 684.81. 확정값 채택 보류",
+          "전일 상승·하락종목 수, 외국인·기관·개인 수급 및 거래대금: 공식 원천 미검증",
+          "원/달러 환율·선물: 미확인. 2026-11-20 07:10 기준 당일 정규장 가격·수급 미발생"
+        ]
+      },
+      "highlights": [
+        "미국 11월19일 정규장: S&P500 7,175.83(-2.0%), Nasdaq 23,879.20(-2.3%), Dow 49,097.06(-2.2%)",
+        "S&P500 구성종목 90% 이상 하락; AI 투자수익성·밸류에이션 우려 지속",
+        "한국 11월20일 07:10은 장전; 전일 지수·수급 2차 자료 불일치로 null 유지"
+      ],
+      "sources": [
+        {
+          "name": "AP 2026-11-19 미국 3대 지수 종가",
+          "url": "https://apnews.com/article/2f178054aea79d282e5ccf8d62f26a28",
+          "checkedAt": "2026-11-20T07:11:45+09:00"
+        },
+        {
+          "name": "Reuters 2026-11-19 미국 AI 및 증시 마감",
+          "url": "https://www.reuters.com/business/nasdaq-futures-jump-anthropics-record-ipo-pricing-fuels-hopes-strong-debut-2026-11-19/",
+          "checkedAt": "2026-11-20T07:11:45+09:00"
+        },
+        {
+          "name": "WSJ 2026-11-19 VIX·기술주 동향",
+          "url": "https://www.wsj.com/finance/stocks/u-s-stocks-slide-as-ai-bust-continues-despite-anthropic-ipo-5a14e137",
+          "checkedAt": "2026-11-20T07:11:45+09:00"
+        },
+        {
+          "name": "KRX 공식 시장 정보",
+          "url": "https://www.krx.co.kr/",
+          "checkedAt": "2026-11-20T07:11:45+09:00"
+        },
+        {
+          "name": "한국 11월19일 종가 2차 자료 A (상충)",
+          "url": "https://gangnamstock.com/ko/briefing/kr-close/2026-11-19",
+          "checkedAt": "2026-11-20T07:11:45+09:00"
+        },
+        {
+          "name": "한국 11월19일 종가 2차 자료 B (상충)",
+          "url": "https://news.waedge.ai/brief/kr.html",
+          "checkedAt": "2026-11-20T07:11:45+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      }
     }
   }
 }
