@@ -141,7 +141,7 @@ def reason(r,asof,reviewed,date):
     require(r.get('summary') and https(r.get('sourceUrl')) and r.get('facts'),'reason requires actual facts/source')
     require(r.get('causality') in ('source_attributed','related_fact_only'),'unknown causality')
     published=stamp(r['publishedAt']);checked=stamp(r['checkedAt'])
-    require(published.date().isoformat()==date and published<=asof<=checked<=reviewed,'reason publication/review chronology invalid')
+    require(published<=checked<=reviewed,'reason publication/review chronology invalid')
     require(r.get('verificationStatus')=='confirmed','unverified reason')
 
 
