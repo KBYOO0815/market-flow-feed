@@ -6,22 +6,22 @@
 
 - **정규 발행:** ChatGPT 예약 `Automation_19be7cd0af808191aecbcc421c15a01c` → JSON 생성 → GitHub 공개 저장소 `KBYOO0815/market-flow-feed`에 직접 발행 → 앱 조회.
 - **독립 감시:** `6afafb9de2288191a51add93c667ed60`은 발행·품질 이상을 점검하며 정규 발행을 중복하지 않는다.
-- **예약 시간:** Asia/Seoul, KRX 거래일 09:40·11:40·13:40·15:40·20:10. 휴장일에는 신규 발행하지 않는다.
+- **예약 시간:** Asia/Seoul, KRX 주식시장 거래일 08:40·09:40·11:40·13:40·15:40·20:10. 해당 세션이 실제로 운영되지 않거나 유효한 체결가격을 확인하지 못하면 그 회차는 미발행한다. 20:10은 애프터마켓(통상 20:00 종료) 최종 유효 체결가를 사후 확정·발행하는 회차다. 수능일 등 특별 거래시간은 공식 공지에 따라 판정한다.
 - 뉴스 브리핑 `market-briefing.json` 및 기존 앱·브리핑 예약 작업은 이 데이터 계약의 변경 대상이 아니다. 퇴역한 GitHub Actions·서버 스크립트는 특징주 정규 발행에 사용하지 않는다.
 
 ## 시세·선정 데이터 규격
 
-- `schemaVersion: 3`, `turnoverBasis: "KRX_NXT"`, `universeSize: 100`, `amountUnit: "KRW"`, `rateBasis: "KRX_PREVIOUS_CLOSE"`.
+- 기본 계약은 `schemaVersion: 3`, `turnoverBasis: "KRX_NXT"`, `universeSize: 100`, `amountUnit: "KRW"`, `rateBasis: "KRX_PREVIOUS_CLOSE"`다. `rateBasis`는 **분모가 KRX 전 거래일 정규장 종가**라는 뜻으로, 분자의 실제 거래시장·세션은 별도 `priceMarket`·`priceSession`으로 증명한다. 단, 현행 앱의 검증기는 실제로 `rateMarket:"KRX"`만 허용하므로 신규 NXT 프리·애프터 가격을 거짓으로 KRX라 적어 호환시켜서는 안 된다.
 - 대상은 KOSPI·KOSDAQ의 개별기업 보통주/우선주이며 ETF·ETN·SPAC·리츠·펀드·채권 등은 제외한다.
 - KRX 거래대금 상위 100과 NXT 거래대금 상위 100의 종목코드 합집합에서 **같은 거래일의 KRX+NXT 누적 거래대금**으로 진짜 통합 Top100을 산정한다. 원천 미조회·404를 0원으로 간주하지 않는다.
 - 통합 Top100 완전성은 KRX 100위 `K100`, NXT 100위 `N100`, 후보 통합 100위 `T100`에 대해 **`T100 > K100 + N100`** 및 원천 완전성을 검증하거나 동등한 근거를 `rankingProof`에 기록한다. 검증 불가 시 정상 발행하지 않는다.
-- **등락률은 KRX 전일 정규장 종가 대비 KRX 가격**으로 계산한다: `changeRate = (price / previousRegularClose - 1) * 100`. 20:10 회차에서도 등락률 산정 가격은 당일 **KRX 정규장 종가**이며, NXT 장후 가격과 혼합하지 않는다. NXT 거래대금은 당일 장후 최종 누적값을 반영한다. 가격과 시세 원천의 날짜·시장·기준을 검증한다.
-- **20:10 종가 일치 사전 검증:** 동일 거래일 15:40·20:10 회차의 공통 종목은 `price`(당일 KRX 정규장 종가)와 `previousRegularClose`가 동일해야 한다. 20:10에 신규 진입한 종목은 KRX 정규장 종가를 별도 확인한다. 불일치는 원천을 재조회해 해소하며, 15:40 회차에 오류가 있을 가능성도 검토한다. 검증 실패 시 20:10 정상 발행을 보류한다. **발행 후** `scripts/check_featured_close.py`와 `validate-featured-close.yml`이 이 수치 일관성을 재검사한다. 이 GitHub 검사는 읽기 전용 경보로서 ChatGPT의 직접 커밋을 사전에 막거나 뉴스·테마를 재판정하지 않는다.
+- **회차별 상승률:** `changeRate = (price / previousRegularClose - 1) * 100`에서 분모는 언제나 KRX 전 거래일 정규장 종가다. 분자는 08:40=NXT 프리마켓, 09:40·11:40·13:40=KRX 정규장, 15:40=KRX 정규장 당일 종가(특별 거래시간으로 아직 장중이면 당시 정규장 체결가), 20:10=당일 애프터마켓(KRX·NXT)의 시장·시각이 검증된 최종 유효 체결가를 사용한다. 20:10 시각에 거래 중이었다고 표시하지 않는다. 전일 기준가·분자 가격·체결시장·세션·시각·거래일·거래대금 원천을 확인한다.
+- **세션 간 가격 검증:** 같은 거래일 15:40·20:10 회차의 당일 `price`는 달라도 정상이다(정규장·애프터마켓 별도 거래). 공통 종목의 `previousRegularClose`는 같아야 한다. 각 종목의 상승률 산식을 검증하고, 프리·애프터마켓 종목은 실제 가격 출처(`priceMarket`, `priceSession`, `priceObservedAt`, 원천 URL)를 남긴다. 구형 `scripts/check_featured_close.py`의 '20:10=15:40 가격 일치' 검사는 변경된 기준에 맞춰 갱신한다. GitHub Actions 검사는 **발행 후 읽기 전용**이며 직접 커밋을 차단하거나 상승 이유를 재판정하지 않는다.
 - 통합 Top100 중 비교 가능한 `changeRate >= 4.00` 종목을 **모두** `selectedStockCodes`에 담는다. 기준가격이 없으면 임의 역산하지 않고 비교 불가를 명시한다. 테마는 최소 2종목이고 개별 종목과 중복되지 않는다. 테마 가중 등락률은 포함된 선정 종목의 통합 거래대금 가중평균이다.
 
 ## 앱 호환 JSON 계약
 
-기존 앱 `KBYOO0815/market-flow-app/src/featuredStocks.ts`의 `validateV3`와 화면의 현행 호환성을 유지한다.
+기존 앱 `KBYOO0815/market-flow-app/src/featuredStocks.ts`의 `validateV3` 및 화면을 변경하지 않는다는 제약이 있다. 현재 앱은 **08:40을 허용하지 않고, 모든 종목에 `rateMarket:"KRX"`를 요구**한다. 따라서 앱이 지원하기 전에는 `08:40` 회차나 NXT 가격을 사용하는 회차를 날짜별 JSON에 추가하면 **전체 날짜 데이터가 거부될 수 있다**. 프리·애프터마켓 가격을 KRX로 허위 표기하지 않는다. 발행 전 앱 호환성을 확인하고 미호환이면 해당 회차를 발행 보류·명시 보고한다. 앱 업데이트가 승인되면 `08:40`과 `priceMarket`·`priceSession`을 검증하도록 앱 데이터 어댑터를 개편해야 정상 서비스가 가능하다.
 
 | 공개 경로 | 계약 |
 |---|---|
@@ -31,7 +31,7 @@
 
 - **보관:** 서버는 D~D-3의 4개 *달력 날짜*만 유지하고, 앱에는 D·D-1을 표시한다. 없는 회차·날짜를 성공 데이터로 생성하지 않는다.
 - **edition 필수 키:** `schemaVersion,date,slot,releaseAt,asOf,collectionStartedAt,reviewedAt,publishedAt,turnoverBasis,universeSize,amountUnit,rateBasis,tradingDayEvidence,status,stocks,selectedStockCodes,themes,individualStocks,rankingProof`. 시각은 실제 ISO8601/KST offset을 사용한다. `releaseAt`은 원래 예정 회차시각이다.
-- **`stocks`:** 통합 거래대금 내림차순·동률 코드순 정확히 100개. 각 종목에 `code,name,turnoverRank,krxTradeAmount,nxtTradeAmount,integratedTradeAmount,changeRate,rateMarket,price,previousRegularClose,comparison` 기록. 금액은 원 단위 정수, `rateMarket:"KRX"`; 비교불가 사유는 `comparison`에 명시한다.
+- **`stocks`:** 통합 거래대금 내림차순·동률 코드순 최대 100개를 실제 원천으로 검증한다(현행 앱은 정확히 100개 요구). 각 종목에 `code,name,turnoverRank,krxTradeAmount,nxtTradeAmount,integratedTradeAmount,changeRate,rateMarket,price,previousRegularClose,comparison`을 기록한다. 가격 출처가 KRX 아닌 경우 실제 시장을 `rateMarket`·`priceMarket`에 정확히 적고, `priceSession`, `priceObservedAt`과 근거 출처도 기록한다. **앱이 수용할 수 없는 상태거나 실제 거래 종목이 100개 미만이면 완전한 Top100을 꾸며내지 않고 발행 보류한다.** 금액은 원 단위 정수이며 비교불가 사유는 `comparison`에 명시한다.
 - **분류:** `selectedStockCodes`의 모든 종목은 `themes[]` 또는 `individualStocks[]`에 정확히 한 번만 들어간다. `themes[]` 원소는 `id,name,stockCodes,weightedChangeRate,integratedTradeAmount,reason`, `individualStocks[]` 원소는 `code,reason`을 사용한다.
 - **`reason`:** 실제 관련 자료를 확인하면 `summary,sourceUrl,publishedAt,checkedAt,causality,verificationStatus,facts`를 기록한다. `sourceUrl`은 실제 HTTPS 근거, `causality`는 `source_attributed`(원인 직접 언급) 또는 `related_fact_only`(관련 사실을 바탕으로 한 **상승 배경 추정 포함**)를 사용한다. `verificationStatus:"confirmed"`는 **출처·사실의 확인**을 뜻하며 추정한 인과관계가 증명됐다는 뜻은 아니다. 추정은 `summary`에 추정·가능성으로 구별한다. `publishedAt <= asOf <= checkedAt <= reviewedAt`을 지킨다. 확인 가능한 사실에 근거한 합리적인 시장 해석을 배제하지 않으며, 출처·기초 사실조차 확보할 수 없으면 `reason:null`을 사용한다.
 - **보조 메타:** `reasonResearchAudit` 등은 예약 작업이 실제 수행한 확인 사항을 기록하는 추가 필드이며 앱 필수 계약을 변경하지 않는다. 이 문서는 **감사 로그 개수·뉴스 검색 방법을 강제하지 않는다**.
