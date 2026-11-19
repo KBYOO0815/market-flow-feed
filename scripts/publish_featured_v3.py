@@ -24,7 +24,7 @@ def publication_view(payload):
 
 
 def merge(payload,days,today):
-    cutoff=(today-dt.timedelta(days=3)).isoformat();upper=today.isoformat()
+    cutoff=(today-dt.timedelta(days=1)).isoformat();upper=today.isoformat()
     retained={d:copy.deepcopy(v) for d,v in days.items() if cutoff<=d<=upper}
     day=retained.setdefault(payload['date'],{'date':payload['date'],'editions':{}})
     old=day['editions'].get(payload['slot'])
@@ -51,7 +51,7 @@ def publish(payload,api,read,clock=lambda:dt.datetime.now(KST)):
         days={}
         for path in paths:days[path[-15:-5]]=read(path,head)[0]
         root,retained=merge(final,days,now.date())
-        index={'schemaVersion':3,'appVisibleCalendarDays':4,'releaseAt':root['releaseAt'],'asOf':root['asOf'],
+        index={'schemaVersion':3,'appVisibleCalendarDays':2,'releaseAt':root['releaseAt'],'asOf':root['asOf'],
             'dates':[{'date':d,'path':'featured-stocks/'+d+'.json'} for d in sorted(retained,reverse=True)]}
         contents={'featured-stocks.json':root,'featured-stocks/index.json':index,**{'featured-stocks/'+d+'.json':day for d,day in retained.items()}}
         if proof_path:contents[proof_path]=proof_body

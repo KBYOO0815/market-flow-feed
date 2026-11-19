@@ -29,7 +29,7 @@
 | `featured-stocks/YYYY-MM-DD.json` | `{"date":"YYYY-MM-DD","editions":{"09:40":{...}, "11:40":{...}}}`처럼 실제 발행된 회차만 포함 |
 | `featured-stocks/index.json` | `schemaVersion:3` 및 최신순 `dates:[{date,path}]` 등 앱 조회에 필요한 목록 |
 
-- **보관:** 서버는 D~D-3의 4개 *달력 날짜*만 유지하고, 앱에는 D·D-1을 표시한다. 없는 회차·날짜를 성공 데이터로 생성하지 않는다.
+- **보관:** 서버는 D-day와 D-1의 2개 *한국 달력 날짜*만 유지하고, 앱에도 같은 2일을 표시한다. 없는 회차·날짜를 성공 데이터로 생성하지 않는다.
 - **edition 필수 키:** `schemaVersion,date,slot,releaseAt,asOf,collectionStartedAt,reviewedAt,publishedAt,turnoverBasis,universeSize,amountUnit,rateBasis,tradingDayEvidence,status,stocks,selectedStockCodes,themes,individualStocks,rankingProof`. 시각은 실제 ISO8601/KST offset을 사용한다. `releaseAt`은 원래 예정 회차시각이다.
 - **`stocks`:** 통합 거래대금 내림차순·동률 코드순 최대 100개를 실제 원천으로 검증한다(현행 앱은 정확히 100개 요구). 각 종목에 `code,name,turnoverRank,krxTradeAmount,nxtTradeAmount,integratedTradeAmount,changeRate,rateMarket,price,previousRegularClose,comparison`을 기록한다. 가격 출처가 KRX 아닌 경우 실제 시장을 `rateMarket`·`priceMarket`에 정확히 적고, `priceSession`, `priceObservedAt`과 근거 출처도 기록한다. **앱이 수용할 수 없는 상태거나 실제 거래 종목이 100개 미만이면 완전한 Top100을 꾸며내지 않고 발행 보류한다.** 금액은 원 단위 정수이며 비교불가 사유는 `comparison`에 명시한다.
 - **분류:** `selectedStockCodes`의 모든 종목은 `themes[]` 또는 `individualStocks[]`에 정확히 한 번만 들어간다. `themes[]` 원소는 `id,name,stockCodes,weightedChangeRate,integratedTradeAmount,reason`, `individualStocks[]` 원소는 `code,reason`을 사용한다.
@@ -42,7 +42,7 @@
 1. 정규 예약 작업은 시세·분석·앱 v3 형식 검증을 완료한 **최종 JSON만 한 회차에 한 번** 발행한다. 분석을 위한 중간 임시 JSON 선발행은 하지 않는다.
 2. GitHub `main` 최신 HEAD의 root·날짜별·index·보관 파일을 읽고 동일 날짜의 다른 회차와 이전 성공 데이터를 보존·병합한다. 기존 정상 회차를 오래된 값으로 덮어쓰지 않는다.
 3. 가능하면 Git Tree/Commit 및 비강제 HEAD 이동을 이용해 root·날짜별·index·FIFO 삭제를 **하나의 원자적 커밋**에 반영한다. 충돌 시 최신 HEAD 재조회·안전 재병합 후 제한 재시도한다. 독립 파일 수정 3회를 단일 원자 발행이라 주장하지 않는다.
-4. **원격 재조회 검증:** 저장 커밋 기준 root·날짜별·index와 D~D-3 보관/삭제 내역이 일치한 뒤에만 발행 성공으로 보고한다. 실패 시 기존 정상 JSON을 보존하고 오류를 명시한다.
+4. **원격 재조회 검증:** 저장 커밋 기준 root·날짜별·index와 D-day·D-1 보관/삭제 내역이 일치한 뒤에만 발행 성공으로 보고한다. 실패 시 기존 정상 JSON을 보존하고 오류를 명시한다.
 5. 앱이 실제 조회하는 공개 날짜별 JSON을 우선한다. 비공개 앱 저장소의 미러 파일은 선택 사항이며 갱신하지 않았다면 동기화했다고 보고하지 않는다.
 
 ---

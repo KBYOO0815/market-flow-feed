@@ -103,7 +103,7 @@ def validate(body, today=None):
     for day in body["days"]:
         require(isinstance(day, dict), "day object required")
         date = dt.date.fromisoformat(day["date"])
-        require(today - dt.timedelta(days=3) <= date <= today, "outside FIFO range")
+        require(today - dt.timedelta(days=1) <= date <= today, "outside FIFO range")
         require(date not in seen_dates, "duplicate date"); seen_dates.add(date)
         require(type(day.get("isKrxTradingDay")) is bool, "trading flag")
         seen_slots = set()
@@ -120,7 +120,7 @@ def merge(current, draft, today=None):
     validate_session(draft.get("session"), draft["date"], draft["isKrxTradingDay"])
     result = copy.deepcopy(current)
     result.pop("researchState", None)
-    result["days"] = [d for d in result.get("days", []) if today-dt.timedelta(days=3) <= dt.date.fromisoformat(d["date"]) <= today]
+    result["days"] = [d for d in result.get("days", []) if today-dt.timedelta(days=1) <= dt.date.fromisoformat(d["date"]) <= today]
     day = next((d for d in result["days"] if d["date"] == draft["date"]), None)
     if day is None:
         day = {"date": draft["date"], "isKrxTradingDay": draft["isKrxTradingDay"], "sessions": []}

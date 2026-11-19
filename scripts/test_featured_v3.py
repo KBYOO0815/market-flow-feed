@@ -83,10 +83,10 @@ class Contract(unittest.TestCase):
             p=fixture(slot);root,days=merge(p,days,dt.date(2026,11,16))
         self.assertEqual(len(days['2026-11-16']['editions']),5)
         root,days=merge(fixture(),days,dt.date(2026,11,16));self.assertEqual(len(days['2026-11-16']['editions']),5);self.assertEqual(root['slot'],'20:10')
-    def test_calendar_four_days(self):
+    def test_calendar_two_days(self):
         days={d:{'date':d,'editions':{'13:40':fixture(date=d)}} for d in ['2026-11-12','2026-11-13','2026-11-14','2026-11-15']}
         root,retained=merge(fixture(),days,dt.date(2026,11,16))
-        self.assertEqual(list(d['date'] for d in root['days']),['2026-11-16','2026-11-15','2026-11-14','2026-11-13'])
+        self.assertEqual(list(d['date'] for d in root['days']),['2026-11-16','2026-11-15'])
     def test_new_listing_unusable_base(self):
         p=fixture();r=p['rankingProof']['allMarketRows'][0];r['quotes']['KRX']['previousRegularClose']=None
         with self.assertRaises(Exception):validate(p)
@@ -136,7 +136,7 @@ class ProductionGuards(unittest.TestCase):
         self.assertEqual(result['state'],'skipped_non_trading_day');collect.assert_not_called();save.assert_called_once()
     def test_index_four_day_validation(self):
         from featured_watch import index_matches
-        p=fixture();index={'schemaVersion':3,'appVisibleCalendarDays':4,'releaseAt':p['releaseAt'],'asOf':p['asOf'],'dates':[{'date':'2026-11-16','path':'featured-stocks/2026-11-16.json'}]}
+        p=fixture();index={'schemaVersion':3,'appVisibleCalendarDays':2,'releaseAt':p['releaseAt'],'asOf':p['asOf'],'dates':[{'date':'2026-11-16','path':'featured-stocks/2026-11-16.json'}]}
         self.assertTrue(index_matches(index,p));index['dates'][0]['path']='market-briefing.json';self.assertFalse(index_matches(index,p))
 
 class CalculationAndReason(unittest.TestCase):
