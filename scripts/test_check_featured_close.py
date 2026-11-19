@@ -71,6 +71,7 @@ class FeaturedCloseTest(unittest.TestCase):
 
     def test_historical_legacy_session_metadata_not_required(self):
         data = sample(date="2026-11-18")
+        del data["editions"]["15:40"]["priceSession"]
         del data["editions"]["20:10"]["priceSession"]
         self.assertEqual(validate(data), [])
 
