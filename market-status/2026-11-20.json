@@ -760,6 +760,79 @@
         "validation": "success",
         "publication": "success"
       }
+    },
+    "19:10": {
+      "date": "2026-11-20",
+      "slot": "19:10",
+      "scheduledFor": "2026-11-20T19:10:00+09:00",
+      "asOf": "2026-11-20T10:08:25.581Z",
+      "publishedAt": "2026-11-20T10:08:25.581Z",
+      "sessionStatus": "KR REGULAR CLOSED (2026-11-20 15:30 KST); NXT AFTER session prices not verified; pre-scheduled observation 19:08 KST",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "한국 정규장 마감은 KOSPI 4,869.96(-5.21%), KOSDAQ 645.68(-5.71%). 외국인·기관 순매도, 개인 순매수. 반도체·AI 대형주 및 기계장비 중심 약세, 양 시장 매도 사이드카. 18:10 대비 확인된 정규장 가격 변화 없음. 19:10 시각 NXT 시간외 가격은 미확인. 언론별 투자자별 잠정 순매수액이 달라 정확한 금액 확정 보류. 미국 기술주 약세 및 AI 반도체 규제 우려가 주된 배경. 다음 거래일 외국인 수급·반도체 가격·원달러 환율 주시.",
+        "observedAt": "2026-11-20T10:08:25.581Z",
+        "indices": [
+          {
+            "name": "KOSPI (2026-11-20 정규장 종가)",
+            "value": 4869.96,
+            "changePct": -5.21,
+            "observedAt": "2026-11-20T15:30:00+09:00",
+            "sourceUrl": "https://www.fnnews.com/news/202611201539202291"
+          },
+          {
+            "name": "KOSDAQ (2026-11-20 정규장 종가)",
+            "value": 645.68,
+            "changePct": -5.71,
+            "observedAt": "2026-11-20T15:30:00+09:00",
+            "sourceUrl": "https://www.fnnews.com/news/202611201539202291"
+          }
+        ],
+        "themes": [
+          "AI·반도체 및 기계장비 약세",
+          "삼성전자 183,100원(-7.01%), SK하이닉스 1,113,000원(-5.92%): 정규장 마감",
+          "외국인·기관 매도 우위, 개인 매수 우위"
+        ],
+        "notes": [
+          "18:10 회차와 동일한 15:30 확정 정규장 지수; 새로운 정규장 변화 없음",
+          "투자자별 잠정 순매수 금액은 언론사별 불일치로 미확정",
+          "원/달러 1,336.2원(+6.2원)은 15:30 주간 마감, 19:10 현재 환율 아님",
+          "NXT 시간외 실시간 시세 미검증"
+        ]
+      },
+      "highlights": [
+        "KOSPI 4,869.96(-5.21%), KOSDAQ 645.68(-5.71%) 정규장 마감",
+        "외국인·기관 매도, 개인 매수; 반도체·AI 약세와 매도 사이드카",
+        "18:10 대비 새로 확인된 정규장 변화 없음; NXT 시간외 미확인"
+      ],
+      "sources": [
+        {
+          "name": "뉴스1 15:38 정규장 마감",
+          "url": "https://www.fnnews.com/news/202611201539202291",
+          "checkedAt": "2026-11-20T10:08:25.581Z"
+        },
+        {
+          "name": "아시아경제 15:59 정규장 마감 및 수급",
+          "url": "https://view.asiae.co.kr/article/2026112015594961221",
+          "checkedAt": "2026-11-20T10:08:25.581Z"
+        },
+        {
+          "name": "한국경제 16:02 수급 및 사이드카",
+          "url": "https://www.hankyung.com/article/202611200429i",
+          "checkedAt": "2026-11-20T10:08:25.581Z"
+        },
+        {
+          "name": "시사저널e 16:47 종가·대표주",
+          "url": "https://www.sisajournal-e.com/news/articleView.html?idxno=425214",
+          "checkedAt": "2026-11-20T10:08:25.581Z"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      }
     }
   }
 }
