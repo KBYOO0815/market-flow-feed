@@ -7,7 +7,7 @@ import argparse, copy, datetime as dt, json, math
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
-SLOTS = ("06:40", "08:40", "12:40", "15:40", "19:40")
+SLOTS = ("06:40", "07:40", "08:40", "09:40", "10:40", "11:40", "12:40", "13:40", "14:40", "15:40", "16:40", "17:40", "18:40", "19:40", "22:40")
 KST = ZoneInfo("Asia/Seoul")
 
 def require(ok, message):
@@ -57,7 +57,7 @@ def validate_market_close(value):
 def validate_session(session, date, trading):
     require(isinstance(session, dict), "session object required")
     require(session.get("slot") in SLOTS, "invalid slot")
-    require(trading or session["slot"] in ("06:40", "19:40"), "closed-day slot")
+    require(trading or session["slot"] in ("06:40", "22:40"), "closed-day slot")
     cutoff = timestamp(session.get("asOf"))
     require(cutoff.astimezone(KST).date() == dt.date.fromisoformat(date), "asOf date mismatch")
     require(cutoff <= dt.datetime.now(KST), "future asOf")
@@ -82,12 +82,13 @@ def validate_session(session, date, trading):
     for theme in themes: validate_theme(theme)
 
     close = session.get("marketClose")
-    if session["slot"] == "15:40":
-        require(trading, "marketClose on closed day")
-        require(not session["foreignNews"] and not session["domesticNews"] and not themes, "15:40 must be marketClose only")
+    # News editions are general-news sessions at every configured slot.
+    # Keep legacy 15:40 marketClose readable when present, but never require it
+    # and never force 15:40 news arrays to be empty. Market-status is the
+    # authoritative market-close feed.
+    if close is not None:
+        require(session["slot"] == "15:40" and trading, "marketClose outside trading-day 15:40")
         validate_market_close(close)
-    else:
-        require(close is None, "marketClose outside 15:40")
 
     if session.get("researchStatus") is not None:
         require(session["researchStatus"] in ("complete", "partial", "failed"), "invalid researchStatus")
