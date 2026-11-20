@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "feed": "market-status",
+  "date": "2026-11-20",
+  "slot": "10:10",
+  "scheduledFor": "2026-11-20T10:10:00+09:00",
+  "startedAt": "2026-11-20T10:12:33+09:00",
+  "finishedAt": "2026-11-20T10:13:20.617+09:00",
+  "status": "published",
+  "failedStep": null,
+  "errorCode": null,
+  "errorMessage": null,
+  "steps": [
+    {
+      "name": "run_start",
+      "status": "success",
+      "startedAt": "2026-11-20T10:12:33+09:00",
+      "finishedAt": "2026-11-20T10:13:09.637+09:00"
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-20T10:12:33+09:00",
+      "finishedAt": "2026-11-20T10:13:09.637+09:00"
+    },
+    {
+      "name": "kr_market_collection",
+      "status": "success",
+      "startedAt": "2026-11-20T10:12:33+09:00",
+      "finishedAt": "2026-11-20T10:13:09.637+09:00"
+    },
+    {
+      "name": "source_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T10:12:33+09:00",
+      "finishedAt": "2026-11-20T10:13:09.637+09:00"
+    },
+    {
+      "name": "analysis",
+      "status": "success",
+      "startedAt": "2026-11-20T10:12:33+09:00",
+      "finishedAt": "2026-11-20T10:13:09.637+09:00"
+    },
+    {
+      "name": "payload_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T10:13:09.637+09:00",
+      "finishedAt": "2026-11-20T10:13:20.617+09:00"
+    },
+    {
+      "name": "github_publish",
+      "status": "success",
+      "startedAt": "2026-11-20T10:13:09.637+09:00",
+      "finishedAt": "2026-11-20T10:13:20.617+09:00"
+    },
+    {
+      "name": "remote_readback",
+      "status": "success",
+      "startedAt": "2026-11-20T10:13:09.637+09:00",
+      "finishedAt": "2026-11-20T10:13:20.617+09:00"
+    }
+  ],
+  "collection": "partial",
+  "publication": {
+    "attempted": true,
+    "success": true,
+    "commitSha": "9cdffed0538bb5e83cb732240ba1f472008ac2ab",
+    "paths": [
+      "market-status/2026-11-20.json",
+      "market-status/index.json"
+    ],
+    "readbackVerified": true
+  }
+}
