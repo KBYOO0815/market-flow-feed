@@ -56,7 +56,8 @@ def validate(day):
         rows_for_metadata = edition.get("stocks") if isinstance(edition.get("stocks"), list) else []
         row_metadata_present = any(isinstance(row, dict) and ("priceMarket" in row or "priceObservedAt" in row)
                                    for row in rows_for_metadata)
-        require_metadata = (slot == "20:10" and isinstance(date, str) and date >= "2026-11-20") or row_metadata_present
+        migrated = isinstance(date, str) and date >= "2026-11-20"
+        require_metadata = migrated and (slot == "20:10" or row_metadata_present)
         if edition.get("date") != date:
             problems.append("{} edition date differs".format(slot))
         if edition.get("rateBasis") != "KRX_PREVIOUS_CLOSE":
