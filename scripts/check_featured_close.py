@@ -53,7 +53,7 @@ def validate(day):
             continue
         # Do not retroactively fail pre-migration editions that were already published
         # without session-source metadata. 20:10 AFTER is the new strict contract.
-        require_metadata = slot == "20:10" or ("priceSession" in edition)
+        require_metadata = (slot == "20:10" and isinstance(date, str) and date >= "2026-11-20") or ("priceSession" in edition)
         if edition.get("date") != date:
             problems.append("{} edition date differs".format(slot))
         if edition.get("rateBasis") != "KRX_PREVIOUS_CLOSE":
