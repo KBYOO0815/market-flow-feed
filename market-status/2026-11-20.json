@@ -1595,10 +1595,10 @@
         "publication": "success"
       },
       "display": {
-        "headline": "정규장 KOSPI 4,869.96(-5.21%), KOSDAQ 645.68(-5.71%)",
+        "headline": "한국 정규장 급락 마감 · KOSPI -5.21%",
         "badges": [
           "한국",
-          "애프터마켓",
+          "장후",
           "일부 확인"
         ],
         "observedAt": "2026-11-20T20:15:00+09:00",
@@ -1612,13 +1612,13 @@
                 "label": "KOSPI",
                 "value": 4869.96,
                 "changePct": -5.21,
-                "note": "15:30 기준"
+                "note": "15:30 정규장 종가"
               },
               {
                 "label": "KOSDAQ",
                 "value": 645.68,
                 "changePct": -5.71,
-                "note": "15:30 기준"
+                "note": "15:30 정규장 종가"
               }
             ]
           },
@@ -1636,8 +1636,8 @@
             "title": "핵심 포인트",
             "kind": "bullets",
             "items": [
-              "외국인·기관 순매도, 개인 순매수; 반도체 약세",
-              "19:10 대비 새로 확인된 정규장 변화 없음; 시간외 시세 미확인"
+              "KOSDAQ -5.71% 마감",
+              "정규장 이후 새로 확인된 지수 변화 없음"
             ]
           },
           {
@@ -1645,9 +1645,8 @@
             "title": "주의·확인",
             "kind": "bullets",
             "items": [
-              "19:10 대비 신규 확인된 정규장 변화 없음",
               "NXT 시간외 가격 미확인",
-              "수급 잠정 금액 매체별 불일치로 미확정"
+              "투자자 수급 잠정 금액은 매체별 차이로 미확정"
             ]
           }
         ]
@@ -1729,7 +1728,7 @@
         "publication": "success"
       },
       "display": {
-        "headline": "미국 정규장 개장 전, Nasdaq100 선물 -1.64%(Reuters 보도 기준)",
+        "headline": "미국 프리마켓 약세 · Nasdaq100 선물 -1.64%",
         "badges": [
           "미국",
           "프리마켓",
@@ -1746,19 +1745,19 @@
                 "label": "S&P 500",
                 "value": 7175.83,
                 "changePct": -2,
-                "note": "06:00 기준"
+                "note": "11/19 정규장 종가"
               },
               {
                 "label": "NASDAQ",
                 "value": 23879.2,
                 "changePct": -2.3,
-                "note": "06:00 기준"
+                "note": "11/19 정규장 종가"
               },
               {
                 "label": "Dow",
                 "value": 49097.06,
                 "changePct": -2.2,
-                "note": "06:00 기준"
+                "note": "11/19 정규장 종가"
               }
             ]
           },
@@ -1777,8 +1776,8 @@
             "title": "핵심 포인트",
             "kind": "bullets",
             "items": [
-              "Anthropic 프리마켓 -7.4%; 반도체·AI 업종 매도 압력",
-              "미국 11월20일 현물 지수 미발생, 11월19일 종가와 선물 분리"
+              "Anthropic 프리마켓 -7.4%",
+              "AI·반도체 중심으로 매도 압력 확대"
             ]
           },
           {
@@ -1786,9 +1785,8 @@
             "title": "주의·확인",
             "kind": "bullets",
             "items": [
-              "Reuters 11월20일 프리마켓 보도: Nasdaq100 선물 -1.64%; 정규장 Nasdaq Composite 지수와 다름",
-              "Reuters 프리마켓 Anthropic -7.4%; 정규장 종가와 다름",
-              "07:13 EST 보도: AMD -7%, TSMC -4.2%, Micron -4.8%, Intel -5.3%, Nvidia -2.4% (오래된 관측)"
+              "미국 정규장 개장 전 수치로 11월20일 현물 지수는 아직 미발생",
+              "AMD·TSMC·Micron·Intel·Nvidia 등 개별 등락은 07:13 EST 기사 관측"
             ]
           }
         ]
