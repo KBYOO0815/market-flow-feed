@@ -7,6 +7,9 @@ on:
       - 'featured-stocks/*.json'
       - 'scripts/check_featured_close.py'
       - 'scripts/test_check_featured_close.py'
+      - 'scripts/featured_v3.py'
+      - 'scripts/featured_naver_v3.py'
+      - 'scripts/test_featured_v3_after.py'
       - '.github/workflows/validate-featured-close.yml'
   pull_request:
     paths:
@@ -14,6 +17,9 @@ on:
       - 'featured-stocks/*.json'
       - 'scripts/check_featured_close.py'
       - 'scripts/test_check_featured_close.py'
+      - 'scripts/featured_v3.py'
+      - 'scripts/featured_naver_v3.py'
+      - 'scripts/test_featured_v3_after.py'
       - '.github/workflows/validate-featured-close.yml'
   workflow_dispatch:
 
@@ -26,6 +32,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run session-source validation tests
-        run: python3 -m unittest discover -s scripts -p 'test_check_featured_close.py'
+        run: |
+          python3 -m unittest discover -s scripts -p 'test_check_featured_close.py'
+          python3 -m unittest discover -s scripts -p 'test_featured_v3_after.py'
       - name: Check published session prices and previous-close denominators
         run: python3 scripts/check_featured_close.py
