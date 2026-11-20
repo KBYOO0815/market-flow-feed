@@ -5,11 +5,11 @@
   "slot": "20:10",
   "scheduledFor": "2026-11-20T20:10:00+09:00",
   "startedAt": "2026-11-20T20:13:19+09:00",
-  "updatedAt": "2026-11-20T20:14:00+09:00",
+  "updatedAt": "2026-11-20T20:15:00+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "collection",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "analysis",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -30,6 +30,12 @@
       "status": "success",
       "finishedAt": "2026-11-20T20:14:00+09:00",
       "detail": "2026-11-20 KRX regular trading day; 20:10 KR scope; regular close 15:30; policy and index read"
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T20:15:00+09:00",
+      "detail": "Confirmed KOSPI 4869.96 -5.21%, KOSDAQ 645.68 -5.71% 15:30 KST; source reports disagree on investor net amounts; NXT unverified; 3 news sources"
     }
   ]
 }
