@@ -368,6 +368,82 @@
         "validation": "success",
         "publication": "success"
       }
+    },
+    "11:10": {
+      "date": "2026-11-20",
+      "slot": "11:10",
+      "scheduledFor": "2026-11-20T11:10:00+09:00",
+      "asOf": "2026-11-20T11:10:17.621+09:00",
+      "publishedAt": "2026-11-20T11:10:17.621+09:00",
+      "sessionStatus": "KRX REGULAR (11:10 장중, 최근 확인 가능 지표 10:40 보도 기준; 11:10 실시간 체결 미확인)",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "11월 20일 오전 10:40 보도 기준 KOSPI 4,915.92(-4.32%), KOSDAQ 655.86(-4.23%). 외국인·기관 동반 순매도와 개인 순매수. 미국 대중국 AI 반도체 규제 강화 우려 및 미국 기술주 약세가 반도체 관련 투자심리에 부담으로 보도됨. 11:10 정각 실시간 지수와 거래대금·상승하락 종목 수·환율·선물 수치는 검증하지 못함.",
+        "observedAt": "2026-11-20T10:40:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI (10:40 보도 기준)",
+            "value": 4915.92,
+            "changePct": -4.32,
+            "observedAt": "2026-11-20T10:40:00+09:00",
+            "sourceUrl": "https://www.viva100.com/article/20261120500295"
+          },
+          {
+            "name": "KOSDAQ (10:40 보도 기준)",
+            "value": 655.86,
+            "changePct": -4.23,
+            "observedAt": "2026-11-20T10:40:00+09:00",
+            "sourceUrl": "https://www.viva100.com/article/20261120500295"
+          }
+        ],
+        "flows": [
+          {
+            "market": "KOSPI",
+            "observedAt": "2026-11-20T10:40:00+09:00",
+            "unit": "KRW_100M",
+            "foreign": -6187,
+            "institution": -2753,
+            "individual": 7615,
+            "sourceUrl": "https://www.viva100.com/article/20261120500295"
+          },
+          {
+            "market": "KOSDAQ",
+            "observedAt": "2026-11-20T10:40:00+09:00",
+            "unit": "KRW_100M",
+            "foreign": -1681,
+            "institution": -290,
+            "individual": 2117,
+            "sourceUrl": "https://www.viva100.com/article/20261120500295"
+          }
+        ],
+        "themes": [
+          "AI·반도체 약세",
+          "미국의 대중국 AI 반도체 규제 강화 우려"
+        ],
+        "notes": [
+          "삼성전자·SK하이닉스 관련 반도체 투자심리 위축. 11:10 실시간 종목별 등락률 미확인",
+          "10:40 보도 인용값은 11:10 정각 시세가 아님",
+          "상승/하락종목 수, 거래대금, 원/달러 환율, 선물: 미확인"
+        ]
+      },
+      "highlights": [
+        "10:40 기준 KOSPI 4,915.92(-4.32%), KOSDAQ 655.86(-4.23%)",
+        "KOSPI 외국인 -6,187억·기관 -2,753억·개인 +7,615억 (10:40 보도 기준)",
+        "대중국 AI 반도체 규제 우려에 반도체 업종 약세; 11:10 실시간 값은 미확인"
+      ],
+      "sources": [
+        {
+          "name": "브릿지경제 2026-11-20 10:43 장중시황 (10:40 시세)",
+          "url": "https://www.viva100.com/article/20261120500295",
+          "checkedAt": "2026-11-20T11:10:17.621+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      }
     }
   }
 }
