@@ -5,11 +5,11 @@
   "slot": "17:40",
   "scheduledFor": "2026-11-20T17:40:00+09:00",
   "startedAt": "2026-11-20T17:43:33+09:00",
-  "updatedAt": "2026-11-20T17:44:22+09:00",
+  "updatedAt": "2026-11-20T17:46:18+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "calendar_session_check",
-  "nextStep": "source_collection",
+  "phase": "collection_done",
+  "lastCompletedStep": "source_collection",
+  "nextStep": "candidate_analysis",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -23,14 +23,30 @@
     "protocolSha": "1df59f399e8e0afbb17492c2fe1e961c52d7caca",
     "validatorSha": "36f63ede9b2b009d6d4312f8aa2ab56641fc9e44",
     "isKrxTradingDay": true,
-    "retainedDates": [
-      "2026-11-20",
-      "2026-11-19"
-    ],
+    "retainedDates": ["2026-11-20", "2026-11-19"],
     "lastPublishedAsOf": "2026-11-20T14:45:25+09:00",
     "investigationWindowStartExclusive": "2026-11-20T14:45:25+09:00",
     "cutoff": "2026-11-20T17:44:22+09:00",
     "contractWarning": "17:40 is not included in the current protocol/validator allowed slots"
+  },
+  "collection": {
+    "foreignCandidateCount": 2,
+    "domesticCandidateCount": 18,
+    "sources": [
+      "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-20/",
+      "https://samara.kr/today",
+      "https://www.awakeplus.co.kr/data",
+      "https://www.bosoop.com/disclosures/20261120800721/",
+      "https://www.yna.co.kr/view/AKR20261120068951003",
+      "https://www.awakeplus.co.kr/data/view/20261120900630"
+    ],
+    "sourceErrors": [
+      {
+        "source": "Tavily",
+        "errorCode": "PLAN_USAGE_LIMIT",
+        "message": "Search request returned status 432; equivalent web search alternatives were used."
+      }
+    ]
   },
   "steps": [
     {
@@ -49,10 +65,14 @@
         "https://github.com/KBYOO0815/market-flow-feed/blob/main/MARKET_BRIEFING_PROTOCOL.md",
         "https://github.com/KBYOO0815/market-flow-feed/blob/main/scripts/market_briefing.py"
       ],
-      "counts": {
-        "retainedDates": 2,
-        "isKrxTradingDay": 1
-      }
+      "counts": {"retainedDates": 2, "isKrxTradingDay": 1}
+    },
+    {
+      "name": "source_collection",
+      "status": "success",
+      "startedAt": "2026-11-20T17:44:22+09:00",
+      "finishedAt": "2026-11-20T17:46:18+09:00",
+      "counts": {"foreignCandidates": 2, "domesticCandidates": 18, "sourceErrors": 1}
     }
   ]
 }
