@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "feed": "featured-stocks",
+  "date": "2026-11-20",
+  "slot": "11:40",
+  "scheduledFor": "2026-11-20T11:40:00+09:00",
+  "startedAt": "2026-11-20T11:42:55.081998+09:00",
+  "finishedAt": "2026-11-20T11:49:52+09:00",
+  "status": "published",
+  "failedStep": null,
+  "errorCode": null,
+  "errorMessage": null,
+  "steps": [
+    {
+      "name": "run_start",
+      "status": "success",
+      "startedAt": "2026-11-20T11:42:55.081998+09:00",
+      "finishedAt": "2026-11-20T11:42:55.081998+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/RUN_AUDIT_POLICY.md",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/FEATURED_STOCKS_POLICY.md",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/scripts/featured_v3.py"
+      ]
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-20T11:42:55.081998+09:00",
+      "finishedAt": "2026-11-20T11:43:34.227496+09:00",
+      "sources": [
+        "https://www.krx.co.kr/contents/MKD/01/0110/01100303/MKD01100303.jsp",
+        "https://kind.krx.co.kr/external/2026/11/05/000141/20261105000216/99303.htm",
+        "https://polling.finance.naver.com/api/realtime/domestic/stock/005930"
+      ],
+      "counts": {
+        "krxMarketStatusOpen": 1,
+        "tradeDate": 20261120
+      }
+    },
+    {
+      "name": "source_collection",
+      "status": "success",
+      "startedAt": "2026-11-20T11:42:55.081998+09:00",
+      "finishedAt": "2026-11-20T11:43:34.227496+09:00",
+      "sources": [
+        "https://stock.naver.com/api/domestic/market/stock/default?tradeType=KRX&marketType=ALL&orderType=priceTop&startIdx=0&pageSize=200",
+        "https://stock.naver.com/api/domestic/market/stock/default?tradeType=NXT&marketType=ALL&orderType=priceTop&startIdx=0&pageSize=100",
+        "https://polling.finance.naver.com/api/realtime/domestic/stock/",
+        "https://nextrade.co.kr/brdinfoTime/brdinfoTimeList.do"
+      ],
+      "counts": {
+        "krxRankingRows": 200,
+        "nxtRankingRows": 100,
+        "sourceUnionRows": 209,
+        "detailRowsReceived": 209,
+        "missingDetailRows": 0,
+        "officialNxtEligibleRows": 603
+      }
+    },
+    {
+      "name": "top100_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T11:43:34.227496+09:00",
+      "finishedAt": "2026-11-20T11:47:11.294050+09:00",
+      "counts": {
+        "candidateUnion": 142,
+        "eligibleCandidates": 142,
+        "top100": 100,
+        "krxRank100Amount": 13326000000,
+        "nxtRank100Amount": 4885000000,
+        "boundaryUpperBound": 18211000000,
+        "integratedRank100Amount": 18369000000,
+        "boundaryMargin": 158000000
+      }
+    },
+    {
+      "name": "price_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T11:43:34.227496+09:00",
+      "finishedAt": "2026-11-20T11:47:11.294050+09:00",
+      "counts": {
+        "validatedTop100Prices": 100,
+        "selectedAtOrAboveFourPercent": 10,
+        "comparisonUnavailable": 0
+      }
+    },
+    {
+      "name": "reason_research",
+      "status": "success",
+      "startedAt": "2026-11-20T11:43:34.227496+09:00",
+      "finishedAt": "2026-11-20T11:47:10.294050+09:00",
+      "counts": {
+        "selectedStocks": 10,
+        "completed": 10,
+        "confirmedReasons": 10,
+        "unconfirmedReasons": 0,
+        "distinctReasonUrls": 7
+      }
+    },
+    {
+      "name": "theme_classification",
+      "status": "success",
+      "startedAt": "2026-11-20T11:43:34.227496+09:00",
+      "finishedAt": "2026-11-20T11:47:11.294050+09:00",
+      "counts": {
+        "themes": 3,
+        "themeStocks": 6,
+        "individualStocks": 4,
+        "duplicateAssignments": 0
+      }
+    },
+    {
+      "name": "payload_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T11:47:11.294050+09:00",
+      "finishedAt": "2026-11-20T11:48:11.974337+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/scripts/featured_v3.py"
+      ],
+      "counts": {
+        "schemaVersion": 3,
+        "stocks": 100,
+        "selectedStocks": 10,
+        "retainedCalendarDays": 2
+      }
+    },
+    {
+      "name": "github_publish",
+      "status": "success",
+      "startedAt": "2026-11-20T11:48:11.974337+09:00",
+      "finishedAt": "2026-11-20T11:49:21+09:00",
+      "counts": {
+        "atomicCommitFiles": 3
+      }
+    },
+    {
+      "name": "remote_readback",
+      "status": "success",
+      "startedAt": "2026-11-20T11:49:21+09:00",
+      "finishedAt": "2026-11-20T11:49:52+09:00",
+      "counts": {
+        "verifiedFiles": 3,
+        "matchingBlobShas": 3,
+        "retainedCalendarDays": 2
+      }
+    }
+  ],
+  "publication": {
+    "attempted": true,
+    "success": true,
+    "commitSha": "e143508accb62cc3bb1cd3cd758f9e8a57934282",
+    "paths": [
+      "featured-stocks.json",
+      "featured-stocks/2026-11-20.json",
+      "featured-stocks/index.json"
+    ],
+    "readbackVerified": true
+  }
+}
