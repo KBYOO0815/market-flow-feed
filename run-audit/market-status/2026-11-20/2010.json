@@ -7,9 +7,9 @@
   "startedAt": "2026-11-20T20:13:19+09:00",
   "updatedAt": "2026-11-20T20:15:00+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -42,6 +42,12 @@
       "status": "success",
       "finishedAt": "2026-11-20T20:15:00+09:00",
       "detail": "19:10 대비 정규장 가격 변화 없음; 외국인 기관 순매도 개인 순매수; AI 반도체 하락"
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T20:15:00+09:00",
+      "detail": "schemaVersion=1, slot and index dates valid, existing 10 editions preserved, other feeds untouched"
     }
   ]
 }
