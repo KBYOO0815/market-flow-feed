@@ -5,11 +5,11 @@
   "slot": "06:40",
   "scheduledFor": "2026-11-21T06:40:00+09:00",
   "startedAt": "2026-11-21T06:42:36+09:00",
-  "updatedAt": "2026-11-21T06:48:07+09:00",
+  "updatedAt": "2026-11-21T06:48:18+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "validate_merged_json",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publish_market_briefing",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -70,6 +70,27 @@
         "selectedUsThemes": 1,
         "duplicateOrOutsideWindowExcluded": 7,
         "domesticResult": "No material new domestic fact with verified first publication inside the window; overnight opinion/republication and pre-cutoff disclosures excluded."
+      }
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "startedAt": "2026-11-21T06:48:07+09:00",
+      "finishedAt": "2026-11-21T06:48:18+09:00",
+      "details": {
+        "validator": "scripts/market_briefing.py",
+        "schemaVersion": 1,
+        "contractValid": true,
+        "retainedDates": [
+          "2026-11-21",
+          "2026-11-20"
+        ],
+        "targetSession": "2026-11-21 06:40",
+        "foreignNews": 6,
+        "domesticNews": 0,
+        "usThemes": 1,
+        "duplicateIds": false,
+        "rankOrderValid": true
       }
     }
   ],
