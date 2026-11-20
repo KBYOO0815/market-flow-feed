@@ -21,7 +21,7 @@ def row(code, session="REGULAR", price=110, prior=100):
     }
 
 
-def sample(date="2026-11-19", with_pre=False):
+def sample(date="2026-11-20", with_pre=False):
     def edition(slot, session, price):
         rows = [row("{:06d}".format(i+1), session, price=price) for i in range(100)]
         return {"date": date, "rateBasis": "KRX_PREVIOUS_CLOSE",
