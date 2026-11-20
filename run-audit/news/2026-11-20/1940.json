@@ -5,7 +5,7 @@
   "slot": "19:40",
   "scheduledFor": "2026-11-20T19:40:00+09:00",
   "startedAt": "2026-11-20T19:38:45+09:00",
-  "updatedAt": "2026-11-20T19:47:10+09:00",
+  "updatedAt": "2026-11-20T19:42:43+09:00",
   "status": "running",
   "phase": "validation_done",
   "lastCompletedStep": "validation_done",
@@ -40,7 +40,7 @@
       "name": "collection_done",
       "status": "success",
       "startedAt": "2026-11-20T19:40:22+09:00",
-      "finishedAt": "2026-11-20T19:44:00+09:00",
+      "finishedAt": "2026-11-20T19:41:35+09:00",
       "details": {
         "foreignCandidates": 6,
         "domesticCandidates": 22,
@@ -50,8 +50,8 @@
     {
       "name": "analysis_done",
       "status": "success",
-      "startedAt": "2026-11-20T19:44:01+09:00",
-      "finishedAt": "2026-11-20T19:45:40+09:00",
+      "startedAt": "2026-11-20T19:41:36+09:00",
+      "finishedAt": "2026-11-20T19:42:15+09:00",
       "details": {
         "foreignSelected": 3,
         "domesticSelected": 10,
@@ -61,8 +61,8 @@
     {
       "name": "validation_done",
       "status": "success",
-      "startedAt": "2026-11-20T19:45:41+09:00",
-      "finishedAt": "2026-11-20T19:47:10+09:00",
+      "startedAt": "2026-11-20T19:42:16+09:00",
+      "finishedAt": "2026-11-20T19:42:43+09:00",
       "details": {
         "validatorContract": "MARKET_BRIEFING_PROTOCOL.md and scripts/market_briefing.py inspected",
         "operationalWriteAuthorized": true
@@ -129,5 +129,9 @@
       "2026-11-19"
     ],
     "sourceUrlsHttps": true
+  },
+  "timestampCorrection": {
+    "correctedAt": "2026-11-20T19:42:43+09:00",
+    "reason": "Replaced preliminary phase timestamps with observed KST boundary times before publication."
   }
 }
