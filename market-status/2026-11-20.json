@@ -289,6 +289,85 @@
         "validation": "success",
         "publication": "success"
       }
+    },
+    "10:10": {
+      "date": "2026-11-20",
+      "slot": "10:10",
+      "scheduledFor": "2026-11-20T10:10:00+09:00",
+      "asOf": "2026-11-20T10:13:09.637+09:00",
+      "publishedAt": "2026-11-20T10:13:09.637+09:00",
+      "sessionStatus": "KRX REGULAR (2026-11-20 09:00~15:30 KST; latest verified 09:53 KST news quote, 10:10 tick unverified)",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "20일 09:53 KST 확인 보도 기준 KOSPI 4,896.05(-4.71%), KOSDAQ 654.08(-4.49%). 10:10 정각 실시간 시세는 확인되지 않아 09:53 수치를 가장 최근 검증된 관측값으로 제시한다. KOSPI 외국인 -3,585억원, 기관 -3,165억원, 개인 +5,954억원; KOSDAQ 외국인 -1,333억원, 기관 -148억원, 개인 +1,634억원(모두 09:53 보도 기준). 삼성전자 -5.94%, SK하이닉스 -7.10%로 반도체 약세. 금융주는 일부 상승. 미국 기술주 급락 및 AI 반도체 대중 규제 우려가 시장 하락 배경으로 보도됨. 상승/하락 종목 수, 거래대금, 원달러 환율, 10:10 정각 지수·수급은 미확인.",
+        "observedAt": "2026-11-20T09:53:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI (09:53 보도 기준)",
+            "value": 4896.05,
+            "changePct": -4.71,
+            "observedAt": "2026-11-20T09:53:00+09:00",
+            "sourceUrl": "https://www.news2day.co.kr/article/20261120500073"
+          },
+          {
+            "name": "KOSDAQ (09:53 보도 기준)",
+            "value": 654.08,
+            "changePct": -4.49,
+            "observedAt": "2026-11-20T09:53:00+09:00",
+            "sourceUrl": "https://www.news2day.co.kr/article/20261120500073"
+          }
+        ],
+        "flows": [
+          {
+            "market": "KOSPI",
+            "observedAt": "2026-11-20T09:53:00+09:00",
+            "foreignNetKRW": -358500000000,
+            "institutionNetKRW": -316500000000,
+            "individualNetKRW": 595400000000,
+            "sourceUrl": "https://www.news2day.co.kr/article/20261120500073"
+          },
+          {
+            "market": "KOSDAQ",
+            "observedAt": "2026-11-20T09:53:00+09:00",
+            "foreignNetKRW": -133300000000,
+            "institutionNetKRW": -14800000000,
+            "individualNetKRW": 163400000000,
+            "sourceUrl": "https://www.news2day.co.kr/article/20261120500073"
+          }
+        ],
+        "themes": [
+          "반도체 대형주 약세: 삼성전자 -5.94%, SK하이닉스 -7.10% (09:53 보도 기준)",
+          "금융주 일부 강세: KB금융 +0.59%, 신한지주 +1.05% (09:53 보도 기준)"
+        ],
+        "notes": [
+          "10:10 정각 지수와 투자자별 수급은 미확인. 09:53 보도값을 10:10 실시간으로 표시하지 않음",
+          "상승·하락 종목 수, 거래대금, 원/달러 환율, 선물 수치 미확인",
+          "반도체 및 금융주 개별 등락률은 09:53 시점 기사에 보도된 값"
+        ]
+      },
+      "highlights": [
+        "09:53 보도: KOSPI 4,896.05(-4.71%), KOSDAQ 654.08(-4.49%)",
+        "09:53 보도: KOSPI 외국인 -3,585억·기관 -3,165억·개인 +5,954억원",
+        "반도체 대형주 약세, 금융주 일부 상승. 10:10 실시간 수치는 미확인"
+      ],
+      "sources": [
+        {
+          "name": "뉴스투데이 2026-11-20 10:03 보도 (09:53 시세)",
+          "url": "https://www.news2day.co.kr/article/20261120500073",
+          "checkedAt": "2026-11-20T10:13:09.637+09:00"
+        },
+        {
+          "name": "연합뉴스 2026-11-20 09:44 장중 보도",
+          "url": "https://www.yna.co.kr/view/AKR20261120046000008",
+          "checkedAt": "2026-11-20T10:13:09.637+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      }
     }
   }
 }
