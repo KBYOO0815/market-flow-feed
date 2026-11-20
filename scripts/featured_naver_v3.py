@@ -35,6 +35,7 @@ def normalize(raw,release,fetch,now=None,trace=None):
         thresholds[venue]=int(ranked[venue][-1]['tradeAmount'])
     allkrx={r['itemcode']:r for r in raw['KRX']}
     official=raw['NXT_OFFICIAL'];official_zero_nxt([],{},official,clock())
+    official_observed=dt.datetime.strptime(official['setTime'],'%Y-%m-%d %H:%M').replace(tzinfo=KST)
     official_codes={r['isuSrdCd'].removeprefix('A') for r in official['brdinfoTimeList']}
     require({r['itemcode'] for r in ranked['NXT']}<=official_codes,'NXT Top100 contradicts official NXT eligibility')
     candidates={}
@@ -78,21 +79,31 @@ def normalize(raw,release,fetch,now=None,trace=None):
                 require(q.get('itemcode')==code and observed.date()==target.date(),'quote identity/trading date mismatch')
                 require(observed<=retrieved,'future market quote')
                 amount=int(q['tradeAmount']);require(str(q['tradeAmount']).isdigit(),'invalid turnover')
-                session=q.get('tradingSessionType')
+                source_session=q.get('tradingSessionType')
+                final_confirmed=False
                 if venue=='KRX':
-                    regular_close=(observed.hour==15 and observed.minute==30 and session in ('REGULAR_MARKET','REGULAR_CLOSE'))
-                    require(session in ('REGULAR_MARKET','REGULAR_CLOSE') or target.strftime('%H:%M')=='15:40' and session=='AFTER_MARKET','aftermarket price is not KRX regular close')
-                    session='REGULAR_CLOSE' if regular_close else 'KRX_AFTER_MARKET' if session=='AFTER_MARKET' else 'REGULAR_MARKET'
+                    regular_close=(observed.hour==15 and observed.minute==30 and source_session in ('REGULAR_MARKET','REGULAR_CLOSE'))
+                    allow_after=target.strftime('%H:%M') in ('15:40','20:10') and source_session=='AFTER_MARKET'
+                    require(source_session in ('REGULAR_MARKET','REGULAR_CLOSE') or allow_after,'aftermarket price is not valid for this slot')
+                    session='REGULAR_CLOSE' if regular_close else 'KRX_AFTER_MARKET' if source_session=='AFTER_MARKET' else 'REGULAR_MARKET'
+                    final_confirmed=session=='KRX_AFTER_MARKET' and target.strftime('%H:%M')=='20:10' and retrieved>=target
                 else:
-                    require(target.strftime('%H:%M')!='20:10','NXT official final total confirmation adapter required at20:10')
-                    session='NXT_CUMULATIVE';regular_close=False
+                    regular_close=False
+                    if target.strftime('%H:%M')=='20:10':
+                        require(retrieved>=target,'20:10 NXT quote retrieved before release slot')
+                        require(official_observed.date()==target.date() and official_observed.time()>=dt.time(20,0),'NXT official final snapshot is before after-market close')
+                        session='NXT_FINAL';final_confirmed=True
+                    else:
+                        session='NXT_CUMULATIVE'
                 quote={'code':code,'market':venue,'tradeDate':date,'turnoverScope':venue+'_ONLY','sourceUrl':url,'retrievedAt':retrieved.isoformat(),'observedAt':observed.isoformat(),
-                    'turnover':amount,'session':session,'closeConfirmed':regular_close}
+                    'turnover':amount,'session':session,'closeConfirmed':regular_close,'finalConfirmed':final_confirmed}
+                price=num(q['nowPrice']);require(price>0,'invalid observed price')
+                quote.update(price=float(price),priceSourceUrl=url)
                 if venue=='KRX':
-                    price=num(q['nowPrice']);base=num(master[code]['referencePrice'])
+                    base=num(master[code]['referencePrice'])
                     new_listing=(allkrx.get(code) or {}).get('listedDate',master[code].get('listingDate'))==target.strftime('%Y%m%d')
                     confirmed=master[code].get('exRightsCode')=='00'
-                    require(price>0 and base>0,'invalid observed price/reference')
+                    require(base>0,'invalid observed reference')
                     if session!='KRX_AFTER_MARKET':
                         change=num(q['prevChangePrice']);rate=num(q['prevChangeRate']);signed=-abs(change) if rate<0 else abs(change)
                         confirmed=confirmed and num(q.get('stdPrice'))==base and price-signed==base and abs((price/base-1)*100-rate)<=num('.011')
