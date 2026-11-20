@@ -47,20 +47,36 @@
       "status": "success",
       "startedAt": "2026-11-20T12:14:42+09:00",
       "finishedAt": "2026-11-20T12:14:42+09:00"
+    },
+    {
+      "name": "github_publish",
+      "status": "success",
+      "startedAt": "2026-11-20T12:14:42+09:00",
+      "finishedAt": null,
+      "commitSha": "d0ceee16d85a4012f32472dc8b706bbd5e077f04"
+    },
+    {
+      "name": "remote_readback",
+      "status": "success",
+      "startedAt": null,
+      "finishedAt": null,
+      "verifiedPaths": [
+        "market-status/2026-11-20.json",
+        "market-status/index.json"
+      ]
     }
   ],
   "publication": {
     "attempted": true,
     "success": true,
-    "commitSha": null,
+    "commitSha": "d0ceee16d85a4012f32472dc8b706bbd5e077f04",
     "paths": [
       "market-status/2026-11-20.json",
       "market-status/index.json"
     ],
-    "readbackVerified": false
+    "readbackVerified": true
   },
   "notes": [
-    "12:10 정각 지수는 미확인; 11:24 관측 자료 사용",
-    "GitHub commit SHA 및 원격 재조회는 별도 확인 후 보고"
+    "12:10 정각 지수는 미확인; 11:24 관측 자료 사용"
   ]
 }
