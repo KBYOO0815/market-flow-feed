@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20T03:40:08.000Z",
+  "updatedAt": "2026-11-20T04:40:56.000Z",
   "days": [
     {
       "date": "2026-11-20",
@@ -325,6 +325,15 @@
               "region": "domestic"
             }
           ],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "usThemeStatus": "not_applicable"
+        },
+        {
+          "slot": "13:40",
+          "asOf": "2026-11-20T13:40:56+09:00",
+          "foreignNews": [],
+          "domesticNews": [],
           "usThemes": [],
           "researchStatus": "complete",
           "usThemeStatus": "not_applicable"
