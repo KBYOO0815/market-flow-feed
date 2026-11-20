@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "feed": "news",
+  "date": "2026-11-20",
+  "slot": "16:40",
+  "scheduledFor": "2026-11-20T16:40:00+09:00",
+  "startedAt": "2026-11-20T16:43:11+09:00",
+  "finishedAt": "2026-11-20T16:45:08+09:00",
+  "status": "partial",
+  "failedStep": "payload_validation",
+  "errorCode": "DATA_CONTRACT_SLOT_CONFLICT",
+  "errorMessage": "최신 MARKET_BRIEFING_PROTOCOL.md와 scripts/market_briefing.py의 허용 회차에 16:40이 없어 요청된 뉴스 session을 유효한 운영 JSON으로 구성할 수 없음",
+  "steps": [
+    {
+      "name": "run_start",
+      "status": "success",
+      "startedAt": "2026-11-20T16:43:11+09:00",
+      "finishedAt": "2026-11-20T16:43:42+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/RUN_AUDIT_POLICY.md",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/market-briefing.json"
+      ],
+      "counts": {
+        "existingDates": 2,
+        "latestPublishedSlot": "14:40"
+      }
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-20T16:43:11+09:00",
+      "finishedAt": "2026-11-20T16:43:42+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/market-briefing.json"
+      ],
+      "counts": {
+        "isKrxTradingDay": 1
+      }
+    },
+    {
+      "name": "source_collection",
+      "status": "success",
+      "startedAt": "2026-11-20T16:43:42+09:00",
+      "finishedAt": "2026-11-20T16:44:56+09:00",
+      "sources": [
+        "https://www.awakeplus.co.kr/data",
+        "https://www.reuters.com/world/africa/retailer-mr-prices-nkd-deal-boosts-sales-higher-finance-costs-weigh-profit-2026-11-20/",
+        "https://www.reuters.com/markets/europe/vallourecs-core-profit-falls-26-hit-by-iran-war-disruption-us-2026-11-20/"
+      ],
+      "counts": {
+        "foreignCandidatesInWindow": 2,
+        "domesticDisclosuresInWindow": 34
+      }
+    },
+    {
+      "name": "foreign_search",
+      "status": "success",
+      "startedAt": "2026-11-20T16:43:42+09:00",
+      "finishedAt": "2026-11-20T16:44:56+09:00",
+      "sources": [
+        "https://www.reuters.com/world/africa/retailer-mr-prices-nkd-deal-boosts-sales-higher-finance-costs-weigh-profit-2026-11-20/",
+        "https://www.reuters.com/markets/europe/vallourecs-core-profit-falls-26-hit-by-iran-war-disruption-us-2026-11-20/"
+      ],
+      "counts": {
+        "candidates": 2,
+        "selected": 0,
+        "excludedLowKoreaImpact": 2
+      }
+    },
+    {
+      "name": "domestic_search",
+      "status": "success",
+      "startedAt": "2026-11-20T16:43:42+09:00",
+      "finishedAt": "2026-11-20T16:44:56+09:00",
+      "sources": [
+        "https://www.awakeplus.co.kr/data",
+        "https://www.awakeplus.co.kr/data/view/20261120900630",
+        "https://www.awakeplus.co.kr/data/view/20261120900603",
+        "https://www.awakeplus.co.kr/data/view/20261120900538",
+        "https://www.awakeplus.co.kr/data/view/20261120900615",
+        "https://www.awakeplus.co.kr/data/view/20261120900621"
+      ],
+      "counts": {
+        "candidates": 34,
+        "selected": 4,
+        "excluded": 30
+      }
+    },
+    {
+      "name": "analysis",
+      "status": "success",
+      "startedAt": "2026-11-20T16:43:42+09:00",
+      "finishedAt": "2026-11-20T16:44:56+09:00",
+      "counts": {
+        "foreignSelected": 0,
+        "domesticSelected": 4
+      },
+      "selectedItems": [
+        "금양그린파워 원주 AI데이터센터 전기·통신 공사 2,300억원 계약",
+        "에피소드컴퍼니 드라마 공동·외주제작 98억원 계약",
+        "에어레인 당진 청정수소 패키지 98억원 본계약",
+        "HEM파마 타법인 지분 22억원 취득 및 설비 13억원 투자"
+      ]
+    },
+    {
+      "name": "dedup_ranking",
+      "status": "success",
+      "startedAt": "2026-11-20T16:44:20+09:00",
+      "finishedAt": "2026-11-20T16:44:56+09:00",
+      "counts": {
+        "foreignSelected": 0,
+        "domesticSelected": 4,
+        "duplicates": 0,
+        "excludedReconfirmations": 2
+      }
+    },
+    {
+      "name": "payload_validation",
+      "status": "failed",
+      "startedAt": "2026-11-20T16:44:56+09:00",
+      "finishedAt": "2026-11-20T16:45:08+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/MARKET_BRIEFING_PROTOCOL.md",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/scripts/market_briefing.py"
+      ],
+      "errorCode": "DATA_CONTRACT_SLOT_CONFLICT",
+      "errorMessage": "16:40은 최신 검증기의 허용 SLOTS에 포함되지 않아 invalid slot 오류가 발생하는 구조임"
+    },
+    {
+      "name": "github_publish",
+      "status": "not_attempted",
+      "startedAt": "2026-11-20T16:45:08+09:00",
+      "finishedAt": "2026-11-20T16:45:08+09:00",
+      "errorCode": "BLOCKED_BY_PAYLOAD_VALIDATION",
+      "errorMessage": "운영 JSON 발행 전 검증 실패로 market-briefing.json을 수정하지 않음"
+    },
+    {
+      "name": "remote_readback",
+      "status": "not_attempted",
+      "startedAt": "2026-11-20T16:45:08+09:00",
+      "finishedAt": "2026-11-20T16:45:08+09:00",
+      "errorCode": "PUBLICATION_NOT_ATTEMPTED",
+      "errorMessage": "운영 JSON 커밋이 없어 대상 회차 재조회 검증을 수행하지 않음"
+    }
+  ],
+  "publication": {
+    "attempted": false,
+    "success": false,
+    "commitSha": null,
+    "paths": [],
+    "readbackVerified": false
+  },
+  "investigationWindow": {
+    "startExclusive": "2026-11-20T14:45:25+09:00",
+    "endInclusive": "2026-11-20T16:43:42+09:00"
+  },
+  "retention": {
+    "expectedDates": [
+      "2026-11-20",
+      "2026-11-19"
+    ],
+    "observedDates": [
+      "2026-11-20",
+      "2026-11-19"
+    ],
+    "operationalJsonModified": false
+  }
+}
