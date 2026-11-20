@@ -5,11 +5,11 @@
   "slot": "19:40",
   "scheduledFor": "2026-11-20T19:40:00+09:00",
   "startedAt": "2026-11-20T19:38:45+09:00",
-  "updatedAt": "2026-11-20T19:45:40+09:00",
+  "updatedAt": "2026-11-20T19:47:10+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "schema_validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publish_market_briefing",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -56,6 +56,16 @@
         "foreignSelected": 3,
         "domesticSelected": 10,
         "duplicateCheckScope": "2026-11-19 through 2026-11-20 published sessions"
+      }
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "startedAt": "2026-11-20T19:45:41+09:00",
+      "finishedAt": "2026-11-20T19:47:10+09:00",
+      "details": {
+        "validatorContract": "MARKET_BRIEFING_PROTOCOL.md and scripts/market_briefing.py inspected",
+        "operationalWriteAuthorized": true
       }
     }
   ],
@@ -104,5 +114,20 @@
       "HD한국조선해양 해명: 미확정"
     ],
     "selectionOrder": "Korean market impact, scale, certainty, novelty"
+  },
+  "validation": {
+    "success": true,
+    "schemaVersion": 1,
+    "slot": "19:40",
+    "foreignCount": 3,
+    "domesticCount": 10,
+    "rankSequencesValid": true,
+    "publishedAtWithinWindow": true,
+    "duplicateIds": false,
+    "retentionTarget": [
+      "2026-11-20",
+      "2026-11-19"
+    ],
+    "sourceUrlsHttps": true
   }
 }
