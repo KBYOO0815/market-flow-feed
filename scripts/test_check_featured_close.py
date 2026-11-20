@@ -5,7 +5,7 @@ import unittest
 from check_featured_close import validate
 
 
-def row(code, session="REGULAR", price=110, prior=100):
+def row(code, session="REGULAR", price=110, prior=100, date="2026-11-20"):
     market = "NXT" if session == "PRE" else "KRX"
     observed = ("08:39:00" if session == "PRE" else
                 "19:59:00" if session == "AFTER" else "15:29:00")
@@ -16,14 +16,14 @@ def row(code, session="REGULAR", price=110, prior=100):
         "changeRate": (price / prior - 1) * 100,
         "rateMarket": market,
         "priceMarket": market,
-        "priceObservedAt": "2026-11-19T" + observed + "+09:00",
+        "priceObservedAt": date + "T" + observed + "+09:00",
         "comparison": {"eligible": True},
     }
 
 
 def sample(date="2026-11-20", with_pre=False):
     def edition(slot, session, price):
-        rows = [row("{:06d}".format(i+1), session, price=price) for i in range(100)]
+        rows = [row("{:06d}".format(i+1), session, price=price, date=date) for i in range(100)]
         return {"date": date, "rateBasis": "KRX_PREVIOUS_CLOSE",
                 "priceSession": session, "stocks": rows}
     editions = {
@@ -51,7 +51,7 @@ class FeaturedCloseTest(unittest.TestCase):
 
     def test_after_market_must_not_use_future_trade(self):
         data = sample()
-        data["editions"]["20:10"]["stocks"][3]["priceObservedAt"] = "2026-11-19T20:05:00+09:00"
+        data["editions"]["20:10"]["stocks"][3]["priceObservedAt"] = "2026-11-20T20:05:00+09:00"
         self.assertTrue(any("outside after-market" in x for x in validate(data)))
 
     def test_pre_market_requires_nxt(self):
