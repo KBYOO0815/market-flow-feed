@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20T05:45:25.000Z",
+  "updatedAt": "2026-11-20T19:43:00+09:00",
   "days": [
     {
       "date": "2026-11-20",
@@ -343,6 +343,205 @@
           "asOf": "2026-11-20T14:45:25+09:00",
           "foreignNews": [],
           "domesticNews": [],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "usThemeStatus": "not_applicable"
+        },
+        {
+          "slot": "19:40",
+          "asOf": "2026-11-20T19:40:21+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261120-us-ai-chip-curbs-china",
+              "title": "미국 AI칩 규제, 중국 기술주 압박…국산칩 전환 가속",
+              "summary": "로이터는 미국의 중국 기업 원격 AI칩 접근 제한과 엔비디아·TSMC의 대중 공급 중단 여파가 중국 기술주에 부담을 주고 있다고 보도했다. 텐센트는 추론 서비스 영향이 제한적이라고 밝혔지만, 알리바바는 클라우드 성장 둔화 가능성을 언급했다.",
+              "publishedAt": "2026-11-20T17:21:59+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/retail-consumer/us-ai-chip-curbs-hit-china-tech-stocks-spur-self-sufficiency-push-2026-11-20/",
+              "relatedStocks": [
+                "엔비디아(NVDA)",
+                "TSMC(TSM)",
+                "알리바바(BABA)",
+                "텐센트(0700.HK)"
+              ],
+              "impactRank": 1,
+              "category": "미중 기술규제·AI반도체",
+              "region": "foreign"
+            },
+            {
+              "id": "foreign-20261120-europe-ai-chip-selloff",
+              "title": "유럽 AI·반도체주 급락…STOXX600 주간 5% 넘게 하락권",
+              "summary": "유럽 STOXX600은 09:26 GMT 기준 1.3% 하락해 6주 최저치를 기록했고 주간 낙폭은 5%를 넘었다. ASML·ASM International·STMicroelectronics는 5% 넘게 밀리며 AI 투자 회수 우려가 반도체 전반으로 확산됐다.",
+              "publishedAt": "2026-11-20T17:25:37+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/markets/europe/european-shares-head-steepest-weekly-drop-since-march-2026-11-20/",
+              "relatedStocks": [
+                "ASML(ASML)",
+                "ASM International(ASMI)",
+                "STMicroelectronics(STM)"
+              ],
+              "impactRank": 2,
+              "category": "유럽증시·AI반도체",
+              "region": "foreign"
+            },
+            {
+              "id": "foreign-20261120-ecb-euro-swap-access",
+              "title": "ECB, 유로 통화스와프 접근성 확대 추진",
+              "summary": "크리스틴 라가르드 ECB 총재는 외부 금융충격 차단과 유로의 국제적 역할 강화를 위해 다른 나라 중앙은행이 유로 통화스와프를 더 쉽게 이용할 수 있도록 하겠다고 밝혔다. 현재 ECB 상설 스와프 라인은 연준·중국인민은행 등 주요 중앙은행 중심이다.",
+              "publishedAt": "2026-11-20T18:11:08+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/finance/ecb-make-euro-swaps-more-accessible-global-push-lagarde-says-2026-11-20/",
+              "relatedStocks": [],
+              "impactRank": 3,
+              "category": "중앙은행·외환유동성",
+              "region": "foreign"
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "domestic-20261120-sk-hynix-kioxia-spc2",
+              "title": "SK하이닉스, 키옥시아 간접지분 14.1% 확보 절차 구체화",
+              "summary": "SK하이닉스는 SPC2가 보유한 1,290억엔 규모 전환사채를 12만9,000주로 전환하고 잔여 1,001주를 1억엔에 취득하는 내용으로 타법인주식 취득 공시를 정정했다. 거래 후 SK하이닉스의 SPC2를 통한 키옥시아 간접 지분율은 14.1%다.",
+              "publishedAt": "2026-11-20T16:04:00+09:00",
+              "sourceName": "DART·사말아",
+              "sourceUrl": "https://samara.kr/disclosure/20261120800721",
+              "relatedStocks": [
+                "SK하이닉스",
+                "키옥시아"
+              ],
+              "impactRank": 1,
+              "category": "반도체·지분투자",
+              "region": "domestic"
+            },
+            {
+              "id": "domestic-20261120-kumyang-greenpower-ai-datacenter",
+              "title": "금양그린파워, 2,300억원 원주 AI데이터센터 공사 수주",
+              "summary": "금양그린파워는 원주 메가클러스터 AI데이터센터 전기·통신 공사를 2,300억원에 수주했다. 계약금액은 최근 매출의 86.87%이며 계약기간은 2029년 3월 30일까지다.",
+              "publishedAt": "2026-11-20T15:39:34+09:00",
+              "sourceName": "DART·AWAKEPLUS",
+              "sourceUrl": "https://www.awakeplus.co.kr/data/view/20261120900630",
+              "relatedStocks": [
+                "금양그린파워"
+              ],
+              "impactRank": 2,
+              "category": "AI데이터센터·수주",
+              "region": "domestic"
+            },
+            {
+              "id": "domestic-20261120-hyosung-heavy-jamwon-property",
+              "title": "효성중공업, 서울 잠원동 토지·건물 2,549억원에 취득",
+              "summary": "효성중공업은 채권 회수를 위해 하나자산신탁으로부터 서울 서초구 잠원동 토지와 건물을 2,548억6,893만원에 취득하기로 했다. 취득금액은 자산총액의 3.53%다.",
+              "publishedAt": "2026-11-20T16:45:00+09:00",
+              "sourceName": "DART·사말아",
+              "sourceUrl": "https://samara.kr/disclosure/20261120800844",
+              "relatedStocks": [
+                "효성중공업"
+              ],
+              "impactRank": 3,
+              "category": "유형자산·채권회수",
+              "region": "domestic"
+            },
+            {
+              "id": "domestic-20261120-dreaminsight-control-transfer",
+              "title": "드림인사이트, 180억원 주식양수도 계약…최대주주 변경 예정",
+              "summary": "드림인사이트 최대주주 측은 701만710주(41.73%)를 180억원에 케이바이오테크1호 조합과 애드바이오텍에 양도하는 계약을 체결했다. 잔금 지급 예정일은 11월 23일이며 변경 예정 최대주주의 지분율은 23.18%다.",
+              "publishedAt": "2026-11-20T18:03:00+09:00",
+              "sourceName": "DART·사말아",
+              "sourceUrl": "https://samara.kr/disclosure/20261120900959",
+              "relatedStocks": [
+                "드림인사이트",
+                "애드바이오텍"
+              ],
+              "impactRank": 4,
+              "category": "최대주주 변경·M&A",
+              "region": "domestic"
+            },
+            {
+              "id": "domestic-20261120-raphas-df19001-ind-rejected",
+              "title": "라파스, 알레르기비염 치료제 임상 2b/3상 계획 반려",
+              "summary": "라파스는 알레르기비염 면역치료제 DF19001의 임상 2b/3상 시험계획 승인 신청이 반려됐다고 공시했다. 회사는 앞서 5월 해당 임상계획 승인을 신청했다.",
+              "publishedAt": "2026-11-20T18:20:00+09:00",
+              "sourceName": "DART·사말아",
+              "sourceUrl": "https://samara.kr/disclosure/20261120900961",
+              "relatedStocks": [
+                "라파스"
+              ],
+              "impactRank": 5,
+              "category": "바이오·임상",
+              "region": "domestic"
+            },
+            {
+              "id": "domestic-20261120-jeju-semi-vietnam-osat-jv",
+              "title": "제주반도체, 베트남 메모리 OSAT 합작법인에 260억원 출자",
+              "summary": "제주반도체는 베트남 메모리 후공정(OSAT) 합작법인 설립을 위해 259억5,645만원을 현금 출자하기로 했다. 최초 지분율은 65%이며 에이팩트의 옵션 행사 시 33.33%로 조정될 수 있다.",
+              "publishedAt": "2026-11-20T16:29:00+09:00",
+              "sourceName": "DART·사말아",
+              "sourceUrl": "https://samara.kr/disclosure/20261120900770",
+              "relatedStocks": [
+                "제주반도체",
+                "에이팩트"
+              ],
+              "impactRank": 6,
+              "category": "반도체·해외투자",
+              "region": "domestic"
+            },
+            {
+              "id": "domestic-20261120-namsung-myeonmok-redevelopment",
+              "title": "남성, 면목점 재개발에 850억원 신규 투자",
+              "summary": "남성은 노후 보유부동산인 카멜리아 면목점 재개발을 위해 850억원을 투자하기로 했다. 투자액은 자기자본의 80.57%이며 투자기간은 2026년 11월 25일부터 2030년 8월 31일까지다.",
+              "publishedAt": "2026-11-20T16:03:00+09:00",
+              "sourceName": "DART·공시허브",
+              "sourceUrl": "https://gongsihub.com/c/dart-20261120800697",
+              "relatedStocks": [
+                "남성"
+              ],
+              "impactRank": 7,
+              "category": "신규투자·부동산",
+              "region": "domestic"
+            },
+            {
+              "id": "domestic-20261120-kumho-jangji-depot-contract",
+              "title": "금호건설, 장지차고지 입체화 공사 1,753억원 수주",
+              "summary": "금호건설은 장지차고지 입체화사업 건설공사를 1,753억500만원에 수주했다. 회사 지분은 전체 사업비 3,506억1,000만원의 50%이며 계약금액은 최근 매출의 8.68%다.",
+              "publishedAt": "2026-11-20T16:17:00+09:00",
+              "sourceName": "DART·사말아",
+              "sourceUrl": "https://samara.kr/disclosure/20261120800722",
+              "relatedStocks": [
+                "금호건설"
+              ],
+              "impactRank": 8,
+              "category": "건설·수주",
+              "region": "domestic"
+            },
+            {
+              "id": "domestic-20261120-hancomlifecare-k5-contract",
+              "title": "한컴라이프케어, 방사청 K5 방독면 189억원 공급계약",
+              "summary": "한컴라이프케어는 방위사업청과 K5 방독면 10차 양산 공급계약을 189억5,539만원에 체결했다. 계약금액은 최근 매출의 20.6%이며 계약기간은 2027년 11월 26일까지다.",
+              "publishedAt": "2026-11-20T16:36:00+09:00",
+              "sourceName": "DART·사말아",
+              "sourceUrl": "https://samara.kr/disclosure/20261120800766",
+              "relatedStocks": [
+                "한컴라이프케어"
+              ],
+              "impactRank": 9,
+              "category": "방산·수주",
+              "region": "domestic"
+            },
+            {
+              "id": "domestic-20261120-curatis-clinical-supply",
+              "title": "큐라티스, 25억원 임상 의약품 공급계약",
+              "summary": "큐라티스는 영국 Access to Advanced Health와 임상 의약품 공급계약을 24억8,916만원에 체결했다. 계약금액은 최근 매출의 101.31%이며 마일스톤 방식으로 2030년 6월 30일까지 진행된다.",
+              "publishedAt": "2026-11-20T16:34:00+09:00",
+              "sourceName": "DART·사말아",
+              "sourceUrl": "https://samara.kr/disclosure/20261120900789",
+              "relatedStocks": [
+                "큐라티스"
+              ],
+              "impactRank": 10,
+              "category": "바이오·공급계약",
+              "region": "domestic"
+            }
+          ],
           "usThemes": [],
           "researchStatus": "complete",
           "usThemeStatus": "not_applicable"
