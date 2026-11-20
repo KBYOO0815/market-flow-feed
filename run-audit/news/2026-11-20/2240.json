@@ -5,13 +5,13 @@
   "slot": "22:40",
   "scheduledFor": "2026-11-20T22:40:00+09:00",
   "startedAt": "2026-11-20T22:40:23+09:00",
-  "updatedAt": "2026-11-20T22:40:23+09:00",
-  "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
-  "errorCode": null,
-  "errorMessage": null,
+  "updatedAt": "2026-11-20T22:41:01+09:00",
+  "status": "failed",
+  "phase": "preflight_done",
+  "lastCompletedStep": "preflight_done",
+  "nextStep": null,
+  "errorCode": "DATA_CONTRACT_CONFLICT",
+  "errorMessage": "Requested slot 22:40 is rejected by the current GitHub data contract validator: scripts/market_briefing.py SLOTS=(06:40,08:40,12:40,15:40,19:40), causing ValueError('invalid slot').",
   "publication": {
     "attempted": false,
     "success": false,
@@ -24,6 +24,35 @@
       "status": "success",
       "startedAt": "2026-11-20T22:40:23+09:00",
       "finishedAt": "2026-11-20T22:40:23+09:00"
+    },
+    {
+      "name": "preflight_done",
+      "status": "failed",
+      "startedAt": "2026-11-20T22:40:24+09:00",
+      "finishedAt": "2026-11-20T22:41:01+09:00",
+      "errorCode": "DATA_CONTRACT_CONFLICT",
+      "errorMessage": "22:40 is not in validator SLOTS; operational JSON was not modified."
     }
-  ]
+  ],
+  "completedAt": "2026-11-20T22:41:01+09:00",
+  "failedStep": "calendar_session_check",
+  "preflight": {
+    "slotAllowed": false,
+    "isKrxTradingDay": true,
+    "requestedSlot": "22:40",
+    "allowedSlots": [
+      "06:40",
+      "08:40",
+      "12:40",
+      "15:40",
+      "19:40"
+    ],
+    "marketBriefingSha": "63d0edc09222c2d3470262da473c1313fff59200",
+    "protocolSha": "1df59f399e8e0afbb17492c2fe1e961c52d7caca",
+    "validatorSha": "36f63ede9b2b009d6d4312f8aa2ab56641fc9e44",
+    "retainedDates": [
+      "2026-11-20",
+      "2026-11-19"
+    ]
+  }
 }
