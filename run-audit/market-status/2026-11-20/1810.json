@@ -5,11 +5,11 @@
   "slot": "18:10",
   "scheduledFor": "2026-11-20T18:10:00+09:00",
   "startedAt": "2026-11-20T18:08:37+09:00",
-  "updatedAt": "2026-11-20T09:08:48.585Z",
+  "updatedAt": "2026-11-20T09:08:57.053Z",
   "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "phase": "preflight_done",
+  "lastCompletedStep": "preflight_done",
+  "nextStep": "market_collection",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -24,6 +24,12 @@
       "status": "success",
       "startedAt": "2026-11-20T18:08:37+09:00",
       "finishedAt": "2026-11-20T09:08:48.585Z"
+    },
+    {
+      "name": "preflight_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T09:08:57.053Z",
+      "details": "KRX Friday regular close; scope KR; slot 18:10; policy and index fetched"
     }
   ]
 }
