@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "feed": "market-status",
+  "date": "2026-11-20",
+  "slot": "13:10",
+  "scheduledFor": "2026-11-20T13:10:00+09:00",
+  "startedAt": "2026-11-20T13:13:26+09:00",
+  "finishedAt": "2026-11-20T13:14:29.355+09:00",
+  "status": "published",
+  "failedStep": null,
+  "errorCode": null,
+  "errorMessage": null,
+  "steps": [
+    {
+      "name": "run_start",
+      "status": "success",
+      "startedAt": "2026-11-20T13:13:26+09:00",
+      "finishedAt": "2026-11-20T13:13:26+09:00"
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-20T13:13:26+09:00",
+      "finishedAt": "2026-11-20T13:14:29.355+09:00",
+      "notes": "KRX Friday regular session; session time 09:00-15:30"
+    },
+    {
+      "name": "kr_market_collection",
+      "status": "partial",
+      "startedAt": "2026-11-20T13:13:26+09:00",
+      "finishedAt": "2026-11-20T13:14:29.355+09:00",
+      "counts": {
+        "verifiedIndices": 2,
+        "verifiedInvestorFlowMarkets": 2
+      },
+      "sources": [
+        "https://www.newstnt.com/news/articleView.html?idxno=729488",
+        "https://view.asiae.co.kr/article/2026112009484686125"
+      ],
+      "notes": "Latest verified index/flows observed 11:24; 13:10 exact snapshot unavailable"
+    },
+    {
+      "name": "source_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T13:13:26+09:00",
+      "finishedAt": "2026-11-20T13:14:29.355+09:00"
+    },
+    {
+      "name": "payload_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T13:14:19+09:00",
+      "finishedAt": "2026-11-20T13:14:29.355+09:00"
+    },
+    {
+      "name": "github_publish",
+      "status": "success",
+      "startedAt": "2026-11-20T13:14:19+09:00",
+      "finishedAt": "2026-11-20T13:14:29.355+09:00"
+    },
+    {
+      "name": "remote_readback",
+      "status": "success",
+      "startedAt": "2026-11-20T13:14:19+09:00",
+      "finishedAt": "2026-11-20T13:14:29.355+09:00"
+    }
+  ],
+  "publication": {
+    "attempted": true,
+    "success": true,
+    "commitSha": "e5d8955c77f2cdeb764339a43b92043cf4423a67",
+    "paths": [
+      "market-status/2026-11-20.json",
+      "market-status/index.json"
+    ],
+    "readbackVerified": true
+  }
+}
