@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "feed": "news",
+  "date": "2026-11-20",
+  "slot": "13:40",
+  "scheduledFor": "2026-11-20T13:40:00+09:00",
+  "startedAt": "2026-11-20T13:40:34+09:00",
+  "finishedAt": "2026-11-20T13:42:03+09:00",
+  "status": "published",
+  "failedStep": null,
+  "errorCode": null,
+  "errorMessage": null,
+  "steps": [
+    {
+      "name": "run_start",
+      "status": "success",
+      "startedAt": "2026-11-20T13:40:34+09:00",
+      "finishedAt": "2026-11-20T13:40:34+09:00"
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-20T13:40:34+09:00",
+      "finishedAt": "2026-11-20T13:40:56+09:00",
+      "sources": [
+        "https://apnews.com/article/c4c3f4878b12989347f8a930ed813dad"
+      ],
+      "counts": {
+        "krxTradingDayEvidence": 1
+      }
+    },
+    {
+      "name": "source_collection",
+      "status": "success",
+      "startedAt": "2026-11-20T13:40:56+09:00",
+      "finishedAt": "2026-11-20T13:41:25+09:00",
+      "sources": [
+        "https://www.reuters.com/world/uk/britain-eu-set-agree-reset-but-divisions-persist-2026-11-20/",
+        "https://www.reuters.com/business/energy/oil-prices-edge-higher-houthi-attacks-riyadh-raise-supply-concerns-2026-11-20/",
+        "https://samara.kr/today"
+      ],
+      "counts": {
+        "reviewedCandidates": 4
+      }
+    },
+    {
+      "name": "foreign_search",
+      "status": "success",
+      "startedAt": "2026-11-20T13:40:56+09:00",
+      "finishedAt": "2026-11-20T13:41:25+09:00",
+      "sources": [
+        "https://www.reuters.com/world/uk/britain-eu-set-agree-reset-but-divisions-persist-2026-11-20/",
+        "https://www.reuters.com/business/energy/oil-prices-edge-higher-houthi-attacks-riyadh-raise-supply-concerns-2026-11-20/"
+      ],
+      "counts": {
+        "selected": 0,
+        "duplicates": 2,
+        "otherExcluded": 1
+      }
+    },
+    {
+      "name": "domestic_search",
+      "status": "success",
+      "startedAt": "2026-11-20T13:40:56+09:00",
+      "finishedAt": "2026-11-20T13:41:25+09:00",
+      "sources": [
+        "https://samara.kr/today",
+        "https://kind.krx.co.kr/?k=real"
+      ],
+      "counts": {
+        "selected": 0,
+        "duplicates": 0
+      }
+    },
+    {
+      "name": "analysis",
+      "status": "success",
+      "startedAt": "2026-11-20T13:41:25+09:00",
+      "finishedAt": "2026-11-20T13:41:35+09:00",
+      "counts": {
+        "foreignSelected": 0,
+        "domesticSelected": 0
+      }
+    },
+    {
+      "name": "dedup_ranking",
+      "status": "success",
+      "startedAt": "2026-11-20T13:41:25+09:00",
+      "finishedAt": "2026-11-20T13:41:38+09:00",
+      "counts": {
+        "duplicatesExcluded": 2
+      }
+    },
+    {
+      "name": "payload_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T13:41:38+09:00",
+      "finishedAt": "2026-11-20T13:41:45+09:00",
+      "counts": {
+        "validationErrors": 0,
+        "retainedDates": 2
+      }
+    },
+    {
+      "name": "github_publish",
+      "status": "success",
+      "startedAt": "2026-11-20T13:41:45+09:00",
+      "finishedAt": "2026-11-20T13:41:55+09:00",
+      "counts": {
+        "filesUpdated": 1
+      }
+    },
+    {
+      "name": "remote_readback",
+      "status": "success",
+      "startedAt": "2026-11-20T13:41:55+09:00",
+      "finishedAt": "2026-11-20T13:42:03+09:00",
+      "counts": {
+        "matchedFiles": 1
+      }
+    }
+  ],
+  "publication": {
+    "attempted": true,
+    "success": true,
+    "commitSha": "92f7b398a232a4069e926b1e848247c8e7ff0b46",
+    "paths": [
+      "market-briefing.json"
+    ],
+    "readbackVerified": true
+  }
+}
