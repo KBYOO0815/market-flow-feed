@@ -1,7 +1,7 @@
 """Read-only audit of session-aware KRX/NXT featured-stock price calculations.
 
 Denominator: previous KRX regular close for every session.
-Numerator: PRE=NXT trade, REGULAR=KRX trade/close, AFTER=KRX/NXT after trade.
+Numerator: PRE=NXT trade, REGULAR=KRX trade/close, 20:10=NXT AFTER > KRX AFTER > KRX regular close fallback.
 This is post-publication detection, not a pre-commit gate or live quote verification.
 Legacy editions before 2026-11-19 did not carry session-source metadata.
 """
@@ -95,14 +95,25 @@ def validate(day):
             if slot in ("09:40", "11:40", "13:40", "15:40") and market != "KRX":
                 problems.append("{} {} regular price must be KRX".format(slot, code))
             if slot == "20:10" and market not in ("KRX", "NXT"):
-                problems.append("{} AFTER source market missing".format(code))
+                problems.append("{} 20:10 source market missing".format(code))
             observed = parse_instant(row.get("priceObservedAt"))
             if observed is None or observed.date().isoformat() != date:
                 problems.append("{} {} priceObservedAt absent or wrong date".format(slot, code))
             elif slot == "08:40" and not (time(8, 0) <= observed.time() <= time(8, 40)):
                 problems.append("{} PRE trade outside pre-publication window".format(code))
-            elif slot == "20:10" and not (time(15, 40) <= observed.time() <= time(20, 0)):
-                problems.append("{} AFTER trade outside after-market window".format(code))
+            elif slot == "20:10":
+                row_session = row.get("priceSession")
+                if row_session == "AFTER":
+                    if not (time(15, 30) < observed.time() <= time(20, 0)):
+                        problems.append("{} AFTER trade outside after-market window".format(code))
+                elif row_session == "REGULAR":
+                    if market != "KRX":
+                        problems.append("{} regular-close fallback must be KRX".format(code))
+                    q = (row.get("quotes") or {}).get("KRX") or {}
+                    if q and not (q.get("session") == "REGULAR_CLOSE" and q.get("closeConfirmed") is True):
+                        problems.append("{} regular-close fallback is not verified".format(code))
+                else:
+                    problems.append("{} 20:10 priceSession must be AFTER or REGULAR".format(code))
     return problems
 
 
