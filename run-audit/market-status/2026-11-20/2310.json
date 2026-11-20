@@ -5,19 +5,20 @@
   "slot": "23:10",
   "scheduledFor": "2026-11-20T23:10:00+09:00",
   "startedAt": "2026-11-20T23:08:36+09:00",
-  "updatedAt": "2026-11-20T23:10:18+09:00",
-  "status": "failed",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
+  "updatedAt": "2026-11-20T23:31:35+09:00",
+  "status": "published",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
   "nextStep": null,
-  "errorCode": "GITHUB_WRITE_FAILED",
-  "errorMessage": "GitHub update_ref failed twice with GithubGraphQLAPIError: Something went wrong while executing your query; remote readback confirmed 23:10 edition absent.",
+  "errorCode": null,
+  "errorMessage": null,
   "publication": {
     "attempted": true,
-    "success": false,
-    "commitSha": null,
-    "readbackVerified": false,
-    "unappliedCommitSha": "060890b313d368d2d2a9d2fa90ca26d276d35d41"
+    "success": true,
+    "commitSha": "32578f3451c4f84859839631e97cd28ab91f6272",
+    "readbackVerified": true,
+    "recoveryIndexCommitSha": "0c3965458956614547c75640e9d80bcbb7d06cfa",
+    "recoveredFromUnappliedCommitSha": "060890b313d368d2d2a9d2fa90ca26d276d35d41"
   },
   "steps": [
     {
@@ -57,7 +58,31 @@
       "finishedAt": "2026-11-20T23:10:18+09:00",
       "errorCode": "GITHUB_WRITE_FAILED",
       "errorMessage": "GitHub update_ref failed twice with GithubGraphQLAPIError: Something went wrong while executing your query; remote readback confirmed 23:10 edition absent."
+    },
+    {
+      "name": "recovery_publication",
+      "status": "success",
+      "startedAt": "2026-11-20T23:31:35+09:00",
+      "finishedAt": "2026-11-20T23:31:35+09:00",
+      "details": "Recovered validated 23:10 edition from unapplied commit after original update_ref failure; merged into latest main via contents API."
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "startedAt": "2026-11-20T23:31:35+09:00",
+      "finishedAt": "2026-11-20T23:31:35+09:00",
+      "details": "Remote readback confirmed market-status/2026-11-20.json contains 23:10."
     }
   ],
-  "failedStep": "atomic_publication"
+  "failedStep": null,
+  "originalFailure": {
+    "status": "failed",
+    "phase": "validation_done",
+    "errorCode": "GITHUB_WRITE_FAILED",
+    "errorMessage": "GitHub update_ref failed twice with GithubGraphQLAPIError: Something went wrong while executing your query; remote readback confirmed 23:10 edition absent.",
+    "failedStep": "atomic_publication",
+    "unappliedCommitSha": "060890b313d368d2d2a9d2fa90ca26d276d35d41"
+  },
+  "finishedAt": "2026-11-20T23:31:35+09:00",
+  "completedAt": "2026-11-20T23:31:35+09:00"
 }
