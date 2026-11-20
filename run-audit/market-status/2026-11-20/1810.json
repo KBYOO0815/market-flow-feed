@@ -5,11 +5,11 @@
   "slot": "18:10",
   "scheduledFor": "2026-11-20T18:10:00+09:00",
   "startedAt": "2026-11-20T18:08:37+09:00",
-  "updatedAt": "2026-11-20T09:09:15.353Z",
+  "updatedAt": "2026-11-20T09:09:24.440Z",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "payload_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -37,6 +37,12 @@
       "finishedAt": "2026-11-20T09:09:15.353Z",
       "sourceCount": 3,
       "details": "2026-11-20 close confirmed via Asiae, News1, Hankyung; investor flow figures conflict across reports"
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T09:09:24.440Z",
+      "details": "Close unchanged since 17:10; Asiae later article gives conflicting investor flows vs earlier edition. Avoid treating flows as new movement; report discrepancies."
     }
   ]
 }
