@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20T01:40:37.435Z",
+  "updatedAt": "2026-11-20T02:45:06.314Z",
   "days": [
     {
       "date": "2026-11-20",
@@ -277,6 +277,28 @@
               "relatedStocks": [],
               "impactRank": 1,
               "category": "monetary_policy",
+              "region": "foreign"
+            }
+          ],
+          "domesticNews": [],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "usThemeStatus": "not_applicable"
+        },
+        {
+          "slot": "11:40",
+          "asOf": "2026-11-20T11:43:45+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261120-asia-ai-riskoff-selloff",
+              "title": "아시아 증시, AI 투자 우려에 2020년 이후 최악의 주간 낙폭",
+              "summary": "MSCI 아시아태평양 지수는 2.5% 하락해 주간 7% 내림세를 기록했고, 닛케이는 4.1%, 코스피는 4.7% 하락했다. 달러지수는 103.86으로 2025년 4월 이후 최고 수준 부근을 유지했다.",
+              "publishedAt": "2026-11-20T10:46:30+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-20/",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "market_snapshot",
               "region": "foreign"
             }
           ],
