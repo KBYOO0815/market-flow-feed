@@ -97,23 +97,45 @@ def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
         code=s['code'];k=km[code];n=nm.get(code)
         quote(k,date,asof,'KRX')
         if n: quote(n,date,asof,'NXT')
+        base=k.get('previousRegularClose')
+        comparison=copy.deepcopy(k.get('comparison',{'eligible':True,'basis':'KRX_PREVIOUS_REGULAR_CLOSE'}))
+        price_quote=k
         if slot=='20:10':
-            require(k['session']=='REGULAR_CLOSE' and k.get('closeConfirmed') is True,'20:10 requires verified KRX regular close')
-            require(not n or n['session']=='NXT_FINAL' and n.get('closeConfirmed') is True,'20:10 requires actual NXT final total')
+            require(k['session'] in ('REGULAR_CLOSE','KRX_AFTER_MARKET'),'20:10 KRX quote must be regular close or final after-market quote')
+            if k['session']=='REGULAR_CLOSE':
+                require(k.get('closeConfirmed') is True,'20:10 requires verified KRX regular close when no KRX after quote exists')
+            else:
+                require(k.get('finalConfirmed') is True,'20:10 KRX after-market quote must be final')
+            if n:
+                require(n['session']=='NXT_FINAL' and n.get('finalConfirmed') is True,'20:10 requires verified NXT final quote')
+            after_quotes=[q for q in (k,n) if q and q.get('session') in ('KRX_AFTER_MARKET','NXT_FINAL')
+                          and q.get('finalConfirmed') is True and q.get('price') is not None]
+            if after_quotes:
+                price_quote=max(after_quotes,key=lambda q:(stamp(q['observedAt']),q.get('market')=='NXT'))
+            else:
+                price_quote=None
+                comparison={'eligible':False,'basis':'NO_AFTER_MARKET_TRADE',
+                    'explanation':'20:10 회차: 검증된 당일 애프터마켓 체결가가 없어 상승률 비교에서 제외'}
         else:
             require(k['session'] in ('REGULAR_MARKET','REGULAR_CLOSE') or slot=='15:40' and k['session']=='KRX_AFTER_MARKET','unrecognized price session for original slot')
-        base=k.get('previousRegularClose');price=k.get('price')
-        comparison=k.get('comparison',{'eligible':True,'basis':'KRX_PREVIOUS_REGULAR_CLOSE'})
+        price=price_quote.get('price') if price_quote else None
         if comparison.get('eligible'):
-            require(comparison.get('basis') in ('KRX_PREVIOUS_REGULAR_CLOSE','OFFICIAL_NEW_LISTING_REFERENCE') and https(k.get('priceSourceUrl')),'verified price comparison required')
+            require(comparison.get('basis') in ('KRX_PREVIOUS_REGULAR_CLOSE','OFFICIAL_NEW_LISTING_REFERENCE'),'verified price comparison required')
+            require(price_quote is not None and https(price_quote.get('priceSourceUrl')),'verified price source required')
             require(num(base)>0 and num(price)>0,'positive base/current price required')
             if comparison['basis']=='OFFICIAL_NEW_LISTING_REFERENCE':require(comparison.get('explanation') and https(comparison.get('sourceUrl')),'listing reference evidence required')
             rate=float(((num(price)/num(base)-1)*100).quantize(Decimal('.000001'),rounding=ROUND_HALF_UP))
         else:
             require(comparison.get('explanation'),'missing comparison explanation');rate=None
+        price_market=price_quote.get('market') if price_quote else None
+        price_session='AFTER' if slot=='20:10' and price_quote else ('REGULAR' if slot!='20:10' else None)
         rows.append({**s,'krxTradeAmount':k['turnover'],'nxtTradeAmount':n['turnover'] if n else 0,
-            'integratedTradeAmount':k['turnover']+(n['turnover'] if n else 0),'changeRate':rate,'rateMarket':'KRX',
-            'previousRegularClose':base,'price':price,'comparison':comparison,'quotes':{'KRX':k,**({'NXT':n} if n else {})},
+            'integratedTradeAmount':k['turnover']+(n['turnover'] if n else 0),'changeRate':rate,'rateMarket':price_market,
+            'previousRegularClose':base,'price':price,'comparison':comparison,
+            'priceMarket':price_market,'priceSession':price_session,
+            'priceObservedAt':price_quote.get('observedAt') if price_quote else None,
+            'priceSourceUrl':price_quote.get('priceSourceUrl') if price_quote else None,
+            'quotes':{'KRX':k,**({'NXT':n} if n else {})},
             **({'zeroNxtEvidence':{'sourceUrl':coverage['sourceUrl'],'tradeDate':date,'reason':'공식 전체 NXT 거래대상 미포함'}} if not n else {})})
     rows.sort(key=lambda s:(-s['integratedTradeAmount'],s['code']))
     require(len(rows)>=100,'fewer than 100 eligible stocks')
@@ -121,7 +143,7 @@ def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
         require(rows[99]['integratedTradeAmount']>coverage['boundaryUpperBound'],'Top100 boundary not proven: T100 must exceed K100 + N100')
     for i,s in enumerate(rows[:100],1):
         s['turnoverRank']=i
-        require(s['comparison'].get('eligible') or s['comparison'].get('basis')=='UNAVAILABLE_NEW_LISTING','Top100 price comparison not verified')
+        require(s['comparison'].get('eligible') or s['comparison'].get('basis') in ('UNAVAILABLE_NEW_LISTING','NO_AFTER_MARKET_TRADE'),'Top100 price comparison not verified')
         if slot!='20:10':
             require(asof-stamp(s['quotes']['KRX']['observedAt'])<=dt.timedelta(minutes=15) or s['quotes']['KRX'].get('closeConfirmed') is True,'stale selected KRX quote')
             require('NXT' not in s['quotes'] or asof-stamp(s['quotes']['NXT']['observedAt'])<=dt.timedelta(minutes=15),'stale selected NXT quote')
