@@ -64,8 +64,20 @@ class MarketBriefingTest(unittest.TestCase):
         result = merge(current, draft(), TODAY)
         self.assertNotIn('researchState', result)
 
-    def test_closed_day_slot_rejected(self):
+    def test_closed_day_intraday_slot_rejected(self):
         d = draft('08:40')
+        d['isKrxTradingDay'] = False
+        with self.assertRaises(ValueError):
+            merge(empty(), d, TODAY)
+
+    def test_closed_day_2240_accepted(self):
+        d = draft('22:40')
+        d['isKrxTradingDay'] = False
+        result = merge(empty(), d, TODAY)
+        self.assertEqual(result['days'][0]['sessions'][0]['slot'], '22:40')
+
+    def test_closed_day_1940_rejected(self):
+        d = draft('19:40')
         d['isKrxTradingDay'] = False
         with self.assertRaises(ValueError):
             merge(empty(), d, TODAY)
@@ -113,10 +125,19 @@ class MarketBriefingTest(unittest.TestCase):
         close = result['days'][0]['sessions'][0]['marketClose']
         self.assertEqual(close['kospi']['close'], 2500.12)
 
-    def test_1540_requires_market_close(self):
+    def test_1540_general_news_accepted_without_market_close(self):
         d = draft('15:40')
-        with self.assertRaises(ValueError):
-            merge(empty(), d, TODAY)
+        result = merge(empty(), d, TODAY)
+        self.assertEqual(result['days'][0]['sessions'][0]['slot'], '15:40')
+        self.assertIsNone(result['days'][0]['sessions'][0].get('marketClose'))
+
+    def test_all_current_news_slots_accepted_on_trading_day(self):
+        slots = ('06:40','07:40','08:40','09:40','10:40','11:40','12:40','13:40',
+                 '14:40','15:40','16:40','17:40','18:40','19:40','22:40')
+        current = empty()
+        for slot in slots:
+            current = merge(current, draft(slot), TODAY)
+        self.assertEqual([x['slot'] for x in current['days'][0]['sessions']], list(slots))
 
     def test_market_close_rejected_outside_1540(self):
         d = draft('12:40')
