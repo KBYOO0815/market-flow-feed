@@ -1,7 +1,135 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20T19:43:00+09:00",
+  "updatedAt": "2026-11-21T06:47:56.323603+09:00",
   "days": [
+    {
+      "date": "2026-11-21",
+      "isKrxTradingDay": false,
+      "sessions": [
+        {
+          "slot": "06:40",
+          "asOf": "2026-11-21T06:43:10+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261121-us-market-ai-selloff-close",
+              "title": "나스닥 5.3%·SOX 11% 급락…AI 재평가와 엔비디아 조사 충격",
+              "summary": "미국 정규장에서 나스닥은 5.3%, S&P500은 3.7% 하락했고 반도체지수는 11% 내렸다. 엔비디아는 14%, 앤트로픽은 9% 하락했으며 변동성지수는 33% 급등한 37, 미 10년물 금리는 12bp 내린 4.93%를 기록했다.",
+              "publishedAt": "2026-11-21T06:17:37+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/view-nasdaq-plunges-5-day-after-anthropic-debut-investors-still-believe-ai-2026-11-20/",
+              "relatedStocks": [
+                "엔비디아(NVDA)",
+                "앤트로픽(ANT)",
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ],
+              "impactRank": 1,
+              "category": "미국증시·AI·반도체",
+              "region": "foreign"
+            },
+            {
+              "id": "foreign-20261121-nvidia-sec-accounting-probe",
+              "title": "미 SEC, 엔비디아 잠재 회계 문제 조사…주가 14% 급락",
+              "summary": "Reuters는 복수 소식통을 인용해 미국 증권거래위원회 집행부가 엔비디아의 잠재적 회계 문제를 들여다보고 있다고 보도했다. SEC는 논평을 거부했고 엔비디아는 즉시 답하지 않았으며, 조사는 위법 확정을 뜻하지 않는다.",
+              "publishedAt": "2026-11-21T04:13:43+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/us-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say-2026-11-20/",
+              "relatedStocks": [
+                "엔비디아(NVDA)",
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ],
+              "impactRank": 2,
+              "category": "AI반도체·규제조사",
+              "region": "foreign"
+            },
+            {
+              "id": "foreign-20261121-trump-overseas-datacenter-tax",
+              "title": "트럼프, 해외 데이터센터 짓는 미국 기업에 고율 과세 방침 언급",
+              "summary": "도널드 트럼프 미국 대통령은 미국 기업의 해외 데이터센터 건설을 허용하지 않겠다며 해외 건설 기업에 '엄청난 세금'을 부과하겠다고 말했다. 구체적인 시행 방식이나 시점은 제시하지 않았다.",
+              "publishedAt": "2026-11-21T03:20:00+09:00",
+              "sourceName": "Reuters·Investing.com",
+              "sourceUrl": "https://www.investing.com/news/world-news/trump-says-us-to-penalize-firms-building-data-centers-abroad-5042390",
+              "relatedStocks": [
+                "에퀴닉스(EQIX)",
+                "디지털리얼티(DLR)"
+              ],
+              "impactRank": 3,
+              "category": "미국정책·AI데이터센터",
+              "region": "foreign"
+            },
+            {
+              "id": "foreign-20261121-fed-cook-more-rate-hikes",
+              "title": "연준 쿡, 추가 금리인상 주장…“현 정책금리로는 물가 대응 부족”",
+              "summary": "리사 쿡 연준 이사는 현재 정책금리가 우려하는 물가 수준을 낮추기에 충분히 높지 않다며 추가 인상을 주장했다. 9월의 25bp 인상만으로는 부족했고 최근 물가 지표도 지속적인 둔화를 확신시키지 못했다고 밝혔다.",
+              "publishedAt": "2026-11-21T02:25:00+09:00",
+              "sourceName": "Reuters·코리아타임스",
+              "sourceUrl": "https://www.koreatimes.co.kr/world/20261121/feds-cook-says-rate-hikes-needed-to-lower-high-inflation",
+              "relatedStocks": [],
+              "impactRank": 4,
+              "category": "연준·금리·물가",
+              "region": "foreign"
+            },
+            {
+              "id": "foreign-20261121-bessent-h200-china-policy",
+              "title": "베선트 “중국 H200 판매 허용 정책 변화 없어…원격 접근은 제한”",
+              "summary": "스콧 베선트 미국 재무장관은 CNBC 인터뷰에서 H200이 중국에 허가 판매할 수 있는 상한선이라는 정책은 유지된다고 밝혔다. 중국의 주문은 많지 않다고 평가하면서도 적절한 반도체 제한과 원격 컴퓨팅 접근 제한은 시행될 것이라고 말했다.",
+              "publishedAt": "2026-11-21T04:19:00+09:00",
+              "sourceName": "CNBC·SBS",
+              "sourceUrl": "https://news.sbs.co.kr/amp/news.amp?news_id=N1008856567",
+              "relatedStocks": [
+                "엔비디아(NVDA)",
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ],
+              "impactRank": 5,
+              "category": "미중 반도체·수출통제",
+              "region": "foreign"
+            },
+            {
+              "id": "foreign-20261121-bitcoin-below-60000",
+              "title": "비트코인 6만달러 하회…7월 이후 처음",
+              "summary": "비트코인은 위험자산 매도 속에 7월 이후 처음 6만달러 아래로 내려 Reuters 관측 시점 5만9,381달러로 3.45% 하락했다. 이더리움도 1,648.91달러로 5.23% 내렸다.",
+              "publishedAt": "2026-11-21T00:51:50+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/technology/bitcoin-falls-below-60000-level-2026-11-20/",
+              "relatedStocks": [],
+              "impactRank": 6,
+              "category": "가상자산·위험선호",
+              "region": "foreign"
+            }
+          ],
+          "domesticNews": [],
+          "usThemes": [
+            {
+              "direction": "down",
+              "theme": "AI·반도체 위험회피 급락",
+              "reason": "엔비디아의 회계 관련 SEC 조사 보도와 AI 투자·밸류에이션 재평가가 겹치며 엔비디아가 14%, 앤트로픽이 9% 하락하고 필라델피아 반도체지수가 11% 급락했다.",
+              "stocks": [
+                {
+                  "ticker": "NVDA",
+                  "companyName": "Nvidia",
+                  "regularChangePct": -14.0,
+                  "sourceUrl": "https://www.reuters.com/business/view-nasdaq-plunges-5-day-after-anthropic-debut-investors-still-believe-ai-2026-11-20/"
+                },
+                {
+                  "ticker": "ANT",
+                  "companyName": "Anthropic",
+                  "regularChangePct": -9.0,
+                  "sourceUrl": "https://www.reuters.com/business/view-nasdaq-plunges-5-day-after-anthropic-debut-investors-still-believe-ai-2026-11-20/"
+                }
+              ],
+              "relatedKoreanStocks": [
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ]
+            }
+          ],
+          "researchStatus": "complete",
+          "usThemeStatus": "verified_themes"
+        }
+      ]
+    },
     {
       "date": "2026-11-20",
       "isKrxTradingDay": true,
@@ -539,319 +667,6 @@
               ],
               "impactRank": 10,
               "category": "바이오·공급계약",
-              "region": "domestic"
-            }
-          ],
-          "usThemes": [],
-          "researchStatus": "complete",
-          "usThemeStatus": "not_applicable"
-        }
-      ]
-    },
-    {
-      "date": "2026-11-19",
-      "isKrxTradingDay": true,
-      "sessions": [
-        {
-          "slot": "06:40",
-          "asOf": "2026-11-19T06:43:36+09:00",
-          "foreignNews": [
-            {
-              "id": "20261119-0640-fomc-oct-minutes",
-              "title": "FOMC 의사록, 추가 금리인상 가능성 시사…일부는 25bp 초과도 거론",
-              "summary": "10월 27~28일 FOMC 의사록에서 거의 모든 참석자는 기본 전망이 유지되면 추가 금리인상이 적절할 가능성이 크다고 판단했다. 일부 참석자는 향후 물가 지표가 불리할 경우 12월에 25bp를 넘는 인상도 검토할 수 있다고 밝혔다.",
-              "publishedAt": "2026-11-19T04:00:00+09:00",
-              "sourceName": "미국 연방준비제도",
-              "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
-              "relatedStocks": [],
-              "impactRank": 1,
-              "category": "미국 통화정책",
-              "region": "foreign"
-            },
-            {
-              "id": "20261119-0640-fed-barr-economic-outlook",
-              "title": "연준 바 이사, 전망대로면 추가 금리인상이 적절하다고 평가",
-              "summary": "마이클 바 연준 이사는 미국 경제와 고용이 견조하지만 물가는 여전히 너무 높다며, 경제가 자신의 전망대로 전개될 경우 물가를 2%로 되돌리기 위해 금리를 더 올리는 것이 적절하다고 밝혔다.",
-              "publishedAt": "2026-11-19T03:00:00+09:00",
-              "sourceName": "미국 연방준비제도",
-              "sourceUrl": "https://www.federalreserve.gov/newsevents/speech/barr20261118a.htm",
-              "relatedStocks": [],
-              "impactRank": 2,
-              "category": "미국 통화정책·연준 발언",
-              "region": "foreign"
-            },
-            {
-              "id": "20261119-0640-newsmax-fox-roku-lawsuit",
-              "title": "Newsmax, Fox의 220억달러 Roku 인수 무효화 요구 소송",
-              "summary": "Newsmax는 Fox의 220억달러 Roku 인수가 무료 광고형 스트리밍 시장 경쟁을 훼손한다고 주장하며 캘리포니아 연방법원에 소송을 제기했다. Roku 통합 중단과 거래 무효화 또는 Tubi·Roku Channel 중 하나의 매각을 요구했으며, 이는 원고 측 주장으로 법원 판단은 아직 나오지 않았다.",
-              "publishedAt": "2026-11-19T03:00:00+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/legal/transactional/newsmax-sues-fox-unwind-22-billion-roku-takeover-2026-11-18",
-              "relatedStocks": [
-                "Fox(FOX)",
-                "Roku(ROKU)",
-                "Newsmax(NMAX)"
-              ],
-              "impactRank": 3,
-              "category": "미디어 M&A·반독점",
-              "region": "foreign"
-            }
-          ],
-          "domesticNews": [
-            {
-              "id": "20261119-0640-fss-overseas-realestate",
-              "title": "금융권 해외부동산 투자 55.6조원…부실우려 규모 2.64조원으로 증가",
-              "summary": "금융감독원 발표 기준 2026년 6월 말 국내 금융회사의 해외 부동산 대체투자 잔액은 55조6000억원으로 지난해 말보다 3000억원 감소했지만, 기한이익상실(EOD) 사유가 발생한 규모는 2조6400억원으로 5600억원 증가했다.",
-              "publishedAt": "2026-11-19T06:00:00+09:00",
-              "sourceName": "뉴시스",
-              "sourceUrl": "https://www.newsis.com/view/NISX20261118_0003873776",
-              "relatedStocks": [],
-              "impactRank": 1,
-              "category": "금융권 리스크·해외부동산",
-              "region": "domestic"
-            },
-            {
-              "id": "20261119-0640-xiaomi-korea-ev-trademark",
-              "title": "샤오미, 한국서 SU7·YU7 등 전기차 상표권 출원",
-              "summary": "대한민국 지식재산처에 따르면 샤오미는 한국에서 SU7·SU7 울트라·YU7 상표권을 출원했으며, 한국 법인의 사업 목적에도 자동차·자동차 부품 수입 및 도소매업이 포함돼 있다. 국내 자동차·전기차 시장 진입 준비 가능성이 주목된다.",
-              "publishedAt": "2026-11-19T05:00:00+09:00",
-              "sourceName": "뉴시스",
-              "sourceUrl": "https://www.newsis.com/view/NISX20261118_0003873836",
-              "relatedStocks": [],
-              "impactRank": 2,
-              "category": "자동차·전기차",
-              "region": "domestic"
-            }
-          ],
-          "usThemes": [
-            {
-              "direction": "up",
-              "theme": "미국 유통·소매 실적 강세",
-              "reason": "TJX는 3분기 동일점포매출 4% 증가와 계획을 웃돈 이익을 발표했고 Target도 분기 실적과 연간 전망 상향을 내놓으면서 두 종목이 정규장에서 동반 강세를 보였다.",
-              "stocks": [
-                {
-                  "ticker": "TJX",
-                  "companyName": "TJX Companies",
-                  "regularChangePct": 10.77,
-                  "sourceUrl": "https://www.chartmill.com/news/UNH/Chartmill-58892-SP-500-Unusual-Volume-Movers-Nov-18-2026"
-                },
-                {
-                  "ticker": "TGT",
-                  "companyName": "Target",
-                  "regularChangePct": 6.99,
-                  "sourceUrl": "https://www.chartmill.com/news/UNH/Chartmill-58892-SP-500-Unusual-Volume-Movers-Nov-18-2026"
-                }
-              ],
-              "relatedKoreanStocks": []
-            },
-            {
-              "direction": "down",
-              "theme": "AI 인프라·반도체 실적 소화 약세",
-              "reason": "Nvidia의 강한 실적 발표 뒤 장전 상승이 정규장에서 반전됐고, AI 인프라 업체 CoreWeave도 함께 하락했다. 매파적인 FOMC 의사록 공개 이후 장기 성장주의 금리 민감도가 다시 부각됐다.",
-              "stocks": [
-                {
-                  "ticker": "NVDA",
-                  "companyName": "Nvidia",
-                  "regularChangePct": -2.9,
-                  "sourceUrl": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-18-2026"
-                },
-                {
-                  "ticker": "CRWV",
-                  "companyName": "CoreWeave",
-                  "regularChangePct": -4.13,
-                  "sourceUrl": "https://finance.yahoo.com/quote/CRWV"
-                }
-              ],
-              "relatedKoreanStocks": [
-                "SK하이닉스(000660)",
-                "삼성전자(005930)"
-              ]
-            }
-          ],
-          "researchStatus": "complete",
-          "usThemeStatus": "verified_themes"
-        },
-        {
-          "slot": "08:40",
-          "asOf": "2026-11-19T08:41:14+09:00",
-          "foreignNews": [],
-          "domesticNews": [
-            {
-              "id": "20261119-0840-korea-zinc-share-issuance-appeal",
-              "title": "고려아연, 신주발행무효 항소심 승소…1심 판결 취소",
-              "summary": "서울고등법원은 고려아연의 항소를 받아들여 1심 판결을 취소하고 신주발행무효 청구를 기각했다. 법원은 HMG 글로벌 대상 신주발행이 경영상 필요 범위에서 이뤄졌고 정관상 외국 합작법인 대상 제3자배정 요건에도 부합한다고 판단했다.",
-              "publishedAt": "2026-11-19T07:57:00+09:00",
-              "sourceName": "DART·한국거래소",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800002",
-              "relatedStocks": [
-                "고려아연(010130)"
-              ],
-              "impactRank": 1,
-              "category": "경영권 분쟁·법원 판결",
-              "region": "domestic"
-            },
-            {
-              "id": "20261119-0840-peptron-pt403-phase1-approval",
-              "title": "펩트론, 비만 치료제 PT403 국내 임상 1상 승인",
-              "summary": "펩트론은 식품의약품안전처가 비만 치료제 PT403의 임상 1상을 승인했다고 공시했다. 충남대병원에서 건강한 성인 22명을 대상으로 단회 피하 투여의 안전성·내약성·약동학을 평가하며 예상 종료일은 2027년 11월 30일이다.",
-              "publishedAt": "2026-11-19T07:49:00+09:00",
-              "sourceName": "DART·한국거래소",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119900001",
-              "relatedStocks": [
-                "펩트론(087010)"
-              ],
-              "impactRank": 2,
-              "category": "바이오·임상",
-              "region": "domestic"
-            },
-            {
-              "id": "20261119-0840-korea-zinc-director-injunction",
-              "title": "영풍 측, 고려아연 임원 6명 직무정지 가처분 신청",
-              "summary": "영풍·한국기업투자홀딩스·와이피씨는 고려아연 임원 6명을 상대로 이사·감사위원 직무집행정지와 직무대행자 선임을 요구하는 가처분을 신청했다. 신청 목적물 가액은 2억원이며 법원의 결정은 아직 나오지 않았다.",
-              "publishedAt": "2026-11-19T07:57:00+09:00",
-              "sourceName": "DART·한국거래소",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800003",
-              "relatedStocks": [
-                "고려아연(010130)",
-                "영풍(000670)"
-              ],
-              "impactRank": 3,
-              "category": "경영권 분쟁·가처분",
-              "region": "domestic"
-            }
-          ],
-          "usThemes": [],
-          "researchStatus": "complete",
-          "usThemeStatus": "not_applicable"
-        },
-        {
-          "slot": "12:40",
-          "asOf": "2026-11-19T12:38:51+09:00",
-          "foreignNews": [
-            {
-              "id": "20261119-1240-imf-global-inflation-tightening",
-              "title": "IMF 총재, 글로벌 물가 4.7%로 가속…다수 경제 통화긴축 필요",
-              "summary": "크리스탈리나 게오르기에바 IMF 총재는 에너지 공급 충격과 AI 수요가 세계 물가상승률을 4.7%로 끌어올리고 있다며 여러 경제에서 통화정책 긴축이 필요하다고 APEC 정상회의에서 밝혔다.",
-              "publishedAt": "2026-11-19T11:43:00+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/global-inflation-calls-monetary-policy-tightening-many-economies-imf-head-says-2026-11-19/",
-              "relatedStocks": [],
-              "impactRank": 1,
-              "category": "글로벌 물가·통화정책",
-              "region": "foreign"
-            },
-            {
-              "id": "20261119-1240-houthi-riyadh-missile",
-              "title": "후티 미사일 위협에 리야드 파편 피해…홍해 인근 긴장 재고조",
-              "summary": "사우디 주도 연합군은 예멘 후티가 리야드를 향해 발사한 미사일 위협에 대응했으며 파편 낙하로 물적 피해가 발생했다고 밝혔다. 후티가 바브엘만데브 해협 인근으로 진격한 뒤 사우디 공항·항만·석유시설 공격을 늘리면서 에너지·해운 위험이 커졌다.",
-              "publishedAt": "2026-11-19T12:19:00+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/middle-east/houthi-missile-threat-towards-riyadh-causes-damage-saudi-led-coalition-says-2026-11-19/",
-              "relatedStocks": [],
-              "impactRank": 2,
-              "category": "중동 지정학·에너지·해운",
-              "region": "foreign"
-            },
-            {
-              "id": "20261119-1240-boj-ueda-rate-hikes",
-              "title": "우에다 BOJ 총재, 소비 회복 전망하며 추가 금리인상 기조 재확인",
-              "summary": "우에다 가즈오 일본은행 총재는 3분기 소비 둔화가 예상 범위였고 임금 상승으로 소비가 완만한 증가세를 회복할 것이라고 밝혔다. 엔화 약세의 물가 상방 위험을 경계하며 금융여건이 여전히 완화적이어서 금리를 계속 올릴 방침을 재확인했다.",
-              "publishedAt": "2026-11-19T10:34:00+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/markets/us/boj-governor-ueda-says-financial-conditions-loose-despite-rate-hikes-2026-11-19/",
-              "relatedStocks": [],
-              "impactRank": 3,
-              "category": "일본 통화정책·환율",
-              "region": "foreign"
-            },
-            {
-              "id": "20261119-1240-japan-machinery-orders-sep",
-              "title": "일본 9월 핵심 기계수주 0.3% 감소…4분기 4.3% 증가 전망",
-              "summary": "일본 내각부는 선박·전력을 제외한 민간 핵심 기계수주가 9월 전월 대비 0.3% 감소했다고 발표했다. 7~9월에는 전분기 대비 1.2% 늘었고 10~12월에는 4.3% 증가할 것으로 전망했다.",
-              "publishedAt": "2026-11-19T08:50:00+09:00",
-              "sourceName": "일본 내각부 경제사회종합연구소",
-              "sourceUrl": "https://www.esri.cao.go.jp/en/stat/juchu/2026/2609juchu-e.html",
-              "relatedStocks": [],
-              "impactRank": 4,
-              "category": "일본 설비투자·거시경제",
-              "region": "foreign"
-            }
-          ],
-          "domesticNews": [
-            {
-              "id": "20261119-1240-korea-iip-q3",
-              "title": "3분기 순대외금융자산 3,448억달러…역대 최대폭 증가",
-              "summary": "한국은행에 따르면 3분기 말 순대외금융자산은 3,448억달러로 전분기보다 2,807억달러 증가했다. 대외금융자산은 3조2,221억달러, 대외금융부채는 2조8,774억달러였고, 순대외채권은 4,168억달러로 490억달러 늘었다.",
-              "publishedAt": "2026-11-19T12:00:00+09:00",
-              "sourceName": "한국은행·뉴스핌",
-              "sourceUrl": "https://newspim.com/news/view/20261119000615",
-              "relatedStocks": [],
-              "impactRank": 1,
-              "category": "대외건전성·외환",
-              "region": "domestic"
-            },
-            {
-              "id": "20261119-1240-hanwha-ocean-vlcc-order",
-              "title": "한화오션, VLCC 2척 3,642억원 수주",
-              "summary": "한화오션은 오세아니아 지역 선주와 초대형 원유운반선(VLCC) 2척 건조 계약을 체결했다. 계약금액은 3,642억원으로 2025년 연결 매출의 2.8%이며 계약 종료일은 2029년 9월 30일이다.",
-              "publishedAt": "2026-11-19T10:08:00+09:00",
-              "sourceName": "DART·한국거래소",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800082",
-              "relatedStocks": [
-                "한화오션(042660)"
-              ],
-              "impactRank": 2,
-              "category": "조선·수주",
-              "region": "domestic"
-            },
-            {
-              "id": "20261119-1240-bok-won-appreciation",
-              "title": "한은 “원화 10% 절상 시 가구당 연 16.5만원 절감…내수기업 수익성 개선”",
-              "summary": "한국은행 분석은 원화 가치가 10% 오를 경우 가구당 연간 생활비가 평균 16만5천원 줄고, 동일 업종 내 내수기업 영업이익률이 수출기업보다 0.5%포인트 높아지는 것으로 추정했다. 이는 과거 자료를 이용한 추정 결과이며 전망치가 아니다.",
-              "publishedAt": "2026-11-19T12:00:00+09:00",
-              "sourceName": "한국은행·뉴스핌",
-              "sourceUrl": "https://newspim.com/news/view/20261119000504",
-              "relatedStocks": [],
-              "impactRank": 3,
-              "category": "환율·기업수익성·가계물가",
-              "region": "domestic"
-            },
-            {
-              "id": "20261119-1240-cs-wind-vestas-contract",
-              "title": "씨에스윈드, 미국 베스타스와 풍력타워 829억원 공급계약",
-              "summary": "씨에스윈드는 Vestas American Wind Technology와 829억2,129만원 규모의 풍력타워 공급계약을 체결했다. 최근 연결 매출의 2.8%이며 공급 지역은 미국, 계약 종료일은 2028년 4월 14일이다.",
-              "publishedAt": "2026-11-19T10:09:00+09:00",
-              "sourceName": "DART·한국거래소",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800079",
-              "relatedStocks": [
-                "씨에스윈드(112610)"
-              ],
-              "impactRank": 4,
-              "category": "풍력·수주",
-              "region": "domestic"
-            },
-            {
-              "id": "20261119-1240-savings-insurance-annuity",
-              "title": "저축성보험, 만기 후 최대 3년까지 연금 전환 허용",
-              "summary": "금융감독원과 생명보험협회는 12월부터 만기보험금을 받지 않은 저축성보험 계약의 연금 전환 신청기간을 만기 후 최대 3년까지 확대하고, 만기 1년 전부터 자동 전환을 예약할 수 있게 한다고 밝혔다.",
-              "publishedAt": "2026-11-19T12:00:00+09:00",
-              "sourceName": "금융감독원·뉴스1",
-              "sourceUrl": "https://www.news1.kr/finance/general-finance/6359283",
-              "relatedStocks": [],
-              "impactRank": 5,
-              "category": "보험제도·연금",
-              "region": "domestic"
-            },
-            {
-              "id": "20261119-1240-fintalk24-launch",
-              "title": "금융위, 850여개 지원사업 AI 추천 ‘핀톡24’ 20일 개시",
-              "summary": "금융위원회와 한국핀테크지원센터는 공공·민간 지원사업 850여개를 통합하고 사업계획서와 기업정보를 분석해 맞춤 사업을 추천하는 핀톡24 서비스를 20일부터 운영한다고 발표했다. 핀테크 외 일반기업도 창업·기술개발·투자유치 정보를 확인할 수 있다.",
-              "publishedAt": "2026-11-19T12:00:00+09:00",
-              "sourceName": "금융위원회·이투데이",
-              "sourceUrl": "https://www.etoday.co.kr/news/view/2650179",
-              "relatedStocks": [],
-              "impactRank": 6,
-              "category": "핀테크·기업지원",
               "region": "domestic"
             }
           ],
