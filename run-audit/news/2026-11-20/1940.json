@@ -5,11 +5,11 @@
   "slot": "19:40",
   "scheduledFor": "2026-11-20T19:40:00+09:00",
   "startedAt": "2026-11-20T19:38:45+09:00",
-  "updatedAt": "2026-11-20T19:44:00+09:00",
+  "updatedAt": "2026-11-20T19:45:40+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analyze_rank_deduplicate",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "schema_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -46,6 +46,17 @@
         "domesticCandidates": 22,
         "alternativeSearchUsed": true
       }
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "startedAt": "2026-11-20T19:44:01+09:00",
+      "finishedAt": "2026-11-20T19:45:40+09:00",
+      "details": {
+        "foreignSelected": 3,
+        "domesticSelected": 10,
+        "duplicateCheckScope": "2026-11-19 through 2026-11-20 published sessions"
+      }
     }
   ],
   "preflight": {
@@ -80,5 +91,18 @@
         "alternative": "OpenAI web search and direct source pages"
       }
     ]
+  },
+  "analysis": {
+    "selectedCounts": {
+      "foreign": 3,
+      "domestic": 10
+    },
+    "duplicatesExcluded": 0,
+    "importantExclusions": [
+      "모아라이프플러스 최대주주 정정: 기존 11월 12일 사건의 보유수량 확인 후속으로 우선순위 하위",
+      "엔켐 조회공시 요구: 회사 답변 전 미확정",
+      "HD한국조선해양 해명: 미확정"
+    ],
+    "selectionOrder": "Korean market impact, scale, certainty, novelty"
   }
 }
