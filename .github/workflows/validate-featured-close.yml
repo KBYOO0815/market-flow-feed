@@ -9,6 +9,7 @@ on:
       - 'scripts/test_check_featured_close.py'
       - 'scripts/featured_v3.py'
       - 'scripts/featured_naver_v3.py'
+      - 'scripts/featured_integrated.py'
       - 'scripts/test_featured_v3_after.py'
       - '.github/workflows/validate-featured-close.yml'
   pull_request:
@@ -19,6 +20,7 @@ on:
       - 'scripts/test_check_featured_close.py'
       - 'scripts/featured_v3.py'
       - 'scripts/featured_naver_v3.py'
+      - 'scripts/featured_integrated.py'
       - 'scripts/test_featured_v3_after.py'
       - '.github/workflows/validate-featured-close.yml'
   workflow_dispatch:
