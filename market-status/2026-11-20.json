@@ -224,6 +224,71 @@
         "validation": "success",
         "publication": "success"
       }
+    },
+    "09:10": {
+      "date": "2026-11-20",
+      "slot": "09:10",
+      "scheduledFor": "2026-11-20T09:10:00+09:00",
+      "asOf": "2026-11-20T09:13:27+09:00",
+      "publishedAt": "2026-11-20T09:13:27+09:00",
+      "sessionStatus": "KRX REGULAR (2026-11-20 09:00 개장; 09:10 실시간 수치 미확인)",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "11월 20일 KRX 정규장은 하락 출발했다. 연합뉴스 09:03 보도에 따르면 KOSPI 개장 지수는 4,928.51(-4.08%, -209.38포인트)이다. 이는 09:00 개장 수치이며 09:10 실시간 지수가 아니다. 전일 11월 19일 KOSPI 종가 5,137.89, KOSDAQ 종가 684.81은 서울경제의 마감 보도로 확인된다. 당일 KOSDAQ 현재 지수, 상승·하락 종목 수, 투자자별 수급, 거래대금, 환율은 이 회차의 기준 시각에 대해 검증하지 못했다. 미국 AI 투자 수익성 우려와 미국 증시 급락이 개장 하락의 배경으로 보도됐다.",
+        "observedAt": "2026-11-20T09:03:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI 개장지수(09:00, 09:10 아님)",
+            "value": 4928.51,
+            "changePct": -4.08,
+            "observedAt": "2026-11-20T09:00:00+09:00",
+            "sourceUrl": "https://en.yna.co.kr/view/AEN20261120001100320"
+          },
+          {
+            "name": "KOSDAQ 당일 지수(09:10 미확인)",
+            "value": null,
+            "changePct": null,
+            "observedAt": "2026-11-20T09:13:27+09:00",
+            "sourceUrl": "https://en.yna.co.kr/view/AEN20261120001100320"
+          }
+        ],
+        "themes": [
+          "AI·반도체 관련 투자심리 위축(언론 보도에 근거한 개장 배경; 당일 테마별 등락률 미확인)"
+        ],
+        "notes": [
+          "11월 19일 확정 종가: KOSPI 5,137.89, KOSDAQ 684.81 (서울경제 11월 19일 마감 보도)",
+          "외국인·기관·개인 순매수, 거래대금, 상승/하락 종목 수, 환율 및 선물의 09:10 실측치는 미확인",
+          "개장 시각과 기사 게시 시각을 09:10 실시간 시세로 오인하지 않음"
+        ]
+      },
+      "highlights": [
+        "09:00 KOSPI 개장 4,928.51, 전일 대비 -4.08%; 09:10 현재가는 검증되지 않음",
+        "미국 기술주 약세 및 AI 투자 수익성 우려가 국내 개장 하락 배경으로 보도됨",
+        "당일 수급·거래대금·KOSDAQ 실시간 수치 미확인"
+      ],
+      "sources": [
+        {
+          "name": "연합뉴스 09:03 개장 보도",
+          "url": "https://en.yna.co.kr/view/AEN20261120001100320",
+          "checkedAt": "2026-11-20T09:13:27+09:00"
+        },
+        {
+          "name": "연합뉴스 08:01 장전 분석",
+          "url": "https://www.yna.co.kr/view/AKR20261120020500008",
+          "checkedAt": "2026-11-20T09:13:27+09:00"
+        },
+        {
+          "name": "서울경제 11월19일 마감 수치",
+          "url": "https://en.sedaily.com/market/2026/11/19/kospi-small-caps-give-up-22-months-of-gains-in-selloff",
+          "checkedAt": "2026-11-20T09:13:27+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      }
     }
   }
 }
