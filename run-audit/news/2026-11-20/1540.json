@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "feed": "news",
+  "date": "2026-11-20",
+  "slot": "15:40",
+  "scheduledFor": "2026-11-20T15:40:00+09:00",
+  "startedAt": "2026-11-20T15:41:14+09:00",
+  "finishedAt": "2026-11-20T15:44:01+09:00",
+  "status": "partial",
+  "failedStep": "payload_validation",
+  "errorCode": "DATA_CONTRACT_SLOT_CONFLICT",
+  "errorMessage": "최신 MARKET_BRIEFING_PROTOCOL.md와 scripts/market_briefing.py가 15:40을 marketClose 전용으로 강제하여, 요청된 15:40 뉴스 session을 유효한 운영 JSON으로 구성할 수 없음",
+  "steps": [
+    {
+      "name": "run_start",
+      "status": "success",
+      "startedAt": "2026-11-20T15:41:14+09:00",
+      "finishedAt": "2026-11-20T15:41:42+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/RUN_AUDIT_POLICY.md",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/market-briefing.json"
+      ],
+      "counts": {
+        "existingDates": 2,
+        "latestPriorSession": 1
+      }
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-20T15:41:14+09:00",
+      "finishedAt": "2026-11-20T15:44:01+09:00",
+      "sources": [
+        "https://marketcalendars.com/markets/krx?year=2026",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/market-briefing.json"
+      ],
+      "counts": {
+        "isKrxTradingDay": 1
+      }
+    },
+    {
+      "name": "source_collection",
+      "status": "success",
+      "startedAt": "2026-11-20T15:41:42+09:00",
+      "finishedAt": "2026-11-20T15:43:38+09:00",
+      "sources": [
+        "https://www.awakeplus.co.kr/data",
+        "https://www.reuters.com/markets/europe/global-markets-view-europe-2026-11-20/"
+      ],
+      "counts": {
+        "foreignCandidatesInWindow": 1,
+        "domesticCandidatesInWindow": 6
+      }
+    },
+    {
+      "name": "foreign_search",
+      "status": "success",
+      "startedAt": "2026-11-20T15:41:42+09:00",
+      "finishedAt": "2026-11-20T15:43:38+09:00",
+      "sources": [
+        "https://www.reuters.com/world/africa/retailer-mr-prices-nkd-deal-boosts-sales-higher-finance-costs-weigh-profit-2026-11-20/",
+        "https://www.reuters.com/markets/europe/global-markets-view-europe-2026-11-20/"
+      ],
+      "counts": {
+        "candidates": 1,
+        "selected": 0,
+        "outsideWindow": 1
+      }
+    },
+    {
+      "name": "domestic_search",
+      "status": "success",
+      "startedAt": "2026-11-20T15:41:42+09:00",
+      "finishedAt": "2026-11-20T15:43:38+09:00",
+      "sources": [
+        "https://www.awakeplus.co.kr/data",
+        "https://www.awakeplus.co.kr/data/view/20261120900538",
+        "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900538"
+      ],
+      "counts": {
+        "candidates": 6,
+        "selected": 1,
+        "excluded": 5
+      }
+    },
+    {
+      "name": "analysis",
+      "status": "success",
+      "startedAt": "2026-11-20T15:42:00+09:00",
+      "finishedAt": "2026-11-20T15:43:38+09:00",
+      "counts": {
+        "foreignSelected": 0,
+        "domesticSelected": 1
+      }
+    },
+    {
+      "name": "dedup_ranking",
+      "status": "success",
+      "startedAt": "2026-11-20T15:42:00+09:00",
+      "finishedAt": "2026-11-20T15:43:38+09:00",
+      "counts": {
+        "foreignSelected": 0,
+        "domesticSelected": 1,
+        "duplicates": 0
+      }
+    },
+    {
+      "name": "payload_validation",
+      "status": "failed",
+      "startedAt": "2026-11-20T15:43:38+09:00",
+      "finishedAt": "2026-11-20T15:44:01+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/MARKET_BRIEFING_PROTOCOL.md",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/scripts/market_briefing.py"
+      ],
+      "errorCode": "DATA_CONTRACT_SLOT_CONFLICT",
+      "errorMessage": "15:40 뉴스 배열은 검증기의 '15:40 must be marketClose only' 조건을 위반함"
+    },
+    {
+      "name": "github_publish",
+      "status": "not_attempted",
+      "startedAt": "2026-11-20T15:44:01+09:00",
+      "finishedAt": "2026-11-20T15:44:01+09:00",
+      "errorCode": "BLOCKED_BY_PAYLOAD_VALIDATION",
+      "errorMessage": "운영 JSON 발행 전 검증 실패로 market-briefing.json을 수정하지 않음"
+    },
+    {
+      "name": "remote_readback",
+      "status": "not_attempted",
+      "startedAt": "2026-11-20T15:44:01+09:00",
+      "finishedAt": "2026-11-20T15:44:01+09:00",
+      "errorCode": "PUBLICATION_NOT_ATTEMPTED",
+      "errorMessage": "운영 JSON 커밋이 없어 대상 회차 재조회 검증을 수행하지 않음"
+    }
+  ],
+  "publication": {
+    "attempted": false,
+    "success": false,
+    "commitSha": null,
+    "paths": [],
+    "readbackVerified": false
+  },
+  "investigationWindow": {
+    "startExclusive": "2026-11-20T14:45:25+09:00",
+    "endInclusive": "2026-11-20T15:41:42+09:00"
+  },
+  "retention": {
+    "expectedDates": [
+      "2026-11-20",
+      "2026-11-19"
+    ],
+    "observedDates": [
+      "2026-11-20",
+      "2026-11-19"
+    ],
+    "operationalJsonModified": false
+  }
+}
