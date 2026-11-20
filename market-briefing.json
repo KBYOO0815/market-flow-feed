@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20T00:41:33.583Z",
+  "updatedAt": "2026-11-20T01:40:37.435Z",
   "days": [
     {
       "date": "2026-11-20",
@@ -258,6 +258,28 @@
           "slot": "09:40",
           "asOf": "2026-11-20T09:40:59+09:00",
           "foreignNews": [],
+          "domesticNews": [],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "usThemeStatus": "not_applicable"
+        },
+        {
+          "slot": "10:40",
+          "asOf": "2026-11-20T10:40:07+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261120-china-lpr-november-hold",
+              "title": "중국, 11월 LPR 1년물 3.0%·5년물 3.5%로 동결",
+              "summary": "중국 인민은행이 권한을 부여한 전국은행간자금조달센터가 11월 대출우대금리(LPR)를 1년물 3.0%, 5년물 3.5%로 유지했다. 두 금리는 18개월 연속 동결됐다.",
+              "publishedAt": "2026-11-20T10:02:45+09:00",
+              "sourceName": "财联社",
+              "sourceUrl": "https://api3.cls.cn/share/article/2539641?app=&os=android&sv=818",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "monetary_policy",
+              "region": "foreign"
+            }
+          ],
           "domesticNews": [],
           "usThemes": [],
           "researchStatus": "complete",
