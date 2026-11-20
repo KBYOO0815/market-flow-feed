@@ -5,18 +5,20 @@
   "slot": "06:40",
   "scheduledFor": "2026-11-21T06:40:00+09:00",
   "startedAt": "2026-11-21T06:37:26+09:00",
-  "updatedAt": "2026-11-21T06:39:00+09:00",
-  "status": "running",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
-  "nextStep": "publication",
-  "errorCode": null,
-  "errorMessage": null,
+  "updatedAt": "2026-11-21T06:39:20+09:00",
+  "status": "partial",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
+  "errorCode": "DATA_CONTRACT_CONFLICT",
+  "errorMessage": "Date JSON and index were committed separately, not via required single atomic Git tree/commit. Both remote files read back successfully; strict atomic publication compliance not verified.",
   "publication": {
-    "attempted": false,
+    "attempted": true,
     "success": false,
-    "commitSha": null,
-    "readbackVerified": false
+    "commitSha": "75bc9b2608f31b78963a1c6821e7cf228050e090",
+    "dateCommitSha": "8ccd7c23074227e59eb2e36b9c081b19565795a8",
+    "readbackVerified": true,
+    "atomicCommitVerified": false
   },
   "steps": [
     {
@@ -52,6 +54,20 @@
       "startedAt": "2026-11-21T06:39:00+09:00",
       "finishedAt": "2026-11-21T06:39:00+09:00",
       "details": "SchemaVersion 1, display v2 sections, HTTPS source links, prior edition comparison checked; independent Python validator not executed."
+    },
+    {
+      "name": "publication_done",
+      "status": "partial",
+      "startedAt": "2026-11-21T06:39:20+09:00",
+      "finishedAt": "2026-11-21T06:39:20+09:00",
+      "details": "Date and index saved with separate commits; atomic requirement unmet."
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "startedAt": "2026-11-21T06:39:20+09:00",
+      "finishedAt": "2026-11-21T06:39:20+09:00",
+      "details": "Both files fetched and 06:40 edition/index entry confirmed."
     }
   ]
 }
