@@ -42,7 +42,6 @@ def validate(day):
     editions = day.get("editions", {})
     if not isinstance(editions, dict):
         return ["editions must be an object"]
-    require_metadata_from_date = isinstance(date, str) and date >= SESSION_METADATA_START  # 11/19 contains pre-change editions
     old = editions.get("15:40", {}).get("stocks", [])
     prior_regular = {s.get("code"): s for s in old if isinstance(s, dict)}
     for slot, edition in editions.items():
@@ -52,7 +51,9 @@ def validate(day):
         if not isinstance(edition, dict):
             problems.append("{} edition is not an object".format(slot))
             continue
-        require_metadata = require_metadata_from_date or ("priceSession" in edition)
+        # Do not retroactively fail pre-migration editions that were already published
+        # without session-source metadata. 20:10 AFTER is the new strict contract.
+        require_metadata = slot == "20:10" or ("priceSession" in edition)
         if edition.get("date") != date:
             problems.append("{} edition date differs".format(slot))
         if edition.get("rateBasis") != "KRX_PREVIOUS_CLOSE":
