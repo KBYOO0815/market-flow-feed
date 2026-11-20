@@ -5,11 +5,11 @@
   "slot": "19:10",
   "scheduledFor": "2026-11-20T19:10:00+09:00",
   "startedAt": "2026-11-20T19:07:46+09:00",
-  "updatedAt": "2026-11-20T19:07:46+09:00",
+  "updatedAt": "2026-11-20T10:08:07.509Z",
   "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "payload_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -24,6 +24,25 @@
       "status": "success",
       "startedAt": "2026-11-20T19:07:46+09:00",
       "finishedAt": "2026-11-20T19:07:46+09:00"
+    },
+    {
+      "name": "preflight_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T10:08:07.509Z",
+      "detail": "KRX 2026-11-20 regular session closed; 19:10 KR slot; policy read"
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T10:08:07.509Z",
+      "sourceCount": 4,
+      "detail": "15:30 KRX close confirmed; 19:10 afterhours unverified"
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T10:08:07.509Z",
+      "detail": "No confirmed new regular-session change versus 18:10; investor flow provisional figures conflict"
     }
   ]
 }
