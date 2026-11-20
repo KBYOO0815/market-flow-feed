@@ -833,6 +833,72 @@
         "validation": "success",
         "publication": "success"
       }
+    },
+    "20:10": {
+      "date": "2026-11-20",
+      "slot": "20:10",
+      "scheduledFor": "2026-11-20T20:10:00+09:00",
+      "asOf": "2026-11-20T20:15:00+09:00",
+      "publishedAt": "2026-11-20T20:15:00+09:00",
+      "sessionStatus": "KR REGULAR CLOSED (2026-11-20 15:30 KST); NXT AFTER prices not verified",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "한국 정규장 KOSPI 4,869.96(-5.21%), KOSDAQ 645.68(-5.71%). 외국인·기관 순매도, 개인 순매수. 반도체 대형주 중심 약세, 양 시장 매도 사이드카. 19:10 회차 대비 확인된 정규장 지수 변화 없음. NXT 시간외 가격은 미확인. 투자자별 순매수 금액은 매체별 잠정치가 상충하여 미확정. 다음 거래일 외국인 수급과 반도체 가격 안정 여부 주시.",
+        "observedAt": "2026-11-20T20:15:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI (정규장 종가)",
+            "value": 4869.96,
+            "changePct": -5.21,
+            "observedAt": "2026-11-20T15:30:00+09:00",
+            "sourceUrl": "https://view.asiae.co.kr/article/2026112015594961221"
+          },
+          {
+            "name": "KOSDAQ (정규장 종가)",
+            "value": 645.68,
+            "changePct": -5.71,
+            "observedAt": "2026-11-20T15:30:00+09:00",
+            "sourceUrl": "https://view.asiae.co.kr/article/2026112015594961221"
+          }
+        ],
+        "themes": [
+          "AI·반도체 대형주 약세",
+          "외국인·기관 매도 우위, 개인 매수 우위"
+        ],
+        "notes": [
+          "19:10 대비 신규 확인된 정규장 변화 없음",
+          "NXT 시간외 가격 미확인",
+          "수급 잠정 금액 매체별 불일치로 미확정"
+        ]
+      },
+      "highlights": [
+        "정규장 KOSPI 4,869.96(-5.21%), KOSDAQ 645.68(-5.71%)",
+        "외국인·기관 순매도, 개인 순매수; 반도체 약세",
+        "19:10 대비 새로 확인된 정규장 변화 없음; 시간외 시세 미확인"
+      ],
+      "sources": [
+        {
+          "name": "아시아경제 15:59 마감",
+          "url": "https://view.asiae.co.kr/article/2026112015594961221",
+          "checkedAt": "2026-11-20T20:15:00+09:00"
+        },
+        {
+          "name": "한국경제 16:02 마감",
+          "url": "https://www.hankyung.com/article/202611200429i",
+          "checkedAt": "2026-11-20T20:15:00+09:00"
+        },
+        {
+          "name": "브릿지경제 15:40 마감",
+          "url": "https://www.viva100.com/article/20261120500774",
+          "checkedAt": "2026-11-20T20:15:00+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      }
     }
   }
 }
