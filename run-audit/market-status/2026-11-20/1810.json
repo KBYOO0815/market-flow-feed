@@ -5,11 +5,11 @@
   "slot": "18:10",
   "scheduledFor": "2026-11-20T18:10:00+09:00",
   "startedAt": "2026-11-20T18:08:37+09:00",
-  "updatedAt": "2026-11-20T09:09:24.440Z",
+  "updatedAt": "2026-11-20T09:09:36.628Z",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "payload_validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -43,6 +43,12 @@
       "status": "success",
       "finishedAt": "2026-11-20T09:09:24.440Z",
       "details": "Close unchanged since 17:10; Asiae later article gives conflicting investor flows vs earlier edition. Avoid treating flows as new movement; report discrepancies."
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T09:09:36.628Z",
+      "details": "schemaVersion=1; KR only; verified close; conflicting investor flows omitted from numeric flow fields; preserve earlier editions"
     }
   ]
 }
