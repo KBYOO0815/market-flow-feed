@@ -5,11 +5,11 @@
   "slot": "06:40",
   "scheduledFor": "2026-11-21T06:40:00+09:00",
   "startedAt": "2026-11-21T06:42:36+09:00",
-  "updatedAt": "2026-11-21T06:46:29+09:00",
+  "updatedAt": "2026-11-21T06:48:07+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analyze_and_deduplicate",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "validate_merged_json",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -57,6 +57,19 @@
         "sourceErrors": [
           "Yonhap direct search blocked by robots.txt; alternative trusted sources and official records checked"
         ]
+      }
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "startedAt": "2026-11-21T06:46:29+09:00",
+      "finishedAt": "2026-11-21T06:48:07+09:00",
+      "details": {
+        "selectedForeign": 6,
+        "selectedDomestic": 0,
+        "selectedUsThemes": 1,
+        "duplicateOrOutsideWindowExcluded": 7,
+        "domesticResult": "No material new domestic fact with verified first publication inside the window; overnight opinion/republication and pre-cutoff disclosures excluded."
       }
     }
   ],
