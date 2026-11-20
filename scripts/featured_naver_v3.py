@@ -82,7 +82,11 @@ def normalize(raw,release,fetch,now=None,trace=None):
                 source_session=q.get('tradingSessionType')
                 final_confirmed=False
                 if venue=='KRX':
-                    regular_close=(observed.hour==15 and observed.minute==30 and source_session in ('REGULAR_MARKET','REGULAR_CLOSE'))
+                    # At 20:10 an AFTER_MARKET screen can still carry the 15:30
+                    # regular close when the stock had no KRX after-market trade.
+                    regular_close=(observed.hour==15 and observed.minute==30 and
+                                   (source_session in ('REGULAR_MARKET','REGULAR_CLOSE') or
+                                    target.strftime('%H:%M')=='20:10' and source_session=='AFTER_MARKET'))
                     allow_after=target.strftime('%H:%M') in ('15:40','20:10') and source_session=='AFTER_MARKET'
                     require(source_session in ('REGULAR_MARKET','REGULAR_CLOSE') or allow_after,'aftermarket price is not valid for this slot')
                     session='REGULAR_CLOSE' if regular_close else 'KRX_AFTER_MARKET' if source_session=='AFTER_MARKET' else 'REGULAR_MARKET'
