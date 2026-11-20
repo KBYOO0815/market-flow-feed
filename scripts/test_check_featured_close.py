@@ -16,6 +16,7 @@ def row(code, session="REGULAR", price=110, prior=100, date="2026-11-20"):
         "changeRate": (price / prior - 1) * 100,
         "rateMarket": market,
         "priceMarket": market,
+        "priceSession": session,
         "priceObservedAt": date + "T" + observed + "+09:00",
         "comparison": {"eligible": True},
     }
