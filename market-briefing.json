@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20T02:45:06.314Z",
+  "updatedAt": "2026-11-20T03:40:08.000Z",
   "days": [
     {
       "date": "2026-11-20",
@@ -303,6 +303,28 @@
             }
           ],
           "domesticNews": [],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "usThemeStatus": "not_applicable"
+        },
+        {
+          "slot": "12:40",
+          "asOf": "2026-11-20T12:40:08+09:00",
+          "foreignNews": [],
+          "domesticNews": [
+            {
+              "id": "domestic-20261120-q3-borrower-household-debt",
+              "title": "3분기 차주당 신규 가계대출 3,028만원…2년 반 만에 최저",
+              "summary": "한국은행의 2026년 3분기 차주별 가계부채 통계에서 차주 1명당 신규 가계대출 취급액은 3,028만원으로 전분기보다 386만원(11.3%) 감소했다. 반면 차주당 주택담보대출 신규취급액은 2억1,451만원으로 622만원(3.0%) 늘었고, 30대 비중은 46.4%로 역대 최고를 기록했다.",
+              "publishedAt": "2026-11-20T12:00:00+09:00",
+              "sourceName": "머니투데이",
+              "sourceUrl": "https://www.mt.co.kr/economy/2026/11/20/2026112010265891854",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "household_debt",
+              "region": "domestic"
+            }
+          ],
           "usThemes": [],
           "researchStatus": "complete",
           "usThemeStatus": "not_applicable"
