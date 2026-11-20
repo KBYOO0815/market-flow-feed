@@ -5,11 +5,11 @@
   "slot": "06:40",
   "scheduledFor": "2026-11-21T06:40:00+09:00",
   "startedAt": "2026-11-21T06:42:36+09:00",
-  "updatedAt": "2026-11-21T06:43:10+09:00",
+  "updatedAt": "2026-11-21T06:46:29+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "collect_current_window",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "analyze_and_deduplicate",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -34,6 +34,29 @@
         "slotAllowed": true,
         "isKrxTradingDay": false,
         "latestPublishedSlot": "2026-11-20 19:40"
+      }
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "startedAt": "2026-11-21T06:43:10+09:00",
+      "finishedAt": "2026-11-21T06:46:29+09:00",
+      "details": {
+        "windowStartExclusive": "2026-11-20T19:40:21+09:00",
+        "windowEndInclusive": "2026-11-21T06:43:10+09:00",
+        "foreignCandidatesReviewed": 18,
+        "domesticCandidatesReviewed": 12,
+        "sourceChecks": [
+          "Reuters",
+          "Federal Reserve/official speeches",
+          "SEC EDGAR",
+          "DART/KRX disclosure aggregators",
+          "Bank of Korea and Korean official sources",
+          "Yonhap/Newsis and trusted media"
+        ],
+        "sourceErrors": [
+          "Yonhap direct search blocked by robots.txt; alternative trusted sources and official records checked"
+        ]
       }
     }
   ],
