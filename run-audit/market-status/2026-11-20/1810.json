@@ -5,17 +5,17 @@
   "slot": "18:10",
   "scheduledFor": "2026-11-20T18:10:00+09:00",
   "startedAt": "2026-11-20T18:08:37+09:00",
-  "updatedAt": "2026-11-20T09:09:36.628Z",
+  "updatedAt": "2026-11-20T09:09:55.839Z",
   "status": "running",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
-  "nextStep": "publication",
+  "phase": "publication_done",
+  "lastCompletedStep": "publication_done",
+  "nextStep": "remote_readback",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
-    "attempted": false,
-    "success": false,
-    "commitSha": null,
+    "attempted": true,
+    "success": true,
+    "commitSha": "9603e4757ccfc37dc34b18c69c26bd0fcb29f150",
     "readbackVerified": false
   },
   "steps": [
@@ -49,6 +49,12 @@
       "status": "success",
       "finishedAt": "2026-11-20T09:09:36.628Z",
       "details": "schemaVersion=1; KR only; verified close; conflicting investor flows omitted from numeric flow fields; preserve earlier editions"
+    },
+    {
+      "name": "publication_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T09:09:55.839Z",
+      "commitSha": "9603e4757ccfc37dc34b18c69c26bd0fcb29f150"
     }
   ]
 }
