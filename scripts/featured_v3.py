@@ -106,13 +106,12 @@ def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
                 require(k.get('closeConfirmed') is True,'20:10 KRX regular-close fallback must be verified')
             else:
                 require(k.get('finalConfirmed') is True,'20:10 KRX after-market quote must be final')
-            if n:
-                require(n['session']=='NXT_FINAL' and n.get('finalConfirmed') is True,'20:10 requires verified NXT final quote')
-
             # Fixed 20:10 price priority:
             # 1) verified NXT AFTER final trade
             # 2) verified KRX AFTER final trade
             # 3) verified KRX regular close fallback
+            # An NXT record that is not a verified AFTER final trade is ignored for
+            # the numerator instead of blocking the KRX fallbacks.
             nxt_after=(n is not None and n.get('session')=='NXT_FINAL' and n.get('finalConfirmed') is True
                        and n.get('price') is not None and stamp(n['observedAt']).time()>dt.time(15,30))
             krx_after=(k.get('session')=='KRX_AFTER_MARKET' and k.get('finalConfirmed') is True
