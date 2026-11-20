@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "feed": "news",
+  "date": "2026-11-20",
+  "slot": "10:40",
+  "scheduledFor": "2026-11-20T10:40:00+09:00",
+  "startedAt": "2026-11-20T10:37:32+09:00",
+  "finishedAt": "2026-11-20T10:41:03+09:00",
+  "status": "published",
+  "steps": [
+    {
+      "name": "run_start",
+      "status": "success",
+      "startedAt": "2026-11-20T10:37:32+09:00",
+      "finishedAt": "2026-11-20T10:38:53+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/market-briefing.json",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/MARKET_BRIEFING_PROTOCOL.md",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/RUN_AUDIT_POLICY.md"
+      ],
+      "counts": {
+        "priorSessions": 4
+      }
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-20T10:38:53+09:00",
+      "finishedAt": "2026-11-20T10:39:32+09:00",
+      "sources": [
+        "https://www.wowtv.co.kr/NewsCenter/News/NewsList?currentIndex=20&menuSeq=21139&subMenu="
+      ],
+      "counts": {
+        "krxTradingDay": true,
+        "scheduledSlot": "10:40"
+      }
+    },
+    {
+      "name": "source_collection",
+      "status": "success",
+      "startedAt": "2026-11-20T10:38:53+09:00",
+      "finishedAt": "2026-11-20T10:40:07+09:00",
+      "sources": [
+        "https://api3.cls.cn/share/article/2539641?app=&os=android&sv=818",
+        "https://finance.eastmoney.com/a/202611203935780929.html",
+        "https://www.chinamoney.com.cn/chinese/bklpr/",
+        "https://kind.krx.co.kr/main.do?method=loadInitPage&scrnmode=1",
+        "https://dart.fss.or.kr/main.do"
+      ],
+      "counts": {
+        "foreignSelected": 1,
+        "domesticSelected": 0
+      },
+      "warnings": [
+        {
+          "source": "Tavily",
+          "errorCode": "HTTP_432_USAGE_LIMIT",
+          "errorMessage": "This request exceeds your plan's set usage limit",
+          "alternative": "Search service and direct official/reliable-source lookups used"
+        }
+      ]
+    },
+    {
+      "name": "foreign_search",
+      "status": "success",
+      "startedAt": "2026-11-20T10:38:53+09:00",
+      "finishedAt": "2026-11-20T10:40:07+09:00",
+      "sources": [
+        "https://api3.cls.cn/share/article/2539641?app=&os=android&sv=818",
+        "https://finance.eastmoney.com/a/202611203935780929.html"
+      ],
+      "counts": {
+        "selected": 1
+      }
+    },
+    {
+      "name": "domestic_search",
+      "status": "success",
+      "startedAt": "2026-11-20T10:38:53+09:00",
+      "finishedAt": "2026-11-20T10:40:07+09:00",
+      "sources": [
+        "https://kind.krx.co.kr/main.do?method=loadInitPage&scrnmode=1",
+        "https://dart.fss.or.kr/main.do",
+        "https://www.korea.kr/briefing/pressReleaseList.do"
+      ],
+      "counts": {
+        "selected": 0
+      }
+    },
+    {
+      "name": "analysis",
+      "status": "success",
+      "startedAt": "2026-11-20T10:40:07+09:00",
+      "finishedAt": "2026-11-20T10:40:37+09:00",
+      "counts": {
+        "foreignSelected": 1,
+        "domesticSelected": 0
+      }
+    },
+    {
+      "name": "dedup_ranking",
+      "status": "success",
+      "startedAt": "2026-11-20T10:40:07+09:00",
+      "finishedAt": "2026-11-20T10:40:37+09:00",
+      "counts": {
+        "foreignPublished": 1,
+        "domesticPublished": 0
+      }
+    },
+    {
+      "name": "payload_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T10:40:37+09:00",
+      "finishedAt": "2026-11-20T10:40:37+09:00",
+      "counts": {
+        "schemaVersion": 1,
+        "retainedDays": 2,
+        "foreignNews": 1,
+        "domesticNews": 0
+      }
+    },
+    {
+      "name": "github_publish",
+      "status": "success",
+      "startedAt": "2026-11-20T10:40:37+09:00",
+      "finishedAt": "2026-11-20T10:40:39+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/market-briefing.json"
+      ]
+    },
+    {
+      "name": "remote_readback",
+      "status": "success",
+      "startedAt": "2026-11-20T10:40:39+09:00",
+      "finishedAt": "2026-11-20T10:41:03+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/market-briefing.json"
+      ],
+      "counts": {
+        "targetSessionMatched": true,
+        "priorSessionsPreserved": 4,
+        "retainedDays": 2
+      }
+    }
+  ],
+  "publication": {
+    "attempted": true,
+    "success": true,
+    "commitSha": "5d79dbd9d89094de24981551c6ff1835fe053db5",
+    "paths": [
+      "market-briefing.json"
+    ],
+    "readbackVerified": true
+  }
+}
