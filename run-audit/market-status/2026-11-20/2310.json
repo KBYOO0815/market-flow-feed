@@ -5,11 +5,11 @@
   "slot": "23:10",
   "scheduledFor": "2026-11-20T23:10:00+09:00",
   "startedAt": "2026-11-20T23:08:36+09:00",
-  "updatedAt": "2026-11-20T23:08:36+09:00",
+  "updatedAt": "2026-11-20T23:08:50+09:00",
   "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "phase": "preflight_done",
+  "lastCompletedStep": "preflight_done",
+  "nextStep": "us_market_collection",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -24,6 +24,12 @@
       "status": "success",
       "startedAt": "2026-11-20T23:08:36+09:00",
       "finishedAt": "2026-11-20T23:08:36+09:00"
+    },
+    {
+      "name": "preflight_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T23:08:50+09:00",
+      "details": "2026-11-20 KRX trading day; US-only slot 23:10; US 09:08 EST premarket"
     }
   ]
 }
