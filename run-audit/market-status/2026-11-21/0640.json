@@ -5,11 +5,11 @@
   "slot": "06:40",
   "scheduledFor": "2026-11-21T06:40:00+09:00",
   "startedAt": "2026-11-21T06:37:26+09:00",
-  "updatedAt": "2026-11-21T06:38:00+09:00",
+  "updatedAt": "2026-11-21T06:38:50+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "collection",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "analysis",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -31,6 +31,13 @@
       "startedAt": "2026-11-21T06:38:00+09:00",
       "finishedAt": "2026-11-21T06:38:00+09:00",
       "details": "KRX closed Saturday 2026-11-21; NYSE/Nasdaq Friday 2026-11-20 regular session completed at 06:00 KST 2026-11-21; 06:40 US-only eligible"
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "startedAt": "2026-11-21T06:38:50+09:00",
+      "finishedAt": "2026-11-21T06:38:50+09:00",
+      "details": "AP 2026-11-20 US regular close and Reuters VIX intraday checked; market session and KRX weekend checked; some flow/FX values unavailable."
     }
   ]
 }
