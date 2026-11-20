@@ -5,11 +5,11 @@
   "slot": "23:10",
   "scheduledFor": "2026-11-20T23:10:00+09:00",
   "startedAt": "2026-11-20T23:08:36+09:00",
-  "updatedAt": "2026-11-20T23:09:35+09:00",
+  "updatedAt": "2026-11-20T23:09:45+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "payload_validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "atomic_publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -43,6 +43,12 @@
       "status": "success",
       "finishedAt": "2026-11-20T23:09:35+09:00",
       "details": "US premarket weak, chip/AI-led; Nasdaq100 futures -1.64% Reuters; US regular cash market not yet open; no KR section."
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T23:09:45+09:00",
+      "details": "schemaVersion 1, US-only, regular indices prior close, premarket futures separated; 2026-11-20 only index date; existing editions retained."
     }
   ]
 }
