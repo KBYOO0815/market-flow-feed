@@ -14,3 +14,10 @@
 - 최신 원격 HEAD를 읽어 보존·병합, 날짜별+index를 하나의 Git tree/commit으로 원자 저장, HEAD compare-and-swap 후 원격 재조회/검증. 병렬 작업이 겹칠 경우 충돌 재시도. 기존 정상 회차를 더 오래된 asOf로 덮지 않는다.
 - 기존 `market-briefing.json`, `featured-stocks` 등 타 기능 파일은 수정 금지.
 - 실제 조사/저장에 실패한 데이터를 임의 수치나 빈 성공판으로 발행하지 않는다.
+
+
+## 실행 감사 로그
+- 모든 정규 실행은 루트 `RUN_AUDIT_POLICY.md`를 따른다.
+- 운영 JSON 발행 성공 여부와 예약 실행 완료 여부를 분리한다.
+- 회차별 감사 로그는 `run-audit/` 아래에 저장하고 KST 기준 D-day·D-1만 보관한다.
+- 미발행 시 `failedStep`, `errorCode`, `errorMessage`와 단계별 상태를 남긴다. GitHub 쓰기 자체 실패 시 예약 실행 결과에 `AUDIT_FALLBACK ...` 한 줄을 남긴다.
