@@ -5,18 +5,29 @@
   "slot": "20:10",
   "scheduledFor": "2026-11-20T20:10:00+09:00",
   "startedAt": "2026-11-20T20:15:55+09:00",
-  "updatedAt": "2026-11-20T20:15:55+09:00",
-  "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
-  "errorCode": null,
-  "errorMessage": null,
+  "finishedAt": "2026-11-20T20:17:13+09:00",
+  "updatedAt": "2026-11-20T20:17:13+09:00",
+  "status": "failed",
+  "phase": "preflight_done",
+  "lastCompletedStep": "calendar_session_check",
+  "nextStep": null,
+  "failedStep": "server_contract_check",
+  "errorCode": "DATA_CONTRACT_CONFLICT",
+  "errorMessage": "최신 FEATURED_STOCKS_POLICY.md는 20:10 분자 가격으로 당일 KRX·NXT 애프터마켓의 시장·시각이 검증된 최종 유효 체결가를 요구하지만 scripts/featured_v3.py는 rank_universe에서 KRX REGULAR_CLOSE 가격만 사용하고 rateMarket을 KRX로 고정한다. 실제 AFTER 가격을 넣어 현 검증기를 통과시킬 수 없어 운영 JSON 발행을 차단했다.",
   "publication": {
     "attempted": false,
     "success": false,
     "commitSha": null,
     "readbackVerified": false
+  },
+  "evidence": {
+    "tradingDate": "2026-11-20",
+    "session": "AFTER",
+    "sessionEndedAt": "2026-11-20T20:00:00+09:00",
+    "officialNxtSnapshotAt": "2026-11-20T20:05:00+09:00",
+    "officialNxtAfterTurnover": 1403482081160,
+    "policySha": "574138f1645c70b3eaa706d991299556f0811ebb",
+    "validatorSha": "ffb902d9f17f135bf417c29a2837f0e6e51d18bf"
   },
   "steps": [
     {
@@ -29,6 +40,38 @@
         "https://github.com/KBYOO0815/market-flow-feed/blob/main/RUN_AUDIT_POLICY.md",
         "https://github.com/KBYOO0815/market-flow-feed/blob/main/scripts/featured_v3.py"
       ]
-    }
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-20T20:16:20+09:00",
+      "finishedAt": "2026-11-20T20:16:48+09:00",
+      "sources": [
+        "https://kind.krx.co.kr/external/2026/11/05/000141/20261105000216/99303.htm",
+        "https://nextrade.co.kr/main.do",
+        "https://www.nextrade.co.kr/transactionSys/content.do"
+      ],
+      "counts": {
+        "officialNxtTradedStocks": 602,
+        "officialNxtAfterTurnover": 1403482081160
+      }
+    },
+    {
+      "name": "server_contract_check",
+      "status": "failed",
+      "startedAt": "2026-11-20T20:16:48+09:00",
+      "finishedAt": "2026-11-20T20:17:13+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/FEATURED_STOCKS_POLICY.md",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/scripts/featured_v3.py"
+      ],
+      "errorCode": "DATA_CONTRACT_CONFLICT",
+      "errorMessage": "정책의 20:10 AFTER 최종 가격 계약과 검증기의 KRX REGULAR_CLOSE 고정 계산이 불일치한다."
+    },
+    {"name": "source_collection", "status": "not_started"},
+    {"name": "reason_research", "status": "not_started"},
+    {"name": "payload_validation", "status": "not_started"},
+    {"name": "github_publish", "status": "not_started"},
+    {"name": "remote_readback", "status": "not_started"}
   ]
 }
