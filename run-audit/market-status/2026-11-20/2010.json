@@ -7,9 +7,9 @@
   "startedAt": "2026-11-20T20:13:19+09:00",
   "updatedAt": "2026-11-20T20:15:00+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -36,6 +36,12 @@
       "status": "success",
       "finishedAt": "2026-11-20T20:15:00+09:00",
       "detail": "Confirmed KOSPI 4869.96 -5.21%, KOSDAQ 645.68 -5.71% 15:30 KST; source reports disagree on investor net amounts; NXT unverified; 3 news sources"
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T20:15:00+09:00",
+      "detail": "19:10 대비 정규장 가격 변화 없음; 외국인 기관 순매도 개인 순매수; AI 반도체 하락"
     }
   ]
 }
