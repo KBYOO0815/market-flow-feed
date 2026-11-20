@@ -42,6 +42,7 @@ def collect_integrated(release,evidence,fetch,now=None,trace=None,probe=False,el
     stocks,proof=rank_universe(package['securityMaster'],package['krxQuotes'],package['nxtQuotes'],package['coverage'],date,ended,slot)
     if trace:trace({'stage':'integrated_top100_verified','checkedAt':ended.isoformat(),'stockCount':100,'cutoffAmount':proof['cutoffAmount']})
     return {'schemaVersion':3,'date':date,'slot':slot,'releaseAt':target.isoformat(),'asOf':ended.isoformat(),'collectionStartedAt':started.isoformat(),
-        'turnoverBasis':'KRX_NXT','universeSize':100,'amountUnit':'KRW','rateBasis':'KRX_PREVIOUS_CLOSE','stocks':stocks,'rankingProof':proof,
+        'turnoverBasis':'KRX_NXT','universeSize':100,'amountUnit':'KRW','rateBasis':'KRX_PREVIOUS_CLOSE',
+        'priceSession':'AFTER' if slot=='20:10' else 'REGULAR','stocks':stocks,'rankingProof':proof,
         'tradingDayEvidence':evidence['tradingDayEvidence'],'tradingDayVerified':True,'calendarSourceUrl':evidence['tradingDayEvidence']['sourceUrl'],
         'sourceRecords':records,'serverRetentionCalendarDays':4,'appVisibleCalendarDays':4,'probeOnly':probe}
