@@ -5,11 +5,11 @@
   "slot": "23:10",
   "scheduledFor": "2026-11-20T23:10:00+09:00",
   "startedAt": "2026-11-20T23:08:36+09:00",
-  "updatedAt": "2026-11-20T23:08:50+09:00",
+  "updatedAt": "2026-11-20T23:09:20+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "us_market_collection",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "analysis",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -30,6 +30,13 @@
       "status": "success",
       "finishedAt": "2026-11-20T23:08:50+09:00",
       "details": "2026-11-20 KRX trading day; US-only slot 23:10; US 09:08 EST premarket"
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T23:09:20+09:00",
+      "sourceCount": 3,
+      "details": "Reuters Nov20 US premarket Nasdaq100 futures -1.64%; Nov19 US index close from stored verified 07:10; Nov20 07:13 ET semiconductor premarket."
     }
   ]
 }
