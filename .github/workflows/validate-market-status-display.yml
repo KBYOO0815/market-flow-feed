@@ -1,0 +1,31 @@
+name: Validate market status display contract
+
+on:
+  push:
+    paths:
+      - 'market-status/**'
+      - 'MARKET_STATUS_POLICY.md'
+      - 'scripts/market_status_display.py'
+      - '.github/workflows/validate-market-status-display.yml'
+  pull_request:
+    paths:
+      - 'market-status/**'
+      - 'MARKET_STATUS_POLICY.md'
+      - 'scripts/market_status_display.py'
+      - '.github/workflows/validate-market-status-display.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate current market status display JSON
+        run: |
+          for f in market-status/20??-??-??.json; do
+            [ -e "$f" ] || continue
+            python3 scripts/market_status_display.py "$f"
+          done
