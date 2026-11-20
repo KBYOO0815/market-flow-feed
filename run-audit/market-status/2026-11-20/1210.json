@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "feed": "market-status",
+  "date": "2026-11-20",
+  "slot": "12:10",
+  "scheduledFor": "2026-11-20T12:10:00+09:00",
+  "startedAt": "2026-11-20T12:14:25+09:00",
+  "finishedAt": "2026-11-20T12:14:42+09:00",
+  "status": "published",
+  "failedStep": null,
+  "errorCode": null,
+  "errorMessage": null,
+  "steps": [
+    {
+      "name": "run_start",
+      "status": "success",
+      "startedAt": "2026-11-20T12:14:25+09:00",
+      "finishedAt": "2026-11-20T12:14:42+09:00"
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-20T12:14:42+09:00",
+      "finishedAt": "2026-11-20T12:14:42+09:00"
+    },
+    {
+      "name": "kr_market_collection",
+      "status": "partial",
+      "startedAt": "2026-11-20T12:14:42+09:00",
+      "finishedAt": "2026-11-20T12:14:42+09:00",
+      "sources": [
+        "https://www.newstnt.com/news/articleView.html?idxno=729488"
+      ],
+      "counts": {
+        "verifiedIndices": 2,
+        "verifiedInvestorFlowMarkets": 2
+      }
+    },
+    {
+      "name": "source_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T12:14:42+09:00",
+      "finishedAt": "2026-11-20T12:14:42+09:00"
+    },
+    {
+      "name": "payload_validation",
+      "status": "success",
+      "startedAt": "2026-11-20T12:14:42+09:00",
+      "finishedAt": "2026-11-20T12:14:42+09:00"
+    }
+  ],
+  "publication": {
+    "attempted": true,
+    "success": true,
+    "commitSha": null,
+    "paths": [
+      "market-status/2026-11-20.json",
+      "market-status/index.json"
+    ],
+    "readbackVerified": false
+  },
+  "notes": [
+    "12:10 정각 지수는 미확인; 11:24 관측 자료 사용",
+    "GitHub commit SHA 및 원격 재조회는 별도 확인 후 보고"
+  ]
+}
