@@ -5,11 +5,11 @@
   "slot": "06:40",
   "scheduledFor": "2026-11-21T06:40:00+09:00",
   "startedAt": "2026-11-21T06:37:26+09:00",
-  "updatedAt": "2026-11-21T06:38:50+09:00",
+  "updatedAt": "2026-11-21T06:39:00+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -38,6 +38,13 @@
       "startedAt": "2026-11-21T06:38:50+09:00",
       "finishedAt": "2026-11-21T06:38:50+09:00",
       "details": "AP 2026-11-20 US regular close and Reuters VIX intraday checked; market session and KRX weekend checked; some flow/FX values unavailable."
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "startedAt": "2026-11-21T06:39:00+09:00",
+      "finishedAt": "2026-11-21T06:39:00+09:00",
+      "details": "US 2026-11-20 close, prior 23:10 comparison, display v2 prepared."
     }
   ]
 }
