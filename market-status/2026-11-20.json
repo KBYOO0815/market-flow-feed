@@ -899,6 +899,82 @@
         "validation": "success",
         "publication": "success"
       }
+    },
+    "23:10": {
+      "date": "2026-11-20",
+      "slot": "23:10",
+      "scheduledFor": "2026-11-20T23:10:00+09:00",
+      "asOf": "2026-11-20T23:09:45+09:00",
+      "publishedAt": "2026-11-20T23:31:35+09:00",
+      "sessionStatus": "US PREMARKET (2026-11-20 09:09 EST); US REGULAR not yet open; 2026-11-19 regular close is latest confirmed cash-index session",
+      "scope": "US",
+      "us": {
+        "summary": "미국 11월20일 정규장 개장 전 약세. Reuters 보도 기준 Nasdaq 100 선물 -1.64%, Anthropic 프리마켓 -7.4%. AI 투자 수익성·반도체 규제·금리 우려로 반도체/클라우드/데이터센터 종목 하락. AMD -7%, TSMC -4.2%, Micron -4.8%, Intel -5.3%, Nvidia -2.4%는 07:13 EST 기사 관측으로 현재 시세가 아님. 11월19일 정규장 종가 S&P500 7175.83, Nasdaq Composite 23879.20, Dow 49097.06이며 11월20일 정규장 지수는 아직 미발생.",
+        "observedAt": "2026-11-20T23:09:45+09:00",
+        "indices": [
+          {
+            "name": "S&P 500 (Nov19 regular close)",
+            "value": 7175.83,
+            "changePct": -2,
+            "observedAt": "2026-11-20T06:00:00+09:00",
+            "sourceUrl": "https://apnews.com/article/2f178054aea79d282e5ccf8d62f26a28"
+          },
+          {
+            "name": "Nasdaq Composite (Nov19 regular close)",
+            "value": 23879.2,
+            "changePct": -2.3,
+            "observedAt": "2026-11-20T06:00:00+09:00",
+            "sourceUrl": "https://apnews.com/article/2f178054aea79d282e5ccf8d62f26a28"
+          },
+          {
+            "name": "Dow (Nov19 regular close)",
+            "value": 49097.06,
+            "changePct": -2.2,
+            "observedAt": "2026-11-20T06:00:00+09:00",
+            "sourceUrl": "https://apnews.com/article/2f178054aea79d282e5ccf8d62f26a28"
+          }
+        ],
+        "themes": [
+          "AI·반도체 프리마켓 약세",
+          "Anthropic 상장 이후 차익실현",
+          "클라우드·데이터센터 관련주 매도"
+        ],
+        "notes": [
+          "Reuters 11월20일 프리마켓 보도: Nasdaq100 선물 -1.64%; 정규장 Nasdaq Composite 지수와 다름",
+          "Reuters 프리마켓 Anthropic -7.4%; 정규장 종가와 다름",
+          "07:13 EST 보도: AMD -7%, TSMC -4.2%, Micron -4.8%, Intel -5.3%, Nvidia -2.4% (오래된 관측)",
+          "미 10년물 국채수익률·달러지수 최신 수치 미확인; 금리 인상 우려는 Reuters 보도",
+          "20:10 한국 시황 대비 새 변화는 미국 11월20일 프리마켓 약세 확인. 서로 다른 시장이므로 직접 지수 비교 불가"
+        ]
+      },
+      "kr": null,
+      "highlights": [
+        "미국 정규장 개장 전, Nasdaq100 선물 -1.64%(Reuters 보도 기준)",
+        "Anthropic 프리마켓 -7.4%; 반도체·AI 업종 매도 압력",
+        "미국 11월20일 현물 지수 미발생, 11월19일 종가와 선물 분리"
+      ],
+      "sources": [
+        {
+          "name": "Reuters Nov20 US futures and AI stocks",
+          "url": "https://www.reuters.com/legal/transactional/wall-st-futures-slip-anthropic-debut-fails-reassure-ai-investors-2026-11-20/",
+          "checkedAt": "2026-11-20T23:09:45+09:00"
+        },
+        {
+          "name": "24/7 Wall St 07:13 ET chip premarket",
+          "url": "https://247wallst.com/investing/2026/11/20/amd-stock-drops-another-7-0-before-the-bell-and-taiwan-semiconductor-slides-4-2-as-nasdaq-futures-fall-1-6-after-asias-chip-selloff/",
+          "checkedAt": "2026-11-20T23:09:45+09:00"
+        },
+        {
+          "name": "AP Nov19 US cash close (previously verified)",
+          "url": "https://apnews.com/article/2f178054aea79d282e5ccf8d62f26a28",
+          "checkedAt": "2026-11-20T07:11:45+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      }
     }
   }
 }
