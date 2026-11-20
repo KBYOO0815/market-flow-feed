@@ -70,7 +70,13 @@ def nxt_quote(i, price=105, final=True):
 def package(nxt_final=True):
     universe = [security(i) for i in range(100)]
     krx = [krx_quote(i) for i in range(100)]
-    # Stock 1 has an actual final KRX after-market trade.
+    # Stock 0 has both KRX AFTER and NXT AFTER; NXT must win by fixed priority
+    # even though the KRX after trade is later.
+    krx[0] = krx_quote(
+        0, session="KRX_AFTER_MARKET", price=107,
+        observed="2026-11-20T19:59:30+09:00", final=True
+    )
+    # Stock 1 has only a KRX after-market trade.
     krx[1] = krx_quote(
         1, session="KRX_AFTER_MARKET", price=103,
         observed="2026-11-20T17:59:00+09:00", final=True
@@ -97,32 +103,37 @@ class FeaturedV3AfterMarketTest(unittest.TestCase):
         )
         by = {row["code"]: row for row in rows}
 
-        # NXT final is the actual latest after-market execution for stock 0.
+        # Fixed priority chooses NXT AFTER over KRX AFTER, regardless of timestamp.
         self.assertEqual(by["000000"]["price"], 105)
         self.assertEqual(by["000000"]["priceMarket"], "NXT")
         self.assertEqual(by["000000"]["priceSession"], "AFTER")
         self.assertEqual(by["000000"]["changeRate"], 5.0)
 
-        # A verified KRX after-market final price is valid when no later NXT final exists.
+        # With no verified NXT AFTER, KRX AFTER is the second priority.
         self.assertEqual(by["000001"]["price"], 103)
         self.assertEqual(by["000001"]["priceMarket"], "KRX")
         self.assertEqual(by["000001"]["changeRate"], 3.0)
 
-        # No after-market trade: do not substitute the KRX regular close.
-        self.assertIsNone(by["000002"]["price"])
-        self.assertIsNone(by["000002"]["changeRate"])
-        self.assertFalse(by["000002"]["comparison"]["eligible"])
-        self.assertEqual(by["000002"]["comparison"]["basis"], "NO_AFTER_MARKET_TRADE")
+        # With no NXT/KRX AFTER trade, fall back to the verified KRX regular close.
+        self.assertEqual(by["000002"]["price"], 101)
+        self.assertEqual(by["000002"]["priceMarket"], "KRX")
+        self.assertEqual(by["000002"]["priceSession"], "REGULAR")
+        self.assertEqual(by["000002"]["changeRate"], 1.0)
+        self.assertTrue(by["000002"]["comparison"]["eligible"])
 
         self.assertEqual(selected(rows), ["000000"])
 
-    def test_2010_rejects_unconfirmed_nxt_final(self):
+    def test_2010_unconfirmed_nxt_falls_back_to_krx_after(self):
         universe, krx, nxt, coverage = package(nxt_final=False)
-        with self.assertRaisesRegex(ValueError, "verified NXT final quote"):
-            rank_universe(
-                universe, krx, nxt, coverage, DATE,
-                __import__("featured_v3").stamp(ASOF), "20:10"
-            )
+        rows, _ = rank_universe(
+            universe, krx, nxt, coverage, DATE,
+            __import__("featured_v3").stamp(ASOF), "20:10"
+        )
+        by = {row["code"]: row for row in rows}
+        self.assertEqual(by["000000"]["price"], 107)
+        self.assertEqual(by["000000"]["priceMarket"], "KRX")
+        self.assertEqual(by["000000"]["priceSession"], "AFTER")
+        self.assertEqual(by["000000"]["changeRate"], 7.0)
 
 
 if __name__ == "__main__":
