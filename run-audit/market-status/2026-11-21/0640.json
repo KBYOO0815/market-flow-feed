@@ -7,9 +7,9 @@
   "startedAt": "2026-11-21T06:37:26+09:00",
   "updatedAt": "2026-11-21T06:39:00+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -45,6 +45,13 @@
       "startedAt": "2026-11-21T06:39:00+09:00",
       "finishedAt": "2026-11-21T06:39:00+09:00",
       "details": "US 2026-11-20 close, prior 23:10 comparison, display v2 prepared."
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "startedAt": "2026-11-21T06:39:00+09:00",
+      "finishedAt": "2026-11-21T06:39:00+09:00",
+      "details": "SchemaVersion 1, display v2 sections, HTTPS source links, prior edition comparison checked; independent Python validator not executed."
     }
   ]
 }
