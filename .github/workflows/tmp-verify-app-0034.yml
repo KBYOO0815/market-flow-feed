@@ -1,0 +1,29 @@
+name: Temporary verify Market Flow app 00.34
+
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-verify-app-0034.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone app repository
+        run: git clone --depth 1 https://github.com/KBYOO0815/market-flow-app.git app
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        working-directory: app
+        run: npm ci --no-audit --no-fund
+      - name: TypeScript and market-status checks
+        working-directory: app
+        run: |
+          npm run check
+          node scripts/check-market-status-navigation.cjs
+          node scripts/check-market-status-display.cjs
