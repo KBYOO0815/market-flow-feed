@@ -1,0 +1,31 @@
+name: Validate Market Flow news contract
+
+on:
+  push:
+    paths:
+      - 'market-briefing.json'
+      - 'MARKET_BRIEFING_PROTOCOL.md'
+      - 'scripts/market_briefing.py'
+      - 'scripts/test_market_briefing.py'
+      - '.github/workflows/validate-market-briefing.yml'
+  pull_request:
+    paths:
+      - 'market-briefing.json'
+      - 'MARKET_BRIEFING_PROTOCOL.md'
+      - 'scripts/market_briefing.py'
+      - 'scripts/test_market_briefing.py'
+      - '.github/workflows/validate-market-briefing.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-news-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run news contract regression tests
+        run: python3 -m unittest discover -s scripts -p 'test_market_briefing.py'
+      - name: Validate current published news JSON
+        run: python3 scripts/market_briefing.py validate market-briefing.json
