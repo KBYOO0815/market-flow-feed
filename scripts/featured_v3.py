@@ -103,19 +103,28 @@ def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
         if slot=='20:10':
             require(k['session'] in ('REGULAR_CLOSE','KRX_AFTER_MARKET'),'20:10 KRX quote must be regular close or final after-market quote')
             if k['session']=='REGULAR_CLOSE':
-                require(k.get('closeConfirmed') is True,'20:10 requires verified KRX regular close when no KRX after quote exists')
+                require(k.get('closeConfirmed') is True,'20:10 KRX regular-close fallback must be verified')
             else:
                 require(k.get('finalConfirmed') is True,'20:10 KRX after-market quote must be final')
             if n:
                 require(n['session']=='NXT_FINAL' and n.get('finalConfirmed') is True,'20:10 requires verified NXT final quote')
-            after_quotes=[q for q in (k,n) if q and q.get('session') in ('KRX_AFTER_MARKET','NXT_FINAL')
-                          and q.get('finalConfirmed') is True and q.get('price') is not None]
-            if after_quotes:
-                price_quote=max(after_quotes,key=lambda q:(stamp(q['observedAt']),q.get('market')=='NXT'))
+
+            # Fixed 20:10 price priority:
+            # 1) verified NXT AFTER final trade
+            # 2) verified KRX AFTER final trade
+            # 3) verified KRX regular close fallback
+            nxt_after=(n is not None and n.get('session')=='NXT_FINAL' and n.get('finalConfirmed') is True
+                       and n.get('price') is not None and stamp(n['observedAt']).time()>dt.time(15,30))
+            krx_after=(k.get('session')=='KRX_AFTER_MARKET' and k.get('finalConfirmed') is True
+                       and k.get('price') is not None and stamp(k['observedAt']).time()>dt.time(15,30))
+            if nxt_after:
+                price_quote=n
+            elif krx_after:
+                price_quote=k
             else:
-                price_quote=None
-                comparison={'eligible':False,'basis':'NO_AFTER_MARKET_TRADE',
-                    'explanation':'20:10 회차: 검증된 당일 애프터마켓 체결가가 없어 상승률 비교에서 제외'}
+                require(k.get('session')=='REGULAR_CLOSE' and k.get('closeConfirmed') is True,
+                        '20:10 fallback requires verified KRX regular close')
+                price_quote=k
         else:
             require(k['session'] in ('REGULAR_MARKET','REGULAR_CLOSE') or slot=='15:40' and k['session']=='KRX_AFTER_MARKET','unrecognized price session for original slot')
         price=price_quote.get('price') if price_quote else None
@@ -128,7 +137,8 @@ def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
         else:
             require(comparison.get('explanation'),'missing comparison explanation');rate=None
         price_market=price_quote.get('market') if price_quote else None
-        price_session='AFTER' if slot=='20:10' and price_quote else ('REGULAR' if slot!='20:10' else None)
+        price_session=('AFTER' if slot=='20:10' and price_quote.get('session') in ('KRX_AFTER_MARKET','NXT_FINAL')
+                       else 'REGULAR')
         rows.append({**s,'krxTradeAmount':k['turnover'],'nxtTradeAmount':n['turnover'] if n else 0,
             'integratedTradeAmount':k['turnover']+(n['turnover'] if n else 0),'changeRate':rate,'rateMarket':price_market,
             'previousRegularClose':base,'price':price,'comparison':comparison,
@@ -143,7 +153,7 @@ def rank_universe(universe, krx, nxt, coverage, date, asof, slot):
         require(rows[99]['integratedTradeAmount']>coverage['boundaryUpperBound'],'Top100 boundary not proven: T100 must exceed K100 + N100')
     for i,s in enumerate(rows[:100],1):
         s['turnoverRank']=i
-        require(s['comparison'].get('eligible') or s['comparison'].get('basis') in ('UNAVAILABLE_NEW_LISTING','NO_AFTER_MARKET_TRADE'),'Top100 price comparison not verified')
+        require(s['comparison'].get('eligible') or s['comparison'].get('basis')=='UNAVAILABLE_NEW_LISTING','Top100 price comparison not verified')
         if slot!='20:10':
             require(asof-stamp(s['quotes']['KRX']['observedAt'])<=dt.timedelta(minutes=15) or s['quotes']['KRX'].get('closeConfirmed') is True,'stale selected KRX quote')
             require('NXT' not in s['quotes'] or asof-stamp(s['quotes']['NXT']['observedAt'])<=dt.timedelta(minutes=15),'stale selected NXT quote')
