@@ -5,18 +5,18 @@
   "slot": "20:10",
   "scheduledFor": "2026-11-20T20:10:00+09:00",
   "startedAt": "2026-11-20T20:13:19+09:00",
-  "updatedAt": "2026-11-20T20:15:00+09:00",
-  "status": "running",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
-  "nextStep": "publication",
+  "updatedAt": "2026-11-20T20:16:00+09:00",
+  "status": "published",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
-    "attempted": false,
-    "success": false,
-    "commitSha": null,
-    "readbackVerified": false
+    "attempted": true,
+    "success": true,
+    "commitSha": "b3e190c50730e04ed92bbca74ee940bc7e2af068",
+    "readbackVerified": true
   },
   "steps": [
     {
@@ -48,6 +48,21 @@
       "status": "success",
       "finishedAt": "2026-11-20T20:15:00+09:00",
       "detail": "schemaVersion=1, slot and index dates valid, existing 10 editions preserved, other feeds untouched"
+    },
+    {
+      "name": "publication_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T20:16:00+09:00",
+      "commitSha": "b3e190c50730e04ed92bbca74ee940bc7e2af068"
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "finishedAt": "2026-11-20T20:16:00+09:00",
+      "editionCount": 11,
+      "indexDates": [
+        "2026-11-20"
+      ]
     }
   ]
 }
