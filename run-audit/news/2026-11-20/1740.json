@@ -5,11 +5,11 @@
   "slot": "17:40",
   "scheduledFor": "2026-11-20T17:40:00+09:00",
   "startedAt": "2026-11-20T17:43:33+09:00",
-  "updatedAt": "2026-11-20T17:43:34+09:00",
+  "updatedAt": "2026-11-20T17:44:22+09:00",
   "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "phase": "preflight_done",
+  "lastCompletedStep": "calendar_session_check",
+  "nextStep": "source_collection",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -18,12 +18,41 @@
     "commitSha": null,
     "readbackVerified": false
   },
+  "preflight": {
+    "operationalJsonSha": "44d1d912d92367cd627fc7a15662ec7ed16e4ed9",
+    "protocolSha": "1df59f399e8e0afbb17492c2fe1e961c52d7caca",
+    "validatorSha": "36f63ede9b2b009d6d4312f8aa2ab56641fc9e44",
+    "isKrxTradingDay": true,
+    "retainedDates": [
+      "2026-11-20",
+      "2026-11-19"
+    ],
+    "lastPublishedAsOf": "2026-11-20T14:45:25+09:00",
+    "investigationWindowStartExclusive": "2026-11-20T14:45:25+09:00",
+    "cutoff": "2026-11-20T17:44:22+09:00",
+    "contractWarning": "17:40 is not included in the current protocol/validator allowed slots"
+  },
   "steps": [
     {
       "name": "run_start",
       "status": "success",
       "startedAt": "2026-11-20T17:43:33+09:00",
       "finishedAt": "2026-11-20T17:43:34+09:00"
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-20T17:43:34+09:00",
+      "finishedAt": "2026-11-20T17:44:22+09:00",
+      "sources": [
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/market-briefing.json",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/MARKET_BRIEFING_PROTOCOL.md",
+        "https://github.com/KBYOO0815/market-flow-feed/blob/main/scripts/market_briefing.py"
+      ],
+      "counts": {
+        "retainedDates": 2,
+        "isKrxTradingDay": 1
+      }
     }
   ]
 }
