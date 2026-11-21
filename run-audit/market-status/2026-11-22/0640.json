@@ -5,11 +5,11 @@
   "slot": "06:40",
   "scheduledFor": "2026-11-22T06:40:00+09:00",
   "startedAt": "2026-11-22T06:40:48+09:00",
-  "updatedAt": "2026-11-22T06:41:00+09:00",
-  "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "navigation_update",
+  "updatedAt": "2026-11-22T06:41:20+09:00",
+  "status": "skipped",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -31,6 +31,18 @@
       "startedAt": "2026-11-22T06:40:48+09:00",
       "finishedAt": "2026-11-22T06:41:00+09:00",
       "details": "KRX Sunday closed; US Saturday Nov 21 had no regular session. Last US regular close Friday Nov 20 was already covered in Saturday 06:40. Sunday 06:40 does not qualify as a fresh prior US regular trading session; skip to avoid duplicate."
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "startedAt": "2026-11-22T06:41:10+09:00",
+      "finishedAt": "2026-11-22T06:41:20+09:00",
+      "details": "Sunday 06:40 and 15:40 skipped; previous Nov 21, next Nov 23 preserved. No edition published."
     }
-  ]
+  ],
+  "navigation": {
+    "updated": true,
+    "commitSha": "ef9eb380fa76fa345c73ec24d61d5ec662499c48",
+    "readbackVerified": true
+  }
 }
