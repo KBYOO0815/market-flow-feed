@@ -125,7 +125,8 @@ def validate(body, today=None):
     require(isinstance(body, dict) and body.get("schemaVersion") == 1, "schemaVersion")
     timestamp(body.get("updatedAt"))
     require(isinstance(body.get("days"), list), "days required")
-    validate_navigation(body.get("navigation"))
+    if body.get("navigation") is not None:
+        validate_navigation(body.get("navigation"))
     seen_dates = set()
     for day in body["days"]:
         require(isinstance(day, dict), "day object required")
