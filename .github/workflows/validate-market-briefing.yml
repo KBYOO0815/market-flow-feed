@@ -7,6 +7,7 @@ on:
       - 'MARKET_BRIEFING_PROTOCOL.md'
       - 'scripts/market_briefing.py'
       - 'scripts/test_market_briefing.py'
+      - 'scripts/news_navigation.py'
       - '.github/workflows/validate-market-briefing.yml'
   pull_request:
     paths:
@@ -28,4 +29,6 @@ jobs:
       - name: Run news contract regression tests
         run: python3 -m unittest discover -s scripts -p 'test_market_briefing.py'
       - name: Validate current published news JSON
-        run: python3 scripts/market_briefing.py validate market-briefing.json
+        run: |
+          python3 scripts/market_briefing.py validate market-briefing.json
+          python3 scripts/news_navigation.py
