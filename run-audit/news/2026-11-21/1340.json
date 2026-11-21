@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 2,
+  "feed": "news",
+  "date": "2026-11-21",
+  "slot": "13:40",
+  "scheduledFor": "2026-11-21T13:40:00+09:00",
+  "startedAt": "2026-11-21T13:35:59+09:00",
+  "updatedAt": "2026-11-21T13:35:59+09:00",
+  "status": "running",
+  "phase": "run_start",
+  "lastCompletedStep": "run_start",
+  "nextStep": "calendar_session_check",
+  "errorCode": null,
+  "errorMessage": null,
+  "publication": {
+    "attempted": false,
+    "success": false,
+    "commitSha": null,
+    "readbackVerified": false
+  },
+  "steps": [
+    {
+      "name": "run_start",
+      "status": "success",
+      "startedAt": "2026-11-21T13:35:59+09:00",
+      "finishedAt": "2026-11-21T13:35:59+09:00"
+    }
+  ]
+}
