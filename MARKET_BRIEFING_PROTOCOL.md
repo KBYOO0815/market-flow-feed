@@ -13,7 +13,7 @@
 ## JSON
 최상위:
 ```json
-{"schemaVersion":1,"updatedAt":"ISO8601","days":[]}
+{"schemaVersion":1,"updatedAt":"ISO8601","navigation":{"previous":[],"today":[],"next":[]},"days":[]}
 ```
 
 날짜:
@@ -85,3 +85,18 @@
 5. 저장 후 공개 파일을 다시 읽어 실제 반영을 확인한 경우에만 성공으로 보고한다.
 
 **GitHub는 데이터 계약만 담당한다. 검색·선별·검증 판단은 예약 작업이 담당한다.**
+
+
+## 앱 시간축 navigation
+뉴스 앱은 발행된 회차만 보여주지 않고 **이전·오늘·다음 적용 회차 전체**를 표시한다. 거래일/휴장일 판단은 서버가 끝내고 앱은 `navigation`을 그대로 렌더링한다.
+
+- 최상위 `navigation.previous`: 직전 날짜의 적용 뉴스 회차 전체.
+- `navigation.today`: 오늘의 적용 뉴스 회차 전체.
+- `navigation.next`: 다음 날짜의 적용 뉴스 회차 전체.
+- KRX 거래일 적용 회차: 06:40, 07:40, 08:40, 09:40, 10:40, 11:40, 12:40, 13:40, 14:40, 15:40, 16:40, 17:40, 18:40, 19:40, 22:40.
+- KRX 비거래일 적용 회차: 06:40, 22:40.
+- 각 항목: `{date,slot,state,reason?,errorCode?}`.
+- `state`: `published | scheduled | skipped | missing | failed`.
+- 과거 도래 회차가 sessions에 없고 정상 skip 근거도 없으면 숨기지 말고 `missing` 또는 감사 로그 근거가 있으면 `failed`로 표시한다.
+- 비거래일에 적용되지 않는 07:40~19:40 회차는 뉴스 navigation에 넣지 않는다. 즉 뉴스에서 "오늘 모든 회차"는 **오늘 정책상 적용되는 모든 회차**를 뜻한다.
+- 앱은 회차를 임의 생성·삭제·재분류하지 않는다.
