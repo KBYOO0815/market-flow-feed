@@ -17,10 +17,10 @@ def index_matches(index, payload):
         date=stamp(payload['releaseAt']).date();rows=index.get('dates',[])
         try:
             dates=[r['date'] for r in rows]
-            return (index.get('schemaVersion')==3 and index.get('appVisibleCalendarDays')==4
+            return (index.get('schemaVersion')==3 and index.get('appVisibleCalendarDays')==2
                 and index.get('releaseAt')==payload['releaseAt'] and index.get('asOf')==payload['asOf']
-                and 1<=len(rows)<=4 and dates==sorted(set(dates),reverse=True) and date.isoformat() in dates
-                and all(date-dt.timedelta(days=3)<=dt.date.fromisoformat(r['date'])<=date and r['path']=='featured-stocks/'+r['date']+'.json' for r in rows))
+                and 1<=len(rows)<=2 and dates==sorted(set(dates),reverse=True) and date.isoformat() in dates
+                and all(date-dt.timedelta(days=1)<=dt.date.fromisoformat(r['date'])<=date and r['path']=='featured-stocks/'+r['date']+'.json' for r in rows))
         except (TypeError,KeyError,ValueError):return False
     prefix=feed_prefix(payload)
     date=stamp(payload['releaseAt']).date()
