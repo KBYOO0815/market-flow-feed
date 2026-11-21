@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21T06:47:56.323603+09:00",
+  "updatedAt": "2026-11-21T14:51:00+09:00",
   "days": [
     {
       "date": "2026-11-21",
@@ -692,5 +692,118 @@
         "19:40"
       ]
     }
-  ]
+  ],
+  "navigation": {
+    "previous": [
+      {
+        "date": "2026-11-20",
+        "slot": "06:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "07:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "08:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "09:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "10:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "11:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "12:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "13:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "14:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "15:40",
+        "state": "failed",
+        "errorCode": "DATA_CONTRACT_SLOT_CONFLICT",
+        "reason": "감사 로그에서 발행 실패 확인"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "16:40",
+        "state": "failed",
+        "errorCode": "DATA_CONTRACT_SLOT_CONFLICT",
+        "reason": "감사 로그에서 발행 실패 확인"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "17:40",
+        "state": "failed",
+        "errorCode": "DATA_CONTRACT_CONFLICT",
+        "reason": "감사 로그에서 발행 실패 확인"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "18:40",
+        "state": "failed",
+        "errorCode": "DATA_CONTRACT_CONFLICT",
+        "reason": "감사 로그에서 발행 실패 확인"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "19:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "22:40",
+        "state": "failed",
+        "errorCode": "DATA_CONTRACT_CONFLICT",
+        "reason": "감사 로그에서 발행 실패 확인"
+      }
+    ],
+    "today": [
+      {
+        "date": "2026-11-21",
+        "slot": "06:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-21",
+        "slot": "22:40",
+        "state": "scheduled"
+      }
+    ],
+    "next": [
+      {
+        "date": "2026-11-22",
+        "slot": "06:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-22",
+        "slot": "22:40",
+        "state": "scheduled"
+      }
+    ]
+  }
 }
