@@ -51,8 +51,11 @@ def publish(payload,api,read,clock=lambda:dt.datetime.now(KST)):
         days={}
         for path in paths:days[path[-15:-5]]=read(path,head)[0]
         root,retained=merge(final,days,now.date())
+        current_index,_=read('featured-stocks/index.json',head,missing=True)
         index={'schemaVersion':3,'appVisibleCalendarDays':2,'releaseAt':root['releaseAt'],'asOf':root['asOf'],
             'dates':[{'date':d,'path':'featured-stocks/'+d+'.json'} for d in sorted(retained,reverse=True)]}
+        if isinstance(current_index,dict) and isinstance(current_index.get('navigation'),dict):
+            index['navigation']=copy.deepcopy(current_index['navigation'])
         contents={'featured-stocks.json':root,'featured-stocks/index.json':index,**{'featured-stocks/'+d+'.json':day for d,day in retained.items()}}
         if proof_path:contents[proof_path]=proof_body
         entries=[{'path':p,'mode':'100644','type':'blob','content':json.dumps(v,ensure_ascii=False,indent=2)+'\n'} for p,v in contents.items()]
