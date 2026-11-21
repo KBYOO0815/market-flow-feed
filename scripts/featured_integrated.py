@@ -45,4 +45,4 @@ def collect_integrated(release,evidence,fetch,now=None,trace=None,probe=False,el
         'turnoverBasis':'KRX_NXT','universeSize':100,'amountUnit':'KRW','rateBasis':'KRX_PREVIOUS_CLOSE',
         'priceSession':'AFTER' if slot=='20:10' else 'REGULAR','stocks':stocks,'rankingProof':proof,
         'tradingDayEvidence':evidence['tradingDayEvidence'],'tradingDayVerified':True,'calendarSourceUrl':evidence['tradingDayEvidence']['sourceUrl'],
-        'sourceRecords':records,'serverRetentionCalendarDays':4,'appVisibleCalendarDays':4,'probeOnly':probe}
+        'sourceRecords':records,'serverRetentionCalendarDays':2,'appVisibleCalendarDays':2,'probeOnly':probe}
