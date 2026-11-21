@@ -2,15 +2,119 @@
   "schemaVersion": 3,
   "appVisibleCalendarDays": 2,
   "releaseAt": "2026-11-20T15:40:00+09:00",
-  "asOf": "2026-11-20T15:45:40.004646+09:00",
+  "asOf": "2026-11-21T14:51:00+09:00",
   "dates": [
     {
       "date": "2026-11-20",
       "path": "featured-stocks/2026-11-20.json"
-    },
-    {
-      "date": "2026-11-19",
-      "path": "featured-stocks/2026-11-19.json"
     }
-  ]
+  ],
+  "navigation": {
+    "previous": [
+      {
+        "date": "2026-11-20",
+        "slot": "08:40",
+        "state": "missing",
+        "reason": "도래했지만 운영 JSON과 감사 로그에 정상 발행 기록이 없음"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "09:40",
+        "state": "missing",
+        "reason": "도래했지만 운영 JSON과 감사 로그에 정상 발행 기록이 없음"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "11:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "13:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "15:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-20",
+        "slot": "20:10",
+        "state": "failed",
+        "errorCode": "DATA_CONTRACT_CONFLICT",
+        "reason": "감사 로그에서 발행 실패 확인"
+      }
+    ],
+    "today": [
+      {
+        "date": "2026-11-21",
+        "slot": "08:40",
+        "state": "skipped",
+        "reason": "KRX 휴장"
+      },
+      {
+        "date": "2026-11-21",
+        "slot": "09:40",
+        "state": "skipped",
+        "reason": "KRX 휴장"
+      },
+      {
+        "date": "2026-11-21",
+        "slot": "11:40",
+        "state": "skipped",
+        "reason": "KRX 휴장"
+      },
+      {
+        "date": "2026-11-21",
+        "slot": "13:40",
+        "state": "skipped",
+        "reason": "KRX 휴장"
+      },
+      {
+        "date": "2026-11-21",
+        "slot": "15:40",
+        "state": "skipped",
+        "reason": "KRX 휴장"
+      },
+      {
+        "date": "2026-11-21",
+        "slot": "20:10",
+        "state": "skipped",
+        "reason": "KRX 휴장"
+      }
+    ],
+    "next": [
+      {
+        "date": "2026-11-23",
+        "slot": "08:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "09:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "11:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "13:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "15:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "20:10",
+        "state": "scheduled"
+      }
+    ]
+  }
 }
