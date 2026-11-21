@@ -5,7 +5,7 @@
 시장 판단은 서버/예약 작업이 끝내며 Android 앱은 display를 순서대로 렌더링만 한다.
 
 ## 발행 경로
-- `market-status/index.json`: `{schemaVersion:1,updatedAt:ISO-KST,dates:[{date,path}]}`
+- `market-status/index.json`: `{schemaVersion:1,updatedAt:ISO-KST,dates:[{date,path}],navigation:{previous:[],today:[],next:[]}}`
 - `market-status/YYYY-MM-DD.json`: `{schemaVersion:1,date,editions:{"HH:MM":edition}}`
 - 보관은 KST D-day·D-1 최대 2개 달력 날짜다.
 
@@ -92,3 +92,40 @@
 - 모든 정규 실행은 루트 `RUN_AUDIT_POLICY.md`를 따른다.
 - `display` 생성·검증은 `validation_done` 이전에 완료한다.
 - 미발행 시 `failedStep,errorCode,errorMessage`와 마지막 체크포인트를 남긴다.
+
+
+## 앱 시간축 navigation
+앱 사용자가 과거·현재·다음 회차를 모두 예측 가능하게 볼 수 있도록 `market-status/index.json`에 서버 승인 시간축을 저장한다. Android 앱은 거래일·휴장일·다음 거래일을 계산하지 않고 이 배열을 그대로 사용한다.
+
+```json
+{
+  "navigation": {
+    "previous": [
+      {"date":"2026-11-20","slot":"23:10","state":"published"}
+    ],
+    "today": [
+      {"date":"2026-11-21","slot":"06:40","state":"published"},
+      {"date":"2026-11-21","slot":"15:40","state":"skipped","reason":"KRX 휴장"}
+    ],
+    "next": [
+      {"date":"2026-11-23","slot":"06:10","state":"scheduled"},
+      {"date":"2026-11-23","slot":"07:10","state":"scheduled"}
+    ]
+  }
+}
+```
+
+### navigation 규칙
+- `previous`: 직전 유효 시황 날짜의 **논리 회차 전체**를 시간순으로 기록한다. 발행된 회차뿐 아니라 미발행 회차도 포함한다.
+- `today`: 오늘의 **논리 회차 전체**를 시간순으로 기록한다.
+- `next`: 오늘 이후 가장 가까운 **다음 유효 시황 날짜의 논리 회차 전체**를 시간순으로 기록한다.
+- `state`: `published | scheduled | skipped | missing | failed`.
+- `published`: 운영 JSON에 정상 발행된 회차.
+- `scheduled`: 아직 도래하지 않은 정상 예정 회차.
+- `skipped`: 휴장·세션 미운영 등 정책상 정상적으로 건너뛰는 회차. 가능하면 `reason`을 기록한다.
+- `missing`: 도래했지만 운영 JSON이 없고 정상 skip 근거도 없는 회차.
+- `failed`: 감사 로그에서 실패가 확인된 회차. 가능하면 `reason` 또는 `errorCode`를 기록한다.
+- 앱은 navigation 항목을 임의로 숨기거나 재분류하지 않는다.
+- 현재 선택은 navigation 전체에서 가장 최근의 `published` 회차를 기본으로 한다. 사용자가 과거/미래/skip/missing 회차를 직접 선택할 수 있다.
+- `scheduled/skipped/missing/failed` 회차를 선택하면 앱은 데이터를 지어내지 않고 서버 상태와 reason만 표시한다.
+- 다음 유효일 계산은 서버/예약 작업 책임이다. 앱에서 요일·KRX 달력·미국장 달력을 계산하지 않는다.
