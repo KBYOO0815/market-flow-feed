@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21T14:51:00+09:00",
+  "updatedAt": "2026-11-22T06:41:10+09:00",
   "dates": [
     {
       "date": "2026-11-21",
@@ -14,86 +14,6 @@
   "navigation": {
     "previous": [
       {
-        "date": "2026-11-20",
-        "slot": "06:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "07:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "08:10",
-        "state": "missing",
-        "reason": "도래했지만 운영 JSON에 정상 발행 회차가 없음"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "09:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "10:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "11:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "12:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "13:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "14:10",
-        "state": "missing",
-        "reason": "도래했지만 운영 JSON에 정상 발행 회차가 없음"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "15:40",
-        "state": "missing",
-        "reason": "도래했지만 운영 JSON에 정상 발행 회차가 없음"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "17:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "18:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "19:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "20:10",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "23:10",
-        "state": "published"
-      }
-    ],
-    "today": [
-      {
         "date": "2026-11-21",
         "slot": "06:40",
         "state": "published"
@@ -103,6 +23,20 @@
         "slot": "15:40",
         "state": "skipped",
         "reason": "KRX 휴장일 — 한국 15:40 시황 미발행"
+      }
+    ],
+    "today": [
+      {
+        "date": "2026-11-22",
+        "slot": "06:40",
+        "state": "skipped",
+        "reason": "일요일: KRX 휴장, 직전 토요일 미국 정규장 미운영; 금요일 미국 종가는 전일 06:40에 이미 반영"
+      },
+      {
+        "date": "2026-11-22",
+        "slot": "15:40",
+        "state": "skipped",
+        "reason": "KRX 일요일 휴장"
       }
     ],
     "next": [
