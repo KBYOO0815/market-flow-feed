@@ -54,3 +54,16 @@
 - 운영 JSON 발행 성공 여부와 예약 실행 완료 여부를 분리한다.
 - 회차별 감사 로그는 `run-audit/` 아래에 저장하고 KST 기준 D-day·D-1만 보관한다.
 - 미발행 시 `failedStep`, `errorCode`, `errorMessage`와 단계별 상태를 남긴다. GitHub 쓰기 자체 실패 시 예약 실행 결과에 `AUDIT_FALLBACK ...` 한 줄을 남긴다.
+
+
+## 앱 시간축 navigation
+특징주 앱도 발행된 회차만 보여주지 않고 **이전·오늘·다음 회차 전체**를 표시한다. 서버가 `featured-stocks/index.json`의 `navigation`을 관리하고 앱은 그대로 렌더링한다.
+
+- `navigation.previous`: 직전 KRX 거래일의 08:40·09:40·11:40·13:40·15:40·20:10 전체.
+- `navigation.today`: 오늘의 6개 논리 회차 전체. KRX 휴장일이면 6개 모두 `skipped` + reason=`KRX 휴장`.
+- `navigation.next`: 다음 KRX 거래일의 6개 전체를 `scheduled`로 기록한다.
+- 각 항목: `{date,slot,state,reason?,errorCode?}`.
+- `state`: `published | scheduled | skipped | missing | failed`.
+- 과거 회차가 날짜별 운영 JSON에 없고 정상 skip 근거가 없으면 숨기지 말고 `missing`, 감사 로그에서 실패가 확인되면 `failed`로 표시한다.
+- 휴장일이라 특징주 날짜 파일 자체가 없어도 navigation은 유지한다. 가짜 성공 edition은 만들지 않는다.
+- 다음 KRX 거래일 계산은 서버/예약 작업 책임이며 앱에서 달력 판단을 하지 않는다.
