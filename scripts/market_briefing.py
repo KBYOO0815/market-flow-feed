@@ -8,6 +8,7 @@ from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 SLOTS = ("06:40", "07:40", "08:40", "09:40", "10:40", "11:40", "12:40", "13:40", "14:40", "15:40", "16:40", "17:40", "18:40", "19:40", "22:40")
+NAV_STATES = ("published", "scheduled", "skipped", "missing", "failed")
 KST = ZoneInfo("Asia/Seoul")
 
 def require(ok, message):
@@ -53,6 +54,30 @@ def validate_market_close(value):
     require(isinstance(sources, list) and len(sources) >= 1, "marketClose source required")
     for source in sources:
         require(isinstance(source, dict) and isinstance(source.get("name"), str) and source["name"].strip() and https(source.get("url")), "marketClose source invalid")
+
+def validate_navigation(value):
+    require(isinstance(value, dict), "navigation required")
+    seen = set()
+    ordered = []
+    for group in ("previous", "today", "next"):
+        rows = value.get(group)
+        require(isinstance(rows, list), "navigation group required")
+        for row in rows:
+            require(isinstance(row, dict), "navigation entry required")
+            require(isinstance(row.get("date"), str), "navigation date")
+            dt.date.fromisoformat(row["date"])
+            require(row.get("slot") in SLOTS, "navigation slot")
+            require(row.get("state") in NAV_STATES, "navigation state")
+            if row.get("reason") is not None:
+                require(isinstance(row["reason"], str) and row["reason"].strip(), "navigation reason")
+            if row.get("errorCode") is not None:
+                require(isinstance(row["errorCode"], str) and row["errorCode"].strip(), "navigation errorCode")
+            key = (row["date"], row["slot"])
+            require(key not in seen, "duplicate navigation entry")
+            seen.add(key)
+            ordered.append(key)
+    require(ordered == sorted(ordered), "navigation chronology")
+    return value
 
 def validate_session(session, date, trading):
     require(isinstance(session, dict), "session object required")
@@ -100,6 +125,7 @@ def validate(body, today=None):
     require(isinstance(body, dict) and body.get("schemaVersion") == 1, "schemaVersion")
     timestamp(body.get("updatedAt"))
     require(isinstance(body.get("days"), list), "days required")
+    validate_navigation(body.get("navigation"))
     seen_dates = set()
     for day in body["days"]:
         require(isinstance(day, dict), "day object required")
