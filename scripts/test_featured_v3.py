@@ -71,9 +71,9 @@ class Contract(unittest.TestCase):
         p=fixture();self.assertTrue(all(x['reason'] is None for x in p['individualStocks']))
         p['individualStocks'][0]['reason']={'summary':'TEST','sourceUrl':'http://example.org','facts':['TEST'],'verificationStatus':'confirmed','causality':'source_attributed','publishedAt':p['asOf'],'checkedAt':p['reviewedAt']}
         with self.assertRaises(ValueError):validate(p)
-    def test_twenty_ten_close(self):
+    def test_twenty_ten_allows_krx_fallback_when_nxt_final_missing(self):
         p=fixture('20:10');p['rankingProof']['allMarketRows'][0]['quotes']['NXT']['session']='NXT_CUMULATIVE'
-        with self.assertRaisesRegex(ValueError,'NXT final'):validate(p)
+        self.assertEqual(validate(p)['slot'],'20:10')
     def test_threshold_tamper(self):
         p=fixture();p['selectedStockCodes'].pop()
         with self.assertRaisesRegex(ValueError,'>=4%'):validate(p)
@@ -134,7 +134,7 @@ class ProductionGuards(unittest.TestCase):
         with patch.object(worker,'save') as save,patch.object(worker,'write_artifact'),patch.object(worker,'collect') as collect:
             result=worker.run(request)
         self.assertEqual(result['state'],'skipped_non_trading_day');collect.assert_not_called();save.assert_called_once()
-    def test_index_four_day_validation(self):
+    def test_index_two_day_validation(self):
         from featured_watch import index_matches
         p=fixture();index={'schemaVersion':3,'appVisibleCalendarDays':2,'releaseAt':p['releaseAt'],'asOf':p['asOf'],'dates':[{'date':'2026-11-16','path':'featured-stocks/2026-11-16.json'}]}
         self.assertTrue(index_matches(index,p));index['dates'][0]['path']='market-briefing.json';self.assertFalse(index_matches(index,p))
