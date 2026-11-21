@@ -12,6 +12,7 @@ on:
       - 'scripts/featured_naver_v3.py'
       - 'scripts/featured_integrated.py'
       - 'scripts/test_featured_v3_after.py'
+      - 'scripts/featured_navigation.py'
       - '.github/workflows/validate-featured-close.yml'
   pull_request:
     paths:
@@ -40,3 +41,5 @@ jobs:
           python3 -m unittest discover -s scripts -p 'test_featured_v3_after.py'
       - name: Check published session prices and previous-close denominators
         run: python3 scripts/check_featured_close.py
+      - name: Validate featured navigation
+        run: python3 scripts/featured_navigation.py
