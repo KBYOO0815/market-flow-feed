@@ -6,6 +6,7 @@ on:
       - 'market-status/**'
       - 'MARKET_STATUS_POLICY.md'
       - 'scripts/market_status_display.py'
+      - 'scripts/market_status_navigation.py'
       - '.github/workflows/validate-market-status-display.yml'
   pull_request:
     paths:
@@ -29,3 +30,4 @@ jobs:
             [ -e "$f" ] || continue
             python3 scripts/market_status_display.py "$f"
           done
+          python3 scripts/market_status_navigation.py market-status/index.json
