@@ -5,11 +5,11 @@
   "slot": "15:40",
   "scheduledFor": "2026-11-21T15:40:00+09:00",
   "startedAt": "2026-11-21T15:37:36+09:00",
-  "updatedAt": "2026-11-21T15:37:36+09:00",
-  "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "updatedAt": "2026-11-21T15:38:00+09:00",
+  "status": "skipped",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -24,6 +24,19 @@
       "status": "success",
       "startedAt": "2026-11-21T15:37:36+09:00",
       "finishedAt": "2026-11-21T15:37:36+09:00"
+    },
+    {
+      "name": "preflight_done",
+      "status": "success",
+      "finishedAt": "2026-11-21T15:38:00+09:00",
+      "details": "Saturday KRX closed; no market data collection required"
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "finishedAt": "2026-11-21T15:38:00+09:00",
+      "details": "Skipped; no operating payload written"
     }
-  ]
+  ],
+  "skipReason": "2026-11-21 토요일, KRX 주식시장 휴장. 15:40 한국 시황 발행 대상 아님."
 }
