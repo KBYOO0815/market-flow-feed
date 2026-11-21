@@ -107,6 +107,12 @@ def validate(body, today=None):
         require(today - dt.timedelta(days=1) <= date <= today, "outside FIFO range")
         require(date not in seen_dates, "duplicate date"); seen_dates.add(date)
         require(type(day.get("isKrxTradingDay")) is bool, "trading flag")
+        display_slots = day.get("displaySlots")
+        require(isinstance(display_slots, list), "displaySlots required")
+        require(len(display_slots) == len(set(display_slots)) and all(slot in SLOTS for slot in display_slots), "displaySlots invalid")
+        if date == today:
+            expected = list(SLOTS) if day["isKrxTradingDay"] else ["06:40", "22:40"]
+            require(display_slots == expected, "current-day displaySlots conflict")
         seen_slots = set()
         for session in day.get("sessions", []):
             require(session.get("slot") not in seen_slots, "duplicate slot"); seen_slots.add(session["slot"])
@@ -124,9 +130,13 @@ def merge(current, draft, today=None):
     result["days"] = [d for d in result.get("days", []) if today-dt.timedelta(days=1) <= dt.date.fromisoformat(d["date"]) <= today]
     day = next((d for d in result["days"] if d["date"] == draft["date"]), None)
     if day is None:
-        day = {"date": draft["date"], "isKrxTradingDay": draft["isKrxTradingDay"], "sessions": []}
+        day = {"date": draft["date"], "isKrxTradingDay": draft["isKrxTradingDay"], "displaySlots": [], "sessions": []}
         result["days"].append(day)
     require(day["isKrxTradingDay"] == draft["isKrxTradingDay"], "trading flag conflict")
+    if dt.date.fromisoformat(day["date"]) == today:
+        day["displaySlots"] = list(SLOTS) if day["isKrxTradingDay"] else ["06:40", "22:40"]
+    elif not isinstance(day.get("displaySlots"), list):
+        day["displaySlots"] = [s["slot"] for s in day.get("sessions", []) if s.get("slot") in SLOTS]
     session = copy.deepcopy(draft["session"])
     old = next((s for s in day["sessions"] if s["slot"] == session["slot"]), None)
     if old is not None: require(timestamp(old["asOf"]) <= timestamp(session["asOf"]), "stale replacement")
