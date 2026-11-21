@@ -55,7 +55,7 @@ class MarketBriefingTest(unittest.TestCase):
 
     def test_fifo_calendar_days(self):
         current = empty()
-        current['days'] = [{'date': '2026-11-12', 'isKrxTradingDay': True, 'sessions': []}]
+        current['days'] = [{'date': '2026-11-12', 'isKrxTradingDay': True, 'displaySlots': [], 'sessions': []}]
         self.assertEqual([d['date'] for d in merge(current, draft(), TODAY)['days']], ['2026-11-16'])
 
     def test_legacy_research_state_is_removed(self):
@@ -69,6 +69,17 @@ class MarketBriefingTest(unittest.TestCase):
         d['isKrxTradingDay'] = False
         with self.assertRaises(ValueError):
             merge(empty(), d, TODAY)
+
+    def test_current_day_display_slots_follow_server_calendar(self):
+        trading = merge(empty(), draft('06:40'), TODAY)
+        self.assertEqual(trading['days'][0]['displaySlots'][0], '06:40')
+        self.assertEqual(trading['days'][0]['displaySlots'][-1], '22:40')
+        self.assertEqual(len(trading['days'][0]['displaySlots']), 15)
+
+        holiday = draft('06:40')
+        holiday['isKrxTradingDay'] = False
+        closed = merge(empty(), holiday, TODAY)
+        self.assertEqual(closed['days'][0]['displaySlots'], ['06:40', '22:40'])
 
     def test_closed_day_2240_accepted(self):
         d = draft('22:40')
