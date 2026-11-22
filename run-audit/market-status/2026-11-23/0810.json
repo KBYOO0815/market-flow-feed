@@ -5,18 +5,18 @@
   "slot": "08:10",
   "scheduledFor": "2026-11-23T08:10:00+09:00",
   "startedAt": "2026-11-23T08:12:47+09:00",
-  "updatedAt": "2026-11-22T23:13:30.150Z",
-  "status": "running",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
-  "nextStep": "publication",
+  "updatedAt": "2026-11-22T23:13:51.268Z",
+  "status": "published",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
-    "attempted": false,
-    "success": false,
-    "commitSha": null,
-    "readbackVerified": false
+    "attempted": true,
+    "success": true,
+    "commitSha": "7038095a5780ff7cdb672d505ec7e26ff0d62ddb",
+    "readbackVerified": true
   },
   "steps": [
     {
@@ -45,6 +45,19 @@
       "startedAt": "2026-11-22T23:13:30.150Z",
       "finishedAt": "2026-11-22T23:13:30.150Z",
       "details": "display v2 and navigation v1 structural contract checked; existing 06:10 and 07:10 preserved"
+    },
+    {
+      "name": "publication_done",
+      "status": "success",
+      "startedAt": "2026-11-22T23:13:51.268Z",
+      "finishedAt": "2026-11-22T23:13:51.268Z",
+      "commitSha": "7038095a5780ff7cdb672d505ec7e26ff0d62ddb"
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "startedAt": "2026-11-22T23:13:51.268Z",
+      "finishedAt": "2026-11-22T23:13:51.268Z"
     }
   ]
 }
