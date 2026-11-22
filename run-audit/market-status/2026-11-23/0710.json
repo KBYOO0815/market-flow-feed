@@ -9,7 +9,7 @@
   "status": "running",
   "phase": "validation_done",
   "lastCompletedStep": "validation_done",
-  "nextStep": "publication",
+  "nextStep": "publication_commit",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
