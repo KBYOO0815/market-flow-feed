@@ -5,11 +5,11 @@
   "slot": "08:10",
   "scheduledFor": "2026-11-23T08:10:00+09:00",
   "startedAt": "2026-11-23T08:12:47+09:00",
-  "updatedAt": "2026-11-22T23:13:27.159Z",
+  "updatedAt": "2026-11-22T23:13:30.150Z",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "display_validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -38,6 +38,13 @@
       "startedAt": "2026-11-22T23:13:27.159Z",
       "finishedAt": "2026-11-22T23:13:27.159Z",
       "details": "No new KRX regular trading since 07:10. Market-stabilization preparation reported, not fund deployment."
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "startedAt": "2026-11-22T23:13:30.150Z",
+      "finishedAt": "2026-11-22T23:13:30.150Z",
+      "details": "display v2 and navigation v1 structural contract checked; existing 06:10 and 07:10 preserved"
     }
   ]
 }
