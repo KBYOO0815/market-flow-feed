@@ -190,6 +190,195 @@
           }
         ]
       }
+    },
+    "07:10": {
+      "date": "2026-11-23",
+      "slot": "07:10",
+      "scheduledFor": "2026-11-23T07:10:00+09:00",
+      "asOf": "2026-11-23T07:17:00+09:00",
+      "publishedAt": "2026-11-23T07:17:00+09:00",
+      "sessionStatus": "US 2026-11-20 REGULAR CLOSED; KRX 2026-11-23 PREOPEN",
+      "scope": "US_KR",
+      "us": {
+        "summary": "미국 11/20 정규장 급락 후 신규 거래 없음",
+        "observedAt": "2026-11-21T06:00:00+09:00",
+        "indices": [
+          {
+            "name": "Nasdaq Composite",
+            "value": 22617.73,
+            "changePct": -5.28,
+            "observedAt": "2026-11-21T06:00:00+09:00",
+            "sourceUrl": "https://www.reuters.com/legal/transactional/wall-st-futures-slip-anthropic-debut-fails-reassure-ai-investors-2026-11-20/"
+          },
+          {
+            "name": "S&P 500",
+            "value": 6910.39,
+            "changePct": -3.7,
+            "observedAt": "2026-11-21T06:00:00+09:00",
+            "sourceUrl": "https://www.reuters.com/legal/transactional/wall-st-futures-slip-anthropic-debut-fails-reassure-ai-investors-2026-11-20/"
+          },
+          {
+            "name": "Dow Jones",
+            "value": 48147.33,
+            "changePct": -1.93,
+            "observedAt": "2026-11-21T06:00:00+09:00",
+            "sourceUrl": "https://www.reuters.com/legal/transactional/wall-st-futures-slip-anthropic-debut-fails-reassure-ai-investors-2026-11-20/"
+          }
+        ],
+        "themes": [
+          "AI 반도체 급락",
+          "데이터센터 투자 수익성 우려"
+        ],
+        "notes": [
+          "엔비디아 약 -14%, AMD 약 -13%, 마이크론 약 -14%",
+          "10년물 국채금리 약 4.93%로 하락(Reuters 보도)"
+        ]
+      },
+      "kr": {
+        "summary": "한국 11/23 장전, 11/20 종가 이후 신규 정규장 거래 없음",
+        "observedAt": "2026-11-20T15:30:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI",
+            "value": 4869.96,
+            "changePct": -5.21,
+            "observedAt": "2026-11-20T15:30:00+09:00",
+            "sourceUrl": "https://www.koreatimes.co.kr/economy/20261120/seoul-stocks-dip-to-10-month-low-as-ai-worries-spark-asia-wide-tech-sell-off"
+          },
+          {
+            "name": "KOSDAQ",
+            "value": 645.68,
+            "changePct": -5.71,
+            "observedAt": "2026-11-20T15:30:00+09:00",
+            "sourceUrl": "https://www.koreatimes.co.kr/economy/20261120/seoul-stocks-dip-to-10-month-low-as-ai-worries-spark-asia-wide-tech-sell-off"
+          }
+        ],
+        "flows": null,
+        "themes": [
+          "반도체·AI 약세"
+        ],
+        "notes": [
+          "외국인·기관 11/20 동반 순매도",
+          "11/23 장전 신규 가격·수급 미확인"
+        ]
+      },
+      "highlights": [
+        "미국 AI 반도체 약세 지속",
+        "한국 11/20 코스피 -5.21%, 코스닥 -5.71%",
+        "06:10 대비 새 정규장 종가 없음"
+      ],
+      "sources": [
+        {
+          "name": "AP 11/20 미국 마감",
+          "url": "https://apnews.com/article/c4c3f4878b12989347f8a930ed813dad",
+          "checkedAt": "2026-11-23T07:17:00+09:00"
+        },
+        {
+          "name": "Reuters 11/20 시장",
+          "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-20/",
+          "checkedAt": "2026-11-23T07:17:00+09:00"
+        },
+        {
+          "name": "경향신문 11/20 한국 마감",
+          "url": "https://www.khan.co.kr/en/article/202611201636007/",
+          "checkedAt": "2026-11-23T07:17:00+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      },
+      "display": {
+        "headline": "미국 AI·반도체 급락 여파, 한국 개장 전 경계",
+        "badges": [
+          "미국 마감",
+          "한국 장전",
+          "일부 확인"
+        ],
+        "observedAt": "2026-11-23T07:17:00+09:00",
+        "sections": [
+          {
+            "id": "us-indices",
+            "title": "미국 주요 지수 · 11/20 종가",
+            "kind": "metrics",
+            "items": [
+              {
+                "label": "Nasdaq Composite",
+                "value": 22617.73,
+                "changePct": -5.28,
+                "note": "11/20 정규장"
+              },
+              {
+                "label": "S&P 500",
+                "value": 6910.39,
+                "changePct": -3.7,
+                "note": "11/20 정규장"
+              },
+              {
+                "label": "Dow Jones",
+                "value": 48147.33,
+                "changePct": -1.93,
+                "note": "11/20 정규장"
+              }
+            ]
+          },
+          {
+            "id": "kr-indices",
+            "title": "한국 직전 거래일 · 11/20",
+            "kind": "metrics",
+            "items": [
+              {
+                "label": "KOSPI",
+                "value": 4869.96,
+                "changePct": -5.21,
+                "note": "11/20 종가"
+              },
+              {
+                "label": "KOSDAQ",
+                "value": 645.68,
+                "changePct": -5.71,
+                "note": "11/20 종가"
+              }
+            ]
+          },
+          {
+            "id": "flows",
+            "title": "수급",
+            "kind": "bullets",
+            "items": [
+              "11/20 한국 외국인·기관 순매도, 개인 순매수",
+              "11/23 장전 신규 수급 없음"
+            ]
+          },
+          {
+            "id": "drivers",
+            "title": "시장 핵심",
+            "kind": "bullets",
+            "items": [
+              "11/20 엔비디아 약 -14%, AMD 약 -13%, 마이크론 약 -14%",
+              "AI 투자 수익성 우려와 반도체 매도"
+            ]
+          },
+          {
+            "id": "changes",
+            "title": "06:10 대비",
+            "kind": "bullets",
+            "items": [
+              "신규 미국·한국 정규장 거래 없음. 확인된 종가 변화 없음"
+            ]
+          },
+          {
+            "id": "watch",
+            "title": "주의·확인",
+            "kind": "bullets",
+            "items": [
+              "09:00 이후 반도체 대형주·외국인 수급 확인",
+              "미국 지수는 11/20 종가이며 현재값 아님"
+            ]
+          }
+        ]
+      }
     }
   }
 }
