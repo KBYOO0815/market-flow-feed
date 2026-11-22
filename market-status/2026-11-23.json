@@ -379,6 +379,137 @@
           }
         ]
       }
+    },
+    "08:10": {
+      "date": "2026-11-23",
+      "slot": "08:10",
+      "scheduledFor": "2026-11-23T08:10:00+09:00",
+      "asOf": "2026-11-23T08:12:47+09:00",
+      "publishedAt": "2026-11-23T08:12:47+09:00",
+      "sessionStatus": "KRX PREOPEN; 2026-11-20 REGULAR CLOSE LAST CONFIRMED",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "한국 정규장 개장 전. 11/20 급락 이후 신규 정규장 가격·수급 없음. 정부 시장안정펀드 가동 준비 보도, 실제 투입 미확정.",
+        "observedAt": "2026-11-20T15:30:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI",
+            "value": 4869.96,
+            "changePct": -5.21,
+            "observedAt": "2026-11-20T15:30:00+09:00",
+            "sourceUrl": "https://247wallst.com/investing/2026/11/20/taiwan-stock-market-falls-6-2-to-cap-its-worst-week-since-1991-as-kospi-closes-down-5-2-and-nikkei-225-drops-5-1-in-ai-chip-selloff/"
+          },
+          {
+            "name": "KOSDAQ",
+            "value": 645.68,
+            "changePct": -5.71,
+            "observedAt": "2026-11-20T15:30:00+09:00",
+            "sourceUrl": "https://snowshagal.com/reports/en/2026-11-21_Snowshagal_Weekly_EN"
+          }
+        ],
+        "flows": null,
+        "themes": [
+          "AI·반도체 약세",
+          "시장안정 조치 준비"
+        ],
+        "notes": [
+          "오늘 신규 정규장 가격·수급 없음"
+        ]
+      },
+      "highlights": [
+        "직전 확정 KOSPI -5.21%, KOSDAQ -5.71%",
+        "정부 시장안정 조치 준비, 실제 자금 집행 미확정",
+        "07:10 대비 정규장 가격 변화 없음"
+      ],
+      "sources": [
+        {
+          "name": "11/20 한국 시장 마감",
+          "url": "https://247wallst.com/investing/2026/11/20/taiwan-stock-market-falls-6-2-to-cap-its-worst-week-since-1991-as-kospi-closes-down-5-2-and-nikkei-225-drops-5-1-in-ai-chip-selloff/",
+          "checkedAt": "2026-11-23T08:12:47+09:00"
+        },
+        {
+          "name": "11/20 코스닥 마감",
+          "url": "https://snowshagal.com/reports/en/2026-11-21_Snowshagal_Weekly_EN",
+          "checkedAt": "2026-11-23T08:12:47+09:00"
+        },
+        {
+          "name": "11/22 시장안정 조치 준비",
+          "url": "https://en.bloomingbit.io/feed/news/124974",
+          "checkedAt": "2026-11-23T08:12:47+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      },
+      "display": {
+        "headline": "한국 장전 약세 경계, 시장안정 조치 준비",
+        "badges": [
+          "한국",
+          "장전",
+          "일부 확인"
+        ],
+        "observedAt": "2026-11-23T08:12:47+09:00",
+        "sections": [
+          {
+            "id": "indices",
+            "title": "주요 지수 · 11/20 종가",
+            "kind": "metrics",
+            "items": [
+              {
+                "label": "KOSPI",
+                "value": 4869.96,
+                "changePct": -5.21,
+                "note": "11/20 종가"
+              },
+              {
+                "label": "KOSDAQ",
+                "value": 645.68,
+                "changePct": -5.71,
+                "note": "11/20 종가"
+              }
+            ]
+          },
+          {
+            "id": "flows",
+            "title": "수급",
+            "kind": "bullets",
+            "items": [
+              "08:10 현재 신규 정규장 수급 없음",
+              "11/20 외국인·기관 순매도, 개인 순매수"
+            ]
+          },
+          {
+            "id": "drivers",
+            "title": "시장 핵심",
+            "kind": "bullets",
+            "items": [
+              "AI·반도체 약세가 개장 전 부담",
+              "정부 시장안정펀드 준비 보도, 실제 투입은 미확정"
+            ]
+          },
+          {
+            "id": "changes",
+            "title": "07:10 대비",
+            "kind": "bullets",
+            "items": [
+              "정규장 지수·수급 신규 변화 없음",
+              "시장안정 조치 준비 보도를 추가 확인"
+            ]
+          },
+          {
+            "id": "watch",
+            "title": "주의·확인",
+            "kind": "bullets",
+            "items": [
+              "09:00 이후 반도체 대형주·외국인 수급 확인",
+              "지수는 11/20 확정 종가이며 오늘 실시간 가격 아님"
+            ]
+          }
+        ]
+      }
     }
   }
 }
