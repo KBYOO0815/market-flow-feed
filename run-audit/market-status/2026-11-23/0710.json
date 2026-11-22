@@ -5,18 +5,18 @@
   "slot": "07:10",
   "scheduledFor": "2026-11-23T07:10:00+09:00",
   "startedAt": "2026-11-23T07:12:04+09:00",
-  "updatedAt": "2026-11-23T07:16:00+09:00",
-  "status": "running",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
-  "nextStep": "publication_commit",
+  "updatedAt": "2026-11-23T07:17:00+09:00",
+  "status": "published",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
-    "attempted": false,
-    "success": false,
-    "commitSha": null,
-    "readbackVerified": false
+    "attempted": true,
+    "success": true,
+    "commitSha": "dcde78c983f630df980ae1f479b336ea9cdfdd71",
+    "readbackVerified": true
   },
   "steps": [
     {
@@ -45,6 +45,16 @@
       "name": "validation_done",
       "status": "success",
       "finishedAt": "2026-11-23T07:16:00+09:00"
+    },
+    {
+      "name": "publication_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T07:17:00+09:00"
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T07:17:00+09:00"
     }
   ]
 }
