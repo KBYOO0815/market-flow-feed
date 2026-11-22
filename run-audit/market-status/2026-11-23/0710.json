@@ -5,11 +5,11 @@
   "slot": "07:10",
   "scheduledFor": "2026-11-23T07:10:00+09:00",
   "startedAt": "2026-11-23T07:12:04+09:00",
-  "updatedAt": "2026-11-23T07:12:04+09:00",
+  "updatedAt": "2026-11-23T07:14:00+09:00",
   "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "phase": "preflight_done",
+  "lastCompletedStep": "preflight_done",
+  "nextStep": "market_collection",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -24,6 +24,12 @@
       "status": "success",
       "startedAt": "2026-11-23T07:12:04+09:00",
       "finishedAt": "2026-11-23T07:12:04+09:00"
+    },
+    {
+      "name": "preflight_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T07:14:00+09:00",
+      "detail": "KRX Monday preopen; US Friday regular closed"
     }
   ]
 }
