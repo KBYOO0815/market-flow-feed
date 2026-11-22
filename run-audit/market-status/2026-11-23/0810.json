@@ -5,11 +5,11 @@
   "slot": "08:10",
   "scheduledFor": "2026-11-23T08:10:00+09:00",
   "startedAt": "2026-11-23T08:12:47+09:00",
-  "updatedAt": "2026-11-22T23:13:25.054Z",
+  "updatedAt": "2026-11-22T23:13:27.159Z",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "display_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -33,11 +33,11 @@
       "details": "2026-11-23 Monday KRX preopen 08:10; KR scope; 09:00 regular open"
     },
     {
-      "name": "collection_done",
+      "name": "analysis_done",
       "status": "success",
-      "startedAt": "2026-11-22T23:13:25.054Z",
-      "finishedAt": "2026-11-22T23:13:25.054Z",
-      "details": "2026-11-20 KOSPI/KOSDAQ close; 2026-11-23 08:10 KRX preopen, no new regular-session flows; government stabilization preparations report 2026-11-22"
+      "startedAt": "2026-11-22T23:13:27.159Z",
+      "finishedAt": "2026-11-22T23:13:27.159Z",
+      "details": "No new KRX regular trading since 07:10. Market-stabilization preparation reported, not fund deployment."
     }
   ]
 }
