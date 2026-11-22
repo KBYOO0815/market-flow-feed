@@ -5,11 +5,11 @@
   "slot": "06:10",
   "scheduledFor": "2026-11-23T06:10:00+09:00",
   "startedAt": "2026-11-23T06:10:15+09:00",
-  "updatedAt": "2026-11-23T06:10:30+09:00",
+  "updatedAt": "2026-11-23T06:12:00+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "market_collection",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "payload_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -30,6 +30,16 @@
       "status": "success",
       "finishedAt": "2026-11-23T06:10:30+09:00",
       "details": "Monday KRX pre-open; US Friday close; policy slot US_KR"
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "details": "US Nov20 regular close; Korea Nov20 regular close; Reuters AP Korea Times sources"
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "details": "US AI semiconductor selloff and Korea premarket spillover; prior Nov21 US close edition unchanged"
     }
   ]
 }
