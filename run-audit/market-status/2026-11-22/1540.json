@@ -6,10 +6,10 @@
   "scheduledFor": "2026-11-22T15:40:00+09:00",
   "startedAt": "2026-11-22T15:35:10+09:00",
   "updatedAt": "2026-11-22T15:35:10+09:00",
-  "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "status": "skipped",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -24,6 +24,21 @@
       "status": "success",
       "startedAt": "2026-11-22T15:35:10+09:00",
       "finishedAt": "2026-11-22T15:35:10+09:00"
+    },
+    {
+      "name": "preflight_done",
+      "status": "success",
+      "startedAt": "2026-11-22T15:35:10+09:00",
+      "finishedAt": "2026-11-22T15:35:10+09:00",
+      "detail": "Sunday, no KRX regular session"
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "startedAt": "2026-11-22T15:35:10+09:00",
+      "finishedAt": "2026-11-22T15:35:10+09:00",
+      "detail": "Existing index navigation today 15:40 skipped verified; no market edition publication"
     }
-  ]
+  ],
+  "reason": "2026-11-22 Sunday KRX closed; 15:40 Korea close briefing not applicable"
 }
