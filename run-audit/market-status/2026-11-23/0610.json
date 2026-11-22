@@ -5,11 +5,11 @@
   "slot": "06:10",
   "scheduledFor": "2026-11-23T06:10:00+09:00",
   "startedAt": "2026-11-23T06:10:15+09:00",
-  "updatedAt": "2026-11-23T06:12:00+09:00",
+  "updatedAt": "2026-11-23T06:13:00+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "payload_validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -40,6 +40,11 @@
       "name": "analysis_done",
       "status": "success",
       "details": "US AI semiconductor selloff and Korea premarket spillover; prior Nov21 US close edition unchanged"
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "details": "display structure validated against script contract (metrics/bullets; 3 badges; ISO observedAt); navigation 15 slots"
     }
   ]
 }
