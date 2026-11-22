@@ -1,14 +1,10 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T06:41:10+09:00",
+  "updatedAt": "2026-11-23T06:13:00+09:00",
   "dates": [
     {
-      "date": "2026-11-21",
-      "path": "market-status/2026-11-21.json"
-    },
-    {
-      "date": "2026-11-20",
-      "path": "market-status/2026-11-20.json"
+      "date": "2026-11-23",
+      "path": "market-status/2026-11-23.json"
     }
   ],
   "navigation": {
@@ -22,28 +18,14 @@
         "date": "2026-11-21",
         "slot": "15:40",
         "state": "skipped",
-        "reason": "KRX 휴장일 — 한국 15:40 시황 미발행"
+        "reason": "KRX 토요일 휴장"
       }
     ],
     "today": [
       {
-        "date": "2026-11-22",
-        "slot": "06:40",
-        "state": "skipped",
-        "reason": "일요일: KRX 휴장, 직전 토요일 미국 정규장 미운영; 금요일 미국 종가는 전일 06:40에 이미 반영"
-      },
-      {
-        "date": "2026-11-22",
-        "slot": "15:40",
-        "state": "skipped",
-        "reason": "KRX 일요일 휴장"
-      }
-    ],
-    "next": [
-      {
         "date": "2026-11-23",
         "slot": "06:10",
-        "state": "scheduled"
+        "state": "published"
       },
       {
         "date": "2026-11-23",
@@ -112,6 +94,83 @@
       },
       {
         "date": "2026-11-23",
+        "slot": "23:10",
+        "state": "scheduled"
+      }
+    ],
+    "next": [
+      {
+        "date": "2026-11-24",
+        "slot": "06:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "07:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "08:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "09:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "10:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "11:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "12:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "13:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "14:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "15:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "17:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "18:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "19:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "20:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
         "slot": "23:10",
         "state": "scheduled"
       }
