@@ -5,11 +5,11 @@
   "slot": "06:40",
   "scheduledFor": "2026-11-23T06:40:00+09:00",
   "startedAt": "2026-11-23T06:38:54+09:00",
-  "updatedAt": "2026-11-23T06:38:54+09:00",
-  "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "updatedAt": "2026-11-22T21:39:12.150Z",
+  "status": "skipped",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -24,6 +24,27 @@
       "status": "success",
       "startedAt": "2026-11-23T06:38:54+09:00",
       "finishedAt": "2026-11-23T06:38:54+09:00"
+    },
+    {
+      "name": "preflight_done",
+      "status": "success",
+      "finding": "KRX trading day; 06:40 US-only run not eligible"
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "finding": "skip audit finalization"
+    }
+  ],
+  "reason": "2026-11-23 KRX 정상 거래일. 06:40 미국 시황은 한국 휴장일에만 발행",
+  "calendarEvidence": [
+    {
+      "url": "https://traderda.com/market/market-holidays",
+      "finding": "2026-11-23 KRX normal trading day 09:00-15:30"
+    },
+    {
+      "url": "https://todaystk.kr/market-holidays",
+      "finding": "2026-11-23 trading day"
     }
   ]
 }
