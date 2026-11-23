@@ -5,11 +5,11 @@
   "slot": "09:10",
   "scheduledFor": "2026-11-23T09:10:00+09:00",
   "startedAt": "2026-11-23T09:06:34+09:00",
-  "updatedAt": "2026-11-23T09:06:34+09:00",
+  "updatedAt": "2026-11-23T09:07:00+09:00",
   "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "phase": "preflight_done",
+  "lastCompletedStep": "calendar_session_check",
+  "nextStep": "market_collection",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -24,6 +24,12 @@
       "status": "success",
       "startedAt": "2026-11-23T09:06:34+09:00",
       "finishedAt": "2026-11-23T09:06:34+09:00"
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "detail": "KRX 2026-11-23 trading day, regular 09:00-15:30; 09:10 slot early-start 09:06",
+      "source": "https://marketcalendars.com/markets/krx?year=2026"
     }
   ]
 }
