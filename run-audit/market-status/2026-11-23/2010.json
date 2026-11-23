@@ -5,11 +5,11 @@
   "slot": "20:10",
   "scheduledFor": "2026-11-23T20:10:00+09:00",
   "startedAt": "2026-11-23T20:07:35+09:00",
-  "updatedAt": "2026-11-23T20:08:00+09:00",
+  "updatedAt": "2026-11-23T20:08:20+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "collection",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "analysis",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -29,6 +29,23 @@
       "status": "success",
       "finishedAt": "2026-11-23T20:08:00+09:00",
       "details": "KRX 2026-11-23 regular session closed; 20:10 logical slot retained; policy slot 20:10 KR"
+    },
+    {
+      "name": "collection",
+      "status": "success",
+      "finishedAt": "2026-11-23T20:08:20+09:00",
+      "sourceCount": 3,
+      "observations": {
+        "indices": "2026-11-23T15:30:00+09:00",
+        "flows": "2026-11-23T15:46:00+09:00",
+        "afterHours": "unverified",
+        "fx": "2026-11-23T15:30:00+09:00"
+      },
+      "sources": [
+        "https://m.newspim.com/news/view/20261123000978",
+        "https://seoulmarketwire.com/posts/kospi-close-2026-11-23/",
+        "https://www.reuters.com/world/asia-pacific/south-koreas-finance-minister-sees-solid-growth-next-year-flags-chip-volatility-2026-11-23/"
+      ]
     }
   ]
 }
