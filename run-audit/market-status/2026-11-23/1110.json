@@ -5,18 +5,18 @@
   "slot": "11:10",
   "scheduledFor": "2026-11-23T11:10:00+09:00",
   "startedAt": "2026-11-23T11:07:30+09:00",
-  "updatedAt": "2026-11-23T11:09:15+09:00",
-  "status": "running",
-  "phase": "publication_done",
-  "lastCompletedStep": "publication_done",
-  "nextStep": "publication_readback",
+  "updatedAt": "2026-11-23T11:09:40+09:00",
+  "status": "published",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
     "attempted": true,
     "success": true,
     "commitSha": "7deefd884748f42f737e8980f5fd9f90ca94bb0e",
-    "readbackVerified": false
+    "readbackVerified": true
   },
   "steps": [
     {
@@ -58,6 +58,12 @@
       "status": "success",
       "finishedAt": "2026-11-23T11:09:15+09:00",
       "commitSha": "7deefd884748f42f737e8980f5fd9f90ca94bb0e"
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T11:09:40+09:00",
+      "details": "11:10 edition and navigation remotely verified; earlier editions preserved"
     }
   ]
 }
