@@ -5,18 +5,18 @@
   "slot": "15:40",
   "scheduledFor": "2026-11-23T15:40:00+09:00",
   "startedAt": "2026-11-23T06:36:20.572Z",
-  "updatedAt": "2026-11-23T06:36:58.409Z",
-  "status": "running",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
-  "nextStep": "publication",
+  "updatedAt": "2026-11-23T06:37:20.526Z",
+  "status": "published",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
     "attempted": true,
-    "success": false,
-    "commitSha": null,
-    "readbackVerified": false
+    "success": true,
+    "commitSha": "a51a267590251a721fb0ddc6b4c3d186748ff078",
+    "readbackVerified": true
   },
   "steps": [
     {
@@ -45,6 +45,18 @@
       "status": "success",
       "finishedAt": "2026-11-23T06:36:58.409Z",
       "notes": "display fields checked against Python validator contract; direct script execution unavailable"
+    },
+    {
+      "name": "publication_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T06:37:20.526Z",
+      "commitSha": "a51a267590251a721fb0ddc6b4c3d186748ff078"
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T06:37:20.526Z",
+      "notes": "date JSON, index and audit all remotely reread"
     }
   ],
   "collectionNotes": "Latest verified market snapshot 2026-11-23 14:05 KST, not closing price; 15:30 close unverified."
