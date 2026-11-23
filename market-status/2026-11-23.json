@@ -1053,6 +1053,139 @@
           }
         ]
       }
+    },
+    "17:10": {
+      "date": "2026-11-23",
+      "slot": "17:10",
+      "scheduledFor": "2026-11-23T17:10:00+09:00",
+      "asOf": "2026-11-23T17:09:00+09:00",
+      "publishedAt": "2026-11-23T17:09:00+09:00",
+      "sessionStatus": "KRX REGULAR CLOSED; confirmed 15:30 close",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "코스피 -3.31%, 코스닥 -1.58% 마감. 외국인·개인 순매도, 기관 순매수. 오후 낙폭 축소.",
+        "observedAt": "2026-11-23T15:30:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI",
+            "value": 4708.54,
+            "changePct": -3.31,
+            "observedAt": "2026-11-23T15:30:00+09:00",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261123129851008"
+          },
+          {
+            "name": "KOSDAQ",
+            "value": 635.45,
+            "changePct": -1.58,
+            "observedAt": "2026-11-23T15:30:00+09:00",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261123129851008"
+          }
+        ],
+        "flows": {
+          "observedAt": "2026-11-23T15:30:00+09:00",
+          "market": "KOSPI",
+          "unit": "억원",
+          "foreign": -2472,
+          "institution": 1872,
+          "individual": -3669
+        },
+        "themes": [
+          "AI·반도체 약세",
+          "건설·보험·제약 약세",
+          "화장품·로봇 일부 강세"
+        ],
+        "notes": [
+          "삼성전자 -3.06%, SK하이닉스 -2.52%",
+          "외국인 7거래일 연속 순매도",
+          "장중 코스피 4586.80 저점",
+          "원달러 1345.9원"
+        ]
+      },
+      "highlights": [
+        "코스피 -3.31%, 코스닥 -1.58%",
+        "외국인 -2472억원, 기관 +1872억원",
+        "15:40 이후 종가·수급 확정"
+      ],
+      "sources": [
+        {
+          "name": "연합뉴스 11/23 마감",
+          "url": "https://www.yna.co.kr/view/AKR20261123129851008",
+          "checkedAt": "2026-11-23T17:09:00+09:00"
+        }
+      ],
+      "status": {
+        "collection": "success",
+        "validation": "success",
+        "publication": "pending_readback"
+      },
+      "display": {
+        "headline": "코스피 3.31% 급락 마감, 외국인 7일 연속 매도",
+        "badges": [
+          "한국",
+          "정규장 마감",
+          "종가 확인"
+        ],
+        "observedAt": "2026-11-23T15:30:00+09:00",
+        "sections": [
+          {
+            "id": "indices",
+            "title": "주요 지수 · 15:30 종가",
+            "kind": "metrics",
+            "items": [
+              {
+                "label": "KOSPI",
+                "value": 4708.54,
+                "changePct": -3.31,
+                "note": "15:30 종가"
+              },
+              {
+                "label": "KOSDAQ",
+                "value": 635.45,
+                "changePct": -1.58,
+                "note": "15:30 종가"
+              }
+            ]
+          },
+          {
+            "id": "flows",
+            "title": "코스피 수급 · 억원",
+            "kind": "bullets",
+            "items": [
+              "외국인 -2,472 · 개인 -3,669 · 기관 +1,872",
+              "외국인 7거래일 연속 순매도"
+            ]
+          },
+          {
+            "id": "drivers",
+            "title": "시장 핵심",
+            "kind": "bullets",
+            "items": [
+              "삼성전자 -3.06%, SK하이닉스 -2.52%; 건설·보험·제약 약세",
+              "에이피알 +9.13%, 로보티즈 +5.35% 등 일부 강세",
+              "미국 AI 불안과 증시 급락, 오후 반발매수·시장안정 조치 기대"
+            ]
+          },
+          {
+            "id": "changes",
+            "title": "15:40 대비",
+            "kind": "bullets",
+            "items": [
+              "14:05 코스피 4,720.14 대비 종가 4,708.54로 11.60포인트 하락",
+              "장중 추정 대신 확정 종가·최종 수급 반영"
+            ]
+          },
+          {
+            "id": "watch",
+            "title": "주의·확인",
+            "kind": "bullets",
+            "items": [
+              "코스피 4,700선과 외국인 매도 지속 여부",
+              "원·달러 1,345.9원(+9.7원), 다음 거래일 반도체 수급"
+            ]
+          }
+        ]
+      }
     }
   }
 }
