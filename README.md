@@ -1,9 +1,22 @@
-# Market Flow public news data
+# Market Flow — JSON feeds
 
-Only deliberately public briefing data, editorial policy and its publication tooling live here. The Android application source remains in the private market-flow-app repository.
+단순 운영 구조: **ChatGPT 예약 작업 3개 → GitHub JSON 3개 → Android 앱**.
 
-The app reads morning-briefing.json. Reviewed drafts are staged at drafts/morning-briefing.json and cannot replace the live feed before releaseAt. Target publication slots are 07:30, 11:30, 15:30 and 20:00 KST on verified KOSPI trading days. Research preparation begins ten minutes before each target.
+## 운영 파일
 
-The publisher validates schema version 2, actual current-review metadata, foreign/domestic ordering and limits, short-lived intraday observations, expiry and the approved publication window. It refuses rollback, uses the latest content SHA and reads the public JSON back. GitHub and research execution can be delayed; a staged draft or a no-op workflow is not a completed publication. Do not alter asOf to disguise old research.
+- `market-status.json` — 시황: 한국장 거래일 06:10, 08:10, 09:10, 13:10, 15:40, 20:10 (KST). 한국장 휴장·직전 미국장 개장 시 06:10만 발행.
+- `market-news.json` — 뉴스: 한국장 거래일 07:40, 11:40, 15:40, 19:40 (KST).
+- `featured-stocks-unified.json` — 특징주: 한국장 거래일 08:40, 09:40, 11:40, 13:40, 15:40, 19:40 (KST).
 
-Read EDITORIAL_POLICY.md for the full current-source verification rules. Structural validation does not prove semantic factual accuracy; editors must actually verify current sources. Public drafts are public data, not confidential embargoed material.
+예약 작업이 검색·분석·JSON 검증·원격 갱신 확인까지 담당합니다. GitHub는 JSON 보관소이며 Android 앱은 JSON을 읽어 표시합니다.
+
+## 운영 규칙
+
+- 확인된 실제 데이터와 출처만 발행하며 없는 수치를 만들어 넣지 않습니다.
+- 현재 날짜 및 전날(D/D-1)만 유지합니다.
+- `navigation.previous/today/next`는 현재 예약 시각만 포함합니다.
+- 실패 시 기존 정상 JSON을 덮어쓰지 않으며, 실제 실패 원인을 예약 실행 결과에 남깁니다.
+- 데이터 계약이나 회차를 변경할 때는 예약 작업과 앱을 함께 변경합니다.
+- 과거 커밋과 감사 기록은 GitHub 기록으로 추적할 수 있습니다.
+
+**주의:** 기존 설치 APK는 구형 경로를 읽을 수 있으므로 새 APK 설치 전까지 일부 피드가 작동하지 않을 수 있습니다. 통합 파일 기반 앱 소스의 빌드 및 실기기 검증은 별도로 필요합니다.
