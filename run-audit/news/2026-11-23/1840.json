@@ -5,11 +5,11 @@
   "slot": "18:40",
   "scheduledFor": "2026-11-23T18:40:00+09:00",
   "startedAt": "2026-11-23T18:43:13+09:00",
-  "updatedAt": "2026-11-23T18:43:13+09:00",
+  "updatedAt": "2026-11-23T18:44:03+09:00",
   "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "phase": "preflight_done",
+  "lastCompletedStep": "preflight_done",
+  "nextStep": "news_collection",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -24,6 +24,38 @@
       "status": "success",
       "startedAt": "2026-11-23T18:43:13+09:00",
       "finishedAt": "2026-11-23T18:43:13+09:00"
+    },
+    {
+      "name": "preflight_done",
+      "status": "success",
+      "startedAt": "2026-11-23T18:43:13+09:00",
+      "finishedAt": "2026-11-23T18:44:03+09:00",
+      "details": {
+        "isKrxTradingDay": true,
+        "currentDatePresent": false,
+        "operationalFileSha": "33c7af99b05601fbedb0ef286cd3ad8472e5837d"
+      }
     }
-  ]
+  ],
+  "preflight": {
+    "isKrxTradingDay": true,
+    "evidenceUrls": [
+      "https://www.krx.co.kr/contents/RGL/04/04030203/RGL04030203.jsp",
+      "https://traderda.com/market/market-holidays"
+    ],
+    "operationalFileSha": "33c7af99b05601fbedb0ef286cd3ad8472e5837d",
+    "retainedDates": [
+      "2026-11-21",
+      "2026-11-20"
+    ],
+    "latestPublishedSession": {
+      "date": "2026-11-21",
+      "slot": "06:40",
+      "asOf": "2026-11-21T06:43:10+09:00"
+    },
+    "currentDatePresent": false,
+    "missingAuditFilesBeforeCurrentSlot": 14,
+    "windowStartExclusive": "2026-11-21T06:43:10+09:00",
+    "windowEndInclusive": "2026-11-23T18:43:13+09:00"
+  }
 }
