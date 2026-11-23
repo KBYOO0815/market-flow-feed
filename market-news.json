@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-23T19:43:04+09:00",
+  "navigation": {
+    "previous": [
+      {
+        "date": "2026-11-22",
+        "slot": "06:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-22",
+        "slot": "22:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      }
+    ],
+    "today": [
+      {
+        "date": "2026-11-23",
+        "slot": "06:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "07:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "08:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "09:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "10:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "11:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "12:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "13:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "14:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "15:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "16:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "17:40",
+        "state": "missing",
+        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "18:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "19:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "22:40",
+        "state": "scheduled"
+      }
+    ],
+    "next": [
+      {
+        "date": "2026-11-24",
+        "slot": "06:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "07:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "08:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "09:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "10:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "11:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "12:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "13:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "14:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "15:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "16:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "17:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "18:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "19:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "22:40",
+        "state": "scheduled"
+      }
+    ]
+  },
+  "days": [
+    {
+      "date": "2026-11-23",
+      "isKrxTradingDay": true,
+      "displaySlots": [
+        "06:40",
+        "07:40",
+        "08:40",
+        "09:40",
+        "10:40",
+        "11:40",
+        "12:40",
+        "13:40",
+        "14:40",
+        "15:40",
+        "16:40",
+        "17:40",
+        "18:40",
+        "19:40",
+        "22:40"
+      ],
+      "sessions": [
+        {
+          "slot": "18:40",
+          "asOf": "2026-11-23T18:43:13+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261123-nvidia-china-compliance-us-inquiry",
+              "title": "미 정부, 엔비디아 중국 칩 판매 규정 준수 책임 추궁",
+              "summary": "스콧 베선트 미국 재무장관은 엔비디아의 중국 칩 판매와 규정 준수 책임자에 관해 답변을 요구하고 있다고 밝혔다. 이 사안은 위법 확정이 아니라 미국 정부의 추가 확인·조사 단계다.",
+              "publishedAt": "2026-11-23T02:48:34+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/china/us-seeks-answers-nvidias-sale-chips-china-bessent-says-2026-11-22/",
+              "relatedStocks": [
+                "엔비디아(NVDA)",
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ],
+              "impactRank": 1,
+              "category": "AI반도체·미중수출통제",
+              "region": "foreign",
+              "eventKey": "nvidia-china-export-compliance-2026",
+              "factKey": "us-treasury-seeks-compliance-answers-20261122"
+            },
+            {
+              "id": "foreign-20261123-asia-ai-rout-policy-response",
+              "title": "아시아 당국, AI주 급락에 시장안정 조치 확대",
+              "summary": "한국은 증시 안정 조치 준비를 재확인했고 대만은 공매도 규제를 강화했으며 중국 거래소는 신용거래 요건 완화 등 지원책을 발표했다. 미국 금리인상 기대와 달러 강세가 기술주 위험회피를 키웠다.",
+              "publishedAt": "2026-11-23T14:36:49+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-23/",
+              "relatedStocks": [
+                "삼성전자(005930)",
+                "SK하이닉스(000660)",
+                "TSMC(TSM)"
+              ],
+              "impactRank": 2,
+              "category": "글로벌증시·AI·정책대응",
+              "region": "foreign",
+              "eventKey": "asia-ai-selloff-policy-response-20261123",
+              "factKey": "korea-taiwan-china-market-support-actions"
+            },
+            {
+              "id": "foreign-20261123-middle-east-oil-shipping-attacks",
+              "title": "중동 정유시설·선박 공격 지속…호르무즈 공급 위험 재부각",
+              "summary": "후티는 사우디 라빅 정유시설 공격을 주장했고 주말 동안 걸프·호르무즈 인근 선박 공격이 보고됐다. 브렌트유는 Reuters 관측 시점 배럴당 91.97달러로 0.65% 하락했지만 지정학적 공급 위험이 하단을 지지했다.",
+              "publishedAt": "2026-11-23T11:24:54+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/energy/oil-prices-fall-amid-equity-selloff-though-iran-war-attacks-limit-losses-2026-11-23/",
+              "relatedStocks": [
+                "S-Oil(010950)",
+                "SK이노베이션(096770)",
+                "대한해운(005880)"
+              ],
+              "impactRank": 3,
+              "category": "중동·원유·해운",
+              "region": "foreign",
+              "eventKey": "middle-east-oil-shipping-attacks-20261122",
+              "factKey": "rabigh-hormuz-weekend-attacks"
+            },
+            {
+              "id": "foreign-20261123-hedge-fund-worst-week",
+              "title": "글로벌 헤지펀드, 기술주 급락에 2025년 4월 이후 최악의 주간 손실",
+              "summary": "JP모건 고객 메모에 따르면 글로벌 헤지펀드는 11월 20일까지 한 주간 3% 넘게 손실을 내 2025년 4월 이후 최대 주간 낙폭을 기록했다. 자금은 필수소비재와 헬스케어 등 방어 업종으로 이동했다.",
+              "publishedAt": "2026-11-23T17:24:38+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/china/hedge-funds-post-worst-week-since-april-2025-sparks-defensive-shift-2026-11-23/",
+              "relatedStocks": [],
+              "impactRank": 4,
+              "category": "글로벌수급·위험회피",
+              "region": "foreign",
+              "eventKey": "global-hedge-fund-deleveraging-202611",
+              "factKey": "weekly-loss-over-3pct-to-20261120"
+            },
+            {
+              "id": "foreign-20261121-niron-rare-earth-free-magnet-plant",
+              "title": "니론, 미국에 18억달러 희토류 없는 영구자석 공장 건설",
+              "summary": "니론 매그네틱스는 미국 앨라배마주 도선에 18억달러 규모의 희토류 없는 영구자석 생산단지를 건설한다고 발표했다. 미국 내 공급망 확대와 중국 희토류 의존도 축소 움직임에 해당한다.",
+              "publishedAt": "2026-11-21T07:04:29+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/markets/commodities/niron-magnetics-build-18-billion-alabama-rare-earth-free-magnet-facilty-2026-11-20/",
+              "relatedStocks": [
+                "성림첨단산업(304100)",
+                "노바텍(285490)"
+              ],
+              "impactRank": 5,
+              "category": "희토류·영구자석·미국투자",
+              "region": "foreign",
+              "eventKey": "niron-alabama-magnet-campus-2026",
+              "factKey": "investment-1-8-billion-usd"
+            },
+            {
+              "id": "foreign-20261123-eurozone-flash-pmi",
+              "title": "유로존 11월 종합 PMI 51.7…독일 개선·프랑스 부진 양극화",
+              "summary": "S&P 글로벌 유로존 11월 잠정 종합 PMI는 51.7로 5개월 연속 확장 국면을 유지했다. 제조업 PMI는 52.9로 올랐지만 서비스업은 51.2로 낮아졌고, 독일과 프랑스의 경기 격차가 확대됐다.",
+              "publishedAt": "2026-11-23T18:08:19+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/europe/euro-zone-growth-holds-steady-frances-deepening-downturn-clouds-outlook-pmi-2026-11-23/",
+              "relatedStocks": [],
+              "impactRank": 6,
+              "category": "유럽경기·PMI",
+              "region": "foreign",
+              "eventKey": "eurozone-flash-pmi-202611",
+              "factKey": "composite-51-7-manufacturing-52-9"
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "domestic-20261123-fsc-buyback-limit-relaxation",
+              "title": "금융위, 상장사 자사주 1일 매수 한도 3개월 완화 의결",
+              "summary": "금융위원회는 11월 24일부터 2027년 2월 23일까지 상장기업의 하루 자기주식 매수주문 수량 한도를 완화하기로 의결했다. 직접취득은 신고 수량 전체까지, 신탁취득은 신탁재산 총액 범위까지 주문할 수 있다.",
+              "publishedAt": "2026-11-23T15:05:00+09:00",
+              "sourceName": "금융위원회·연합뉴스",
+              "sourceUrl": "https://www.fsc.go.kr/po010106/88190",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "증시안정·자사주",
+              "region": "domestic",
+              "eventKey": "korea-market-stabilization-202611",
+              "factKey": "buyback-daily-limit-relaxed-20261124-to-20270223"
+            },
+            {
+              "id": "domestic-20261123-kakao-tpg-arbitration",
+              "title": "카카오, 카카오모빌리티 상장 갈등으로 1.5조원대 국제중재",
+              "summary": "TPG는 카카오모빌리티의 미국 ADR 상장 추진 의무 위반을 주장하며 ICC 중재를 신청했다. TPG가 통지한 비금전 청구 포함 전체 청구 가치는 11억달러, 약 1조5천억원 이상이며 카카오는 적극 대응하겠다고 공시했다.",
+              "publishedAt": "2026-11-23T07:44:00+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123800003",
+              "relatedStocks": [
+                "카카오(035720)"
+              ],
+              "impactRank": 2,
+              "category": "플랫폼·국제중재",
+              "region": "domestic",
+              "eventKey": "kakao-mobility-tpg-icc-arbitration-2026",
+              "factKey": "claim-value-over-1-1-billion-usd"
+            },
+            {
+              "id": "domestic-20261123-kepco-data-breach",
+              "title": "한전ON·전자조달 이용자 152만명 개인정보 유출…개보위 조사",
+              "summary": "개인정보보호위원회는 한국전력의 개인정보 유출 신고를 받고 현장 조사에 착수했다. 한전ON 이용자 65만487명과 전자조달시스템 이용자 86만9,761명의 정보가 유출됐다고 한전이 밝혔다.",
+              "publishedAt": "2026-11-23T16:09:00+09:00",
+              "sourceName": "개인정보보호위원회·연합뉴스",
+              "sourceUrl": "https://www.yna.co.kr/view/AKR20261123137200530",
+              "relatedStocks": [
+                "한국전력(015760)"
+              ],
+              "impactRank": 3,
+              "category": "공기업·사이버보안",
+              "region": "domestic",
+              "eventKey": "kepco-data-breach-202611",
+              "factKey": "privacy-commission-investigation-1-52-million-users"
+            },
+            {
+              "id": "domestic-20261123-gigavis-contract",
+              "title": "기가비스, 매출 74% 규모 반도체 기판 장비 공급계약",
+              "summary": "기가비스는 국내 반도체 기판 제조사와 388억원 규모의 반도체 기판 수리장비 공급계약을 체결했다. 계약금액은 2025년 연결 매출의 74.00%이며 계약기간은 2027년 12월 31일까지다.",
+              "publishedAt": "2026-11-23T14:56:00+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123900324",
+              "relatedStocks": [
+                "기가비스(420770)"
+              ],
+              "impactRank": 4,
+              "category": "반도체장비·수주",
+              "region": "domestic",
+              "eventKey": "gigavis-substrate-repair-equipment-contract-20261123",
+              "factKey": "contract-38-8-billion-krw-74pct-sales"
+            },
+            {
+              "id": "domestic-20261123-daewoo-ec-contract",
+              "title": "대우건설, 안산 고잔 재건축 4,864억원 수주",
+              "summary": "대우건설은 고잔연립5구역 재건축정비사업조합과 4,863억7,606만원 규모의 공사 계약을 체결했다. 계약금액은 최근 매출의 6.04%이며 실착공일부터 41개월간 진행된다.",
+              "publishedAt": "2026-11-23T09:55:07+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123800132",
+              "relatedStocks": [
+                "대우건설(047040)"
+              ],
+              "impactRank": 5,
+              "category": "건설·수주",
+              "region": "domestic",
+              "eventKey": "daewoo-ec-gojan-redevelopment-contract-2026",
+              "factKey": "contract-486376055660-krw"
+            },
+            {
+              "id": "domestic-20261123-hanwha-solutions-merger",
+              "title": "한화솔루션, 100% 자회사 한화도시개발 무증자 흡수합병",
+              "summary": "한화솔루션은 완전자회사 한화도시개발을 신주 발행 없이 1대0 비율로 흡수합병하기로 결정했다. 합병기일은 2027년 1월 31일이며 잔여 토지·정산금 채권 관리 일원화가 목적이다.",
+              "publishedAt": "2026-11-23T15:48:00+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123800416",
+              "relatedStocks": [
+                "한화솔루션(009830)",
+                "한화(000880)"
+              ],
+              "impactRank": 6,
+              "category": "합병·지배구조",
+              "region": "domestic",
+              "eventKey": "hanwha-solutions-hanwha-city-development-merger-2026",
+              "factKey": "wholly-owned-no-share-issuance-merger"
+            },
+            {
+              "id": "domestic-20261123-kyeryong-redevelopment-selection",
+              "title": "계룡건설, 846억원 자양동 소규모재개발 시공사 선정",
+              "summary": "계룡건설산업은 서울 자양동 92-1번지 일원 소규모재개발정비사업 시공사로 선정됐다고 공시했다. 공사 예정금액은 부가세 제외 약 846억원이며, 확정 계약 체결 시 다시 공시할 예정이다.",
+              "publishedAt": "2026-11-23T15:24:41+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123800350",
+              "relatedStocks": [
+                "계룡건설(013580)"
+              ],
+              "impactRank": 7,
+              "category": "건설·수주예정",
+              "region": "domestic",
+              "eventKey": "kyeryong-jayang-redevelopment-selection-2026",
+              "factKey": "estimated-project-84-6-billion-krw"
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "researchAudit": {
+            "windowStartExclusive": "2026-11-21T06:43:10+09:00",
+            "windowEndInclusive": "2026-11-23T18:43:13+09:00",
+            "currentWindowDiscoveryStatus": "complete",
+            "historicalBackfillStatus": "not_performed",
+            "sources": [
+              "Reuters",
+              "금융위원회",
+              "DART",
+              "개인정보보호위원회",
+              "연합뉴스",
+              "뉴시스"
+            ],
+            "exclusions": [
+              "기존 AI 급락 및 엔비디아 SEC 조사 단순 재보도",
+              "PCE·금통위 등 예정 일정 기사",
+              "원문 시각 또는 핵심 수치 미확인 후보"
+            ]
+          }
+        },
+        {
+          "slot": "19:40",
+          "asOf": "2026-11-23T19:41:12+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261123-crowdstrike-zscaler-acquisition",
+              "title": "크라우드스트라이크, 지스케일러 439억달러에 인수",
+              "summary": "크라우드스트라이크는 지스케일러를 약 439억달러로 평가하는 전액 주식교환 방식의 인수 계약을 발표했다. 앞서 보도된 협상 단계에서 확정 계약으로 진전된 신규 사실이다.",
+              "publishedAt": "2026-11-23T19:36:52+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/legal/transactional/crowdstrike-buy-zscaler-439-billion-2026-11-23/",
+              "relatedStocks": [
+                "크라우드스트라이크(CRWD)",
+                "지스케일러(ZS)"
+              ],
+              "impactRank": 1,
+              "category": "사이버보안·M&A",
+              "region": "foreign",
+              "eventKey": "crowdstrike-zscaler-acquisition-2026",
+              "factKey": "definitive-all-stock-deal-43-9-billion-usd"
+            }
+          ],
+          "domesticNews": [],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "researchAudit": {
+            "windowStartExclusive": "2026-11-23T18:43:13+09:00",
+            "windowEndInclusive": "2026-11-23T19:41:12+09:00",
+            "currentWindowDiscoveryStatus": "complete",
+            "historicalBackfillStatus": "not_performed",
+            "sources": [
+              "Reuters",
+              "DART/KRX disclosure feeds",
+              "국내 주요 뉴스 피드",
+              "기업 IR"
+            ],
+            "exclusions": [
+              "18:43 이전 공개 재료",
+              "기존 인수 협상 보도의 단순 반복",
+              "발표시각 또는 핵심사실 미확인 후보"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
