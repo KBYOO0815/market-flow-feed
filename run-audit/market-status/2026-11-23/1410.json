@@ -5,11 +5,11 @@
   "slot": "14:10",
   "scheduledFor": "2026-11-23T14:10:00+09:00",
   "startedAt": "2026-11-23T14:11:11+09:00",
-  "updatedAt": "2026-11-23T14:14:00+09:00",
+  "updatedAt": "2026-11-23T14:15:00+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "display_validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -40,6 +40,12 @@
       "name": "analysis_done",
       "status": "success",
       "finishedAt": "2026-11-23T14:14:00+09:00"
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T14:15:00+09:00",
+      "notes": "Display contract manually matched against scripts/market_status_display.py; Python direct execution not performed"
     }
   ]
 }
