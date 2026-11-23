@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-23T18:47:24+09:00",
+  "updatedAt": "2026-11-23T19:43:04+09:00",
   "navigation": {
     "previous": [
       {
@@ -97,7 +97,7 @@
       {
         "date": "2026-11-23",
         "slot": "19:40",
-        "state": "scheduled"
+        "state": "published"
       },
       {
         "date": "2026-11-23",
@@ -441,6 +441,49 @@
               "기존 AI 급락 및 엔비디아 SEC 조사 단순 재보도",
               "PCE·금통위 등 예정 일정 기사",
               "원문 시각 또는 핵심 수치 미확인 후보"
+            ]
+          }
+        },
+        {
+          "slot": "19:40",
+          "asOf": "2026-11-23T19:41:12+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261123-crowdstrike-zscaler-acquisition",
+              "title": "크라우드스트라이크, 지스케일러 439억달러에 인수",
+              "summary": "크라우드스트라이크는 지스케일러를 약 439억달러로 평가하는 전액 주식교환 방식의 인수 계약을 발표했다. 앞서 보도된 협상 단계에서 확정 계약으로 진전된 신규 사실이다.",
+              "publishedAt": "2026-11-23T19:36:52+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/legal/transactional/crowdstrike-buy-zscaler-439-billion-2026-11-23/",
+              "relatedStocks": [
+                "크라우드스트라이크(CRWD)",
+                "지스케일러(ZS)"
+              ],
+              "impactRank": 1,
+              "category": "사이버보안·M&A",
+              "region": "foreign",
+              "eventKey": "crowdstrike-zscaler-acquisition-2026",
+              "factKey": "definitive-all-stock-deal-43-9-billion-usd"
+            }
+          ],
+          "domesticNews": [],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "researchAudit": {
+            "windowStartExclusive": "2026-11-23T18:43:13+09:00",
+            "windowEndInclusive": "2026-11-23T19:41:12+09:00",
+            "currentWindowDiscoveryStatus": "complete",
+            "historicalBackfillStatus": "not_performed",
+            "sources": [
+              "Reuters",
+              "DART/KRX disclosure feeds",
+              "국내 주요 뉴스 피드",
+              "기업 IR"
+            ],
+            "exclusions": [
+              "18:43 이전 공개 재료",
+              "기존 인수 협상 보도의 단순 반복",
+              "발표시각 또는 핵심사실 미확인 후보"
             ]
           }
         }
