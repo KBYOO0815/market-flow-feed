@@ -5,11 +5,11 @@
   "slot": "11:10",
   "scheduledFor": "2026-11-23T11:10:00+09:00",
   "startedAt": "2026-11-23T11:07:30+09:00",
-  "updatedAt": "2026-11-23T11:08:00+09:00",
+  "updatedAt": "2026-11-23T11:08:30+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "market_data_collection",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "analysis",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -30,6 +30,16 @@
       "status": "success",
       "finishedAt": "2026-11-23T11:08:00+09:00",
       "details": "KRX Monday regular session, early start slot retained"
+    },
+    {
+      "name": "collection_done",
+      "status": "partial",
+      "finishedAt": "2026-11-23T11:08:30+09:00",
+      "details": "09:20 KST verified market observation; 11:10 live quote unavailable",
+      "sources": [
+        "https://www.yna.co.kr/view/AKR20261123032251008",
+        "https://www.g-enews.com/article/Securities/2026/11/202611230917195264923c501012_1"
+      ]
     }
   ]
 }
