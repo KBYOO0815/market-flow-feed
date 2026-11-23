@@ -5,11 +5,11 @@
   "slot": "18:40",
   "scheduledFor": "2026-11-23T18:40:00+09:00",
   "startedAt": "2026-11-23T18:43:13+09:00",
-  "updatedAt": "2026-11-23T18:45:53+09:00",
+  "updatedAt": "2026-11-23T18:47:24+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "payload_validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -62,6 +62,42 @@
           "엔비디아 중국 판매 관련 미국 정부의 추가 확인 요구는 새 정책 집행 사실로 채택",
           "예정된 PCE·한은 회의 등 일정 기사만 있는 후보는 제외",
           "시황 자체는 별도 피드와 중복되므로 정책·기업 사실 중심으로 선별"
+        ]
+      }
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "startedAt": "2026-11-23T18:47:00+09:00",
+      "finishedAt": "2026-11-23T18:47:24+09:00",
+      "details": {
+        "success": true,
+        "checkedOperationalSha": "33c7af99b05601fbedb0ef286cd3ad8472e5837d",
+        "checks": {
+          "jsonSyntax": true,
+          "schemaVersion1": true,
+          "requiredArrays": true,
+          "maxTenPerRegion": true,
+          "impactRanksSequential": true,
+          "publishedAtNotAfterAsOf": true,
+          "httpsUrls": true,
+          "eventFactDuplicates": false,
+          "non0640UsThemesEmpty": true,
+          "displaySlotsExact": true,
+          "navigationComplete": true,
+          "retentionDAndD1Only": true
+        },
+        "payloadCounts": {
+          "foreignNews": 6,
+          "domesticNews": 7,
+          "days": 1
+        },
+        "retainedDates": [
+          "2026-11-23"
+        ],
+        "removedOutOfRetentionDates": [
+          "2026-11-21",
+          "2026-11-20"
         ]
       }
     }
@@ -129,6 +165,36 @@
       "엔비디아 중국 판매 관련 미국 정부의 추가 확인 요구는 새 정책 집행 사실로 채택",
       "예정된 PCE·한은 회의 등 일정 기사만 있는 후보는 제외",
       "시황 자체는 별도 피드와 중복되므로 정책·기업 사실 중심으로 선별"
+    ]
+  },
+  "validation": {
+    "success": true,
+    "checkedOperationalSha": "33c7af99b05601fbedb0ef286cd3ad8472e5837d",
+    "checks": {
+      "jsonSyntax": true,
+      "schemaVersion1": true,
+      "requiredArrays": true,
+      "maxTenPerRegion": true,
+      "impactRanksSequential": true,
+      "publishedAtNotAfterAsOf": true,
+      "httpsUrls": true,
+      "eventFactDuplicates": false,
+      "non0640UsThemesEmpty": true,
+      "displaySlotsExact": true,
+      "navigationComplete": true,
+      "retentionDAndD1Only": true
+    },
+    "payloadCounts": {
+      "foreignNews": 6,
+      "domesticNews": 7,
+      "days": 1
+    },
+    "retainedDates": [
+      "2026-11-23"
+    ],
+    "removedOutOfRetentionDates": [
+      "2026-11-21",
+      "2026-11-20"
     ]
   }
 }
