@@ -5,11 +5,11 @@
   "slot": "20:10",
   "scheduledFor": "2026-11-23T20:10:00+09:00",
   "startedAt": "2026-11-23T20:07:35+09:00",
-  "updatedAt": "2026-11-23T20:07:35+09:00",
+  "updatedAt": "2026-11-23T20:08:00+09:00",
   "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "preflight",
+  "phase": "preflight_done",
+  "lastCompletedStep": "preflight_done",
+  "nextStep": "collection",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -23,6 +23,12 @@
       "name": "run_start",
       "status": "success",
       "startedAt": "2026-11-23T20:07:35+09:00"
+    },
+    {
+      "name": "preflight",
+      "status": "success",
+      "finishedAt": "2026-11-23T20:08:00+09:00",
+      "details": "KRX 2026-11-23 regular session closed; 20:10 logical slot retained; policy slot 20:10 KR"
     }
   ]
 }
