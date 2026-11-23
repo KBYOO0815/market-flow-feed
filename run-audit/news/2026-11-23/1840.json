@@ -5,11 +5,11 @@
   "slot": "18:40",
   "scheduledFor": "2026-11-23T18:40:00+09:00",
   "startedAt": "2026-11-23T18:43:13+09:00",
-  "updatedAt": "2026-11-23T18:47:39+09:00",
-  "status": "running",
-  "phase": "publication_done",
-  "lastCompletedStep": "publication_done",
-  "nextStep": "remote_readback",
+  "updatedAt": "2026-11-23T18:48:08+09:00",
+  "status": "published",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -17,7 +17,7 @@
     "success": true,
     "commitSha": "9bea580c3fe181c618df0bb19605b7a4c7d634f7",
     "contentSha": "35b8f39f80310c104b43c61c7fb430ca6f9aa2a2",
-    "readbackVerified": false
+    "readbackVerified": true
   },
   "steps": [
     {
@@ -109,6 +109,29 @@
       "finishedAt": "2026-11-23T18:47:39+09:00",
       "details": {
         "commitSha": "9bea580c3fe181c618df0bb19605b7a4c7d634f7"
+      }
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "startedAt": "2026-11-23T18:47:30+09:00",
+      "finishedAt": "2026-11-23T18:48:08+09:00",
+      "details": {
+        "verifiedAt": "2026-11-23T18:48:08+09:00",
+        "exactContentMatch": true,
+        "targetSessionPresent": true,
+        "schemaVersion": 1,
+        "foreignNews": 6,
+        "domesticNews": 7,
+        "retainedDates": [
+          "2026-11-23"
+        ],
+        "displaySlotsCount": 15,
+        "navigationCounts": {
+          "previous": 2,
+          "today": 15,
+          "next": 15
+        }
       }
     }
   ],
@@ -206,5 +229,23 @@
       "2026-11-21",
       "2026-11-20"
     ]
+  },
+  "finishedAt": "2026-11-23T18:48:08+09:00",
+  "readback": {
+    "verifiedAt": "2026-11-23T18:48:08+09:00",
+    "exactContentMatch": true,
+    "targetSessionPresent": true,
+    "schemaVersion": 1,
+    "foreignNews": 6,
+    "domesticNews": 7,
+    "retainedDates": [
+      "2026-11-23"
+    ],
+    "displaySlotsCount": 15,
+    "navigationCounts": {
+      "previous": 2,
+      "today": 15,
+      "next": 15
+    }
   }
 }
