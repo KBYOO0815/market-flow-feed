@@ -7,9 +7,9 @@
   "startedAt": "2026-11-23T12:09:51+09:00",
   "updatedAt": "2026-11-23T12:09:51+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "display_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -39,6 +39,11 @@
         "https://www.specialtimes.co.kr/news/articleView.html?idxno=489023",
         "https://www.dailian.co.kr/news/view/1718343/%EC%86%8D%EB%B3%B4-%EC%B6%94%EB%9D%BD%ED%95%98%EB%8A%94-%EC%BD%94%EC%8A%A4%ED%94%BC2%EA%B1%B0%EB%9E%98%EC%9D%BC-%EC%97%B0%EC%86%8D-%EB%A7%A4-2026"
       ]
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "details": "11:12 KOSPI 4669.82 -4.11%, KOSDAQ 628.38 -2.68%, foreign -1157, retail -2463, institution +2472 KRW 100m; 11:39 sidecar. Compared with 11:10 09:20 foreign +995, direction reversed."
     }
   ]
 }
