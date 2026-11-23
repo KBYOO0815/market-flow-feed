@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 2,
+  "feed": "monitor",
+  "date": "2026-11-23",
+  "slot": "20:10",
+  "startedAt": "2026-11-23T20:09:15+09:00",
+  "status": "running",
+  "phase": "run_start",
+  "lastCompletedStep": "run_start",
+  "nextStep": "cross_check",
+  "errorCode": null,
+  "publication": {
+    "attempted": false,
+    "success": false
+  },
+  "notes": "monitor only; operational files unchanged"
+}
