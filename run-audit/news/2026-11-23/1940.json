@@ -5,11 +5,11 @@
   "slot": "19:40",
   "scheduledFor": "2026-11-23T19:40:00+09:00",
   "startedAt": "2026-11-23T19:41:12+09:00",
-  "updatedAt": "2026-11-23T19:43:22+09:00",
-  "status": "running",
-  "phase": "publication_done",
-  "lastCompletedStep": "publication_done",
-  "nextStep": "remote_readback",
+  "updatedAt": "2026-11-23T19:43:40+09:00",
+  "status": "published",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -17,7 +17,7 @@
     "success": true,
     "commitSha": "dbd248206e0a8baf245f28e92dfe9fe42cab91b6",
     "contentSha": "29a809c0f3be54a3eecc255c0642f289c648566b",
-    "readbackVerified": false
+    "readbackVerified": true
   },
   "steps": [
     {
@@ -117,6 +117,33 @@
       "details": {
         "commitSha": "dbd248206e0a8baf245f28e92dfe9fe42cab91b6"
       }
+    },
+    {
+      "name": "readback_done",
+      "status": "success",
+      "startedAt": "2026-11-23T19:43:30+09:00",
+      "finishedAt": "2026-11-23T19:43:40+09:00",
+      "details": {
+        "verifiedAt": "2026-11-23T19:43:40+09:00",
+        "exactContentMatch": true,
+        "targetSessionPresent": true,
+        "schemaVersion": 1,
+        "foreignNews": 1,
+        "domesticNews": 0,
+        "retainedDates": [
+          "2026-11-23"
+        ],
+        "displaySlotsCount": 15,
+        "navigationCounts": {
+          "previous": 2,
+          "today": 15,
+          "next": 15
+        },
+        "preservedSessions": [
+          "18:40",
+          "19:40"
+        ]
+      }
     }
   ],
   "preflight": {
@@ -187,6 +214,28 @@
     },
     "retainedDates": [
       "2026-11-23"
+    ]
+  },
+  "finishedAt": "2026-11-23T19:43:40+09:00",
+  "readback": {
+    "verifiedAt": "2026-11-23T19:43:40+09:00",
+    "exactContentMatch": true,
+    "targetSessionPresent": true,
+    "schemaVersion": 1,
+    "foreignNews": 1,
+    "domesticNews": 0,
+    "retainedDates": [
+      "2026-11-23"
+    ],
+    "displaySlotsCount": 15,
+    "navigationCounts": {
+      "previous": 2,
+      "today": 15,
+      "next": 15
+    },
+    "preservedSessions": [
+      "18:40",
+      "19:40"
     ]
   }
 }
