@@ -7,9 +7,9 @@
   "startedAt": "2026-11-23T12:09:51+09:00",
   "updatedAt": "2026-11-23T12:09:51+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "market_collection",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "analysis",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -29,6 +29,16 @@
       "name": "preflight_done",
       "status": "success",
       "details": "Monday KRX regular session 09:00-15:30; slot 12:10"
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "details": "11:12 KOSPI/KOSDAQ/flows; 11:39 sell sidecar reports; current 12:10 quotes unavailable",
+      "sources": [
+        "https://www.newsis.com/view/NISX20261123_0003879084",
+        "https://www.specialtimes.co.kr/news/articleView.html?idxno=489023",
+        "https://www.dailian.co.kr/news/view/1718343/%EC%86%8D%EB%B3%B4-%EC%B6%94%EB%9D%BD%ED%95%98%EB%8A%94-%EC%BD%94%EC%8A%A4%ED%94%BC2%EA%B1%B0%EB%9E%98%EC%9D%BC-%EC%97%B0%EC%86%8D-%EB%A7%A4-2026"
+      ]
     }
   ]
 }
