@@ -5,11 +5,11 @@
   "slot": "18:40",
   "scheduledFor": "2026-11-23T18:40:00+09:00",
   "startedAt": "2026-11-23T18:43:13+09:00",
-  "updatedAt": "2026-11-23T18:44:03+09:00",
+  "updatedAt": "2026-11-23T18:45:25+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "news_collection",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "analysis_and_deduplication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -35,6 +35,17 @@
         "currentDatePresent": false,
         "operationalFileSha": "33c7af99b05601fbedb0ef286cd3ad8472e5837d"
       }
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "startedAt": "2026-11-23T18:44:00+09:00",
+      "finishedAt": "2026-11-23T18:45:25+09:00",
+      "details": {
+        "domesticCandidatesReviewed": 18,
+        "foreignCandidatesReviewed": 20,
+        "sourceErrors": 1
+      }
     }
   ],
   "preflight": {
@@ -57,5 +68,37 @@
     "missingAuditFilesBeforeCurrentSlot": 14,
     "windowStartExclusive": "2026-11-21T06:43:10+09:00",
     "windowEndInclusive": "2026-11-23T18:43:13+09:00"
+  },
+  "collection": {
+    "windowStartExclusive": "2026-11-21T06:43:10+09:00",
+    "windowEndInclusive": "2026-11-23T18:43:13+09:00",
+    "domesticCandidatesReviewed": 18,
+    "foreignCandidatesReviewed": 20,
+    "sourceTypes": [
+      "official authorities",
+      "DART/KRX disclosures",
+      "Reuters",
+      "Yonhap",
+      "Newsis",
+      "corporate/disclosure aggregators"
+    ],
+    "importantSourceUrls": [
+      "https://www.fsc.go.kr/po010106/88190",
+      "https://www.reuters.com/world/china/us-seeks-answers-nvidias-sale-chips-china-bessent-says-2026-11-22/",
+      "https://www.reuters.com/technology/alice-huang-touch-with-chinese-spy-agency-during-affair-with-nvidia-ceo-nyt-says-2026-11-23/",
+      "https://www.reuters.com/business/energy/oil-prices-fall-amid-equity-selloff-though-iran-war-attacks-limit-losses-2026-11-23/",
+      "https://www.yna.co.kr/view/AKR20261123137200530"
+    ],
+    "sourceErrors": [
+      {
+        "source": "yna.co.kr direct crawl",
+        "error": "Blocked by robots.txt",
+        "alternatives": [
+          "search index result",
+          "official authority pages",
+          "other trusted coverage"
+        ]
+      }
+    ]
   }
 }
