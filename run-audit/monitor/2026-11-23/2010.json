@@ -4,14 +4,62 @@
   "date": "2026-11-23",
   "slot": "20:10",
   "startedAt": "2026-11-23T20:09:15+09:00",
-  "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "cross_check",
-  "errorCode": null,
+  "status": "partial",
+  "phase": "cross_check_done",
+  "lastCompletedStep": "cross_check_done",
+  "nextStep": null,
+  "errorCode": "RUN_HISTORY_UNAVAILABLE",
   "publication": {
     "attempted": false,
     "success": false
   },
-  "notes": "monitor only; operational files unchanged"
+  "notes": "monitor only; operational files unchanged",
+  "updatedAt": "2026-11-23T20:09:15+09:00",
+  "counts": {
+    "automationGetSuccess": 0,
+    "automationGetErrors": 1,
+    "newsAuditsVerifiedPublished": 2,
+    "marketStatusAuditsVerifiedPublished": 1,
+    "marketStatusAuditsVerifiedFailed": 1,
+    "featuredAuditsMissing": 5,
+    "operationalFilesRead": 4
+  },
+  "findings": [
+    {
+      "feed": "featured-stocks",
+      "slots": [
+        "08:40",
+        "09:40",
+        "11:40",
+        "13:40",
+        "15:40"
+      ],
+      "auditExists": false,
+      "operationalPresent": false,
+      "runStatus": "unavailable",
+      "errorCode": "RUN_HISTORY_UNAVAILABLE",
+      "rawError": "GitHub API 404 Not Found for each audit; Automations.get 404 Action not found"
+    },
+    {
+      "feed": "market-status",
+      "slot": "20:10",
+      "status": "failed",
+      "errorCode": "VALIDATOR_NOT_EXECUTED",
+      "lastCompletedStep": "analysis_done",
+      "nextStep": "validation",
+      "rawError": "Python validator could not execute against complete candidate: container curl DNS resolution failure for raw.githubusercontent.com (curl exit code 6). No operating JSON published."
+    },
+    {
+      "feed": "news",
+      "slots": [
+        "18:40",
+        "19:40"
+      ],
+      "status": "published",
+      "lastCompletedStep": "readback_done"
+    }
+  ],
+  "errors": [
+    "Automations.get: 404 Action not found; schedule/enabled/run_details/latest_result not retrievable"
+  ]
 }
