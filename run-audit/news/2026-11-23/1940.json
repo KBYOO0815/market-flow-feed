@@ -5,11 +5,11 @@
   "slot": "19:40",
   "scheduledFor": "2026-11-23T19:40:00+09:00",
   "startedAt": "2026-11-23T19:41:12+09:00",
-  "updatedAt": "2026-11-23T19:42:30+09:00",
+  "updatedAt": "2026-11-23T19:43:04+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "payload_validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -75,6 +75,38 @@
           "국내는 조사창 안에서 발표시각과 중요도를 충족한 신규 재료가 확인되지 않음"
         ]
       }
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "startedAt": "2026-11-23T19:44:00+09:00",
+      "finishedAt": "2026-11-23T19:43:04+09:00",
+      "details": {
+        "success": true,
+        "checkedOperationalSha": "35b8f39f80310c104b43c61c7fb430ca6f9aa2a2",
+        "checks": {
+          "jsonSyntax": true,
+          "schemaVersion1": true,
+          "existingSessionPreserved": true,
+          "maxTenPerRegion": true,
+          "impactRanksSequential": true,
+          "publishedAtNotAfterAsOf": true,
+          "httpsUrls": true,
+          "eventFactDuplicates": false,
+          "non0640UsThemesEmpty": true,
+          "displaySlotsExact": true,
+          "navigationComplete": true,
+          "retentionDAndD1Only": true
+        },
+        "payloadCounts": {
+          "foreignNews": 1,
+          "domesticNews": 0,
+          "sessions": 2
+        },
+        "retainedDates": [
+          "2026-11-23"
+        ]
+      }
     }
   ],
   "preflight": {
@@ -119,6 +151,32 @@
       "CrowdStrike의 Zscaler 인수 협상 보도는 기존 사실이지만 19:36 KST 확정 인수 발표는 신규 사실로 채택",
       "18:43 이전 영국 PMI·국내 공시와 이전 회차 채택 재료는 현재 배열에서 제외",
       "국내는 조사창 안에서 발표시각과 중요도를 충족한 신규 재료가 확인되지 않음"
+    ]
+  },
+  "validation": {
+    "success": true,
+    "checkedOperationalSha": "35b8f39f80310c104b43c61c7fb430ca6f9aa2a2",
+    "checks": {
+      "jsonSyntax": true,
+      "schemaVersion1": true,
+      "existingSessionPreserved": true,
+      "maxTenPerRegion": true,
+      "impactRanksSequential": true,
+      "publishedAtNotAfterAsOf": true,
+      "httpsUrls": true,
+      "eventFactDuplicates": false,
+      "non0640UsThemesEmpty": true,
+      "displaySlotsExact": true,
+      "navigationComplete": true,
+      "retentionDAndD1Only": true
+    },
+    "payloadCounts": {
+      "foreignNews": 1,
+      "domesticNews": 0,
+      "sessions": 2
+    },
+    "retainedDates": [
+      "2026-11-23"
     ]
   }
 }
