@@ -5,13 +5,13 @@
   "slot": "09:10",
   "scheduledFor": "2026-11-23T09:10:00+09:00",
   "startedAt": "2026-11-23T09:06:34+09:00",
-  "updatedAt": "2026-11-23T09:07:00+09:00",
-  "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "calendar_session_check",
-  "nextStep": "market_collection",
-  "errorCode": null,
-  "errorMessage": null,
+  "updatedAt": "2026-11-23T09:08:00+09:00",
+  "status": "partial",
+  "phase": "collection_done",
+  "lastCompletedStep": "market_collection",
+  "nextStep": null,
+  "errorCode": "SOURCE_INCOMPLETE",
+  "errorMessage": "2026-11-23 09:00-09:08 KST KOSPI/KOSDAQ intraday prices and investor flows could not be verified; search results returned earlier dates only. Publication validation not attempted.",
   "publication": {
     "attempted": false,
     "success": false,
@@ -30,6 +30,16 @@
       "status": "success",
       "detail": "KRX 2026-11-23 trading day, regular 09:00-15:30; 09:10 slot early-start 09:06",
       "source": "https://marketcalendars.com/markets/krx?year=2026"
+    },
+    {
+      "name": "market_collection",
+      "status": "partial",
+      "detail": "Verified trading day and prior 2026-11-20 close; no verified 2026-11-23 live quotes",
+      "sources": [
+        "https://marketcalendars.com/markets/krx?year=2026",
+        "https://www.koreatimes.co.kr/economy/20261120/seoul-stocks-dip-to-10-month-low-as-ai-worries-spark-asia-wide-tech-sell-off"
+      ]
     }
-  ]
+  ],
+  "failedStep": "market_collection"
 }
