@@ -1320,6 +1320,145 @@
           }
         ]
       }
+    },
+    "19:10": {
+      "date": "2026-11-23",
+      "slot": "19:10",
+      "scheduledFor": "2026-11-23T19:10:00+09:00",
+      "asOf": "2026-11-23T19:07:30+09:00",
+      "publishedAt": "2026-11-23T19:07:30+09:00",
+      "sessionStatus": "KRX REGULAR CLOSED; 15:30 KST CONFIRMED; NXT AFTER-HOURS NOT VERIFIED",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "코스피 4,708.54(-3.31%), 코스닥 635.45(-1.58%) 마감. 18:10 이후 정규장 지수·수급 변화 없음. 시장안정펀드 준비와 자사주 매입 한도 완화 발표 확인, 펀드 실제 집행 미확인.",
+        "observedAt": "2026-11-23T15:30:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI",
+            "value": 4708.54,
+            "changePct": -3.31,
+            "observedAt": "2026-11-23T15:30:00+09:00",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261123129851008"
+          },
+          {
+            "name": "KOSDAQ",
+            "value": 635.45,
+            "changePct": -1.58,
+            "observedAt": "2026-11-23T15:30:00+09:00",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261123129851008"
+          }
+        ],
+        "flows": {
+          "observedAt": "2026-11-23T15:30:00+09:00",
+          "market": "KOSPI",
+          "unit": "억원",
+          "foreign": -2472,
+          "institution": 1872,
+          "individual": -3669
+        },
+        "themes": [
+          "AI·반도체 약세",
+          "건설·보험·제약 약세",
+          "화장품·로봇 일부 강세"
+        ],
+        "notes": [
+          "삼성전자 -3.06%, SK하이닉스 -2.52%",
+          "외국인 7거래일 연속 순매도",
+          "코스피 장중 저점 4,586.80",
+          "자사주 매입 한도 완화 11/24 시행 예정"
+        ]
+      },
+      "highlights": [
+        "18:10 이후 정규장 종가·수급 변화 없음",
+        "시장안정 조치 발표, 실제 펀드 투입 미확인"
+      ],
+      "sources": [
+        {
+          "name": "아시아경제 마감",
+          "url": "https://www.asiae.co.kr/en/article/2026112316004220098",
+          "checkedAt": "2026-11-23T19:07:30+09:00"
+        },
+        {
+          "name": "머니투데이 시장안정",
+          "url": "https://www.mt.co.kr/en/stock/2026/11/23/2026112316273139013",
+          "checkedAt": "2026-11-23T19:07:30+09:00"
+        },
+        {
+          "name": "시장안정 조치",
+          "url": "https://seoulmarketwire.com/posts/kospi-close-2026-11-23/",
+          "checkedAt": "2026-11-23T19:07:30+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      },
+      "display": {
+        "headline": "강한 약세 마감 유지, 시장안정 조치가 다음 변수",
+        "badges": [
+          "한국",
+          "정규장 마감",
+          "15:30 종가"
+        ],
+        "observedAt": "2026-11-23T15:30:00+09:00",
+        "sections": [
+          {
+            "id": "indices",
+            "title": "주요 지수",
+            "kind": "metrics",
+            "items": [
+              {
+                "label": "KOSPI",
+                "value": 4708.54,
+                "changePct": -3.31,
+                "note": "15:30 종가"
+              },
+              {
+                "label": "KOSDAQ",
+                "value": 635.45,
+                "changePct": -1.58,
+                "note": "15:30 종가"
+              }
+            ]
+          },
+          {
+            "id": "flows",
+            "title": "코스피 수급",
+            "kind": "bullets",
+            "items": [
+              "외국인 -2,472억원 · 개인 -3,669억원 · 기관 +1,872억원 (마감)"
+            ]
+          },
+          {
+            "id": "drivers",
+            "title": "시장 핵심",
+            "kind": "bullets",
+            "items": [
+              "AI 투자 수익성 우려와 반도체 대형주 매도 지속",
+              "시장안정펀드 가동 준비·자사주 매입 한도 완화 발표, 실제 펀드 투입 미확인"
+            ]
+          },
+          {
+            "id": "changes",
+            "title": "18:10 대비",
+            "kind": "bullets",
+            "items": [
+              "정규장 종가·수급 변화 없음. 시장안정 조치 후속 보도 확인"
+            ]
+          },
+          {
+            "id": "watch",
+            "title": "주의·확인",
+            "kind": "bullets",
+            "items": [
+              "외국인 매도와 코스피 4,700선 유지 여부",
+              "NXT 애프터마켓 실시간 가격·수급 미확인"
+            ]
+          }
+        ]
+      }
     }
   }
 }
