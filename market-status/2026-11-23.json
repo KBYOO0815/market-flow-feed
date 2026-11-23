@@ -781,6 +781,147 @@
           }
         ]
       }
+    },
+    "13:10": {
+      "date": "2026-11-23",
+      "slot": "13:10",
+      "scheduledFor": "2026-11-23T13:10:00+09:00",
+      "asOf": "2026-11-23T13:06:40+09:00",
+      "publishedAt": "2026-11-23T13:06:40+09:00",
+      "sessionStatus": "KRX REGULAR ACTIVE; latest verified reported snapshots 11:59 KST and 11:44 KST; not 13:10 live",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "오전 급락 확대. 코스피 11:59 -5.35%; 11:44 외국인·개인 매도 기관 순매수. 13시 실시간 확인 불가.",
+        "observedAt": "2026-11-23T11:59:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI",
+            "value": 4609.42,
+            "changePct": -5.35,
+            "observedAt": "2026-11-23T11:59:00+09:00",
+            "sourceUrl": "https://www.viva100.com/article/20261123500612"
+          },
+          {
+            "name": "KOSDAQ",
+            "value": 620.16,
+            "changePct": -3.95,
+            "observedAt": "2026-11-23T11:44:00+09:00",
+            "sourceUrl": "https://www.hani.co.kr/arti/economy/finance/1288618.html"
+          }
+        ],
+        "flows": {
+          "observedAt": "2026-11-23T11:44:00+09:00",
+          "market": "KOSPI",
+          "unit": "억원",
+          "foreign": -1813,
+          "institution": 582,
+          "individual": -444,
+          "sourceUrl": "https://www.hani.co.kr/arti/economy/finance/1288618.html"
+        },
+        "themes": [
+          "AI·반도체 약세",
+          "시장 전반 매도 확대"
+        ],
+        "notes": [
+          "11:33:51 KOSPI 매도 사이드카 발동",
+          "11:44 삼성전자 -6.12%, SK하이닉스 -5.84%",
+          "11:44 상승 23종목 하락 874종목"
+        ]
+      },
+      "highlights": [
+        "11:59 코스피 4609.42(-5.35%)",
+        "11:44 외국인 -1813억 기관 +582억 개인 -444억",
+        "11:33:51 매도 사이드카, 12:10 회차 대비 하락폭 확대"
+      ],
+      "sources": [
+        {
+          "name": "브릿지경제 11:59 코스피",
+          "url": "https://www.viva100.com/article/20261123500612",
+          "checkedAt": "2026-11-23T13:06:40+09:00"
+        },
+        {
+          "name": "한겨레 11:44 지수·수급",
+          "url": "https://www.hani.co.kr/arti/economy/finance/1288618.html",
+          "checkedAt": "2026-11-23T13:06:40+09:00"
+        },
+        {
+          "name": "연합뉴스 사이드카",
+          "url": "https://www.yna.co.kr/amp/view/AKR20261123085400008",
+          "checkedAt": "2026-11-23T13:06:40+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      },
+      "display": {
+        "headline": "코스피 5%대 급락·외국인 매도, 오전 낙폭 확대",
+        "badges": [
+          "한국",
+          "정규장",
+          "일부 확인"
+        ],
+        "observedAt": "2026-11-23T11:59:00+09:00",
+        "sections": [
+          {
+            "id": "indices",
+            "title": "주요 지수",
+            "kind": "metrics",
+            "items": [
+              {
+                "label": "KOSPI",
+                "value": 4609.42,
+                "changePct": -5.35,
+                "note": "11:59 관측"
+              },
+              {
+                "label": "KOSDAQ",
+                "value": 620.16,
+                "changePct": -3.95,
+                "note": "11:44 관측"
+              }
+            ]
+          },
+          {
+            "id": "flows",
+            "title": "수급",
+            "kind": "bullets",
+            "items": [
+              "11:44 코스피 외국인 -1,813억원 · 개인 -444억원 · 기관 +582억원"
+            ]
+          },
+          {
+            "id": "drivers",
+            "title": "시장 핵심",
+            "kind": "bullets",
+            "items": [
+              "11:33 코스피 매도 사이드카 발동",
+              "11:44 삼성전자 -6.12% · SK하이닉스 -5.84%",
+              "11:44 상승 23개 · 하락 874개 종목"
+            ]
+          },
+          {
+            "id": "changes",
+            "title": "12:10 대비",
+            "kind": "bullets",
+            "items": [
+              "코스피 -4.11%(11:12)에서 -5.35%(11:59)로 낙폭 확대",
+              "외국인 순매도 -1,157억원(11:12)에서 -1,813억원(11:44)으로 증가"
+            ]
+          },
+          {
+            "id": "watch",
+            "title": "주의·확인",
+            "kind": "bullets",
+            "items": [
+              "13:10 실시간 수치 미확인. 오전 관측값을 현재값으로 해석하지 말 것",
+              "외국인 매도와 반도체 약세 지속 여부 확인"
+            ]
+          }
+        ]
+      }
     }
   }
 }
