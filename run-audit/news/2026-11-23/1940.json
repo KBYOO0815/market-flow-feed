@@ -5,11 +5,11 @@
   "slot": "19:40",
   "scheduledFor": "2026-11-23T19:40:00+09:00",
   "startedAt": "2026-11-23T19:41:12+09:00",
-  "updatedAt": "2026-11-23T19:42:19+09:00",
+  "updatedAt": "2026-11-23T19:42:30+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis_and_deduplication",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "payload_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -58,6 +58,23 @@
         "domesticCandidatesReviewed": 12,
         "sourceErrors": 0
       }
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "startedAt": "2026-11-23T19:43:00+09:00",
+      "finishedAt": "2026-11-23T19:42:30+09:00",
+      "details": {
+        "foreignSelected": 1,
+        "domesticSelected": 0,
+        "duplicateOrOutsideWindowExcluded": 16,
+        "unverifiedExcluded": 4,
+        "notes": [
+          "CrowdStrike의 Zscaler 인수 협상 보도는 기존 사실이지만 19:36 KST 확정 인수 발표는 신규 사실로 채택",
+          "18:43 이전 영국 PMI·국내 공시와 이전 회차 채택 재료는 현재 배열에서 제외",
+          "국내는 조사창 안에서 발표시각과 중요도를 충족한 신규 재료가 확인되지 않음"
+        ]
+      }
     }
   ],
   "preflight": {
@@ -91,6 +108,17 @@
     "sourceErrors": [],
     "importantSourceUrls": [
       "https://www.reuters.com/legal/transactional/crowdstrike-buy-zscaler-439-billion-2026-11-23/"
+    ]
+  },
+  "analysis": {
+    "foreignSelected": 1,
+    "domesticSelected": 0,
+    "duplicateOrOutsideWindowExcluded": 16,
+    "unverifiedExcluded": 4,
+    "notes": [
+      "CrowdStrike의 Zscaler 인수 협상 보도는 기존 사실이지만 19:36 KST 확정 인수 발표는 신규 사실로 채택",
+      "18:43 이전 영국 PMI·국내 공시와 이전 회차 채택 재료는 현재 배열에서 제외",
+      "국내는 조사창 안에서 발표시각과 중요도를 충족한 신규 재료가 확인되지 않음"
     ]
   }
 }
