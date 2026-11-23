@@ -2,8 +2,7 @@
   "schemaVersion": 1,
   "updatedAt": "2026-11-23T19:43:04+09:00",
   "navigation": {
-    "previous": [],
-    "today": [
+    "previous": [
       {
         "date": "2026-11-23",
         "slot": "07:40",
@@ -25,11 +24,11 @@
         "state": "published"
       }
     ],
-    "next": [
+    "today": [
       {
         "date": "2026-11-24",
         "slot": "07:40",
-        "state": "scheduled"
+        "state": "missing"
       },
       {
         "date": "2026-11-24",
@@ -43,6 +42,28 @@
       },
       {
         "date": "2026-11-24",
+        "slot": "19:40",
+        "state": "scheduled"
+      }
+    ],
+    "next": [
+      {
+        "date": "2026-11-25",
+        "slot": "07:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
+        "slot": "11:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
+        "slot": "15:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
         "slot": "19:40",
         "state": "scheduled"
       }
