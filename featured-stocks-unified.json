@@ -4,35 +4,6 @@
   "navigation": {
     "previous": [
       {
-        "date": "2026-11-20",
-        "slot": "08:40",
-        "state": "missing",
-        "reason": "도래했지만 운영 JSON과 감사 로그에 정상 발행 기록이 없음"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "09:40",
-        "state": "missing",
-        "reason": "도래했지만 운영 JSON과 감사 로그에 정상 발행 기록이 없음"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "11:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "13:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-20",
-        "slot": "15:40",
-        "state": "published"
-      }
-    ],
-    "today": [
-      {
         "date": "2026-11-23",
         "slot": "08:40",
         "state": "missing"
@@ -63,7 +34,7 @@
         "state": "missing"
       }
     ],
-    "next": [
+    "today": [
       {
         "date": "2026-11-24",
         "slot": "08:40",
@@ -91,6 +62,38 @@
       },
       {
         "date": "2026-11-24",
+        "slot": "19:40",
+        "state": "scheduled"
+      }
+    ],
+    "next": [
+      {
+        "date": "2026-11-25",
+        "slot": "08:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
+        "slot": "09:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
+        "slot": "11:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
+        "slot": "13:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
+        "slot": "15:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
         "slot": "19:40",
         "state": "scheduled"
       }
