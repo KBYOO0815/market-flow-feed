@@ -5,11 +5,11 @@
   "slot": "19:10",
   "scheduledFor": "2026-11-23T19:10:00+09:00",
   "startedAt": "2026-11-23T19:05:58+09:00",
-  "updatedAt": "2026-11-23T19:06:30+09:00",
+  "updatedAt": "2026-11-23T19:07:00+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "collect_market_data",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "analysis",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -29,6 +29,11 @@
       "name": "preflight_done",
       "status": "success",
       "details": "KRX regular session completed; 19:10 logical slot; early start"
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "details": "15:30 KRX close confirmed; latest 19:10 realtime NXT unverified; Reuters and Korean reporting"
     }
   ]
 }
