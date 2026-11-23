@@ -7,9 +7,9 @@
   "startedAt": "2026-11-23T12:09:51+09:00",
   "updatedAt": "2026-11-23T12:09:51+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "display_validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -44,6 +44,11 @@
       "name": "analysis_done",
       "status": "success",
       "details": "11:12 KOSPI 4669.82 -4.11%, KOSDAQ 628.38 -2.68%, foreign -1157, retail -2463, institution +2472 KRW 100m; 11:39 sidecar. Compared with 11:10 09:20 foreign +995, direction reversed."
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "details": "display v2 contract equivalent JS validation, preserved existing editions, navigation today 15 slots"
     }
   ]
 }
