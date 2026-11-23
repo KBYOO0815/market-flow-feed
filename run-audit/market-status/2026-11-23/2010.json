@@ -5,11 +5,11 @@
   "slot": "20:10",
   "scheduledFor": "2026-11-23T20:10:00+09:00",
   "startedAt": "2026-11-23T20:07:35+09:00",
-  "updatedAt": "2026-11-23T20:08:20+09:00",
+  "updatedAt": "2026-11-23T20:09:00+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -46,6 +46,13 @@
         "https://seoulmarketwire.com/posts/kospi-close-2026-11-23/",
         "https://www.reuters.com/world/asia-pacific/south-koreas-finance-minister-sees-solid-growth-next-year-flags-chip-volatility-2026-11-23/"
       ]
+    },
+    {
+      "name": "analysis",
+      "status": "success",
+      "finishedAt": "2026-11-23T20:09:00+09:00",
+      "editionsPreserved": 10,
+      "candidate": "run-audit/market-status/2026-11-23/2010-candidate.json"
     }
   ]
 }
