@@ -5,11 +5,11 @@
   "slot": "11:10",
   "scheduledFor": "2026-11-23T11:10:00+09:00",
   "startedAt": "2026-11-23T11:07:30+09:00",
-  "updatedAt": "2026-11-23T11:08:30+09:00",
+  "updatedAt": "2026-11-23T11:09:00+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "display_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -40,6 +40,12 @@
         "https://www.yna.co.kr/view/AKR20261123032251008",
         "https://www.g-enews.com/article/Securities/2026/11/202611230917195264923c501012_1"
       ]
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T11:09:00+09:00",
+      "details": "Early session weak; foreign/institution net buying at 09:20; 11:10 direction unknown"
     }
   ]
 }
