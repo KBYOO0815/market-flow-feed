@@ -7,16 +7,17 @@
   "startedAt": "2026-11-23T12:09:51+09:00",
   "updatedAt": "2026-11-23T12:09:51+09:00",
   "status": "running",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
-  "nextStep": "publication",
+  "phase": "publication_done",
+  "lastCompletedStep": "publication_done",
+  "nextStep": "remote_readback",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
-    "attempted": false,
-    "success": false,
-    "commitSha": null,
-    "readbackVerified": false
+    "attempted": true,
+    "success": true,
+    "commitSha": "8a8c3f25a7e26b1b74cc53af88a6a04c38b27da6",
+    "readbackVerified": false,
+    "dayCommitSha": "98eef8060c694ca14209ef3931a8417bb98f7d4b"
   },
   "steps": [
     {
@@ -49,6 +50,11 @@
       "name": "validation_done",
       "status": "success",
       "details": "display v2 contract equivalent JS validation, preserved existing editions, navigation today 15 slots"
+    },
+    {
+      "name": "publication_done",
+      "status": "success",
+      "details": "day JSON and index updated sequentially; not atomic"
     }
   ]
 }
