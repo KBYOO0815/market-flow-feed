@@ -6,17 +6,17 @@
   "scheduledFor": "2026-11-23T17:10:00+09:00",
   "startedAt": "2026-11-23T17:08:56+09:00",
   "updatedAt": "2026-11-23T17:09:00+09:00",
-  "status": "running",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
-  "nextStep": "publication",
+  "status": "published",
+  "phase": "readback_done",
+  "lastCompletedStep": "readback_done",
+  "nextStep": null,
   "errorCode": null,
   "errorMessage": null,
   "publication": {
-    "attempted": false,
-    "success": false,
-    "commitSha": null,
-    "readbackVerified": false
+    "attempted": true,
+    "success": true,
+    "commitSha": "eb6230b2d2215582d8a7e7c811ac42f98c857dcc",
+    "readbackVerified": true
   },
   "steps": [
     {
@@ -44,6 +44,14 @@
       "name": "validation_done",
       "status": "success",
       "finishedAt": "2026-11-23T17:09:00+09:00"
+    },
+    {
+      "name": "publication_done",
+      "status": "success"
+    },
+    {
+      "name": "readback_done",
+      "status": "success"
     }
   ]
 }
