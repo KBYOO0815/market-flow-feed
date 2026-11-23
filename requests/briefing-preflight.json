@@ -1,5 +1,0 @@
-{
-  "releaseAt": "2026-11-13T08:50:00+09:00",
-  "purpose": "Verify HTML entity/date parsing and independent fallback records",
-  "revision": 2
-}
