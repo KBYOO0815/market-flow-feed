@@ -5,11 +5,11 @@
   "slot": "13:10",
   "scheduledFor": "2026-11-23T13:10:00+09:00",
   "startedAt": "2026-11-23T13:05:38+09:00",
-  "updatedAt": "2026-11-23T13:06:40+09:00",
+  "updatedAt": "2026-11-23T13:07:15+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "validation",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -42,6 +42,12 @@
       "status": "success",
       "finishedAt": "2026-11-23T13:06:40+09:00",
       "notes": "Latest independently reported KOSPI 11:59; KOSDAQ and flows 11:44; 13:05 live unavailable"
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T13:07:15+09:00",
+      "notes": "Display contract structural validation; Python script not executed"
     }
   ]
 }
