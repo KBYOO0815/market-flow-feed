@@ -5,17 +5,17 @@
   "slot": "19:10",
   "scheduledFor": "2026-11-23T19:10:00+09:00",
   "startedAt": "2026-11-23T19:05:58+09:00",
-  "updatedAt": "2026-11-23T19:07:30+09:00",
+  "updatedAt": "2026-11-23T19:07:45+09:00",
   "status": "running",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
-  "nextStep": "publish_operational_json",
+  "phase": "publication_done",
+  "lastCompletedStep": "publication_done",
+  "nextStep": "remote_readback",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
-    "attempted": false,
-    "success": false,
-    "commitSha": null,
+    "attempted": true,
+    "success": true,
+    "commitSha": "65e532eb067c235668ffee3ea1065446b9d813bc",
     "readbackVerified": false
   },
   "steps": [
@@ -43,6 +43,10 @@
       "name": "validation_done",
       "status": "success",
       "details": "JS equivalent contract validation; Python script not executed"
+    },
+    {
+      "name": "publication_done",
+      "status": "success"
     }
   ]
 }
