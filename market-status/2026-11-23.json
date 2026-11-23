@@ -922,6 +922,137 @@
           }
         ]
       }
+    },
+    "15:40": {
+      "date": "2026-11-23",
+      "slot": "15:40",
+      "scheduledFor": "2026-11-23T15:40:00+09:00",
+      "asOf": "2026-11-23T15:36:00+09:00",
+      "publishedAt": "2026-11-23T15:36:00+09:00",
+      "sessionStatus": "KRX 2026-11-23 regular session ended 15:30; closing price not verified; latest verified 14:05 intraday",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "14:05 코스피 4720.14(-3.08%), 코스닥 641.17(-0.70%). 11:44 저점에서 반등했으나 약세 지속. 종가 미확인.",
+        "observedAt": "2026-11-23T14:05:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI",
+            "value": 4720.14,
+            "changePct": -3.08,
+            "observedAt": "2026-11-23T14:05:00+09:00",
+            "sourceUrl": "https://www.asiae.co.kr/en/article/market-overview/2026112314210992531"
+          },
+          {
+            "name": "KOSDAQ",
+            "value": 641.17,
+            "changePct": -0.7,
+            "observedAt": "2026-11-23T14:05:00+09:00",
+            "sourceUrl": "https://www.asiae.co.kr/en/article/market-overview/2026112314210992531"
+          }
+        ],
+        "flows": {
+          "observedAt": "2026-11-23T14:05:00+09:00",
+          "market": "KOSPI",
+          "unit": "억원",
+          "foreign": -1548,
+          "institution": 2645,
+          "individual": -4467,
+          "sourceUrl": "https://www.asiae.co.kr/en/article/market-overview/2026112314210992531"
+        },
+        "themes": [
+          "반도체·금융·바이오 대형주 약세",
+          "로봇·일부 반도체 부품 상대 강세"
+        ],
+        "notes": [
+          "11:44 코스피 장중 저점 4586.80(-5.81%)",
+          "14:05 삼성전자 -2.9%, SK하이닉스 -3.2%",
+          "정규장 종가·최종 수급 미확인"
+        ]
+      },
+      "highlights": [
+        "14:05 코스피 -3.08%, 코스닥 -0.70%",
+        "오전 장중 저점 대비 낙폭 축소",
+        "외국인·개인 매도, 기관 순매수(14:05 기사)",
+        "15:30 확정 종가 미검증"
+      ],
+      "sources": [
+        {
+          "name": "아시아경제 11/23 14:05 시황",
+          "url": "https://www.asiae.co.kr/en/article/market-overview/2026112314210992531",
+          "checkedAt": "2026-11-23T15:36:00+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "pending_readback"
+      },
+      "display": {
+        "headline": "오전 급락 뒤 낙폭 축소, 종가 미확인",
+        "badges": [
+          "한국",
+          "장중 관측",
+          "종가 미확인"
+        ],
+        "observedAt": "2026-11-23T14:05:00+09:00",
+        "sections": [
+          {
+            "id": "indices",
+            "title": "주요 지수 · 14:05",
+            "kind": "metrics",
+            "items": [
+              {
+                "label": "KOSPI",
+                "value": 4720.14,
+                "changePct": -3.08,
+                "note": "14:05 장중"
+              },
+              {
+                "label": "KOSDAQ",
+                "value": 641.17,
+                "changePct": -0.7,
+                "note": "14:05 장중"
+              }
+            ]
+          },
+          {
+            "id": "flows",
+            "title": "수급 · 기사 기준",
+            "kind": "bullets",
+            "items": [
+              "코스피 외국인 -1,548억원 · 개인 -4,467억원 · 기관 +2,645억원"
+            ]
+          },
+          {
+            "id": "drivers",
+            "title": "시장 핵심",
+            "kind": "bullets",
+            "items": [
+              "11:44 코스피 4,586.80 저점 이후 14:05 4,720.14로 낙폭 축소",
+              "삼성전자 -2.9%, SK하이닉스 -3.2%; 금융·바이오 대형주 약세"
+            ]
+          },
+          {
+            "id": "changes",
+            "title": "직전 발행 13:10 대비",
+            "kind": "bullets",
+            "items": [
+              "코스피 11:59 -5.35%에서 14:05 -3.08%로 낙폭 축소",
+              "14:10 회차는 발행 실패 기록"
+            ]
+          },
+          {
+            "id": "watch",
+            "title": "주의·확인",
+            "kind": "bullets",
+            "items": [
+              "15:30 확정 종가와 최종 수급 미확인. 장중 관측값을 종가로 해석하지 말 것",
+              "외국인 순매도 지속과 반도체 대형주 흐름 확인"
+            ]
+          }
+        ]
+      }
     }
   }
 }

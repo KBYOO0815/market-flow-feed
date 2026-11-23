@@ -5,15 +5,15 @@
   "slot": "15:40",
   "scheduledFor": "2026-11-23T15:40:00+09:00",
   "startedAt": "2026-11-23T06:36:20.572Z",
-  "updatedAt": "2026-11-23T06:36:39.461Z",
+  "updatedAt": "2026-11-23T06:36:58.409Z",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "validate_payload",
+  "phase": "validation_done",
+  "lastCompletedStep": "validation_done",
+  "nextStep": "publication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
-    "attempted": false,
+    "attempted": true,
     "success": false,
     "commitSha": null,
     "readbackVerified": false
@@ -39,6 +39,12 @@
       "name": "analysis_done",
       "status": "success",
       "finishedAt": "2026-11-23T06:36:39.461Z"
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T06:36:58.409Z",
+      "notes": "display fields checked against Python validator contract; direct script execution unavailable"
     }
   ],
   "collectionNotes": "Latest verified market snapshot 2026-11-23 14:05 KST, not closing price; 15:30 close unverified."
