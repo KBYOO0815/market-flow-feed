@@ -5,17 +5,17 @@
   "slot": "11:10",
   "scheduledFor": "2026-11-23T11:10:00+09:00",
   "startedAt": "2026-11-23T11:07:30+09:00",
-  "updatedAt": "2026-11-23T11:09:00+09:00",
+  "updatedAt": "2026-11-23T11:09:15+09:00",
   "status": "running",
-  "phase": "analysis_done",
-  "lastCompletedStep": "analysis_done",
-  "nextStep": "display_validation",
+  "phase": "publication_done",
+  "lastCompletedStep": "publication_done",
+  "nextStep": "publication_readback",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
-    "attempted": false,
-    "success": false,
-    "commitSha": null,
+    "attempted": true,
+    "success": true,
+    "commitSha": "7deefd884748f42f737e8980f5fd9f90ca94bb0e",
     "readbackVerified": false
   },
   "steps": [
@@ -46,6 +46,18 @@
       "status": "success",
       "finishedAt": "2026-11-23T11:09:00+09:00",
       "details": "Early session weak; foreign/institution net buying at 09:20; 11:10 direction unknown"
+    },
+    {
+      "name": "validation_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T11:09:15+09:00",
+      "details": "display v2 structural validation passed; day payload and navigation updated"
+    },
+    {
+      "name": "publication_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T11:09:15+09:00",
+      "commitSha": "7deefd884748f42f737e8980f5fd9f90ca94bb0e"
     }
   ]
 }
