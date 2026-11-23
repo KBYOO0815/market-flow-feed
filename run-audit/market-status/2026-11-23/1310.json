@@ -7,15 +7,15 @@
   "startedAt": "2026-11-23T13:05:38+09:00",
   "updatedAt": "2026-11-23T13:07:15+09:00",
   "status": "running",
-  "phase": "validation_done",
-  "lastCompletedStep": "validation_done",
-  "nextStep": "publication",
+  "phase": "publication_done",
+  "lastCompletedStep": "publication_done",
+  "nextStep": "readback",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
-    "attempted": false,
+    "attempted": true,
     "success": false,
-    "commitSha": null,
+    "commitSha": "adb74e74a8e4d3f411c5bae1b57b6a0bc1d05a59",
     "readbackVerified": false
   },
   "steps": [
@@ -48,6 +48,12 @@
       "status": "success",
       "finishedAt": "2026-11-23T13:07:15+09:00",
       "notes": "Display contract structural validation; Python script not executed"
+    },
+    {
+      "name": "publication_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T13:07:15+09:00",
+      "notes": "Day and index sequential commits"
     }
   ]
 }
