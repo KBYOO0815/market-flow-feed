@@ -5,11 +5,11 @@
   "slot": "18:40",
   "scheduledFor": "2026-11-23T18:40:00+09:00",
   "startedAt": "2026-11-23T18:43:13+09:00",
-  "updatedAt": "2026-11-23T18:45:25+09:00",
+  "updatedAt": "2026-11-23T18:45:53+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis_and_deduplication",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "payload_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -45,6 +45,24 @@
         "domesticCandidatesReviewed": 18,
         "foreignCandidatesReviewed": 20,
         "sourceErrors": 1
+      }
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "startedAt": "2026-11-23T18:45:00+09:00",
+      "finishedAt": "2026-11-23T18:45:53+09:00",
+      "details": {
+        "foreignSelected": 6,
+        "domesticSelected": 7,
+        "duplicateOrNoNewFactExcluded": 5,
+        "unverifiedExcluded": 3,
+        "notes": [
+          "기존 11월 21일 AI 급락·엔비디아 SEC 조사 자체의 단순 재보도는 제외",
+          "엔비디아 중국 판매 관련 미국 정부의 추가 확인 요구는 새 정책 집행 사실로 채택",
+          "예정된 PCE·한은 회의 등 일정 기사만 있는 후보는 제외",
+          "시황 자체는 별도 피드와 중복되므로 정책·기업 사실 중심으로 선별"
+        ]
       }
     }
   ],
@@ -99,6 +117,18 @@
           "other trusted coverage"
         ]
       }
+    ]
+  },
+  "analysis": {
+    "foreignSelected": 6,
+    "domesticSelected": 7,
+    "duplicateOrNoNewFactExcluded": 5,
+    "unverifiedExcluded": 3,
+    "notes": [
+      "기존 11월 21일 AI 급락·엔비디아 SEC 조사 자체의 단순 재보도는 제외",
+      "엔비디아 중국 판매 관련 미국 정부의 추가 확인 요구는 새 정책 집행 사실로 채택",
+      "예정된 PCE·한은 회의 등 일정 기사만 있는 후보는 제외",
+      "시황 자체는 별도 피드와 중복되므로 정책·기업 사실 중심으로 선별"
     ]
   }
 }
