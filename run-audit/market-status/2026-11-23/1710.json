@@ -7,9 +7,9 @@
   "startedAt": "2026-11-23T17:08:56+09:00",
   "updatedAt": "2026-11-23T17:09:00+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "market_analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "display_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -32,6 +32,11 @@
     },
     {
       "name": "collection_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T17:09:00+09:00"
+    },
+    {
+      "name": "analysis_done",
       "status": "success",
       "finishedAt": "2026-11-23T17:09:00+09:00"
     }
