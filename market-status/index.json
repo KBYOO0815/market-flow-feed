@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-23T15:36:00+09:00",
+  "updatedAt": "2026-11-23T17:09:00+09:00",
   "dates": [
     {
       "date": "2026-11-23",
@@ -78,7 +78,7 @@
       {
         "date": "2026-11-23",
         "slot": "17:10",
-        "state": "scheduled"
+        "state": "published"
       },
       {
         "date": "2026-11-23",
