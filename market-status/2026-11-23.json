@@ -510,6 +510,138 @@
           }
         ]
       }
+    },
+    "11:10": {
+      "date": "2026-11-23",
+      "slot": "11:10",
+      "scheduledFor": "2026-11-23T11:10:00+09:00",
+      "asOf": "2026-11-23T11:09:00+09:00",
+      "publishedAt": "2026-11-23T11:09:00+09:00",
+      "sessionStatus": "KRX REGULAR OPEN; LATEST VERIFIED OBSERVATION 09:20 KST; 11:10 LIVE UNVERIFIED",
+      "scope": "KR",
+      "us": null,
+      "kr": {
+        "summary": "오전 장 초반 코스피 약세. 09:20 기준 외국인·기관 순매수, 개인 순매도. 11:10 실시간 가격과 수급 미확인.",
+        "observedAt": "2026-11-23T09:20:00+09:00",
+        "indices": [
+          {
+            "name": "KOSPI",
+            "value": 4717.67,
+            "changePct": -3.13,
+            "observedAt": "2026-11-23T09:20:00+09:00",
+            "sourceUrl": "https://www.yna.co.kr/view/AKR20261123032251008"
+          },
+          {
+            "name": "KOSDAQ",
+            "value": 634.93,
+            "changePct": -1.66,
+            "observedAt": "2026-11-23T09:00:00+09:00",
+            "sourceUrl": "https://www.newspim.com/news/view/20261123000275"
+          }
+        ],
+        "flows": {
+          "observedAt": "2026-11-23T09:20:00+09:00",
+          "foreignNetBuyKrw100m": 995,
+          "institutionNetBuyKrw100m": 974,
+          "retailNetBuyKrw100m": -2126
+        },
+        "themes": [
+          "AI·반도체 약세",
+          "일부 로봇·반도체 부품 종목 상대 강세"
+        ],
+        "notes": [
+          "코스피 09:20 -3.13%; 이후 4600대 진입 보도 있으나 정확한 시각·지수 미확인",
+          "삼성전자·SK하이닉스 장 초반 2~3%대 약세",
+          "09:20 수급은 11:10 현재값이 아님"
+        ]
+      },
+      "highlights": [
+        "11/20 미국 기술주 급락 후 한국 11/23 갭 하락",
+        "09:20 외국인·기관 순매수에도 코스피 약세",
+        "08:10 대비 개장 후 약세 확인, 11:10 현재 시세 미확인"
+      ],
+      "sources": [
+        {
+          "name": "연합뉴스 11/23 오전 시황",
+          "url": "https://www.yna.co.kr/view/AKR20261123032251008",
+          "checkedAt": "2026-11-23T11:09:00+09:00"
+        },
+        {
+          "name": "글로벌이코노믹 09:13 시황",
+          "url": "https://www.g-enews.com/article/Securities/2026/11/202611230917195264923c501012_1",
+          "checkedAt": "2026-11-23T11:09:00+09:00"
+        }
+      ],
+      "status": {
+        "collection": "partial",
+        "validation": "success",
+        "publication": "success"
+      },
+      "display": {
+        "headline": "코스피 장 초반 3%대 하락, 외국인·기관은 순매수",
+        "badges": [
+          "한국",
+          "정규장",
+          "09:20 관측",
+          "일부 확인"
+        ],
+        "observedAt": "2026-11-23T09:20:00+09:00",
+        "sections": [
+          {
+            "id": "indices",
+            "title": "주요 지수 · 확인 시각",
+            "kind": "metrics",
+            "items": [
+              {
+                "label": "KOSPI",
+                "value": 4717.67,
+                "changePct": -3.13,
+                "note": "09:20 관측"
+              },
+              {
+                "label": "KOSDAQ",
+                "value": 634.93,
+                "changePct": -1.66,
+                "note": "09:00 시가"
+              }
+            ]
+          },
+          {
+            "id": "flows",
+            "title": "수급 · 09:20",
+            "kind": "bullets",
+            "items": [
+              "외국인 +995억원 · 기관 +974억원 · 개인 -2,126억원 (코스피)"
+            ]
+          },
+          {
+            "id": "drivers",
+            "title": "시장 핵심",
+            "kind": "bullets",
+            "items": [
+              "미국 AI·반도체 급락 여파로 삼성전자·SK하이닉스 장 초반 약세",
+              "외국인·기관 순매수에도 지수 하락, 일부 로봇·부품주는 상대 강세"
+            ]
+          },
+          {
+            "id": "changes",
+            "title": "08:10 대비",
+            "kind": "bullets",
+            "items": [
+              "장전 약세 우려가 실제 개장 후 3%대 하락으로 확인됨"
+            ]
+          },
+          {
+            "id": "watch",
+            "title": "주의·확인",
+            "kind": "bullets",
+            "items": [
+              "11:10 실시간 지수·수급 미확인. 위 숫자를 현재값으로 해석하지 말 것",
+              "외국인 매수 지속 여부와 코스피 4,700선 회복 확인"
+            ]
+          }
+        ]
+      }
     }
   }
 }
