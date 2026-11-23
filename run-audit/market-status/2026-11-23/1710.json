@@ -7,9 +7,9 @@
   "startedAt": "2026-11-23T17:08:56+09:00",
   "updatedAt": "2026-11-23T17:09:00+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "market_data_collection",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "market_analysis",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -27,6 +27,11 @@
     },
     {
       "name": "preflight_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T17:09:00+09:00"
+    },
+    {
+      "name": "collection_done",
       "status": "success",
       "finishedAt": "2026-11-23T17:09:00+09:00"
     }
