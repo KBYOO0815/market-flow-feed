@@ -5,11 +5,11 @@
   "slot": "14:10",
   "scheduledFor": "2026-11-23T14:10:00+09:00",
   "startedAt": "2026-11-23T14:11:11+09:00",
-  "updatedAt": "2026-11-23T14:13:00+09:00",
+  "updatedAt": "2026-11-23T14:14:00+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "display_validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -35,6 +35,11 @@
       "status": "success",
       "finishedAt": "2026-11-23T14:13:00+09:00",
       "notes": "Latest independently reported 12:28; 12:33 analysis secondary source; 14:10 live unverified"
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T14:14:00+09:00"
     }
   ]
 }
