@@ -5,11 +5,11 @@
   "slot": "19:40",
   "scheduledFor": "2026-11-23T19:40:00+09:00",
   "startedAt": "2026-11-23T19:41:12+09:00",
-  "updatedAt": "2026-11-23T19:41:41+09:00",
+  "updatedAt": "2026-11-23T19:42:19+09:00",
   "status": "running",
-  "phase": "preflight_done",
-  "lastCompletedStep": "preflight_done",
-  "nextStep": "news_collection",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": "analysis_and_deduplication",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -47,6 +47,17 @@
         "windowStartExclusive": "2026-11-23T18:43:13+09:00",
         "windowEndInclusive": "2026-11-23T19:41:12+09:00"
       }
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "startedAt": "2026-11-23T19:42:00+09:00",
+      "finishedAt": "2026-11-23T19:42:19+09:00",
+      "details": {
+        "foreignCandidatesReviewed": 9,
+        "domesticCandidatesReviewed": 12,
+        "sourceErrors": 0
+      }
     }
   ],
   "preflight": {
@@ -65,5 +76,21 @@
     },
     "windowStartExclusive": "2026-11-23T18:43:13+09:00",
     "windowEndInclusive": "2026-11-23T19:41:12+09:00"
+  },
+  "collection": {
+    "windowStartExclusive": "2026-11-23T18:43:13+09:00",
+    "windowEndInclusive": "2026-11-23T19:41:12+09:00",
+    "foreignCandidatesReviewed": 9,
+    "domesticCandidatesReviewed": 12,
+    "sourceTypes": [
+      "Reuters",
+      "DART/KRX disclosure feeds",
+      "Korean major news feeds",
+      "company investor relations"
+    ],
+    "sourceErrors": [],
+    "importantSourceUrls": [
+      "https://www.reuters.com/legal/transactional/crowdstrike-buy-zscaler-439-billion-2026-11-23/"
+    ]
   }
 }
