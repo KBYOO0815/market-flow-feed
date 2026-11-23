@@ -5,11 +5,11 @@
   "slot": "15:40",
   "scheduledFor": "2026-11-23T15:40:00+09:00",
   "startedAt": "2026-11-23T06:36:20.572Z",
-  "updatedAt": "2026-11-23T06:36:20.572Z",
+  "updatedAt": "2026-11-23T06:36:39.461Z",
   "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "validate_payload",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -24,6 +24,22 @@
       "status": "success",
       "startedAt": "2026-11-23T06:36:20.572Z",
       "finishedAt": "2026-11-23T06:36:20.572Z"
+    },
+    {
+      "name": "preflight_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T06:36:39.461Z"
+    },
+    {
+      "name": "collection_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T06:36:39.461Z"
+    },
+    {
+      "name": "analysis_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T06:36:39.461Z"
     }
-  ]
+  ],
+  "collectionNotes": "Latest verified market snapshot 2026-11-23 14:05 KST, not closing price; 15:30 close unverified."
 }
