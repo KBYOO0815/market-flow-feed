@@ -7,9 +7,9 @@
   "startedAt": "2026-11-23T18:09:51+09:00",
   "updatedAt": "2026-11-23T18:10:00+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "validation",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -32,6 +32,11 @@
     },
     {
       "name": "collection_done",
+      "status": "success",
+      "finishedAt": "2026-11-23T18:10:00+09:00"
+    },
+    {
+      "name": "analysis_done",
       "status": "success",
       "finishedAt": "2026-11-23T18:10:00+09:00"
     }
