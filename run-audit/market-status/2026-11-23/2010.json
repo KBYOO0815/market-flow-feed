@@ -5,13 +5,13 @@
   "slot": "20:10",
   "scheduledFor": "2026-11-23T20:10:00+09:00",
   "startedAt": "2026-11-23T20:07:35+09:00",
-  "updatedAt": "2026-11-23T20:09:00+09:00",
-  "status": "running",
+  "updatedAt": "2026-11-23T20:09:30+09:00",
+  "status": "failed",
   "phase": "analysis_done",
   "lastCompletedStep": "analysis_done",
   "nextStep": "validation",
-  "errorCode": null,
-  "errorMessage": null,
+  "errorCode": "VALIDATOR_NOT_EXECUTED",
+  "errorMessage": "Python validator could not execute against complete candidate: container curl DNS resolution failure for raw.githubusercontent.com (curl exit code 6). No operating JSON published.",
   "publication": {
     "attempted": false,
     "success": false,
@@ -53,6 +53,28 @@
       "finishedAt": "2026-11-23T20:09:00+09:00",
       "editionsPreserved": 10,
       "candidate": "run-audit/market-status/2026-11-23/2010-candidate.json"
+    },
+    {
+      "name": "validation",
+      "status": "failed",
+      "errorCode": "VALIDATOR_NOT_EXECUTED",
+      "rawError": "curl: (6) Could not resolve host: raw.githubusercontent.com"
     }
-  ]
+  ],
+  "failedStep": "validation",
+  "forensics": {
+    "operation": "curl/download_validator_and_candidate",
+    "path": "https://raw.githubusercontent.com/KBYOO0815/market-flow-feed/main/scripts/market_status_display.py",
+    "httpStatus": null,
+    "rawError": "curl: (6) Could not resolve host: raw.githubusercontent.com",
+    "exitCode": 6,
+    "attempts": 1,
+    "validator": {
+      "executed": false,
+      "command": "python /tmp/mf/validator.py /tmp/mf/candidate.json",
+      "exitCode": null,
+      "stderr": "not run; curl prerequisite failed"
+    },
+    "candidateRemoved": true
+  }
 }
