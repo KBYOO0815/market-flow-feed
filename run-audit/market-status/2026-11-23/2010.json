@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "feed": "market-status",
+  "date": "2026-11-23",
+  "slot": "20:10",
+  "scheduledFor": "2026-11-23T20:10:00+09:00",
+  "startedAt": "2026-11-23T20:07:35+09:00",
+  "updatedAt": "2026-11-23T20:07:35+09:00",
+  "status": "running",
+  "phase": "run_start",
+  "lastCompletedStep": "run_start",
+  "nextStep": "preflight",
+  "errorCode": null,
+  "errorMessage": null,
+  "publication": {
+    "attempted": false,
+    "success": false,
+    "commitSha": null,
+    "readbackVerified": false
+  },
+  "steps": [
+    {
+      "name": "run_start",
+      "status": "success",
+      "startedAt": "2026-11-23T20:07:35+09:00"
+    }
+  ]
+}
