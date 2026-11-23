@@ -4,14 +4,6 @@
   "navigation": {
     "previous": [
       {
-        "date": "2026-11-21",
-        "slot": "15:40",
-        "state": "skipped",
-        "reason": "KRX 토요일 휴장"
-      }
-    ],
-    "today": [
-      {
         "date": "2026-11-23",
         "slot": "06:10",
         "state": "published"
@@ -42,16 +34,16 @@
         "state": "missing"
       }
     ],
-    "next": [
+    "today": [
       {
         "date": "2026-11-24",
         "slot": "06:10",
-        "state": "scheduled"
+        "state": "missing"
       },
       {
         "date": "2026-11-24",
         "slot": "08:10",
-        "state": "scheduled"
+        "state": "missing"
       },
       {
         "date": "2026-11-24",
@@ -70,6 +62,38 @@
       },
       {
         "date": "2026-11-24",
+        "slot": "20:10",
+        "state": "scheduled"
+      }
+    ],
+    "next": [
+      {
+        "date": "2026-11-25",
+        "slot": "06:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
+        "slot": "08:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
+        "slot": "09:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
+        "slot": "13:10",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
+        "slot": "15:40",
+        "state": "scheduled"
+      },
+      {
+        "date": "2026-11-25",
         "slot": "20:10",
         "state": "scheduled"
       }
