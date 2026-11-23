@@ -2,133 +2,33 @@
   "schemaVersion": 1,
   "updatedAt": "2026-11-23T19:43:04+09:00",
   "navigation": {
-    "previous": [
-      {
-        "date": "2026-11-22",
-        "slot": "06:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-22",
-        "slot": "22:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      }
-    ],
+    "previous": [],
     "today": [
       {
         "date": "2026-11-23",
-        "slot": "06:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-23",
         "slot": "07:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-23",
-        "slot": "08:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-23",
-        "slot": "09:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-23",
-        "slot": "10:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+        "state": "missing"
       },
       {
         "date": "2026-11-23",
         "slot": "11:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-23",
-        "slot": "12:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-23",
-        "slot": "13:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-23",
-        "slot": "14:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
+        "state": "missing"
       },
       {
         "date": "2026-11-23",
         "slot": "15:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-23",
-        "slot": "16:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-23",
-        "slot": "17:40",
-        "state": "missing",
-        "reason": "운영 JSON과 감사 로그에 발행 근거 없음"
-      },
-      {
-        "date": "2026-11-23",
-        "slot": "18:40",
-        "state": "published"
+        "state": "missing"
       },
       {
         "date": "2026-11-23",
         "slot": "19:40",
         "state": "published"
-      },
-      {
-        "date": "2026-11-23",
-        "slot": "22:40",
-        "state": "scheduled"
       }
     ],
     "next": [
       {
         "date": "2026-11-24",
-        "slot": "06:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
         "slot": "07:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
-        "slot": "08:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
-        "slot": "09:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
-        "slot": "10:40",
         "state": "scheduled"
       },
       {
@@ -138,47 +38,12 @@
       },
       {
         "date": "2026-11-24",
-        "slot": "12:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
-        "slot": "13:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
-        "slot": "14:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
         "slot": "15:40",
         "state": "scheduled"
       },
       {
         "date": "2026-11-24",
-        "slot": "16:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
-        "slot": "17:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
-        "slot": "18:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
         "slot": "19:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-24",
-        "slot": "22:40",
         "state": "scheduled"
       }
     ]
