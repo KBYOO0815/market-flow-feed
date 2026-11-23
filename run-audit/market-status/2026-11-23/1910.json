@@ -5,11 +5,11 @@
   "slot": "19:10",
   "scheduledFor": "2026-11-23T19:10:00+09:00",
   "startedAt": "2026-11-23T19:05:58+09:00",
-  "updatedAt": "2026-11-23T19:07:00+09:00",
+  "updatedAt": "2026-11-23T19:07:30+09:00",
   "status": "running",
-  "phase": "collection_done",
-  "lastCompletedStep": "collection_done",
-  "nextStep": "analysis",
+  "phase": "analysis_done",
+  "lastCompletedStep": "analysis_done",
+  "nextStep": "validate_display",
   "errorCode": null,
   "errorMessage": null,
   "publication": {
@@ -34,6 +34,10 @@
       "name": "collection_done",
       "status": "success",
       "details": "15:30 KRX close confirmed; latest 19:10 realtime NXT unverified; Reuters and Korean reporting"
+    },
+    {
+      "name": "analysis_done",
+      "status": "success"
     }
   ]
 }
