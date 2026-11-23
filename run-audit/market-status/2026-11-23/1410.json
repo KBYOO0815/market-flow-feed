@@ -5,15 +5,15 @@
   "slot": "14:10",
   "scheduledFor": "2026-11-23T14:10:00+09:00",
   "startedAt": "2026-11-23T14:11:11+09:00",
-  "updatedAt": "2026-11-23T14:15:00+09:00",
-  "status": "running",
+  "updatedAt": "2026-11-23T14:16:00+09:00",
+  "status": "failed",
   "phase": "validation_done",
   "lastCompletedStep": "validation_done",
-  "nextStep": "publication",
-  "errorCode": null,
-  "errorMessage": null,
+  "nextStep": null,
+  "errorCode": "GITHUB_WRITE_FAILED",
+  "errorMessage": "Publication aborted before branch update: Git commit tree metadata unavailable in connector response; no operating JSON written",
   "publication": {
-    "attempted": false,
+    "attempted": true,
     "success": false,
     "commitSha": null,
     "readbackVerified": false
@@ -46,6 +46,13 @@
       "status": "success",
       "finishedAt": "2026-11-23T14:15:00+09:00",
       "notes": "Display contract manually matched against scripts/market_status_display.py; Python direct execution not performed"
+    },
+    {
+      "name": "publication",
+      "status": "failed",
+      "finishedAt": "2026-11-23T14:16:00+09:00",
+      "errorCode": "GITHUB_WRITE_FAILED"
     }
-  ]
+  ],
+  "failedStep": "publication"
 }
