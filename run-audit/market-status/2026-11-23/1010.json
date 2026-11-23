@@ -5,13 +5,13 @@
   "slot": "10:10",
   "scheduledFor": "2026-11-23T10:10:00+09:00",
   "startedAt": "2026-11-23T01:13:14.566Z",
-  "updatedAt": "2026-11-23T01:13:14.566Z",
-  "status": "running",
-  "phase": "run_start",
-  "lastCompletedStep": "run_start",
-  "nextStep": "calendar_session_check",
-  "errorCode": null,
-  "errorMessage": null,
+  "updatedAt": "2026-11-23T01:13:27.344Z",
+  "status": "partial",
+  "phase": "collection_done",
+  "lastCompletedStep": "collection_done",
+  "nextStep": null,
+  "errorCode": "SOURCE_INCOMPLETE",
+  "errorMessage": "2026-11-23 10:10 KST contemporaneous KOSPI/KOSDAQ and investor flows could not be verified; search results were dated earlier trading days.",
   "publication": {
     "attempted": false,
     "success": false,
@@ -24,6 +24,21 @@
       "status": "success",
       "startedAt": "2026-11-23T01:13:14.566Z",
       "finishedAt": "2026-11-23T01:13:14.566Z"
+    },
+    {
+      "name": "calendar_session_check",
+      "status": "success",
+      "startedAt": "2026-11-23T01:13:27.344Z",
+      "finishedAt": "2026-11-23T01:13:27.344Z",
+      "detail": "Monday 2026-11-23 10:10 KST regular KRX trading window; special closure not independently confirmed"
+    },
+    {
+      "name": "market_data_collection",
+      "status": "partial",
+      "startedAt": "2026-11-23T01:13:27.344Z",
+      "finishedAt": "2026-11-23T01:13:27.344Z",
+      "detail": "No verified contemporaneous 2026-11-23 intraday quotes; older dates excluded."
     }
-  ]
+  ],
+  "failedStep": "market_data_collection"
 }
