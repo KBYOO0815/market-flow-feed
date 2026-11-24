@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-23T19:43:04+09:00",
+  "updatedAt": "2026-11-24T11:42:49+09:00",
   "navigation": {
     "previous": [
       {
@@ -33,7 +33,7 @@
       {
         "date": "2026-11-24",
         "slot": "11:40",
-        "state": "scheduled"
+        "state": "published"
       },
       {
         "date": "2026-11-24",
@@ -370,6 +370,179 @@
               "18:43 이전 공개 재료",
               "기존 인수 협상 보도의 단순 반복",
               "발표시각 또는 핵심사실 미확인 후보"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "isKrxTradingDay": true,
+      "displaySlots": [
+        "07:40",
+        "11:40",
+        "15:40",
+        "19:40"
+      ],
+      "sessions": [
+        {
+          "slot": "11:40",
+          "asOf": "2026-11-24T11:40:05+09:00",
+          "publishedAt": "2026-11-24T11:42:49+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261124-nvidia-huang-reinstated-ceo",
+              "title": "엔비디아, 젠슨 황 CEO 복귀…주가 31.5% 급등",
+              "summary": "엔비디아 이사회는 미국 정부 의견을 반영해 젠슨 황을 CEO로 복귀시켰다. 엔비디아 주가는 31.5% 상승해 23년 만의 최대 일일 상승률을 기록했고 시가총액이 약 1조달러 회복됐다. 다만 대중국 칩 수출과 지배구조 조사는 계속된다.",
+              "publishedAt": "2026-11-23T22:59:25+09:00",
+              "checkedAt": "2026-11-24T11:40:05+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/technology/nvidia-reinstates-jensen-huang-ceo-2026-11-23/",
+              "relatedStocks": [
+                "엔비디아(NVDA)",
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ],
+              "impactRank": 1,
+              "category": "AI반도체·기업지배구조",
+              "region": "foreign",
+              "eventKey": "nvidia-jensen-huang-ceo-reinstatement-20261123",
+              "factKey": "board-reinstates-huang-stock-closes-up-31-5pct"
+            },
+            {
+              "id": "foreign-20261124-ai-relief-rally-rates-dollar-oil",
+              "title": "AI 안도랠리로 아시아 증시 급등…미 10년물 4.94%·유가 3.5% 하락",
+              "summary": "엔비디아발 AI 안도랠리로 S&P500과 나스닥이 각각 4.7%, 6.5% 올랐고, 24일 오전 코스피는 7.5% 급등했다. 반면 연준 긴축 기대가 강화되며 미국 10년물 금리는 4.94%, 2년물은 4.69%로 상승했고 달러는 유로 대비 19개월 고점 부근을 유지했다. 브렌트유는 전일 3.5% 내린 배럴당 89.37달러에 마감했다.",
+              "publishedAt": "2026-11-24T10:29:45+09:00",
+              "checkedAt": "2026-11-24T11:40:05+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-24/",
+              "relatedStocks": [
+                "삼성전자(005930)",
+                "SK하이닉스(000660)",
+                "엔비디아(NVDA)"
+              ],
+              "impactRank": 2,
+              "category": "글로벌증시·금리·달러·원유",
+              "region": "foreign",
+              "eventKey": "global-ai-relief-rally-20261124",
+              "factKey": "asia-rally-us-yields-dollar-rise-brent-settles-89-37"
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "domestic-20261124-samsung-ea-sejong-plant-contract",
+              "title": "삼성E&A, 삼성전기 세종 신공장 증설 7,103억원 수주",
+              "summary": "삼성E&A는 삼성전기와 세종 2.0 신공장 증설 공사 계약을 체결했다. 계약금액은 7,103억원으로 2025년 연결 매출액의 7.87%이며, 계약기간은 2026년 11월 23일부터 2027년 12월 30일까지다.",
+              "publishedAt": "2026-11-24T09:16:00+09:00",
+              "checkedAt": "2026-11-24T11:40:05+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800292",
+              "relatedStocks": [
+                "삼성E&A(028050)",
+                "삼성전기(009150)"
+              ],
+              "impactRank": 1,
+              "category": "건설·반도체공장·수주",
+              "region": "domestic",
+              "eventKey": "samsung-ea-samsung-electro-mechanics-sejong-plant-2026",
+              "factKey": "contract-710-3-billion-krw-7-87pct-sales"
+            },
+            {
+              "id": "domestic-20261124-bok-consumer-sentiment",
+              "title": "11월 소비자심리지수 103.1…전월보다 2.3p 하락",
+              "summary": "한국은행의 11월 소비자동향조사에서 소비자심리지수는 103.1로 전월보다 2.3포인트 하락해 두 달 연속 내렸다. 국내외 증시 조정과 대출금리 상승 등이 소비심리 약화 요인으로 제시됐다.",
+              "publishedAt": "2026-11-24T06:00:00+09:00",
+              "checkedAt": "2026-11-24T11:40:05+09:00",
+              "sourceName": "한국은행",
+              "sourceUrl": "https://www.bok.or.kr/portal/bbs/B0000501/view.do?depth=201264&menuNo=201264&nttId=11066918&programType=newsData&relate=Y",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "한국경제·소비심리",
+              "region": "domestic",
+              "eventKey": "bok-consumer-sentiment-202611",
+              "factKey": "ccsi-103-1-down-2-3p"
+            },
+            {
+              "id": "domestic-20261124-cheil-worldwide-buyback-cancellation",
+              "title": "제일기획, 600억원 자사주 추가 매입 후 전량 소각",
+              "summary": "제일기획은 11월 25일부터 2027년 1월 29일까지 보통주 329만1,278주를 600억원에 장내 매수한 뒤 전량 소각할 계획이다. 별도로 기존 취득분 208만938주(장부가 약 400억원)는 12월 1일 소각하기로 했다.",
+              "publishedAt": "2026-11-24T09:06:00+09:00",
+              "checkedAt": "2026-11-24T11:40:05+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124000020",
+              "relatedStocks": [
+                "제일기획(030000)"
+              ],
+              "impactRank": 3,
+              "category": "자사주·주주환원",
+              "region": "domestic",
+              "eventKey": "cheil-worldwide-buyback-and-cancellation-20261124",
+              "factKey": "new-buyback-60-billion-krw-and-cancel-existing-2080938-shares",
+              "facts": [
+                {
+                  "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124000020",
+                  "fact": "600억원 장내매수 후 전량 소각 계획"
+                },
+                {
+                  "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800170",
+                  "fact": "기취득 2,080,938주를 2026-12-01 소각"
+                }
+              ]
+            },
+            {
+              "id": "domestic-20261124-neosem-inspection-equipment-contract",
+              "title": "네오셈, 142억원 반도체 검사장비 공급계약",
+              "summary": "네오셈은 종속회사 NEOSEM TECHNOLOGY에 GEN6 SSD TESTER 등 반도체 검사장비를 공급하는 142억1,025만원 계약을 체결했다. 이는 2025년 연결 매출액의 22.2%이며 계약기간은 2027년 6월 30일까지다.",
+              "publishedAt": "2026-11-24T11:05:00+09:00",
+              "checkedAt": "2026-11-24T11:40:05+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124900422",
+              "relatedStocks": [
+                "네오셈(253590)"
+              ],
+              "impactRank": 4,
+              "category": "반도체장비·수주",
+              "region": "domestic",
+              "eventKey": "neosem-neosem-technology-equipment-contract-20261124",
+              "factKey": "contract-14-210-billion-krw-22-2pct-sales"
+            },
+            {
+              "id": "domestic-20261124-access-bio-buyback-trust",
+              "title": "엑세스바이오, 100억원 자사주 신탁계약",
+              "summary": "엑세스바이오는 한국투자증권과 100억원 규모의 자기주식 취득 신탁계약을 체결하기로 했다. 계약기간은 2026년 11월 30일부터 1년이며, 기준가로 산정한 취득예정 수량은 614만6,281주다.",
+              "publishedAt": "2026-11-24T10:39:00+09:00",
+              "checkedAt": "2026-11-24T11:40:05+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124000108",
+              "relatedStocks": [
+                "엑세스바이오(950130)"
+              ],
+              "impactRank": 5,
+              "category": "자사주·주주환원",
+              "region": "domestic",
+              "eventKey": "access-bio-buyback-trust-20261124",
+              "factKey": "buyback-trust-10-billion-krw-one-year"
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "researchAudit": {
+            "windowStartExclusive": "2026-11-23T19:41:12+09:00",
+            "windowEndInclusive": "2026-11-24T11:40:05+09:00",
+            "checkedAt": "2026-11-24T11:40:05+09:00",
+            "currentWindowDiscoveryStatus": "complete",
+            "sources": [
+              "Reuters",
+              "한국은행",
+              "DART",
+              "연합뉴스",
+              "국내 주요 뉴스·공시 피드"
+            ],
+            "exclusions": [
+              "직전 회차에 이미 발행된 크라우드스트라이크·지스케일러 인수 재보도",
+              "단순 전망·목표주가·일정 예고",
+              "원문 시각 또는 핵심 수치 미확인 후보"
             ]
           }
         }
