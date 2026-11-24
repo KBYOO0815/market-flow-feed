@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T15:43:44+09:00",
+  "updatedAt": "2026-11-24T19:44:41.742+09:00",
   "navigation": {
     "previous": [
       {
@@ -22,6 +22,11 @@
         "date": "2026-11-23",
         "slot": "19:40",
         "state": "published"
+      },
+      {
+        "date": "2026-11-23",
+        "slot": "22:40",
+        "state": "missing"
       }
     ],
     "today": [
@@ -43,6 +48,11 @@
       {
         "date": "2026-11-24",
         "slot": "19:40",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-24",
+        "slot": "22:40",
         "state": "scheduled"
       }
     ],
@@ -361,7 +371,8 @@
         "07:40",
         "11:40",
         "15:40",
-        "19:40"
+        "19:40",
+        "22:40"
       ],
       "sessions": [
         {
@@ -640,6 +651,150 @@
               "11:40 이전 공개된 엔비디아 복귀·아시아 증시 반등 재보도",
               "단순 장중 시황·전망·예정 일정",
               "15:40:06 이후 공개 또는 최초 공개시각 미확인 후보"
+            ]
+          }
+        },
+        {
+          "slot": "19:40",
+          "asOf": "2026-11-24T19:40:04+09:00",
+          "publishedAt": "2026-11-24T19:44:41.742+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261124-japan-monthly-economy-consumption-downgrade",
+              "title": "일본 정부, 소비 판단 2년9개월 만에 하향…반도체 장비 생산 평가는 상향",
+              "summary": "일본 정부는 11월 월례경제보고에서 물가 상승에 따른 심리 약화를 반영해 개인소비 판단을 2024년 2월 이후 처음 낮췄다. 반면 수출과 산업생산 평가는 상향했고, 산업생산 개선에는 반도체 제조장비가 기여했다고 밝혔다.",
+              "publishedAt": "2026-11-24T17:21:39+09:00",
+              "checkedAt": "2026-11-24T19:43:37+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/markets/asia/japan-cuts-view-consumer-spending-1st-time-since-2024-2026-11-24/",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "일본경제·소비·반도체장비",
+              "region": "foreign",
+              "eventKey": "japan-monthly-economic-report-202611",
+              "factKey": "consumption-downgraded-exports-production-upgraded"
+            },
+            {
+              "id": "foreign-20261124-japan-budget-guideline-boj-independence",
+              "title": "일본, 2027년 예산지침에 재정 지속가능성·BOJ 독립성 명시",
+              "summary": "일본 정부는 2027회계연도 예산 편성지침 초안에서 신규 국채 발행을 적절히 통제하고 일본은행의 통화정책 자율성을 존중하겠다고 밝혔다. 대규모 지출에 따른 국채·엔화 불안을 의식한 정책 신호다.",
+              "publishedAt": "2026-11-24T18:08:25+09:00",
+              "checkedAt": "2026-11-24T19:43:37+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/markets/asia/japan-vows-sustainable-finances-boj-independence-budget-guideline-2026-11-24/",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "일본재정·통화정책",
+              "region": "foreign",
+              "eventKey": "japan-fy2027-budget-guideline-20261124",
+              "factKey": "fiscal-sustainability-boj-independence-debt-control"
+            },
+            {
+              "id": "foreign-20261124-germany-ifo-november",
+              "title": "독일 11월 Ifo 기업환경지수 90.6…7개월 연속 상승",
+              "summary": "독일 Ifo 기업환경지수는 11월 90.6으로 10월 수정치 90.1에서 상승해 시장 예상 90.5를 소폭 웃돌았다. 현재상황지수는 89.4, 기대지수는 91.9로 개선됐지만 제조업과 건설업 지수는 하락했다.",
+              "publishedAt": "2026-11-24T18:19:40+09:00",
+              "checkedAt": "2026-11-24T19:43:37+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/europe/german-ifo-business-sentiment-rises-november-2026-11-24/",
+              "relatedStocks": [],
+              "impactRank": 3,
+              "category": "유럽경기·기업심리",
+              "region": "foreign",
+              "eventKey": "germany-ifo-business-climate-202611",
+              "factKey": "index-90-6-seventh-consecutive-rise"
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "domestic-20261124-ecopro-bm-global-investment-bnsi",
+              "title": "에코프로비엠, 인도네시아 제련사업에 6,222억원 투자",
+              "summary": "에코프로비엠은 100% 싱가포르 자회사 ECOPRO GLOBAL INVESTMENT에 6,221억8,362만원을 출자해 인도네시아 PT BNSI 제련소 지분 인수와 주주대여금 재원을 마련하기로 했다. 투자액은 자기자본의 24.7%이며 취득 예정일은 2027년 6월 30일이다.",
+              "publishedAt": "2026-11-24T16:59:00+09:00",
+              "checkedAt": "2026-11-24T19:43:37+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124900852",
+              "relatedStocks": [
+                "에코프로비엠(247540)",
+                "에코프로(086520)"
+              ],
+              "impactRank": 1,
+              "category": "2차전지소재·해외투자",
+              "region": "domestic",
+              "eventKey": "ecopro-bm-indonesia-bnsi-smelter-investment-20261124",
+              "factKey": "cash-contribution-622183620541-krw"
+            },
+            {
+              "id": "domestic-20261124-s1-treasury-share-cancellation",
+              "title": "에스원, 발행주식 11% 자사주 418만8,939주 소각",
+              "summary": "에스원은 보유 자사주 418만8,939주를 11월 30일 소각하기로 했다. 소각 전 발행주식 3,799만9,178주의 11.0%이며 장부가액은 1,557억5,111만원이다. 주주가치 제고 목적의 감자 없는 이익소각이다.",
+              "publishedAt": "2026-11-24T16:39:00+09:00",
+              "checkedAt": "2026-11-24T19:43:37+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800774",
+              "relatedStocks": [
+                "에스원(012750)"
+              ],
+              "impactRank": 2,
+              "category": "자사주·주주환원",
+              "region": "domestic",
+              "eventKey": "s1-treasury-share-cancellation-20261124",
+              "factKey": "cancel-4188939-shares-11pct"
+            },
+            {
+              "id": "domestic-20261124-hpsp-buyback-100bn",
+              "title": "HPSP, 1,000억원 규모 자사주 장내매수 결정",
+              "summary": "HPSP는 주가 안정과 주주가치 제고를 위해 보통주 268만8,172주를 1,000억원에 장내 취득하기로 했다. 취득 예정기간은 2026년 11월 25일부터 2027년 2월 24일까지다.",
+              "publishedAt": "2026-11-24T16:10:00+09:00",
+              "checkedAt": "2026-11-24T19:43:37+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124000377",
+              "relatedStocks": [
+                "HPSP(403870)"
+              ],
+              "impactRank": 3,
+              "category": "반도체장비·자사주",
+              "region": "domestic",
+              "eventKey": "hpsp-treasury-share-buyback-20261124",
+              "factKey": "buyback-2688172-shares-100-billion-krw"
+            },
+            {
+              "id": "domestic-20261124-hd-hhi-october-sales-orders",
+              "title": "HD현대중공업, 10월 매출 2.19조원·누적 수주 198.97억달러",
+              "summary": "HD현대중공업의 10월 매출은 2조1,889억7천만원으로 전년 동월 대비 55.72% 증가했다. 1~10월 누적 매출은 20조1,342억6천만원으로 46.02% 늘었고 누적 수주는 198억9,700만달러로 95.14% 증가했다.",
+              "publishedAt": "2026-11-24T15:55:00+09:00",
+              "checkedAt": "2026-11-24T19:43:37+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800659",
+              "relatedStocks": [
+                "HD현대중공업(329180)",
+                "HD한국조선해양(009540)"
+              ],
+              "impactRank": 4,
+              "category": "조선·월간실적·수주",
+              "region": "domestic",
+              "eventKey": "hd-hhi-monthly-performance-202610",
+              "factKey": "oct-sales-2188970m-krw-ytd-orders-19-897bn-usd"
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "researchAudit": {
+            "windowStartExclusive": "2026-11-24T15:40:06+09:00",
+            "windowEndInclusive": "2026-11-24T19:40:04+09:00",
+            "checkedAt": "2026-11-24T19:43:37+09:00",
+            "currentWindowDiscoveryStatus": "complete",
+            "sources": [
+              "Reuters",
+              "DART",
+              "연합뉴스",
+              "뉴스핌",
+              "국내 주요 뉴스·공시 피드"
+            ],
+            "exclusions": [
+              "15:40:06 이전 공개 재료와 기존 회차 단순 재보도",
+              "공시 금액·최초 공개시각 또는 핵심 사실을 확인하지 못한 후보",
+              "한 웹 검색 경로의 사용량 한도 오류는 대체 검색과 원문 조회로 보완"
             ]
           }
         }
