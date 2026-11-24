@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-23T19:07:40+09:00",
+  "updatedAt": "2026-11-24T13:11:00+09:00",
   "navigation": {
     "previous": [
       {
@@ -48,12 +48,12 @@
       {
         "date": "2026-11-24",
         "slot": "09:10",
-        "state": "scheduled"
+        "state": "failed"
       },
       {
         "date": "2026-11-24",
         "slot": "13:10",
-        "state": "scheduled"
+        "state": "published"
       },
       {
         "date": "2026-11-24",
@@ -1558,6 +1558,172 @@
                   "외국인 매도와 코스피 4,700선 유지 여부",
                   "NXT 애프터마켓 실시간 가격·수급 미확인"
                 ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-11-24",
+      "editions": {
+        "13:10": {
+          "date": "2026-11-24",
+          "slot": "13:10",
+          "scheduledFor": "2026-11-24T13:10:00+09:00",
+          "asOf": "2026-11-24T13:09:00+09:00",
+          "publishedAt": "2026-11-24T13:11:00+09:00",
+          "sessionStatus": "KRX REGULAR OPEN",
+          "scope": "KR",
+          "us": null,
+          "kr": {
+            "summary": "코스피 7% 급반등, 외국인·기관 매수와 반도체 주도",
+            "observedAt": "2026-11-24T13:09:00+09:00",
+            "indices": [
+              {
+                "name": "KOSPI",
+                "value": 5051.76,
+                "changePct": 7.29,
+                "observedAt": "2026-11-24T13:09:00+09:00",
+                "sourceUrl": "https://m.stock.naver.com/api/index/KOSPI/basic"
+              },
+              {
+                "name": "KOSDAQ",
+                "value": 667.89,
+                "changePct": 5.11,
+                "observedAt": "2026-11-24T13:09:00+09:00",
+                "sourceUrl": "https://m.stock.naver.com/api/index/KOSDAQ/basic"
+              }
+            ],
+            "flows": {
+              "observedAt": null,
+              "market": "KOSPI",
+              "unit": "억원",
+              "foreign": 6577,
+              "institution": 5643,
+              "individual": -15325
+            },
+            "themes": [
+              "반도체·전자부품 강세"
+            ],
+            "notes": [
+              "삼성전자 +8.51%, SK하이닉스 +9.12%, 삼성전기 +10.54% (13:10경).",
+              "코스피 상승 764개, 하락 117개로 상승 확산. 프로그램 +2,688억원.",
+              "엔비디아 CEO 복귀 보도와 미국 AI주 반등이 투자심리 회복 배경.",
+              "외국인 +6,577 · 기관 +5,643 · 개인 -15,325억원 (13:10경 조회, 원천 분 단위 시각 미제공)"
+            ]
+          },
+          "highlights": [
+            "직전 저장 회차인 전일 19:10의 종가 대비 코스피 +7.29%, 코스닥 +5.11%. 오늘 오전 회차 미발행으로 회차 간 직접 비교 불가.",
+            "코스피 5,000선 유지, 외국인 매수 지속 및 급등 이후 변동성 확대 여부."
+          ],
+          "sources": [
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/index/KOSPI/basic",
+              "checkedAt": "2026-11-24T13:11:00+09:00"
+            },
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/index/KOSDAQ/basic",
+              "checkedAt": "2026-11-24T13:11:00+09:00"
+            },
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/index/KOSPI/integration",
+              "checkedAt": "2026-11-24T13:11:00+09:00"
+            },
+            {
+              "name": "연합뉴스",
+              "url": "https://www.yna.co.kr/view/AKR20261124045800008?input=1215m",
+              "checkedAt": "2026-11-24T13:11:00+09:00"
+            },
+            {
+              "name": "Reuters",
+              "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-22/",
+              "checkedAt": "2026-11-24T13:11:00+09:00"
+            },
+            {
+              "name": "뉴스웍스",
+              "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=904151",
+              "checkedAt": "2026-11-24T13:11:00+09:00"
+            },
+            {
+              "name": "UP코리아",
+              "url": "https://www.upkoreanews.kr/news/articleView.html?idxno=101342",
+              "checkedAt": "2026-11-24T13:11:00+09:00"
+            }
+          ],
+          "status": {
+            "collection": "partial",
+            "validation": "success",
+            "publication": "success"
+          },
+          "display": {
+            "headline": "코스피 7% 급반등, 외국인·기관 매수와 반도체 주도",
+            "badges": [
+              "한국",
+              "장중",
+              "13:09 지수"
+            ],
+            "observedAt": "2026-11-24T13:09:00+09:00",
+            "sections": [
+              {
+                "id": "indices",
+                "title": "주요 지수",
+                "kind": "metrics",
+                "items": [
+                  {
+                    "label": "KOSPI",
+                    "value": 5051.76,
+                    "changePct": 7.29,
+                    "note": "13:09"
+                  },
+                  {
+                    "label": "KOSDAQ",
+                    "value": 667.89,
+                    "changePct": 5.11,
+                    "note": "13:09"
+                  }
+                ]
+              },
+              {
+                "id": "flows",
+                "title": "코스피 수급",
+                "kind": "bullets",
+                "items": [
+                  "외국인 +6,577 · 기관 +5,643 · 개인 -15,325억원 (13:10경 조회, 원천 분 단위 시각 미제공)"
+                ]
+              },
+              {
+                "id": "drivers",
+                "title": "시장 핵심",
+                "kind": "bullets",
+                "items": [
+                  "삼성전자 +8.51%, SK하이닉스 +9.12%, 삼성전기 +10.54% (13:10경).",
+                  "코스피 상승 764개, 하락 117개로 상승 확산. 프로그램 +2,688억원.",
+                  "엔비디아 CEO 복귀 보도와 미국 AI주 반등이 투자심리 회복 배경."
+                ]
+              },
+              {
+                "id": "us",
+                "title": "미국 전일 마감",
+                "kind": "bullets",
+                "items": [
+                  "나스닥 +6.51%, S&P 500 +4.73%, 필라델피아 반도체 +14.03% (11/23 미국 정규장)."
+                ]
+              },
+              {
+                "id": "changes",
+                "title": "직전 회차 대비",
+                "kind": "text",
+                "text": "직전 저장 회차인 전일 19:10의 종가 대비 코스피 +7.29%, 코스닥 +5.11%. 오늘 오전 회차 미발행으로 회차 간 직접 비교 불가."
+              },
+              {
+                "id": "watch",
+                "title": "주의·확인",
+                "kind": "text",
+                "text": "코스피 5,000선 유지, 외국인 매수 지속 및 급등 이후 변동성 확대 여부."
               }
             ]
           }
