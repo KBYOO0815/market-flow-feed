@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T13:11:00+09:00",
+  "updatedAt": "2026-11-24T06:40:34.858Z",
   "navigation": {
     "previous": [
       {
@@ -58,7 +58,7 @@
       {
         "date": "2026-11-24",
         "slot": "15:40",
-        "state": "scheduled"
+        "state": "published"
       },
       {
         "date": "2026-11-24",
@@ -1724,6 +1724,152 @@
                 "title": "주의·확인",
                 "kind": "text",
                 "text": "코스피 5,000선 유지, 외국인 매수 지속 및 급등 이후 변동성 확대 여부."
+              }
+            ]
+          }
+        },
+        "15:40": {
+          "date": "2026-11-24",
+          "slot": "15:40",
+          "scheduledFor": "2026-11-24T15:40:00+09:00",
+          "asOf": "2026-11-24T15:39:00+09:00",
+          "publishedAt": "2026-11-24T06:40:34.858Z",
+          "sessionStatus": "KRX REGULAR CLOSE",
+          "scope": "KR",
+          "us": null,
+          "kr": {
+            "summary": "코스피 6.32% 급반등 마감, 외국인·기관 동반 매수",
+            "observedAt": "2026-11-24T15:39:00+09:00",
+            "indices": [
+              {
+                "name": "KOSPI",
+                "value": 5006.03,
+                "changePct": 6.32,
+                "observedAt": "2026-11-24T15:39:00+09:00",
+                "sourceUrl": "https://m.stock.naver.com/api/index/KOSPI/basic"
+              },
+              {
+                "name": "KOSDAQ",
+                "value": 665.88,
+                "changePct": 4.79,
+                "observedAt": "2026-11-24T15:39:00+09:00",
+                "sourceUrl": "https://m.stock.naver.com/api/index/KOSDAQ/basic"
+              }
+            ],
+            "flows": {
+              "observedAt": null,
+              "market": "KOSPI",
+              "unit": "억원",
+              "foreign": 7255,
+              "institution": 8692,
+              "individual": -20430
+            },
+            "themes": [
+              "반도체·전자부품",
+              "자동차·이차전지"
+            ],
+            "notes": [
+              "코스피 상승 797개, 하락 94개, 보합 19개로 상승 우세. 상한가 2개는 별도 표기되어 중복 여부 미확인.",
+              "프로그램 순매수 +3,541억원. 코스피 장중 고점 5,065.74.",
+              "15:40경 종목 API: 현대차 +11.11%, 삼성전기 +10.28%, LG에너지솔루션 +7.89%, SK하이닉스 +6.73%, 삼성전자 +6.70%, 삼성바이오로직스 +0.16%. 종목 API는 OPEN 상태로 정규장 확정 종가로 간주하지 않음.",
+              "미국 AI주 반등과 엔비디아 CEO 복귀 보도가 투자심리 개선 배경으로 보도됨.",
+              "외국인 +7,255 · 기관 +8,692 · 개인 -20,430억원 (15:40경 조회, 잠정·원천 시각 미제공)."
+            ]
+          },
+          "highlights": [
+            "13:10 회차 대비 코스피 45.73p 하락(상승률 7.29%→6.32%), 코스닥 2.01p 하락. 외국인·기관 순매수 규모는 증가.",
+            "코스피 5,000선 유지 여부, 외국인 매수 지속, 급반등 이후 변동성 및 미국 기술주 흐름 확인."
+          ],
+          "sources": [
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/index/KOSPI/basic",
+              "checkedAt": "2026-11-24T15:40:20+09:00"
+            },
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/index/KOSDAQ/basic",
+              "checkedAt": "2026-11-24T15:40:20+09:00"
+            },
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/index/KOSPI/integration",
+              "checkedAt": "2026-11-24T15:40:20+09:00"
+            },
+            {
+              "name": "조선비즈",
+              "url": "https://biz.chosun.com/stock/stock_general/2026/11/24/U4QTL7BQ5JCE7AGIPZQMSRYS4M/",
+              "checkedAt": "2026-11-24T15:40:20+09:00"
+            },
+            {
+              "name": "거래일 안내(KRX 기준)",
+              "url": "https://traderda.com/market/market-holidays",
+              "checkedAt": "2026-11-24T15:40:20+09:00"
+            }
+          ],
+          "status": {
+            "collection": "partial",
+            "validation": "success",
+            "publication": "success"
+          },
+          "display": {
+            "headline": "코스피 6.32% 급반등 마감, 외국인·기관 동반 매수",
+            "badges": [
+              "한국",
+              "정규장 마감",
+              "15:39 지수"
+            ],
+            "observedAt": "2026-11-24T15:39:00+09:00",
+            "sections": [
+              {
+                "id": "indices",
+                "title": "주요 지수",
+                "kind": "metrics",
+                "items": [
+                  {
+                    "label": "KOSPI",
+                    "value": 5006.03,
+                    "changePct": 6.32,
+                    "note": "15:39 마감 조회"
+                  },
+                  {
+                    "label": "KOSDAQ",
+                    "value": 665.88,
+                    "changePct": 4.79,
+                    "note": "15:39 마감 조회"
+                  }
+                ]
+              },
+              {
+                "id": "flows",
+                "title": "코스피 수급",
+                "kind": "bullets",
+                "items": [
+                  "외국인 +7,255 · 기관 +8,692 · 개인 -20,430억원 (15:40경 조회, 잠정·원천 시각 미제공)."
+                ]
+              },
+              {
+                "id": "drivers",
+                "title": "시장 핵심",
+                "kind": "bullets",
+                "items": [
+                  "코스피 상승 797개, 하락 94개, 보합 19개로 상승 우세. 상한가 2개는 별도 표기되어 중복 여부 미확인.",
+                  "프로그램 순매수 +3,541억원. 코스피 장중 고점 5,065.74.",
+                  "15:40경 종목 API: 현대차 +11.11%, 삼성전기 +10.28%, LG에너지솔루션 +7.89%, SK하이닉스 +6.73%, 삼성전자 +6.70%, 삼성바이오로직스 +0.16%. 종목 API는 OPEN 상태로 정규장 확정 종가로 간주하지 않음.",
+                  "미국 AI주 반등과 엔비디아 CEO 복귀 보도가 투자심리 개선 배경으로 보도됨."
+                ]
+              },
+              {
+                "id": "changes",
+                "title": "직전 회차 대비",
+                "kind": "text",
+                "text": "13:10 회차 대비 코스피 45.73p 하락(상승률 7.29%→6.32%), 코스닥 2.01p 하락. 외국인·기관 순매수 규모는 증가."
+              },
+              {
+                "id": "watch",
+                "title": "주의·확인",
+                "kind": "text",
+                "text": "코스피 5,000선 유지 여부, 외국인 매수 지속, 급반등 이후 변동성 및 미국 기술주 흐름 확인."
               }
             ]
           }
