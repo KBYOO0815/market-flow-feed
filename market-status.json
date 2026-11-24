@@ -66,38 +66,7 @@
         "state": "scheduled"
       }
     ],
-    "next": [
-      {
-        "date": "2026-11-25",
-        "slot": "06:10",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "08:10",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "09:10",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "13:10",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "15:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "20:10",
-        "state": "scheduled"
-      }
-    ]
+    "next": []
   },
   "days": [
     {
