@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T11:42:49+09:00",
+  "updatedAt": "2026-11-24T15:43:44+09:00",
   "navigation": {
     "previous": [
       {
@@ -38,7 +38,7 @@
       {
         "date": "2026-11-24",
         "slot": "15:40",
-        "state": "scheduled"
+        "state": "published"
       },
       {
         "date": "2026-11-24",
@@ -543,6 +543,124 @@
               "직전 회차에 이미 발행된 크라우드스트라이크·지스케일러 인수 재보도",
               "단순 전망·목표주가·일정 예고",
               "원문 시각 또는 핵심 수치 미확인 후보"
+            ]
+          }
+        },
+        {
+          "slot": "15:40",
+          "asOf": "2026-11-24T15:40:06+09:00",
+          "publishedAt": "2026-11-24T15:43:44+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261124-equinor-vng-long-term-gas-deal",
+              "title": "에퀴노르, 독일 VNG와 18년 장기 가스 공급계약",
+              "summary": "에퀴노르는 독일 VNG에 2027년부터 2044년 말까지 연간 15.3TWh(약 14억㎥)의 천연가스를 공급하는 계약을 체결했다. 노르웨이의 가스 판매계약 가운데 1986년 이후 최장 기간으로, 유럽의 장기 가스 수요와 에너지 공급망 재편을 보여준다.",
+              "publishedAt": "2026-11-24T15:32:58+09:00",
+              "checkedAt": "2026-11-24T15:43:44+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/energy/norways-equinor-signs-18-year-gas-supply-deal-with-germanys-vng-2026-11-24/",
+              "relatedStocks": [
+                "에퀴노르(EQNR)",
+                "한국가스공사(036460)"
+              ],
+              "impactRank": 1,
+              "category": "천연가스·유럽에너지",
+              "region": "foreign",
+              "eventKey": "equinor-vng-long-term-gas-supply-20261124",
+              "factKey": "18-year-15-3-twh-annual-contract-2027-2044"
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "domestic-20261124-president-capital-market-reform-volatility-response",
+              "title": "이재명 대통령, 자본시장 개혁 가속·증시 변동성 대응책 주문",
+              "summary": "이재명 대통령은 국무회의에서 주식시장을 주주 중심으로 재편해야 한다며 자본시장 개혁 TF의 속도를 높이라고 지시했다. 최근 증시 급등락과 관련해서도 금융위원회에 단기·중기·장기 대응책 마련을 주문했다.",
+              "publishedAt": "2026-11-24T13:56:00+09:00",
+              "checkedAt": "2026-11-24T15:43:44+09:00",
+              "sourceName": "뉴스핌",
+              "sourceUrl": "https://www.newspim.com/news/view/20261124000942",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "자본시장정책·증시안정",
+              "region": "domestic",
+              "eventKey": "korea-president-capital-market-reform-20261124",
+              "factKey": "orders-faster-reform-taskforce-and-volatility-response"
+            },
+            {
+              "id": "domestic-20261124-fsc-insurance-agency-fine-rules",
+              "title": "금융위, 보험사기 전력자 모집 제한·GA 과징금 기준 마련",
+              "summary": "금융위원회는 보험사기 등 금융관계법률 위반자의 보험모집시장 진입을 제한하고, 보험대리점·보험중개사의 업무정지를 과징금으로 갈음할 수 있도록 부과기준을 마련한 시행령·규정 개정안을 공개했다. 과징금은 업무정지 6개월분을 상한으로 한다.",
+              "publishedAt": "2026-11-24T12:00:00+09:00",
+              "checkedAt": "2026-11-24T15:43:44+09:00",
+              "sourceName": "금융위원회",
+              "sourceUrl": "https://www.fsc.go.kr/no010101/88198",
+              "relatedStocks": [
+                "삼성생명(032830)",
+                "한화생명(088350)",
+                "DB손해보험(005830)"
+              ],
+              "impactRank": 2,
+              "category": "보험·금융규제",
+              "region": "domestic",
+              "eventKey": "fsc-insurance-act-enforcement-rules-20261124",
+              "factKey": "restrict-fraud-offenders-and-ga-fine-instead-of-suspension"
+            },
+            {
+              "id": "domestic-20261124-ilsung-samsung-onyang-contract",
+              "title": "일성건설, 삼성전자 온양 복지동 신축공사 841억원 수주",
+              "summary": "일성건설은 삼성전자와 충남 아산 온양 복지동 신축공사 계약을 체결했다. 계약금액은 부가가치세 제외 841억2천만원으로 2025년 연결 매출액의 18.58%이며, 계약기간은 2028년 4월 30일까지다.",
+              "publishedAt": "2026-11-24T13:38:00+09:00",
+              "checkedAt": "2026-11-24T15:43:44+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800494",
+              "relatedStocks": [
+                "일성건설(013360)",
+                "삼성전자(005930)"
+              ],
+              "impactRank": 3,
+              "category": "건설·수주",
+              "region": "domestic",
+              "eventKey": "ilsung-samsung-onyang-welfare-building-contract-20261124",
+              "factKey": "contract-84-12-billion-krw-18-58pct-sales"
+            },
+            {
+              "id": "domestic-20261124-yest-amkor-efurnace-contract",
+              "title": "예스티, 앰코향 eFurnace 72.6억원 공급계약",
+              "summary": "예스티는 G ENGINEERING과 앰코향 eFurnace 공급계약을 체결했다. 확정 계약금액은 72억6천만원으로 2025년 연결 매출액의 8.34%이며, 계약기간은 2027년 12월 31일까지다.",
+              "publishedAt": "2026-11-24T13:40:00+09:00",
+              "checkedAt": "2026-11-24T15:43:44+09:00",
+              "sourceName": "DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124900509",
+              "relatedStocks": [
+                "예스티(122640)"
+              ],
+              "impactRank": 4,
+              "category": "반도체장비·수주",
+              "region": "domestic",
+              "eventKey": "yest-amkor-efurnace-contract-20261124",
+              "factKey": "contract-7-26-billion-krw-8-34pct-sales"
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "researchAudit": {
+            "windowStartExclusive": "2026-11-24T11:40:05+09:00",
+            "windowEndInclusive": "2026-11-24T15:40:06+09:00",
+            "checkedAt": "2026-11-24T15:43:44+09:00",
+            "currentWindowDiscoveryStatus": "complete",
+            "sources": [
+              "Reuters",
+              "금융위원회",
+              "DART",
+              "뉴스핌",
+              "연합뉴스",
+              "뉴시스",
+              "국내 주요 뉴스·공시 피드"
+            ],
+            "exclusions": [
+              "11:40 이전 공개된 엔비디아 복귀·아시아 증시 반등 재보도",
+              "단순 장중 시황·전망·예정 일정",
+              "15:40:06 이후 공개 또는 최초 공개시각 미확인 후보"
             ]
           }
         }
