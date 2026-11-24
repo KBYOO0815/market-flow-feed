@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T06:40:34.858Z",
+  "updatedAt": "2026-11-24T11:10:43.641Z",
   "navigation": {
     "previous": [
       {
@@ -63,7 +63,7 @@
       {
         "date": "2026-11-24",
         "slot": "20:10",
-        "state": "scheduled"
+        "state": "published"
       }
     ],
     "next": []
@@ -1839,6 +1839,170 @@
                 "title": "주의·확인",
                 "kind": "text",
                 "text": "코스피 5,000선 유지 여부, 외국인 매수 지속, 급반등 이후 변동성 및 미국 기술주 흐름 확인."
+              }
+            ]
+          }
+        },
+        "20:10": {
+          "date": "2026-11-24",
+          "slot": "20:10",
+          "scheduledFor": "2026-11-24T20:10:00+09:00",
+          "asOf": "2026-11-24T20:10:00+09:00",
+          "publishedAt": "2026-11-24T11:10:43.641Z",
+          "sessionStatus": "KRX AFTER MARKET CLOSE",
+          "scope": "KR",
+          "us": null,
+          "kr": {
+            "summary": "코스피 6.32% 상승 마감, 장후 반도체 상승폭 축소",
+            "observedAt": "2026-11-24T20:10:00+09:00",
+            "indices": [
+              {
+                "name": "KOSPI",
+                "value": 5006.03,
+                "changePct": 6.32,
+                "observedAt": "2026-11-24T20:09:00+09:00",
+                "sourceUrl": "https://m.stock.naver.com/api/index/KOSPI/basic"
+              },
+              {
+                "name": "KOSDAQ",
+                "value": 665.88,
+                "changePct": 4.79,
+                "observedAt": "2026-11-24T20:10:00+09:00",
+                "sourceUrl": "https://m.stock.naver.com/api/index/KOSDAQ/basic"
+              }
+            ],
+            "flows": {
+              "observedAt": null,
+              "market": "KOSPI",
+              "unit": "억원",
+              "foreign": 8130,
+              "institution": 8734,
+              "individual": -21350
+            },
+            "themes": [
+              "반도체·AI",
+              "자동차·이차전지"
+            ],
+            "notes": [
+              "외국인 +8,130억·기관 +8,734억·개인 -21,350억, 프로그램 +3,879억원. 20:10경 조회, 집계시각 미제공.",
+              "코스피 상승 797개, 하락 94개, 보합 19개(상한가 2개 별도 표기).",
+              "미국 AI 투자심리 회복과 엔비디아 CEO 복귀 보도가 반등 배경. 11/23 미국 나스닥 +6.51%, S&P500 +4.73%, 필라델피아 반도체 +14.03%.",
+              "20:00 애프터마켓 종료 삼성전자 182,900원(+3.04%), SK하이닉스 1,113,000원(+2.58%). 정규장 종가와 구분."
+            ]
+          },
+          "highlights": [
+            "15:40 대비 지수 종가 동일. 외국인 순매수 +875억, 기관 +42억, 프로그램 +338억원 증가. 삼성전자·SK하이닉스 장후 상승폭은 직전 조회보다 축소.",
+            "미국 11/24 정규장 23:30 개장 전이며 신규 정규장 지수 미확인. 반도체 장후 약화가 다음 거래일에 이어지는지 확인."
+          ],
+          "sources": [
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/index/KOSPI/basic",
+              "checkedAt": "2026-11-24T11:10:43.641Z"
+            },
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/index/KOSDAQ/basic",
+              "checkedAt": "2026-11-24T11:10:43.641Z"
+            },
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/index/KOSPI/integration",
+              "checkedAt": "2026-11-24T11:10:43.641Z"
+            },
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/stock/005930/basic",
+              "checkedAt": "2026-11-24T11:10:43.641Z"
+            },
+            {
+              "name": "네이버페이 증권 API",
+              "url": "https://m.stock.naver.com/api/stock/000660/basic",
+              "checkedAt": "2026-11-24T11:10:43.641Z"
+            },
+            {
+              "name": "뉴시스",
+              "url": "https://www.newsis.com/view/NISX20261124_0003881361",
+              "checkedAt": "2026-11-24T11:10:43.641Z"
+            },
+            {
+              "name": "머니투데이",
+              "url": "https://www.mt.co.kr/index.php/stock/2026/11/24/2026112415523463136",
+              "checkedAt": "2026-11-24T11:10:43.641Z"
+            },
+            {
+              "name": "KRX 거래일 안내",
+              "url": "https://marketsopen.today/krx/",
+              "checkedAt": "2026-11-24T11:10:43.641Z"
+            },
+            {
+              "name": "개장 브리핑",
+              "url": "https://gaejang.com/briefing/2026-11-24-briefing/",
+              "checkedAt": "2026-11-24T11:10:43.641Z"
+            }
+          ],
+          "status": {
+            "collection": "partial",
+            "validation": "success",
+            "publication": "success"
+          },
+          "display": {
+            "headline": "코스피 6.32% 상승 마감, 장후 반도체 상승폭 축소",
+            "badges": [
+              "한국",
+              "장후 마감",
+              "20:10 조회"
+            ],
+            "observedAt": "2026-11-24T20:10:00+09:00",
+            "sections": [
+              {
+                "id": "indices",
+                "title": "주요 지수",
+                "kind": "metrics",
+                "items": [
+                  {
+                    "label": "KOSPI",
+                    "value": 5006.03,
+                    "changePct": 6.32,
+                    "note": "정규장 종가 재조회"
+                  },
+                  {
+                    "label": "KOSDAQ",
+                    "value": 665.88,
+                    "changePct": 4.79,
+                    "note": "정규장 종가 재조회"
+                  }
+                ]
+              },
+              {
+                "id": "flows",
+                "title": "코스피 수급",
+                "kind": "bullets",
+                "items": [
+                  "외국인 +8,130억·기관 +8,734억·개인 -21,350억, 프로그램 +3,879억원. 20:10경 조회, 집계시각 미제공."
+                ]
+              },
+              {
+                "id": "drivers",
+                "title": "시장 핵심",
+                "kind": "bullets",
+                "items": [
+                  "코스피 상승 797개, 하락 94개, 보합 19개(상한가 2개 별도 표기).",
+                  "미국 AI 투자심리 회복과 엔비디아 CEO 복귀 보도가 반등 배경. 11/23 미국 나스닥 +6.51%, S&P500 +4.73%, 필라델피아 반도체 +14.03%.",
+                  "20:00 애프터마켓 종료 삼성전자 182,900원(+3.04%), SK하이닉스 1,113,000원(+2.58%). 정규장 종가와 구분."
+                ]
+              },
+              {
+                "id": "changes",
+                "title": "직전 회차 대비",
+                "kind": "text",
+                "text": "15:40 대비 지수 종가 동일. 외국인 순매수 +875억, 기관 +42억, 프로그램 +338억원 증가. 삼성전자·SK하이닉스 장후 상승폭은 직전 조회보다 축소."
+              },
+              {
+                "id": "watch",
+                "title": "주의·확인",
+                "kind": "text",
+                "text": "미국 11/24 정규장 23:30 개장 전이며 신규 정규장 지수 미확인. 반도체 장후 약화가 다음 거래일에 이어지는지 확인."
               }
             ]
           }
