@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T19:44:41.742+09:00",
+  "updatedAt": "2026-11-24T22:42:24.189+09:00",
   "navigation": {
     "previous": [
       {
@@ -53,7 +53,7 @@
       {
         "date": "2026-11-24",
         "slot": "22:40",
-        "state": "scheduled"
+        "state": "published"
       }
     ],
     "next": []
@@ -795,6 +795,112 @@
               "15:40:06 이전 공개 재료와 기존 회차 단순 재보도",
               "공시 금액·최초 공개시각 또는 핵심 사실을 확인하지 못한 후보",
               "한 웹 검색 경로의 사용량 한도 오류는 대체 검색과 원문 조회로 보완"
+            ]
+          }
+        },
+        {
+          "slot": "22:40",
+          "asOf": "2026-11-24T22:40:06+09:00",
+          "publishedAt": "2026-11-24T22:42:24.189+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261124-nvidia-premarket-pullback-governance-risk",
+              "title": "엔비디아, 젠슨 황 복귀 랠리 뒤 프리마켓 5.2% 하락",
+              "summary": "엔비디아는 전날 31.5% 급등한 뒤 24일 미국 프리마켓에서 5.2% 하락했다. 젠슨 황 CEO 복귀를 둘러싼 이사회 독립성·정치 개입 논란과 대중국 AI칩 수출 규제, 의회 청문회 위험이 다시 부각됐다.",
+              "publishedAt": "2026-11-24T20:50:25+09:00",
+              "checkedAt": "2026-11-24T22:41:43+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/retail-consumer/nvidia-slips-investors-assess-risks-surrounding-huangs-return-ceo-2026-11-24/",
+              "relatedStocks": [
+                "엔비디아(NVDA)",
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ],
+              "impactRank": 1,
+              "category": "AI반도체·미국정책·기업지배구조",
+              "region": "foreign",
+              "eventKey": "nvidia-huang-reinstatement-market-reaction-20261124",
+              "factKey": "premarket-down-5-2pct-governance-export-control-risks"
+            },
+            {
+              "id": "foreign-20261124-analog-devices-fy2026-results",
+              "title": "아나로그디바이스, FY2026 매출 152억달러로 38% 증가",
+              "summary": "아나로그디바이스의 4분기 매출은 43억7천만달러로 데이터센터와 산업 부문이 성장을 이끌었다. 연간 매출은 152억달러로 38% 증가했고 영업현금흐름 62억달러, 잉여현금흐름 55억달러를 기록했다.",
+              "publishedAt": "2026-11-24T21:01:00+09:00",
+              "checkedAt": "2026-11-24T22:41:43+09:00",
+              "sourceName": "Analog Devices·SEC",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000087/adiq426exhibit991.htm",
+              "relatedStocks": [
+                "아나로그디바이스(ADI)",
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ],
+              "impactRank": 2,
+              "category": "반도체·데이터센터·실적",
+              "region": "foreign",
+              "eventKey": "analog-devices-fy2026-results-20261124",
+              "factKey": "fy-revenue-15-2bn-up-38pct-fcf-5-5bn"
+            },
+            {
+              "id": "foreign-20261124-best-buy-raises-guidance",
+              "title": "베스트바이, AI 기기 수요에 연간 매출·이익 전망 상향",
+              "summary": "베스트바이의 3분기 매출은 102억4천만달러로 5.8% 증가했고 동일점포 매출은 6.1% 늘었다. 회사는 연간 동일점포 매출 증가율 전망을 3.4~4.0%, 조정 주당순이익 전망을 6.90~7.05달러로 높였다.",
+              "publishedAt": "2026-11-24T21:03:59+09:00",
+              "checkedAt": "2026-11-24T22:41:43+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/retail-consumer/best-buy-leans-ai-driven-gadget-update-cycle-lift-annual-targets-2026-11-24/",
+              "relatedStocks": [
+                "베스트바이(BBY)",
+                "삼성전자(005930)",
+                "LG전자(066570)"
+              ],
+              "impactRank": 3,
+              "category": "미국소비·AI기기·실적",
+              "region": "foreign",
+              "eventKey": "best-buy-q3-fy2027-results-20261124",
+              "factKey": "comp-sales-up-6-1pct-guidance-raised"
+            },
+            {
+              "id": "foreign-20261124-dollar-tree-raises-profit-guidance",
+              "title": "달러트리, 방문객 회복에 연간 이익 전망 상향",
+              "summary": "달러트리의 분기 동일점포 매출은 방문객 3.8% 증가에 힘입어 4.6% 늘었고 매출은 50억8천만달러를 기록했다. 회사는 2026회계연도 조정 주당순이익 전망을 8.05~8.25달러로 상향했다.",
+              "publishedAt": "2026-11-24T20:37:50+09:00",
+              "checkedAt": "2026-11-24T22:41:43+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/business/retail-consumer/dollar-tree-raises-annual-profit-forecast-2026-11-24/",
+              "relatedStocks": [
+                "달러트리(DLTR)"
+              ],
+              "impactRank": 4,
+              "category": "미국소비·유통·실적",
+              "region": "foreign",
+              "eventKey": "dollar-tree-q3-fy2026-results-20261124",
+              "factKey": "comp-sales-up-4-6pct-eps-guidance-8-05-to-8-25"
+            }
+          ],
+          "domesticNews": [],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "researchAudit": {
+            "windowStartExclusive": "2026-11-24T19:40:04+09:00",
+            "windowEndInclusive": "2026-11-24T22:40:06+09:00",
+            "checkedAt": "2026-11-24T22:41:43+09:00",
+            "currentWindowDiscoveryStatus": "complete",
+            "sources": [
+              "Reuters",
+              "SEC",
+              "기업 공식 실적자료",
+              "DART",
+              "대한민국 정책브리핑",
+              "연합뉴스",
+              "뉴시스",
+              "뉴스핌",
+              "국내 주요 뉴스·공시 피드"
+            ],
+            "exclusions": [
+              "19:40:04 이전 공개된 국내 정책·공시와 기존 회차 재료",
+              "젠슨 황 복귀 사실 자체의 단순 재보도",
+              "일정 예고·목표주가·핵심 수치 또는 최초 공개시각 미확인 후보"
             ]
           }
         }
