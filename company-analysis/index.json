@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-25T23:20:00+09:00",
+  "companies": [
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "updatedAt": "2026-11-25T23:20:00+09:00",
+      "path": "company-analysis/005930.json"
+    }
+  ]
+}
