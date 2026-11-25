@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-25T11:43:26+09:00",
+  "updatedAt": "2026-11-25T15:41:01+09:00",
   "navigation": {
     "previous": [
       {
@@ -43,7 +43,7 @@
       {
         "date": "2026-11-25",
         "slot": "15:40",
-        "state": "scheduled"
+        "state": "published"
       },
       {
         "date": "2026-11-25",
@@ -857,6 +857,77 @@
               "회사 확인이 없는 경영권 매각설 및 거래소 조회공시 요구",
               "최초 공개시각이 조사창 밖이거나 확정되지 않은 피터 틸·일론 머스크·젠슨 황·G7 정상·최태원 관련 보도",
               "시장 영향이 제한적인 정례 행사·예정 발표·단순 전망"
+            ]
+          }
+        },
+        {
+          "slot": "15:40",
+          "asOf": "2026-11-25T15:40:05+09:00",
+          "publishedAt": "2026-11-25T15:41:01+09:00",
+          "foreignNews": [],
+          "domesticNews": [
+            {
+              "id": "domestic-20261125-kospi-close-4721",
+              "title": "코스피 5.69% 급락한 4,721.35 마감…외국인 2조원대 순매도",
+              "summary": "한국거래소 집계 기준 코스피는 4,721.35로 전일 대비 5.69% 하락했고 코스닥은 651.61로 2.14% 내렸다. 유가증권시장에서 외국인은 2조824억원, 기관은 2,783억원 순매도했고 개인은 1조9,582억원 순매수했다. 오전 급락·매도 사이드카 이후에도 반도체 중심 위험회피가 이어진 최종 마감 수치다.",
+              "publishedAt": "2026-11-25T15:30:00+09:00",
+              "observedAt": "2026-11-25T15:30:00+09:00",
+              "checkedAt": "2026-11-25T15:41:01+09:00",
+              "sourceName": "한국거래소 집계·알파패스",
+              "sourceUrl": "https://www.alphapass.kr/today",
+              "relatedStocks": [
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ],
+              "impactRank": 1,
+              "category": "국내증시·수급·반도체",
+              "region": "domestic",
+              "eventKey": "krx-kospi-intraday-sell-sidecar-20261125",
+              "factKey": "regular-close-kospi-4721-35-down-5-69-foreign-net-sell-20824eok",
+              "impactReason": "장중 급락이 종가까지 이어지고 외국인 순매도가 2조원을 넘은 확정 마감치로, 한국 대형주와 다음 거래일 위험선호에 직접 영향을 준다."
+            },
+            {
+              "id": "domestic-20261125-kyungdong-plant-contract",
+              "title": "경동인베스트 자회사, 온산 플랜트 공사 362억5천만원 수주",
+              "summary": "경동인베스트는 주요 자회사 경동이앤에스가 케이앤제이피엠과 온산 PM Project 건설 공사 계약을 체결했다고 공시했다. 계약금액은 362억5천만원으로 자회사 2025년 매출의 52.36%이며, 계약기간은 2026년 11월24일부터 2027년 11월15일까지다. 자회사 연간 매출의 절반을 넘는 신규 수주로 향후 공사 매출에 직접 영향을 줄 수 있다.",
+              "publishedAt": "2026-11-25T12:09:00+09:00",
+              "checkedAt": "2026-11-25T15:41:01+09:00",
+              "sourceName": "금융감독원 DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800208",
+              "relatedStocks": [
+                "경동인베스트(012320)"
+              ],
+              "impactRank": 2,
+              "category": "수주·플랜트건설",
+              "region": "domestic",
+              "eventKey": "kyungdong-ens-onsan-pm-project-20261124",
+              "factKey": "contract-36-25bn-52-36pct-through-20271115",
+              "impactReason": "계약 규모가 자회사 최근 연매출의 52.36%로 커서 매출 인식과 수주잔고에 미치는 영향이 크다.",
+              "corroboratingSourceUrl": "https://www.bosoop.com/disclosures/20261125800208/"
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "researchAudit": {
+            "windowStartExclusive": "2026-11-25T11:40:04+09:00",
+            "windowEndInclusive": "2026-11-25T15:40:05+09:00",
+            "checkedAt": "2026-11-25T15:41:01+09:00",
+            "currentWindowDiscoveryStatus": "complete",
+            "sources": [
+              "Reuters",
+              "한국거래소 집계 시세·수급",
+              "DART/KIND/KRX 공시 피드",
+              "연합뉴스",
+              "뉴시스",
+              "국내 정부·기업 발표",
+              "유력 인사 공식발언 및 신뢰매체 보도"
+            ],
+            "exclusions": [
+              "11:40 이전 최초 공개된 서진시스템·대성하이텍 수주와 오전 장중 시황",
+              "공식 발표 전 단계인 미국 과잉생산 관세 예상 보도의 반복 기사",
+              "최초 공개시각이 조사창 밖이거나 새로운 확정 사실이 없는 G7 정상·피터 틸·일론 머스크·젠슨 황·최태원 관련 보도",
+              "카카오뱅크 27만주 소각 등 시장 전체 영향과 규모가 제한적인 공시",
+              "루머·단순 전망·기존 사건 설명 기사"
             ]
           }
         }
