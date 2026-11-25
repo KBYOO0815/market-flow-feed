@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T21:10:38.711Z",
+  "updatedAt": "2026-11-25T00:10:30.093Z",
   "navigation": {
     "previous": [
       {
@@ -43,12 +43,12 @@
       {
         "date": "2026-11-25",
         "slot": "08:10",
-        "state": "scheduled"
+        "state": "failed"
       },
       {
         "date": "2026-11-25",
         "slot": "09:10",
-        "state": "scheduled"
+        "state": "published"
       },
       {
         "date": "2026-11-25",
@@ -767,6 +767,189 @@
                 "items": [
                   "오늘 한국 신규 수급·가격은 아직 없음. 반도체 대형주와 외국인 매수 지속, 코스피 5,000선 및 미국 PCE 확인.",
                   "미국 종가는 잠정치로 출처 간 차이 있음. 네이버 미국 지수 API HTTP 400 및 Firecrawl 크레딧 소진으로 보조 출처 사용."
+                ]
+              }
+            ]
+          }
+        },
+        "09:10": {
+          "date": "2026-11-25",
+          "slot": "09:10",
+          "scheduledFor": "2026-11-25T09:10:00+09:00",
+          "asOf": "2026-11-25T09:10:00+09:00",
+          "publishedAt": "2026-11-25T00:10:30.093Z",
+          "sessionStatus": "KRX OPEN; US REGULAR CLOSED",
+          "scope": "US_KR",
+          "us": {
+            "summary": "11/24 미국 정규장 마감 보도: 나스닥 -1.48%, S&P500 -0.50%, 다우 +0.85%, 필라델피아 반도체 -7.88%.",
+            "observedAt": "2026-11-25T06:00:00+09:00",
+            "indices": [
+              {
+                "name": "Nasdaq Composite",
+                "changePct": -1.48,
+                "observedAt": "2026-11-25T06:00:00+09:00",
+                "sourceUrl": "https://www.theonetv.kr/news/articleView.html?idxno=255950"
+              },
+              {
+                "name": "S&P 500",
+                "changePct": -0.5,
+                "observedAt": "2026-11-25T06:00:00+09:00",
+                "sourceUrl": "https://www.theonetv.kr/news/articleView.html?idxno=255950"
+              },
+              {
+                "name": "Dow Jones",
+                "changePct": 0.85,
+                "observedAt": "2026-11-25T06:00:00+09:00",
+                "sourceUrl": "https://www.theonetv.kr/news/articleView.html?idxno=255950"
+              },
+              {
+                "name": "SOX",
+                "changePct": -7.88,
+                "observedAt": "2026-11-25T06:00:00+09:00",
+                "sourceUrl": "https://www.theonetv.kr/news/articleView.html?idxno=255950"
+              }
+            ],
+            "themes": [
+              "AI·반도체 약세"
+            ],
+            "notes": [
+              "08:56 보도 기준 마이크론 -11.01%, AMD -8.86%, 엔비디아 -5.86%."
+            ]
+          },
+          "kr": {
+            "summary": "코스피 4,800선 하회, 외국인 매도와 반도체 급락",
+            "observedAt": "2026-11-25T09:10:00+09:00",
+            "indices": [
+              {
+                "name": "KOSPI",
+                "value": 4788.72,
+                "changePct": -4.34,
+                "observedAt": "2026-11-25T09:09:00+09:00",
+                "sourceUrl": "https://m.stock.naver.com/api/index/KOSPI/basic"
+              },
+              {
+                "name": "KOSDAQ",
+                "value": 645.21,
+                "changePct": -3.1,
+                "observedAt": "2026-11-25T09:10:00+09:00",
+                "sourceUrl": "https://m.stock.naver.com/api/index/KOSDAQ/basic"
+              }
+            ],
+            "flows": {
+              "observedAt": null,
+              "market": "KOSPI",
+              "unit": "억원",
+              "foreign": -2528,
+              "institution": 54,
+              "individual": 2360
+            },
+            "themes": [
+              "삼성전자 -6.55%, SK하이닉스 -6.39%, 삼성전기 -7.81%, SK스퀘어 -7.27%",
+              "셀트리온 +1.91%로 상대 강세; 바이오 전체 강세는 미확인.",
+              "코스피 상승 122개, 하락 707개, 보합 40개(하락 81.4%)."
+            ],
+            "notes": [
+              "외국인 -2,528억, 기관 +54억, 개인 +2,360억, 프로그램 -1,008억원. 원천 집계시각 미제공.",
+              "종목 관측 09:09:50~09:10:11; 지수 관측 09:09~09:10."
+            ]
+          },
+          "highlights": [
+            "11/24 미국 정규장 마감 보도: 나스닥 -1.48%, S&P500 -0.50%, 다우 +0.85%, 필라델피아 반도체 -7.88%.",
+            "외국인 매도 확대 및 코스피 4,776.31 장초반 저점 재시험 여부 확인.",
+            "매도 사이드카 실제 발동 여부 미확인."
+          ],
+          "sources": [
+            {
+              "name": "KOSPI",
+              "url": "https://m.stock.naver.com/api/index/KOSPI/basic",
+              "checkedAt": "2026-11-25T00:10:30.093Z"
+            },
+            {
+              "name": "KOSDAQ",
+              "url": "https://m.stock.naver.com/api/index/KOSDAQ/basic",
+              "checkedAt": "2026-11-25T00:10:30.093Z"
+            },
+            {
+              "name": "네이버페이 증권 수급·종목",
+              "url": "https://m.stock.naver.com/api/index/KOSPI/integration",
+              "checkedAt": "2026-11-25T00:10:30.093Z"
+            },
+            {
+              "name": "OBC 미국 마감 및 장전 보도",
+              "url": "https://www.theonetv.kr/news/articleView.html?idxno=255950",
+              "checkedAt": "2026-11-25T00:10:30.093Z"
+            },
+            {
+              "name": "KRX 거래일 확인",
+              "url": "https://marketsopen.today/krx/",
+              "checkedAt": "2026-11-25T00:10:30.093Z"
+            }
+          ],
+          "status": {
+            "collection": "partial",
+            "validation": "success",
+            "publication": "success"
+          },
+          "display": {
+            "headline": "코스피 4,800선 하회, 외국인 매도와 반도체 급락",
+            "badges": [
+              "한국 장중",
+              "강한 약세",
+              "외국인 매도"
+            ],
+            "observedAt": "2026-11-25T09:10:00+09:00",
+            "sections": [
+              {
+                "id": "kr-indices",
+                "title": "한국 장초반 지수",
+                "kind": "metrics",
+                "items": [
+                  {
+                    "label": "KOSPI",
+                    "value": 4788.72,
+                    "changePct": -4.34,
+                    "note": "09:09"
+                  },
+                  {
+                    "label": "KOSDAQ",
+                    "value": 645.21,
+                    "changePct": -3.1,
+                    "note": "09:10"
+                  }
+                ]
+              },
+              {
+                "id": "flows",
+                "title": "코스피 수급",
+                "kind": "bullets",
+                "items": [
+                  "외국인 -2,528억, 기관 +54억, 개인 +2,360억, 프로그램 -1,008억원. 원천 집계시각 미제공."
+                ]
+              },
+              {
+                "id": "drivers",
+                "title": "시장 흐름",
+                "kind": "bullets",
+                "items": [
+                  "삼성전자 -6.55%, SK하이닉스 -6.39%, 삼성전기 -7.81%, SK스퀘어 -7.27%",
+                  "셀트리온 +1.91%로 상대 강세; 바이오 전체 강세는 미확인.",
+                  "코스피 상승 122개, 하락 707개, 보합 40개(하락 81.4%).",
+                  "11/24 미국 정규장 마감 보도: 나스닥 -1.48%, S&P500 -0.50%, 다우 +0.85%, 필라델피아 반도체 -7.88%."
+                ]
+              },
+              {
+                "id": "changes",
+                "title": "직전 회차 대비",
+                "kind": "text",
+                "text": "06:10 장전 우려가 실제 국내 반도체 급락과 외국인 순매도로 이어짐. 08:10 미발행."
+              },
+              {
+                "id": "watch",
+                "title": "주의·확인",
+                "kind": "bullets",
+                "items": [
+                  "외국인 매도 확대 및 코스피 4,776.31 장초반 저점 재시험 여부 확인.",
+                  "매도 사이드카 실제 발동 여부 미확인."
                 ]
               }
             ]
