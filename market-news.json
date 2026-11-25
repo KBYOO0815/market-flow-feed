@@ -1,606 +1,64 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-25T22:40:58+09:00",
+  "updatedAt": "2026-11-26T07:47:25+09:00",
   "navigation": {
     "previous": [
       {
-        "date": "2026-11-24",
+        "date": "2026-11-25",
         "slot": "07:40",
-        "state": "missing"
+        "state": "published"
       },
       {
-        "date": "2026-11-24",
+        "date": "2026-11-25",
         "slot": "11:40",
         "state": "published"
       },
       {
-        "date": "2026-11-24",
+        "date": "2026-11-25",
         "slot": "15:40",
         "state": "published"
       },
       {
-        "date": "2026-11-24",
+        "date": "2026-11-25",
         "slot": "19:40",
         "state": "published"
       },
       {
-        "date": "2026-11-24",
+        "date": "2026-11-25",
         "slot": "22:40",
         "state": "published"
       }
     ],
     "today": [
       {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "slot": "07:40",
         "state": "published"
       },
       {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "slot": "11:40",
-        "state": "published"
+        "state": "scheduled"
       },
       {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "slot": "15:40",
-        "state": "published"
+        "state": "scheduled"
       },
       {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "slot": "19:40",
-        "state": "published"
+        "state": "scheduled"
       },
       {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "slot": "22:40",
-        "state": "published"
+        "state": "scheduled"
       }
     ],
     "next": []
   },
   "days": [
-    {
-      "date": "2026-11-24",
-      "isKrxTradingDay": true,
-      "displaySlots": [
-        "07:40",
-        "11:40",
-        "15:40",
-        "19:40",
-        "22:40"
-      ],
-      "sessions": [
-        {
-          "slot": "11:40",
-          "asOf": "2026-11-24T11:40:05+09:00",
-          "publishedAt": "2026-11-24T11:42:49+09:00",
-          "foreignNews": [
-            {
-              "id": "foreign-20261124-nvidia-huang-reinstated-ceo",
-              "title": "엔비디아, 젠슨 황 CEO 복귀…주가 31.5% 급등",
-              "summary": "엔비디아 이사회는 미국 정부 의견을 반영해 젠슨 황을 CEO로 복귀시켰다. 엔비디아 주가는 31.5% 상승해 23년 만의 최대 일일 상승률을 기록했고 시가총액이 약 1조달러 회복됐다. 다만 대중국 칩 수출과 지배구조 조사는 계속된다.",
-              "publishedAt": "2026-11-23T22:59:25+09:00",
-              "checkedAt": "2026-11-24T11:40:05+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/technology/nvidia-reinstates-jensen-huang-ceo-2026-11-23/",
-              "relatedStocks": [
-                "엔비디아(NVDA)",
-                "삼성전자(005930)",
-                "SK하이닉스(000660)"
-              ],
-              "impactRank": 1,
-              "category": "AI반도체·기업지배구조",
-              "region": "foreign",
-              "eventKey": "nvidia-jensen-huang-ceo-reinstatement-20261123",
-              "factKey": "board-reinstates-huang-stock-closes-up-31-5pct"
-            },
-            {
-              "id": "foreign-20261124-ai-relief-rally-rates-dollar-oil",
-              "title": "AI 안도랠리로 아시아 증시 급등…미 10년물 4.94%·유가 3.5% 하락",
-              "summary": "엔비디아발 AI 안도랠리로 S&P500과 나스닥이 각각 4.7%, 6.5% 올랐고, 24일 오전 코스피는 7.5% 급등했다. 반면 연준 긴축 기대가 강화되며 미국 10년물 금리는 4.94%, 2년물은 4.69%로 상승했고 달러는 유로 대비 19개월 고점 부근을 유지했다. 브렌트유는 전일 3.5% 내린 배럴당 89.37달러에 마감했다.",
-              "publishedAt": "2026-11-24T10:29:45+09:00",
-              "checkedAt": "2026-11-24T11:40:05+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-24/",
-              "relatedStocks": [
-                "삼성전자(005930)",
-                "SK하이닉스(000660)",
-                "엔비디아(NVDA)"
-              ],
-              "impactRank": 2,
-              "category": "글로벌증시·금리·달러·원유",
-              "region": "foreign",
-              "eventKey": "global-ai-relief-rally-20261124",
-              "factKey": "asia-rally-us-yields-dollar-rise-brent-settles-89-37"
-            }
-          ],
-          "domesticNews": [
-            {
-              "id": "domestic-20261124-samsung-ea-sejong-plant-contract",
-              "title": "삼성E&A, 삼성전기 세종 신공장 증설 7,103억원 수주",
-              "summary": "삼성E&A는 삼성전기와 세종 2.0 신공장 증설 공사 계약을 체결했다. 계약금액은 7,103억원으로 2025년 연결 매출액의 7.87%이며, 계약기간은 2026년 11월 23일부터 2027년 12월 30일까지다.",
-              "publishedAt": "2026-11-24T09:16:00+09:00",
-              "checkedAt": "2026-11-24T11:40:05+09:00",
-              "sourceName": "DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800292",
-              "relatedStocks": [
-                "삼성E&A(028050)",
-                "삼성전기(009150)"
-              ],
-              "impactRank": 1,
-              "category": "건설·반도체공장·수주",
-              "region": "domestic",
-              "eventKey": "samsung-ea-samsung-electro-mechanics-sejong-plant-2026",
-              "factKey": "contract-710-3-billion-krw-7-87pct-sales"
-            },
-            {
-              "id": "domestic-20261124-bok-consumer-sentiment",
-              "title": "11월 소비자심리지수 103.1…전월보다 2.3p 하락",
-              "summary": "한국은행의 11월 소비자동향조사에서 소비자심리지수는 103.1로 전월보다 2.3포인트 하락해 두 달 연속 내렸다. 국내외 증시 조정과 대출금리 상승 등이 소비심리 약화 요인으로 제시됐다.",
-              "publishedAt": "2026-11-24T06:00:00+09:00",
-              "checkedAt": "2026-11-24T11:40:05+09:00",
-              "sourceName": "한국은행",
-              "sourceUrl": "https://www.bok.or.kr/portal/bbs/B0000501/view.do?depth=201264&menuNo=201264&nttId=11066918&programType=newsData&relate=Y",
-              "relatedStocks": [],
-              "impactRank": 2,
-              "category": "한국경제·소비심리",
-              "region": "domestic",
-              "eventKey": "bok-consumer-sentiment-202611",
-              "factKey": "ccsi-103-1-down-2-3p"
-            },
-            {
-              "id": "domestic-20261124-cheil-worldwide-buyback-cancellation",
-              "title": "제일기획, 600억원 자사주 추가 매입 후 전량 소각",
-              "summary": "제일기획은 11월 25일부터 2027년 1월 29일까지 보통주 329만1,278주를 600억원에 장내 매수한 뒤 전량 소각할 계획이다. 별도로 기존 취득분 208만938주(장부가 약 400억원)는 12월 1일 소각하기로 했다.",
-              "publishedAt": "2026-11-24T09:06:00+09:00",
-              "checkedAt": "2026-11-24T11:40:05+09:00",
-              "sourceName": "DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124000020",
-              "relatedStocks": [
-                "제일기획(030000)"
-              ],
-              "impactRank": 3,
-              "category": "자사주·주주환원",
-              "region": "domestic",
-              "eventKey": "cheil-worldwide-buyback-and-cancellation-20261124",
-              "factKey": "new-buyback-60-billion-krw-and-cancel-existing-2080938-shares",
-              "facts": [
-                {
-                  "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124000020",
-                  "fact": "600억원 장내매수 후 전량 소각 계획"
-                },
-                {
-                  "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800170",
-                  "fact": "기취득 2,080,938주를 2026-12-01 소각"
-                }
-              ]
-            },
-            {
-              "id": "domestic-20261124-neosem-inspection-equipment-contract",
-              "title": "네오셈, 142억원 반도체 검사장비 공급계약",
-              "summary": "네오셈은 종속회사 NEOSEM TECHNOLOGY에 GEN6 SSD TESTER 등 반도체 검사장비를 공급하는 142억1,025만원 계약을 체결했다. 이는 2025년 연결 매출액의 22.2%이며 계약기간은 2027년 6월 30일까지다.",
-              "publishedAt": "2026-11-24T11:05:00+09:00",
-              "checkedAt": "2026-11-24T11:40:05+09:00",
-              "sourceName": "DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124900422",
-              "relatedStocks": [
-                "네오셈(253590)"
-              ],
-              "impactRank": 4,
-              "category": "반도체장비·수주",
-              "region": "domestic",
-              "eventKey": "neosem-neosem-technology-equipment-contract-20261124",
-              "factKey": "contract-14-210-billion-krw-22-2pct-sales"
-            },
-            {
-              "id": "domestic-20261124-access-bio-buyback-trust",
-              "title": "엑세스바이오, 100억원 자사주 신탁계약",
-              "summary": "엑세스바이오는 한국투자증권과 100억원 규모의 자기주식 취득 신탁계약을 체결하기로 했다. 계약기간은 2026년 11월 30일부터 1년이며, 기준가로 산정한 취득예정 수량은 614만6,281주다.",
-              "publishedAt": "2026-11-24T10:39:00+09:00",
-              "checkedAt": "2026-11-24T11:40:05+09:00",
-              "sourceName": "DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124000108",
-              "relatedStocks": [
-                "엑세스바이오(950130)"
-              ],
-              "impactRank": 5,
-              "category": "자사주·주주환원",
-              "region": "domestic",
-              "eventKey": "access-bio-buyback-trust-20261124",
-              "factKey": "buyback-trust-10-billion-krw-one-year"
-            }
-          ],
-          "usThemes": [],
-          "researchStatus": "complete",
-          "researchAudit": {
-            "windowStartExclusive": "2026-11-23T19:41:12+09:00",
-            "windowEndInclusive": "2026-11-24T11:40:05+09:00",
-            "checkedAt": "2026-11-24T11:40:05+09:00",
-            "currentWindowDiscoveryStatus": "complete",
-            "sources": [
-              "Reuters",
-              "한국은행",
-              "DART",
-              "연합뉴스",
-              "국내 주요 뉴스·공시 피드"
-            ],
-            "exclusions": [
-              "직전 회차에 이미 발행된 크라우드스트라이크·지스케일러 인수 재보도",
-              "단순 전망·목표주가·일정 예고",
-              "원문 시각 또는 핵심 수치 미확인 후보"
-            ]
-          }
-        },
-        {
-          "slot": "15:40",
-          "asOf": "2026-11-24T15:40:06+09:00",
-          "publishedAt": "2026-11-24T15:43:44+09:00",
-          "foreignNews": [
-            {
-              "id": "foreign-20261124-equinor-vng-long-term-gas-deal",
-              "title": "에퀴노르, 독일 VNG와 18년 장기 가스 공급계약",
-              "summary": "에퀴노르는 독일 VNG에 2027년부터 2044년 말까지 연간 15.3TWh(약 14억㎥)의 천연가스를 공급하는 계약을 체결했다. 노르웨이의 가스 판매계약 가운데 1986년 이후 최장 기간으로, 유럽의 장기 가스 수요와 에너지 공급망 재편을 보여준다.",
-              "publishedAt": "2026-11-24T15:32:58+09:00",
-              "checkedAt": "2026-11-24T15:43:44+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/business/energy/norways-equinor-signs-18-year-gas-supply-deal-with-germanys-vng-2026-11-24/",
-              "relatedStocks": [
-                "에퀴노르(EQNR)",
-                "한국가스공사(036460)"
-              ],
-              "impactRank": 1,
-              "category": "천연가스·유럽에너지",
-              "region": "foreign",
-              "eventKey": "equinor-vng-long-term-gas-supply-20261124",
-              "factKey": "18-year-15-3-twh-annual-contract-2027-2044"
-            }
-          ],
-          "domesticNews": [
-            {
-              "id": "domestic-20261124-president-capital-market-reform-volatility-response",
-              "title": "이재명 대통령, 자본시장 개혁 가속·증시 변동성 대응책 주문",
-              "summary": "이재명 대통령은 국무회의에서 주식시장을 주주 중심으로 재편해야 한다며 자본시장 개혁 TF의 속도를 높이라고 지시했다. 최근 증시 급등락과 관련해서도 금융위원회에 단기·중기·장기 대응책 마련을 주문했다.",
-              "publishedAt": "2026-11-24T13:56:00+09:00",
-              "checkedAt": "2026-11-24T15:43:44+09:00",
-              "sourceName": "뉴스핌",
-              "sourceUrl": "https://www.newspim.com/news/view/20261124000942",
-              "relatedStocks": [],
-              "impactRank": 1,
-              "category": "자본시장정책·증시안정",
-              "region": "domestic",
-              "eventKey": "korea-president-capital-market-reform-20261124",
-              "factKey": "orders-faster-reform-taskforce-and-volatility-response"
-            },
-            {
-              "id": "domestic-20261124-fsc-insurance-agency-fine-rules",
-              "title": "금융위, 보험사기 전력자 모집 제한·GA 과징금 기준 마련",
-              "summary": "금융위원회는 보험사기 등 금융관계법률 위반자의 보험모집시장 진입을 제한하고, 보험대리점·보험중개사의 업무정지를 과징금으로 갈음할 수 있도록 부과기준을 마련한 시행령·규정 개정안을 공개했다. 과징금은 업무정지 6개월분을 상한으로 한다.",
-              "publishedAt": "2026-11-24T12:00:00+09:00",
-              "checkedAt": "2026-11-24T15:43:44+09:00",
-              "sourceName": "금융위원회",
-              "sourceUrl": "https://www.fsc.go.kr/no010101/88198",
-              "relatedStocks": [
-                "삼성생명(032830)",
-                "한화생명(088350)",
-                "DB손해보험(005830)"
-              ],
-              "impactRank": 2,
-              "category": "보험·금융규제",
-              "region": "domestic",
-              "eventKey": "fsc-insurance-act-enforcement-rules-20261124",
-              "factKey": "restrict-fraud-offenders-and-ga-fine-instead-of-suspension"
-            },
-            {
-              "id": "domestic-20261124-ilsung-samsung-onyang-contract",
-              "title": "일성건설, 삼성전자 온양 복지동 신축공사 841억원 수주",
-              "summary": "일성건설은 삼성전자와 충남 아산 온양 복지동 신축공사 계약을 체결했다. 계약금액은 부가가치세 제외 841억2천만원으로 2025년 연결 매출액의 18.58%이며, 계약기간은 2028년 4월 30일까지다.",
-              "publishedAt": "2026-11-24T13:38:00+09:00",
-              "checkedAt": "2026-11-24T15:43:44+09:00",
-              "sourceName": "DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800494",
-              "relatedStocks": [
-                "일성건설(013360)",
-                "삼성전자(005930)"
-              ],
-              "impactRank": 3,
-              "category": "건설·수주",
-              "region": "domestic",
-              "eventKey": "ilsung-samsung-onyang-welfare-building-contract-20261124",
-              "factKey": "contract-84-12-billion-krw-18-58pct-sales"
-            },
-            {
-              "id": "domestic-20261124-yest-amkor-efurnace-contract",
-              "title": "예스티, 앰코향 eFurnace 72.6억원 공급계약",
-              "summary": "예스티는 G ENGINEERING과 앰코향 eFurnace 공급계약을 체결했다. 확정 계약금액은 72억6천만원으로 2025년 연결 매출액의 8.34%이며, 계약기간은 2027년 12월 31일까지다.",
-              "publishedAt": "2026-11-24T13:40:00+09:00",
-              "checkedAt": "2026-11-24T15:43:44+09:00",
-              "sourceName": "DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124900509",
-              "relatedStocks": [
-                "예스티(122640)"
-              ],
-              "impactRank": 4,
-              "category": "반도체장비·수주",
-              "region": "domestic",
-              "eventKey": "yest-amkor-efurnace-contract-20261124",
-              "factKey": "contract-7-26-billion-krw-8-34pct-sales"
-            }
-          ],
-          "usThemes": [],
-          "researchStatus": "complete",
-          "researchAudit": {
-            "windowStartExclusive": "2026-11-24T11:40:05+09:00",
-            "windowEndInclusive": "2026-11-24T15:40:06+09:00",
-            "checkedAt": "2026-11-24T15:43:44+09:00",
-            "currentWindowDiscoveryStatus": "complete",
-            "sources": [
-              "Reuters",
-              "금융위원회",
-              "DART",
-              "뉴스핌",
-              "연합뉴스",
-              "뉴시스",
-              "국내 주요 뉴스·공시 피드"
-            ],
-            "exclusions": [
-              "11:40 이전 공개된 엔비디아 복귀·아시아 증시 반등 재보도",
-              "단순 장중 시황·전망·예정 일정",
-              "15:40:06 이후 공개 또는 최초 공개시각 미확인 후보"
-            ]
-          }
-        },
-        {
-          "slot": "19:40",
-          "asOf": "2026-11-24T19:40:04+09:00",
-          "publishedAt": "2026-11-24T19:44:41.742+09:00",
-          "foreignNews": [
-            {
-              "id": "foreign-20261124-japan-monthly-economy-consumption-downgrade",
-              "title": "일본 정부, 소비 판단 2년9개월 만에 하향…반도체 장비 생산 평가는 상향",
-              "summary": "일본 정부는 11월 월례경제보고에서 물가 상승에 따른 심리 약화를 반영해 개인소비 판단을 2024년 2월 이후 처음 낮췄다. 반면 수출과 산업생산 평가는 상향했고, 산업생산 개선에는 반도체 제조장비가 기여했다고 밝혔다.",
-              "publishedAt": "2026-11-24T17:21:39+09:00",
-              "checkedAt": "2026-11-24T19:43:37+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/markets/asia/japan-cuts-view-consumer-spending-1st-time-since-2024-2026-11-24/",
-              "relatedStocks": [],
-              "impactRank": 1,
-              "category": "일본경제·소비·반도체장비",
-              "region": "foreign",
-              "eventKey": "japan-monthly-economic-report-202611",
-              "factKey": "consumption-downgraded-exports-production-upgraded"
-            },
-            {
-              "id": "foreign-20261124-japan-budget-guideline-boj-independence",
-              "title": "일본, 2027년 예산지침에 재정 지속가능성·BOJ 독립성 명시",
-              "summary": "일본 정부는 2027회계연도 예산 편성지침 초안에서 신규 국채 발행을 적절히 통제하고 일본은행의 통화정책 자율성을 존중하겠다고 밝혔다. 대규모 지출에 따른 국채·엔화 불안을 의식한 정책 신호다.",
-              "publishedAt": "2026-11-24T18:08:25+09:00",
-              "checkedAt": "2026-11-24T19:43:37+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/markets/asia/japan-vows-sustainable-finances-boj-independence-budget-guideline-2026-11-24/",
-              "relatedStocks": [],
-              "impactRank": 2,
-              "category": "일본재정·통화정책",
-              "region": "foreign",
-              "eventKey": "japan-fy2027-budget-guideline-20261124",
-              "factKey": "fiscal-sustainability-boj-independence-debt-control"
-            },
-            {
-              "id": "foreign-20261124-germany-ifo-november",
-              "title": "독일 11월 Ifo 기업환경지수 90.6…7개월 연속 상승",
-              "summary": "독일 Ifo 기업환경지수는 11월 90.6으로 10월 수정치 90.1에서 상승해 시장 예상 90.5를 소폭 웃돌았다. 현재상황지수는 89.4, 기대지수는 91.9로 개선됐지만 제조업과 건설업 지수는 하락했다.",
-              "publishedAt": "2026-11-24T18:19:40+09:00",
-              "checkedAt": "2026-11-24T19:43:37+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/europe/german-ifo-business-sentiment-rises-november-2026-11-24/",
-              "relatedStocks": [],
-              "impactRank": 3,
-              "category": "유럽경기·기업심리",
-              "region": "foreign",
-              "eventKey": "germany-ifo-business-climate-202611",
-              "factKey": "index-90-6-seventh-consecutive-rise"
-            }
-          ],
-          "domesticNews": [
-            {
-              "id": "domestic-20261124-ecopro-bm-global-investment-bnsi",
-              "title": "에코프로비엠, 인도네시아 제련사업에 6,222억원 투자",
-              "summary": "에코프로비엠은 100% 싱가포르 자회사 ECOPRO GLOBAL INVESTMENT에 6,221억8,362만원을 출자해 인도네시아 PT BNSI 제련소 지분 인수와 주주대여금 재원을 마련하기로 했다. 투자액은 자기자본의 24.7%이며 취득 예정일은 2027년 6월 30일이다.",
-              "publishedAt": "2026-11-24T16:59:00+09:00",
-              "checkedAt": "2026-11-24T19:43:37+09:00",
-              "sourceName": "DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124900852",
-              "relatedStocks": [
-                "에코프로비엠(247540)",
-                "에코프로(086520)"
-              ],
-              "impactRank": 1,
-              "category": "2차전지소재·해외투자",
-              "region": "domestic",
-              "eventKey": "ecopro-bm-indonesia-bnsi-smelter-investment-20261124",
-              "factKey": "cash-contribution-622183620541-krw"
-            },
-            {
-              "id": "domestic-20261124-s1-treasury-share-cancellation",
-              "title": "에스원, 발행주식 11% 자사주 418만8,939주 소각",
-              "summary": "에스원은 보유 자사주 418만8,939주를 11월 30일 소각하기로 했다. 소각 전 발행주식 3,799만9,178주의 11.0%이며 장부가액은 1,557억5,111만원이다. 주주가치 제고 목적의 감자 없는 이익소각이다.",
-              "publishedAt": "2026-11-24T16:39:00+09:00",
-              "checkedAt": "2026-11-24T19:43:37+09:00",
-              "sourceName": "DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800774",
-              "relatedStocks": [
-                "에스원(012750)"
-              ],
-              "impactRank": 2,
-              "category": "자사주·주주환원",
-              "region": "domestic",
-              "eventKey": "s1-treasury-share-cancellation-20261124",
-              "factKey": "cancel-4188939-shares-11pct"
-            },
-            {
-              "id": "domestic-20261124-hpsp-buyback-100bn",
-              "title": "HPSP, 1,000억원 규모 자사주 장내매수 결정",
-              "summary": "HPSP는 주가 안정과 주주가치 제고를 위해 보통주 268만8,172주를 1,000억원에 장내 취득하기로 했다. 취득 예정기간은 2026년 11월 25일부터 2027년 2월 24일까지다.",
-              "publishedAt": "2026-11-24T16:10:00+09:00",
-              "checkedAt": "2026-11-24T19:43:37+09:00",
-              "sourceName": "DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124000377",
-              "relatedStocks": [
-                "HPSP(403870)"
-              ],
-              "impactRank": 3,
-              "category": "반도체장비·자사주",
-              "region": "domestic",
-              "eventKey": "hpsp-treasury-share-buyback-20261124",
-              "factKey": "buyback-2688172-shares-100-billion-krw"
-            },
-            {
-              "id": "domestic-20261124-hd-hhi-october-sales-orders",
-              "title": "HD현대중공업, 10월 매출 2.19조원·누적 수주 198.97억달러",
-              "summary": "HD현대중공업의 10월 매출은 2조1,889억7천만원으로 전년 동월 대비 55.72% 증가했다. 1~10월 누적 매출은 20조1,342억6천만원으로 46.02% 늘었고 누적 수주는 198억9,700만달러로 95.14% 증가했다.",
-              "publishedAt": "2026-11-24T15:55:00+09:00",
-              "checkedAt": "2026-11-24T19:43:37+09:00",
-              "sourceName": "DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800659",
-              "relatedStocks": [
-                "HD현대중공업(329180)",
-                "HD한국조선해양(009540)"
-              ],
-              "impactRank": 4,
-              "category": "조선·월간실적·수주",
-              "region": "domestic",
-              "eventKey": "hd-hhi-monthly-performance-202610",
-              "factKey": "oct-sales-2188970m-krw-ytd-orders-19-897bn-usd"
-            }
-          ],
-          "usThemes": [],
-          "researchStatus": "complete",
-          "researchAudit": {
-            "windowStartExclusive": "2026-11-24T15:40:06+09:00",
-            "windowEndInclusive": "2026-11-24T19:40:04+09:00",
-            "checkedAt": "2026-11-24T19:43:37+09:00",
-            "currentWindowDiscoveryStatus": "complete",
-            "sources": [
-              "Reuters",
-              "DART",
-              "연합뉴스",
-              "뉴스핌",
-              "국내 주요 뉴스·공시 피드"
-            ],
-            "exclusions": [
-              "15:40:06 이전 공개 재료와 기존 회차 단순 재보도",
-              "공시 금액·최초 공개시각 또는 핵심 사실을 확인하지 못한 후보",
-              "한 웹 검색 경로의 사용량 한도 오류는 대체 검색과 원문 조회로 보완"
-            ]
-          }
-        },
-        {
-          "slot": "22:40",
-          "asOf": "2026-11-24T22:40:06+09:00",
-          "publishedAt": "2026-11-24T22:42:24.189+09:00",
-          "foreignNews": [
-            {
-              "id": "foreign-20261124-nvidia-premarket-pullback-governance-risk",
-              "title": "엔비디아, 젠슨 황 복귀 랠리 뒤 프리마켓 5.2% 하락",
-              "summary": "엔비디아는 전날 31.5% 급등한 뒤 24일 미국 프리마켓에서 5.2% 하락했다. 젠슨 황 CEO 복귀를 둘러싼 이사회 독립성·정치 개입 논란과 대중국 AI칩 수출 규제, 의회 청문회 위험이 다시 부각됐다.",
-              "publishedAt": "2026-11-24T20:50:25+09:00",
-              "checkedAt": "2026-11-24T22:41:43+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/business/retail-consumer/nvidia-slips-investors-assess-risks-surrounding-huangs-return-ceo-2026-11-24/",
-              "relatedStocks": [
-                "엔비디아(NVDA)",
-                "삼성전자(005930)",
-                "SK하이닉스(000660)"
-              ],
-              "impactRank": 1,
-              "category": "AI반도체·미국정책·기업지배구조",
-              "region": "foreign",
-              "eventKey": "nvidia-huang-reinstatement-market-reaction-20261124",
-              "factKey": "premarket-down-5-2pct-governance-export-control-risks"
-            },
-            {
-              "id": "foreign-20261124-analog-devices-fy2026-results",
-              "title": "아나로그디바이스, FY2026 매출 152억달러로 38% 증가",
-              "summary": "아나로그디바이스의 4분기 매출은 43억7천만달러로 데이터센터와 산업 부문이 성장을 이끌었다. 연간 매출은 152억달러로 38% 증가했고 영업현금흐름 62억달러, 잉여현금흐름 55억달러를 기록했다.",
-              "publishedAt": "2026-11-24T21:01:00+09:00",
-              "checkedAt": "2026-11-24T22:41:43+09:00",
-              "sourceName": "Analog Devices·SEC",
-              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000087/adiq426exhibit991.htm",
-              "relatedStocks": [
-                "아나로그디바이스(ADI)",
-                "삼성전자(005930)",
-                "SK하이닉스(000660)"
-              ],
-              "impactRank": 2,
-              "category": "반도체·데이터센터·실적",
-              "region": "foreign",
-              "eventKey": "analog-devices-fy2026-results-20261124",
-              "factKey": "fy-revenue-15-2bn-up-38pct-fcf-5-5bn"
-            },
-            {
-              "id": "foreign-20261124-best-buy-raises-guidance",
-              "title": "베스트바이, AI 기기 수요에 연간 매출·이익 전망 상향",
-              "summary": "베스트바이의 3분기 매출은 102억4천만달러로 5.8% 증가했고 동일점포 매출은 6.1% 늘었다. 회사는 연간 동일점포 매출 증가율 전망을 3.4~4.0%, 조정 주당순이익 전망을 6.90~7.05달러로 높였다.",
-              "publishedAt": "2026-11-24T21:03:59+09:00",
-              "checkedAt": "2026-11-24T22:41:43+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/business/retail-consumer/best-buy-leans-ai-driven-gadget-update-cycle-lift-annual-targets-2026-11-24/",
-              "relatedStocks": [
-                "베스트바이(BBY)",
-                "삼성전자(005930)",
-                "LG전자(066570)"
-              ],
-              "impactRank": 3,
-              "category": "미국소비·AI기기·실적",
-              "region": "foreign",
-              "eventKey": "best-buy-q3-fy2027-results-20261124",
-              "factKey": "comp-sales-up-6-1pct-guidance-raised"
-            },
-            {
-              "id": "foreign-20261124-dollar-tree-raises-profit-guidance",
-              "title": "달러트리, 방문객 회복에 연간 이익 전망 상향",
-              "summary": "달러트리의 분기 동일점포 매출은 방문객 3.8% 증가에 힘입어 4.6% 늘었고 매출은 50억8천만달러를 기록했다. 회사는 2026회계연도 조정 주당순이익 전망을 8.05~8.25달러로 상향했다.",
-              "publishedAt": "2026-11-24T20:37:50+09:00",
-              "checkedAt": "2026-11-24T22:41:43+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/business/retail-consumer/dollar-tree-raises-annual-profit-forecast-2026-11-24/",
-              "relatedStocks": [
-                "달러트리(DLTR)"
-              ],
-              "impactRank": 4,
-              "category": "미국소비·유통·실적",
-              "region": "foreign",
-              "eventKey": "dollar-tree-q3-fy2026-results-20261124",
-              "factKey": "comp-sales-up-4-6pct-eps-guidance-8-05-to-8-25"
-            }
-          ],
-          "domesticNews": [],
-          "usThemes": [],
-          "researchStatus": "complete",
-          "researchAudit": {
-            "windowStartExclusive": "2026-11-24T19:40:04+09:00",
-            "windowEndInclusive": "2026-11-24T22:40:06+09:00",
-            "checkedAt": "2026-11-24T22:41:43+09:00",
-            "currentWindowDiscoveryStatus": "complete",
-            "sources": [
-              "Reuters",
-              "SEC",
-              "기업 공식 실적자료",
-              "DART",
-              "대한민국 정책브리핑",
-              "연합뉴스",
-              "뉴시스",
-              "뉴스핌",
-              "국내 주요 뉴스·공시 피드"
-            ],
-            "exclusions": [
-              "19:40:04 이전 공개된 국내 정책·공시와 기존 회차 재료",
-              "젠슨 황 복귀 사실 자체의 단순 재보도",
-              "일정 예고·목표주가·핵심 수치 또는 최초 공개시각 미확인 후보"
-            ]
-          }
-        }
-      ]
-    },
     {
       "date": "2026-11-25",
       "isKrxTradingDay": true,
@@ -1164,6 +622,126 @@
               "최태원 관련 개인사 보도와 시장 영향이 확인되지 않은 유력 인사 재보도",
               "22:30 KST 미국 GDP·PCE·실업수당 지표는 회차 마감 직후 공식 수치 원문 확인이 완료되지 않아 수치와 기사를 채택하지 않음",
               "19:40 이후 최초 공개시각과 고영향 신규 사실이 확인되지 않은 국내 후보"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "isKrxTradingDay": true,
+      "displaySlots": [
+        "07:40",
+        "11:40",
+        "15:40",
+        "19:40",
+        "22:40"
+      ],
+      "sessions": [
+        {
+          "slot": "07:40",
+          "asOf": "2026-11-26T07:40:05+09:00",
+          "publishedAt": "2026-11-26T07:47:25+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261126-fed-beige-book-november",
+              "title": "연준 베이지북, 12개 지역 중 8곳 완만한 성장…관세·에너지 비용 압력 지속",
+              "summary": "연방준비제도는 12개 연방준비은행 관할 지역 가운데 8곳의 경제활동이 소폭에서 완만하게 성장했고 4곳은 대체로 변동이 없었다고 밝혔다. 고용은 소폭 늘고 임금은 완만하게 상승했으며, 에너지·운송·의료·보험·관세 관련 투입비용이 판매가격보다 빠르게 올라 기업 마진을 압박했다.",
+              "publishedAt": "2026-11-26T04:00:00+09:00",
+              "checkedAt": "2026-11-26T07:47:25+09:00",
+              "sourceName": "미국 연방준비제도",
+              "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/beigebook202611-summary.htm",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "미국경제·통화정책",
+              "region": "foreign",
+              "eventKey": "fed-beige-book-2026-11",
+              "factKey": "eight-districts-grow-four-flat-employment-slight-prices-moderate",
+              "impactReason": "미국 경기의 완만한 확장과 비용 압력이 함께 확인돼 연준 금리 경로, 달러·국채금리 및 한국 성장주·수출주 평가에 영향을 줄 수 있다."
+            },
+            {
+              "id": "foreign-20261126-sp-nvidia-creditwatch-negative",
+              "title": "S&P, 엔비디아 AA 신용등급을 부정적 관찰대상에 편입",
+              "summary": "S&P Global Ratings는 엔비디아의 장기 외화·현지통화 발행자 신용등급 AA를 기존 안정적 전망에서 부정적 관찰대상으로 변경했다. S&P의 공식 조치는 미국 동부시간 11월 25일 오후 1시36분 공개됐으며, 이사회가 독립위원회 조사 진행 중 젠슨 황을 CEO로 복귀시킨 데 따른 경영·지배구조 위험 상승을 배경으로 제시했다.",
+              "publishedAt": "2026-11-26T03:36:00+09:00",
+              "checkedAt": "2026-11-26T07:47:25+09:00",
+              "sourceName": "S&P Global Ratings",
+              "sourceUrl": "https://www.spglobal.com/ratings/en/regulatory/ratings-actions?app=sp&id=3238799",
+              "relatedStocks": [
+                "엔비디아(NVDA)",
+                "삼성전자(005930)",
+                "SK하이닉스(000660)"
+              ],
+              "impactRank": 2,
+              "category": "AI반도체·신용등급·지배구조",
+              "region": "foreign",
+              "eventKey": "nvidia-governance-investigation-2026",
+              "factKey": "sp-aa-ratings-creditwatch-negative-20261125",
+              "impactReason": "AI 반도체 대표 기업의 신용도와 지배구조 불확실성이 공식 신용평가 조치로 확대돼 글로벌 AI 밸류체인과 국내 메모리 대형주 투자심리에 영향을 줄 수 있다.",
+              "corroboratingSourceUrl": "https://malaysia.news.yahoo.com/sp-puts-nvidias-aa-ratings-192536293.html"
+            },
+            {
+              "id": "foreign-20261126-us-october-new-home-sales",
+              "title": "미국 10월 신규주택 판매 14.2% 증가…연율 70만1천채",
+              "summary": "미국 상무부 센서스국은 10월 신규 단독주택 판매가 계절조정 연율 70만1천채로 전월보다 14.2% 증가했다고 발표했다. 이는 2025년 12월 이후 가장 높은 수준이며, 중간 판매가격은 전년 동월보다 3.2% 낮은 39만1,300달러였다.",
+              "publishedAt": "2026-11-26T00:00:00+09:00",
+              "checkedAt": "2026-11-26T07:47:25+09:00",
+              "sourceName": "미국 센서스국",
+              "sourceUrl": "https://www.census.gov/construction/nrs/current/index.html",
+              "relatedStocks": [],
+              "impactRank": 3,
+              "category": "미국경제·주택",
+              "region": "foreign",
+              "eventKey": "us-new-home-sales-2026-10",
+              "factKey": "sales-701k-up-14-2pct-median-391300",
+              "impactReason": "미국 주택 수요의 예상 밖 강세는 경기·금리 전망과 미 국채금리에 영향을 주어 한국의 성장주 및 경기민감주 할인율에 간접 영향을 줄 수 있다.",
+              "corroboratingSourceUrl": "https://www.reuters.com/business/us-new-home-sales-surge-10-month-high-october-2026-11-25/"
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "domestic-20261126-north-korea-nuclear-facilities",
+              "title": "김정은, 핵물질 생산·핵무기 연구시설 시찰…전술핵 다영역 배치 확대 지시",
+              "summary": "북한 김정은 국무위원장은 핵물질 생산과 핵무기 연구시설을 시찰하고 전술핵무기의 다영역 배치를 확대해야 한다고 밝혔다. 북한 매체는 핵물질 생산 능력이 확대되고 있다고 전했으며, 김 위원장은 핵무기 보유국 지위가 절대 불가역적이라고 주장했다.",
+              "publishedAt": "2026-11-26T06:22:00+09:00",
+              "checkedAt": "2026-11-26T07:47:25+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://malaysia.news.yahoo.com/north-koreas-kim-visits-nuclear-212231384.html",
+              "relatedStocks": [
+                "한화에어로스페이스(012450)",
+                "LIG넥스원(079550)"
+              ],
+              "impactRank": 1,
+              "category": "한반도안보·방산",
+              "region": "domestic",
+              "eventKey": "north-korea-nuclear-weapons-capacity-2026",
+              "factKey": "kim-inspection-tactical-nuclear-multidomain-deployment-capacity-expansion",
+              "impactReason": "한반도 지정학적 위험과 방산 수요 기대를 동시에 자극할 수 있는 북한 최고지도자의 신규 공식 행보와 발언이다.",
+              "corroboratingSourceUrl": "https://en.yna.co.kr/view/AEN20261126000500315"
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "complete",
+          "researchAudit": {
+            "windowStartExclusive": "2026-11-25T22:40:05+09:00",
+            "windowEndInclusive": "2026-11-26T07:40:05+09:00",
+            "checkedAt": "2026-11-26T07:47:25+09:00",
+            "currentWindowDiscoveryStatus": "complete",
+            "sources": [
+              "미국 연방준비제도",
+              "S&P Global Ratings",
+              "미국 센서스국",
+              "Reuters",
+              "연합뉴스",
+              "금융감독원 DART 및 국내 공시·뉴스 검색",
+              "국내외 정부·기업 발표와 유력 인사 발언 검색"
+            ],
+            "exclusions": [
+              "직전 22:40 회차 이전에 최초 공개된 미국 GDP·PCE·실업수당 및 중동 원유시설 공격 보도",
+              "시장 가격 반응만을 기존 사건의 신규 뉴스로 재포장한 기사",
+              "11월 26일 10:00 예정 한국은행 결정 등 조사 마감 이후 일정",
+              "새로운 확정 사실이 없거나 최초 공개시각이 조사창 밖인 G7 정상·피터 틸·일론 머스크·젠슨 황·최태원 관련 재보도",
+              "시장 영향이 제한적인 단순 전망·의견·일반 기사와 최초 공개시각 미확인 후보"
             ]
           }
         }
