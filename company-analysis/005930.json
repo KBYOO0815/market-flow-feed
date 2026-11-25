@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "company": {
+    "code": "005930",
+    "name": "삼성전자"
+  },
+  "asOf": "2026-09-30",
+  "publishedAt": "2026-11-25T23:20:00+09:00",
+  "sourceBasis": "DART 정기보고서 연결 기준. 매출·영업이익·현금흐름은 분기 단독, 재고는 각 분기말 취득원가.",
+  "summary": {
+    "label": "반도체 초고성장형·사업부 양극화형",
+    "text": "DS가 매출과 영업이익 성장을 사실상 주도하는 반면 DX는 2026 Q2·Q3 영업적자를 기록했다."
+  },
+  "sections": [
+    {
+      "id": "revenue",
+      "title": "매출",
+      "type": "lineChart",
+      "unit": "억원",
+      "series": [
+        {
+          "name": "총매출",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 860617.47
+            },
+            {
+              "period": "2025 Q4",
+              "value": 938373.71
+            },
+            {
+              "period": "2026 Q1",
+              "value": 1338734.44
+            },
+            {
+              "period": "2026 Q2",
+              "value": 1714994.7
+            },
+            {
+              "period": "2026 Q3",
+              "value": 1952532.09
+            }
+          ]
+        },
+        {
+          "name": "DX",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 483750.95
+            },
+            {
+              "period": "2025 Q4",
+              "value": 443048.34
+            },
+            {
+              "period": "2026 Q1",
+              "value": 526546.86
+            },
+            {
+              "period": "2026 Q2",
+              "value": 480224.33
+            },
+            {
+              "period": "2026 Q3",
+              "value": 520544.89
+            }
+          ]
+        },
+        {
+          "name": "DS",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 331167.86
+            },
+            {
+              "period": "2025 Q4",
+              "value": 440053.21
+            },
+            {
+              "period": "2026 Q1",
+              "value": 817156.43
+            },
+            {
+              "period": "2026 Q2",
+              "value": 1275160.71
+            },
+            {
+              "period": "2026 Q3",
+              "value": 1471041
+            }
+          ]
+        },
+        {
+          "name": "SDC",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 81015.25
+            },
+            {
+              "period": "2025 Q4",
+              "value": 94932.72
+            },
+            {
+              "period": "2026 Q1",
+              "value": 66934.57
+            },
+            {
+              "period": "2026 Q2",
+              "value": 74850.65
+            },
+            {
+              "period": "2026 Q3",
+              "value": 79973.32
+            }
+          ]
+        },
+        {
+          "name": "Harman",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 39536.56
+            },
+            {
+              "period": "2025 Q4",
+              "value": 45802.78
+            },
+            {
+              "period": "2026 Q1",
+              "value": 38263.49
+            },
+            {
+              "period": "2026 Q2",
+              "value": 45677.51
+            },
+            {
+              "period": "2026 Q3",
+              "value": 43283.13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operatingProfit",
+      "title": "영업이익",
+      "type": "lineChart",
+      "unit": "억원",
+      "series": [
+        {
+          "name": "총 영업이익",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 121660.62
+            },
+            {
+              "period": "2025 Q4",
+              "value": 200736.6
+            },
+            {
+              "period": "2026 Q1",
+              "value": 572327.97
+            },
+            {
+              "period": "2026 Q2",
+              "value": 894924.12
+            },
+            {
+              "period": "2026 Q3",
+              "value": 1074404.82
+            }
+          ]
+        },
+        {
+          "name": "DX",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 34692.79
+            },
+            {
+              "period": "2025 Q4",
+              "value": 13358.16
+            },
+            {
+              "period": "2026 Q1",
+              "value": 29676.82
+            },
+            {
+              "period": "2026 Q2",
+              "value": -8188.05
+            },
+            {
+              "period": "2026 Q3",
+              "value": -8252.16
+            }
+          ]
+        },
+        {
+          "name": "DS",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 69913.05
+            },
+            {
+              "period": "2025 Q4",
+              "value": 164111.19
+            },
+            {
+              "period": "2026 Q1",
+              "value": 536632.74
+            },
+            {
+              "period": "2026 Q2",
+              "value": 891960.19
+            },
+            {
+              "period": "2026 Q3",
+              "value": 1065364.77
+            }
+          ]
+        },
+        {
+          "name": "SDC",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 12248.09
+            },
+            {
+              "period": "2025 Q4",
+              "value": 19559.74
+            },
+            {
+              "period": "2026 Q1",
+              "value": 3627.46
+            },
+            {
+              "period": "2026 Q2",
+              "value": 6806.07
+            },
+            {
+              "period": "2026 Q3",
+              "value": 11068.55
+            }
+          ]
+        },
+        {
+          "name": "Harman",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 4205.71
+            },
+            {
+              "period": "2025 Q4",
+              "value": 3198.61
+            },
+            {
+              "period": "2026 Q1",
+              "value": 2219.68
+            },
+            {
+              "period": "2026 Q2",
+              "value": 4148.58
+            },
+            {
+              "period": "2026 Q3",
+              "value": 6073.53
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inventory",
+      "title": "재고",
+      "type": "lineChart",
+      "unit": "억원",
+      "series": [
+        {
+          "name": "제품·상품",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 150573.62
+            },
+            {
+              "period": "2025 Q4",
+              "value": 139826.44
+            },
+            {
+              "period": "2026 Q1",
+              "value": 152409
+            },
+            {
+              "period": "2026 Q2",
+              "value": 163336.69
+            },
+            {
+              "period": "2026 Q3",
+              "value": 170347.44
+            }
+          ]
+        },
+        {
+          "name": "반제품·재공품",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 249590.68
+            },
+            {
+              "period": "2025 Q4",
+              "value": 267753.42
+            },
+            {
+              "period": "2026 Q1",
+              "value": 274481.15
+            },
+            {
+              "period": "2026 Q2",
+              "value": 347281.39
+            },
+            {
+              "period": "2026 Q3",
+              "value": 363245.87
+            }
+          ]
+        },
+        {
+          "name": "원재료·저장품",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 149211.99
+            },
+            {
+              "period": "2025 Q4",
+              "value": 164114.22
+            },
+            {
+              "period": "2026 Q1",
+              "value": 195008.48
+            },
+            {
+              "period": "2026 Q2",
+              "value": 241951.02
+            },
+            {
+              "period": "2026 Q3",
+              "value": 225249.36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cashFlow",
+      "title": "OCF · ICF · FCF",
+      "type": "lineChart",
+      "unit": "억원",
+      "formula": "FCF = OCF - CAPEX(유형자산 취득 + 무형자산 취득)",
+      "series": [
+        {
+          "name": "OCF",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 225744.94
+            },
+            {
+              "period": "2025 Q4",
+              "value": 287996.52
+            },
+            {
+              "period": "2026 Q1",
+              "value": 402741.06
+            },
+            {
+              "period": "2026 Q2",
+              "value": 1050810.86
+            },
+            {
+              "period": "2026 Q3",
+              "value": 985869.24
+            }
+          ]
+        },
+        {
+          "name": "ICF",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": -133476.75
+            },
+            {
+              "period": "2025 Q4",
+              "value": -309910.28
+            },
+            {
+              "period": "2026 Q1",
+              "value": -214560
+            },
+            {
+              "period": "2026 Q2",
+              "value": -693940.06
+            },
+            {
+              "period": "2026 Q3",
+              "value": -686697.06
+            }
+          ]
+        },
+        {
+          "name": "FCF",
+          "values": [
+            {
+              "period": "2025 Q3",
+              "value": 103833.96
+            },
+            {
+              "period": "2025 Q4",
+              "value": 160401.62
+            },
+            {
+              "period": "2026 Q1",
+              "value": 220971.51
+            },
+            {
+              "period": "2026 Q2",
+              "value": 902977.59
+            },
+            {
+              "period": "2026 Q3",
+              "value": 709195.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "analysis",
+      "title": "분석",
+      "type": "text",
+      "text": "2026 Q3 총매출과 영업이익은 최근 5개 분기 최고치다. DS 매출과 영업이익이 급증해 전사 성장을 주도했지만, DX 영업손익은 Q2 -8,188억원, Q3 -8,252억원으로 2개 분기 연속 적자다. 재고는 반제품·재공품이 Q3 36조3,246억원으로 증가했고, OCF와 FCF는 대규모 플러스를 유지했다."
+    }
+  ],
+  "sources": [
+    {
+      "label": "2025 Q3 DART 정기보고서",
+      "url": "https://samara.kr/disclosure/20251114002447"
+    },
+    {
+      "label": "2025 사업보고서",
+      "url": "https://samara.kr/disclosure/20260310002820"
+    },
+    {
+      "label": "2026 Q1 DART 정기보고서",
+      "url": "https://samara.kr/disclosure/20260515002181"
+    },
+    {
+      "label": "2026 H1 DART 정기보고서",
+      "url": "https://samara.kr/disclosure/20260814003699"
+    },
+    {
+      "label": "2026 Q3 DART 정기보고서",
+      "url": "https://samara.kr/disclosure/20261116001482"
+    }
+  ]
+}
