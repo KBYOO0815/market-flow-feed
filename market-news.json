@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-25T19:46:48+09:00",
+  "updatedAt": "2026-11-25T22:40:58+09:00",
   "navigation": {
     "previous": [
       {
@@ -53,7 +53,7 @@
       {
         "date": "2026-11-25",
         "slot": "22:40",
-        "state": "scheduled"
+        "state": "published"
       }
     ],
     "next": []
@@ -1111,6 +1111,59 @@
               "새로운 확정 사실이 없거나 최초 공개시각이 조사창 밖인 G7 정상·피터 틸·일론 머스크·젠슨 황·최태원 관련 보도",
               "14:44 공개된 린드먼아시아 소각과 14:25 공개된 현대건설 수주 등 조사창 밖 공시",
               "규모·시장 영향이 제한된 정정·지분보고·소규모 자사주 및 일반 관리 공시"
+            ]
+          }
+        },
+        {
+          "slot": "22:40",
+          "asOf": "2026-11-25T22:40:05+09:00",
+          "publishedAt": "2026-11-25T22:40:58+09:00",
+          "foreignNews": [
+            {
+              "id": "foreign-20261125-us-excess-capacity-tariffs-14-partners",
+              "title": "미국, 한국·중국·EU 등 14개 교역상대국에 과잉생산 대응 관세안 제안",
+              "summary": "트럼프 행정부는 8개월간의 무역법 301조 조사 뒤 한국·중국·EU·일본 등 14개 교역상대국의 구조적 과잉생산에 대응하는 추가 관세안을 제안했다. 중국에는 최고 20%를 제시했으며, 한국·EU·일본·대만은 기존 무역합의의 15% 상한을 넘지 않는다고 밝혔다. 관세안은 의견수렴과 청문회를 거쳐 이르면 2027년 1월 시행될 수 있다.",
+              "publishedAt": "2026-11-25T22:15:00+09:00",
+              "checkedAt": "2026-11-25T22:40:58+09:00",
+              "sourceName": "Reuters",
+              "sourceUrl": "https://www.reuters.com/world/china/us-proposes-new-tariffs-14-trading-partners-fight-excess-factory-capacity-2026-11-25/",
+              "relatedStocks": [
+                "현대차(005380)",
+                "기아(000270)",
+                "POSCO홀딩스(005490)",
+                "LG에너지솔루션(373220)"
+              ],
+              "impactRank": 1,
+              "category": "미국 통상정책·관세",
+              "region": "foreign",
+              "eventKey": "us-section-301-structural-excess-capacity-probe-2026",
+              "factKey": "proposal-tariffs-14-partners-china-20pct-korea-cap-15pct-comment-hearing",
+              "impactReason": "한국이 직접 대상에 포함된 새 관세 제안으로, 자동차·철강·배터리 등 대미 수출 업종의 비용·가격경쟁력과 공급망 기대에 영향을 줄 수 있다.",
+              "corroboratingSourceUrl": "https://apnews.com/article/367083ea32f71fd7f70029ba7df66bf0"
+            }
+          ],
+          "domesticNews": [],
+          "usThemes": [],
+          "researchStatus": "partial",
+          "researchAudit": {
+            "windowStartExclusive": "2026-11-25T19:40:05+09:00",
+            "windowEndInclusive": "2026-11-25T22:40:05+09:00",
+            "checkedAt": "2026-11-25T22:40:58+09:00",
+            "currentWindowDiscoveryStatus": "partial",
+            "sources": [
+              "Reuters",
+              "AP",
+              "미국 경제분석국(BEA) 발표 일정",
+              "미국 노동부 발표 일정",
+              "금융감독원 DART 및 국내 공시·뉴스 검색",
+              "유력 인사 공식 발언·신뢰매체 검색"
+            ],
+            "exclusions": [
+              "19:40:05 이전 최초 공개됐거나 기존 회차에 저장된 국내 공시와 미국 관세 예고 보도",
+              "트럼프의 일론 머스크·젠슨 황 보호 발언은 11월 23일 CNBC 인터뷰가 최초라 조사창 밖으로 제외",
+              "최태원 관련 개인사 보도와 시장 영향이 확인되지 않은 유력 인사 재보도",
+              "22:30 KST 미국 GDP·PCE·실업수당 지표는 회차 마감 직후 공식 수치 원문 확인이 완료되지 않아 수치와 기사를 채택하지 않음",
+              "19:40 이후 최초 공개시각과 고영향 신규 사실이 확인되지 않은 국내 후보"
             ]
           }
         }
