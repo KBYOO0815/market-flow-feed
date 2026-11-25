@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-25T00:10:30.093Z",
+  "updatedAt": "2026-11-25T04:10:46.040Z",
   "navigation": {
     "previous": [
       {
@@ -53,7 +53,7 @@
       {
         "date": "2026-11-25",
         "slot": "13:10",
-        "state": "scheduled"
+        "state": "published"
       },
       {
         "date": "2026-11-25",
@@ -950,6 +950,210 @@
                 "items": [
                   "외국인 매도 확대 및 코스피 4,776.31 장초반 저점 재시험 여부 확인.",
                   "매도 사이드카 실제 발동 여부 미확인."
+                ]
+              }
+            ]
+          }
+        },
+        "13:10": {
+          "date": "2026-11-25",
+          "slot": "13:10",
+          "scheduledFor": "2026-11-25T13:10:00+09:00",
+          "asOf": "2026-11-25T13:10:00+09:00",
+          "publishedAt": "2026-11-25T04:10:46.040Z",
+          "sessionStatus": "KRX OPEN; US REGULAR CLOSED",
+          "scope": "US_KR",
+          "us": {
+            "summary": "11/24 미국 정규장 마감 보도: 나스닥 -1.48%, S&P500 -0.50%, 다우 +0.85%, 필라델피아 반도체 -7.88%.",
+            "observedAt": "2026-11-25T06:00:00+09:00",
+            "indices": [
+              {
+                "name": "Nasdaq Composite",
+                "changePct": -1.48,
+                "observedAt": "2026-11-25T06:00:00+09:00",
+                "sourceUrl": "https://www.theonetv.kr/news/articleView.html?idxno=255950"
+              },
+              {
+                "name": "S&P 500",
+                "changePct": -0.5,
+                "observedAt": "2026-11-25T06:00:00+09:00",
+                "sourceUrl": "https://www.theonetv.kr/news/articleView.html?idxno=255950"
+              },
+              {
+                "name": "Dow Jones",
+                "changePct": 0.85,
+                "observedAt": "2026-11-25T06:00:00+09:00",
+                "sourceUrl": "https://www.theonetv.kr/news/articleView.html?idxno=255950"
+              },
+              {
+                "name": "SOX",
+                "changePct": -7.88,
+                "observedAt": "2026-11-25T06:00:00+09:00",
+                "sourceUrl": "https://www.theonetv.kr/news/articleView.html?idxno=255950"
+              }
+            ],
+            "themes": [
+              "AI·반도체 약세"
+            ],
+            "notes": [
+              "08:56 보도 기준 마이크론 -11.01%, AMD -8.86%, 엔비디아 -5.86%."
+            ]
+          },
+          "kr": {
+            "summary": "코스피 5.74% 급락, 외국인 1.59조 순매도·반도체 약세 확대",
+            "observedAt": "2026-11-25T13:10:00+09:00",
+            "indices": [
+              {
+                "name": "KOSPI",
+                "value": 4718.68,
+                "changePct": -5.74,
+                "observedAt": "2026-11-25T13:10:00+09:00",
+                "sourceUrl": "https://m.stock.naver.com/api/index/KOSPI/basic"
+              },
+              {
+                "name": "KOSDAQ",
+                "value": 651.26,
+                "changePct": -2.2,
+                "observedAt": "2026-11-25T13:09:00+09:00",
+                "sourceUrl": "https://m.stock.naver.com/api/index/KOSDAQ/basic"
+              }
+            ],
+            "flows": {
+              "observedAt": null,
+              "market": "KOSPI",
+              "unit": "억원",
+              "foreign": -15858,
+              "institution": -1286,
+              "individual": 13735
+            },
+            "themes": [
+              "삼성전자 -9.40%, SK하이닉스 -9.33%, 삼성전기 -10.72%, SK스퀘어 -10.35%.",
+              "삼성바이오로직스 +4.19%, 셀트리온 +3.35%로 상대 강세.",
+              "상한가 4개, 상승 259개, 하락 630개, 보합 19개."
+            ],
+            "notes": [
+              "외국인 -15,858억, 기관 -1,286억, 개인 +13,735억, 프로그램 -9,334억원. 집계시각 미제공.",
+              "종목 관측 13:09:59~13:10:13; 지수 관측 13:09~13:10."
+            ]
+          },
+          "highlights": [
+            "미국 11/24 정규장 나스닥 -1.48%, 필라델피아 반도체 -7.88%; 국내 매도 사이드카 발동 보도(13:01).",
+            "09:10 대비 코스피 -70.04p, 코스닥 +6.05p, 외국인 순매도 13,330억원 확대.",
+            "코스피 장중 저점 4,687.51 재시험 여부 및 외국인 매도 지속 여부 확인.",
+            "미국 PCE 및 26일 한국은행 금리 결정 관련 변동성 주의."
+          ],
+          "sources": [
+            {
+              "name": "KOSPI",
+              "url": "https://m.stock.naver.com/api/index/KOSPI/basic",
+              "checkedAt": "2026-11-25T04:10:46.040Z"
+            },
+            {
+              "name": "KOSDAQ",
+              "url": "https://m.stock.naver.com/api/index/KOSDAQ/basic",
+              "checkedAt": "2026-11-25T04:10:46.040Z"
+            },
+            {
+              "name": "네이버페이 증권 수급·종목",
+              "url": "https://m.stock.naver.com/api/index/KOSPI/integration",
+              "checkedAt": "2026-11-25T04:10:46.040Z"
+            },
+            {
+              "name": "이투데이 13:01 장중 보도",
+              "url": "https://www.etoday.co.kr/news/view/2652788",
+              "checkedAt": "2026-11-25T04:10:46.040Z"
+            },
+            {
+              "name": "연합뉴스 미국 마감",
+              "url": "https://www.yna.co.kr/amp/view/AKR20261125022300008",
+              "checkedAt": "2026-11-25T04:10:46.040Z"
+            },
+            {
+              "name": "NYSE 공식 거래일",
+              "url": "https://www.nyse.com/trade/hours-calendars",
+              "checkedAt": "2026-11-25T04:10:46.040Z"
+            },
+            {
+              "name": "KRX 휴장일 보조 일정",
+              "url": "https://trader.ai.kr/calendar/holidays",
+              "checkedAt": "2026-11-25T04:10:46.040Z"
+            },
+            {
+              "name": "금리 및 물가 일정",
+              "url": "https://www.upkoreanews.kr/news/articleView.html?idxno=101367",
+              "checkedAt": "2026-11-25T04:10:46.040Z"
+            },
+            {
+              "name": "OBC 미국 마감 및 장전 보도",
+              "url": "https://www.theonetv.kr/news/articleView.html?idxno=255950",
+              "checkedAt": "2026-11-25T00:10:30.093Z"
+            }
+          ],
+          "status": {
+            "collection": "partial",
+            "validation": "success",
+            "publication": "success"
+          },
+          "display": {
+            "headline": "코스피 5.74% 급락, 외국인 1.59조 순매도·반도체 약세 확대",
+            "badges": [
+              "한국 장중",
+              "강한 약세",
+              "외국인 매도"
+            ],
+            "observedAt": "2026-11-25T13:10:00+09:00",
+            "sections": [
+              {
+                "id": "kr-indices",
+                "title": "한국 장중 지수",
+                "kind": "metrics",
+                "items": [
+                  {
+                    "label": "KOSPI",
+                    "value": 4718.68,
+                    "changePct": -5.74,
+                    "note": "13:10"
+                  },
+                  {
+                    "label": "KOSDAQ",
+                    "value": 651.26,
+                    "changePct": -2.2,
+                    "note": "13:09"
+                  }
+                ]
+              },
+              {
+                "id": "flows",
+                "title": "코스피 수급",
+                "kind": "bullets",
+                "items": [
+                  "외국인 -15,858억, 기관 -1,286억, 개인 +13,735억, 프로그램 -9,334억원. 집계시각 미제공."
+                ]
+              },
+              {
+                "id": "drivers",
+                "title": "시장 흐름",
+                "kind": "bullets",
+                "items": [
+                  "삼성전자 -9.40%, SK하이닉스 -9.33%, 삼성전기 -10.72%, SK스퀘어 -10.35%.",
+                  "삼성바이오로직스 +4.19%, 셀트리온 +3.35%로 상대 강세.",
+                  "상한가 4개, 상승 259개, 하락 630개, 보합 19개.",
+                  "미국 11/24 정규장 나스닥 -1.48%, 필라델피아 반도체 -7.88%; 국내 매도 사이드카 발동 보도(13:01)."
+                ]
+              },
+              {
+                "id": "changes",
+                "title": "직전 회차 대비",
+                "kind": "text",
+                "text": "09:10 대비 코스피 -70.04p, 코스닥 +6.05p, 외국인 순매도 13,330억원 확대."
+              },
+              {
+                "id": "watch",
+                "title": "주의·확인",
+                "kind": "bullets",
+                "items": [
+                  "코스피 장중 저점 4,687.51 재시험 여부 및 외국인 매도 지속 여부 확인.",
+                  "미국 PCE 및 26일 한국은행 금리 결정 관련 변동성 주의."
                 ]
               }
             ]
