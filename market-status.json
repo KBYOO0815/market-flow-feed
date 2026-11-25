@@ -1161,5 +1161,17 @@
         }
       }
     }
-  ]
+  ],
+  "schedule": {
+    "timezone": "Asia/Seoul",
+    "effectiveFrom": "2026-11-26",
+    "slots": [
+      "06:00",
+      "09:00",
+      "12:00",
+      "15:30",
+      "20:00"
+    ],
+    "nonTradingDay": "06:00 only when new US regular-session trading data is available"
+  }
 }
