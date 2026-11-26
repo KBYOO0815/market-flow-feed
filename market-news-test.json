@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "test": true,
+  "updatedAt": "2026-11-26T10:58:46+09:00",
+  "navigation": {
+    "previous": [],
+    "today": [
+      {
+        "date": "2026-11-26",
+        "slot": "07:40",
+        "state": "published"
+      }
+    ],
+    "next": []
+  },
+  "days": [
+    {
+      "date": "2026-11-26",
+      "isKrxTradingDay": true,
+      "displaySlots": [
+        "07:40"
+      ],
+      "sessions": [
+        {
+          "slot": "07:40",
+          "asOf": "2026-11-26T10:58:46+09:00",
+          "publishedAt": "2026-11-26T10:58:46+09:00",
+          "foreignNews": [],
+          "domesticNews": [
+            {
+              "id": "dart-20261126900163",
+              "region": "domestic",
+              "category": "국내공시",
+              "title": "우원개발, 약 1,527.8억원 공급계약 체결",
+              "summary": "우원개발은 2026년 11월 26일 (주)한화와 '수도권광역급행철도C노선중『토공 및 구조물공1구간』' 공급계약을 체결했다. 계약금액은 약 1,527.8억원(부가세 제외)으로, 공시에 기재된 매출액 약 3,763.5억원의 40.59%다. 계약기간은 2026년 11월 26일부터 2031년 9월 14일까지다.",
+              "publishedAt": "2026-11-26T00:00:00+09:00",
+              "publishedAtPrecision": "date",
+              "checkedAt": "2026-11-26T10:58:46+09:00",
+              "sourceName": "금융감독원 DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900163",
+              "relatedStocks": [
+                "우원개발"
+              ],
+              "generatedBy": "code",
+              "impactRank": 1
+            },
+            {
+              "id": "dart-20261126900132",
+              "region": "domestic",
+              "category": "국내공시",
+              "title": "유니테스트, 약 123.1억원 공급계약 체결",
+              "summary": "유니테스트는 2026년 11월 25일 Micron Semiconductor Technology India와 '반도체 검사장비 (GEN6 SSD TESTER)' 공급계약을 체결했다. 계약금액은 약 123.1억원으로, 공시에 기재된 매출액 약 1,102억원의 11.17%다. 계약기간은 2026년 11월 25일부터 2027년 3월 20일까지다. 종료일은 변경될 수 있다.",
+              "publishedAt": "2026-11-26T00:00:00+09:00",
+              "publishedAtPrecision": "date",
+              "checkedAt": "2026-11-26T10:58:46+09:00",
+              "sourceName": "금융감독원 DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900132",
+              "relatedStocks": [
+                "유니테스트"
+              ],
+              "generatedBy": "code",
+              "impactRank": 2
+            },
+            {
+              "id": "dart-20261126900002",
+              "region": "domestic",
+              "category": "국내공시",
+              "title": "성도이엔지, 558억원 계약 해지",
+              "summary": "성도이엔지는 2026년 11월 25일 주식회사 왕궁로지스와 '왕궁로지스 복합물류단지 신축 프로젝트' 계약을 해지했다. 해지금액은 558억원(부가세 제외)으로, 공시에 기재된 매출액 약 6,956.9억원의 8.02%다. 해지사유는 '계약 상대방의 계약상 주요 의무 미이행에 따른 계약상 해지 합의'이다. 비교 기준 매출액은 2019년 말 값이다.",
+              "publishedAt": "2026-11-26T00:00:00+09:00",
+              "publishedAtPrecision": "date",
+              "checkedAt": "2026-11-26T10:58:46+09:00",
+              "sourceName": "금융감독원 DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900002",
+              "relatedStocks": [
+                "성도이엔지"
+              ],
+              "generatedBy": "code",
+              "impactRank": 3
+            },
+            {
+              "id": "dart-20261126000191",
+              "region": "domestic",
+              "category": "국내공시",
+              "title": "한창제지, 주요사항보고서(자기주식취득결정)",
+              "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000191",
+              "publishedAt": "2026-11-26T00:00:00+09:00",
+              "publishedAtPrecision": "date",
+              "checkedAt": "2026-11-26T10:58:46+09:00",
+              "sourceName": "금융감독원 DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000191",
+              "relatedStocks": [
+                "한창제지"
+              ],
+              "generatedBy": "link",
+              "impactRank": 4
+            },
+            {
+              "id": "dart-20261126000182",
+              "region": "domestic",
+              "category": "국내공시",
+              "title": "AJ네트웍스, 주요사항보고서(자기주식취득신탁계약체결결정)",
+              "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000182",
+              "publishedAt": "2026-11-26T00:00:00+09:00",
+              "publishedAtPrecision": "date",
+              "checkedAt": "2026-11-26T10:58:46+09:00",
+              "sourceName": "금융감독원 DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000182",
+              "relatedStocks": [
+                "AJ네트웍스"
+              ],
+              "generatedBy": "link",
+              "impactRank": 5
+            },
+            {
+              "id": "dart-20261126900171",
+              "region": "domestic",
+              "category": "국내공시",
+              "title": "셀루메드, 조회공시요구(풍문또는보도)에대한답변(미확정)",
+              "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900171",
+              "publishedAt": "2026-11-26T00:00:00+09:00",
+              "publishedAtPrecision": "date",
+              "checkedAt": "2026-11-26T10:58:46+09:00",
+              "sourceName": "금융감독원 DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900171",
+              "relatedStocks": [
+                "셀루메드"
+              ],
+              "generatedBy": "link",
+              "impactRank": 6
+            },
+            {
+              "id": "dart-20261126900147",
+              "region": "domestic",
+              "category": "국내공시",
+              "title": "케이아이엔엑스, 조회공시요구(풍문또는보도)에대한답변(미확정)",
+              "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900147",
+              "publishedAt": "2026-11-26T00:00:00+09:00",
+              "publishedAtPrecision": "date",
+              "checkedAt": "2026-11-26T10:58:46+09:00",
+              "sourceName": "금융감독원 DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900147",
+              "relatedStocks": [
+                "케이아이엔엑스"
+              ],
+              "generatedBy": "link",
+              "impactRank": 7
+            },
+            {
+              "id": "dart-20261126900130",
+              "region": "domestic",
+              "category": "국내공시",
+              "title": "씨씨에스, 기타경영사항(자율공시) (상장폐지결정 등 효력정지 가처분 신청)",
+              "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900130",
+              "publishedAt": "2026-11-26T00:00:00+09:00",
+              "publishedAtPrecision": "date",
+              "checkedAt": "2026-11-26T10:58:46+09:00",
+              "sourceName": "금융감독원 DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900130",
+              "relatedStocks": [
+                "씨씨에스"
+              ],
+              "generatedBy": "link",
+              "impactRank": 8
+            },
+            {
+              "id": "dart-20261126900119",
+              "region": "domestic",
+              "category": "국내공시",
+              "title": "위세아이텍, 수시공시의무관련사항(공정공시) (주주가치 제고를 위한 2026년 결산배당 확대 및 자기주식 소각 계획 안내)",
+              "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900119",
+              "publishedAt": "2026-11-26T00:00:00+09:00",
+              "publishedAtPrecision": "date",
+              "checkedAt": "2026-11-26T10:58:46+09:00",
+              "sourceName": "금융감독원 DART",
+              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900119",
+              "relatedStocks": [
+                "위세아이텍"
+              ],
+              "generatedBy": "link",
+              "impactRank": 9
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "partial"
+        }
+      ]
+    }
+  ]
+}
