@@ -1,0 +1,16 @@
+name: DART probe (no repository writes)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: PYTHONDONTWRITEBYTECODE=1 python3 scripts/dart_probe.py
