@@ -118,6 +118,9 @@ def contract(company, report, text):
             lines.append(f'계약기간은 {day_kr(period.group(1))}부터 {day_kr(period.group(2))}까지다.')
         if re.search(r'종료일[^.]{0,80}변경될 수', text):
             lines.append('종료일은 변경될 수 있다.')
+    base_year = re.search(r'매출[^※]{0,120}?(\d{4})년말', text)
+    if base_year:
+        lines.append(f'비교 기준 매출액은 {base_year.group(1)}년 말 값이다.')
     title = f"{company}, {won(amount.group(1))} {'계약 해지' if cancel else '공급계약 체결'}"
     return title, ' '.join(lines)
 

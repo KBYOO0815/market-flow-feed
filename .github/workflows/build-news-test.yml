@@ -1,0 +1,24 @@
+name: Build market-news-test.json (manual)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the test feed
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_news_test.py
+      - name: Commit only the test file
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add market-news-test.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Update market-news-test.json'
+          git pull --rebase origin main
+          git push origin HEAD:main
