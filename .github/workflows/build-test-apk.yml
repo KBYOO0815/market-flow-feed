@@ -1,0 +1,69 @@
+name: Build test APK reading market-news-test.json (no release)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  EXPO_PUBLIC_FEED_URL: https://raw.githubusercontent.com/KBYOO0815/market-flow-feed/main/market-news-test.json
+  APP_COMMIT: 5adbfa2
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: KBYOO0815/market-flow-android
+          fetch-depth: 0
+          persist-credentials: false
+      - run: git checkout -q "$APP_COMMIT"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install Android SDK components
+        run: |
+          sdk_root="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          "$sdk_root/cmdline-tools/latest/bin/sdkmanager" --sdk_root="$sdk_root" 'platforms;android-37.0' 'build-tools;37.0.0' 'ndk;27.1.12297006'
+          echo "ANDROID_HOME=$sdk_root" >> "$GITHUB_ENV"
+      - run: npm ci --no-audit --no-fund
+      - run: npm run check && npm run check:feeds
+      - env:
+          CI: '1'
+        run: npx expo prebuild --platform android --no-install
+      - working-directory: android
+        run: ./gradlew assembleRelease --no-daemon
+      - name: Confirm the test feed address is inside the bundle
+        run: unzip -p android/app/build/outputs/apk/release/app-release.apk assets/index.android.bundle | grep -a -c 'market-news-test.json'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: market-flow-00-39-newsfeed-test-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
+          if-no-files-found: error
+  device:
+    needs: apk
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/download-artifact@v4
+        with:
+          name: market-flow-00-39-newsfeed-test-apk
+          path: apk
+      - name: Show the news screen on an Android 15 emulator
+        run: bash scripts/emulate-news-test.sh apk/app-release.apk
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsfeed-test-screens
+          path: evidence/
+          if-no-files-found: ignore
