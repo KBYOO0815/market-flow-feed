@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "test": true,
-  "updatedAt": "2026-11-26T11:06:55+09:00",
+  "updatedAt": "2026-11-26T11:08:20+09:00",
   "navigation": {
     "previous": [],
     "today": [
@@ -23,8 +23,8 @@
       "sessions": [
         {
           "slot": "07:40",
-          "asOf": "2026-11-26T11:06:55+09:00",
-          "publishedAt": "2026-11-26T11:06:55+09:00",
+          "asOf": "2026-11-26T11:08:20+09:00",
+          "publishedAt": "2026-11-26T11:08:20+09:00",
           "foreignNews": [],
           "domesticNews": [
             {
@@ -32,10 +32,10 @@
               "region": "domestic",
               "category": "국내공시",
               "title": "한창제지, 5억원 자기주식 취득 결정",
-              "summary": "한창제지는 2026년 11월 26일 보통주 235,849주(취득예정금액 5억원)를 취득하기로 결정했다. 취득예상기간은 2026년 11월 27일부터 2027년 2월 26일까지다. 취득방법은 '장내직접취득', 취득목적은 '주가안정 및 주주가치 제고'이다.",
+              "summary": "한창제지는 2026년 11월 26일 보통주 235,849주(취득예정금액 5억원)를 취득하기로 결정했다. 취득예상기간은 2026년 11월 27일부터 2027년 2월 26일까지다. 취득방법은 '장내직접취득', 취득목적은 '주가안정 및 주주가치 제고'이다. 주가 변동 등에 따라 실제 취득금액과 수량은 달라질 수 있다.",
               "publishedAt": "2026-11-26T00:00:00+09:00",
               "publishedAtPrecision": "date",
-              "checkedAt": "2026-11-26T11:06:55+09:00",
+              "checkedAt": "2026-11-26T11:08:20+09:00",
               "sourceName": "금융감독원 DART",
               "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000191",
               "relatedStocks": [
@@ -49,10 +49,10 @@
               "region": "domestic",
               "category": "국내공시",
               "title": "AJ네트웍스, 23억원 자기주식 취득 신탁계약 결정",
-              "summary": "AJ네트웍스는 2026년 11월 26일 한국투자증권과 23억원 규모의 자기주식 취득 신탁계약을 체결하기로 결정했다. 계약기간은 2026년 11월 26일부터 2027년 11월 25일까지다. 계약목적은 '주주가치 제고 및 임직원 주식 보상'이다.",
+              "summary": "AJ네트웍스는 2026년 11월 26일 한국투자증권과 23억원 규모의 자기주식 취득 신탁계약을 체결하기로 결정했다. 계약기간은 2026년 11월 26일부터 2027년 11월 25일까지다. 계약목적은 '주주가치 제고 및 임직원 주식 보상'이다. 주가 변동 등에 따라 실제 취득 수량은 달라질 수 있다.",
               "publishedAt": "2026-11-26T00:00:00+09:00",
               "publishedAtPrecision": "date",
-              "checkedAt": "2026-11-26T11:06:55+09:00",
+              "checkedAt": "2026-11-26T11:08:20+09:00",
               "sourceName": "금융감독원 DART",
               "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126000182",
               "relatedStocks": [
@@ -69,7 +69,7 @@
               "summary": "우원개발은 2026년 11월 26일 (주)한화와 '수도권광역급행철도C노선중『토공 및 구조물공1구간』' 공급계약을 체결했다. 계약금액은 약 1,527.8억원(부가세 제외)으로, 공시에 기재된 매출액 약 3,763.5억원의 40.59%다. 계약기간은 2026년 11월 26일부터 2031년 9월 14일까지다.",
               "publishedAt": "2026-11-26T00:00:00+09:00",
               "publishedAtPrecision": "date",
-              "checkedAt": "2026-11-26T11:06:55+09:00",
+              "checkedAt": "2026-11-26T11:08:20+09:00",
               "sourceName": "금융감독원 DART",
               "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900163",
               "relatedStocks": [
@@ -86,7 +86,7 @@
               "summary": "유니테스트는 2026년 11월 25일 Micron Semiconductor Technology India와 '반도체 검사장비 (GEN6 SSD TESTER)' 공급계약을 체결했다. 계약금액은 약 123.1억원으로, 공시에 기재된 매출액 약 1,102억원의 11.17%다. 계약기간은 2026년 11월 25일부터 2027년 3월 20일까지다. 종료일은 변경될 수 있다.",
               "publishedAt": "2026-11-26T00:00:00+09:00",
               "publishedAtPrecision": "date",
-              "checkedAt": "2026-11-26T11:06:55+09:00",
+              "checkedAt": "2026-11-26T11:08:20+09:00",
               "sourceName": "금융감독원 DART",
               "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900132",
               "relatedStocks": [
@@ -103,7 +103,7 @@
               "summary": "성도이엔지는 2026년 11월 25일 주식회사 왕궁로지스와 '왕궁로지스 복합물류단지 신축 프로젝트' 계약을 해지했다. 해지금액은 558억원(부가세 제외)으로, 공시에 기재된 매출액 약 6,956.9억원의 8.02%다. 해지사유는 '계약 상대방의 계약상 주요 의무 미이행에 따른 계약상 해지 합의'이다. 비교 기준 매출액은 2019년 말 값이다.",
               "publishedAt": "2026-11-26T00:00:00+09:00",
               "publishedAtPrecision": "date",
-              "checkedAt": "2026-11-26T11:06:55+09:00",
+              "checkedAt": "2026-11-26T11:08:20+09:00",
               "sourceName": "금융감독원 DART",
               "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900002",
               "relatedStocks": [
@@ -120,7 +120,7 @@
               "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900187",
               "publishedAt": "2026-11-26T00:00:00+09:00",
               "publishedAtPrecision": "date",
-              "checkedAt": "2026-11-26T11:06:55+09:00",
+              "checkedAt": "2026-11-26T11:08:20+09:00",
               "sourceName": "금융감독원 DART",
               "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900187",
               "relatedStocks": [
@@ -137,7 +137,7 @@
               "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900171",
               "publishedAt": "2026-11-26T00:00:00+09:00",
               "publishedAtPrecision": "date",
-              "checkedAt": "2026-11-26T11:06:55+09:00",
+              "checkedAt": "2026-11-26T11:08:20+09:00",
               "sourceName": "금융감독원 DART",
               "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900171",
               "relatedStocks": [
@@ -154,7 +154,7 @@
               "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900147",
               "publishedAt": "2026-11-26T00:00:00+09:00",
               "publishedAtPrecision": "date",
-              "checkedAt": "2026-11-26T11:06:55+09:00",
+              "checkedAt": "2026-11-26T11:08:20+09:00",
               "sourceName": "금융감독원 DART",
               "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900147",
               "relatedStocks": [
@@ -171,7 +171,7 @@
               "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900130",
               "publishedAt": "2026-11-26T00:00:00+09:00",
               "publishedAtPrecision": "date",
-              "checkedAt": "2026-11-26T11:06:55+09:00",
+              "checkedAt": "2026-11-26T11:08:20+09:00",
               "sourceName": "금융감독원 DART",
               "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900130",
               "relatedStocks": [
@@ -188,7 +188,7 @@
               "summary": "DART 원문 확인: https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900119",
               "publishedAt": "2026-11-26T00:00:00+09:00",
               "publishedAtPrecision": "date",
-              "checkedAt": "2026-11-26T11:06:55+09:00",
+              "checkedAt": "2026-11-26T11:08:20+09:00",
               "sourceName": "금융감독원 DART",
               "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900119",
               "relatedStocks": [
