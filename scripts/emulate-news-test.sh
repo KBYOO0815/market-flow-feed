@@ -11,9 +11,10 @@ sudo chmod g+rw /dev/kvm
 image='system-images;android-35;google_apis;x86_64'
 sdkmanager --sdk_root="$ANDROID_HOME" 'platform-tools' 'emulator' "$image" > /dev/null
 printf 'no\n' | avdmanager create avd --force --name news --package "$image"
-emulator -avd news -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect > evidence/emulator.log 2>&1 &
+emulator -avd news -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect -dns-server 8.8.8.8,1.1.1.1 > evidence/emulator.log 2>&1 &
 trap 'adb emu kill || true' EXIT
 timeout 300 bash -c 'adb wait-for-device; until [[ $(adb shell getprop sys.boot_completed | tr -d "\r") == 1 ]]; do sleep 3; done'
+timeout 120 bash -c 'until adb shell ping -c 1 raw.githubusercontent.com 2>&1 | grep -q "^PING "; do sleep 5; done' || echo 'WARNING: emulator could not resolve the feed host'
 adb shell wm size 1080x2400
 adb shell wm density 420
 adb shell input keyevent 82
