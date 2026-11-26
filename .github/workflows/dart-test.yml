@@ -1,0 +1,23 @@
+name: DART API test (no repository writes)
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch today's disclosure list
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: |
+          if [ -z "$DART_API_KEY" ]; then echo "DART_API_KEY secret is missing"; exit 1; fi
+          today=$(TZ=Asia/Seoul date +%Y%m%d)
+          for cls in Y K; do
+            curl -sS --retry 2 --max-time 30 -G https://opendart.fss.or.kr/api/list.json \
+              --data-urlencode "crtfc_key=$DART_API_KEY" \
+              -d "bgn_de=$today" -d "end_de=$today" -d "corp_cls=$cls" -d "page_count=100" -o "$cls.json"
+            echo "market=$cls date=$today $(jq -c '{status, message, total_count, total_page}' "$cls.json")"
+            jq -r '(.list // [])[:8][] | [.corp_name, .report_nm, .rcept_no] | @tsv' "$cls.json"
+          done
+          jq -e '.status == "000" or .status == "013"' Y.json >/dev/null
