@@ -1,6 +1,7 @@
 """Builds market-news-test.json from DART. No AI. Never touches market-news.json."""
 import datetime, json
-from dart_news_test import KEYWORDS, contract, document, listing
+from dart_news_test import KEYWORDS, contract, document, get, listing
+from templates import DIVIDEND_REPORT, TREASURY_APIS, dividend, treasury
 
 OUTPUT = 'market-news-test.json'
 SLOTS = ['07:40', '11:40', '15:40', '19:40', '22:40']
@@ -29,6 +30,14 @@ def main():
         if '단일판매' in report:
             text = document(number)
             made = contract(company, report, text) if text else None
+        elif report.replace(' ', '') in TREASURY_APIS:
+            api = TREASURY_APIS[report.replace(' ', '')]
+            data = json.loads(get(api + '.json', corp_code=row['corp_code'], bgn_de=row['rcept_dt'], end_de=row['rcept_dt']))
+            match = [x for x in data.get('list', []) if x.get('rcept_no') == number]
+            made = treasury(company, api, match[0]) if match else None
+        elif report.replace(' ', '') == DIVIDEND_REPORT:
+            text = document(number)
+            made = dividend(company, report, text) if text else None
         item = {
             'id': f'dart-{number}', 'region': 'domestic', 'category': '국내공시',
             'title': made[0] if made else f'{company}, {report}',
