@@ -4,7 +4,6 @@ on:
 permissions:
   contents: read
 env:
-  EXPO_PUBLIC_FEED_URL: https://raw.githubusercontent.com/KBYOO0815/market-flow-feed/main/market-news-test.json
   APP_COMMIT: 5adbfa2
 jobs:
   apk:
@@ -35,6 +34,8 @@ jobs:
           CI: '1'
         run: npx expo prebuild --platform android --no-install
       - working-directory: android
+        env:
+          EXPO_PUBLIC_FEED_URL: https://raw.githubusercontent.com/KBYOO0815/market-flow-feed/main/market-news-test.json
         run: ./gradlew assembleRelease --no-daemon
       - name: Confirm the test feed address is inside the bundle
         run: unzip -p android/app/build/outputs/apk/release/app-release.apk assets/index.android.bundle | grep -a -c 'market-news-test.json'
