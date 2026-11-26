@@ -33,8 +33,16 @@ for i in range(8):
     if not new:
         break
     seen += new
-    adb('shell', 'input', 'swipe', '540', '1900', '540', '800', '600')
-    time.sleep(2)
+    adb('shell', 'input', 'swipe', '540', '1700', '540', '900', '800')
+    time.sleep(3)
+    pid = subprocess.run(['adb', 'shell', 'pidof', 'com.kbyoo0815.marketflow'], capture_output=True).stdout.decode().strip()
+    focus = [l.strip() for l in adb('shell', 'dumpsys', 'window').decode(errors='replace').splitlines() if 'mCurrentFocus' in l]
+    print(f'DIAG after swipe {i}: pid={pid or "none"} {focus}')
 print('\n'.join(seen))
+print('DIAG crash buffer:')
+print(adb('logcat', '-d', '-b', 'crash').decode(errors='replace')[-4000:])
+print('DIAG app lines:')
+log = adb('logcat', '-d').decode(errors='replace').splitlines()
+print('\n'.join([l for l in log if re.search(r'FATAL|ANR in|ReactNativeJS|Force finishing|has died|lowmemorykiller.*marketflow', l)][-40:]))
 (out / 'texts.txt').write_text('\n'.join(seen), encoding='utf-8')
 assert any('자기주식' in t for t in seen), 'test feed items are not on screen'
