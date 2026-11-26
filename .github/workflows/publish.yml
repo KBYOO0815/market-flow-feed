@@ -1,0 +1,15 @@
+name: Publish (connection test)
+on:
+  workflow_dispatch:
+    inputs:
+      scheduled_at:
+        required: false
+        type: string
+permissions: {}
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          SCHEDULED_AT: ${{ inputs.scheduled_at }}
+        run: echo "scheduled_at=$SCHEDULED_AT now=$(date -u +%FT%TZ)"
