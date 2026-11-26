@@ -21,7 +21,17 @@ def kdate(v):
 def amount(v):
     return None if blank(v) or not re.fullmatch(r'[\d,]+', str(v).strip()) else won(str(v).strip())
 
-def treasury(company, api, row):
+def caveat(text):
+    """Keeps the filing's own warning that the bought amount or share count can change."""
+    if not text:
+        return ' 상세 조건은 DART 원문에서 확인해야 한다.'
+    for s in re.split(r'(?<=다\.)', text):
+        if '실제' in s and '수량' in s and ('변동' in s or '달라' in s):
+            what = '취득금액과 수량' if '금액' in s[s.index('실제'):] else '취득 수량'
+            return f' 주가 변동 등에 따라 실제 {josa(what, "은", "는")} 달라질 수 있다.'
+    return ''
+
+def treasury(company, api, row, text=None):
     subject = josa(company, '은', '는')
     if api == 'tsstkAqDecsn':
         if not blank(row.get('aqpln_stk_estk')) or not blank(row.get('aqpln_prc_estk')):
@@ -32,7 +42,7 @@ def treasury(company, api, row):
             return None
         return (f'{company}, {money} 자기주식 취득 결정',
                 f"{subject} {decided} 보통주 {shares}주(취득예정금액 {money})를 취득하기로 결정했다. "
-                f"취득예상기간은 {begin}부터 {end}까지다. 취득방법은 '{line(row['aq_mth'])}', 취득목적은 '{line(row['aq_pp'])}'이다.")
+                f"취득예상기간은 {begin}부터 {end}까지다. 취득방법은 '{line(row['aq_mth'])}', 취득목적은 '{line(row['aq_pp'])}'이다." + caveat(text))
     decided, begin, end = (kdate(row.get(k)) for k in ('bddd', 'ctr_pd_bgd', 'ctr_pd_edd'))
     money = amount(row.get('ctr_prc'))
     if not (decided and begin and end and money) or blank(row.get('ctr_cns_int')) or blank(row.get('ctr_pp')):
@@ -40,7 +50,7 @@ def treasury(company, api, row):
     broker = line(row['ctr_cns_int']).replace('(주)', '').replace('주식회사', '').strip()
     return (f'{company}, {money} 자기주식 취득 신탁계약 결정',
             f"{subject} {decided} {josa(broker, '과', '와')} {money} 규모의 자기주식 취득 신탁계약을 체결하기로 결정했다. "
-            f"계약기간은 {begin}부터 {end}까지다. 계약목적은 '{line(row['ctr_pp'])}'이다.")
+            f"계약기간은 {begin}부터 {end}까지다. 계약목적은 '{line(row['ctr_pp'])}'이다." + caveat(text))
 
 def dividend(company, report, text):
     if report.replace(' ', '') != DIVIDEND_REPORT:

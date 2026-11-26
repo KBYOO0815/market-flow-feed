@@ -34,7 +34,7 @@ def main():
             api = TREASURY_APIS[report.replace(' ', '')]
             data = json.loads(get(api + '.json', corp_code=row['corp_code'], bgn_de=row['rcept_dt'], end_de=row['rcept_dt']))
             match = [x for x in data.get('list', []) if x.get('rcept_no') == number]
-            made = treasury(company, api, match[0]) if match else None
+            made = treasury(company, api, match[0], document(number)) if match else None
         elif report.replace(' ', '') == DIVIDEND_REPORT:
             text = document(number)
             made = dividend(company, report, text) if text else None
