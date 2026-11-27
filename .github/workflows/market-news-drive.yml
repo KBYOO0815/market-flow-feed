@@ -1,0 +1,106 @@
+name: News from Google Drive
+on:
+  schedule:
+    # UTC 23:00/05/10 = KST 08:00/05/10 next day.
+    - cron: '0,5,10 23 * * *'
+    - cron: '20,25,30 6 * * *'
+  workflow_dispatch:
+    inputs:
+      slot:
+        type: choice
+        options: ['08:00', '15:20']
+        default: '08:00'
+      publish:
+        description: 'Publish current eligible edition (unchecked = read-only Drive test)'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/market-news-drive.yml'
+      - 'scripts/publish_market_news.py'
+      - 'scripts/test_publish_market_news.py'
+permissions:
+  contents: read
+concurrency:
+  group: market-news-drive
+  cancel-in-progress: false
+jobs:
+  test:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s scripts -p test_publish_market_news.py
+      - name: Read-only Drive test
+        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.publish)
+        env:
+          NEWS_DRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.NEWS_DRIVE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -z "$NEWS_DRIVE_SERVICE_ACCOUNT_JSON" ]; then
+            echo "::warning::Drive credential not configured; authenticated smoke test not run"
+            exit 0
+          fi
+          python -m pip install 'google-auth[requests]==2.40.3'
+          python scripts/publish_market_news.py --check
+  publish:
+    needs: test
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.publish))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'google-auth[requests]==2.40.3'
+      - name: Publish current edition
+        env:
+          NEWS_DRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.NEWS_DRIVE_SERVICE_ACCOUNT_JSON }}
+          EVENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+          MANUAL_SLOT: ${{ inputs.slot }}
+        run: |
+          set -euo pipefail
+          if [ -z "$NEWS_DRIVE_SERVICE_ACCOUNT_JSON" ]; then
+            echo "::error::Drive credential not configured; no publication"
+            exit 1
+          fi
+          if [[ "$EVENT" == schedule ]]; then
+            case "$CRON" in
+              '0,5,10 23 * * *') slot=08:00 ;;
+              '20,25,30 6 * * *') slot=15:20 ;;
+              *) exit 1 ;;
+            esac
+          else
+            slot="$MANUAL_SLOT"
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            rm -f .market-news-input-failed
+            python scripts/publish_market_news.py --slot "$slot"
+            if git diff --quiet -- market-news.json; then
+              test ! -f .market-news-input-failed
+              exit
+            fi
+            git add -- market-news.json
+            git commit -m "Publish news ($slot)"
+            if git push origin HEAD:main; then
+              git fetch origin main
+              git merge-base --is-ancestor HEAD origin/main
+              test ! -f .market-news-input-failed
+              exit
+            fi
+          done
+          exit 1

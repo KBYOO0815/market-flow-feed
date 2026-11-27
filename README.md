@@ -1,11 +1,11 @@
 # Market Flow — JSON feeds
 
-단순 운영 구조: **시황: Gemini → Google Drive → GitHub Actions → GitHub JSON → Android 앱**. 뉴스·특징주 기존 운영은 별도.
+단순 운영 구조: **시황: Gemini → Google Drive → GitHub Actions → GitHub JSON → Android 앱**. 뉴스: Claude → Google Drive → GitHub Actions → GitHub JSON → Android 앱. 특징주는 별도.
 
 ## 운영 파일
 
 - `market-status.json` — 시황: 07:11 KST(월~토, 미국 휴장일 포함), 15:41 KST(당일 KRX 거래일).
-- `market-news.json` — 뉴스: 한국장 거래일 07:40, 11:40, 15:40, 19:40 (KST).
+- `market-news.json` — 뉴스: 매일 08:00, 15:20 (KST), 2026-11-28부터.
 - `featured-stocks-unified.json` — 특징주: 한국장 거래일 08:40, 09:40, 11:40, 13:40, 15:40, 19:40 (KST).
 
 시황은 Gemini가 수집·분석하고 GitHub Actions가 Drive 입력 검증·병합·발행을 담당합니다. Android 앱은 JSON을 읽어 표시합니다.
@@ -21,7 +21,7 @@
 
 **주의:** 기존 설치 APK는 구형 경로를 읽을 수 있으므로 새 APK 설치 전까지 일부 피드가 작동하지 않을 수 있습니다. 통합 파일 기반 앱 소스의 빌드 및 실기기 검증은 별도로 필요합니다.
 
-시황 발행은 아래 워크플로를 사용합니다. 뉴스·특징주 기존 방식은 변경하지 않습니다. 예전 작업과 발행 이력은 이 저장소의 Git 이력 및 보관 기록에서 조회할 수 있습니다.
+시황 발행은 아래 워크플로를 사용합니다. 특징주 기존 방식은 변경하지 않습니다. 예전 작업과 발행 이력은 이 저장소의 Git 이력 및 보관 기록에서 조회할 수 있습니다.
 
 ## 시황 Drive 연동
 
@@ -33,3 +33,11 @@
 - D/D-1만 보관하며 navigation.next는 빈 배열입니다. 이전 발행 이력은 Git 기록에 보존됩니다. 미연결/휴장/오류는 missing/skipped/failed로 표시합니다.
 - 코드 변경 시 단위 테스트 및 미국·한국 양쪽 Drive 읽기 전용 검증을 실행합니다. 수동 실행은 기본 읽기 전용이며 publish 체크 시에만 운영 발행을 시도합니다.
 - 2026-11-27 미국·한국 Drive 파일은 연동 테스트용이므로 두 회차 모두 운영 발행하지 않습니다. 이후 미국은 월~토 당일 신규 분석, 한국은 KRX 거래일 신규 분석만 발행합니다.
+
+## 뉴스 Drive 연동
+
+- Claude 매일 07:50/15:10 KST 수집, 08:00/15:20 이전 저장. 폴더 ID `1YBXHGxCZut2F1qLAqF7ryebg8EDyoXrQ`, 파일명 `market-news-YYYY-MM-DD-0800.json` / `market-news-YYYY-MM-DD-1520.json`. 동일 이름 중 생성 시각 최신 파일을 조회합니다.
+- 전용 Google Cloud 서비스 계정에 Drive API를 활성화하고 news 폴더만 뷰어로 공유합니다. 서비스 계정 JSON은 GitHub Actions repository secret `NEWS_DRIVE_SERVICE_ACCOUNT_JSON`에 저장합니다. 공개 공유 및 Play 인증 재사용 금지. 인증 없이는 운영 파일을 변경하지 않습니다.
+- Workflow `.github/workflows/market-news-drive.yml`: 매일 08:00/05/10, 15:20/25/30 KST. GitHub 예약 실행 지연 가능. 성공 회차 중복 발행 방지. 수동 기본은 읽기 전용 테스트 파일 검증이며 testOnly 입력은 운영 제외.
+- 입력 date, slot, asOf, foreignNews, domesticNews. 각 배열 최대 10개, 기존 뉴스 항목 필드 유지. 빈 배열은 정상 수집 완료일 때만 허용. 날짜/회차/관측 시각/출처/중복 형식 검증 후 기존 앱의 days[].sessions[]로 병합. D/D-1 유지, 기존 정상 회차 보존. 기사 사실 자체는 Claude가 검증합니다.
+- 최초 운영일 2026-11-28. 기존 뉴스 JSON은 실제 첫 발행 전까지 유지. 앱, 시황, 특징주 변경 없음.
