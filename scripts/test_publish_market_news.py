@@ -1,7 +1,7 @@
 import datetime as dt
 import unittest
 from copy import deepcopy
-from publish_market_news import KST, validate, merge, filename, session_for
+from publish_market_news import KST, validate, merge, filename, session_for, matching_ids
 
 DAY = dt.date(2026, 11, 28)
 NOW = dt.datetime(2026, 11, 28, 8, 1, tzinfo=KST)
@@ -12,6 +12,12 @@ ITEM = {"id": "fixture", "title": "Fixture", "summary": "Fixture", "sourceName":
 class NewsTests(unittest.TestCase):
     def test_filename(self):
         self.assertEqual(filename(DAY, "08:00"), "market-news-2026-11-28-0800.json")
+    def test_public_folder_exact_name(self):
+        html = '<a href="https://drive.google.com/file/d/abcdefghijk/view"><div>market-news-2026-11-28-0800.json</div></a><a href="https://drive.google.com/file/d/zzzzzzzzzzz/view">market-news-2026-11-28-0800.json.bak</a>'
+        self.assertEqual(matching_ids(html, filename(DAY, "08:00")), ["abcdefghijk"])
+    def test_public_folder_duplicates(self):
+        html = '<a href="/file/d/abcdefghijk/view">market-news-2026-11-28-0800.json</a><a href="/file/d/zzzzzzzzzzz/view">market-news-2026-11-28-0800.json</a>'
+        self.assertEqual(matching_ids(html, filename(DAY, "08:00")), ["abcdefghijk", "zzzzzzzzzzz"])
     def test_empty_valid(self):
         self.assertEqual(validate(BASE, DAY, "08:00", NOW)["foreignNews"], [])
     def test_test_marker(self):

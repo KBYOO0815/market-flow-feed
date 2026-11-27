@@ -3,9 +3,11 @@ import argparse
 import copy
 import datetime as dt
 import json
-import os
+import re
+from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, parse_qs, urljoin
+from urllib.request import Request, urlopen
 
 KST = dt.timezone(dt.timedelta(hours=9))
 FOLDER = "1YBXHGxCZut2F1qLAqF7ryebg8EDyoXrQ"
@@ -114,36 +116,74 @@ def merge(feed, day, slot, now, edition=None, failure=None):
         out["updatedAt"] = now.isoformat(timespec="seconds")
     return out
 
-def drive_session():
-    from google.oauth2 import service_account
-    from google.auth.transport.requests import AuthorizedSession
-    secret = os.environ.get("NEWS_DRIVE_SERVICE_ACCOUNT_JSON")
-    if not secret:
-        raise RuntimeError("NEWS_DRIVE_SERVICE_ACCOUNT_JSON not configured")
-    credentials = service_account.Credentials.from_service_account_info(
-        json.loads(secret), scopes=["https://www.googleapis.com/auth/drive.readonly"])
-    return AuthorizedSession(credentials)
+def public_read(url, limit):
+    req = Request(url, headers={"User-Agent": "MarketFlow/1.0", "Cache-Control": "no-cache"})
+    with urlopen(req, timeout=30) as response:
+        body = response.read(limit + 1)
+    if len(body) > limit:
+        raise ValueError("Public Drive response too large")
+    return body
 
-def download(session, file_id):
-    with session.get(f"https://www.googleapis.com/drive/v3/files/{file_id}", params={"alt": "media"}, timeout=30, stream=True) as r:
-        r.raise_for_status()
-        buf = bytearray()
-        for chunk in r.iter_content(65536):
-            buf.extend(chunk)
-            if len(buf) > LIMIT:
-                raise ValueError("Input exceeds 1 MiB")
-    return json.loads(buf.decode("utf-8-sig"), parse_constant=lambda x: (_ for _ in ()).throw(ValueError("Invalid JSON constant")))
+class FolderLinks(HTMLParser):
+    """Read file links from the public Drive embedded folder view."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.links = []
+        self.current = None
 
-def find_file(session, day, slot):
-    name = filename(day, slot)
-    query = f"'{FOLDER}' in parents and trashed = false and name = '{name}'"
-    r = session.get("https://www.googleapis.com/drive/v3/files", params={
-        "q": query, "fields": "files(id,name,createdTime),nextPageToken", "orderBy": "createdTime desc", "pageSize": 100}, timeout=30)
-    r.raise_for_status()
-    files = r.json().get("files", [])
-    if not files:
-        raise FileNotFoundError("Current Drive edition missing")
-    return files[0]["id"]
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "a":
+            url = urlsplit(urljoin("https://drive.google.com", attrs.get("href") or ""))
+            match = re.search(r"/file/d/([A-Za-z0-9_-]+)(?:/|$)", url.path)
+            fid = match.group(1) if match else parse_qs(url.query).get("id", [""])[0]
+            self.current = [fid, [attrs.get("title") or "", attrs.get("aria-label") or ""]] if url.hostname == "drive.google.com" and re.fullmatch(r"[A-Za-z0-9_-]{10,}", fid) else None
+        elif self.current:
+            self.current[1].extend([attrs.get("title") or "", attrs.get("aria-label") or ""])
+
+    def handle_data(self, data):
+        if self.current:
+            self.current[1].append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "a" and self.current:
+            self.links.append((self.current[0], " ".join(self.current[1])))
+            self.current = None
+
+def matching_ids(html, name):
+    parser = FolderLinks()
+    parser.feed(html)
+    pattern = re.compile(r"(?<![\w.-])" + re.escape(name) + r"(?![\w.-])")
+    return sorted({fid for fid, title in parser.links if pattern.search(title)})
+
+def folder_ids(name):
+    html = public_read(f"https://drive.google.com/embeddedfolderview?id={FOLDER}#list", 8 * LIMIT).decode("utf-8")
+    ids = matching_ids(html, name)
+    if not ids:
+        raise FileNotFoundError("Current file not found in public folder listing")
+    return ids
+
+def download(file_id):
+    if not re.fullmatch(r"[A-Za-z0-9_-]{10,}", file_id):
+        raise ValueError("Invalid Drive file ID")
+    body = public_read(f"https://drive.google.com/uc?export=download&id={file_id}", LIMIT)
+    return json.loads(body.decode("utf-8-sig"), parse_constant=lambda x: (_ for _ in ()).throw(ValueError("Invalid JSON constant")))
+
+def load_edition(day, slot, now):
+    candidates = []
+    for fid in folder_ids(filename(day, slot)):
+        data = download(fid)
+        # Exclude explicit test inputs even when they use the production name.
+        if isinstance(data, dict) and data.get("testOnly") is True:
+            continue
+        edition = validate(data, day, slot, now)
+        candidates.append((stamp(edition["asOf"]), edition))
+    if not candidates:
+        raise ValueError("No eligible production file")
+    candidates.sort(key=lambda x: x[0], reverse=True)
+    if len(candidates) > 1 and candidates[0][0] == candidates[1][0]:
+        raise ValueError("Ambiguous duplicate observation")
+    return candidates[0][1]
 
 def main():
     parser = argparse.ArgumentParser()
@@ -153,10 +193,12 @@ def main():
     now = dt.datetime.now(KST)
     day = now.date()
     if args.check:
-        with drive_session() as session:
-            data = download(session, TEST_ID)
+        ids = folder_ids("market-news-test-2026-11-27.json")
+        if TEST_ID not in ids:
+            raise ValueError("Known test file not found in public listing")
+        data = download(TEST_ID)
         validate(data, dt.date(2026, 11, 27), "15:20", now, test=True)
-        print("Drive test input verified; no publication")
+        print("Public folder filename lookup and anonymous JSON download verified; no publication")
         return
     if day < LIVE_FROM or now < at(day, args.slot):
         print("Outside eligible publication date/time")
@@ -172,9 +214,7 @@ def main():
     edition = None
     failure = None
     try:
-        with drive_session() as session:
-            data = download(session, find_file(session, day, args.slot))
-        edition = validate(data, day, args.slot, dt.datetime.now(KST))
+        edition = load_edition(day, args.slot, dt.datetime.now(KST))
     except Exception as exc:
         # Do not log credentials, URLs with tokens, or private input.
         failure = "Drive 뉴스 입력 조회 또는 검증 실패 (" + type(exc).__name__ + ")"

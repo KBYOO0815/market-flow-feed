@@ -36,8 +36,8 @@
 
 ## 뉴스 Drive 연동
 
-- Claude 매일 07:50/15:10 KST 수집, 08:00/15:20 이전 저장. 폴더 ID `1YBXHGxCZut2F1qLAqF7ryebg8EDyoXrQ`, 파일명 `market-news-YYYY-MM-DD-0800.json` / `market-news-YYYY-MM-DD-1520.json`. 동일 이름 중 생성 시각 최신 파일을 조회합니다.
-- 전용 Google Cloud 서비스 계정에 Drive API를 활성화하고 news 폴더만 뷰어로 공유합니다. 서비스 계정 JSON은 GitHub Actions repository secret `NEWS_DRIVE_SERVICE_ACCOUNT_JSON`에 저장합니다. 공개 공유 및 Play 인증 재사용 금지. 인증 없이는 운영 파일을 변경하지 않습니다.
+- Claude 매일 07:50/15:10 KST 수집, 08:00/15:20 이전 저장. 폴더 ID `1YBXHGxCZut2F1qLAqF7ryebg8EDyoXrQ`, 파일명 `market-news-YYYY-MM-DD-0800.json` / `market-news-YYYY-MM-DD-1520.json`. 동일 이름의 정상 입력 중 asOf가 가장 최신인 파일을 선택하고 동률이면 실패 처리합니다.
+- news 폴더만 링크 공개 뷰어로 설정합니다. 공개 embeddedfolderview HTML에서 정확한 파일명과 ID를 찾고 공개 다운로드 URL로 JSON을 읽습니다. 서비스 계정/API 키 불필요. 공식 Drive API가 아닌 공개 웹 화면에 의존하므로 화면 변경 또는 목록 제한 시 실패할 수 있습니다. 장기 운영 시 폴더 내 파일 수 관리가 필요합니다. 상위 폴더 공유 변경 없음.
 - Workflow `.github/workflows/market-news-drive.yml`: 매일 08:00/05/10, 15:20/25/30 KST. GitHub 예약 실행 지연 가능. 성공 회차 중복 발행 방지. 수동 기본은 읽기 전용 테스트 파일 검증이며 testOnly 입력은 운영 제외.
 - 입력 date, slot, asOf, foreignNews, domesticNews. 각 배열 최대 10개, 기존 뉴스 항목 필드 유지. 빈 배열은 정상 수집 완료일 때만 허용. 날짜/회차/관측 시각/출처/중복 형식 검증 후 기존 앱의 days[].sessions[]로 병합. D/D-1 유지, 기존 정상 회차 보존. 기사 사실 자체는 Claude가 검증합니다.
 - 최초 운영일 2026-11-28. 기존 뉴스 JSON은 실제 첫 발행 전까지 유지. 앱, 시황, 특징주 변경 없음.
