@@ -1,7 +1,7 @@
 import copy
 import unittest
 from datetime import date, datetime
-from publish_market_status import KST, SLOTS, edition, eligible, process, session, validate
+from publish_market_status import KST, SLOTS, DRIVE_IDS, edition, eligible, process, session, validate
 
 
 def payload(day="2026-11-28", market="2026-11-27"):
@@ -68,6 +68,36 @@ class TestPublisher(unittest.TestCase):
         p["asOf"] = "2026-11-28T07:12:00+09:00"
         with self.assertRaises(ValueError):
             eligible(p,"us",now)
+
+    def test_kr_drive_and_live_merge(self):
+        self.assertEqual(DRIVE_IDS["kr"], "1bdjidvH5e--QmCX3_gde4p7vM6KEUhn3")
+        self.assertNotEqual(DRIVE_IDS["us"], DRIVE_IDS["kr"])
+        day = "2026-12-01"
+        p = payload(day, day)
+        p["slot"] = "15:41"
+        p["asOf"] = day + "T15:35:00+09:00"
+        now = datetime(2026,12,1,15,41,tzinfo=KST)
+        f = feed()
+        us = payload(day, "2026-11-30")
+        process(f,"us",datetime(2026,12,1,7,11,tzinfo=KST),DRIVE_IDS["us"],lambda _: us)
+        process(f,"kr",now,DRIVE_IDS["kr"],lambda _: p)
+        self.assertEqual(set(f["days"][0]["editions"]), {"07:11", "15:41"})
+        e = f["days"][0]["editions"]["15:41"]
+        self.assertEqual(e["content"],p["content"])
+        self.assertEqual(e["display"]["headline"],"한국 시황")
+        self.assertEqual(f["navigation"]["today"][1]["state"],"published")
+        saved = copy.deepcopy(f)
+        process(f,"kr",now,DRIVE_IDS["kr"],lambda _: self.fail("duplicate must not download"))
+        self.assertEqual(f,saved)
+
+    def test_kr_test_date_and_stale(self):
+        p = payload("2026-11-27","2026-11-27")
+        p["slot"] = "15:41"
+        p["asOf"] = "2026-11-27T15:30:00+09:00"
+        with self.assertRaisesRegex(ValueError,"integration test date"):
+            eligible(p,"kr",datetime(2026,11,27,15,51,tzinfo=KST))
+        with self.assertRaisesRegex(ValueError,"stale"):
+            eligible(p,"kr",datetime(2026,11,30,15,41,tzinfo=KST))
 
 
 if __name__ == "__main__":

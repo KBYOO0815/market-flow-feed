@@ -3,7 +3,6 @@ import argparse
 import copy
 import json
 import math
-import os
 from datetime import date, datetime, time, timedelta
 from pathlib import Path
 from urllib.parse import urlencode, urlparse
@@ -14,7 +13,12 @@ import exchange_calendars as xc
 
 KST = ZoneInfo("Asia/Seoul")
 SLOTS = {"us": "07:11", "kr": "15:41"}
-US_ID = "1Wwtn3wBgHJAiz0Lih-P6ZC3DHu8GTpn0"
+DRIVE_IDS = {
+    "us": "1Wwtn3wBgHJAiz0Lih-P6ZC3DHu8GTpn0",
+    "kr": "1bdjidvH5e--QmCX3_gde4p7vM6KEUhn3",
+}
+# 2026-11-27 KR input was explicitly generated for integration testing.
+KR_LIVE_FROM = date(2026, 11, 28)
 LIMIT = 1024 * 1024
 TYPES = ["text", "metric", "list", "table", "link"]
 FEED = Path("market-status.json")
@@ -105,6 +109,7 @@ def eligible(data, region, now):
     require(close is not None, "market closed: no new session")
     require(data["date"] == str(day) and data["slot"] == SLOTS[region], "stale or wrong edition")
     require(data["marketDate"] == str(market_day(day, region)), "stale or wrong marketDate")
+    require(region != "kr" or day >= KR_LIVE_FROM, "KR integration test date; no live publication")
     observed = timestamp(data["asOf"])
     require(close <= observed <= now, "observation must be after close and not in future")
     require(not any("테스트:" in str(x.get("title", "")) or "테스트용" in str(x.get("title", ""))
@@ -224,10 +229,11 @@ def main():
     parser.add_argument("--check", action="store_true", help="download and validate only; never write")
     args = parser.parse_args()
     now = datetime.now(KST)
-    file_id = US_ID if args.region == "us" else os.environ.get("MARKET_STATUS_KR_DRIVE_ID", "")
+    file_id = DRIVE_IDS[args.region]
     if args.check:
         data = download(file_id)
-        print("Drive download and schema OK:", data["date"], data["slot"], len(data["content"]), "items")
+        require(data["slot"] == SLOTS[args.region], "Drive file belongs to wrong region")
+        print("Drive download and schema OK:", args.region, data["date"], data["slot"], len(data["content"]), "items")
         # Exercise legacy conversion without writing anything.
         result = edition(data, now)
         require(result["content"] == data["content"], "content changed")
