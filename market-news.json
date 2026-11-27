@@ -1,632 +1,31 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-26T07:47:25+09:00",
+  "updatedAt": "2026-11-27T16:27:38+09:00",
   "navigation": {
     "previous": [
       {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "slot": "07:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "11:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "15:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "19:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "22:40",
         "state": "published"
       }
     ],
     "today": [
       {
-        "date": "2026-11-26",
-        "slot": "07:40",
-        "state": "published"
+        "date": "2026-11-27",
+        "slot": "08:00",
+        "state": "published",
+        "reason": "앱 표출 검증용 테스트 발행"
       },
       {
-        "date": "2026-11-26",
-        "slot": "11:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-26",
-        "slot": "15:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-26",
-        "slot": "19:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-26",
-        "slot": "22:40",
-        "state": "scheduled"
+        "date": "2026-11-27",
+        "slot": "15:20",
+        "state": "published",
+        "reason": "앱 표출 검증용 테스트 발행"
       }
     ],
     "next": []
   },
   "days": [
-    {
-      "date": "2026-11-25",
-      "isKrxTradingDay": true,
-      "displaySlots": [
-        "07:40",
-        "11:40",
-        "15:40",
-        "19:40",
-        "22:40"
-      ],
-      "sessions": [
-        {
-          "slot": "07:40",
-          "asOf": "2026-11-25T07:40:05+09:00",
-          "publishedAt": "2026-11-25T07:45:02+09:00",
-          "foreignNews": [
-            {
-              "id": "foreign-20261125-dell-q3-ai-server-record",
-              "title": "델, AI 서버 수요에 연간 매출 전망 2,020억달러로 상향",
-              "summary": "델은 FY2027 매출 전망을 1,920억달러에서 2,020억달러로, AI 최적화 서버 매출 전망을 740억달러에서 780억달러로 높였다. 3분기 AI 서버 신규 주문은 602억달러, 기말 수주잔고는 1,323억달러였고 추가 250억달러 자사주 매입도 승인했다. 엔비디아 GPU와 서버용 메모리·HBM 수요의 강도를 보여 한국 반도체 공급망에 직접적인 영향을 줄 수 있다.",
-              "publishedAt": "2026-11-25T06:06:57+09:00",
-              "checkedAt": "2026-11-25T07:45:02+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/business/dell-lifts-annual-forecasts-after-record-quarter-surging-ai-server-demand-2026-11-24/",
-              "relatedStocks": [
-                "델 테크놀로지스(DELL)",
-                "엔비디아(NVDA)",
-                "삼성전자(005930)",
-                "SK하이닉스(000660)"
-              ],
-              "impactRank": 1,
-              "category": "AI서버·반도체·실적",
-              "region": "foreign",
-              "eventKey": "dell-fy2027-q3-results-20261124",
-              "factKey": "revenue-guidance-202bn-ai-server-guidance-78bn-backlog-132-3bn"
-            },
-            {
-              "id": "foreign-20261125-us-consumer-confidence-november",
-              "title": "미국 11월 소비자신뢰 103.3…약 2년 만의 최고",
-              "summary": "콘퍼런스보드 소비자신뢰지수는 10월 91.9에서 11월 103.3으로 상승해 2025년 1월 이후 최고를 기록했고 시장 예상 92.5를 크게 웃돌았다. 일자리가 풍부하다는 응답은 30.8, 구하기 어렵다는 응답은 18.4였고 1년 기대인플레이션은 4.5%로 낮아졌다. 소비 기대 개선과 함께 연준의 추가 긴축 경계에도 영향을 줄 수 있다.",
-              "publishedAt": "2026-11-25T00:23:13+09:00",
-              "checkedAt": "2026-11-25T07:45:02+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/us/us-consumer-confidence-surges-highest-level-nearly-two-years-2026-11-24/",
-              "relatedStocks": [],
-              "impactRank": 2,
-              "category": "미국경제·소비·금리",
-              "region": "foreign",
-              "eventKey": "us-conference-board-consumer-confidence-202611",
-              "factKey": "index-103-3-jobs-plentiful-30-8-inflation-expectations-4-5"
-            },
-            {
-              "id": "foreign-20261125-schumer-nvidia-export-control-accusation",
-              "title": "미 민주당 상원 지도부, 엔비디아 CEO의 수출통제법 위반 주장",
-              "summary": "척 슈머 민주당 상원 원내대표는 젠슨 황 엔비디아 CEO가 첨단 칩을 중국에 수출해 연방법을 위반했다고 주장했다. 엔비디아와 백악관은 즉각 답변하지 않았으며 위법이 확정된 것은 아니다. 황 CEO는 12월 3일 상원 은행위원회 공개 청문회에 출석할 예정이어서 대중국 AI칩 규제와 엔비디아 관련 불확실성이 커졌다.",
-              "publishedAt": "2026-11-25T03:46:46+09:00",
-              "checkedAt": "2026-11-25T07:45:02+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/china/schumer-accuses-nvidia-ceo-violating-us-export-control-law-2026-11-24/",
-              "relatedStocks": [
-                "엔비디아(NVDA)",
-                "삼성전자(005930)",
-                "SK하이닉스(000660)"
-              ],
-              "impactRank": 3,
-              "category": "AI반도체·미중수출통제",
-              "region": "foreign",
-              "eventKey": "nvidia-huang-us-congress-export-control-scrutiny-202611",
-              "factKey": "schumer-alleges-export-control-violation-hearing-20261203"
-            },
-            {
-              "id": "foreign-20261125-netherlands-match-act-asml",
-              "title": "네덜란드 의원들, ASML 겨냥 미국 MATCH 법안 저지 촉구",
-              "summary": "네덜란드 의원들은 미국 의회가 검토 중인 MATCH 법안이 동맹국에 더 강한 대중국 장비 수출통제를 요구하고 불응 시 ASML 침지식 DUV 장비 등에 미국의 일방 제한을 가할 수 있다며 정부 대응을 촉구했다. ASML은 중국이 올해 매출의 약 20%를 차지할 것으로 보고 있어 글로벌 반도체 장비·중국 투자 사이클의 변수다.",
-              "publishedAt": "2026-11-25T06:21:23+09:00",
-              "checkedAt": "2026-11-25T07:45:02+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/china/dutch-lawmakers-urge-government-resist-us-match-bill-targeting-asml-2026-11-24/",
-              "relatedStocks": [
-                "ASML(ASML)",
-                "삼성전자(005930)",
-                "SK하이닉스(000660)"
-              ],
-              "impactRank": 4,
-              "category": "반도체장비·미중수출통제",
-              "region": "foreign",
-              "eventKey": "us-match-act-allied-chip-tool-controls-2026",
-              "factKey": "dutch-lawmakers-urge-resistance-asml-duv-restrictions"
-            },
-            {
-              "id": "foreign-20261125-workday-q3-ai-guidance",
-              "title": "워크데이, AI 제품 신규 계약 3배 증가…연간 구독매출 전망 상향",
-              "summary": "워크데이는 3분기 매출 27억500만달러, 구독매출 25억3,200만달러를 기록했다고 발표했다. AI 제품의 신규 연간계약가치는 약 1억5천만달러로 전년 대비 3배를 넘었고, FY2027 구독매출 전망을 99억5,800만달러로 상향했다. 기업용 AI 소프트웨어 지출 지속성을 보여주는 지표다.",
-              "publishedAt": "2026-11-25T06:02:00+09:00",
-              "checkedAt": "2026-11-25T07:45:02+09:00",
-              "sourceName": "Workday·SEC",
-              "sourceUrl": "https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2027-Third-Quarter-Financial-Results/default.aspx",
-              "relatedStocks": [
-                "워크데이(WDAY)"
-              ],
-              "impactRank": 5,
-              "category": "기업용소프트웨어·AI·실적",
-              "region": "foreign",
-              "eventKey": "workday-fy2027-q3-results-20261124",
-              "factKey": "ai-new-acv-150m-subscription-guidance-9-958bn"
-            },
-            {
-              "id": "foreign-20261125-hp-q4-results",
-              "title": "HP, 4분기 매출 160억달러…AI PC 출하 비중 약 60%",
-              "summary": "HP는 FY2026 4분기 매출 160억달러로 전년 대비 9.3% 증가했고 비GAAP 주당순이익은 0.83달러였다고 발표했다. AI PC가 출하의 약 60%를 차지했으며 2027회계연도 비GAAP 주당순이익 전망은 3.15~3.45달러다. 회사는 메모리·스토리지 비용 압력을 명시해 PC 수요와 메모리 가격의 상반된 영향을 보여줬다.",
-              "publishedAt": "2026-11-25T06:15:00+09:00",
-              "checkedAt": "2026-11-25T07:45:02+09:00",
-              "sourceName": "HP",
-              "sourceUrl": "https://www.globenewswire.com/news-release/2026/11/24/3409888/0/en/hp-inc-reports-fiscal-2026-full-year-and-fourth-quarter-results-announces-dividend-increase.html",
-              "relatedStocks": [
-                "HP(HPQ)",
-                "삼성전자(005930)",
-                "SK하이닉스(000660)"
-              ],
-              "impactRank": 6,
-              "category": "PC·AI기기·메모리·실적",
-              "region": "foreign",
-              "eventKey": "hp-fy2026-q4-results-20261124",
-              "factKey": "q4-revenue-16bn-ai-pc-nearly-60pct-shipments"
-            }
-          ],
-          "domesticNews": [
-            {
-              "id": "domestic-20261125-bok-business-survey-november",
-              "title": "한국은행, 11월 제조업·비제조업 기업심리 동반 하락",
-              "summary": "한국은행의 11월 기업심리지수는 제조업이 전월보다 0.8포인트 낮은 104.8, 비제조업이 0.7포인트 낮은 102.5를 기록했다. 경제심리지수는 0.9포인트 하락한 99.9였다. 국내 경기·내수 기대의 둔화를 보여 업종별 실적 기대와 금리 전망에 영향을 줄 수 있다.",
-              "publishedAt": "2026-11-25T06:00:00+09:00",
-              "checkedAt": "2026-11-25T07:45:02+09:00",
-              "sourceName": "한국은행",
-              "sourceUrl": "https://www.bok.or.kr/portal/bbs/B0000501/view.do?depth=201264&menuNo=201264&nttId=11066975&programType=newsData&relate=Y",
-              "relatedStocks": [],
-              "impactRank": 1,
-              "category": "국내경기·기업심리",
-              "region": "domestic",
-              "eventKey": "bok-business-survey-202611",
-              "factKey": "manufacturing-104-8-nonmanufacturing-102-5-esi-99-9"
-            },
-            {
-              "id": "domestic-20261125-fki-eu-recycled-material-rules-survey",
-              "title": "EU 수출기업 55.9%, 재생원료 의무 규제 대응계획 미수립",
-              "summary": "한국경제인협회가 EU 수출기업 202곳을 조사한 결과 43.1%가 재생원료 사용 의무 규제 내용을 충분히 파악하지 못했고 55.9%는 대응계획을 수립하지 않은 것으로 나타났다. 가장 큰 애로는 재생원료 확보·비용 부담 42.1%로, 자동차·배터리·전자·화학·포장재 수출기업의 비용과 공급망 대응 필요성을 보여준다.",
-              "publishedAt": "2026-11-25T06:00:00+09:00",
-              "checkedAt": "2026-11-25T07:45:02+09:00",
-              "sourceName": "한국경제인협회·뉴스핌",
-              "sourceUrl": "https://www.newspim.com/news/view/20261124000570",
-              "relatedStocks": [
-                "현대차(005380)",
-                "기아(000270)",
-                "LG에너지솔루션(373220)",
-                "삼성SDI(006400)",
-                "LG화학(051910)"
-              ],
-              "impactRank": 2,
-              "category": "EU환경규제·수출·재생원료",
-              "region": "domestic",
-              "eventKey": "fki-eu-recycled-material-rules-survey-20261125",
-              "factKey": "202-exporters-43-1pct-unaware-55-9pct-no-plan"
-            }
-          ],
-          "usThemes": [],
-          "researchStatus": "complete",
-          "researchAudit": {
-            "windowStartExclusive": "2026-11-24T22:40:06+09:00",
-            "windowEndInclusive": "2026-11-25T07:40:05+09:00",
-            "checkedAt": "2026-11-25T07:45:02+09:00",
-            "currentWindowDiscoveryStatus": "complete",
-            "sources": [
-              "Reuters",
-              "한국은행",
-              "HP",
-              "Workday",
-              "SEC",
-              "한국경제인협회",
-              "뉴스핌",
-              "연합뉴스",
-              "뉴시스",
-              "DART/KRX 개장 전 공시 피드"
-            ],
-            "exclusions": [
-              "2026-11-24 22:40:06 KST 이전 공개된 포스코 셰일가스 인수·EU 하이브리드 잠정조치·삼성 준감위 판단",
-              "최초 공개시각을 확정하지 못한 미국 장 마감 시황·유가 정산 기사",
-              "단순 전망·목표주가·예정 일정·기존 사건 재보도"
-            ]
-          }
-        },
-        {
-          "slot": "11:40",
-          "asOf": "2026-11-25T11:40:04+09:00",
-          "publishedAt": "2026-11-25T11:43:26+09:00",
-          "foreignNews": [
-            {
-              "id": "foreign-20261125-australia-cpi-october",
-              "title": "호주 10월 소비자물가 4.9% 상승…근원물가도 3.8%",
-              "summary": "호주 통계청은 10월 소비자물가지수가 전월 대비 0.5%, 전년 대비 4.9% 상승했다고 발표했다. 연간 상승률은 9월 4.3%에서 확대됐고, 절사평균 근원물가 상승률도 3.6%에서 3.8%로 높아졌다. 물가가 호주중앙은행 목표 범위를 웃돌아 아시아 금리·환율과 위험자산 심리에 긴축 압력으로 작용할 수 있다.",
-              "publishedAt": "2026-11-25T09:30:00+09:00",
-              "checkedAt": "2026-11-25T11:43:26+09:00",
-              "sourceName": "호주통계청(ABS)·Reuters",
-              "sourceUrl": "https://www.abs.gov.au/media-centre/media-releases/cpi-rose-49-year-october-2026",
-              "relatedStocks": [],
-              "impactRank": 1,
-              "category": "호주경제·물가·금리",
-              "region": "foreign",
-              "eventKey": "australia-cpi-202610",
-              "factKey": "headline-yoy-4-9-mom-0-5-trimmed-mean-yoy-3-8",
-              "impactReason": "예상보다 강한 물가와 근원물가 재상승은 호주 금리 경로와 아시아 통화·주식의 할인율 기대에 영향을 줄 수 있다.",
-              "corroboratingSourceUrl": "https://www.reuters.com/world/asia-pacific/australian-inflation-heats-up-october-core-hits-two-year-high-2026-11-25/"
-            }
-          ],
-          "domesticNews": [
-            {
-              "id": "domestic-20261125-kospi-sell-sidecar-morning",
-              "title": "코스피 장중 5%대 급락…매도 사이드카 발동",
-              "summary": "한국거래소에 따르면 코스피는 오전 9시20분 전일 대비 4.89% 내린 4761.17을 기록했고, 오전 9시8분32초 유가증권시장 매도 사이드카가 발동됐다. 같은 시각 외국인과 기관은 각각 7152억원, 1345억원 순매도했다. 미국 AI·반도체주 약세가 국내 대형 반도체주와 시장 전반의 위험회피로 이어진 장중 시장 상태다.",
-              "publishedAt": "2026-11-25T09:27:00+09:00",
-              "checkedAt": "2026-11-25T11:43:26+09:00",
-              "sourceName": "뉴스핌·한국거래소",
-              "sourceUrl": "https://ir.newspim.com/news/view/20261125000239",
-              "relatedStocks": [
-                "삼성전자(005930)",
-                "SK하이닉스(000660)"
-              ],
-              "impactRank": 1,
-              "category": "국내증시·수급·반도체",
-              "region": "domestic",
-              "eventKey": "krx-kospi-intraday-sell-sidecar-20261125",
-              "factKey": "sell-sidecar-090832-kospi-4761-17-down-4-89pct",
-              "impactReason": "외국인·기관 동반 매도와 반도체 대형주 급락이 동시에 나타난 시장 전체 충격으로, 당일 한국 주식시장의 변동성과 업종 수급에 직접 영향을 준다.",
-              "corroboratingSourceUrl": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/"
-            }
-          ],
-          "usThemes": [],
-          "researchStatus": "complete",
-          "researchAudit": {
-            "windowStartExclusive": "2026-11-25T07:40:05+09:00",
-            "windowEndInclusive": "2026-11-25T11:40:04+09:00",
-            "checkedAt": "2026-11-25T11:43:26+09:00",
-            "currentWindowDiscoveryStatus": "complete",
-            "sources": [
-              "Reuters",
-              "호주통계청(ABS)",
-              "한국거래소 인용 보도",
-              "뉴스핌",
-              "DART/KIND/KRX 공시 피드",
-              "국내 정부·기업 발표",
-              "유력 인사 공식발언 및 신뢰매체 보도"
-            ],
-            "exclusions": [
-              "07:40 이전 최초 공개된 미국 관세 조사 보도와 기존 사건 후속 재보도",
-              "회사 확인이 없는 경영권 매각설 및 거래소 조회공시 요구",
-              "최초 공개시각이 조사창 밖이거나 확정되지 않은 피터 틸·일론 머스크·젠슨 황·G7 정상·최태원 관련 보도",
-              "시장 영향이 제한적인 정례 행사·예정 발표·단순 전망"
-            ]
-          }
-        },
-        {
-          "slot": "15:40",
-          "asOf": "2026-11-25T15:40:05+09:00",
-          "publishedAt": "2026-11-25T15:41:01+09:00",
-          "foreignNews": [],
-          "domesticNews": [
-            {
-              "id": "domestic-20261125-kospi-close-4721",
-              "title": "코스피 5.69% 급락한 4,721.35 마감…외국인 2조원대 순매도",
-              "summary": "한국거래소 집계 기준 코스피는 4,721.35로 전일 대비 5.69% 하락했고 코스닥은 651.61로 2.14% 내렸다. 유가증권시장에서 외국인은 2조824억원, 기관은 2,783억원 순매도했고 개인은 1조9,582억원 순매수했다. 오전 급락·매도 사이드카 이후에도 반도체 중심 위험회피가 이어진 최종 마감 수치다.",
-              "publishedAt": "2026-11-25T15:30:00+09:00",
-              "observedAt": "2026-11-25T15:30:00+09:00",
-              "checkedAt": "2026-11-25T15:41:01+09:00",
-              "sourceName": "한국거래소 집계·알파패스",
-              "sourceUrl": "https://www.alphapass.kr/today",
-              "relatedStocks": [
-                "삼성전자(005930)",
-                "SK하이닉스(000660)"
-              ],
-              "impactRank": 1,
-              "category": "국내증시·수급·반도체",
-              "region": "domestic",
-              "eventKey": "krx-kospi-intraday-sell-sidecar-20261125",
-              "factKey": "regular-close-kospi-4721-35-down-5-69-foreign-net-sell-20824eok",
-              "impactReason": "장중 급락이 종가까지 이어지고 외국인 순매도가 2조원을 넘은 확정 마감치로, 한국 대형주와 다음 거래일 위험선호에 직접 영향을 준다."
-            },
-            {
-              "id": "domestic-20261125-kyungdong-plant-contract",
-              "title": "경동인베스트 자회사, 온산 플랜트 공사 362억5천만원 수주",
-              "summary": "경동인베스트는 주요 자회사 경동이앤에스가 케이앤제이피엠과 온산 PM Project 건설 공사 계약을 체결했다고 공시했다. 계약금액은 362억5천만원으로 자회사 2025년 매출의 52.36%이며, 계약기간은 2026년 11월24일부터 2027년 11월15일까지다. 자회사 연간 매출의 절반을 넘는 신규 수주로 향후 공사 매출에 직접 영향을 줄 수 있다.",
-              "publishedAt": "2026-11-25T12:09:00+09:00",
-              "checkedAt": "2026-11-25T15:41:01+09:00",
-              "sourceName": "금융감독원 DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800208",
-              "relatedStocks": [
-                "경동인베스트(012320)"
-              ],
-              "impactRank": 2,
-              "category": "수주·플랜트건설",
-              "region": "domestic",
-              "eventKey": "kyungdong-ens-onsan-pm-project-20261124",
-              "factKey": "contract-36-25bn-52-36pct-through-20271115",
-              "impactReason": "계약 규모가 자회사 최근 연매출의 52.36%로 커서 매출 인식과 수주잔고에 미치는 영향이 크다.",
-              "corroboratingSourceUrl": "https://www.bosoop.com/disclosures/20261125800208/"
-            }
-          ],
-          "usThemes": [],
-          "researchStatus": "complete",
-          "researchAudit": {
-            "windowStartExclusive": "2026-11-25T11:40:04+09:00",
-            "windowEndInclusive": "2026-11-25T15:40:05+09:00",
-            "checkedAt": "2026-11-25T15:41:01+09:00",
-            "currentWindowDiscoveryStatus": "complete",
-            "sources": [
-              "Reuters",
-              "한국거래소 집계 시세·수급",
-              "DART/KIND/KRX 공시 피드",
-              "연합뉴스",
-              "뉴시스",
-              "국내 정부·기업 발표",
-              "유력 인사 공식발언 및 신뢰매체 보도"
-            ],
-            "exclusions": [
-              "11:40 이전 최초 공개된 서진시스템·대성하이텍 수주와 오전 장중 시황",
-              "공식 발표 전 단계인 미국 과잉생산 관세 예상 보도의 반복 기사",
-              "최초 공개시각이 조사창 밖이거나 새로운 확정 사실이 없는 G7 정상·피터 틸·일론 머스크·젠슨 황·최태원 관련 보도",
-              "카카오뱅크 27만주 소각 등 시장 전체 영향과 규모가 제한적인 공시",
-              "루머·단순 전망·기존 사건 설명 기사"
-            ]
-          }
-        },
-        {
-          "slot": "19:40",
-          "asOf": "2026-11-25T19:40:05+09:00",
-          "publishedAt": "2026-11-25T19:46:48+09:00",
-          "foreignNews": [],
-          "domesticNews": [
-            {
-              "id": "domestic-20261125-sk-hynix-value-up-100tn",
-              "title": "SK하이닉스, FY2026 주주환원 100조원 추진 계획 공시",
-              "summary": "SK하이닉스는 2026년 기업가치 제고 이행현황에서 FY2026 기준 현금배당 30조원 이상, 자사주 매입·소각 60조원 이상을 포함한 총 100조원 규모의 주주환원을 추진한다고 밝혔다. 3분기 말 누적 매출 237조원과 순현금 99조원을 재원 기반으로 제시했으며, 장래 계획은 시장·경영환경에 따라 변경될 수 있다.",
-              "publishedAt": "2026-11-25T17:49:35+09:00",
-              "checkedAt": "2026-11-25T19:46:48+09:00",
-              "sourceName": "금융감독원 DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800766",
-              "relatedStocks": [
-                "SK하이닉스(000660)",
-                "삼성전자(005930)"
-              ],
-              "impactRank": 1,
-              "category": "반도체·주주환원·밸류업",
-              "region": "domestic",
-              "eventKey": "sk-hynix-2026-value-up-shareholder-return",
-              "factKey": "fy2026-shareholder-return-plan-100tn-cash-dividend-30tn-buyback-cancel-60tn",
-              "impactReason": "국내 시가총액 상위 반도체 기업의 대규모 배당·자사주 매입 및 소각 계획으로, SK하이닉스의 자본배분과 반도체 대형주 수급에 직접 영향을 줄 수 있다.",
-              "corroboratingSourceUrl": "https://www.newspim.com/news/view/20261125001253"
-            },
-            {
-              "id": "domestic-20261125-samsung-electro-mechanics-treasury-cancel",
-              "title": "삼성전기, 보통주 200만주·우선주 5만3,430주 전량 소각",
-              "summary": "삼성전기는 보유 자기주식 보통주 200만주와 우선주 5만3,430주를 12월 2일 전량 소각하기로 했다. 장부가액 기준 소각 예정금액은 1,467억원이며, 11월 24일 종가 기준 시장가치는 약 1조7,319억원이다. 기존 자기주식 소각이어서 추가 현금 유출과 자본금 감소는 없다.",
-              "publishedAt": "2026-11-25T17:30:00+09:00",
-              "checkedAt": "2026-11-25T19:46:48+09:00",
-              "sourceName": "금융감독원 DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800735",
-              "relatedStocks": [
-                "삼성전기(009150)"
-              ],
-              "impactRank": 2,
-              "category": "전자부품·자사주소각·주주환원",
-              "region": "domestic",
-              "eventKey": "samsung-electro-mechanics-treasury-share-cancellation-20261125",
-              "factKey": "cancel-common-2000000-preferred-53430-book-146-7bn-market-1-7319tn",
-              "impactReason": "보유 자기주식 전량 소각으로 유통주식 수가 감소해 주당가치와 주주환원 기대에 직접 영향을 주는 확정 결정이다.",
-              "corroboratingSourceUrl": "https://www.yna.co.kr/view/AKR20261125166100003"
-            },
-            {
-              "id": "domestic-20261125-hanwha-ocean-thai-frigate-cancelled",
-              "title": "한화오션, 태국 호위함 사업 취소로 우선협상대상자 지위 상실",
-              "summary": "한화오션은 9월 8일 태국 해군 호위함 사업 우선협상대상자로 선정됐으나, 태국 해군이 11월 25일 사업 조달 취소를 공고하면서 우선협상대상자 지위를 상실했다고 공시했다. 계약 체결 전 단계였지만 해외 함정 수주 기대가 소멸한 후속 확정 사실이다.",
-              "publishedAt": "2026-11-25T17:41:04+09:00",
-              "checkedAt": "2026-11-25T19:46:48+09:00",
-              "sourceName": "금융감독원 DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800748",
-              "relatedStocks": [
-                "한화오션(042660)"
-              ],
-              "impactRank": 3,
-              "category": "방산·조선·해외수주",
-              "region": "domestic",
-              "eventKey": "hanwha-ocean-thailand-frigate-procurement-2026",
-              "factKey": "thai-navy-cancels-procurement-preferred-bidder-status-lost",
-              "impactReason": "해외 군함 수주 후보 지위가 공식적으로 소멸해 한화오션의 방산 수주잔고 기대와 조선·방산 투자심리에 부정적 영향을 줄 수 있다."
-            },
-            {
-              "id": "domestic-20261125-ccs-delisting-decision",
-              "title": "코스닥시장위원회, 씨씨에스 상장폐지 의결…27일부터 정리매매",
-              "summary": "코스닥시장위원회는 씨씨에스충북방송 주권의 상장폐지를 의결했다. 거래정지는 11월 27일 정리매매 개시를 위해 해제되며 정리매매는 12월 7일까지 7매매일, 상장폐지 예정일은 12월 8일이다. 상장폐지 사유는 기업 계속성과 경영 투명성 등을 종합적으로 고려해 기준에 해당한다고 판단한 것이다.",
-              "publishedAt": "2026-11-25T17:35:31+09:00",
-              "checkedAt": "2026-11-25T19:46:48+09:00",
-              "sourceName": "한국거래소·DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900743",
-              "relatedStocks": [
-                "씨씨에스(066790)"
-              ],
-              "impactRank": 4,
-              "category": "상장폐지·시장조치",
-              "region": "domestic",
-              "eventKey": "ccs-kosdaq-delisting-review-2025-2026",
-              "factKey": "kosdaq-committee-delisting-decision-settlement-trading-20261127-to-20261207",
-              "impactReason": "상장 유지 여부가 최종 상장폐지 절차로 전환된 회사 존속·환금성 관련 핵심 시장조치다.",
-              "corroboratingSourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900759"
-            },
-            {
-              "id": "domestic-20261125-daol-sale-rumor-response",
-              "title": "다올투자증권, 경영권 매각설에 “구체적으로 결정된 사항 없어”",
-              "summary": "다올투자증권은 최대주주 이병철 회장의 경영권 매각 타진 보도와 관련한 한국거래소 조회공시에 현재까지 구체적으로 결정된 사항이 없다고 답했다. 구체적 사항이 결정되는 시점 또는 12월 24일까지 재공시할 예정이다.",
-              "publishedAt": "2026-11-25T16:45:18+09:00",
-              "checkedAt": "2026-11-25T19:46:48+09:00",
-              "sourceName": "한국거래소·DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800622",
-              "relatedStocks": [
-                "다올투자증권(030210)"
-              ],
-              "impactRank": 5,
-              "category": "증권·경영권·조회공시",
-              "region": "domestic",
-              "eventKey": "daol-investment-securities-control-sale-report-20261125",
-              "factKey": "company-says-no-concrete-decision-reannounce-by-20261224",
-              "impactReason": "당일 경영권 매각 보도와 주가 변동에 대해 회사가 공식 입장을 낸 후속 사실로, 거래 기대의 확정성과 불확실성을 동시에 재평가하게 한다.",
-              "corroboratingSourceUrl": "https://www.newsis.com/view/NISX20261125_0003883261"
-            },
-            {
-              "id": "domestic-20261125-roche-systems-us-equipment-contract",
-              "title": "로체시스템즈, 미국 제조장비 246억원 공급계약",
-              "summary": "로체시스템즈는 미국 지역 제조장비 공급계약을 체결했다. 계약금액은 246억162만원으로 2025년 매출액의 19.70%이며 계약기간은 2026년 11월 24일부터 2027년 11월 10일까지다. 계약 상대방은 영업비밀 요청에 따라 공시가 유보됐다.",
-              "publishedAt": "2026-11-25T17:46:55+09:00",
-              "checkedAt": "2026-11-25T19:46:48+09:00",
-              "sourceName": "금융감독원 DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900755",
-              "relatedStocks": [
-                "로체시스템즈(071280)"
-              ],
-              "impactRank": 6,
-              "category": "디스플레이·반도체장비·수주",
-              "region": "domestic",
-              "eventKey": "roche-systems-us-manufacturing-equipment-contract-20261125",
-              "factKey": "us-equipment-contract-24-601627904bn-19-70pct-sales",
-              "impactReason": "단일 계약이 최근 연매출의 약 20%에 해당해 향후 장비 매출과 수주잔고에 미치는 영향이 크다."
-            },
-            {
-              "id": "domestic-20261125-naraspace-kwatersat-contract",
-              "title": "나라스페이스테크놀로지, K-waterSAT 군집위성 개발 101억원 수주",
-              "summary": "나라스페이스테크놀로지는 한국수자원공사와 K-waterSAT 수자원 초소형 군집위성 개발 사업 공급계약을 체결했다. 계약금액은 101억1,227만원으로 최근 매출액의 76.39%이며 계약기간은 2030년 3월 8일까지다.",
-              "publishedAt": "2026-11-25T16:35:00+09:00",
-              "checkedAt": "2026-11-25T19:46:48+09:00",
-              "sourceName": "금융감독원 DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900570",
-              "relatedStocks": [
-                "나라스페이스테크놀로지(478340)"
-              ],
-              "impactRank": 7,
-              "category": "우주·위성·공공수주",
-              "region": "domestic",
-              "eventKey": "naraspace-kwatersat-constellation-contract-20261125",
-              "factKey": "kwater-satellite-contract-10-11227bn-76-39pct-sales-through-20300308",
-              "impactReason": "계약금액이 최근 매출의 76.39%로 커서 중소형 우주기업의 장기 매출과 수주잔고에 직접 영향을 준다."
-            },
-            {
-              "id": "domestic-20261125-corestem-neuronata-phase3b-application",
-              "title": "코아스템켐온, 루게릭병 치료제 뉴로나타알 3b상 임상계획 승인 신청",
-              "summary": "코아스템켐온은 근위축성 측삭경화증 환자를 대상으로 뉴로나타-알주의 유효성과 안전성을 평가하는 무작위배정·이중눈가림·위약대조 다기관 3b상 임상시험계획 승인을 신청했다고 공시했다. 이번 단계는 임상 승인이나 치료 효능 확정이 아니라 시험계획 승인 신청이다.",
-              "publishedAt": "2026-11-25T15:57:00+09:00",
-              "checkedAt": "2026-11-25T19:46:48+09:00",
-              "sourceName": "금융감독원 DART",
-              "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900420",
-              "relatedStocks": [
-                "코아스템켐온(166480)"
-              ],
-              "impactRank": 8,
-              "category": "바이오·임상시험",
-              "region": "domestic",
-              "eventKey": "corestem-neuronata-als-phase3b-trial-20261125",
-              "factKey": "phase3b-trial-plan-approval-application-not-approval",
-              "impactReason": "상업화 가능성을 좌우할 후속 임상 절차의 개시이지만 승인·성공이 확정된 단계는 아니어서 신청 사실로 한정해 평가한다."
-            }
-          ],
-          "usThemes": [],
-          "researchStatus": "complete",
-          "researchAudit": {
-            "windowStartExclusive": "2026-11-25T15:40:05+09:00",
-            "windowEndInclusive": "2026-11-25T19:40:05+09:00",
-            "checkedAt": "2026-11-25T19:46:48+09:00",
-            "currentWindowDiscoveryStatus": "complete",
-            "sources": [
-              "Reuters",
-              "AP",
-              "금융감독원 DART",
-              "한국거래소",
-              "연합뉴스",
-              "뉴시스",
-              "뉴스핌",
-              "국내 주요 뉴스·공시 피드",
-              "기업·정부 공식 발표 및 유력 인사 발언 검색"
-            ],
-            "exclusions": [
-              "15:40:05 이전 최초 공개된 미국 관세 조사 보도·보잉 항공기 주문·유럽 기업 실적",
-              "공식 발표 없이 기존 보도를 반복한 미국 추가 관세 예상 기사",
-              "새로운 확정 사실이 없거나 최초 공개시각이 조사창 밖인 G7 정상·피터 틸·일론 머스크·젠슨 황·최태원 관련 보도",
-              "14:44 공개된 린드먼아시아 소각과 14:25 공개된 현대건설 수주 등 조사창 밖 공시",
-              "규모·시장 영향이 제한된 정정·지분보고·소규모 자사주 및 일반 관리 공시"
-            ]
-          }
-        },
-        {
-          "slot": "22:40",
-          "asOf": "2026-11-25T22:40:05+09:00",
-          "publishedAt": "2026-11-25T22:40:58+09:00",
-          "foreignNews": [
-            {
-              "id": "foreign-20261125-us-excess-capacity-tariffs-14-partners",
-              "title": "미국, 한국·중국·EU 등 14개 교역상대국에 과잉생산 대응 관세안 제안",
-              "summary": "트럼프 행정부는 8개월간의 무역법 301조 조사 뒤 한국·중국·EU·일본 등 14개 교역상대국의 구조적 과잉생산에 대응하는 추가 관세안을 제안했다. 중국에는 최고 20%를 제시했으며, 한국·EU·일본·대만은 기존 무역합의의 15% 상한을 넘지 않는다고 밝혔다. 관세안은 의견수렴과 청문회를 거쳐 이르면 2027년 1월 시행될 수 있다.",
-              "publishedAt": "2026-11-25T22:15:00+09:00",
-              "checkedAt": "2026-11-25T22:40:58+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://www.reuters.com/world/china/us-proposes-new-tariffs-14-trading-partners-fight-excess-factory-capacity-2026-11-25/",
-              "relatedStocks": [
-                "현대차(005380)",
-                "기아(000270)",
-                "POSCO홀딩스(005490)",
-                "LG에너지솔루션(373220)"
-              ],
-              "impactRank": 1,
-              "category": "미국 통상정책·관세",
-              "region": "foreign",
-              "eventKey": "us-section-301-structural-excess-capacity-probe-2026",
-              "factKey": "proposal-tariffs-14-partners-china-20pct-korea-cap-15pct-comment-hearing",
-              "impactReason": "한국이 직접 대상에 포함된 새 관세 제안으로, 자동차·철강·배터리 등 대미 수출 업종의 비용·가격경쟁력과 공급망 기대에 영향을 줄 수 있다.",
-              "corroboratingSourceUrl": "https://apnews.com/article/367083ea32f71fd7f70029ba7df66bf0"
-            }
-          ],
-          "domesticNews": [],
-          "usThemes": [],
-          "researchStatus": "partial",
-          "researchAudit": {
-            "windowStartExclusive": "2026-11-25T19:40:05+09:00",
-            "windowEndInclusive": "2026-11-25T22:40:05+09:00",
-            "checkedAt": "2026-11-25T22:40:58+09:00",
-            "currentWindowDiscoveryStatus": "partial",
-            "sources": [
-              "Reuters",
-              "AP",
-              "미국 경제분석국(BEA) 발표 일정",
-              "미국 노동부 발표 일정",
-              "금융감독원 DART 및 국내 공시·뉴스 검색",
-              "유력 인사 공식 발언·신뢰매체 검색"
-            ],
-            "exclusions": [
-              "19:40:05 이전 최초 공개됐거나 기존 회차에 저장된 국내 공시와 미국 관세 예고 보도",
-              "트럼프의 일론 머스크·젠슨 황 보호 발언은 11월 23일 CNBC 인터뷰가 최초라 조사창 밖으로 제외",
-              "최태원 관련 개인사 보도와 시장 영향이 확인되지 않은 유력 인사 재보도",
-              "22:30 KST 미국 GDP·PCE·실업수당 지표는 회차 마감 직후 공식 수치 원문 확인이 완료되지 않아 수치와 기사를 채택하지 않음",
-              "19:40 이후 최초 공개시각과 고영향 신규 사실이 확인되지 않은 국내 후보"
-            ]
-          }
-        }
-      ]
-    },
     {
       "date": "2026-11-26",
       "isKrxTradingDay": true,
@@ -744,6 +143,288 @@
               "시장 영향이 제한적인 단순 전망·의견·일반 기사와 최초 공개시각 미확인 후보"
             ]
           }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "isKrxTradingDay": true,
+      "displaySlots": [
+        "08:00",
+        "15:20"
+      ],
+      "sessions": [
+        {
+          "slot": "08:00",
+          "asOf": "2026-11-27T16:25:42+09:00",
+          "publishedAt": "2026-11-27T16:27:38+09:00",
+          "testOnly": true,
+          "foreignNews": [
+            {
+              "id": "20261127-0800-foreign-01",
+              "title": "[테스트·시간범위 외] 미국 USTR, 한국에 301조 관세 15% 제안",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. USTR이 과잉생산을 이유로 14개 경제권 관세를 제안. 한국 15%, 협의 결과에 따라 25%로 인상 가능. 일본 15%, 중국 20%. 최종 결정은 이르면 1월. 한국산 대미 수출품의 관세율에 영향.",
+              "publishedAt": "2026-11-26T11:28:25+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "Seoul Economic Daily",
+              "sourceUrl": "https://en.sedaily.com/world/2026/11/26/us-keeps-15-percent-tariff-on-korea-threatens-25-percent",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "통상",
+              "region": "foreign",
+              "eventKey": "us-s301-excess-capacity",
+              "factKey": "korea-15pct-proposal",
+              "testOnly": true
+            },
+            {
+              "id": "20261127-0800-foreign-02",
+              "title": "[테스트] 엔비디아, 동남아 4개국 서버 선적 중단 지시 (WSJ 보도 인용)",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 엔비디아가 델·슈퍼마이크로 등 제조 파트너에 말레이시아·싱가포르·태국·인도네시아행 서버 선적 중단을 지시. 기간 미정. 미국 수출규정 준수 여부 점검 목적. AI 서버 공급망에 영향.",
+              "publishedAt": "2026-11-27T05:03:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "TechCrunch",
+              "sourceUrl": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+              "relatedStocks": [
+                "NVIDIA",
+                "Dell",
+                "Super Micro Computer"
+              ],
+              "impactRank": 2,
+              "category": "반도체",
+              "region": "foreign",
+              "eventKey": "nvidia-sea-shipment-halt",
+              "factKey": "server-shipment-pause",
+              "testOnly": true
+            },
+            {
+              "id": "20261127-0800-foreign-03",
+              "title": "[테스트] 후티의 사우디 제다항 공격, 유가 상승",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 후티가 사우디 홍해 제다항을 공격. 브렌트유 1.73%, WTI 1.53% 상승. 원유 수입 비용과 정유·화학 업종에 영향.",
+              "publishedAt": "2026-11-27T01:53:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "Hyperdash News",
+              "sourceUrl": "https://hyperdash.com/news/european-stocks-rally-as-us-markets-close-for-thanksgiving-oil-jumps-on-red-sea-strike",
+              "relatedStocks": [],
+              "impactRank": 3,
+              "category": "원자재",
+              "region": "foreign",
+              "eventKey": "houthi-saudi-attack",
+              "factKey": "jeddah-strike-oil-up",
+              "testOnly": true
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "20261127-0800-domestic-01",
+              "title": "[테스트·시간범위 외] 한은, 기준금리 3.25%로 0.25%p 인상",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 금통위가 기준금리를 연 3.00%에서 3.25%로 인상. 찬성 5명, 동결 소수의견 2명. 미국(3.75~4.00%)과의 금리차는 상단 기준 0.75%p. 금리 민감 업종에 영향.",
+              "publishedAt": "2026-11-26T11:07:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "세계일보",
+              "sourceUrl": "https://www.segye.com/newsView/20261126507219",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "통화정책",
+              "region": "domestic",
+              "eventKey": "bok-mpc-202611",
+              "factKey": "rate-3.25",
+              "testOnly": true
+            },
+            {
+              "id": "20261127-0800-domestic-02",
+              "title": "[테스트·시간범위 외] 금융위, 증안펀드 투자관리위원회 긴급 개최",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 29일 증안펀드 투자관리위원회 개최. 30일 금융위원장 주재로 5대 금융지주 회장 등이 참석하는 점검회의. 2020년 약정 규모는 10조7600억원. 증시 수급과 출자 금융사에 영향.",
+              "publishedAt": "2026-11-26T14:59:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "한국경제",
+              "sourceUrl": "https://www.hankyung.com/article/202611262408i",
+              "relatedStocks": [
+                "KB금융",
+                "신한지주",
+                "하나금융지주",
+                "우리금융지주"
+              ],
+              "impactRank": 2,
+              "category": "증시정책",
+              "region": "domestic",
+              "eventKey": "kr-market-stabilization-fund",
+              "factKey": "committee-meeting-schedule",
+              "testOnly": true
+            },
+            {
+              "id": "20261127-0800-domestic-03",
+              "title": "[테스트] 에이피알, 닥터멜락신 운영사 3900억원에 인수",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 브랜드501 지분 87.3%를 약 3900억원에 취득. 구주 74.35% 약 3200억원, 신주 12.95% 약 700억원. 취득 예정일 12월 31일. 연결 자회사 편입 예정.",
+              "publishedAt": "2026-11-26T17:07:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "아시아투데이",
+              "sourceUrl": "https://www.asiatoday.co.kr/kn/view.php?key=20261126010010549",
+              "relatedStocks": [
+                "에이피알"
+              ],
+              "impactRank": 3,
+              "category": "M&A",
+              "region": "domestic",
+              "eventKey": "apr-brand501-acquisition",
+              "factKey": "stake-87.3-390bn",
+              "testOnly": true
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "partial"
+        },
+        {
+          "slot": "15:20",
+          "asOf": "2026-11-27T16:25:42+09:00",
+          "publishedAt": "2026-11-27T16:27:38+09:00",
+          "testOnly": true,
+          "foreignNews": [
+            {
+              "id": "20261127-1520-foreign-01",
+              "title": "[테스트] 중국 국무원, 증시 지원 방침 발표",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 국무원이 장중 이례적 성명으로 증시 지원을 재확인. 국가대표 자금 역할 확대, 장기자금 유입 정책 개선, 배당·자사주 매입 장려. 발표 후 중국 증시 상승.",
+              "publishedAt": "2026-11-27T14:00:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "Bloomberg",
+              "sourceUrl": "https://bloomberg.com/news/articles/2026-11-27/china-s-cabinet-stresses-market-support-in-midday-release",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "중국",
+              "region": "foreign",
+              "eventKey": "china-state-council-market-support",
+              "factKey": "midday-statement",
+              "testOnly": true
+            },
+            {
+              "id": "20261127-1520-foreign-02",
+              "title": "[테스트] 중국 10월 공업이익 20.1% 증가",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 10월 공업기업 이익이 전년 대비 20.1% 증가, 5개월 내 최고 증가율. Bloomberg Economics 전망 15.5% 상회. 1~10월 16% 증가. AI 제품 수요와 원자재 가격이 요인.",
+              "publishedAt": "2026-11-27T11:18:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "Bloomberg",
+              "sourceUrl": "https://www.bloomberg.com/news/articles/2026-11-27/china-s-industrial-profits-jump-at-fastest-pace-in-five-months",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "중국 경제지표",
+              "region": "foreign",
+              "eventKey": "china-industrial-profit-202610",
+              "factKey": "yoy-20.1",
+              "testOnly": true
+            },
+            {
+              "id": "20261127-1520-foreign-03",
+              "title": "[테스트] 도쿄 11월 근원 CPI 2.9%",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 전년 대비 2.9% 상승. 10월 2.6%, 시장 중간 전망 3.0%. 일본은행 목표 2% 상회. 12월 18일 종료 회의의 금리 결정과 엔화에 영향.",
+              "publishedAt": "2026-11-27T08:42:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "Reuters (Investing.com)",
+              "sourceUrl": "https://www.investing.com/news/economic-indicators/core-inflation-in-japans-capital-accelerates-in-november-5052767",
+              "relatedStocks": [],
+              "impactRank": 3,
+              "category": "일본 경제지표",
+              "region": "foreign",
+              "eventKey": "japan-tokyo-cpi-202611",
+              "factKey": "core-2.9",
+              "testOnly": true
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "20261127-1520-domestic-01",
+              "title": "[테스트] 증안펀드 증액 전망에 증권주 상승·금융지주 하락",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 증권주가 두 자릿수 상승, 4대 금융지주는 출자 부담 우려로 하락. 금융위는 30일 5대 금융지주와 증액을 논의.",
+              "publishedAt": "2026-11-27T14:24:21+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "뉴스1",
+              "sourceUrl": "https://www.news1.kr/finance/market-exr/6368418",
+              "relatedStocks": [
+                "KB금융",
+                "신한지주",
+                "하나금융지주",
+                "우리금융지주"
+              ],
+              "impactRank": 1,
+              "category": "증시정책",
+              "region": "domestic",
+              "eventKey": "kr-market-stabilization-fund",
+              "factKey": "fund-increase-expectation",
+              "testOnly": true
+            },
+            {
+              "id": "20261127-1520-domestic-02",
+              "title": "[테스트] 한국가스공사, 코원에너지서비스와 19조8311억원 공급계약",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 도시가스용 천연가스 공급계약. 최근 매출액 35조7273억원의 55.51%. 기간 2026년 12월 1일~2041년 12월 31일.",
+              "publishedAt": "2026-11-27T10:20:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "디지털투데이",
+              "sourceUrl": "https://www.digitaltoday.co.kr/disclosure/articleView.html?idxno=718679",
+              "relatedStocks": [
+                "한국가스공사"
+              ],
+              "impactRank": 2,
+              "category": "공급계약",
+              "region": "domestic",
+              "eventKey": "kogas-citygas-supply-2026",
+              "factKey": "kowone-19.8tn",
+              "testOnly": true
+            },
+            {
+              "id": "20261127-1520-domestic-03",
+              "title": "[테스트] 지엔씨에너지, 안산 AI데이터센터 발전기 336억원 계약",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. CJ대한통운과 안산 AIDC 가스터빈 발전기 계약. 336억3396만원, 최근 매출액의 12.8%. 기간 2026년 11월 30일~2029년 12월 15일.",
+              "publishedAt": "2026-11-27T11:07:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "스페셜타임스",
+              "sourceUrl": "https://www.specialtimes.co.kr/news/articleView.html?idxno=490989",
+              "relatedStocks": [
+                "지엔씨에너지"
+              ],
+              "impactRank": 3,
+              "category": "공급계약",
+              "region": "domestic",
+              "eventKey": "gnc-energy-aidc-contract",
+              "factKey": "33.6bn",
+              "testOnly": true
+            },
+            {
+              "id": "20261127-1520-domestic-04",
+              "title": "[테스트] 그린생명과학, AI반도체 소재 168억원 공급계약",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 그린케미칼과 167억5000만원 계약. 2025년 매출액의 41.52%. 기간 2026년 11월 27일~2027년 4월 30일.",
+              "publishedAt": "2026-11-27T14:13:04+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "톱스타뉴스",
+              "sourceUrl": "https://www.topstarnews.net/news/articleView.html?idxno=16287834",
+              "relatedStocks": [
+                "그린생명과학"
+              ],
+              "impactRank": 4,
+              "category": "공급계약",
+              "region": "domestic",
+              "eventKey": "greenls-ai-material-contract",
+              "factKey": "16.75bn",
+              "testOnly": true
+            },
+            {
+              "id": "20261127-1520-domestic-05",
+              "title": "[테스트] 세보엠이씨, 아산 기계설비공사 724억원 수주",
+              "summary": "앱 표출 검증용 미검증 뉴스입니다. 투자 판단에 사용하지 마십시오. 삼성물산과 723억8400만원 계약. 최근 매출액의 10.11%.",
+              "publishedAt": "2026-11-27T14:27:00+09:00",
+              "checkedAt": "2026-11-27T16:25:42+09:00",
+              "sourceName": "톱스타뉴스",
+              "sourceUrl": "https://www.topstarnews.net/news/articleView.html?idxno=16287841",
+              "relatedStocks": [
+                "세보엠이씨"
+              ],
+              "impactRank": 5,
+              "category": "공급계약",
+              "region": "domestic",
+              "eventKey": "sebomec-asan-contract",
+              "factKey": "72.4bn",
+              "testOnly": true
+            }
+          ],
+          "usThemes": [],
+          "researchStatus": "partial"
         }
       ]
     }
