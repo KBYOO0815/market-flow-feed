@@ -18,6 +18,14 @@ FEED = Path("market-news.json")
 FAIL = Path(".market-news-input-failed")
 LIMIT = 1024 * 1024
 
+# Keep the Drive input audit fields for validation, not in the app feed.
+APP_NEWS_KEYS = ("id", "title", "summary", "publishedAt", "sourceName", "sourceUrl",
+                 "relatedStocks", "impactRank", "category", "impactReason",
+                 "corroboratingSourceUrl", "kind", "validUntil", "observedAt")
+
+def app_news(item):
+    return {k: copy.deepcopy(item[k]) for k in APP_NEWS_KEYS if k in item}
+
 def stamp(value):
     if not isinstance(value, str):
         raise ValueError("Invalid timestamp")
@@ -73,8 +81,8 @@ def validate(data, day, slot, now, test=False):
             ids.add(item["id"])
             facts.add(fact)
     return {"slot": slot, "asOf": observed.isoformat(), "publishedAt": now.isoformat(timespec="seconds"),
-            "foreignNews": copy.deepcopy(data["foreignNews"]), "domesticNews": copy.deepcopy(data["domesticNews"]),
-            "usThemes": [], "researchStatus": "complete"}
+            "foreignNews": [app_news(n) for n in data["foreignNews"]],
+            "domesticNews": [app_news(n) for n in data["domesticNews"]]}
 
 def session_for(feed, day, slot):
     return next((s for d in feed["days"] if d["date"] == str(day) for s in d["sessions"] if s["slot"] == slot), None)

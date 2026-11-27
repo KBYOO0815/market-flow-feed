@@ -30,7 +30,10 @@ class NewsTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate(BASE, DAY, "15:20", NOW)
     def test_item(self):
-        self.assertEqual(validate(dict(BASE, foreignNews=[ITEM]), DAY, "08:00", NOW)["foreignNews"], [ITEM])
+        e = validate(dict(BASE, foreignNews=[ITEM]), DAY, "08:00", NOW)
+        self.assertEqual(e["foreignNews"], [{k:v for k,v in ITEM.items() if k not in ("checkedAt","region","eventKey","factKey")}])
+        self.assertNotIn("usThemes", e)
+        self.assertNotIn("researchStatus", e)
     def test_invalid_item(self):
         with self.assertRaises(ValueError):
             validate(dict(BASE, foreignNews=[dict(ITEM, sourceUrl="http://example.com")]), DAY, "08:00", NOW)

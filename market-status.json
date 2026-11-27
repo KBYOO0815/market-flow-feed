@@ -223,23 +223,19 @@
           "sources": [
             {
               "name": "Saxo Bank - Options Brief (2026-11-26)",
-              "url": "https://www.home.saxo/content/articles/options/index-recovers-near-term-fear-stays---options-brief---26-november-2026-26112026",
-              "checkedAt": ""
+              "url": "https://www.home.saxo/content/articles/options/index-recovers-near-term-fear-stays---options-brief---26-november-2026-26112026"
             },
             {
               "name": "Washington Post - Wall Street Stocks (2026-11-25)",
-              "url": "https://www.washingtonpost.com/business/2026/11/25/wall-street-stocks-dow-nasdaq/af3ee7c4-e915-11f1-8db0-6f1e3c389e7c_story.html",
-              "checkedAt": ""
+              "url": "https://www.washingtonpost.com/business/2026/11/25/wall-street-stocks-dow-nasdaq/af3ee7c4-e915-11f1-8db0-6f1e3c389e7c_story.html"
             },
             {
               "name": "CNN Markets - US Market Data",
-              "url": "https://www.cnn.com/markets",
-              "checkedAt": ""
+              "url": "https://www.cnn.com/markets"
             },
             {
               "name": "NYSE - Holidays & Trading Hours",
-              "url": "https://www.nyse.com/markets/hours-calendars",
-              "checkedAt": ""
+              "url": "https://www.nyse.com/markets/hours-calendars"
             }
           ]
         },
@@ -404,23 +400,19 @@
           "sources": [
             {
               "name": "한국경제 - 코스피, 4.34% 오른 4915…코스닥, 8.13% 급등한 708 마감",
-              "url": "https://www.hankyung.com/article/2026112750106",
-              "checkedAt": ""
+              "url": "https://www.hankyung.com/article/2026112750106"
             },
             {
               "name": "머니투데이 - [스팟]코스피 204.47포인트(4.34%) 오른 4915.68 마감",
-              "url": "https://www.mt.co.kr/index.php/stock/2026/11/27/2026112714400726310",
-              "checkedAt": ""
+              "url": "https://www.mt.co.kr/index.php/stock/2026/11/27/2026112714400726310"
             },
             {
               "name": "연합뉴스 - 코스피, 1조 넘는 외인 순매수에 4.3% 오른 4,915.68…코스닥 8.1% 급등",
-              "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446988",
-              "checkedAt": ""
+              "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4446988"
             },
             {
               "name": "매일일보 - 외국인 매수에 코스피 4900선 회복... 코스닥도 8% 급등 [마감시황]",
-              "url": "https://www.m-i.kr/news/articleView.html?idxno=2024424",
-              "checkedAt": ""
+              "url": "https://www.m-i.kr/news/articleView.html?idxno=2024424"
             }
           ]
         }
@@ -436,12 +428,5 @@
     ],
     "nonTradingDay": "07:11 every Monday-Saturday KST including US holidays; marketDate is latest completed US regular session. 15:41 only on a KRX trading day."
   },
-  "contentSchemaVersion": 2,
-  "contentTypes": [
-    "text",
-    "metric",
-    "list",
-    "table",
-    "link"
-  ]
+  "contentSchemaVersion": 2
 }

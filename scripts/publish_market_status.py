@@ -147,7 +147,7 @@ def edition(data, now):
                 f"{c}: {'미확인' if v is None else v}" for c, v in zip(item["columns"], row))
                 for row in item["rows"]])
         else:
-            sources.append({"name": item["label"], "url": item["url"], "checkedAt": ""})
+            sources.append({"name": item["label"], "url": item["url"]})
             continue
         sections.append(section)
     return {"date": data["date"], "slot": data["slot"], "marketDate": data["marketDate"], "asOf": data["asOf"],

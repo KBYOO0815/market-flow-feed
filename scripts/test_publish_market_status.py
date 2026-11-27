@@ -45,7 +45,7 @@ class TestPublisher(unittest.TestCase):
         e = f["days"][0]["editions"]["07:11"]
         self.assertEqual(e["content"],p["content"])
         self.assertEqual(e["display"]["sections"][3]["kind"],"bullets")
-        self.assertEqual(len(e["sources"]),1)
+        self.assertEqual(e["sources"], [{"name":"fixture","url":"https://example.com/"}])
         self.assertEqual(f["navigation"]["today"][0]["state"],"published")
         saved = copy.deepcopy(f)
         process(f,"us",now,"fixture",lambda _: self.fail("duplicate must not download"))
