@@ -1,0 +1,95 @@
+name: Featured stocks from Google Drive
+on:
+  schedule:
+    # KST 09:40/45/50 and 14:50/55, 15:00. Calendar checked by publisher.
+    - cron: '40,45,50 0 * * 1-5'
+    - cron: '50,55 5 * * 1-5'
+    - cron: '0 6 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      slot:
+        type: choice
+        options: ['09:40', '14:50']
+        default: '09:40'
+      publish:
+        description: 'Publish current eligible edition (unchecked = read-only Drive test)'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/featured-stocks-drive.yml'
+      - 'scripts/publish_featured_stocks.py'
+      - 'scripts/test_publish_featured_stocks.py'
+permissions:
+  contents: read
+concurrency:
+  group: featured-stocks-drive
+  cancel-in-progress: false
+jobs:
+  test:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install exchange-calendars==4.13.1
+      - run: python -m unittest discover -s scripts -p test_publish_featured_stocks.py
+      - name: Read-only Drive test
+        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.publish)
+        run: python scripts/publish_featured_stocks.py --check
+  publish:
+    needs: test
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.publish))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install exchange-calendars==4.13.1
+      - name: Publish current edition
+        env:
+          EVENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+          MANUAL_SLOT: ${{ inputs.slot }}
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT" == schedule ]]; then
+            case "$CRON" in
+              '40,45,50 0 * * 1-5') slot=09:40 ;;
+              '50,55 5 * * 1-5'|'0 6 * * 1-5') slot=14:50 ;;
+              *) exit 1 ;;
+            esac
+          else
+            slot="$MANUAL_SLOT"
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            rm -f .featured-input-failed
+            python scripts/publish_featured_stocks.py --slot "$slot"
+            if git diff --quiet -- featured-stocks-unified.json; then
+              test ! -f .featured-input-failed
+              exit
+            fi
+            git add -- featured-stocks-unified.json
+            git commit -m "Publish featured stocks ($slot)"
+            if git push origin HEAD:main; then
+              git fetch origin main
+              git merge-base --is-ancestor HEAD origin/main
+              test ! -f .featured-input-failed
+              exit
+            fi
+          done
+          exit 1

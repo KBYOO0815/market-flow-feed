@@ -1,12 +1,12 @@
 # Market Flow — JSON feeds
 
-단순 운영 구조: **시황: Gemini → Google Drive → GitHub Actions → GitHub JSON → Android 앱**. 뉴스: Claude → Google Drive → GitHub Actions → GitHub JSON → Android 앱. 특징주는 별도.
+단순 운영 구조: **시황: Gemini → Google Drive → GitHub Actions → GitHub JSON → Android 앱**. 뉴스: Claude → Google Drive → GitHub Actions → GitHub JSON → Android 앱. 특징주: Gemini → Google Drive → GitHub Actions → GitHub JSON → Android 앱.
 
 ## 운영 파일
 
 - `market-status.json` — 시황: 07:11 KST(월~토, 미국 휴장일 포함), 15:41 KST(당일 KRX 거래일).
 - `market-news.json` — 뉴스: 매일 08:00, 15:20 (KST), 2026-11-28부터.
-- `featured-stocks-unified.json` — 특징주: 기존 발행 이력 보존. 새 운영 계획은 KRX 거래일 09:30/14:40 수집, 09:40/14:50 발행(KST); Drive 연동 검증 후 활성화.
+- `featured-stocks-unified.json` — 특징주: 기존 발행 이력 보존. KRX 거래일 09:30/14:40 수집, 09:40/14:50 발행(KST). 테스트 발행 완료; 공개 편집 권한 해제 확인 후 운영 발행 활성화.
 
 시황은 Gemini가 수집·분석하고 GitHub Actions가 Drive 입력 검증·병합·발행을 담당합니다. Android 앱은 JSON을 읽어 표시합니다.
 
@@ -21,7 +21,7 @@
 
 **주의:** 기존 설치 APK는 구형 경로를 읽을 수 있으므로 새 APK 설치 전까지 일부 피드가 작동하지 않을 수 있습니다. 통합 파일 기반 앱 소스의 빌드 및 실기기 검증은 별도로 필요합니다.
 
-시황 발행은 아래 워크플로를 사용합니다. 특징주 기존 방식은 변경하지 않습니다. 예전 작업과 발행 이력은 이 저장소의 Git 이력 및 보관 기록에서 조회할 수 있습니다.
+시황 발행은 아래 워크플로를 사용합니다. 특징주는 자유 검색 방식으로 전환합니다. 예전 작업과 발행 이력은 이 저장소의 Git 이력 및 보관 기록에서 조회할 수 있습니다.
 
 ## 시황 Drive 연동
 
@@ -46,4 +46,11 @@
 
 - 세 피드의 기존 날짜/회차 컨테이너 및 navigation 계약은 그대로 유지합니다. 기존 시황의 content는 신규 앱의 구조화된 표를 위해 보존하고 display와 sources는 00.39 필수 호환 필드입니다. 루트의 중복 contentTypes 및 비어 있는 출처 checkedAt만 제거합니다.
 - 뉴스는 입력 검증 후 앱에 필요한 기사 정보와 출처만 발행합니다. partial/failed 상태 및 테스트 회차 표시는 보존합니다. 기사 배열 자체로 국내/국외를 구분합니다.
-- 특징주 schemaVersion 3 회차는 date, slot, asOf, publishedAt, stocks, themes, individualStocks와 schemaVersion을 유지합니다. stocks는 themes.stockCodes 또는 individualStocks.code에서 참조하는 선정 종목만 포함하며 code, name, turnoverRank, integratedTradeAmount(원), changeRate(%)를 저장합니다. themes는 id, name, stockCodes, weightedChangeRate, integratedTradeAmount, reason을 저장합니다. individualStocks는 code, reason을 저장합니다. reason은 null 또는 summary, sourceUrl, publishedAt, causality입니다. 수집 증빙·Top100 원본은 앱 JSON에서 제외하고 기존 Git 이력에 보존합니다. Gemini 입력은 동일한 최소 회차 구조(실제 publishedAt은 발행기가 추가)로 준비합니다. 새 특징주 발행 워크플로는 아직 활성화하지 않습니다.
+- 기존 특징주 schemaVersion 3 이력은 보존합니다. 신규 자유 검색 결과는 아래 계약을 사용합니다.
+
+## 특징주 Drive 연동 (자유 검색)
+
+- Gemini는 시장 전체를 자유 검색합니다. Top100, +4%, 가중 평균, 거래대금 순위, 테마 개수 제한은 폐기합니다. 입력 date, slot, asOf, marketSummary, themes, individualStocks, outlook. 테마 reason/catalyst 및 종목 changeRate/change 별칭을 허용하고 등락률 문자열을 그대로 보존합니다. 출처 배열은 실제 HTTPS URL이며 운영에서는 비어 있으면 실패합니다.
+- 폴더 ID `14eWlknJsA0JvTGe7gwJ_GI0SVwrjnKsf`, 파일명 featured-stocks-YYYY-MM-DD-0940.json / -1450.json. 워크플로는 KRX 거래일 09:40/14:50, 5분 간격 두 번 재시도. 공개 목록 조회 방식의 제한은 뉴스와 동일합니다.
+- `analysis`는 정규화한 자유 검색 원문입니다. 00.39는 `analysis`를 직접 읽지 못하므로 임시 호환 어댑터로 기존 themes.reason.summary에 요약, 테마, 종목명·등락률 문자열, 개별주, 관전 포인트를 표시합니다. 가중 상승률·거래대금·종목코드를 만들지 않습니다. 기존 앱 고정 Top100 문구는 적용되지 않음을 화면에 안내합니다. 신규 앱은 analysis를 직접 표시하도록 변경해야 합니다.
+- 2026-11-27 두 회차는 testOnly=true 및 화면 경고를 붙여 테스트 발행합니다. 실제 시세/관측 시각/재료 미검증이며 투자 판단 금지. 입력 파일은 변경하지 않습니다. 11/30 이전 운영 발행 금지. 폴더가 링크 공개 편집자 상태이므로 LIVE_ENABLED=False로 운영 발행을 차단합니다. 공유 권한을 뷰어로 바꾼 뒤 확인하여 활성화합니다. 예약 실행은 지연될 수 있습니다. D/D-1 유지, 실패 시 기존 정상 회차 보존.

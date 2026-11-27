@@ -1,1862 +1,36 @@
 {
   "schemaVersion": 3,
-  "updatedAt": "2026-11-26T09:42:49+09:00",
+  "updatedAt": "2026-11-27T20:05:04+09:00",
   "navigation": {
     "previous": [
       {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "slot": "08:40",
         "state": "published"
       },
       {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "slot": "09:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "11:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "13:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "15:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-25",
-        "slot": "19:40",
         "state": "published"
       }
     ],
     "today": [
       {
-        "date": "2026-11-26",
-        "slot": "08:40",
-        "state": "published"
-      },
-      {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "slot": "09:40",
-        "state": "published"
+        "state": "published",
+        "reason": "앱 표출 검증용 테스트 발행"
       },
       {
-        "date": "2026-11-26",
-        "slot": "11:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-26",
-        "slot": "13:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-26",
-        "slot": "15:40",
-        "state": "scheduled"
-      },
-      {
-        "date": "2026-11-26",
-        "slot": "19:40",
-        "state": "scheduled"
+        "date": "2026-11-27",
+        "slot": "14:50",
+        "state": "published",
+        "reason": "앱 표출 검증용 테스트 발행"
       }
     ],
     "next": []
   },
   "days": {
-    "2026-11-25": {
-      "date": "2026-11-25",
-      "editions": {
-        "08:40": {
-          "schemaVersion": 3,
-          "date": "2026-11-25",
-          "slot": "08:40",
-          "asOf": "2026-11-25T08:44:10.348803+09:00",
-          "publishedAt": "2026-11-25T08:46:59+09:00",
-          "stocks": [
-            {
-              "code": "328130",
-              "name": "루닛",
-              "turnoverRank": 4,
-              "integratedTradeAmount": 44402070000,
-              "changeRate": 7.234315
-            },
-            {
-              "code": "278470",
-              "name": "에이피알",
-              "turnoverRank": 7,
-              "integratedTradeAmount": 24433000000,
-              "changeRate": 4.933586
-            },
-            {
-              "code": "439090",
-              "name": "마녀공장",
-              "turnoverRank": 8,
-              "integratedTradeAmount": 24058494000,
-              "changeRate": 5.38415
-            },
-            {
-              "code": "338220",
-              "name": "뷰노",
-              "turnoverRank": 15,
-              "integratedTradeAmount": 14796536000,
-              "changeRate": 24.21875
-            },
-            {
-              "code": "257720",
-              "name": "실리콘투",
-              "turnoverRank": 16,
-              "integratedTradeAmount": 14103908000,
-              "changeRate": 4.844961
-            },
-            {
-              "code": "064550",
-              "name": "바이오니아",
-              "turnoverRank": 19,
-              "integratedTradeAmount": 11886177000,
-              "changeRate": 12.099125
-            },
-            {
-              "code": "084850",
-              "name": "아이티엠반도체",
-              "turnoverRank": 20,
-              "integratedTradeAmount": 11769520000,
-              "changeRate": 18.367347
-            },
-            {
-              "code": "376900",
-              "name": "로킷헬스케어",
-              "turnoverRank": 32,
-              "integratedTradeAmount": 6495439000,
-              "changeRate": 5.971014
-            }
-          ],
-          "themes": [
-            {
-              "id": "medical-ai",
-              "name": "의료 AI",
-              "stockCodes": [
-                "338220",
-                "328130"
-              ],
-              "weightedChangeRate": 11.47953,
-              "integratedTradeAmount": 59198606000,
-              "reason": {
-                "summary": "루닛의 3분기 누적 매출 20% 증가와 뷰노의 비용 구조 개선 등 의료 AI 기업의 외형 성장·적자 축소가 확인돼 프리마켓 동반 강세의 관련 배경으로 판단된다.",
-                "sourceUrl": "https://www.bosa.co.kr/news/articleView.html?idxno=3016787",
-                "publishedAt": "2026-11-24T14:15:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "id": "k-beauty",
-              "name": "K뷰티·중국 소비 회복",
-              "stockCodes": [
-                "439090",
-                "278470",
-                "257720"
-              ],
-              "weightedChangeRate": 5.086791,
-              "integratedTradeAmount": 62595402000,
-              "reason": {
-                "summary": "한중 FTA 서비스·투자 후속협상 실질 타결로 중국 내 K뷰티 사업 확대 기대가 부각됐고 관련 브랜드·유통 종목으로 강세가 이어졌다.",
-                "sourceUrl": "https://www.yna.co.kr/view/AKR20261123159500030",
-                "publishedAt": "2026-11-24T06:03:00+09:00",
-                "causality": "source_attributed"
-              }
-            }
-          ],
-          "individualStocks": [
-            {
-              "code": "084850",
-              "reason": {
-                "summary": "젠슨 황의 엔비디아 CEO 복귀와 미국 반도체주 급등으로 국내 반도체 소재·부품·장비주가 강세를 보였고 아이티엠반도체의 급등도 직접 보도됐다.",
-                "sourceUrl": "https://www.newspim.com/news/view/20261124000375",
-                "publishedAt": "2026-11-24T10:50:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "064550",
-              "reason": {
-                "summary": "바이오유럽에서 진행한 글로벌 제약사·유럽 대형병원 대상 파트너링과 SAMiRNA 플랫폼 확장성이 상승 배경으로 직접 보도됐다.",
-                "sourceUrl": "https://www.biotimes.co.kr/news/articleView.html?idxno=36366",
-                "publishedAt": "2026-11-24T08:50:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "376900",
-              "reason": {
-                "summary": "스위스 SLPG와 AI 기반 장기재생·롱제비티 사업 협력 MOU를 체결한 사실이 프리마켓 강세의 관련 배경으로 확인된다.",
-                "sourceUrl": "https://biz.chosun.com/science-chosun/bio/2026/11/24/2LGCFXHK3FCPJKMEMAIBDPSMYU/",
-                "publishedAt": "2026-11-24T13:29:00+09:00",
-                "causality": "related_fact_only"
-              }
-            }
-          ]
-        },
-        "09:40": {
-          "schemaVersion": 3,
-          "date": "2026-11-25",
-          "slot": "09:40",
-          "asOf": "2026-11-25T09:41:43.174434+09:00",
-          "publishedAt": "2026-11-25T09:44:37+09:00",
-          "stocks": [
-            {
-              "code": "053800",
-              "name": "안랩",
-              "turnoverRank": 4,
-              "integratedTradeAmount": 198834000000,
-              "changeRate": 11.193416
-            },
-            {
-              "code": "278470",
-              "name": "에이피알",
-              "turnoverRank": 9,
-              "integratedTradeAmount": 111487000000,
-              "changeRate": 8.918406
-            },
-            {
-              "code": "439090",
-              "name": "마녀공장",
-              "turnoverRank": 14,
-              "integratedTradeAmount": 72427000000,
-              "changeRate": 8.408953
-            },
-            {
-              "code": "257720",
-              "name": "실리콘투",
-              "turnoverRank": 16,
-              "integratedTradeAmount": 57370000000,
-              "changeRate": 8.527132
-            },
-            {
-              "code": "263860",
-              "name": "지니언스",
-              "turnoverRank": 18,
-              "integratedTradeAmount": 56058000000,
-              "changeRate": 5.932203
-            },
-            {
-              "code": "123690",
-              "name": "한국화장품",
-              "turnoverRank": 27,
-              "integratedTradeAmount": 39123000000,
-              "changeRate": 20.527859
-            },
-            {
-              "code": "104620",
-              "name": "노랑풍선",
-              "turnoverRank": 39,
-              "integratedTradeAmount": 25055000000,
-              "changeRate": 10.718232
-            },
-            {
-              "code": "448900",
-              "name": "한국피아이엠",
-              "turnoverRank": 40,
-              "integratedTradeAmount": 24934000000,
-              "changeRate": 10.136452
-            },
-            {
-              "code": "003350",
-              "name": "한국화장품제조",
-              "turnoverRank": 43,
-              "integratedTradeAmount": 23470000000,
-              "changeRate": 9.621711
-            },
-            {
-              "code": "338220",
-              "name": "뷰노",
-              "turnoverRank": 46,
-              "integratedTradeAmount": 21873000000,
-              "changeRate": 22.070312
-            },
-            {
-              "code": "090430",
-              "name": "아모레퍼시픽",
-              "turnoverRank": 57,
-              "integratedTradeAmount": 17417000000,
-              "changeRate": 4.363376
-            },
-            {
-              "code": "064550",
-              "name": "바이오니아",
-              "turnoverRank": 59,
-              "integratedTradeAmount": 16901000000,
-              "changeRate": 6.559767
-            },
-            {
-              "code": "084850",
-              "name": "아이티엠반도체",
-              "turnoverRank": 61,
-              "integratedTradeAmount": 15600000000,
-              "changeRate": 10.946197
-            },
-            {
-              "code": "376900",
-              "name": "로킷헬스케어",
-              "turnoverRank": 66,
-              "integratedTradeAmount": 14541000000,
-              "changeRate": 5.565217
-            },
-            {
-              "code": "078590",
-              "name": "휴림에이텍",
-              "turnoverRank": 71,
-              "integratedTradeAmount": 12555000000,
-              "changeRate": 8.077994
-            },
-            {
-              "code": "18064K",
-              "name": "한진칼우",
-              "turnoverRank": 75,
-              "integratedTradeAmount": 11961000000,
-              "changeRate": 4.664391
-            },
-            {
-              "code": "456160",
-              "name": "지투지바이오",
-              "turnoverRank": 80,
-              "integratedTradeAmount": 11326000000,
-              "changeRate": 5.89651
-            }
-          ],
-          "themes": [
-            {
-              "id": "cybersecurity",
-              "name": "사이버보안",
-              "stockCodes": [
-                "053800",
-                "263860"
-              ],
-              "weightedChangeRate": 10.036326,
-              "integratedTradeAmount": 254892000000,
-              "reason": {
-                "summary": "미국 주요 사이버보안주 강세와 기업 보안예산 개선 전망이 안랩·지니언스의 동반 강세에 이어진 관련 배경으로 판단된다.",
-                "sourceUrl": "https://markets.hankyung.com/stock/053800",
-                "publishedAt": "2026-11-22T04:00:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "id": "china-consumption",
-              "name": "한중 관계 개선·K뷰티·여행",
-              "stockCodes": [
-                "123690",
-                "104620",
-                "003350",
-                "278470",
-                "257720",
-                "439090",
-                "090430"
-              ],
-              "weightedChangeRate": 10.007242,
-              "integratedTradeAmount": 346349000000,
-              "reason": {
-                "summary": "한중 FTA 서비스·투자 후속협상 실질 타결과 한한령 완화 기대가 중국 관광·유통·화장품 수요 회복 기대로 이어지며 화장품·여행 종목에 매수세가 확산됐다.",
-                "sourceUrl": "https://www.hankyung.com/article/2026112455426",
-                "publishedAt": "2026-11-24T08:01:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "physical-ai-parts",
-              "name": "피지컬 AI·로봇 부품",
-              "stockCodes": [
-                "448900",
-                "078590"
-              ],
-              "weightedChangeRate": 9.447078,
-              "integratedTradeAmount": 37489000000,
-              "reason": {
-                "summary": "엔비디아발 AI 투자심리 회복과 피지컬 AI·로봇 부품주 확산 속 한국피아이엠의 상한가 및 휴림 계열 로봇 모멘텀이 이어진 관련 배경으로 판단된다.",
-                "sourceUrl": "https://www5.ajunews.com/view/20261124133936063",
-                "publishedAt": "2026-11-24T13:39:00+09:00",
-                "causality": "related_fact_only"
-              }
-            }
-          ],
-          "individualStocks": [
-            {
-              "code": "338220",
-              "reason": {
-                "summary": "뷰노의 3분기 비용 구조 효율화와 딥카스·하티브 사업 성과가 의료 AI 기업 실적 개선의 관련 배경으로 확인됐다.",
-                "sourceUrl": "https://www.bosa.co.kr/news/articleView.html?idxno=3016787",
-                "publishedAt": "2026-11-24T14:15:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "084850",
-              "reason": {
-                "summary": "젠슨 황 복귀에 따른 반도체 소부장주 강세 속 아이티엠반도체 급등이 직접 보도됐으며 해당 모멘텀이 이어진 것으로 판단된다.",
-                "sourceUrl": "https://www.newspim.com/news/view/20261124000375",
-                "publishedAt": "2026-11-24T10:50:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "064550",
-              "reason": {
-                "summary": "바이오유럽 글로벌 파트너링과 SAMiRNA 플랫폼 확장성이 바이오니아 상승 배경으로 직접 보도됐다.",
-                "sourceUrl": "https://www.biotimes.co.kr/news/articleView.html?idxno=36366",
-                "publishedAt": "2026-11-24T08:50:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "456160",
-              "reason": {
-                "summary": "중국 UBT와 체결한 약효지속성 주사제 개발 플랫폼 평가계약 이후 장기지속형 약물전달 기술 가치가 재부각된 관련 배경으로 확인됐다.",
-                "sourceUrl": "https://markets.hankyung.com/stock/456160/",
-                "publishedAt": "2026-11-25T09:20:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "376900",
-              "reason": {
-                "summary": "스위스 SLPG와 AI 기반 장기재생·롱제비티 사업 협력 MOU가 관련 배경으로 확인됐다.",
-                "sourceUrl": "https://biz.chosun.com/science-chosun/bio/2026/11/24/2LGCFXHK3FCPJKMEMAIBDPSMYU/",
-                "publishedAt": "2026-11-24T13:29:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "18064K",
-              "reason": {
-                "summary": "호반그룹과 조원태 회장 측의 한진칼 지분 경쟁 기대가 우선주 변동성 확대의 기존 배경으로 확인됐다.",
-                "sourceUrl": "https://www.mt.co.kr/stock/2026/11/09/2026110909412687690",
-                "publishedAt": "2026-11-09T09:42:00+09:00",
-                "causality": "source_attributed"
-              }
-            }
-          ]
-        },
-        "11:40": {
-          "schemaVersion": 3,
-          "date": "2026-11-25",
-          "slot": "11:40",
-          "asOf": "2026-11-25T11:42:42.326317+09:00",
-          "publishedAt": "2026-11-25T11:45:04+09:00",
-          "stocks": [
-            {
-              "code": "053800",
-              "name": "안랩",
-              "turnoverRank": 4,
-              "integratedTradeAmount": 379644000000,
-              "changeRate": 14.074074
-            },
-            {
-              "code": "278470",
-              "name": "에이피알",
-              "turnoverRank": 7,
-              "integratedTradeAmount": 220468000000,
-              "changeRate": 10.626186
-            },
-            {
-              "code": "196170",
-              "name": "알테오젠",
-              "turnoverRank": 10,
-              "integratedTradeAmount": 170864000000,
-              "changeRate": 5.635567
-            },
-            {
-              "code": "263860",
-              "name": "지니언스",
-              "turnoverRank": 12,
-              "integratedTradeAmount": 146219000000,
-              "changeRate": 7.062147
-            },
-            {
-              "code": "328130",
-              "name": "루닛",
-              "turnoverRank": 14,
-              "integratedTradeAmount": 121382000000,
-              "changeRate": 4.801536
-            },
-            {
-              "code": "257720",
-              "name": "실리콘투",
-              "turnoverRank": 15,
-              "integratedTradeAmount": 113816000000,
-              "changeRate": 15.697674
-            },
-            {
-              "code": "180640",
-              "name": "한진칼",
-              "turnoverRank": 16,
-              "integratedTradeAmount": 106079000000,
-              "changeRate": 6.843267
-            },
-            {
-              "code": "439090",
-              "name": "마녀공장",
-              "turnoverRank": 22,
-              "integratedTradeAmount": 87792000000,
-              "changeRate": 6.412583
-            },
-            {
-              "code": "060720",
-              "name": "KH바텍",
-              "turnoverRank": 26,
-              "integratedTradeAmount": 74042000000,
-              "changeRate": 5.004102
-            },
-            {
-              "code": "18064K",
-              "name": "한진칼우",
-              "turnoverRank": 28,
-              "integratedTradeAmount": 70322000000,
-              "changeRate": 21.387941
-            },
-            {
-              "code": "104620",
-              "name": "노랑풍선",
-              "turnoverRank": 34,
-              "integratedTradeAmount": 58114000000,
-              "changeRate": 6.519337
-            },
-            {
-              "code": "003230",
-              "name": "삼양식품",
-              "turnoverRank": 36,
-              "integratedTradeAmount": 57406000000,
-              "changeRate": 5.555556
-            },
-            {
-              "code": "090430",
-              "name": "아모레퍼시픽",
-              "turnoverRank": 38,
-              "integratedTradeAmount": 56127000000,
-              "changeRate": 5.793991
-            },
-            {
-              "code": "123690",
-              "name": "한국화장품",
-              "turnoverRank": 42,
-              "integratedTradeAmount": 52809000000,
-              "changeRate": 18.475073
-            },
-            {
-              "code": "192820",
-              "name": "코스맥스",
-              "turnoverRank": 44,
-              "integratedTradeAmount": 47336000000,
-              "changeRate": 10.634648
-            },
-            {
-              "code": "079550",
-              "name": "LIG디펜스앤에어로스페이스",
-              "turnoverRank": 57,
-              "integratedTradeAmount": 36787000000,
-              "changeRate": 6.147541
-            },
-            {
-              "code": "150900",
-              "name": "파수AI",
-              "turnoverRank": 58,
-              "integratedTradeAmount": 36455000000,
-              "changeRate": 22.719449
-            },
-            {
-              "code": "0126Z0",
-              "name": "삼성에피스홀딩스",
-              "turnoverRank": 59,
-              "integratedTradeAmount": 35818000000,
-              "changeRate": 11.638591
-            },
-            {
-              "code": "448900",
-              "name": "한국피아이엠",
-              "turnoverRank": 62,
-              "integratedTradeAmount": 32468000000,
-              "changeRate": 5.263158
-            },
-            {
-              "code": "003350",
-              "name": "한국화장품제조",
-              "turnoverRank": 63,
-              "integratedTradeAmount": 32415000000,
-              "changeRate": 12.993421
-            },
-            {
-              "code": "161890",
-              "name": "한국콜마",
-              "turnoverRank": 64,
-              "integratedTradeAmount": 30875000000,
-              "changeRate": 4.942339
-            },
-            {
-              "code": "042510",
-              "name": "라온시큐어",
-              "turnoverRank": 70,
-              "integratedTradeAmount": 27986000000,
-              "changeRate": 4.677914
-            },
-            {
-              "code": "267850",
-              "name": "아시아나IDT",
-              "turnoverRank": 72,
-              "integratedTradeAmount": 27259000000,
-              "changeRate": 9.984277
-            },
-            {
-              "code": "338220",
-              "name": "뷰노",
-              "turnoverRank": 75,
-              "integratedTradeAmount": 26097000000,
-              "changeRate": 25.78125
-            },
-            {
-              "code": "468530",
-              "name": "프로티나",
-              "turnoverRank": 79,
-              "integratedTradeAmount": 24692000000,
-              "changeRate": 4.617834
-            },
-            {
-              "code": "214450",
-              "name": "파마리서치",
-              "turnoverRank": 90,
-              "integratedTradeAmount": 20619000000,
-              "changeRate": 5.57656
-            },
-            {
-              "code": "290650",
-              "name": "엘앤씨바이오",
-              "turnoverRank": 91,
-              "integratedTradeAmount": 20205000000,
-              "changeRate": 8.413462
-            },
-            {
-              "code": "064550",
-              "name": "바이오니아",
-              "turnoverRank": 96,
-              "integratedTradeAmount": 19734000000,
-              "changeRate": 4.373178
-            },
-            {
-              "code": "000100",
-              "name": "유한양행",
-              "turnoverRank": 97,
-              "integratedTradeAmount": 19689000000,
-              "changeRate": 6.727038
-            }
-          ],
-          "themes": [
-            {
-              "id": "cybersecurity",
-              "name": "사이버보안",
-              "stockCodes": [
-                "150900",
-                "053800",
-                "263860",
-                "042510"
-              ],
-              "weightedChangeRate": 12.425651,
-              "integratedTradeAmount": 590304000000,
-              "reason": {
-                "summary": "국내외 개인정보 유출·해킹 사고가 잇따른 영향으로 파수AI·안랩·지니언스·라온시큐어 등 보안주가 동반 강세를 보였다고 보도됐다.",
-                "sourceUrl": "https://www.yna.co.kr/view/AKR20261125075100008",
-                "publishedAt": "2026-11-25T10:49:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "china-consumption",
-              "name": "한중 관계 개선·K뷰티·여행",
-              "stockCodes": [
-                "123690",
-                "257720",
-                "003350",
-                "192820",
-                "278470",
-                "104620",
-                "439090",
-                "090430",
-                "161890"
-              ],
-              "weightedChangeRate": 10.645552,
-              "integratedTradeAmount": 699752000000,
-              "reason": {
-                "summary": "한중 관계 개선과 K뷰티 수출 성장 기대, 화장품 수출 증가와 ODM 공급 부족 분석이 화장품·중국 소비 관련 종목 전반의 강세 배경으로 보도됐다.",
-                "sourceUrl": "https://www.fnnews.com/news/202611251017260650",
-                "publishedAt": "2026-11-25T10:23:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "medical-ai",
-              "name": "의료 AI",
-              "stockCodes": [
-                "338220",
-                "328130"
-              ],
-              "weightedChangeRate": 8.51398,
-              "integratedTradeAmount": 147479000000,
-              "reason": {
-                "summary": "뷰노의 브라질 의료기기 인허가·현지 독점판매 계약과 의료 AI 업종 동반 강세가 뷰노·루닛 상승 배경으로 보도됐다.",
-                "sourceUrl": "https://www.widedaily.com/news/articleView.html?idxno=304608",
-                "publishedAt": "2026-11-25T09:11:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "biosimilar-platform",
-              "name": "바이오시밀러·SC 플랫폼",
-              "stockCodes": [
-                "0126Z0",
-                "196170"
-              ],
-              "weightedChangeRate": 6.675891,
-              "integratedTradeAmount": 206682000000,
-              "reason": {
-                "summary": "글로벌 바이오시밀러 성장 기대와 대형 바이오 종목 수급 유입 속 삼성에피스홀딩스·알테오젠이 동반 강세를 보인 관련 배경이 확인됐다.",
-                "sourceUrl": "https://www.widedaily.com/news/articleView.html?idxno=304695",
-                "publishedAt": "2026-11-25T10:47:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "id": "physical-ai-parts",
-              "name": "피지컬 AI·로봇 부품",
-              "stockCodes": [
-                "448900",
-                "060720"
-              ],
-              "weightedChangeRate": 5.083071,
-              "integratedTradeAmount": 106510000000,
-              "reason": {
-                "summary": "젠슨 황 복귀로 되살아난 AI 투자심리와 로봇 부품 사업 확대 기대가 한국피아이엠·KH바텍의 전일 급등 뒤 후속 강세로 이어진 것으로 판단된다.",
-                "sourceUrl": "https://www.hankyung.com/article/2026112461486",
-                "publishedAt": "2026-11-24T10:02:00+09:00",
-                "causality": "related_fact_only"
-              }
-            }
-          ],
-          "individualStocks": [
-            {
-              "code": "18064K",
-              "reason": {
-                "summary": "호반그룹과 조원태 회장 측의 한진칼 지분 경쟁 기대가 유통 물량이 적은 우선주의 변동성 확대 배경으로 직접 보도됐다.",
-                "sourceUrl": "https://mbiz.heraldcorp.com/article/10944326",
-                "publishedAt": "2026-11-20T16:46:44+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "267850",
-              "reason": null
-            },
-            {
-              "code": "290650",
-              "reason": {
-                "summary": "150억원 규모 전환사채 전량 소각으로 잠재적 오버행과 기존 주주 지분 희석 부담이 줄었다.",
-                "sourceUrl": "https://www.medicopharma.co.kr/news/articleView.html?idxno=70629",
-                "publishedAt": "2026-11-25T09:33:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "180640",
-              "reason": {
-                "summary": "호반그룹과 조원태 회장 측의 한진칼 지분 경쟁 기대가 이어지는 기존 상승 배경으로 확인됐다.",
-                "sourceUrl": "https://www.mt.co.kr/stock/2026/11/09/2026110909412687690",
-                "publishedAt": "2026-11-09T09:42:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "000100",
-              "reason": {
-                "summary": "교보증권은 약품·헬스케어 외형 성장과 유한화학 실적 개선으로 3분기 영업이익이 전년 대비 50.8% 증가했다고 분석했다.",
-                "sourceUrl": "https://www.g-enews.com/list.php?ct=g000000&nm=11&nmd=1&ny=2026&pg=1&ssk=",
-                "publishedAt": "2026-11-25T09:22:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "079550",
-              "reason": {
-                "summary": "3분기 말 24.54조원 수주잔고와 수주 가이던스 상향 기대가 방산주 강세의 기존 관련 배경으로 확인됐다.",
-                "sourceUrl": "https://www.stockhub.kr/stock/079550",
-                "publishedAt": "2026-11-09T09:00:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "214450",
-              "reason": {
-                "summary": "화장품·의료기기 수출 증가와 해외 사업 성장 기대가 파마리서치의 기존 관련 배경으로 확인됐다.",
-                "sourceUrl": "https://kr.investing.com/news/stock-market-news/article-2184657",
-                "publishedAt": "2026-11-20T09:00:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "003230",
-              "reason": {
-                "summary": "외형 성장과 비용 통제 능력을 확인한 실적이 삼양식품의 기존 관련 배경으로 제시됐다.",
-                "sourceUrl": "https://www.newspim.com/news/view/20261109000498",
-                "publishedAt": "2026-11-09T09:00:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "468530",
-              "reason": null
-            },
-            {
-              "code": "064550",
-              "reason": {
-                "summary": "바이오유럽 글로벌 파트너링과 SAMiRNA 플랫폼 확장성이 바이오니아 상승 배경으로 직접 보도됐다.",
-                "sourceUrl": "https://www.biotimes.co.kr/news/articleView.html?idxno=36366",
-                "publishedAt": "2026-11-24T08:50:00+09:00",
-                "causality": "source_attributed"
-              }
-            }
-          ]
-        },
-        "13:40": {
-          "schemaVersion": 3,
-          "date": "2026-11-25",
-          "slot": "13:40",
-          "asOf": "2026-11-25T13:39:05.727206+09:00",
-          "publishedAt": "2026-11-25T13:42:38+09:00",
-          "stocks": [
-            {
-              "code": "053800",
-              "name": "안랩",
-              "turnoverRank": 4,
-              "integratedTradeAmount": 551660000000,
-              "changeRate": 29.958848
-            },
-            {
-              "code": "278470",
-              "name": "에이피알",
-              "turnoverRank": 7,
-              "integratedTradeAmount": 286307000000,
-              "changeRate": 11.385199
-            },
-            {
-              "code": "263860",
-              "name": "지니언스",
-              "turnoverRank": 8,
-              "integratedTradeAmount": 233015000000,
-              "changeRate": 24.576271
-            },
-            {
-              "code": "257720",
-              "name": "실리콘투",
-              "turnoverRank": 15,
-              "integratedTradeAmount": 137820000000,
-              "changeRate": 12.403101
-            },
-            {
-              "code": "180640",
-              "name": "한진칼",
-              "turnoverRank": 16,
-              "integratedTradeAmount": 137431000000,
-              "changeRate": 7.284768
-            },
-            {
-              "code": "328130",
-              "name": "루닛",
-              "turnoverRank": 18,
-              "integratedTradeAmount": 131622000000,
-              "changeRate": 4.737516
-            },
-            {
-              "code": "003230",
-              "name": "삼양식품",
-              "turnoverRank": 23,
-              "integratedTradeAmount": 98314000000,
-              "changeRate": 6.699346
-            },
-            {
-              "code": "18064K",
-              "name": "한진칼우",
-              "turnoverRank": 27,
-              "integratedTradeAmount": 94975000000,
-              "changeRate": 16.609784
-            },
-            {
-              "code": "060720",
-              "name": "KH바텍",
-              "turnoverRank": 30,
-              "integratedTradeAmount": 82641000000,
-              "changeRate": 6.234619
-            },
-            {
-              "code": "123690",
-              "name": "한국화장품",
-              "turnoverRank": 37,
-              "integratedTradeAmount": 73685000000,
-              "changeRate": 8.211144
-            },
-            {
-              "code": "090430",
-              "name": "아모레퍼시픽",
-              "turnoverRank": 43,
-              "integratedTradeAmount": 65477000000,
-              "changeRate": 4.935622
-            },
-            {
-              "code": "192820",
-              "name": "코스맥스",
-              "turnoverRank": 45,
-              "integratedTradeAmount": 62857000000,
-              "changeRate": 11.320755
-            },
-            {
-              "code": "042510",
-              "name": "라온시큐어",
-              "turnoverRank": 54,
-              "integratedTradeAmount": 52074000000,
-              "changeRate": 21.625767
-            },
-            {
-              "code": "079550",
-              "name": "LIG디펜스앤에어로스페이스",
-              "turnoverRank": 57,
-              "integratedTradeAmount": 49316000000,
-              "changeRate": 5.327869
-            },
-            {
-              "code": "0126Z0",
-              "name": "삼성에피스홀딩스",
-              "turnoverRank": 61,
-              "integratedTradeAmount": 46259000000,
-              "changeRate": 11.026034
-            },
-            {
-              "code": "150900",
-              "name": "파수AI",
-              "turnoverRank": 62,
-              "integratedTradeAmount": 45312000000,
-              "changeRate": 29.948365
-            },
-            {
-              "code": "003350",
-              "name": "한국화장품제조",
-              "turnoverRank": 64,
-              "integratedTradeAmount": 41454000000,
-              "changeRate": 12.582237
-            },
-            {
-              "code": "161890",
-              "name": "한국콜마",
-              "turnoverRank": 65,
-              "integratedTradeAmount": 41234000000,
-              "changeRate": 5.271829
-            },
-            {
-              "code": "448900",
-              "name": "한국피아이엠",
-              "turnoverRank": 71,
-              "integratedTradeAmount": 36077000000,
-              "changeRate": 7.992203
-            },
-            {
-              "code": "267850",
-              "name": "아시아나IDT",
-              "turnoverRank": 73,
-              "integratedTradeAmount": 34133000000,
-              "changeRate": 6.210692
-            },
-            {
-              "code": "356680",
-              "name": "엑스게이트",
-              "turnoverRank": 79,
-              "integratedTradeAmount": 31278000000,
-              "changeRate": 13.492063
-            },
-            {
-              "code": "000100",
-              "name": "유한양행",
-              "turnoverRank": 80,
-              "integratedTradeAmount": 31181000000,
-              "changeRate": 7.891332
-            },
-            {
-              "code": "468530",
-              "name": "프로티나",
-              "turnoverRank": 83,
-              "integratedTradeAmount": 29977000000,
-              "changeRate": 5.095541
-            },
-            {
-              "code": "338220",
-              "name": "뷰노",
-              "turnoverRank": 89,
-              "integratedTradeAmount": 28030000000,
-              "changeRate": 22.851562
-            },
-            {
-              "code": "290650",
-              "name": "엘앤씨바이오",
-              "turnoverRank": 90,
-              "integratedTradeAmount": 28024000000,
-              "changeRate": 10.576923
-            },
-            {
-              "code": "214450",
-              "name": "파마리서치",
-              "turnoverRank": 92,
-              "integratedTradeAmount": 27570000000,
-              "changeRate": 4.725898
-            }
-          ],
-          "themes": [
-            {
-              "id": "cybersecurity",
-              "name": "사이버보안",
-              "stockCodes": [
-                "053800",
-                "150900",
-                "263860",
-                "042510",
-                "356680"
-              ],
-              "weightedChangeRate": 27.546073,
-              "integratedTradeAmount": 913339000000,
-              "reason": {
-                "summary": "국내외 개인정보 유출·해킹 사고가 잇따른 영향으로 안랩·파수AI·지니언스·라온시큐어 등 보안주가 동반 강세를 보였고, 같은 보안 업종의 엑스게이트로 매수세가 확산된 것으로 판단된다.",
-                "sourceUrl": "https://www.yna.co.kr/view/AKR20261125075100008",
-                "publishedAt": "2026-11-25T10:49:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "kbeauty",
-              "name": "한중 관계 개선·K뷰티",
-              "stockCodes": [
-                "003350",
-                "257720",
-                "278470",
-                "192820",
-                "123690",
-                "161890",
-                "090430"
-              ],
-              "weightedChangeRate": 10.366061,
-              "integratedTradeAmount": 708834000000,
-              "reason": {
-                "summary": "한중 관계 개선과 K뷰티 수출 성장 기대, 화장품 수출 증가와 ODM 공급 부족 분석이 화장품 종목 전반의 강세 배경으로 보도됐다.",
-                "sourceUrl": "https://www.fnnews.com/news/202611251017260650",
-                "publishedAt": "2026-11-25T10:23:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "medical-ai",
-              "name": "의료 AI",
-              "stockCodes": [
-                "338220",
-                "328130"
-              ],
-              "weightedChangeRate": 7.917788,
-              "integratedTradeAmount": 159652000000,
-              "reason": {
-                "summary": "뷰노의 브라질 의료기기 인허가·현지 독점판매 계약과 의료 AI 업종 동반 강세가 뷰노·루닛 상승 배경으로 보도됐다.",
-                "sourceUrl": "https://www.widedaily.com/news/articleView.html?idxno=304608",
-                "publishedAt": "2026-11-25T09:11:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "physical-ai-parts",
-              "name": "피지컬 AI·로봇 부품",
-              "stockCodes": [
-                "448900",
-                "060720"
-              ],
-              "weightedChangeRate": 6.768728,
-              "integratedTradeAmount": 118718000000,
-              "reason": {
-                "summary": "젠슨 황 복귀로 되살아난 AI 투자심리와 로봇 부품 사업 확대 기대가 한국피아이엠·KH바텍의 전일 급등 뒤 후속 강세로 이어진 것으로 판단된다.",
-                "sourceUrl": "https://www.hankyung.com/article/2026112461486",
-                "publishedAt": "2026-11-24T10:02:00+09:00",
-                "causality": "related_fact_only"
-              }
-            }
-          ],
-          "individualStocks": [
-            {
-              "code": "18064K",
-              "reason": {
-                "summary": "호반그룹과 조원태 회장 측의 한진칼 지분 경쟁 기대가 유통 물량이 적은 우선주의 변동성 확대 배경으로 직접 보도됐다.",
-                "sourceUrl": "https://mbiz.heraldcorp.com/article/10944326",
-                "publishedAt": "2026-11-20T16:46:44+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "0126Z0",
-              "reason": {
-                "summary": "글로벌 바이오시밀러 성장 기대와 대형 바이오 종목 수급 유입이 삼성에피스홀딩스 강세의 관련 배경으로 보도됐다.",
-                "sourceUrl": "https://www.widedaily.com/news/articleView.html?idxno=304695",
-                "publishedAt": "2026-11-25T10:47:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "290650",
-              "reason": {
-                "summary": "150억원 규모 전환사채 전량 소각으로 잠재적 오버행과 기존 주주 지분 희석 부담이 줄었다.",
-                "sourceUrl": "https://www.medicopharma.co.kr/news/articleView.html?idxno=70629",
-                "publishedAt": "2026-11-25T09:33:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "000100",
-              "reason": {
-                "summary": "교보증권은 약품·헬스케어 외형 성장과 유한화학 실적 개선으로 3분기 영업이익이 전년 대비 50.8% 증가했다고 분석했다.",
-                "sourceUrl": "https://www.g-enews.com/list.php?ct=g000000&nm=11&nmd=1&ny=2026&pg=1&ssk=",
-                "publishedAt": "2026-11-25T09:22:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "180640",
-              "reason": {
-                "summary": "호반그룹과 조원태 회장 측의 지분 매입 경쟁이 한진칼 상승 배경으로 직접 보도됐다.",
-                "sourceUrl": "https://www.yna.co.kr/view/AKR20261105152500008",
-                "publishedAt": "2026-11-05T16:51:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "003230",
-              "reason": {
-                "summary": "외형 성장과 비용 통제 능력을 확인한 실적이 삼양식품의 기존 관련 배경으로 제시됐다.",
-                "sourceUrl": "https://www.newspim.com/news/view/20261109000498",
-                "publishedAt": "2026-11-09T09:00:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "267850",
-              "reason": null
-            },
-            {
-              "code": "079550",
-              "reason": {
-                "summary": "3분기 말 24.54조원 수주잔고와 수주 가이던스 상향 기대가 방산주 강세의 기존 관련 배경으로 확인됐다.",
-                "sourceUrl": "https://www.stockhub.kr/stock/079550",
-                "publishedAt": "2026-11-09T09:00:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "468530",
-              "reason": null
-            },
-            {
-              "code": "214450",
-              "reason": {
-                "summary": "화장품·의료기기 수출 증가와 해외 사업 성장 기대가 파마리서치의 기존 관련 배경으로 확인됐다.",
-                "sourceUrl": "https://kr.investing.com/news/stock-market-news/article-2184657",
-                "publishedAt": "2026-11-20T09:00:00+09:00",
-                "causality": "related_fact_only"
-              }
-            }
-          ]
-        },
-        "15:40": {
-          "schemaVersion": 3,
-          "date": "2026-11-25",
-          "slot": "15:40",
-          "asOf": "2026-11-25T15:30:00+09:00",
-          "publishedAt": "2026-11-25T15:45:54+09:00",
-          "stocks": [
-            {
-              "code": "053800",
-              "name": "안랩",
-              "turnoverRank": 5,
-              "integratedTradeAmount": 576000393400,
-              "changeRate": 29.958848
-            },
-            {
-              "code": "278470",
-              "name": "에이피알",
-              "turnoverRank": 7,
-              "integratedTradeAmount": 358879434500,
-              "changeRate": 10.815939
-            },
-            {
-              "code": "263860",
-              "name": "지니언스",
-              "turnoverRank": 8,
-              "integratedTradeAmount": 354871000000,
-              "changeRate": 18.785311
-            },
-            {
-              "code": "196170",
-              "name": "알테오젠",
-              "turnoverRank": 11,
-              "integratedTradeAmount": 240798913550,
-              "changeRate": 6.199123
-            },
-            {
-              "code": "180640",
-              "name": "한진칼",
-              "turnoverRank": 16,
-              "integratedTradeAmount": 177795319750,
-              "changeRate": 8.609272
-            },
-            {
-              "code": "257720",
-              "name": "실리콘투",
-              "turnoverRank": 18,
-              "integratedTradeAmount": 156133834425,
-              "changeRate": 12.015504
-            },
-            {
-              "code": "328130",
-              "name": "루닛",
-              "turnoverRank": 20,
-              "integratedTradeAmount": 150061399285,
-              "changeRate": 5.825864
-            },
-            {
-              "code": "003230",
-              "name": "삼양식품",
-              "turnoverRank": 23,
-              "integratedTradeAmount": 138237054000,
-              "changeRate": 6.944444
-            },
-            {
-              "code": "18064K",
-              "name": "한진칼우",
-              "turnoverRank": 24,
-              "integratedTradeAmount": 131611000000,
-              "changeRate": 25.142207
-            },
-            {
-              "code": "060720",
-              "name": "KH바텍",
-              "turnoverRank": 27,
-              "integratedTradeAmount": 113691000000,
-              "changeRate": 9.105824
-            },
-            {
-              "code": "207940",
-              "name": "삼성바이오로직스",
-              "turnoverRank": 32,
-              "integratedTradeAmount": 109551728500,
-              "changeRate": 5.658915
-            },
-            {
-              "code": "018260",
-              "name": "삼성에스디에스",
-              "turnoverRank": 41,
-              "integratedTradeAmount": 88489462600,
-              "changeRate": 4.505972
-            },
-            {
-              "code": "042510",
-              "name": "라온시큐어",
-              "turnoverRank": 42,
-              "integratedTradeAmount": 88425000000,
-              "changeRate": 15.260736
-            },
-            {
-              "code": "090430",
-              "name": "아모레퍼시픽",
-              "turnoverRank": 48,
-              "integratedTradeAmount": 80371012150,
-              "changeRate": 5.722461
-            },
-            {
-              "code": "192820",
-              "name": "코스맥스",
-              "turnoverRank": 51,
-              "integratedTradeAmount": 77937958750,
-              "changeRate": 12.178388
-            },
-            {
-              "code": "123690",
-              "name": "한국화장품",
-              "turnoverRank": 52,
-              "integratedTradeAmount": 76556000000,
-              "changeRate": 6.59824
-            },
-            {
-              "code": "356680",
-              "name": "엑스게이트",
-              "turnoverRank": 58,
-              "integratedTradeAmount": 67756000000,
-              "changeRate": 5
-            },
-            {
-              "code": "079550",
-              "name": "LIG디펜스앤에어로스페이스",
-              "turnoverRank": 60,
-              "integratedTradeAmount": 64751909000,
-              "changeRate": 5.737705
-            },
-            {
-              "code": "0126Z0",
-              "name": "삼성에피스홀딩스",
-              "turnoverRank": 64,
-              "integratedTradeAmount": 57063060750,
-              "changeRate": 11.026034
-            },
-            {
-              "code": "161890",
-              "name": "한국콜마",
-              "turnoverRank": 69,
-              "integratedTradeAmount": 50929283500,
-              "changeRate": 5.68369
-            },
-            {
-              "code": "100790",
-              "name": "미래에셋벤처투자",
-              "turnoverRank": 75,
-              "integratedTradeAmount": 46531000000,
-              "changeRate": 10.522548
-            },
-            {
-              "code": "003350",
-              "name": "한국화장품제조",
-              "turnoverRank": 76,
-              "integratedTradeAmount": 46392000000,
-              "changeRate": 11.266447
-            },
-            {
-              "code": "150900",
-              "name": "파수AI",
-              "turnoverRank": 77,
-              "integratedTradeAmount": 45571000000,
-              "changeRate": 29.948365
-            },
-            {
-              "code": "468530",
-              "name": "프로티나",
-              "turnoverRank": 79,
-              "integratedTradeAmount": 42550883700,
-              "changeRate": 4.936306
-            },
-            {
-              "code": "000100",
-              "name": "유한양행",
-              "turnoverRank": 80,
-              "integratedTradeAmount": 42094841000,
-              "changeRate": 8.020699
-            },
-            {
-              "code": "267850",
-              "name": "아시아나IDT",
-              "turnoverRank": 82,
-              "integratedTradeAmount": 41819000000,
-              "changeRate": 5.81761
-            },
-            {
-              "code": "448900",
-              "name": "한국피아이엠",
-              "turnoverRank": 85,
-              "integratedTradeAmount": 40586350000,
-              "changeRate": 6.237817
-            },
-            {
-              "code": "483650",
-              "name": "달바글로벌",
-              "turnoverRank": 87,
-              "integratedTradeAmount": 40414023250,
-              "changeRate": 6.594259
-            },
-            {
-              "code": "214450",
-              "name": "파마리서치",
-              "turnoverRank": 92,
-              "integratedTradeAmount": 37703131750,
-              "changeRate": 5.10397
-            }
-          ],
-          "themes": [
-            {
-              "id": "cybersecurity",
-              "name": "사이버보안",
-              "stockCodes": [
-                "053800",
-                "150900",
-                "263860",
-                "042510",
-                "356680"
-              ],
-              "weightedChangeRate": 23.81697,
-              "integratedTradeAmount": 1132623393400,
-              "reason": {
-                "summary": "미국 주요 정보기관 해킹 피해와 국내 개인정보 유출 사고로 보안 투자 확대 기대가 커지며 안랩·파수AI·지니언스·라온시큐어·엑스게이트가 동반 강세를 보였다.",
-                "sourceUrl": "https://www.widedaily.com/news/articleView.html?idxno=304742",
-                "publishedAt": "2026-11-25T13:43:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "kbeauty",
-              "name": "한중 관계 개선·K뷰티",
-              "stockCodes": [
-                "192820",
-                "257720",
-                "003350",
-                "278470",
-                "123690",
-                "483650",
-                "090430",
-                "161890"
-              ],
-              "weightedChangeRate": 9.858455,
-              "integratedTradeAmount": 887613546575,
-              "reason": {
-                "summary": "한중 관계 개선과 K뷰티 수출 성장 기대, 화장품 수출 증가와 ODM 공급 부족 분석이 화장품 종목 전반의 강세 배경으로 보도됐다.",
-                "sourceUrl": "https://www.fnnews.com/news/202611251017260650",
-                "publishedAt": "2026-11-25T10:23:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "physical-ai-parts",
-              "name": "피지컬 AI·로봇 부품",
-              "stockCodes": [
-                "060720",
-                "448900"
-              ],
-              "weightedChangeRate": 8.351326,
-              "integratedTradeAmount": 154277350000,
-              "reason": {
-                "summary": "젠슨 황 복귀로 되살아난 AI 투자심리와 로봇 부품 사업 확대 기대가 KH바텍·한국피아이엠의 후속 강세로 이어진 것으로 판단된다.",
-                "sourceUrl": "https://www.hankyung.com/article/2026112461486",
-                "publishedAt": "2026-11-24T10:02:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "id": "large-biopharma",
-              "name": "대형 바이오·바이오시밀러",
-              "stockCodes": [
-                "0126Z0",
-                "196170"
-              ],
-              "weightedChangeRate": 7.123841,
-              "integratedTradeAmount": 297861974300,
-              "reason": {
-                "summary": "글로벌 바이오시밀러 성장 기대와 대형 바이오 종목 수급 유입 속 삼성에피스홀딩스·알테오젠이 동반 강세를 보인 관련 배경이 확인됐다.",
-                "sourceUrl": "https://www.widedaily.com/news/articleView.html?idxno=304695",
-                "publishedAt": "2026-11-25T10:47:00+09:00",
-                "causality": "related_fact_only"
-              }
-            }
-          ],
-          "individualStocks": [
-            {
-              "code": "18064K",
-              "reason": {
-                "summary": "호반그룹과 조원태 회장 측의 한진칼 지분 경쟁 기대가 우선주 변동성 확대 배경으로 직접 보도됐다.",
-                "sourceUrl": "https://mbiz.heraldcorp.com/article/10944326",
-                "publishedAt": "2026-11-20T16:46:44+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "100790",
-              "reason": {
-                "summary": "미래에셋캐피탈이 미래에셋벤처투자 주식 약 307만주를 400억원 내외로 장내 분할매수하기로 공시한 사실이 확인됐다.",
-                "sourceUrl": "https://www.digitaltoday.co.kr/disclosure/articleView.html?idxno=717912",
-                "publishedAt": "2026-11-25T07:41:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "180640",
-              "reason": {
-                "summary": "호반그룹과 조원태 회장 측의 지분 매입 경쟁이 한진칼 상승 배경으로 직접 보도됐다.",
-                "sourceUrl": "https://www.yna.co.kr/view/AKR20261105152500008",
-                "publishedAt": "2026-11-05T16:51:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "000100",
-              "reason": {
-                "summary": "교보증권은 약품·헬스케어 외형 성장과 유한화학 실적 개선으로 3분기 영업이익이 전년 대비 50.8% 증가했다고 분석했다.",
-                "sourceUrl": "https://www.g-enews.com/list.php?ct=g000000&nm=11&nmd=1&ny=2026&pg=1&ssk=",
-                "publishedAt": "2026-11-25T09:22:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "003230",
-              "reason": {
-                "summary": "외형 성장과 비용 통제 능력을 확인한 실적이 삼양식품의 기존 관련 배경으로 제시됐다.",
-                "sourceUrl": "https://www.newspim.com/news/view/20261109000498",
-                "publishedAt": "2026-11-09T10:47:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "328130",
-              "reason": {
-                "summary": "뷰노의 브라질 진출을 촉매로 의료 AI 종목들이 동반 상승한 가운데 루닛으로 매수세가 확산된 관련 배경이 확인됐다.",
-                "sourceUrl": "https://www.widedaily.com/news/articleView.html?idxno=304608",
-                "publishedAt": "2026-11-25T09:11:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "267850",
-              "reason": null
-            },
-            {
-              "code": "079550",
-              "reason": null
-            },
-            {
-              "code": "207940",
-              "reason": {
-                "summary": "미국 의약품 관세 불확실성 완화와 신규 수주 회복·생산시설 가동률 상승 기대가 삼성바이오로직스 강세 배경으로 보도됐다.",
-                "sourceUrl": "https://www5.ajunews.com/view/20261125131453257",
-                "publishedAt": "2026-11-25T13:14:53+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "214450",
-              "reason": null
-            },
-            {
-              "code": "468530",
-              "reason": null
-            },
-            {
-              "code": "018260",
-              "reason": null
-            }
-          ]
-        },
-        "19:40": {
-          "schemaVersion": 3,
-          "date": "2026-11-25",
-          "slot": "19:40",
-          "asOf": "2026-11-25T19:40:41.137181+09:00",
-          "publishedAt": "2026-11-25T19:44:14+09:00",
-          "stocks": [
-            {
-              "code": "053800",
-              "name": "안랩",
-              "turnoverRank": 5,
-              "integratedTradeAmount": 577335854200,
-              "changeRate": 29.958848
-            },
-            {
-              "code": "263860",
-              "name": "지니언스",
-              "turnoverRank": 7,
-              "integratedTradeAmount": 393415000000,
-              "changeRate": 18.361582
-            },
-            {
-              "code": "278470",
-              "name": "에이피알",
-              "turnoverRank": 8,
-              "integratedTradeAmount": 365819858000,
-              "changeRate": 9.867173
-            },
-            {
-              "code": "180640",
-              "name": "한진칼",
-              "turnoverRank": 16,
-              "integratedTradeAmount": 192059211250,
-              "changeRate": 8.609272
-            },
-            {
-              "code": "257720",
-              "name": "실리콘투",
-              "turnoverRank": 20,
-              "integratedTradeAmount": 160669729425,
-              "changeRate": 11.434109
-            },
-            {
-              "code": "328130",
-              "name": "루닛",
-              "turnoverRank": 22,
-              "integratedTradeAmount": 155004003295,
-              "changeRate": 4.225352
-            },
-            {
-              "code": "003230",
-              "name": "삼양식품",
-              "turnoverRank": 23,
-              "integratedTradeAmount": 141477417000,
-              "changeRate": 5.637255
-            },
-            {
-              "code": "18064K",
-              "name": "한진칼우",
-              "turnoverRank": 26,
-              "integratedTradeAmount": 132162000000,
-              "changeRate": 25.142207
-            },
-            {
-              "code": "060720",
-              "name": "KH바텍",
-              "turnoverRank": 31,
-              "integratedTradeAmount": 117715000000,
-              "changeRate": 6.644791
-            },
-            {
-              "code": "207940",
-              "name": "삼성바이오로직스",
-              "turnoverRank": 34,
-              "integratedTradeAmount": 113326424500,
-              "changeRate": 4.573643
-            },
-            {
-              "code": "042510",
-              "name": "라온시큐어",
-              "turnoverRank": 42,
-              "integratedTradeAmount": 94080000000,
-              "changeRate": 14.340491
-            },
-            {
-              "code": "090430",
-              "name": "아모레퍼시픽",
-              "turnoverRank": 50,
-              "integratedTradeAmount": 82115286450,
-              "changeRate": 5.007153
-            },
-            {
-              "code": "192820",
-              "name": "코스맥스",
-              "turnoverRank": 51,
-              "integratedTradeAmount": 80953435750,
-              "changeRate": 12.178388
-            },
-            {
-              "code": "123690",
-              "name": "한국화장품",
-              "turnoverRank": 54,
-              "integratedTradeAmount": 79058000000,
-              "changeRate": 10.26393
-            },
-            {
-              "code": "0126Z0",
-              "name": "삼성에피스홀딩스",
-              "turnoverRank": 64,
-              "integratedTradeAmount": 59786198750,
-              "changeRate": 8.728943
-            },
-            {
-              "code": "161890",
-              "name": "한국콜마",
-              "turnoverRank": 70,
-              "integratedTradeAmount": 53630115100,
-              "changeRate": 4.859967
-            },
-            {
-              "code": "100790",
-              "name": "미래에셋벤처투자",
-              "turnoverRank": 71,
-              "integratedTradeAmount": 51789000000,
-              "changeRate": 7.945598
-            },
-            {
-              "code": "003350",
-              "name": "한국화장품제조",
-              "turnoverRank": 77,
-              "integratedTradeAmount": 47982000000,
-              "changeRate": 11.924342
-            },
-            {
-              "code": "150900",
-              "name": "파수AI",
-              "turnoverRank": 79,
-              "integratedTradeAmount": 45690000000,
-              "changeRate": 29.948365
-            },
-            {
-              "code": "000100",
-              "name": "유한양행",
-              "turnoverRank": 83,
-              "integratedTradeAmount": 43751198700,
-              "changeRate": 7.373868
-            },
-            {
-              "code": "267850",
-              "name": "아시아나IDT",
-              "turnoverRank": 85,
-              "integratedTradeAmount": 43194000000,
-              "changeRate": 4.795597
-            },
-            {
-              "code": "448900",
-              "name": "한국피아이엠",
-              "turnoverRank": 88,
-              "integratedTradeAmount": 42024981500,
-              "changeRate": 4.678363
-            },
-            {
-              "code": "483650",
-              "name": "달바글로벌",
-              "turnoverRank": 89,
-              "integratedTradeAmount": 41877593150,
-              "changeRate": 4.732351
-            }
-          ],
-          "themes": [
-            {
-              "id": "cybersecurity",
-              "name": "사이버보안",
-              "stockCodes": [
-                "053800",
-                "150900",
-                "263860",
-                "042510"
-              ],
-              "weightedChangeRate": 24.526809,
-              "integratedTradeAmount": 1110520854200,
-              "reason": {
-                "summary": "미국 정보기관 해킹 피해와 국내 금융권 개인정보 유출 사고가 잇따르면서 보안 투자 확대 기대가 커져 안랩·파수AI·지니언스·라온시큐어가 동반 강세를 보였다.",
-                "sourceUrl": "https://www5.ajunews.com/view/20261125135639369",
-                "publishedAt": "2026-11-25T14:00:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "kbeauty-season",
-              "name": "연말 성수기·K뷰티",
-              "stockCodes": [
-                "192820",
-                "003350",
-                "257720",
-                "123690",
-                "278470",
-                "090430",
-                "161890",
-                "483650"
-              ],
-              "weightedChangeRate": 9.523223,
-              "integratedTradeAmount": 912106017875,
-              "reason": {
-                "summary": "아마존 블랙프라이데이와 연말 성수기 매출 성장 기대, 한중 FTA 후속협상 타결 기대가 화장품 종목 전반의 강세 배경으로 보도됐다.",
-                "sourceUrl": "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=AKR20261125048251008",
-                "publishedAt": "2026-11-25T15:53:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "id": "physical-ai-parts",
-              "name": "피지컬 AI·로봇 부품",
-              "stockCodes": [
-                "060720",
-                "448900"
-              ],
-              "weightedChangeRate": 6.127456,
-              "integratedTradeAmount": 159739981500,
-              "reason": {
-                "summary": "AI 투자심리 회복과 휴머노이드 정밀 부품 사업 확대 기대가 KH바텍·한국피아이엠의 후속 강세 배경으로 판단된다.",
-                "sourceUrl": "https://www.hankyung.com/article/2026112461486",
-                "publishedAt": "2026-11-24T10:02:00+09:00",
-                "causality": "related_fact_only"
-              }
-            }
-          ],
-          "individualStocks": [
-            {
-              "code": "18064K",
-              "reason": {
-                "summary": "호반그룹과 조원태 회장 측의 한진칼 지분 경쟁 기대가 한진칼우 강세 배경으로 보도됐다.",
-                "sourceUrl": "https://www.ppss.kr/news/articleView.html?idxno=319524",
-                "publishedAt": "2026-11-25T17:40:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "0126Z0",
-              "reason": {
-                "summary": "글로벌 바이오시밀러 성장 기대와 대형주 수급 유입이 삼성에피스홀딩스 강세 배경으로 보도됐다.",
-                "sourceUrl": "https://www.widedaily.com/news/articleView.html?idxno=304695",
-                "publishedAt": "2026-11-25T10:47:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "180640",
-              "reason": {
-                "summary": "호반그룹과 조원태 회장 측의 지분 매입 경쟁이 한진칼 상승의 지속 배경으로 확인됐다.",
-                "sourceUrl": "https://www.yna.co.kr/view/AKR20261105152500008",
-                "publishedAt": "2026-11-05T16:51:00+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "100790",
-              "reason": {
-                "summary": "미래에셋캐피탈이 미래에셋벤처투자 주식 약 307만주를 400억원 내외로 장내 분할매수하기로 한 사실이 확인됐다.",
-                "sourceUrl": "https://www.digitaltoday.co.kr/disclosure/articleView.html?idxno=717912",
-                "publishedAt": "2026-11-25T07:41:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "000100",
-              "reason": {
-                "summary": "유한양행이 R&D·생산 책임자를 공동부대표로 선임해 차기 경영체제의 윤곽을 확정한 사실이 확인됐다.",
-                "sourceUrl": "https://www.yna.co.kr/view/AKR20261125095600017",
-                "publishedAt": "2026-11-25T13:34:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "003230",
-              "reason": {
-                "summary": "외형 성장과 비용 통제 능력을 확인한 기존 실적과 당일 외국인·기관 순매수가 관련 배경으로 확인됐다.",
-                "sourceUrl": "https://www.newspim.com/news/view/20261109000498",
-                "publishedAt": "2026-11-09T10:47:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "267850",
-              "reason": {
-                "summary": "대한항공·아시아나항공 통합을 앞둔 항공 IT 계열사 사업 재편 기대가 기존 관련 배경으로 확인됐다.",
-                "sourceUrl": "https://www5.ajunews.com/view/20261110093748298",
-                "publishedAt": "2026-11-10T09:59:00+09:00",
-                "causality": "related_fact_only"
-              }
-            },
-            {
-              "code": "207940",
-              "reason": {
-                "summary": "미국 의약품 관세 불확실성 완화와 신규 수주 회복·생산시설 가동률 상승 기대가 삼성바이오로직스 강세 배경으로 보도됐다.",
-                "sourceUrl": "https://www5.ajunews.com/view/20261125131453257",
-                "publishedAt": "2026-11-25T13:14:53+09:00",
-                "causality": "source_attributed"
-              }
-            },
-            {
-              "code": "328130",
-              "reason": {
-                "summary": "뷰노의 브라질 진출을 촉매로 의료 AI 종목이 동반 상승하며 루닛으로 매수세가 확산된 관련 배경이 확인됐다.",
-                "sourceUrl": "https://www.widedaily.com/news/articleView.html?idxno=304608",
-                "publishedAt": "2026-11-25T09:11:00+09:00",
-                "causality": "related_fact_only"
-              }
-            }
-          ]
-        }
-      }
-    },
     "2026-11-26": {
       "date": "2026-11-26",
       "editions": {
@@ -2541,6 +715,444 @@
               "reason": null
             }
           ]
+        }
+      }
+    },
+    "2026-11-27": {
+      "date": "2026-11-27",
+      "editions": {
+        "09:40": {
+          "schemaVersion": 3,
+          "date": "2026-11-27",
+          "slot": "09:40",
+          "asOf": "2026-11-27T09:40:00+09:00",
+          "publishedAt": "2026-11-27T20:05:04+09:00",
+          "testOnly": true,
+          "analysis": {
+            "marketSummary": "금융당국의 증시안정펀드(증안펀드) 가동·확대 기대감과 외국인·기관 동반 순매수에 힘입어 코스피와 코스닥 모두 급반등 출발",
+            "themes": [
+              {
+                "name": "휴머노이드 · 지능형 로봇",
+                "reason": "2040년 휴머노이드 수요 800만 대 전망 및 CES 2027 공개 기대감",
+                "stocks": [
+                  {
+                    "name": "레인보우로보틱스",
+                    "changeRate": "+13.7%"
+                  },
+                  {
+                    "name": "현대오토에버",
+                    "changeRate": "+7.59%"
+                  },
+                  {
+                    "name": "코스모로보틱스",
+                    "changeRate": "상한가"
+                  },
+                  {
+                    "name": "제닉스로보틱스",
+                    "changeRate": "상한가"
+                  },
+                  {
+                    "name": "클로봇",
+                    "changeRate": "+29%대"
+                  }
+                ],
+                "sources": []
+              },
+              {
+                "name": "바이오 · 항암 신약",
+                "reason": "코스닥 수급 개선 속 항암 신약 및 플랫폼 부각",
+                "stocks": [
+                  {
+                    "name": "큐리언트",
+                    "changeRate": "상한가"
+                  },
+                  {
+                    "name": "에이비엘바이오",
+                    "changeRate": "+25~27%대"
+                  },
+                  {
+                    "name": "앱클론",
+                    "changeRate": "+22.5%"
+                  },
+                  {
+                    "name": "알테오젠",
+                    "changeRate": "+9.5%"
+                  },
+                  {
+                    "name": "리가켐바이오",
+                    "changeRate": "+20%대"
+                  }
+                ],
+                "sources": []
+              },
+              {
+                "name": "방위산업 · 우주항공",
+                "reason": "중동 지정학적 긴장 고조 및 사우디 연합군 대응 경고",
+                "stocks": [
+                  {
+                    "name": "현대로템",
+                    "changeRate": "+7.92%"
+                  },
+                  {
+                    "name": "LIG디펜스앤에어로스페이스",
+                    "changeRate": "+7.31%"
+                  },
+                  {
+                    "name": "한화에어로스페이스",
+                    "changeRate": "+5.74%"
+                  },
+                  {
+                    "name": "한국항공우주",
+                    "changeRate": "+5.36%"
+                  }
+                ],
+                "sources": []
+              }
+            ],
+            "individualStocks": [
+              {
+                "name": "삼성전자",
+                "changeRate": "+4.3~4.6%",
+                "reason": "외국인 1조 원대 순매수 유입 및 대형 반도체 반등",
+                "sources": []
+              },
+              {
+                "name": "SK하이닉스",
+                "changeRate": "+4.3~5.4%",
+                "reason": "외국인 순매수 유입 및 AI 매도 압력 완화",
+                "sources": []
+              },
+              {
+                "name": "엔켐",
+                "changeRate": "+29%대",
+                "reason": "2차전지 소재 반등 수급 유입",
+                "sources": []
+              }
+            ],
+            "outlook": "주말(29~30일) 금융당국의 증안펀드 긴급회의 결과 및 실제 자금 집행 규모 확인 필요"
+          },
+          "stocks": [],
+          "themes": [
+            {
+              "id": "summary",
+              "name": "[테스트] 시장 핵심 요약",
+              "stockCodes": [],
+              "reason": {
+                "summary": "앱 표출 검증용 미검증 데이터입니다. 투자 판단에 사용하지 마십시오. 입력 관측 시각은 검증되지 않았습니다.\n자유 검색 결과입니다. 상단의 기존 Top100·4%·가중 상승률 문구는 적용되지 않습니다.\n\n금융당국의 증시안정펀드(증안펀드) 가동·확대 기대감과 외국인·기관 동반 순매수에 힘입어 코스피와 코스닥 모두 급반등 출발",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "theme-1",
+              "name": "휴머노이드 · 지능형 로봇",
+              "stockCodes": [],
+              "reason": {
+                "summary": "2040년 휴머노이드 수요 800만 대 전망 및 CES 2027 공개 기대감\n\n레인보우로보틱스  +13.7%\n현대오토에버  +7.59%\n코스모로보틱스  상한가\n제닉스로보틱스  상한가\n클로봇  +29%대",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "theme-2",
+              "name": "바이오 · 항암 신약",
+              "stockCodes": [],
+              "reason": {
+                "summary": "코스닥 수급 개선 속 항암 신약 및 플랫폼 부각\n\n큐리언트  상한가\n에이비엘바이오  +25~27%대\n앱클론  +22.5%\n알테오젠  +9.5%\n리가켐바이오  +20%대",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "theme-3",
+              "name": "방위산업 · 우주항공",
+              "stockCodes": [],
+              "reason": {
+                "summary": "중동 지정학적 긴장 고조 및 사우디 연합군 대응 경고\n\n현대로템  +7.92%\nLIG디펜스앤에어로스페이스  +7.31%\n한화에어로스페이스  +5.74%\n한국항공우주  +5.36%",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "individual-1",
+              "name": "개별 특징주 · 삼성전자",
+              "stockCodes": [],
+              "reason": {
+                "summary": "+4.3~4.6%\n외국인 1조 원대 순매수 유입 및 대형 반도체 반등",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "individual-2",
+              "name": "개별 특징주 · SK하이닉스",
+              "stockCodes": [],
+              "reason": {
+                "summary": "+4.3~5.4%\n외국인 순매수 유입 및 AI 매도 압력 완화",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "individual-3",
+              "name": "개별 특징주 · 엔켐",
+              "stockCodes": [],
+              "reason": {
+                "summary": "+29%대\n2차전지 소재 반등 수급 유입",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "outlook",
+              "name": "시장 핵심 관전 포인트",
+              "stockCodes": [],
+              "reason": {
+                "summary": "주말(29~30일) 금융당국의 증안펀드 긴급회의 결과 및 실제 자금 집행 규모 확인 필요",
+                "causality": "source_attributed"
+              }
+            }
+          ],
+          "individualStocks": []
+        },
+        "14:50": {
+          "schemaVersion": 3,
+          "date": "2026-11-27",
+          "slot": "14:50",
+          "asOf": "2026-11-27T14:50:00+09:00",
+          "publishedAt": "2026-11-27T20:05:04+09:00",
+          "testOnly": true,
+          "analysis": {
+            "marketSummary": "코스피 4,915.68(+4.34%), 코스닥 708.99(+8.13%, 장중 매수 사이드카 발동 및 700선 회복)로 양 시장 급등 마감",
+            "themes": [
+              {
+                "name": "휴머노이드 · 지능형 로봇",
+                "reason": "2040년 휴머노이드 수요 800만 대 전망 보고서 및 삼성전자 CES 2027 공개 기대감",
+                "stocks": [
+                  {
+                    "name": "레인보우로보틱스",
+                    "changeRate": "+13.7%"
+                  },
+                  {
+                    "name": "현대오토에버",
+                    "changeRate": "+7.59%"
+                  },
+                  {
+                    "name": "코스모로보틱스",
+                    "changeRate": "상한가"
+                  },
+                  {
+                    "name": "제닉스로보틱스",
+                    "changeRate": "상한가"
+                  },
+                  {
+                    "name": "클로봇",
+                    "changeRate": "+29%대"
+                  },
+                  {
+                    "name": "에스피시스템스",
+                    "changeRate": "+29%대"
+                  }
+                ],
+                "sources": []
+              },
+              {
+                "name": "바이오 · 항암 신약",
+                "reason": "외국인·기관 코스닥 대규모 순매수 유입 속 임상 및 유상증자 청약 흥행",
+                "stocks": [
+                  {
+                    "name": "큐리언트",
+                    "changeRate": "상한가"
+                  },
+                  {
+                    "name": "에이비엘바이오",
+                    "changeRate": "+25~27%대"
+                  },
+                  {
+                    "name": "앱클론",
+                    "changeRate": "+22.5%"
+                  },
+                  {
+                    "name": "알테오젠",
+                    "changeRate": "+9.5%"
+                  },
+                  {
+                    "name": "리가켐바이오",
+                    "changeRate": "+20%대"
+                  },
+                  {
+                    "name": "올릭스",
+                    "changeRate": "+19%대"
+                  }
+                ],
+                "sources": []
+              },
+              {
+                "name": "방위산업 · 우주항공",
+                "reason": "후티 반군의 사우디 정유 시설 공격 및 중동 지정학적 리스크 확대",
+                "stocks": [
+                  {
+                    "name": "현대로템",
+                    "changeRate": "+7.92%"
+                  },
+                  {
+                    "name": "LIG디펜스앤에어로스페이스",
+                    "changeRate": "+7.31%"
+                  },
+                  {
+                    "name": "한화에어로스페이스",
+                    "changeRate": "+5.74%"
+                  },
+                  {
+                    "name": "한국항공우주",
+                    "changeRate": "+5.36%"
+                  },
+                  {
+                    "name": "대성하이텍",
+                    "changeRate": "+28~29%대"
+                  }
+                ],
+                "sources": []
+              },
+              {
+                "name": "보안 · 통신장비",
+                "reason": "코스닥 중소형 성장주 전반 저가 매수세 유입",
+                "stocks": [
+                  {
+                    "name": "이스트소프트",
+                    "changeRate": "+21%대"
+                  },
+                  {
+                    "name": "크라우드웍스",
+                    "changeRate": "+29%대"
+                  },
+                  {
+                    "name": "케이엠더블유",
+                    "changeRate": "+22%대"
+                  },
+                  {
+                    "name": "쏘닉스",
+                    "changeRate": "+29%대"
+                  }
+                ],
+                "sources": []
+              }
+            ],
+            "individualStocks": [
+              {
+                "name": "삼성전자",
+                "changeRate": "+4.3~4.6%",
+                "reason": "외국인 1조 1,298억 원 순매수 중심 대형주 강세",
+                "sources": []
+              },
+              {
+                "name": "SK하이닉스",
+                "changeRate": "+4.3~5.4%",
+                "reason": "반도체 업종 전반 투자심리 개선",
+                "sources": []
+              },
+              {
+                "name": "주성엔지니어링",
+                "changeRate": "+13.12%",
+                "reason": "반도체 소부장 동반 강세",
+                "sources": []
+              },
+              {
+                "name": "엔켐",
+                "changeRate": "+29%대",
+                "reason": "2차전지 소재 급반등",
+                "sources": []
+              }
+            ],
+            "outlook": "29일 증안펀드 투자관리위원회 긴급회의 및 30일 시장안정 긴급점검회의 발표 내용에 따른 차주 초 수급 연속성 주목"
+          },
+          "stocks": [],
+          "themes": [
+            {
+              "id": "summary",
+              "name": "[테스트] 시장 핵심 요약",
+              "stockCodes": [],
+              "reason": {
+                "summary": "앱 표출 검증용 미검증 데이터입니다. 투자 판단에 사용하지 마십시오. 입력 관측 시각은 검증되지 않았습니다.\n자유 검색 결과입니다. 상단의 기존 Top100·4%·가중 상승률 문구는 적용되지 않습니다.\n\n코스피 4,915.68(+4.34%), 코스닥 708.99(+8.13%, 장중 매수 사이드카 발동 및 700선 회복)로 양 시장 급등 마감",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "theme-1",
+              "name": "휴머노이드 · 지능형 로봇",
+              "stockCodes": [],
+              "reason": {
+                "summary": "2040년 휴머노이드 수요 800만 대 전망 보고서 및 삼성전자 CES 2027 공개 기대감\n\n레인보우로보틱스  +13.7%\n현대오토에버  +7.59%\n코스모로보틱스  상한가\n제닉스로보틱스  상한가\n클로봇  +29%대\n에스피시스템스  +29%대",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "theme-2",
+              "name": "바이오 · 항암 신약",
+              "stockCodes": [],
+              "reason": {
+                "summary": "외국인·기관 코스닥 대규모 순매수 유입 속 임상 및 유상증자 청약 흥행\n\n큐리언트  상한가\n에이비엘바이오  +25~27%대\n앱클론  +22.5%\n알테오젠  +9.5%\n리가켐바이오  +20%대\n올릭스  +19%대",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "theme-3",
+              "name": "방위산업 · 우주항공",
+              "stockCodes": [],
+              "reason": {
+                "summary": "후티 반군의 사우디 정유 시설 공격 및 중동 지정학적 리스크 확대\n\n현대로템  +7.92%\nLIG디펜스앤에어로스페이스  +7.31%\n한화에어로스페이스  +5.74%\n한국항공우주  +5.36%\n대성하이텍  +28~29%대",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "theme-4",
+              "name": "보안 · 통신장비",
+              "stockCodes": [],
+              "reason": {
+                "summary": "코스닥 중소형 성장주 전반 저가 매수세 유입\n\n이스트소프트  +21%대\n크라우드웍스  +29%대\n케이엠더블유  +22%대\n쏘닉스  +29%대",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "individual-1",
+              "name": "개별 특징주 · 삼성전자",
+              "stockCodes": [],
+              "reason": {
+                "summary": "+4.3~4.6%\n외국인 1조 1,298억 원 순매수 중심 대형주 강세",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "individual-2",
+              "name": "개별 특징주 · SK하이닉스",
+              "stockCodes": [],
+              "reason": {
+                "summary": "+4.3~5.4%\n반도체 업종 전반 투자심리 개선",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "individual-3",
+              "name": "개별 특징주 · 주성엔지니어링",
+              "stockCodes": [],
+              "reason": {
+                "summary": "+13.12%\n반도체 소부장 동반 강세",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "individual-4",
+              "name": "개별 특징주 · 엔켐",
+              "stockCodes": [],
+              "reason": {
+                "summary": "+29%대\n2차전지 소재 급반등",
+                "causality": "source_attributed"
+              }
+            },
+            {
+              "id": "outlook",
+              "name": "시장 핵심 관전 포인트",
+              "stockCodes": [],
+              "reason": {
+                "summary": "29일 증안펀드 투자관리위원회 긴급회의 및 30일 시장안정 긴급점검회의 발표 내용에 따른 차주 초 수급 연속성 주목",
+                "causality": "source_attributed"
+              }
+            }
+          ],
+          "individualStocks": []
         }
       }
     }
