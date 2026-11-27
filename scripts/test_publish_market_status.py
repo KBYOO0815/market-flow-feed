@@ -1,7 +1,7 @@
 import copy
 import unittest
 from datetime import date, datetime
-from publish_market_status import KST, SLOTS, DRIVE_IDS, edition, eligible, process, session, validate
+from publish_market_status import KST, SLOTS, DRIVE_IDS, edition, eligible, market_day, process, session, validate
 
 
 def payload(day="2026-11-28", market="2026-11-27"):
@@ -21,7 +21,9 @@ def feed():
 
 class TestPublisher(unittest.TestCase):
     def test_holiday_and_early_close(self):
-        self.assertIsNone(session(date(2026,11,27),"us"))
+        self.assertEqual(market_day(date(2026,11,27),"us"),date(2026,11,25))
+        self.assertIsNone(session(date(2026,11,29),"us"))
+        self.assertEqual(market_day(date(2026,11,30),"us"),date(2026,11,27))
         self.assertEqual(session(date(2026,11,28),"us").hour,3)
         self.assertIsNotNone(session(date(2026,11,27),"kr"))
         self.assertIsNone(session(date(2026,11,28),"kr"))
@@ -31,7 +33,8 @@ class TestPublisher(unittest.TestCase):
         with self.assertRaises(ValueError):
             eligible(payload("2026-11-27","2026-11-25"),"us",now)
         f = feed()
-        process(f,"us",now,"fixture",lambda _: self.fail("holiday must not download"))
+        process(f,"us",datetime(2026,11,29,7,11,tzinfo=KST),"fixture",
+                lambda _: self.fail("Sunday must not download"))
         self.assertEqual(f["navigation"]["today"][0]["state"],"skipped")
         self.assertEqual(f["days"],[])
 
@@ -98,6 +101,30 @@ class TestPublisher(unittest.TestCase):
             eligible(p,"kr",datetime(2026,11,27,15,51,tzinfo=KST))
         with self.assertRaisesRegex(ValueError,"stale"):
             eligible(p,"kr",datetime(2026,11,30,15,41,tzinfo=KST))
+
+    def test_us_monday_and_holiday_publish(self):
+        for day, market in (("2026-11-30","2026-11-27"), ("2026-12-26","2026-12-24")):
+            with self.subTest(day=day):
+                p = payload(day,market)
+                now = datetime.fromisoformat(day+"T07:11:00+09:00")
+                f = feed()
+                process(f,"us",now,DRIVE_IDS["us"],lambda _: p)
+                e = f["days"][0]["editions"]["07:11"]
+                self.assertEqual(e["marketDate"],market)
+                self.assertEqual(e["content"],p["content"])
+                self.assertEqual(f["navigation"]["today"][0]["state"],"published")
+                self.assertIn(market,e["display"]["badges"][0])
+                stale = copy.deepcopy(p)
+                stale["asOf"] = market+"T23:59:00+09:00"
+                with self.assertRaises(ValueError):
+                    eligible(stale,"us",now)
+
+    def test_us_wrong_market_date_and_stale_report(self):
+        now = datetime(2026,11,30,7,11,tzinfo=KST)
+        with self.assertRaisesRegex(ValueError,"marketDate"):
+            eligible(payload("2026-11-30","2026-11-29"),"us",now)
+        with self.assertRaisesRegex(ValueError,"stale"):
+            eligible(payload(),"us",now)
 
 
 if __name__ == "__main__":

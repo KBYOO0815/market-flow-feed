@@ -7,14 +7,14 @@
       {
         "date": "2026-11-27",
         "slot": "07:11",
-        "state": "skipped",
-        "reason": "직전 미국 정규장 휴장"
+        "state": "missing",
+        "reason": "연동 테스트용 입력만 존재; 운영 발행 제외"
       },
       {
         "date": "2026-11-27",
         "slot": "15:41",
         "state": "missing",
-        "reason": "Google Drive 한국 시황 입력 파일 미연결"
+        "reason": "연동 테스트용 입력만 존재; 운영 발행 제외"
       }
     ],
     "next": []
@@ -27,7 +27,7 @@
       "07:11",
       "15:41"
     ],
-    "nonTradingDay": "07:11 only after a US regular session on the preceding US date; 15:41 only on a KRX trading day"
+    "nonTradingDay": "07:11 every Monday-Saturday KST including US holidays; marketDate is latest completed US regular session. 15:41 only on a KRX trading day."
   },
   "contentSchemaVersion": 2,
   "contentTypes": [

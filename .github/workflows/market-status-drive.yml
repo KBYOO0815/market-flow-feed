@@ -1,8 +1,8 @@
 name: Market status from Google Drive
 on:
   schedule:
-    # UTC: 07:11/16/21 KST (previous UTC date); 15:41/46/51 KST.
-    - cron: '11,16,21 22 * * *'
+    # UTC Sun-Fri 22:11/16/21 = KST Mon-Sat 07:11/16/21; KR unchanged.
+    - cron: '11,16,21 22 * * 0-5'
     - cron: '41,46,51 6 * * *'
   workflow_dispatch:
     inputs:
@@ -72,7 +72,7 @@ jobs:
           set -euo pipefail
           if [[ "$EVENT" == schedule ]]; then
             case "$CRON" in
-              '11,16,21 22 * * *') region=us ;;
+              '11,16,21 22 * * 0-5') region=us ;;
               '41,46,51 6 * * *') region=kr ;;
               *) echo "Unexpected cron"; exit 1 ;;
             esac

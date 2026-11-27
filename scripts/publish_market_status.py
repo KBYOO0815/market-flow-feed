@@ -17,8 +17,8 @@ DRIVE_IDS = {
     "us": "1Wwtn3wBgHJAiz0Lih-P6ZC3DHu8GTpn0",
     "kr": "1bdjidvH5e--QmCX3_gde4p7vM6KEUhn3",
 }
-# 2026-11-27 KR input was explicitly generated for integration testing.
-KR_LIVE_FROM = date(2026, 11, 28)
+# Both 2026-11-27 Drive inputs were explicitly generated for integration testing.
+LIVE_FROM = date(2026, 11, 28)
 LIMIT = 1024 * 1024
 TYPES = ["text", "metric", "list", "table", "link"]
 FEED = Path("market-status.json")
@@ -55,18 +55,28 @@ def timestamp(value):
     return dt.astimezone(KST)
 
 
+def market_session(day, region):
+    # A US morning edition is scheduled Mon-Sat KST, even on US holidays.
+    # marketDate is the latest completed US regular session, not the report date.
+    if region == "us" and day.weekday() == 6:
+        return None, None
+    target = day - timedelta(days=1) if region == "us" else day
+    cal = xc.get_calendar("XNYS" if region == "us" else "XKRX",
+                          start=str(target - timedelta(days=31)),
+                          end=str(target + timedelta(days=14)))
+    if region == "kr" and not cal.is_session(str(target)):
+        return None, None
+    market = cal.date_to_session(str(target), direction="previous") if region == "us" else str(target)
+    close = cal.session_close(market).to_pydatetime().astimezone(KST)
+    return date.fromisoformat(str(market)[:10]), close
+
+
 def market_day(day, region):
-    return day - timedelta(days=1) if region == "us" else day
+    return market_session(day, region)[0]
 
 
 def session(day, region):
-    market = market_day(day, region)
-    cal = xc.get_calendar("XNYS" if region == "us" else "XKRX",
-                          start=str(market - timedelta(days=14)),
-                          end=str(market + timedelta(days=14)))
-    if not cal.is_session(str(market)):
-        return None
-    return cal.session_close(str(market)).to_pydatetime().astimezone(KST)
+    return market_session(day, region)[1]
 
 
 def validate(data):
@@ -105,13 +115,14 @@ def validate(data):
 def eligible(data, region, now):
     validate(data)
     day = now.date()
-    close = session(day, region)
-    require(close is not None, "market closed: no new session")
+    market, close = market_session(day, region)
+    require(close is not None, "not a scheduled publication day")
     require(data["date"] == str(day) and data["slot"] == SLOTS[region], "stale or wrong edition")
-    require(data["marketDate"] == str(market_day(day, region)), "stale or wrong marketDate")
-    require(region != "kr" or day >= KR_LIVE_FROM, "KR integration test date; no live publication")
+    require(data["marketDate"] == str(market), "stale or wrong marketDate")
+    require(day >= LIVE_FROM, "integration test date; no live publication")
     observed = timestamp(data["asOf"])
     require(close <= observed <= now, "observation must be after close and not in future")
+    require(region != "us" or observed.date() == day, "US report must be freshly observed today (KST)")
     require(not any("테스트:" in str(x.get("title", "")) or "테스트용" in str(x.get("title", ""))
                     for x in data["content"]), "test payload cannot publish")
     require(now >= datetime.combine(day, time.fromisoformat(SLOTS[region]), KST), "before release slot")
@@ -139,10 +150,12 @@ def edition(data, now):
             sources.append({"name": item["label"], "url": item["url"], "checkedAt": ""})
             continue
         sections.append(section)
-    return {"date": data["date"], "slot": data["slot"], "asOf": data["asOf"],
+    return {"date": data["date"], "slot": data["slot"], "marketDate": data["marketDate"], "asOf": data["asOf"],
             "publishedAt": now.isoformat(timespec="seconds"), "content": copy.deepcopy(data["content"]),
             "display": {"headline": "미국 시황" if data["slot"] == SLOTS["us"] else "한국 시황",
-                        "badges": [], "observedAt": data["asOf"], "sections": sections},
+                        "badges": (["최근 미국 정규장: " + data["marketDate"]]
+                                   if data["slot"] == SLOTS["us"] else []),
+                        "observedAt": data["asOf"], "sections": sections},
             "sources": sources}
 
 
@@ -176,7 +189,7 @@ def rebuild(feed, now, effective, region=None, state=None, reason=None):
             if slot in existing.get(str(day), {}):
                 entry["state"] = "published"
             elif session(day, r) is None:
-                entry.update(state="skipped", reason="해당 시장 정규장 휴장")
+                entry.update(state="skipped", reason="일요일 미국 시황 미발행" if r == "us" else "해당 시장 정규장 휴장")
             elif day == today and now < datetime.combine(day, time.fromisoformat(slot), KST):
                 entry["state"] = "scheduled"
             elif day == today and r == region and state:
@@ -203,7 +216,7 @@ def process(feed, region, now, file_id, loader=download):
     elif now < datetime.combine(now.date(), time.fromisoformat(slot), KST):
         print("Before release slot")
     elif session(now.date(), region) is None:
-        print("Market closed; skip")
+        print("Not a scheduled publication day; skip")
     elif not file_id:
         state, reason = "missing", "Google Drive 입력 파일 미연결"
         print(reason)
