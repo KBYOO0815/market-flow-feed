@@ -22,6 +22,8 @@ on:
       - '.github/workflows/market-news-drive.yml'
       - 'scripts/publish_market_news.py'
       - 'scripts/test_publish_market_news.py'
+env:
+  DRIVE_API_KEY: ${{ secrets.DRIVE_API_KEY }}
 permissions:
   contents: read
 concurrency:
@@ -39,11 +41,11 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s scripts -p test_publish_market_news.py
       - name: Read-only Drive test
-        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.publish)
+        if: github.event_name == 'workflow_dispatch' && !inputs.publish
         run: python scripts/publish_market_news.py --check
   publish:
     needs: test
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.publish))
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish))
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -62,7 +64,7 @@ jobs:
           MANUAL_SLOT: ${{ inputs.slot }}
         run: |
           set -euo pipefail
-          if [[ "$EVENT" == schedule ]]; then
+          if [[ "$EVENT" == schedule || "$EVENT" == push ]]; then
             targets="08:00 15:20"
           else
             targets="$MANUAL_SLOT"
