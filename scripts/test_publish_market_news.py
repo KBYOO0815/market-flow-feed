@@ -10,6 +10,16 @@ FEED = {"schemaVersion": 1, "days": [], "navigation": {"previous": [], "today": 
 ITEM = {"id": "fixture", "title": "Fixture", "summary": "Fixture", "sourceName": "Fixture", "sourceUrl": "https://example.com/fixture", "publishedAt": "2026-11-28T07:00:00+09:00", "checkedAt": "2026-11-28T07:51:00+09:00", "relatedStocks": [], "impactRank": 1, "category": "fixture", "region": "foreign", "eventKey": "fixture", "factKey": "fixture"}
 
 class NewsTests(unittest.TestCase):
+    def test_unlimited_news_count(self):
+        groups = {}
+        for region in ("foreign", "domestic"):
+            groups[region + "News"] = [dict(ITEM, id=f"{region}-{i}", region=region,
+                impactRank=i, eventKey=f"{region}-{i}", factKey=f"{region}-{i}")
+                for i in range(1, 26)]
+        result = validate(dict(BASE, **groups), DAY, "08:00", NOW)
+        self.assertEqual(len(result["foreignNews"]), 25)
+        self.assertEqual(len(result["domesticNews"]), 25)
+
     def test_filename(self):
         self.assertEqual(filename(DAY, "08:00"), "market-news-2026-11-28-0800.json")
     def test_public_folder_exact_name(self):

@@ -56,7 +56,7 @@ def validate(data, day, slot, now, test=False):
     facts = set()
     for region in ("foreign", "domestic"):
         items = data.get(region + "News")
-        if not isinstance(items, list) or len(items) > 10:
+        if not isinstance(items, list):
             raise ValueError("Invalid news array")
         for i, item in enumerate(items, 1):
             if not isinstance(item, dict):
