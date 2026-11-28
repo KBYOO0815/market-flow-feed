@@ -211,10 +211,6 @@ def main():
     if day < LIVE_FROM or now < at(day, args.slot):
         print("Outside eligible publication date/time")
         return
-    # Do not let a delayed morning job publish after the afternoon collection starts.
-    if args.slot == "08:00" and now >= at(day, "15:10"):
-        print("Morning release window ended")
-        return
     feed = json.loads(FEED.read_text(encoding="utf-8"))
     if session_for(feed, day, args.slot):
         print("Already published; no change")

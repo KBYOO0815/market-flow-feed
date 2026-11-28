@@ -4,6 +4,8 @@ on:
     # UTC Sun-Fri 22:11/16/21 = KST Mon-Sat 07:11/16/21; KR unchanged.
     - cron: '11,16,21 22 * * 0-5'
     - cron: '41,46,51 6 * * *'
+    # Recovery checks use current KST date and all due editions.
+    - cron: '23,43 22,23,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14 * * *'
   workflow_dispatch:
     inputs:
       region:
@@ -71,20 +73,9 @@ jobs:
         run: |
           set -euo pipefail
           if [[ "$EVENT" == schedule ]]; then
-            case "$CRON" in
-              '11,16,21 22 * * 0-5') region=us ;;
-              '41,46,51 6 * * *') region=kr ;;
-              *) echo "Unexpected cron"; exit 1 ;;
-            esac
-            hour=$(TZ=Asia/Seoul date +%H)
-            if [[ "$region" == us && "$hour" != 07 && "$hour" != 08 && "$hour" != 09 && "$hour" != 10 && "$hour" != 11 ]]; then
-              echo "Outside morning release window; no publication"; exit 0
-            fi
-            if [[ "$region" == kr && "$hour" < 15 ]]; then
-              echo "Outside afternoon release window; no publication"; exit 0
-            fi
+            targets="us kr"
           else
-            region="$MANUAL_REGION"
+            targets="$MANUAL_REGION"
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -92,14 +83,16 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             rm -f .market-status-input-failed
-            python scripts/publish_market_status.py --region "$region"
+            for target in $targets; do
+              python scripts/publish_market_status.py --region "$target"
+            done
             if git diff --quiet -- market-status.json; then
               echo "No feed changes"
               test ! -f .market-status-input-failed
               exit
             fi
             git add -- market-status.json
-            git commit -m "Publish market status ($region)"
+            git commit -m "Publish market status ($targets)"
             if git push origin HEAD:main; then
               git fetch origin main
               git merge-base --is-ancestor HEAD origin/main

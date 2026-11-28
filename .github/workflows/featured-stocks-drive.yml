@@ -5,6 +5,8 @@ on:
     - cron: '40,45,50 0 * * 1-5'
     - cron: '50,55 5 * * 1-5'
     - cron: '0 6 * * 1-5'
+    # Recovery checks use current KST date and all due editions.
+    - cron: '29,49 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14 * * 1-5'
   workflow_dispatch:
     inputs:
       slot:
@@ -64,13 +66,9 @@ jobs:
         run: |
           set -euo pipefail
           if [[ "$EVENT" == schedule ]]; then
-            case "$CRON" in
-              '40,45,50 0 * * 1-5') slot=09:40 ;;
-              '50,55 5 * * 1-5'|'0 6 * * 1-5') slot=14:50 ;;
-              *) exit 1 ;;
-            esac
+            targets="09:40 14:50"
           else
-            slot="$MANUAL_SLOT"
+            targets="$MANUAL_SLOT"
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -78,13 +76,15 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             rm -f .featured-input-failed
-            python scripts/publish_featured_stocks.py --slot "$slot"
+            for target in $targets; do
+              python scripts/publish_featured_stocks.py --slot "$target"
+            done
             if git diff --quiet -- featured-stocks-unified.json; then
               test ! -f .featured-input-failed
               exit
             fi
             git add -- featured-stocks-unified.json
-            git commit -m "Publish featured stocks ($slot)"
+            git commit -m "Publish featured stocks ($targets)"
             if git push origin HEAD:main; then
               git fetch origin main
               git merge-base --is-ancestor HEAD origin/main

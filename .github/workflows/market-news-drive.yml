@@ -4,6 +4,8 @@ on:
     # UTC 23:00/05/10 = KST 08:00/05/10 next day.
     - cron: '0,5,10 23 * * *'
     - cron: '20,25,30 6 * * *'
+    # Recovery checks use current KST date and all due editions.
+    - cron: '17,37,57 23,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14 * * *'
   workflow_dispatch:
     inputs:
       slot:
@@ -61,13 +63,9 @@ jobs:
         run: |
           set -euo pipefail
           if [[ "$EVENT" == schedule ]]; then
-            case "$CRON" in
-              '0,5,10 23 * * *') slot=08:00 ;;
-              '20,25,30 6 * * *') slot=15:20 ;;
-              *) exit 1 ;;
-            esac
+            targets="08:00 15:20"
           else
-            slot="$MANUAL_SLOT"
+            targets="$MANUAL_SLOT"
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -75,13 +73,15 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             rm -f .market-news-input-failed
-            python scripts/publish_market_news.py --slot "$slot"
+            for target in $targets; do
+              python scripts/publish_market_news.py --slot "$target"
+            done
             if git diff --quiet -- market-news.json; then
               test ! -f .market-news-input-failed
               exit
             fi
             git add -- market-news.json
-            git commit -m "Publish news ($slot)"
+            git commit -m "Publish news ($targets)"
             if git push origin HEAD:main; then
               git fetch origin main
               git merge-base --is-ancestor HEAD origin/main

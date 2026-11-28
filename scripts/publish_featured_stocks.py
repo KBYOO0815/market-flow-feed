@@ -168,7 +168,7 @@ def main():
         print("Live featured publication disabled pending read-only folder verification")
         return
     day = now.date()
-    if day < LIVE_FROM or now < at(day, args.slot) or (args.slot == "09:40" and now >= at(day, "14:40")):
+    if day < LIVE_FROM or now < at(day, args.slot):
         print("Outside eligible publication window")
         return
     feed = json.loads(FEED.read_text(encoding="utf-8"))
