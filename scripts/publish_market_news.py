@@ -3,10 +3,11 @@ import argparse
 import copy
 import datetime as dt
 import json
+import os
 import re
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlsplit, parse_qs, urljoin
+from urllib.parse import urlsplit, parse_qs, urljoin, urlencode
 from urllib.request import Request, urlopen
 
 KST = dt.timezone(dt.timedelta(hours=9))
@@ -164,7 +165,31 @@ def matching_ids(html, name):
     pattern = re.compile(r"(?<![\w.-])" + re.escape(name) + r"(?![\w.-])")
     return sorted({fid for fid, title in parser.links if pattern.search(title)})
 
+def drive_api(params, file_id=None):
+    key = os.environ.get("DRIVE_API_KEY", "").strip()
+    if not key:
+        raise RuntimeError("DRIVE_API_KEY not configured")
+    endpoint = "https://www.googleapis.com/drive/v3/files"
+    if file_id:
+        endpoint += "/" + file_id
+    params = dict(params, key=key)
+    return public_read(endpoint + "?" + urlencode(params), LIMIT)
+
 def folder_ids(name):
+    if os.environ.get("DRIVE_API_KEY", "").strip():
+        ids = []
+        params = {"q": f"'{FOLDER}' in parents and trashed = false and name = '{name}'",
+                  "fields": "nextPageToken,files(id,name)", "pageSize": 100}
+        while True:
+            page = json.loads(drive_api(params))
+            ids.extend(f["id"] for f in page.get("files", []) if f["name"] == name)
+            if not page.get("nextPageToken"):
+                break
+            params["pageToken"] = page["nextPageToken"]
+        if not ids:
+            raise FileNotFoundError("Current file not found by Drive API")
+        return sorted(set(ids))
+    print("Drive API key not configured; using public folder fallback", flush=True)
     html = public_read(f"https://drive.google.com/embeddedfolderview?id={FOLDER}#list", 8 * LIMIT).decode("utf-8")
     ids = matching_ids(html, name)
     if not ids:
@@ -174,7 +199,8 @@ def folder_ids(name):
 def download(file_id):
     if not re.fullmatch(r"[A-Za-z0-9_-]{10,}", file_id):
         raise ValueError("Invalid Drive file ID")
-    body = public_read(f"https://drive.google.com/uc?export=download&id={file_id}", LIMIT)
+    body = (drive_api({"alt": "media"}, file_id) if os.environ.get("DRIVE_API_KEY", "").strip()
+            else public_read(f"https://drive.google.com/uc?export=download&id={file_id}", LIMIT))
     return json.loads(body.decode("utf-8-sig"), parse_constant=lambda x: (_ for _ in ()).throw(ValueError("Invalid JSON constant")))
 
 def load_edition(day, slot, now):
@@ -188,7 +214,7 @@ def load_edition(day, slot, now):
         # Exclude explicit test inputs even when they use the production name.
         if isinstance(data, dict) and data.get("testOnly") is True:
             continue
-        edition = validate(data, day, slot, now)
+        edition = validate(data, day, slot, dt.datetime.now(KST))
         candidates.append((stamp(edition["asOf"]), edition))
     if not candidates:
         raise ValueError("No eligible production file")
