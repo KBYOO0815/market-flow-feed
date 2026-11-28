@@ -13,8 +13,8 @@ TEST_DAY = dt.date(2026, 11, 27)
 TEST_IDS = {"09:40": "1HtmN74L5qKOy4oG0enm8wrYgl-eZQj54", "14:50": "1NSq1khBGzVZ1F6-CV1JHW6kWgsha4nOv"}
 SLOTS = {"09:40": "09:30", "14:50": "14:40"}
 LIVE_FROM = dt.date(2026, 11, 30)
-# Public folder is currently writable by anyone with link. Enable only after read-only sharing is verified.
-LIVE_ENABLED = False
+# Live publication explicitly enabled by owner; public-write input risk remains until sharing is restricted.
+LIVE_ENABLED = True
 FEED = Path("featured-stocks-unified.json")
 FAIL = Path(".featured-input-failed")
 NOTICE = "앱 표출 검증용 미검증 데이터입니다. 투자 판단에 사용하지 마십시오. 입력 관측 시각은 검증되지 않았습니다."
