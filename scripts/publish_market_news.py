@@ -1,4 +1,4 @@
-"""Publish Claude's dated Drive news files without changing the app contract."""
+"""Publish dated Drive news files without changing the app contract."""
 import argparse
 import copy
 import datetime as dt
@@ -179,7 +179,11 @@ def download(file_id):
 
 def load_edition(day, slot, now):
     candidates = []
-    for fid in folder_ids(filename(day, slot)):
+    name = filename(day, slot)
+    print(f"Looking up Drive input: {name}", flush=True)
+    ids = folder_ids(name)
+    print(f"Drive matching files: {len(ids)}", flush=True)
+    for fid in ids:
         data = download(fid)
         # Exclude explicit test inputs even when they use the production name.
         if isinstance(data, dict) and data.get("testOnly") is True:
@@ -222,7 +226,12 @@ def main():
     except Exception as exc:
         # Do not log credentials, URLs with tokens, or private input.
         failure = "Drive 뉴스 입력 조회 또는 검증 실패 (" + type(exc).__name__ + ")"
-        print(failure)
+        print(failure, flush=True)
+        # Validation errors are generated locally and contain field names, not input values.
+        if isinstance(exc, (ValueError, FileNotFoundError)):
+            print("Input diagnostic:", str(exc) if type(exc) in (ValueError, FileNotFoundError) else type(exc).__name__, flush=True)
+        elif hasattr(exc, "code"):
+            print("Drive HTTP status:", exc.code, flush=True)
         FAIL.touch()
     result = merge(feed, day, args.slot, dt.datetime.now(KST), edition, failure)
     if result != feed:
