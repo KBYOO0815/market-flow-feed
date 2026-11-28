@@ -10,13 +10,12 @@ from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 import exchange_calendars as xc
+from publish_market_news import public_read, matching_ids
 
 KST = ZoneInfo("Asia/Seoul")
 SLOTS = {"us": "07:11", "kr": "15:41"}
-DRIVE_IDS = {
-    "us": "1Wwtn3wBgHJAiz0Lih-P6ZC3DHu8GTpn0",
-    "kr": "1bdjidvH5e--QmCX3_gde4p7vM6KEUhn3",
-}
+FOLDER = "1MsE_fFlcJPWbIYJrUlC9SzV4CxKPLBSK"
+DRIVE_IDS = {"us": "us", "kr": "kr"}  # region selectors, not file IDs
 # Both 2026-11-27 Drive inputs were explicitly generated for integration testing.
 LIVE_FROM = date(2026, 11, 28)
 LIMIT = 1024 * 1024
@@ -120,6 +119,7 @@ def eligible(data, region, now):
     require(data["date"] == str(day) and data["slot"] == SLOTS[region], "stale or wrong edition")
     require(data["marketDate"] == str(market), "stale or wrong marketDate")
     require(day >= LIVE_FROM, "integration test date; no live publication")
+    require(data.get("testOnly") is None, "test payload cannot publish")
     observed = timestamp(data["asOf"])
     require(close <= observed <= now, "observation must be after close and not in future")
     require(region != "us" or observed.date() == day, "US report must be freshly observed today (KST)")
@@ -169,6 +169,31 @@ def download(file_id):
     return validate(json.loads(raw.decode("utf-8-sig"), parse_constant=lambda x: (_ for _ in ()).throw(ValueError(x))))
 
 
+def filename(day, region):
+    return f"market-status-{day}-{SLOTS[region].replace(':', '')}.json"
+
+
+def folder_listing():
+    return public_read(f"https://drive.google.com/embeddedfolderview?id={FOLDER}#list", 8 * LIMIT).decode("utf-8")
+
+
+def load_current(region, now, listing=folder_listing, loader=download):
+    ids = matching_ids(listing(), filename(now.date(), region))
+    require(bool(ids), "Current dated Drive file not found")
+    candidates = []
+    for fid in ids:
+        data = loader(fid)
+        if data.get("testOnly") is True:
+            continue
+        eligible(data, region, now)
+        candidates.append(data)
+    require(bool(candidates), "No eligible production file")
+    candidates.sort(key=lambda d: timestamp(d["asOf"]), reverse=True)
+    require(len(candidates) < 2 or timestamp(candidates[0]["asOf"]) != timestamp(candidates[1]["asOf"]),
+            "Ambiguous duplicate observation")
+    return candidates[0]
+
+
 def rebuild(feed, now, effective, region=None, state=None, reason=None):
     today = now.date()
     yesterday = today - timedelta(days=1)
@@ -204,7 +229,7 @@ def rebuild(feed, now, effective, region=None, state=None, reason=None):
     feed["navigation"] = nav
 
 
-def process(feed, region, now, file_id, loader=download):
+def process(feed, region, now, file_id, loader=None):
     effective = date.fromisoformat(feed["schedule"]["effectiveFrom"])
     require(now.date() >= effective, "schedule not active")
     slot = SLOTS[region]
@@ -222,7 +247,7 @@ def process(feed, region, now, file_id, loader=download):
         print(reason)
     else:
         try:
-            data = loader(file_id)
+            data = loader(file_id) if loader is not None else load_current(region, now)
             eligible(data, region, now)
             if old is None:
                 old = {"date": today, "editions": {}}
@@ -244,17 +269,17 @@ def main():
     now = datetime.now(KST)
     file_id = DRIVE_IDS[args.region]
     if args.check:
-        data = download(file_id)
-        require(data["slot"] == SLOTS[args.region], "Drive file belongs to wrong region")
-        print("Drive download and schema OK:", args.region, data["date"], data["slot"], len(data["content"]), "items")
-        # Exercise legacy conversion without writing anything.
-        result = edition(data, now)
-        require(result["content"] == data["content"], "content changed")
-        try:
-            eligible(data, args.region, now)
-            print("Eligible for live publication")
-        except ValueError as exc:
-            print("Not eligible for live publication:", exc)
+        html = folder_listing()
+        ids = matching_ids(html, filename(now.date(), args.region))
+        test_ids = matching_ids(html, f"market-status-test-{args.region}.json")
+        print("Public folder listing reachable:", args.region, len(ids), "current files", len(test_ids), "test files")
+        for fid in sorted(set(ids + test_ids)):
+            data = download(fid)
+            require(data["slot"] == SLOTS[args.region], "Drive file belongs to wrong region")
+            require(edition(data, now)["content"] == data["content"], "content changed")
+            print("Drive schema OK:", data["date"], data["slot"], len(data["content"]), "items")
+        if not ids and not test_ids:
+            print("No input file yet; download validation pending")
         return
     feed = json.loads(FEED.read_text(encoding="utf-8"))
     original = copy.deepcopy(feed)

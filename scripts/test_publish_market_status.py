@@ -1,7 +1,7 @@
 import copy
 import unittest
 from datetime import date, datetime
-from publish_market_status import KST, SLOTS, DRIVE_IDS, edition, eligible, market_day, process, session, validate
+from publish_market_status import KST, SLOTS, DRIVE_IDS, edition, eligible, market_day, process, session, validate, filename, load_current
 
 
 def payload(day="2026-11-28", market="2026-11-27"):
@@ -73,7 +73,7 @@ class TestPublisher(unittest.TestCase):
             eligible(p,"us",now)
 
     def test_kr_drive_and_live_merge(self):
-        self.assertEqual(DRIVE_IDS["kr"], "1bdjidvH5e--QmCX3_gde4p7vM6KEUhn3")
+        self.assertEqual(DRIVE_IDS["kr"], "kr")
         self.assertNotEqual(DRIVE_IDS["us"], DRIVE_IDS["kr"])
         day = "2026-12-01"
         p = payload(day, day)
@@ -125,6 +125,18 @@ class TestPublisher(unittest.TestCase):
             eligible(payload("2026-11-30","2026-11-29"),"us",now)
         with self.assertRaisesRegex(ValueError,"stale"):
             eligible(payload(),"us",now)
+
+
+    def test_dated_lookup(self):
+        now = datetime(2026,11,28,7,11,tzinfo=KST)
+        name = filename(now.date(), "us")
+        self.assertEqual(name, "market-status-2026-11-28-0711.json")
+        html = '<a href="https://drive.google.com/file/d/abcdefghijk/view">' + name + '</a>'
+        self.assertEqual(load_current("us", now, lambda: html, lambda _: payload()), payload())
+        with self.assertRaisesRegex(ValueError, "not found"):
+            load_current("us", now, lambda: "", lambda _: payload())
+        with self.assertRaisesRegex(ValueError, "No eligible"):
+            load_current("us", now, lambda: html, lambda _: dict(payload(), testOnly=True))
 
 
 if __name__ == "__main__":
