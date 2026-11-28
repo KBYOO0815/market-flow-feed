@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-28T10:41:35+09:00",
+  "updatedAt": "2026-11-28T16:36:17+09:00",
   "navigation": {
     "previous": [
       {
@@ -25,7 +25,7 @@
       {
         "date": "2026-11-28",
         "slot": "15:20",
-        "state": "scheduled"
+        "state": "published"
       }
     ],
     "next": []
@@ -496,6 +496,65 @@
               ],
               "impactRank": 13,
               "category": "계약 해지"
+            }
+          ]
+        },
+        {
+          "slot": "15:20",
+          "asOf": "2026-11-28T15:13:53+09:00",
+          "publishedAt": "2026-11-28T16:36:17+09:00",
+          "foreignNews": [
+            {
+              "id": "20261128-1520-foreign-01",
+              "title": "이란 혁명수비대 \"호르무즈에서 유조선 2척 기뢰 피격\" 주장",
+              "summary": "이란 혁명수비대 해군이 유조선 2척이 기뢰에 부딪혀 화재가 났다고 주장. 위치는 오만 카사브항 입구 부근과 해협 동쪽 항로. 선박명·국적·인명 피해는 밝히지 않았고 독립 확인 안 됨. 유가와 정유·해운·항공 업종에 영향 가능.",
+              "publishedAt": "2026-11-28T08:41:24+09:00",
+              "sourceName": "Khaama Press",
+              "sourceUrl": "https://www.khaama.com/iran-two-oil-tankers-naval-mines-strait-hormuz/",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "원자재·지정학"
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "20261128-1520-domestic-01",
+              "title": "30일 증시안정 긴급회의에 5대 금융지주 회장·산은 회장 참석",
+              "summary": "금융위가 30일 금감원, 5대 금융지주 회장, 산업은행 회장과 긴급 시장안정 회의를 열고 증안펀드(약정 10조7600억원) 가동을 논의. 산은은 회원사의 추가 출자 여력을 점검. 증시 수급과 금융주에 영향.",
+              "publishedAt": "2026-11-28T08:41:34+09:00",
+              "sourceName": "진일보(연합뉴스 인용)",
+              "sourceUrl": "https://www.jnilbo.com/news/articleView.html?idxno=90000087496",
+              "relatedStocks": [
+                "KB금융",
+                "신한지주",
+                "하나금융지주",
+                "우리금융지주",
+                "NH투자증권"
+              ],
+              "impactRank": 1,
+              "category": "증시정책"
+            },
+            {
+              "id": "20261128-1520-domestic-02",
+              "title": "씨티 \"증안펀드 약정 20조~40조원으로 확대 가능\"",
+              "summary": "씨티 김진욱 이코노미스트는 증안펀드 약정액이 10조7600억원에서 20조~40조원으로 늘 수 있고 12월 초 결정이 발표될 수 있다고 전망. 추가 약정은 내부 승인에 1~2개월이 필요해 기존 약정 1조~2조원이 이르면 다음 달 집행될 수 있다고 분석. 확정 사항 아님. 증시 수급에 영향.",
+              "publishedAt": "2026-11-28T15:00:00+09:00",
+              "sourceName": "뉴스웍스",
+              "sourceUrl": "https://www.newsworks.co.kr/news/articleView.html?idxno=904797",
+              "relatedStocks": [],
+              "impactRank": 2,
+              "category": "증시정책"
+            },
+            {
+              "id": "20261128-1520-domestic-03",
+              "title": "다음주 일정: 30일 10월 산업활동동향, 12월 2일 잠재성장률·예산안 시한",
+              "summary": "11월 30일 10월 산업활동동향 발표. 12월 2일 한국은행 잠재성장률 재추정치 발표, 2027년도 예산안(총지출 821조원) 법정 처리 시한. 금리 전망과 재정 관련 업종에 영향.",
+              "publishedAt": "2026-11-28T11:19:00+09:00",
+              "sourceName": "산경투데이",
+              "sourceUrl": "https://www.sankyungtoday.com/news/articleView.html?idxno=64478",
+              "relatedStocks": [],
+              "impactRank": 3,
+              "category": "예정 일정"
             }
           ]
         }
