@@ -1,20 +1,31 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-27T16:01:31+09:00",
+  "updatedAt": "2026-11-28T12:54:13+09:00",
   "navigation": {
-    "previous": [],
-    "today": [
+    "previous": [
       {
         "date": "2026-11-27",
         "slot": "07:11",
-        "state": "published",
-        "reason": "앱 표출 검증용 테스트 발행"
+        "state": "published"
       },
       {
         "date": "2026-11-27",
         "slot": "15:41",
-        "state": "published",
-        "reason": "앱 표출 검증용 테스트 발행"
+        "state": "published"
+      }
+    ],
+    "today": [
+      {
+        "date": "2026-11-28",
+        "slot": "07:11",
+        "state": "failed",
+        "reason": "입력 조회 또는 검증 실패"
+      },
+      {
+        "date": "2026-11-28",
+        "slot": "15:41",
+        "state": "skipped",
+        "reason": "해당 시장 정규장 휴장"
       }
     ],
     "next": []
