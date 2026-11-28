@@ -1,15 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-27T16:27:38+09:00",
+  "updatedAt": "2026-11-28T10:41:35+09:00",
   "navigation": {
     "previous": [
-      {
-        "date": "2026-11-26",
-        "slot": "07:40",
-        "state": "published"
-      }
-    ],
-    "today": [
       {
         "date": "2026-11-27",
         "slot": "08:00",
@@ -23,88 +16,21 @@
         "reason": "앱 표출 검증용 테스트 발행"
       }
     ],
+    "today": [
+      {
+        "date": "2026-11-28",
+        "slot": "08:00",
+        "state": "published"
+      },
+      {
+        "date": "2026-11-28",
+        "slot": "15:20",
+        "state": "scheduled"
+      }
+    ],
     "next": []
   },
   "days": [
-    {
-      "date": "2026-11-26",
-      "displaySlots": [
-        "07:40",
-        "11:40",
-        "15:40",
-        "19:40",
-        "22:40"
-      ],
-      "sessions": [
-        {
-          "slot": "07:40",
-          "asOf": "2026-11-26T07:40:05+09:00",
-          "publishedAt": "2026-11-26T07:47:25+09:00",
-          "foreignNews": [
-            {
-              "id": "foreign-20261126-fed-beige-book-november",
-              "title": "연준 베이지북, 12개 지역 중 8곳 완만한 성장…관세·에너지 비용 압력 지속",
-              "summary": "연방준비제도는 12개 연방준비은행 관할 지역 가운데 8곳의 경제활동이 소폭에서 완만하게 성장했고 4곳은 대체로 변동이 없었다고 밝혔다. 고용은 소폭 늘고 임금은 완만하게 상승했으며, 에너지·운송·의료·보험·관세 관련 투입비용이 판매가격보다 빠르게 올라 기업 마진을 압박했다.",
-              "publishedAt": "2026-11-26T04:00:00+09:00",
-              "sourceName": "미국 연방준비제도",
-              "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/beigebook202611-summary.htm",
-              "relatedStocks": [],
-              "impactRank": 1,
-              "category": "미국경제·통화정책",
-              "impactReason": "미국 경기의 완만한 확장과 비용 압력이 함께 확인돼 연준 금리 경로, 달러·국채금리 및 한국 성장주·수출주 평가에 영향을 줄 수 있다."
-            },
-            {
-              "id": "foreign-20261126-sp-nvidia-creditwatch-negative",
-              "title": "S&P, 엔비디아 AA 신용등급을 부정적 관찰대상에 편입",
-              "summary": "S&P Global Ratings는 엔비디아의 장기 외화·현지통화 발행자 신용등급 AA를 기존 안정적 전망에서 부정적 관찰대상으로 변경했다. S&P의 공식 조치는 미국 동부시간 11월 25일 오후 1시36분 공개됐으며, 이사회가 독립위원회 조사 진행 중 젠슨 황을 CEO로 복귀시킨 데 따른 경영·지배구조 위험 상승을 배경으로 제시했다.",
-              "publishedAt": "2026-11-26T03:36:00+09:00",
-              "sourceName": "S&P Global Ratings",
-              "sourceUrl": "https://www.spglobal.com/ratings/en/regulatory/ratings-actions?app=sp&id=3238799",
-              "relatedStocks": [
-                "엔비디아(NVDA)",
-                "삼성전자(005930)",
-                "SK하이닉스(000660)"
-              ],
-              "impactRank": 2,
-              "category": "AI반도체·신용등급·지배구조",
-              "impactReason": "AI 반도체 대표 기업의 신용도와 지배구조 불확실성이 공식 신용평가 조치로 확대돼 글로벌 AI 밸류체인과 국내 메모리 대형주 투자심리에 영향을 줄 수 있다.",
-              "corroboratingSourceUrl": "https://malaysia.news.yahoo.com/sp-puts-nvidias-aa-ratings-192536293.html"
-            },
-            {
-              "id": "foreign-20261126-us-october-new-home-sales",
-              "title": "미국 10월 신규주택 판매 14.2% 증가…연율 70만1천채",
-              "summary": "미국 상무부 센서스국은 10월 신규 단독주택 판매가 계절조정 연율 70만1천채로 전월보다 14.2% 증가했다고 발표했다. 이는 2025년 12월 이후 가장 높은 수준이며, 중간 판매가격은 전년 동월보다 3.2% 낮은 39만1,300달러였다.",
-              "publishedAt": "2026-11-26T00:00:00+09:00",
-              "sourceName": "미국 센서스국",
-              "sourceUrl": "https://www.census.gov/construction/nrs/current/index.html",
-              "relatedStocks": [],
-              "impactRank": 3,
-              "category": "미국경제·주택",
-              "impactReason": "미국 주택 수요의 예상 밖 강세는 경기·금리 전망과 미 국채금리에 영향을 주어 한국의 성장주 및 경기민감주 할인율에 간접 영향을 줄 수 있다.",
-              "corroboratingSourceUrl": "https://www.reuters.com/business/us-new-home-sales-surge-10-month-high-october-2026-11-25/"
-            }
-          ],
-          "domesticNews": [
-            {
-              "id": "domestic-20261126-north-korea-nuclear-facilities",
-              "title": "김정은, 핵물질 생산·핵무기 연구시설 시찰…전술핵 다영역 배치 확대 지시",
-              "summary": "북한 김정은 국무위원장은 핵물질 생산과 핵무기 연구시설을 시찰하고 전술핵무기의 다영역 배치를 확대해야 한다고 밝혔다. 북한 매체는 핵물질 생산 능력이 확대되고 있다고 전했으며, 김 위원장은 핵무기 보유국 지위가 절대 불가역적이라고 주장했다.",
-              "publishedAt": "2026-11-26T06:22:00+09:00",
-              "sourceName": "Reuters",
-              "sourceUrl": "https://malaysia.news.yahoo.com/north-koreas-kim-visits-nuclear-212231384.html",
-              "relatedStocks": [
-                "한화에어로스페이스(012450)",
-                "LIG넥스원(079550)"
-              ],
-              "impactRank": 1,
-              "category": "한반도안보·방산",
-              "impactReason": "한반도 지정학적 위험과 방산 수요 기대를 동시에 자극할 수 있는 북한 최고지도자의 신규 공식 행보와 발언이다.",
-              "corroboratingSourceUrl": "https://en.yna.co.kr/view/AEN20261126000500315"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-11-27",
       "displaySlots": [
@@ -311,6 +237,267 @@
             }
           ],
           "researchStatus": "partial"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "displaySlots": [
+        "08:00",
+        "15:20"
+      ],
+      "sessions": [
+        {
+          "slot": "08:00",
+          "asOf": "2026-11-28T07:55:01+09:00",
+          "publishedAt": "2026-11-28T10:41:35+09:00",
+          "foreignNews": [
+            {
+              "id": "20261128-0800-foreign-01",
+              "title": "뉴욕증시 상승 마감, 필라델피아 반도체 4.69% 상승",
+              "summary": "11월 27일 단축 거래. 다우 50,774.94(+1.18%), S&P500 7,297.49(+1.60%), 나스닥 24,129.50(+2.31%), 필라델피아 반도체 9,186.71(+4.69%, 장 마감 후 게시값). 주간 나스닥 +6.68%. 30일 국내 반도체주와 투자심리에 영향.",
+              "publishedAt": "2026-11-28T03:29:52+09:00",
+              "sourceName": "JBizNews",
+              "sourceUrl": "https://jbiznews.com/u-s-stocks-close-sharply-higher-in-shortened-black-friday-session-and-post-big-weekly-gains-dow-jones-industrial-average-up-1-18-sp-500-up-1-60-nasdaq-composite-up-2-31/",
+              "relatedStocks": [
+                "삼성전자",
+                "SK하이닉스"
+              ],
+              "impactRank": 1,
+              "category": "해외 증시"
+            },
+            {
+              "id": "20261128-0800-foreign-02",
+              "title": "마이크론 7.60%, SK하이닉스 ADR 7.52% 상승",
+              "summary": "앤스로픽 10.98% 상승(91.88달러), 마이크론 7.60% 상승(646.95달러), SK하이닉스 ADR 7.52% 상승(119.50달러), 엔비디아 0.80% 상승(150.49달러), 테슬라 5.22% 상승. VIX 11.16% 하락(23.81). 국내 반도체주에 영향.",
+              "publishedAt": "2026-11-28T03:34:36+09:00",
+              "sourceName": "파이낸셜뉴스",
+              "sourceUrl": "https://www.fnnews.com/news/202611280329020279",
+              "relatedStocks": [
+                "SK하이닉스",
+                "삼성전자",
+                "Micron",
+                "NVIDIA",
+                "Anthropic"
+              ],
+              "impactRank": 2,
+              "category": "반도체·AI"
+            },
+            {
+              "id": "20261128-0800-foreign-03",
+              "title": "트렌드포스, 2027년 이후 DRAM 계약가 둔화·하락 전망",
+              "summary": "범용 DRAM 계약가 상승폭이 2027년까지 축소될 수 있다고 발표. 기본 시나리오는 2027년 하반기 보합 후 2028년 하락, 비관 시나리오는 2027년 4분기부터 하락. 메모리 업종 실적 전망에 영향.",
+              "publishedAt": "2026-11-27T22:58:40+09:00",
+              "sourceName": "24/7 Wall St.",
+              "sourceUrl": "https://247wallst.com/investing/2026/11/27/sandisk-jumps-10-as-investors-return-to-beaten-down-memory-stocks-micron-and-sk-hynix-rise-6-despite-trendforce-dram-warning/",
+              "relatedStocks": [
+                "삼성전자",
+                "SK하이닉스"
+              ],
+              "impactRank": 3,
+              "category": "반도체"
+            },
+            {
+              "id": "20261128-0800-foreign-04",
+              "title": "브렌트유 1.2% 하락한 95.44달러, 주간 상승",
+              "summary": "브렌트 1월물 95.44달러(-1.2%), WTI 83.08달러(-0.7%). 11월 26일 후티의 사우디 Jazan 정유소 공격 이후 중동 공급 위험이 남음. 정유·화학·항공 업종에 영향.",
+              "publishedAt": "2026-11-28T06:16:00+09:00",
+              "sourceName": "Rigzone (Bloomberg)",
+              "sourceUrl": "https://www.rigzone.com/news/oil_swings_with_rising_me_attacks_in_focus-27-nov-2026-185191-article",
+              "relatedStocks": [],
+              "impactRank": 4,
+              "category": "원자재"
+            },
+            {
+              "id": "20261128-0800-foreign-05",
+              "title": "OPEC+ 11월 29일 회의, 생산목표 유지 예상",
+              "summary": "OPEC+가 29일 회의에서 2027년 1분기 생산목표를 유지할 것으로 소식통 3명이 전망. 유가와 정유 업종에 영향.",
+              "publishedAt": "2026-11-28T06:09:25+09:00",
+              "sourceName": "Political.org",
+              "sourceUrl": "https://political.org/2026/11/27/oil-posts-first-weekly-gain-of-november-as-attacks-on-tankers-and-saudi-facilities-revive-supply-fears/",
+              "relatedStocks": [],
+              "impactRank": 5,
+              "category": "예정 일정"
+            }
+          ],
+          "domesticNews": [
+            {
+              "id": "20261128-0800-domestic-01",
+              "title": "코스피 4.34% 상승 4915.68, 코스닥 8.13% 상승",
+              "summary": "코스피 4,915.68(+204.47). 외국인 1조1257억원, 기관 2389억원 순매수, 개인 1조7751억원 순매도. 코스닥 708.99(+8.13%), 10시22분 매수 사이드카. 증안펀드 확대 기대가 배경으로 보도.",
+              "publishedAt": "2026-11-27T15:49:00+09:00",
+              "sourceName": "한국경제",
+              "sourceUrl": "https://www.hankyung.com/article/202611275045i",
+              "relatedStocks": [],
+              "impactRank": 1,
+              "category": "시장 전반"
+            },
+            {
+              "id": "20261128-0800-domestic-02",
+              "title": "금융위 30일 긴급 점검회의, 증안펀드 확대 거론",
+              "summary": "증안펀드 규모 10조7600억원, 2008년 이후 집행 이력 없음. 100조원 확대론이 거론되며 금융위는 30일 금융권 긴급 점검회의를 추진. 증시 수급과 출자 금융사에 영향.",
+              "publishedAt": "2026-11-28T06:00:00+09:00",
+              "sourceName": "파이낸셜뉴스",
+              "sourceUrl": "https://www.fnnews.com/news/202611271109069424",
+              "relatedStocks": [
+                "KB금융",
+                "신한지주",
+                "하나금융지주",
+                "우리금융지주"
+              ],
+              "impactRank": 2,
+              "category": "증시정책"
+            },
+            {
+              "id": "20261128-0800-domestic-03",
+              "title": "증권 업종 11.43% 상승",
+              "summary": "증안펀드 확대 기대에 증권 업종 11.43% 상승. 삼성전자 4.55%, SK하이닉스 5.41% 상승. 시장은 10조원 규모 증액을 기대하며 30일 회의 결과가 변수.",
+              "publishedAt": "2026-11-27T16:29:00+09:00",
+              "sourceName": "머니투데이",
+              "sourceUrl": "https://www.mt.co.kr/amp/stock/2026/11/27/2026112716085591513",
+              "relatedStocks": [
+                "삼성전자",
+                "SK하이닉스"
+              ],
+              "impactRank": 3,
+              "category": "테마·업종"
+            },
+            {
+              "id": "20261128-0800-domestic-04",
+              "title": "로봇주 상한가, 코스닥 12종목 상한가",
+              "summary": "삼성전자 로봇 사업 확대 기대와 AI 로봇 학습데이터 국가표준 추진 소식이 배경으로 보도. 코스모로보틱스·제닉스로보틱스·에스피시스템스·대성하이텍·클로봇 등이 상한가.",
+              "publishedAt": "2026-11-27T16:03:00+09:00",
+              "sourceName": "이투데이",
+              "sourceUrl": "https://www.etoday.co.kr/news/view/2654037",
+              "relatedStocks": [
+                "삼성전자",
+                "코스모로보틱스",
+                "제닉스로보틱스",
+                "에스피시스템스",
+                "대성하이텍",
+                "클로봇"
+              ],
+              "impactRank": 4,
+              "category": "테마·업종"
+            },
+            {
+              "id": "20261128-0800-domestic-05",
+              "title": "원·달러 환율 1337.9원, 4.8원 하락",
+              "summary": "27일 15시30분 주간 거래 종가 1337.9원. 외국인 수급과 수출 업종 채산성에 영향.",
+              "publishedAt": "2026-11-27T15:39:42+09:00",
+              "sourceName": "아시아경제",
+              "sourceUrl": "https://view.asiae.co.kr/article/2026112715394199343",
+              "relatedStocks": [],
+              "impactRank": 5,
+              "category": "환율"
+            },
+            {
+              "id": "20261128-0800-domestic-06",
+              "title": "SD바이오센서 990억원 배상 1심 판결",
+              "summary": "서울중앙지법이 래피젠 실용신안 소송 1심에서 SD바이오센서에 990억원, 바이오노트에 10억원 배상을 판결. 금지 청구는 기각. 바이오노트는 항소 예정.",
+              "publishedAt": "2026-11-27T18:22:00+09:00",
+              "sourceName": "히트뉴스",
+              "sourceUrl": "https://www.hitnews.co.kr/news/articleView.html?idxno=81190",
+              "relatedStocks": [
+                "SD바이오센서",
+                "바이오노트"
+              ],
+              "impactRank": 6,
+              "category": "개별 기업"
+            },
+            {
+              "id": "20261128-0800-domestic-07",
+              "title": "HLB, HLB생명과학 합병 증권신고서 제출",
+              "summary": "HLB생명과학 1주당 HLB 0.0857532주. 합병신주 867만4057주(약 2608억원). 합병기일 2027년 7월 1일.",
+              "publishedAt": "2026-11-27T18:22:00+09:00",
+              "sourceName": "히트뉴스",
+              "sourceUrl": "https://www.hitnews.co.kr/news/articleView.html?idxno=81190",
+              "relatedStocks": [
+                "HLB",
+                "HLB생명과학"
+              ],
+              "impactRank": 7,
+              "category": "M&A"
+            },
+            {
+              "id": "20261128-0800-domestic-08",
+              "title": "금호건설, LH와 2235억원 공급계약",
+              "summary": "평택고덕 A-72BL·A-73BL 공공주택 건설. 2234억9373만원, 최근 매출액의 11.07%. 기간 2026년 11월 27일~2030년 6월 30일.",
+              "publishedAt": "2026-11-27T18:06:00+09:00",
+              "sourceName": "스페셜타임스",
+              "sourceUrl": "https://www.specialtimes.co.kr/news/articleView.html?idxno=491181",
+              "relatedStocks": [
+                "금호건설"
+              ],
+              "impactRank": 8,
+              "category": "공급계약"
+            },
+            {
+              "id": "20261128-0800-domestic-09",
+              "title": "프리티, 35억원 제3자배정 유상증자·최대주주 변경 예정",
+              "summary": "보통주 140만주, 발행가 2500원. 납입일 12월 10일. 납입 시 최대주주가 프라임라이트 투자조합1호로 변경 예정.",
+              "publishedAt": "2026-11-27T20:14:00+09:00",
+              "sourceName": "디지털투데이",
+              "sourceUrl": "https://www.digitaltoday.co.kr/disclosure/articleView.html?idxno=718911",
+              "relatedStocks": [
+                "프리티"
+              ],
+              "impactRank": 9,
+              "category": "유상증자"
+            },
+            {
+              "id": "20261128-0800-domestic-10",
+              "title": "그린생명과학, AI반도체 소재 168억원 공급계약",
+              "summary": "특수관계사 그린케미칼과 167억5000만원 계약. 지난해 매출의 41.52%.",
+              "publishedAt": "2026-11-27T18:22:00+09:00",
+              "sourceName": "히트뉴스",
+              "sourceUrl": "https://www.hitnews.co.kr/news/articleView.html?idxno=81190",
+              "relatedStocks": [
+                "그린생명과학"
+              ],
+              "impactRank": 10,
+              "category": "공급계약"
+            },
+            {
+              "id": "20261128-0800-domestic-11",
+              "title": "경남제약, 40억원 유상증자·최대주주 변경 예정",
+              "summary": "316만4556주를 주당 1264원에 제3자배정. 12월 7일 납입 후 최대주주가 (주)엑스로 변경 예정.",
+              "publishedAt": "2026-11-27T18:22:00+09:00",
+              "sourceName": "히트뉴스",
+              "sourceUrl": "https://www.hitnews.co.kr/news/articleView.html?idxno=81190",
+              "relatedStocks": [
+                "경남제약"
+              ],
+              "impactRank": 11,
+              "category": "유상증자"
+            },
+            {
+              "id": "20261128-0800-domestic-12",
+              "title": "한신공영, LH와 657억원 공급계약",
+              "summary": "평택고덕 A-69BL·A-71BL 공공주택 건설. 657억2030만원, 최근 매출액의 5.7%.",
+              "publishedAt": "2026-11-27T11:36:00+09:00",
+              "sourceName": "스페셜타임스",
+              "sourceUrl": "https://www.specialtimes.co.kr/news/articleView.html?idxno=491009",
+              "relatedStocks": [
+                "한신공영"
+              ],
+              "impactRank": 12,
+              "category": "공급계약"
+            },
+            {
+              "id": "20261128-0800-domestic-13",
+              "title": "바이오에프디엔씨, 19억원 공급계약 해지",
+              "summary": "(주)에스테랩과의 계약 해지. 해지금액 19억1865만원, 최근 매출액의 10.00%. 상대방 경영 악화가 사유.",
+              "publishedAt": "2026-11-27T16:06:00+09:00",
+              "sourceName": "스페셜타임스",
+              "sourceUrl": "https://www.specialtimes.co.kr/news/articleView.html?idxno=491102",
+              "relatedStocks": [
+                "바이오에프디엔씨"
+              ],
+              "impactRank": 13,
+              "category": "계약 해지"
+            }
+          ]
         }
       ]
     }
